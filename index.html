@@ -19,10 +19,6 @@
             src: url(./fils_de_pomme/mirador_semi_bold_woff2.woff2);
         }
 
-        img {
-            height: 10px;
-        }
-
         h1 {
             font-family: 'mirador_semi_bold';
             text-transform: capitalize;
@@ -52,25 +48,38 @@
             flex-direction: row;
         }
 
-        .signature_logo {}
+        .signature_logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 230px;
+        }
 
         .signature_logo img {
-            object-fit: cover;
+            width: 100%;
         }
 
         .signature_separation {
             background-color: black;
-            width: 1px;
-            margin: 10px 0px 10px 0px;
+            width: 1.5px;
+            margin: 15px 0px 15px 0px;
         }
 
         .signature_texte {
-            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 10px 20px 10px 20px;
         }
 
-
-
         .signature_texte_coordonnées {
+            margin: 10px 0px 10px 0px;
+        }
+
+        .signature_texte_icones img {
+            height: 20px;
             margin: 10px 0px 10px 0px;
         }
     </style>
@@ -91,13 +100,13 @@
             </div>
             <div class="signature_texte_coordonnées">
                 <p>07 88 20 55 11<br>
-                    <a href="www.fils-de-pomme.com">www.fils-de-pomme.com</a>
+                    <a href="https://fils-de-pomme.com" target="_blank">www.fils-de-pomme.com</a>
                 </p>
             </div>
             <div class="signature_texte_icones">
-                <a href="https://www.instagram.com/filsdepomme/?hl=fr"><img src="./fils_de_pomme/logo_insta_bleu.png"
+                <a href="https://www.instagram.com/filsdepomme/?hl=fr" target="_blank"><img src="./fils_de_pomme/logo_insta_bleu.png"
                         alt="icone instagram bleu png"></a>
-                <a href="https://www.facebook.com/filsdepomme"><img src="./fils_de_pomme/logo_fb_bleu.png"
+                <a href="https://www.facebook.com/filsdepomme" target="_blank"><img src="./fils_de_pomme/logo_fb_bleu.png"
                         alt="icone facebook bleu png"></a>
             </div>
 
