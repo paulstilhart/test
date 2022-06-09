@@ -1,491 +1,54 @@
-<style type="text/css">
-    #header {
-        background-color: #314d88;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        padding: 30px 0;
-    }
-    
-    #header p {
-        text-align: center;
-        font-size: 20pt;
-        color: white;
-        margin: 0;
-        line-height: 1;
-        margin-right: 50px;
-    }
-    
-    #header img {
-        height: 60px;
-        margin-right: 20px;
-        vertical-align: middle;
-    }
-    
-    #content {
-        text-align: justify;
-    }
-    
-    .custom-color {
-        color: #314d88;
-    }
-    
-    .section {
-        margin-top: 3rem;
-    }
-    
-    .section-title {
-        text-align: center;
-        font-size: 14pt;
-    }
-    
-    .block {
-        page-break-inside: avoid;
-    }
-    
-    .title-block {
-        text-align: center;
-    }
-    
-    .table {
-        border: 1px solid #314d88;
-        border-collapse: collapse;
-        padding: 5px;
-    }
-    
-    .table-bottom {
-        border-bottom: 1px solid #314d88;
-        border-collapse: collapse;
-    }
-    
-    .table-border {
-        border-right: 1px solid #314d88;
-        border-left: 1px solid #314d88;
-        padding: 5px;
-        text-align: center;
-    }
-    
-    table img {
-        height: 30px;
-        margin-right: 1%;
-        vertical-align: middle;
-    }
-    
-    .flex {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    @media print {
-        body,
-        footer,
-        table {
-            margin: 0;
-            line-height: 1.5;
-            font-size: 10pt;
-        }
-        #wrap {
-            page-break-after: always;
-        }
-        table {
-            page-break-inside: auto;
-        }
-        tr {
-            page-break-inside: avoid;
-            page-break-after: auto;
-        }
-        thead {
-            display: table-header-group;
-        }
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
 
-<div id="wrap">
-    <div id="header">
-        <img src="https://s3-eu-west-1.amazonaws.com/upgothersfiles/documents-icons/new-work.png" alt="Test Suitcase">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
 
-        <p>Convention de formation
-            <br>professionnelle</p>
-    </div>
-    <div id="content">
+<body>
 
-        <p class="section-title custom-color" style="font-size:10pt;">(Articles L. 6353-1 et L.6353-2 du Code du travail)</p>
+    <!-- Welcome Area Start Here -->
+    <section class="wellcome-area">
+        <div class="shape-1"><img src="assets/img/welcome-shape-01.png" alt="shape"></div>
+        <div class="shape-2"><img src="assets/img/welcome-shape-02.png" alt="shape"></div>
+        <div class="container">
+            <div class="welcome-wrapper">
+                <div class="welcome-title">
+                    <h2>Welcome to the ICE flow</h2>
+                </div>
+                <div class="welcome-content">
+                    <p>Once upon a time... In a remote area of the North Pole, thought to be abandoned, the village of a
+                        little hero called Eskimoz. The sun shines every day of the year, the ice pack is sparkling and
+                        pollution does not exist. Eskimoz lives by hunting and fishing, sharing new adventures with his
+                        friends, a mutant northern panda always there to help, a funny Penguin always there to make a
+                        good joke, a hummingbird, a faithful adviser, a polar bear who keeps order and many other
+                        emblematic characters.</p>
 
-        <p class="custom-color">Entre l&#39;organisme de formation :</p>
+                    <p>This village is the place we all dream of, a simple society, where judgement does not exist,
+                        where everyone can do what they want, when they want, without suffering or worrying about any
+                        pressure. This world is far from excessive consumption, far from ego, being the best in this
+                        country is simply being yourself without feeling guilty.</p>
 
-        <table style="width: 100%;">
-            <tbody>
-                <tr>
-                    <td style="width: 20.4219%;">
-
-                        <p>
-                            <span>{company_logo}</span></p>
-                    </td>
-                    <td style="white-space: nowrap; width: 79.4596%;">
-
-                        <p>
-                            <strong>Raison Sociale :
-                            </strong>{company_social_reason}</p>
-
-                        <p>
-                            <strong>Situ&eacute; :
-                            </strong>{company_address} - {company_zipcode} - {company_city}
-                        </p>
-
-                        <p>
-                            <strong>N&deg;SIREN de l&#39;organisme :
-                            </strong>{company_siren}</p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <p class="custom-color">Et le b&eacute;n&eacute;ficiaire :</p>
-
-        <p>
-            <span>{beneficiary}</span></p>
-
-        <p>
-            <span>(ci-apr&egrave;s nomm&eacute; le b&eacute;n&eacute;ficiaire)</span></p>
-
-        <p>
-            <span>
-                <strong>Situ&eacute; :
-                </strong>{beneficiary_address}
-                -
-                {beneficiary_zipcode}
-                -
-                {beneficiary_city}</span>
-        </p>
-
-        <p>
-            <strong>Repr&eacute;sent&eacute; par :
-            </strong>{beneficiary_legal}
-        </p>
-
-        <p>
-            <strong>N&deg;SIRET :
-            </strong>{beneficiary_siret}
-        </p>
-        {% if funder != &#39;-&#39; %}
-
-        <p>
-            <strong>Avec le financeur :
-                </strong>{funder}
-        </p>
-        {% endif %} {% if funder_address != &#39;-&#39; %}
-
-        <p>
-            <strong>Adresse :
-                </strong>{funder_address}
-        </p>
-        {% endif %}
-        <br>
-        <br>
-
-        <p>Cette convention est conclue en application des dispositions du Livre III de la sixi&egrave;me partie du Code du travail portant organisation de la formation professionnelle. </p>
-
-        <div class="section">
-
-            <p class="section-title custom-color">OBJET, NATURE ET DUR&Eacute;E DE LA FORMATION</p>
-
-            <p class="title-block">Le b&eacute;n&eacute;ficiaire entend faire participer une partie de son personnel &agrave; l&#39;action de formation suivante organis&eacute;e par l&#39;organisme de formation.</p>
-
-            <p>
-                <strong>Intitul&eacute; :
-                </strong>{training_name}</p>
-
-            <p>
-                <strong>Type d&#39;action de formation
-                </strong>(article L6313-1 du code du travail) : {training_nature}
-            </p>
-
-            <p>
-                <strong>Dur&eacute;e :</strong>
-                <span>{training_duration}</span></p>
-        </div>
-        {% if locations != &#39;-&#39; %}
-        <div class="block">
-
-            <p>
-                <strong>Lieu de la formation :
-                    </strong>{locations}</p>
-        </div>
-        {% endif %} {% if professional_objectives != &#39;-&#39; %}
-        <div class="block">
-
-            <p>
-                <strong>Objectif(s) professionnel(s) de l&rsquo;action de formation :
-                    </strong></p>
-        </div>
-        {% endif %}
-        <div class="block">
-
-            <p>
-                <strong>Contenu de l&rsquo;action de formation :
-                </strong>joint en annexe 1</p>
-        </div>
-        <div class="block">
-
-            <p>
-                <strong>Dates de formation :</strong> {% if custom_training_dates != &#39;-&#39; %}{custom_training_dates}{% endif %}
-            </p>
-            {% if sessionsdates|length &gt; 0 %}
-
-            <ul>
-                {% for stardate, enddate in sessionsdates %}
-                <li>{stardate} - {enddate}
-                </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-        </div>
-        <div class="block section">
-
-            <p class="section-title custom-color">EFFECTIF FORM&Eacute;</p>
-            {% if trainee_profile != &#39;-&#39; %}
-
-            <p>Public vis&eacute; au sens de l&rsquo;article L 6313-3 du code du travail :</p>
-            <br>
-
-            <p><em>{trainee_profile}</em></p>
-            <br> {% endif %}
-
-            <p class="title-block">Le b&eacute;n&eacute;ficiaire s&#39;engage &agrave; assurer la pr&eacute;sence des stagiaires aux dates et lieux pr&eacute;vus ci-dessus.</p>
-        </div>
-        <div class="block">
-
-            <p>
-                <strong>Nombre de stagiaires :
-            </strong>{effective}</p>
-        </div>
-
-        <p>
-            <strong>Liste des stagiaires :</strong>
-        </p>
-
-        <table class="table" style="width: 100%;">
-            <thead>
-                <tr>
-                    <th class="table" style="width: 50%;">
-                        <div class="flex">
-                            <div><img src="https://s3-eu-west-1.amazonaws.com/upgothersfiles/documents-icons/badge-employe.png" alt="Employe"></div>
-                            <div style="margin-left: 10px;">
-                                <span class="custom-color">Nom</span></div>
-                        </div>
-                    </th>
-                    <th class="table" style="width: 50%;">
-                        <div class="flex">
-                            <div><img src="https://s3-eu-west-1.amazonaws.com/upgothersfiles/documents-icons/cdi.png" alt="Contract"></div>
-                            <div style="margin-left: 10px;">
-                                <span class="custom-color">Fonction</span></div>
-                        </div>
-                    </th>
-                </tr>
-            </thead>
-        </table>
-        {% for username, userfunction in userinformations %}
-
-        <table class="table-bottom" style=" width: 100%;">
-            <tbody>
-                <tr>
-                    <td class="table-border" style="width: 50%;">
-
-                        <p>
-                            <span>{username}</span></p>
-                    </td>
-                    <td class="table-border">
-
-                        <p>
-                            <span>{userfunction}</span></p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        {% endfor %}
-        <div class="block section">
-
-            <p class="section-title custom-color">PRIX DE LA FORMATION</p>
-
-            <p class="title-block">
-                <span>En contrepartie de cette action de formation, le b&eacute;n&eacute;ficiaire s&#39;acquittera des co&ucirc;ts suivants {% if price_type == &#39;per&#39; %}par participant{% else %}pour l&rsquo;ensemble des participants{% endif %} :</span>
-            </p>
-
-            <p>{training_price}</p>
-
-            <p>
-                <span>Cette somme couvre l&#39;int&eacute;gralit&eacute; des frais engag&eacute;s par l&#39;organisme de formation pour cette session.</span></p>
-        </div>
-        <div class="block section">
-
-            <p class="section-title custom-color">MODALIT&Eacute;S DE R&Egrave;GLEMENT</p>
-
-            <p>
-                <span>{payment_modality}</span></p>
-        </div>
-        <div class="block section">
-
-            <p class="section-title custom-color">SANCTION DE LA FORMATION</p>
-
-            <p>
-                <span>{assessment}</span></p>
-        </div>
-        <div class="block section">
-
-            <p class="section-title custom-color">D&Eacute;BIT OU ABANDON</p>
-
-            <p>
-                <span>{penalities}</span></p>
-        </div>
-        <div class="block section">
-
-            <p class="section-title custom-color">LITIGES</p>
-
-            <p>
-                <span>Si une contestation ou un diff&eacute;rend ne peuvent pas &ecirc;tre r&eacute;gl&eacute;s &agrave; l&#39;amiable, le Tribunal de {jurisdiction} sera seul comp&eacute;tent pour r&eacute;gler le litige.</span>
-            </p>
-        </div>
-        <div class="section">
-            <div class="block section">
-
-                <p>
-                    <span>Fait &agrave;
-                    {signature_location}, le
-                    {signature_date}</span></p>
-
-                <table class="table" style="width: 100%;">
-                    <tbody>
-                        <tr>
-                            <td class="table" style="text-align: left;white-space: nowrap;width:50%;">
-
-                                <p>Pour l&#39;organisme de formation :</p>
-
-                                <p>Raison sociale : {company_social_reason}
-                                </p>
-
-                                <p>Repr&eacute;sentant : {company_legal_owner}
-                                </p>
-
-                                <p>Lu et approuv&eacute;</p>
-                                <br>
-                                <br>
-                            </td>
-                            <td class="table" style="text-align: left; white-space: nowrap;width:50%;padding-left: 30px;">
-
-                                <p>Pour le b&eacute;n&eacute;ficiaire :
-                                </p>
-
-                                <p>Client : {beneficiary}
-                                </p>
-
-                                <p>Repr&eacute;sentant du client : {beneficiary_legal}
-                                </p>
-
-                                <p>Lu et approuv&eacute;</p>
-                                <br>
-                                <br>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <p>But beware, this territory could end up coveting the jealousy of some... The jealousy of those
+                        who have everything but can't be as happy.</p>
+                </div>
+                <div class="welcome-video">
+                    <div class="welcome-video-box">
+                        <iframe src="https://www.youtube.com/embed/Ji1KiN6-rWA?controls=0" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<footer id="js-footer">
+    </section>
+    <!-- Welcome Area End Here -->
 
-    <table class="table" style="width: 100%;margin-top:20px;">
-        <tbody>
-            <tr>
-                <td class="table" style="width: 15%;">
+</body>
 
-                    <p><span>Raison sociale : {company_social_reason}</span></p>
-
-                    <p>{company_logo}</p>
-                </td>
-                <td class="table" style="text-align: left;white-space: nowrap;width:35%;">
-
-                    <p>
-                        <span>{company_address}
-                        -
-                        {company_zipcode}
-                        -
-                        {company_city}</span>
-                    </p>
-
-                    <p>
-                        <span>T&eacute;l :
-                        {company_phone}</span></p>
-
-                    <p>
-                        <span>Web :
-                        {company_website}</span></p>
-                </td>
-                <td class="table" style="text-align: left; white-space: nowrap;width:35%;padding-left: 30px;">
-
-                    <p>
-                        <span>N&deg;SIRET :
-                        {company_siret}</span>
-                    </p>
-
-                    <p>
-                        <span>Code APE :
-                        {company_ape}</span></p>
-
-                    <p>
-                        <span>N&deg;Activit&eacute; :
-                        {company_activity_number}</span></p>
-
-                    <p>
-                        <span>N&deg;TVA :
-                        {company_vat}</span></p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</footer>
-
-<div class="block section">
-
-    <p class="section-title custom-color">ANNEXE 1</p>
-
-    <p class="section-title custom-color">PROGRAMME DE LA FORMATION</p>
-
-    <p>
-        <strong>Titre de la formation :
-        </strong>{training_name}</p>
-
-    <p>
-        <strong>Dur&eacute;e de la formation :
-        </strong>{training_duration}</p>
-    {% if training_prerequisite != &#39;-&#39; %}
-
-    <p>
-        <strong>Pr&eacute;requis :
-            </strong>{training_prerequisite}</p>
-    {% endif %} {% if training_objective != &#39;-&#39; %}
-
-    <p>
-        <strong>Objectifs p&eacute;dagogiques :
-            </strong>{training_objective}</p>
-    {% endif %} {% if training_conditions != &#39;-&#39; %}
-
-    <p>
-        <strong>Modalit&eacute;s de d&eacute;roulement :
-            </strong>{training_conditions}</p>
-    {% endif %}
-    <div class="block">
-
-        <p>
-            <strong>Contenu de la formation :
-            </strong>
-        </p>
-
-        <ul>
-            {% for moduletitle in training_modules %}
-            <li>{moduletitle}</li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+</html>
