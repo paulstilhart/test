@@ -1138,7 +1138,7 @@ textarea {
     display: block;
     top: 140px;
     width: calc(100% - 40px);
-    height: calc(100vh - 275px);
+    height: calc(100% - 275px);
     min-height: 0;
     padding: 40px 20px 15px 20px;
     border-bottom: none;
