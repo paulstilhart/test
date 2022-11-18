@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Header</title>
+    <!-- Feuille CSS -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <header class="background_white color_black">
+        <nav class="flex_start_center flex_between_under_1200 gap_60">
+            <h2 class="h2_36_44 dnone_under_1200">Orbeet</h2>
+            <span class="background_black dnone dblock_under_1200"></span>
+
+            <div class="nav_links menu_main flex_start_center gap_40 dnone_under_1200 background_white">
+                <button data-menu="menu_produits" class="nav_links_toggle menu_main color_black">
+                    Produits<img src="./sources/icones/icon-dropdown-open.svg" alt="icon dropdown"></button>
+                <button data-menu="menu_services" class="nav_links_toggle menu_main color_black">
+                    Services<img src="./sources/icones/icon-dropdown-open.svg" alt="icon dropdown"></button>
+                <button data-menu="menu_clients" class="menu_main color_black">
+                    <a class="color_black" href="#">Cas clients</a></button>
+                <button data-menu="menu_about" class="nav_links_toggle menu_main color_black">
+                    A propos<img src="./sources/icones/icon-dropdown-open.svg" alt="icon dropdown"></button>
+                <button data-menu="menu_contact" class="menu_main background_white color_black">
+                    <a class="color_black" href="#">Contact</a></button>
+            </div>
+
+            <button class="burgermenu dnone dblock_under_1200">
+                <img class="burgermenu_open" src="./sources/icones/Sort.svg" alt="ouverture burger menu">
+                <img class="burgermenu_close dnone" src="./sources/icones/Close_round.svg" alt="fermeture burger menu">
+            </button>
+        </nav>
+
+        <div id="menu_produits" class="dropdown_menu dnone flex_center gap_50 text_left background_white">
+            <div class="dropdown_menu_container_left flex flex_wrap">
+                <div class="dropdown_submenu flex_column">
+                    <p class="menu_category color_menu_category mb_20">produits</p>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                </div>
+                <div class="dropdown_submenu flex_column">
+                    <p class="menu_category color_menu_category mb_20">produits</p>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                </div>
+                <div class="dropdown_submenu flex_column">
+                    <p class="menu_category color_menu_category mb_20">produits</p>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                </div>
+                <div class="dropdown_submenu flex_column">
+                    <p class="menu_category color_menu_category mb_20">produits</p>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                </div>
+                <div class="dropdown_submenu flex_column">
+                    <p class="menu_category color_menu_category mb_20">produits</p>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                </div>
+            </div>
+
+            <div class="dropdown_menu_container_right flex_column gap_20">
+                <a class="dropdown_menu_vignette background_black color_white" href="#">
+                    <h4 class="h4_13_21">Qu’est-ce qu’un <strong>ERP ?</strong></h4>
+                </a>
+                <a class="dropdown_menu_vignette background_black color_white" href="#">
+                    <h4 class="h4_13_21">Pourquoi choisir <strong>Odoo ERP ?</strong></h4>
+                </a>
+                <a class="dropdown_menu_vignette_main flex_column_end gap_20 gap_20 background_black color_white"
+                    href="#">
+                    <h3 class="h3_21_28">Mint</h3>
+                    <h4 class="h4_13_21">Démarrez avec un pack logiciel métier préconfiguré</h4>
+                </a>
+            </div>
+        </div>
+
+        <div id="menu_services" class="dropdown_menu dnone flex_center gap_50 text_left background_white">
+            <div class="dropdown_menu_container_left flex flex_wrap">
+                <div class="dropdown_submenu flex_column">
+                    <p class="menu_category color_menu_category mb_20">services</p>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                </div>
+                <div class="dropdown_submenu flex_column">
+                    <p class="menu_category color_menu_category mb_20">services</p>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                </div>
+            </div>
+            <div class="dropdown_menu_container_right flex_column gap_20 flex_column gap_20">
+                <a class="dropdown_menu_vignette_main flex_column_end gap_20 background_black color_white" href="#">
+                    <h3 class="h3_21_28">Réussite clients</h3>
+                    <h4 class="h4_13_21">Démarrez avec un pack logiciel métier préconfiguré</h4>
+                </a>
+                <a class="dropdown_menu_vignette background_black color_white" href="#">
+                    <h4 class="h4_13_21">Demande personnalisée</h4>
+                </a>
+            </div>
+        </div>
+
+        <div id="menu_about" class="dropdown_menu dnone flex_center gap_50 text_left background_white">
+            <div class="dropdown_menu_container_left flex flex_wrap">
+                <div class="dropdown_submenu flex_column">
+                    <p class="menu_category color_menu_category mb_20">about</p>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                </div>
+                <div class="dropdown_submenu flex_column">
+                    <p class="menu_category color_menu_category mb_20">about</p>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                    <a class="menu_secondary mb_10 color_black" href="#">Cloud</a>
+                </div>
+            </div>
+            <div class="dropdown_menu_container_right flex_column gap_20">
+                <a class="dropdown_menu_vignette_main flex_column_end gap_20 background_black color_white" href="#">
+                    <h3 class="h3_21_28">Orus</h3>
+                    <h4 class="h4_13_21">Notre plateforme de développement</h4>
+                </a>
+                <a class="dropdown_menu_vignette background_black color_white" href="#">
+                    <h4 class="h4_13_21">Contact</h4>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1>TEST</h1>
+        </section>
+    </main>
+</body>
+
+</html>
