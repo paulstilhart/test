@@ -574,6 +574,8 @@ nav.menu_mobile_inside {
 
 .dropdown_menu.menu_mobile_inside {
   display: flex !important;
+  transform: translateX(0%);
+  transition: transform 0.3s;
 }
 
 /*==================== FOOTER ====================*/
@@ -1133,6 +1135,7 @@ textarea {
     display: block;
   }
   .dropdown_menu {
+    display: block;
     top: 140px;
     width: calc(100% - 40px);
     height: calc(100vh - 275px);
@@ -1142,7 +1145,7 @@ textarea {
     flex-direction: column;
     overflow-y: scroll;
     justify-content: space-between;
-    transform: left 3s;
+    transform: translateX(100%);
   }
   .dropdown_menu,
 .dropdown_menu_container_left,
