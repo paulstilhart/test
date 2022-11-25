@@ -958,7 +958,7 @@ section {
 
 .section_testimony_cards_container {
   padding-left: 150px;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .section_testimony_cards_container::-webkit-scrollbar {
@@ -1172,6 +1172,9 @@ textarea {
   .gap_10_under_768 {
     gap: 10px;
   }
+  .gap_45_under_768 {
+    gap: 45px;
+  }
   .gap_60_under_768 {
     gap: 60px;
   }
@@ -1209,6 +1212,9 @@ textarea {
   }
   .section_contact_form_infos_container {
     margin: 90px 90px 0 110px;
+  }
+  .section_related_content {
+    padding: 70px 20px;
   }
   .section_testimony {
     padding: 70px 0px 90px 0px;
