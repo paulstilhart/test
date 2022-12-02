@@ -2,11 +2,14 @@
 Lien du site API
 https://api.ipma.pt/
 
+Lien sur github:
+https://paulstilhart.github.io/test/meteo/
+
 */
 
 //Définitions de quelques paramètres
 console.log("Bienvenue dans la console!");
-const api = "http://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1110600.json";
+const api = "https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1110600.json";
 console.log("Le lien de l'api de Lisbonne est: ", api);
 
 //Récupération des éléments constants du DOM
