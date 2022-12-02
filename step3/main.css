@@ -97,6 +97,21 @@ p {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+  text-transform: capitalize;
+}
+
+.p_tiny_strong {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: capitalize;
+}
+
+.p_tiny_uppercase {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  text-transform: uppercase;
 }
 
 .p_tiny_uppercase_bold {
@@ -160,6 +175,10 @@ p {
 
 .background_white {
   background: #FFFFFF;
+}
+
+.background_white_opacity_50 {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .background_grey_soft {
@@ -228,9 +247,18 @@ button {
   margin: auto;
 }
 
+.mw_1640_auto {
+  max-width: 1640px;
+  margin: auto;
+}
+
 .my_auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mw_250 {
+  max-width: 250px;
 }
 
 .mw_280 {
@@ -383,6 +411,13 @@ button {
   justify-content: center;
 }
 
+.flex_start_start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+}
+
 .flex_start_center {
   display: flex;
   flex-direction: row;
@@ -421,6 +456,11 @@ button {
   flex-direction: column;
 }
 
+.flex_column_reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .flex_column_end {
   display: flex;
   flex-direction: column;
@@ -456,6 +496,7 @@ button {
 
 .dnone {
   display: none;
+  transition: transform 0.3s;
 }
 
 /*==================== A VIRER ====================*/
@@ -609,6 +650,7 @@ nav.menu_mobile_inside {
   display: flex !important;
   transform: translateX(0%);
   transition: transform 0.3s;
+  opacity: 1;
 }
 
 /*==================== FOOTER ====================*/
@@ -883,6 +925,21 @@ section {
   padding: 0px 20px;
 }
 
+/* 
+Pour la section logo
+Il faut dupliquer les logos dans le html et au moins en avoir 6
+Chaque logo fait 150px de large + 30 de marge gauche droite = 210px (rentré en dur)
+Il faut paraméter les variables juste apres
+Il faut mettre 5s par logo environ, soit pour 6 logos = 30secondes d'animations
+*/
+@keyframes defilement {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1260px);
+  }
+}
 .section_logos_container {
   overflow-x: hidden;
   max-width: 1140px;
@@ -907,24 +964,14 @@ section {
 }
 .section_logos_container img {
   width: 150px;
+  margin: 0px 30px;
+  filter: grayscale(1);
 }
 .section_logos_container .section_logos_scrollx {
-  animation-name: defilement;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  width: 2520px;
+  animation: defilement 30s linear infinite;
 }
 
-@keyframes defilement {
-  0% {
-    transform: translateX(100%);
-    /* position initiale à droite */
-  }
-  100% {
-    transform: translateX(-100%);
-    /* position finale à gauche */
-  }
-}
 /*==================== SECTION TESTIMONY ====================*/
 .section_testimony {
   padding: 110px 0px 150px 0px;
@@ -986,6 +1033,140 @@ section {
 .section_testimony_card_content span image {
   display: block;
   width: 100%;
+}
+
+/*==================== SECTION POSTS ====================*/
+.section_posts {
+  padding: 0;
+}
+
+.section_posts_carrousel_img_container {
+  flex: auto;
+  height: 550px;
+  overflow: hidden;
+}
+.section_posts_carrousel_img_container a {
+  display: inline-block;
+  width: 100%;
+  display: none;
+}
+.section_posts_carrousel_img_container a.active {
+  display: block;
+  animation: fade 0.8s;
+}
+.section_posts_carrousel_img_container img {
+  min-height: 550px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.section_posts_carrousel_card {
+  width: 360px;
+  height: 380px;
+  flex: none;
+  padding: 110px 40px 60px 40px;
+  overflow: hidden;
+}
+.section_posts_carrousel_card .section_posts_carrousel_card_content {
+  display: none;
+}
+.section_posts_carrousel_card .section_posts_carrousel_card_content a:hover {
+  text-decoration: underline;
+}
+.section_posts_carrousel_card .section_posts_carrousel_card_content.active {
+  display: block;
+  animation: translate 0.2s;
+}
+.section_posts_carrousel_card .section_posts_carrousel_card_button button {
+  background: none;
+  border: none;
+  opacity: 60%;
+  padding: 10px;
+}
+.section_posts_carrousel_card .section_posts_carrousel_card_button button:hover {
+  opacity: 100%;
+}
+.section_posts_carrousel_card .section_posts_carrousel_card_button .section_posts_carrousel_card_progress_container {
+  width: 80px;
+  height: 1px;
+  position: relative;
+  overflow-x: hidden;
+}
+.section_posts_carrousel_card .section_posts_carrousel_card_button .section_posts_carrousel_card_progress_container #section_posts_carrousel_card_progress_bar {
+  position: absolute;
+  left: -80px;
+  display: inline-block;
+  width: 80px;
+  height: 1px;
+  opacity: 100%;
+}
+.section_posts_carrousel_card .section_posts_carrousel_card_button .section_posts_carrousel_card_progress_container #section_posts_carrousel_card_progress_bar.active {
+  animation: progress 7s linear infinite;
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(0px);
+  }
+  99% {
+    transform: translateX(79px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes translate {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.section_posts_cards {
+  padding: 70px 30px 130px 30px;
+}
+.section_posts_cards span {
+  display: inline-block;
+  width: 100%;
+  height: 0.5px;
+  background: #79747E;
+  margin: 50px 0px 80px 0px;
+}
+
+.section_posts_card {
+  width: 350px;
+}
+.section_posts_card .section_posts_card_img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.section_posts_card .section_posts_card_img img {
+  min-height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.section_posts_card .section_posts_card_img:hover,
+.section_posts_card .section_posts_card_img.scale {
+  transform: scale(1.05);
+}
+.section_posts_card a {
+  color: #000000;
+}
+.section_posts_card a:hover,
+.section_posts_card .section_posts_card_img:hover ~ .section_posts_card_title {
+  text-decoration: underline;
 }
 
 /*==================== CONTACT ====================*/
@@ -1254,6 +1435,9 @@ textarea {
   .flex_between_under_1200 {
     justify-content: space-between;
   }
+  .flex_column_under_1200 {
+    flex-direction: column;
+  }
   .flex_wrap_under_1200 {
     flex-wrap: wrap;
   }
@@ -1319,6 +1503,8 @@ textarea {
     overflow-y: scroll;
     justify-content: space-between;
     transform: translateX(100%);
+    transition: transform 0.5s, opacity 0.2s;
+    opacity: 0;
   }
   .dropdown_menu,
 .dropdown_menu_container_left,
@@ -1339,6 +1525,17 @@ textarea {
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
+  }
+  .section_posts_carrousel_img_container {
+    height: 340px;
+  }
+  .section_posts_carrousel_img_container img {
+    min-height: 340px;
+  }
+  .section_posts_carrousel_card {
+    width: calc(100% - 60px);
+    height: 360px;
+    padding: 50px 30px;
   }
 }
 /*==================== MEDIA QUERIES 1440px ====================*/
