@@ -1,0 +1,10 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dayContainer{
+    border: solid 2px red;
+    width: 300px;
+}
