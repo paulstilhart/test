@@ -41,21 +41,25 @@ async function dataCreate() {
         container.appendChild(dayContainer);//on insère l'élément dans le DOM
         dayContainer.classList.add("dayContainer");
 
-        //Création de l'élément forecastDate dans le lien a
+        //Création de l'élément forecastDate
         let forecastDate = document.createElement("p");
         dayContainer.appendChild(forecastDate);
         forecastDate.innerHTML = ("Jour : " + dataWeatherDay.forecastDate);
 
-        //Création de l'élément tMin dans le lien a
+        //Création de l'élément tMin
         let tMin = document.createElement("p");
         dayContainer.appendChild(tMin);
         tMin.innerHTML = ("Température minimale : " + dataWeatherDay.tMin + "°");
 
-        //Création de l'élément tMax dans le lien a
+        //Création de l'élément tMax
         let tMax = document.createElement("p");
         dayContainer.appendChild(tMax);
         tMax.innerHTML = ("Température maximale : " + dataWeatherDay.tMax + "°");
 
+        //Création de l'élément precipitaProb
+        let precipitaProb = document.createElement("p");
+        dayContainer.appendChild(precipitaProb);
+        precipitaProb.innerHTML = ("Probabilité de précipitation : " + dataWeatherDay.precipitaProb +" %");
     }
 };
 
