@@ -1,0 +1,25 @@
+/* 
+
+reste le cablage avec github
+
+
+background image avec
+
+
+id="doctor_name"
+
+id="report"
+
+supposition de padding + petit sur la partie de gauche rapports
+
+conteneur de droite qui diminue si besoin, pas l'autre
+
+diminuer padding global sur les bords
+
+report_name = 22 caractères max avec les espaces
+
+L’entité HTML &nbsp; (« non breaking space ») va nous permettre d’ajouter une espace simple dit espace « insécable » ;
+L’entité HTML &ensp; (« en space ») va nous permettre de créer une espace double ;
+L’entité HTML &emsp; (« em space ») va nous permettre de créer une espace quadruple ;
+L’entité HTML &thinsp; (« thin space ») va nous permettre de créer un espace très fin (demi-espace).
+*/
