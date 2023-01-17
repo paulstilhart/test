@@ -119,19 +119,21 @@
                         <p>CAPDEVILLE-CAZENAVE (champs non modifiable)</p>
                     </div>
 
+                    <!-- Adresse -->
                     <div class="mb_20 position_relative">
                         <label class="dblock label mb_8" for="adress">Adresse</label>
-                        <input class="dblock pl_16 w_100 h_40" type="text" id="adress" name="adress"
-                            placeholder="Ex : 1134 Chemin du Bartassec" pattern="[( )a-zA-Z0-9._%+-]{5,30}">
+                        <input required class="dblock pl_16 w_100 h_40" type="text" id="adress" name="adress"
+                            placeholder="Ex : 1134 Chemin du Bartassec" pattern="[( )a-zA-Z0-9._%+-]{5,30}" maxlength="30">
                         <span class="dnone warning_box warning flex_start_center gap_8 color_red">
                             <img class="dblock" src="./sources/icons/warning_20_20.svg" alt="warning icon">Adresse non
                             conforme</span>
                     </div>
 
+                    <!-- Code postal et ville -->
                     <div class="flex gap_24 mb_32">
                         <div class="w_20 position_relative">
                             <label class="dblock label mb_8" for="postcode">Code Postal</label>
-                            <input class="dblock pl_16 w_100 h_40" type="text" id="postcode" name="postcode"
+                            <input required class="dblock pl_16 w_100 h_40" type="text" id="postcode" name="postcode"
                                 placeholder="Ex : 46000" pattern="[0-9]{5}" maxlength="5">
                             <span class="dnone warning_box warning flex_start_center gap_8 color_red">
                                 <img class="dblock" src="./sources/icons/warning_20_20.svg" alt="warning icon">Code
@@ -139,15 +141,15 @@
                         </div>
                         <div class="w_75 position_relative">
                             <label class="dblock label mb_8" for="city">Ville</label>
-                            <input class="dblock pl_16 w_100 h_40" type="text" id="city" name="city"
-                                placeholder="Cahorrrs" pattern="[( )a-zA-Z0-9._%+-]{5,30}" required>
+                            <input required class="dblock pl_16 w_100 h_40" type="text" id="city" name="city"
+                                placeholder="Cahors" pattern="[( )a-zA-Z0-9._%+-]{2,30}" maxlength="30">
                             <span class="dnone warning_box warning flex_start_center gap_8 color_red">
-                                <img class="dblock" src="./sources/icons/warning_20_20.svg" alt="warning icon">Mauvaise ville</span>
+                                <img class="dblock" src="./sources/icons/warning_20_20.svg" alt="warning icon">Mauvaise
+                                ville</span>
                         </div>
                     </div>
 
-
-
+                    <!-- Bouton submit -->
                     <div class="flex_end_center button">
                         <button class="button_next color_white background_grey_strong" type="submit">Suivant</button>
                     </div>

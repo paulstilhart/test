@@ -8,13 +8,30 @@
 }
 
 a,
-button {
+button,
+select,
+textarea {
     text-decoration: none;
     cursor: pointer;
     color: inherit;
     background: none;
     border: none;
+    outline: none;
 }
+
+a:focus,
+a:active,
+button:focus,
+button:active,
+input:active,
+input:focus select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+    outline: none;
+    outline-color: transparent !important;
+}
+
 
 /*================================ CLASSES UTILITAIRES DEBUT /*=======================================*/
 /*==================== MARGIN PADDING GAP WIDTH HEIGHT ====================*/
@@ -235,6 +252,20 @@ button {
     text-align: left;
 }
 
+.border_radius_5 {
+    border-radius: 5px;
+}
+
+.border_radius_5_left {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.border_radius_5_right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .border_radius_10 {
     border-radius: 10px;
 }
@@ -284,7 +315,9 @@ h3 {
 
 /* Texte courant */
 p,
-input {
+input,
+textarea,
+select {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -386,7 +419,7 @@ body {
 
 /* Pour un conteneur avec des marges constantes 80px quand la largeur vaut 1280px margin: 0 6.25%*/
 main {
-    margin: 0 32px;
+    margin: 0 16px;
 }
 
 .main_container {
@@ -397,15 +430,14 @@ main {
 
 .left_container {
     width: 448px;
-    height: 573px;
-    max-height: 72vh;
+    height: 72vh;
     flex: none;
 }
 
 .right_container {
     width: 800px;
-    height: 573px;
-    max-height: 72vh;
+    height: 72vh;
+    flex: none;
 }
 
 .left_container_header,
@@ -442,9 +474,16 @@ main {
 
 form {
     margin: 24px auto;
-    height: 407px;
+    height: calc(72vh - 166px);
     overflow-y: auto;
+    scrollbar-width: 0px;
 }
+
+form::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+}
+
 
 .prescriber {
     background: #F4F4F4;
@@ -453,25 +492,42 @@ form {
 }
 
 input,
-input:valid {
-    border: 1px solid #949494;
+textarea,
+select {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #949494;
     border-radius: 5px;
 }
 
-input:focus {
-    border: 2px solid #2B2E2A;
+textarea {
+    min-height: 175px;
+    padding: 16px;
 }
 
-input:invalid {
-    border: 2px solid #E03727;
+input:focus,
+select:focus {
+    border-width: 2px;
+    border-color: #2B2E2A;
 }
 
-/* 
-input:invalid~span {
+
+/* Valide si non focus et une valeur est entrée (pas de placeholder) */
+input:not(:focus):not(:placeholder-shown):valid,
+select:not(:focus):not(:placeholder-shown):valid {
+    border-color: #2B2E2A;
+}
+
+/* De la meme façon pour la bordure rouge invalide */
+input:not(:focus):not(:placeholder-shown):invalid {
+    border-width: 2px;
+    border-color: #E03727;
+}
+
+/* Et pareil pour le message d'erreur */
+input:not(:focus):not(:placeholder-shown):invalid~span {
     display: flex;
 }
-
-*/
 
 
 .warning_box {
@@ -479,11 +535,86 @@ input:invalid~span {
     bottom: -22px;
 }
 
-.button_next {
+.button_next,
+.button_previous {
     padding: 8px 24px;
     border-radius: 5px;
 }
 
-.button_next:hover {
+.button_previous {
+    border: 2px solid #92B838;
+}
+
+.button_next:hover,
+.button_previous:hover {
     background-color: #ABD34B;
+    border-color: #ABD34B;
+    color: white;
+}
+
+.radio_box {
+    position: relative;
+    width: 95px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio_box input[type="radio"] {
+    width: 95px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+.radio_box label {
+    color: #949494;
+    width: 95px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #949494;
+}
+
+.radio_box input[type="radio"]:hover+label {
+    color: #2B2E2A;
+    background-color: #F3F7E6;
+}
+
+.radio_box input[type="radio"]:checked+label {
+    color: #2B2E2A;
+    background-color: #DCE9C2;
+    border: 2px solid #92B838;
+}
+
+.radio_box_type,
+.radio_box input[name="type"],
+.radio_box_type label{
+    width: 140px;
+    height: 40px;
+}
+
+.radio_box_implication,
+.radio_box input[name="implication"],
+.radio_box_implication label{
+    width: 110px;
+    height: 40px;
+}
+
+.radio_box_classic{
+    height: 24px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap:8px;
+    margin-bottom: 8px;
+}
+
+.radio_box_classic input{
+    width: 16px;
+    height: 16px;
 }

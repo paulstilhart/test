@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etape 2 - Caractéristique audiométrie</title>
+    <title>Etape 3 - Profil du patient</title>
 
     <!-- FEUILLE DE STYLE CSS -->
     <link rel="stylesheet" href="./style.css">
@@ -104,7 +104,7 @@
                         <p>&nbsp;Prescripteur&ensp;-&ensp;</p>
                         <img class="dblock" src="./sources/icons/number_check_26_26.svg" alt="number check">
                         <p>&nbsp;Caractéristique audiométrie&ensp;-&ensp;</p>
-                        <img class="dblock" src="./sources/icons/number_3_26_26.svg" alt="number check">
+                        <img class="dblock" src="./sources/icons/number_check_26_26.svg" alt="number check">
                         <p>&nbsp;Profil du patient&ensp;-&ensp;</p>
                         <img class="dblock" src="./sources/icons/number_4_26_26.svg" alt="number check">
                         <p>&nbsp;Complément</p>
@@ -113,116 +113,80 @@
                 <!-- ==================== FORM HEADER END ==================== -->
 
                 <!-- ==================== FORM START ==================== -->
-                <form action="/step3.html" class="mw_500_my_auto mt_24">
-                    <h3 class="mb_8">Caractéristique audiomètrie / surdité patient</h3>
+                <form action="/step4.html" class="mw_500_my_auto mt_24">
+                    <h3 class="mb_8">Profil du patient</h3>
 
-                    <!-- Importance -->
+                    <!-- Modèle d'appareil -->
                     <div class="mb_20">
-                        <p class="label mb_8">Importance</p>
+                        <p class="label mb_8">Modèle d'appareil</p>
+                        <div class="radio_box_classic">
+                            <input required type="radio" name="model" id="model1" value="model1">
+                            <label for="model1">UNITRON AUDIONOVA DX 30 R 312</label>
+                        </div>
+                        <div class="radio_box_classic">
+                            <input required type="radio" name="model" id="model2" value="model2">
+                            <label for="model2">AUDEO L50-R</label>
+                        </div>
+                        <div class="radio_box_classic">
+                            <input required type="radio" name="model" id="model3" value="model3">
+                            <label for="model3">UNITRON AUDIONOVA DX 30 R 312</label>
+                        </div>
+                        <div class="radio_box_classic">
+                            <input required type="radio" name="model" id="model4" value="model4">
+                            <label for="model4">AUDEO L50-R</label>
+                        </div>
+                    </div>
+
+                    <!-- Implication -->
+                    <div class="mb_20">
+                        <p class="label mb_8">Implication</p>
                         <div class="flex_start_center">
-                            <div class="radio_box">
-                                <input required type="radio" name="importance" id="low" value="low">
-                                <label class="border_radius_5_left" for="low">Légère</label>
+                            <div class="radio_box radio_box_implication">
+                                <input required type="radio" name="implication" id="opposite" value="opposite">
+                                <label class="border_radius_5_left" for="opposite">Opposé</label>
                             </div>
-                            <div class="radio_box">
-                                <input required type="radio" name="importance" id="medium" value="medium">
-                                <label for="medium">Moyenne</label>
+                            <div class="radio_box radio_box_implication">
+                                <input required type="radio" name="implication" id="low" value="low">
+                                <label for="low">Peu motivé</label>
                             </div>
-                            <div class="radio_box">
-                                <input required type="radio" name="importance" id="strict" value="strict">
-                                <label for="strict">Sévère</label>
+                            <div class="radio_box radio_box_implication">
+                                <input required type="radio" name="implication" id="medium" value="medium">
+                                <label for="medium">Motivé</label>
                             </div>
-                            <div class="radio_box">
-                                <input required type="radio" name="importance" id="deep" value="deep">
-                                <label class="border_radius_5_right" for="deep">Profonde</label>
+                            <div class="radio_box radio_box_implication">
+                                <input required type="radio" name="implication" id="hight" value="hight">
+                                <label class="border_radius_5_right" for="hight">Très motivé</label>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Ancienneté -->
-                    <div class="mb_20">
-                        <p class="label mb_8">Ancienneté</p>
-                        <div class="flex_start_center">
-                            <div class="radio_box">
-                                <input required type="radio" name="seniority" id="old" value="old">
-                                <label class="border_radius_5_left" for="old">Ancienne</label>
-                            </div>
-                            <div class="radio_box">
-                                <input required type="radio" name="seniority" id="new" value="new">
-                                <label for="new">Récente</label>
-                            </div>
-                            <div class="radio_box">
-                                <input required type="radio" name="seniority" id="apparitiondate"
-                                    value="apparitiondate">
-                                <label class="border_radius_5_right" for="apparitiondate">Apparu en</label>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Année d'ancienneté -->
+                    <!-- Nombre d’heure de port par jour -->
                     <div class="mb_20">
                         <div>
-                            <label class="dblock label mb_8" for="senioritydate">Année d'ancienneté</label>
-                            <input required class="dblock pl_16 w_20 h_40" type="text" id="senioritydate" name="senioritydate"
-                                placeholder="Ex : 2008" pattern="[0-9]{4}" maxlength="4">
-                        </div>
-                    </div>
-
-                    <!-- Évolutivité -->
-                    <div class="mb_20">
-                        <p class="label mb_8">Évolutivité</p>
-                        <div class="flex_start_center">
-                            <div class="radio_box">
-                                <input required type="radio" name="scalability" id="stable" value="stable">
-                                <label class="border_radius_5_left" for="stable">Stable</label>
-                            </div>
-                            <div class="radio_box">
-                                <input required type="radio" name="scalability" id="scalable" value="scalable">
-                                <label class="border_radius_5_right" for="scalable">Évolutive</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Type -->
-                    <div class="mb_20">
-                        <p class="label mb_8">Type</p>
-                        <div class="flex_start_center">
-                            <div class="radio_box radio_box_type">
-                                <input required type="radio" name="type" id="stable" value="stable">
-                                <label class="border_radius_5_left" for="stable">De perception</label>
-                            </div>
-                            <div class="radio_box radio_box_type">
-                                <input required type="radio" name="type" id="scalable" value="scalable">
-                                <label class="border_radius_5_right" for="scalable">De transmission</label>
-                            </div>
+                            <label class="dblock label mb_8" for="keeptime">Nombre d’heure de port par jour</label>
+                            <input required class="dblock pl_16 w_20 h_40" type="text" id="keeptime" name="keeptime"
+                                placeholder="Ex : 3" pattern="[0-9]{0,2}" maxlength="2">
                         </div>
                     </div>
 
 
-                    <!-- Côté -->
+                    <!-- Résultat d'essai -->
                     <div class="mb_32">
-                        <p class="label mb_8">Côté</p>
-                        <div class="flex_start_center">
-                            <div class="radio_box">
-                                <input required type="radio" name="side" id="right" value="right">
-                                <label class="border_radius_5_left" for="right">À droite</label>
-                            </div>
-                            <div class="radio_box">
-                                <input required type="radio" name="side" id="left" value="left">
-                                <label for="left">À gauche</label>
-                            </div>
-                            <div class="radio_box">
-                                <input required type="radio" name="side" id="bothsides"
-                                    value="bothsides">
-                                <label class="border_radius_5_right" for="bothsides">Bilatérale</label>
-                            </div>
-                        </div>
+                        <label class="dblock label mb_8" for="result">Résultat d'essai</label>
+                        <select required class="dblock pl_16 w_100 h_40" name="result" id="result">
+                            <option value="" disabled selected>Sélectionner un résultat</option>
+                            <option value="result1">Concluant (garde ses appareils)</option>
+                            <option value="result2">2dn essai (essaye une 2dne paire d’aides auditives)</option>
+                            <option value="result3">Echec (ne conserve pas ses aides ou repousse son appareillage)
+                            </option>
+                        </select>
                     </div>
 
 
                     <!-- Bouton submit -->
                     <div class="flex_between_center button">
-                        <a class="button_previous color_grey_medium background_white" href="./index.html">Précédent</a>
+                        <a class="button_previous color_grey_medium background_white" href="./step2.html">Précédent</a>
                         <button class="button_next color_white background_grey_strong" type="submit">Suivant</button>
                     </div>
                 </form>
