@@ -525,7 +525,7 @@ input:not(:focus):not(:placeholder-shown):invalid {
 }
 
 /* Et pareil pour le message d'erreur */
-input:not(:focus):not(:placeholder-shown):invalid~span {
+input:not(:placeholder-shown):invalid~span {
     display: flex;
 }
 
