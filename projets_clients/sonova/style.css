@@ -56,10 +56,12 @@ textarea:focus {
     margin-right: auto;
 }
 
-.mw_1280_auto {
-    max-width: 1280px;
-    margin: auto;
+.mw_1332_auto {
+    max-width: 1332px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .mt_2 {
     margin-top: 2px;
@@ -287,7 +289,7 @@ textarea:focus {
 
 /*==================== FONT-FAMILY ====================*/
 html {
-    font-family: 'Myriad Pro', 'Inter', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-style: normal;
@@ -429,7 +431,7 @@ main {
 }
 
 .left_container {
-    width: 448px;
+    width: 500px;
     height: 72vh;
     flex: none;
 }
@@ -465,7 +467,11 @@ main {
 }
 
 .report_name {
+    max-width: 265px;
     text-transform: uppercase;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .view_delete_box div {
@@ -473,22 +479,28 @@ main {
 }
 
 form {
+    max-width: 524px;
+    padding-right: 24px;
     margin: 24px auto;
     height: calc(72vh - 166px);
     overflow-y: auto;
-    scrollbar-width: 0px;
-}
-
-form::-webkit-scrollbar {
-    display: none;
-    width: 0px;
 }
 
 
-.prescriber {
+.prescriber label {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.6px;
+}
+
+.prescriber input {
     background: #F4F4F4;
     border: 1.5px solid #949494;
     border-radius: 5px;
+}
+
+.prescriber input::placeholder {
+    color: #2B2E2A;
 }
 
 input,
@@ -501,8 +513,16 @@ select {
 }
 
 textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2B2E2A;
     min-height: 175px;
-    padding: 16px;
+    padding: 8px 16px;
+}
+
+textarea::placeholder {
+    color: #949494;
 }
 
 input:focus,
@@ -593,28 +613,28 @@ input:not(:placeholder-shown):invalid~span {
 
 .radio_box_type,
 .radio_box input[name="type"],
-.radio_box_type label{
+.radio_box_type label {
     width: 140px;
     height: 40px;
 }
 
 .radio_box_implication,
 .radio_box input[name="implication"],
-.radio_box_implication label{
+.radio_box_implication label {
     width: 110px;
     height: 40px;
 }
 
-.radio_box_classic{
+.radio_box_classic {
     height: 24px;
     display: flex;
     justify-content: start;
     align-items: center;
-    gap:8px;
+    gap: 8px;
     margin-bottom: 8px;
 }
 
-.radio_box_classic input{
+.radio_box_classic input {
     width: 16px;
     height: 16px;
 }

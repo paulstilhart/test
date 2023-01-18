@@ -9,17 +9,12 @@
 
     <!-- FEUILLE DE STYLE CSS -->
     <link rel="stylesheet" href="./style.css">
-
-    <!-- GOOGLE FONT POLICE -->
-
-    <!-- SCRIPT JS CUSTOM -->
-    <!--     <script type="text/javascript" src="./script.js" defer></script> -->
 </head>
 
 
 <body>
     <main>
-        <div class="main_container mw_1280_auto flex gap_32">
+        <div class="main_container mw_1332_auto flex_between_center gap_32">
 
 
             <div class="left_container background_white border_radius_10">
@@ -48,10 +43,11 @@
                         </div>
                         <div class="view_delete_box flex_end_center">
                             <span class="separator"></span>
-                            <div class="flex_center_center gap_8"><button class="dblock"><img class="dblock"
-                                        src="./sources/icons/view_26_16.svg" alt="view button"></button>
+                            <div class="flex_end_center gap_8">
                                 <button class="dblock"><img class="dblock" src="./sources/icons/delete_17_17.svg"
                                         alt="delete button"></button>
+                                <button class="dblock"><img class="dblock" src="./sources/icons/view_26_16.svg"
+                                        alt="view button"></button>
                             </div>
                         </div>
                     </div>
@@ -61,14 +57,15 @@
                             <p class="report_datetime"><span class="date">30/12/22</span> à <span
                                     class="time">16h30</span></p>
                             <span class="separator"></span>
-                            <p class="report_name">1234567891234567891234</p>
+                            <p class="report_name">12345678912345678912345678912</p>
                         </div>
                         <div class="view_delete_box flex_end_center">
                             <span class="separator"></span>
-                            <div class="flex_center_center gap_8"><button class="dblock"><img class="dblock"
-                                        src="./sources/icons/view_26_16.svg" alt="view button"></button>
+                            <div class="flex_end_center gap_8">
                                 <button class="dblock"><img class="dblock" src="./sources/icons/delete_17_17.svg"
                                         alt="delete button"></button>
+                                <button class="dblock"><img class="dblock" src="./sources/icons/view_26_16.svg"
+                                        alt="view button"></button>
                             </div>
                         </div>
                     </div>
@@ -78,14 +75,15 @@
                             <p class="report_datetime"><span class="date">30/12/22</span> à <span
                                     class="time">16h30</span></p>
                             <span class="separator"></span>
-                            <p class="report_name">test</p>
+                            <p class="report_name">123456789123456789123456789123456789</p>
                         </div>
                         <div class="view_delete_box flex_end_center">
                             <span class="separator"></span>
-                            <div class="flex_center_center gap_8"><button class="dblock"><img class="dblock"
-                                        src="./sources/icons/view_26_16.svg" alt="view button"></button>
+                            <div class="flex_end_center gap_8">
                                 <button class="dnone"><img class="dblock" src="./sources/icons/delete_17_17.svg"
                                         alt="delete button"></button>
+                                <button class="dblock"><img class="dblock" src="./sources/icons/view_26_16.svg"
+                                        alt="view button"></button>
                             </div>
                         </div>
                     </div>
@@ -113,7 +111,7 @@
                 <!-- ==================== FORM HEADER END ==================== -->
 
                 <!-- ==================== FORM START ==================== -->
-                <form action="" class="mw_500_my_auto mt_24">
+                <form action='cr_pdf.php' target='_parent' method='post'>
                     <h3 class="mb_8">Complément d’information</h3>
 
                     <!-- Observation -->
@@ -128,7 +126,7 @@
                         <label class="dblock label mb_8" for="doctor">Audioprothésiste</label>
                         <select required class="dblock pl_16 w_100 h_40" name="doctor" id="doctor">
                             <option value="" disabled selected>Sélectionner l’audioprothésiste</option>
-                            <option value="doctor1">doctor1</option>
+                            <option selected value="doctor1">doctor1</option>
                             <option value="doctor2">doctor2</option>
                             <option value="doctor3">doctor3</option>
                         </select>
