@@ -41,9 +41,44 @@ textarea:focus {
 
 /*================================ CLASSES UTILITAIRES DEBUT /*=======================================*/
 /*==================== MARGIN PADDING GAP WIDTH HEIGHT ====================*/
+.mw_560{
+    max-width: 560px;
+}
+
+.mw_650{
+    max-width: 650px;
+}
 
 .mw_700_auto {
     max-width: 700px;
+    margin: auto;
+}
+
+.mw_730{
+    max-width: 730px;
+}
+
+.mw_800_auto {
+    max-width: 800px;
+    margin: auto;
+}
+
+.mw_900 {
+    max-width: 900px;
+}
+
+.mw_900_auto {
+    max-width: 900px;
+    margin: auto;
+}
+
+.mw_1000_auto {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.mw_1312_auto {
+    max-width: 1312px;
     margin: auto;
 }
 
@@ -64,6 +99,14 @@ textarea:focus {
     margin-bottom: 16px;
 }
 
+.mb_24 {
+    margin-bottom: 24px;
+}
+
+.mb_40 {
+    margin-bottom: 40px;
+}
+
 .mb_48 {
     margin-bottom: 48px;
 }
@@ -74,6 +117,10 @@ textarea:focus {
 
 .mb_80 {
     margin-bottom: 80px;
+}
+
+.mb_160 {
+    margin-bottom: 160px;
 }
 
 .gap_8 {
@@ -201,6 +248,19 @@ textarea:focus {
     flex: none;
 }
 
+.align_self_start{
+    align-self: flex-start;
+}
+
+.align_self_center{
+    align-self: center;
+}
+
+.align_self_end{
+    align-self: flex-end;
+}
+
+
 
 /*==================== TEXT ALIGN BORDER RADIUS DISPLAY BLOCK & NONE ====================*/
 .text_center {
@@ -222,6 +282,10 @@ textarea:focus {
 
 .dblock {
     display: block;
+}
+
+.dinline {
+    display: inline;
 }
 
 .dnone {
@@ -274,13 +338,28 @@ h1 {
 }
 
 
-h3 {
-    font-weight: 400;
+h2 {
+    font-weight: 300;
     font-size: 60px;
     line-height: 90px;
 }
 
+h3 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+}
+
 /* Font-weight */
+.fw_300 {
+    font-weight: 500;
+}
+
+.fw_400 {
+    font-weight: 500;
+}
+
+
 .fw_500 {
     font-weight: 500;
 }
@@ -327,6 +406,14 @@ h3 {
     color: #ffffff;
 }
 
+.background_blue_medium {
+    background-color: #236FE0;
+}
+
+.color_blue_medium {
+    color: #236FE0;
+}
+
 .background_blue_strong {
     background-color: #38516B;
 }
@@ -351,9 +438,64 @@ h3 {
     color: #F5FFFE;
 }
 
+.background_pink {
+    background-color: #FFBDE0;
+}
+
+.color_pink {
+    color: #FFBDE0;
+}
+
 /*==================== PROJET ====================*/
+main{
+    overflow: hidden;
+}
+.section_recruitment_presentation {
+    padding: 0px 64px;
+    margin-bottom: 335px;
+}
+
+.section_recruitment_ribbon_background{
+    height: 440px;
+    position: relative;
+}
+
+.section_recruitment_ribbon_background_rotation{
+    width: 200%;
+    height: 530px;
+    position: absolute;
+    top:-265px;
+    left:-50%;
+    transform: rotate(-9deg);
+}
+
+.section_recruitment_ribbon_container{
+    position: relative;
+    top:-25%;
+    z-index: 99;
+    padding: 0px 64px;
+}
+
+.section_recruitment_ribbon_container img{
+    width: 87px;
+}
+
+.section_recruitment_ribbon_container h3{
+    width: 90%;
+}
+
+.section_adn {
+    padding:0px 32px 80px 32px;
+}
+
+.section_adn_offers {
+    padding: 48px;
+    box-shadow: 0px 4px 50px rgba(56, 81, 107, 0.15);
+    border-radius: 16px;
+}
+
 .section_contact {
-    padding: 160px 32px;
+    padding: 80px 32px 160px 32px;
 }
 
 .section_contact form input {
@@ -392,6 +534,7 @@ textarea {
 
 
 
+
 /*==================== FOOTER ====================*/
 .footer_container {
     padding: 48px 10%;
@@ -400,23 +543,42 @@ textarea {
 
 /*==================== MEDIA QUERIES 576px ====================*/
 @media only screen and (max-width: 576px) {
-    .flex_column_under_576{
+    .flex_column_under_576 {
         flex-direction: column;
     }
-    
-    h3 {
+
+    h2 {
         font-size: 35px;
         line-height: 52px;
     }
 
-    .section_contact {
-        padding: 160px 8px;
+    .section_recruitment_presentation {
+        padding: 0px 24px;
     }
 
-    .section_contact form .button_box{
+    .section_adn {
+        padding: 80px 24px;
+    }
+
+    .section_contact {
+        padding: 80px 8px 160px 8px;
+    }
+
+    .section_contact form {
+        padding: 0px 16px;
+    }
+
+    .section_contact form .button_box {
         flex-direction: column;
         align-items: start;
-        gap:8px;
+        gap: 8px;
+    }
+}
+
+/*==================== MEDIA QUERIES 768px ====================*/
+@media only screen and (max-width: 768px) {
+    .section_recruitment_presentation {
+        padding: 0px 32px;
     }
 }
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etape 1 - Prescripteur</title>
+    <title>Workyn! Recrutement</title>
 
     <!-- FEUILLE DE STYLE CSS -->
     <link rel="stylesheet" href="./style.css">
@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <!-- SMTP JS -->
+    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- SCRIPT JS CUSTOM -->
     <!--     <script type="text/javascript" src="./script.js" defer></script> -->
@@ -23,19 +25,75 @@
 <body>
     <main>
 
+        <section>
+            <div class="section_recruitment">
+                <div class="section_recruitment_presentation mw_1312_auto">
+                    <h2 class="mw_900 mb_48">Nous proposons une expérience recrutement <strong
+                            class="color_green_strong">moderne</strong> et de <strong
+                            class="color_green_strong">proximité !</strong></h2>
+                    <p class="mw_560 mb_8"><strong>Workyn! Recrutement</strong> est un cabinet d'approche directe fondé
+                        par 2
+                        amis passionnés de recrutement.</p>
+                    <p class="mw_560 mb_8">Chacun spécialiste dans son domaine, nous avons créé les marques
+                        <strong class="color_pink">Workyn! Commerce & Luxe</strong> et <strong
+                            class="color_blue_medium">Workyn! Immobilier</strong> afin de proposer
+                        une expertise forte et
+                        sectorielle.
+                    </p>
+                    <p>Notre équipe se tient à votre disposition pour vous accompagner.</p>
+                </div>
+                <div class="section_recruitment_ribbon_background background_green_light">
+                    <div class="section_recruitment_ribbon_background_rotation background_green_strong"></div>
+                    <div class="section_recruitment_ribbon_container mw_1312_auto">
+                        <div class="mw_730 flex_column gap_16">
+                            <img class="dblock align_self_start" src="./sources/icons/quote_white_up_87_68.svg" alt="quote">
+                            <h3 class="color_white align_self_center text_center">Nous mettons le <strong>candidat</strong> au cœur de nos préoccupations
+                                et <strong>accompagnons</strong>
+                                nos partenaires dans la <strong>valorisation</strong> de leur marque employeur !</h3>
+                            <img class="dblock align_self_end" src="./sources/icons/quote_white_down_87_68.svg" alt="quote">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="background_green_light">
+            <div class="section_adn">
+                <h2 class="mb_24 text_center">L’ADN de <strong class="color_green_strong">Workyn! Recrutement</strong>
+                </h2>
+                <p class="mw_800_auto text_center mb_160">Nous accompagnons nos <strong>partenaires</strong> dans le
+                    staffing
+                    des équipes <strong>corporate</strong> et <strong>opérationnelles</strong> partout en France. Notre
+                    équipe de spécialistes est en
+                    contact permanent avec les <strong>meilleurs profils</strong> du marché.</p>
+
+                <div class="section_adn_offers flex_column background_white mw_900_auto">
+                    <h3 class="text_center mb_40">Pour consulter toutes nos offres
+                        <br>
+                        <strong class="color_pink">Commerce & Luxe</strong> et <strong
+                            class="color_blue_medium">Immobilier</strong>, c’est par ici :
+                    </h3>
+                    <a class="my_auto button_classic flex_center_center gap_16 background_blue_strong color_white"
+                        href="#" target="_blank">Toutes nos offres<img class="dblock"
+                            src="./sources/icons/arrow_right_white_12_9.svg" alt="icone fleche blanche droite"></a>
+                </div>
+            </div>
+        </section>
+
         <section class="background_green_light">
             <div class="section_contact mw_700_auto">
                 <img class="dblock my_auto mb_64" src="./sources/logos/logo_contact_76_76.svg"
                     alt="logo workyn contact">
-                <h3 class="text_center mb_80">
+                <h2 class="text_center fw_400 mb_80">
                     <strong class="color_green_strong">Un renseignement ?</strong>
                     <br>Un conseil ?
-                </h3>
+                </h2>
 
-                <form action="">
+                <form onsubmit="Mail(); reset(); return false;">
                     <div class="flex flex_column_under_576 gap_24 mb_48">
-                        <input required class="dblock w_100" type="text" id="prenom" name="prenom"
-                            placeholder="Nom Prénom*" pattern="[( )a-zA-Z0-9._%+-]{2,30}" maxlength="30">
+                        <input required class="dblock w_100" type="text" id="name" name="name" placeholder="Nom Prénom*"
+                            pattern="[( )a-zA-Z0-9._%+-]{2,30}" maxlength="30">
                         <input required class="dblock w_100" type="text" id="email" name="email" placeholder="Email*"
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength="30">
                     </div>
@@ -46,7 +104,8 @@
 
                     <div class="flex_between_center button_box">
                         <button class="button_classic button_file">Joindre un fichier</button>
-                        <button class="button_classic flex_center_center gap_16 background_blue_strong color_white" type="submit">
+                        <button type="submit"
+                            class="button_classic flex_center_center gap_16 background_blue_strong color_white">
                             Envoyer<img class="dblock" src="./sources/icons/arrow_right_white_12_9.svg"
                                 alt="icone fleche blanche droite"></button>
                     </div>
@@ -66,7 +125,8 @@
                     <strong>Workyn! ?</strong>
                     <br>
                     Envoie-nous ton CV en cliquant sur
-                    <a class="fw_700 underline" href="https://www.workyn-recrutement.com/connect">Connect !</a>
+                    <a target="_blank" class="fw_700 underline"
+                        href="https://www.workyn-recrutement.com/connect">Connect !</a>
                 </p>
             </div>
 
@@ -77,12 +137,29 @@
                             class="dblock_under_1200">contact@workyn-recrutement.com</strong></p>
                 </div>
                 <div class="flex_end_center flex_column_center_center_under_1200 gap_32 gap_8_under_1200">
-                    <a class="p_small" href="">Politique de confidentialité</a>
-                    <a class="p_small" href="">Copyright © 2022 Tout droits réservés</a>
+                    <a class="p_small" target="_blank" href="#">Politique de confidentialité</a>
+                    <a class="p_small" target="_blank" href="#">Copyright © 2022 Tout droits réservés</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript" defer>
+        function Mail() {
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const message = document.getElementById("message");
+            Email.send({
+                SecureToken: "c5306d78-131d-4951-9bcc-d5affcc4fd9a",
+                To: 'paul.stilhart@gmail.com',
+                From: email.value,
+                Subject: "Formulaire de contact - Mail de - " + name.value,
+                Body: message.value,
+            }).then(
+                message => alert("Mail bien envoyé!")
+            );
+        };
+    </script>
 </body>
 
 </html>
