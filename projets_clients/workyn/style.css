@@ -1,0 +1,456 @@
+/*==================== RESET CSS ====================*/
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    text-decoration: none;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+a:focus,
+a:active,
+button:focus,
+button:active,
+input:active,
+input:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+    outline: none;
+    outline-color: transparent !important;
+}
+
+
+/*================================ CLASSES UTILITAIRES DEBUT /*=======================================*/
+/*==================== MARGIN PADDING GAP WIDTH HEIGHT ====================*/
+
+.mw_700_auto {
+    max-width: 700px;
+    margin: auto;
+}
+
+.m_auto {
+    margin: auto;
+}
+
+.my_auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb_8 {
+    margin-bottom: 8px;
+}
+
+.mb_16 {
+    margin-bottom: 16px;
+}
+
+.mb_48 {
+    margin-bottom: 48px;
+}
+
+.mb_64 {
+    margin-bottom: 64px;
+}
+
+.mb_80 {
+    margin-bottom: 80px;
+}
+
+.gap_8 {
+    gap: 8px;
+}
+
+.gap_16 {
+    gap: 16px;
+}
+
+
+.gap_24 {
+    gap: 24px;
+}
+
+.gap_32 {
+    gap: 32px;
+}
+
+.w_100 {
+    width: 100%;
+}
+
+
+/*==================== FLEXBOX ====================*/
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex_start_start {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+.flex_start_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex_start_end {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.flex_center_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_center_start {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+
+.flex_between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex_between_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex_end_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_column_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+.flex_column_end {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.flex_column_between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.flex_wrap {
+    flex-wrap: wrap;
+}
+
+.flex_nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex_none {
+    flex: none;
+}
+
+
+/*==================== TEXT ALIGN BORDER RADIUS DISPLAY BLOCK & NONE ====================*/
+.text_center {
+    text-align: center;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.text_right {
+    text-align: right;
+}
+
+
+.underline {
+    text-decoration: underline;
+}
+
+.dblock {
+    display: block;
+}
+
+.dnone {
+    display: none;
+}
+
+/*==================== COMPOSANTS ====================*/
+.button_classic {
+    padding: 16px 32px;
+    border-radius: 8px;
+}
+
+
+/*================================ CLASSES UTILITAIRES FIN /*=======================================*/
+/*==================== FONT-FAMILY ====================*/
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    color: #38516B;
+    background-color: #FFFFFF;
+}
+
+/* Texte courant */
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Texte small */
+.p_small {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/* Balise strong */
+strong {
+    font-weight: 700;
+}
+
+/* Titres principaux */
+h1 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26.4px;
+}
+
+
+h3 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 90px;
+}
+
+/* Font-weight */
+.fw_500 {
+    font-weight: 500;
+}
+
+.fw_600 {
+    font-weight: 600;
+}
+
+.fw_700 {
+    font-weight: 700;
+}
+
+.fw_800 {
+    font-weight: 800;
+}
+
+.fw_900 {
+    font-weight: 900;
+}
+
+/*==================== BACKGROUNDS & COLORS ====================*/
+.background_black {
+    background-color: #000000;
+}
+
+.color_black {
+    color: #000000;
+}
+
+
+.background_white_break {
+    background-color: #F2F2F2;
+}
+
+.color_white_break {
+    color: #F2F2F2;
+}
+
+.background_white {
+    background-color: #ffffff;
+}
+
+.color_white {
+    color: #ffffff;
+}
+
+.background_blue_strong {
+    background-color: #38516B;
+}
+
+.color_blue_strong {
+    color: #38516B;
+}
+
+.background_green_strong {
+    background-color: #1DD6C9;
+}
+
+.color_green_strong {
+    color: #1DD6C9;
+}
+
+.background_green_light {
+    background-color: #F5FFFE;
+}
+
+.color_green_light {
+    color: #F5FFFE;
+}
+
+/*==================== PROJET ====================*/
+.section_contact {
+    padding: 160px 32px;
+}
+
+.section_contact form input {
+    height: 28px;
+    border-bottom: 1px solid #929292;
+}
+
+.section_contact form textarea {
+    border: 1px solid #929292;
+    padding: 16px 24px;
+    height: 100px;
+}
+
+input,
+textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    color: #929292;
+}
+
+.section_contact form .button_file {
+    border: 1px solid #38516B;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+}
+
+.section_contact form .button_file:hover {
+    color: white;
+    background-color: #38516B;
+}
+
+
+
+
+/*==================== FOOTER ====================*/
+.footer_container {
+    padding: 48px 10%;
+}
+
+
+/*==================== MEDIA QUERIES 576px ====================*/
+@media only screen and (max-width: 576px) {
+    .flex_column_under_576{
+        flex-direction: column;
+    }
+    
+    h3 {
+        font-size: 35px;
+        line-height: 52px;
+    }
+
+    .section_contact {
+        padding: 160px 8px;
+    }
+
+    .section_contact form .button_box{
+        flex-direction: column;
+        align-items: start;
+        gap:8px;
+    }
+}
+
+/*==================== MEDIA QUERIES 1200px ====================*/
+@media only screen and (max-width: 1200px) {
+    .flex_column_center_center_under_1200 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .my_auto_under_1200 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mw_250_under_1200 {
+        max-width: 250px;
+    }
+
+    .mb_32_under_1200 {
+        margin-bottom: 32px;
+    }
+
+    .gap_8_under_1200 {
+        gap: 8px;
+    }
+
+    .dblock_under_1200 {
+        display: block;
+    }
+
+    .text_center_1200 {
+        text-align: center;
+    }
+}

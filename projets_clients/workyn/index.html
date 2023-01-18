@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etape 1 - Prescripteur</title>
+
+    <!-- FEUILLE DE STYLE CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- GOOGLE FONT POLICE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- SCRIPT JS CUSTOM -->
+    <!--     <script type="text/javascript" src="./script.js" defer></script> -->
+</head>
+
+<body>
+    <main>
+
+        <section class="background_green_light">
+            <div class="section_contact mw_700_auto">
+                <img class="dblock my_auto mb_64" src="./sources/logos/logo_contact_76_76.svg"
+                    alt="logo workyn contact">
+                <h3 class="text_center mb_80">
+                    <strong class="color_green_strong">Un renseignement ?</strong>
+                    <br>Un conseil ?
+                </h3>
+
+                <form action="">
+                    <div class="flex flex_column_under_576 gap_24 mb_48">
+                        <input required class="dblock w_100" type="text" id="prenom" name="prenom"
+                            placeholder="Nom Prénom*" pattern="[( )a-zA-Z0-9._%+-]{2,30}" maxlength="30">
+                        <input required class="dblock w_100" type="text" id="email" name="email" placeholder="Email*"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength="30">
+                    </div>
+                    <div class="mb_48">
+                        <textarea required class="dblock w_100" id="message" name="message" maxlength="500"
+                            placeholder="Votre message"></textarea>
+                    </div>
+
+                    <div class="flex_between_center button_box">
+                        <button class="button_classic button_file">Joindre un fichier</button>
+                        <button class="button_classic flex_center_center gap_16 background_blue_strong color_white" type="submit">
+                            Envoyer<img class="dblock" src="./sources/icons/arrow_right_white_12_9.svg"
+                                alt="icone fleche blanche droite"></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div
+            class="footer_container flex_between_center flex_column_center_center_under_1200 background_blue_strong color_white_break">
+
+            <div class="footer_container_left">
+                <img class="my_auto_under_1200 dblock mb_8 mb_32_under_1200"
+                    src="./sources/logos/logo_workyn_white_footer_157_38.svg" alt="logo workyn footer">
+                <p class="mw_250_under_1200 mb_32_under_1200 text_center_1200">Tu veux faire partie de l'aventure
+                    <strong>Workyn! ?</strong>
+                    <br>
+                    Envoie-nous ton CV en cliquant sur
+                    <a class="fw_700 underline" href="https://www.workyn-recrutement.com/connect">Connect !</a>
+                </p>
+            </div>
+
+            <div class="footer_container_right">
+                <div class="flex flex_column_center_center_under_1200 gap_32 gap_8_under_1200 mb_16 mb_32_under_1200">
+                    <p class="text_center_1200">Tél. : <strong class="dblock_under_1200">07 57 90 77 73</strong></p>
+                    <p class="text_center_1200">E-mail : <strong
+                            class="dblock_under_1200">contact@workyn-recrutement.com</strong></p>
+                </div>
+                <div class="flex_end_center flex_column_center_center_under_1200 gap_32 gap_8_under_1200">
+                    <a class="p_small" href="">Politique de confidentialité</a>
+                    <a class="p_small" href="">Copyright © 2022 Tout droits réservés</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
