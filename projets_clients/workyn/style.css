@@ -1,4 +1,5 @@
-/*==================== RESET CSS ====================*/
+/*================================ RESET CSS =======================================*/
+
 *,
 ::after,
 ::before {
@@ -13,10 +14,15 @@ input,
 select,
 textarea {
     text-decoration: none;
-    color: inherit;
     background: none;
     border: none;
     outline: none;
+    color: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 a,
@@ -39,113 +45,182 @@ textarea:focus {
 }
 
 
-/*================================ CLASSES UTILITAIRES DEBUT /*=======================================*/
-/*==================== MARGIN PADDING GAP WIDTH HEIGHT ====================*/
-.mw_560{
-    max-width: 560px;
+/*================================ VARIABLES COULEUR FONTS =======================================*/
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --white_break: #F2F2F2;
+    --grey: #929292;
+    --blue_strong: #38516B;
+    --blue: #236FE0;
+    --green: #1DD6C9;
+    --green_light: #F5FFFE;
+    --pink: #FFBDE0;
 }
 
-.mw_650{
-    max-width: 650px;
+.background_black {
+    background-color: var(--black);
 }
 
-.mw_700_auto {
-    max-width: 700px;
-    margin: auto;
+.color_black {
+    color: var(--black);
 }
 
-.mw_730{
-    max-width: 730px;
+.background_white {
+    background-color: var(--white);
 }
 
-.mw_800_auto {
-    max-width: 800px;
-    margin: auto;
+.color_white {
+    color: var(--white);
 }
 
-.mw_900 {
-    max-width: 900px;
+.background_white_break {
+    background-color: var(--white_break)
 }
 
-.mw_900_auto {
-    max-width: 900px;
-    margin: auto;
+.color_white_break {
+    color: var(--white_break);
 }
 
-.mw_1000_auto {
-    max-width: 1000px;
-    margin: auto;
+.background_grey {
+    background-color: var(--grey);
 }
 
-.mw_1312_auto {
-    max-width: 1312px;
-    margin: auto;
+.color_grey {
+    color: var(--grey);
 }
 
-.m_auto {
-    margin: auto;
+.background_blue_strong {
+    background-color: var(--blue_strong);
 }
 
-.my_auto {
-    margin-left: auto;
-    margin-right: auto;
+.color_blue_strong {
+    color: var(--blue_strong);
 }
 
-.mb_8 {
-    margin-bottom: 8px;
+.background_blue {
+    background-color: var(--blue);
 }
 
-.mb_16 {
-    margin-bottom: 16px;
+.color_blue {
+    color: var(--blue);
 }
 
-.mb_24 {
-    margin-bottom: 24px;
+.background_green {
+    background-color: var(--green);
 }
 
-.mb_40 {
-    margin-bottom: 40px;
+.color_green {
+    color: var(--green);
 }
 
-.mb_48 {
-    margin-bottom: 48px;
+.background_green_light {
+    background-color: var(--green_light);
 }
 
-.mb_64 {
-    margin-bottom: 64px;
+.color_green_light {
+    color: var(--green_light);
 }
 
-.mb_80 {
-    margin-bottom: 80px;
+.background_pink {
+    background-color: var(--pink);
 }
 
-.mb_160 {
-    margin-bottom: 160px;
+.color_pink {
+    color: var(--pink);
 }
 
-.gap_8 {
-    gap: 8px;
-}
-
-.gap_16 {
-    gap: 16px;
-}
-
-
-.gap_24 {
-    gap: 24px;
-}
-
-.gap_32 {
-    gap: 32px;
-}
-
-.w_100 {
-    width: 100%;
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--blue_strong);
+    background-color: var(--white);
 }
 
 
-/*==================== FLEXBOX ====================*/
+/* Texte courant */
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+/* Texte small */
+
+.p_small {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+
+/* Balise strong */
+
+strong {
+    font-weight: 700;
+}
+
+
+/* Titres principaux */
+
+h1 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26.4px;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 90px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+
+/* Font-weight */
+
+.fw_300 {
+    font-weight: 500;
+}
+
+.fw_400 {
+    font-weight: 500;
+}
+
+.fw_500 {
+    font-weight: 500;
+}
+
+.fw_600 {
+    font-weight: 600;
+}
+
+.fw_700 {
+    font-weight: 700;
+}
+
+.fw_800 {
+    font-weight: 800;
+}
+
+.fw_900 {
+    font-weight: 900;
+}
+
+
+/*================================ FLEXBOX =======================================*/
+
 .flex {
     display: flex;
     flex-direction: row;
@@ -222,7 +297,6 @@ textarea:focus {
     flex-direction: column-reverse;
 }
 
-
 .flex_column_end {
     display: flex;
     flex-direction: column;
@@ -234,7 +308,6 @@ textarea:focus {
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 .flex_wrap {
     flex-wrap: wrap;
@@ -248,21 +321,21 @@ textarea:focus {
     flex: none;
 }
 
-.align_self_start{
+.align_self_start {
     align-self: flex-start;
 }
 
-.align_self_center{
+.align_self_center {
     align-self: center;
 }
 
-.align_self_end{
+.align_self_end {
     align-self: flex-end;
 }
 
 
+/*================================ TEXT ALIGN BORDER RADIUS DISPLAY BLOCK & NONE =======================================*/
 
-/*==================== TEXT ALIGN BORDER RADIUS DISPLAY BLOCK & NONE ====================*/
 .text_center {
     text-align: center;
 }
@@ -274,7 +347,6 @@ textarea:focus {
 .text_right {
     text-align: right;
 }
-
 
 .underline {
     text-decoration: underline;
@@ -292,205 +364,212 @@ textarea:focus {
     display: none;
 }
 
-/*==================== COMPOSANTS ====================*/
+
+/*================================ MARGIN PADDING GAP WIDTH HEIGHT =======================================*/
+
+.mw_560 {
+    max-width: 560px;
+}
+
+.mw_650 {
+    max-width: 650px;
+}
+
+.mw_700_auto {
+    max-width: 700px;
+    margin: auto;
+}
+
+.mw_730 {
+    max-width: 730px;
+}
+
+.mw_800_auto {
+    max-width: 800px;
+    margin: auto;
+}
+
+.mw_900 {
+    max-width: 900px;
+}
+
+.mw_900_auto {
+    max-width: 900px;
+    margin: auto;
+}
+
+.mw_1000_auto {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.mw_1312_auto {
+    max-width: 1312px;
+    margin: auto;
+}
+
+.m_auto {
+    margin: auto;
+}
+
+.my_auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb_8 {
+    margin-bottom: 8px;
+}
+
+.mb_16 {
+    margin-bottom: 16px;
+}
+
+.mb_24 {
+    margin-bottom: 24px;
+}
+
+.mb_40 {
+    margin-bottom: 40px;
+}
+
+.mb_48 {
+    margin-bottom: 48px;
+}
+
+.mb_64 {
+    margin-bottom: 64px;
+}
+
+.mb_80 {
+    margin-bottom: 80px;
+}
+
+.mb_160 {
+    margin-bottom: 160px;
+}
+
+.gap_8 {
+    gap: 8px;
+}
+
+.gap_16 {
+    gap: 16px;
+}
+
+.gap_24 {
+    gap: 24px;
+}
+
+.gap_32 {
+    gap: 32px;
+}
+
+.w_100 {
+    width: 100%;
+}
+
+
+/*================================ COMPOSANTS PROJET =======================================*/
+
 .button_classic {
     padding: 16px 32px;
     border-radius: 8px;
 }
 
-
-/*================================ CLASSES UTILITAIRES FIN /*=======================================*/
-/*==================== FONT-FAMILY ====================*/
-html {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-style: normal;
-    font-weight: 400;
-    color: #38516B;
-    background-color: #FFFFFF;
+.border_1_grey {
+    border: 1px solid var(--grey);
 }
 
-/* Texte courant */
-p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+.border_1_blue_strong {
+    border: 1px solid var(--blue_strong);
 }
 
-/* Texte small */
-.p_small {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
+.border_1_bottom_grey {
+    border-bottom: 1px solid var(--grey);
 }
 
-/* Balise strong */
-strong {
-    font-weight: 700;
+.box_shadow {
+    box-shadow: 0px 4px 50px rgba(56, 81, 107, 0.15);
 }
 
-/* Titres principaux */
-h1 {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 26.4px;
+.transition_200ms_easeout {
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
 }
 
-
-h2 {
-    font-weight: 300;
-    font-size: 60px;
-    line-height: 90px;
-}
-
-h3 {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-}
-
-/* Font-weight */
-.fw_300 {
-    font-weight: 500;
-}
-
-.fw_400 {
-    font-weight: 500;
-}
-
-
-.fw_500 {
-    font-weight: 500;
-}
-
-.fw_600 {
-    font-weight: 600;
-}
-
-.fw_700 {
-    font-weight: 700;
-}
-
-.fw_800 {
-    font-weight: 800;
-}
-
-.fw_900 {
-    font-weight: 900;
-}
-
-/*==================== BACKGROUNDS & COLORS ====================*/
-.background_black {
-    background-color: #000000;
-}
-
-.color_black {
-    color: #000000;
-}
-
-
-.background_white_break {
-    background-color: #F2F2F2;
-}
-
-.color_white_break {
-    color: #F2F2F2;
-}
-
-.background_white {
-    background-color: #ffffff;
-}
-
-.color_white {
-    color: #ffffff;
-}
-
-.background_blue_medium {
-    background-color: #236FE0;
-}
-
-.color_blue_medium {
-    color: #236FE0;
-}
-
-.background_blue_strong {
+.hover_background_blue_strong_color_white:hover {
+    color: white;
     background-color: #38516B;
 }
 
-.color_blue_strong {
-    color: #38516B;
-}
 
-.background_green_strong {
-    background-color: #1DD6C9;
-}
+/*==================== SECTION PRINCIPALES ====================*/
 
-.color_green_strong {
-    color: #1DD6C9;
-}
-
-.background_green_light {
-    background-color: #F5FFFE;
-}
-
-.color_green_light {
-    color: #F5FFFE;
-}
-
-.background_pink {
-    background-color: #FFBDE0;
-}
-
-.color_pink {
-    color: #FFBDE0;
-}
-
-/*==================== PROJET ====================*/
-main{
+main {
     overflow: hidden;
 }
+
 .section_recruitment_presentation {
-    padding: 0px 64px;
+    padding: 80px 64px 0px 64px;
     margin-bottom: 335px;
 }
 
-.section_recruitment_ribbon_background{
+.section_recruitment_ribbon_background {
     height: 440px;
     position: relative;
 }
 
-.section_recruitment_ribbon_background_rotation{
+.section_recruitment_ribbon_background_rotation {
     width: 200%;
     height: 530px;
     position: absolute;
-    top:-265px;
-    left:-50%;
+    top: -265px;
+    left: -50%;
     transform: rotate(-9deg);
 }
 
-.section_recruitment_ribbon_container{
+.section_recruitment_ribbon_container {
     position: relative;
-    top:-25%;
+    top: -25%;
     z-index: 99;
     padding: 0px 64px;
 }
 
-.section_recruitment_ribbon_container img{
+.section_recruitment_ribbon_container_img {
+    position: absolute;
+}
+
+.section_recruitment_ribbon_container div img {
     width: 87px;
 }
 
-.section_recruitment_ribbon_container h3{
+.section_recruitment_ribbon_container h3 {
     width: 90%;
 }
 
+.section_recruitment_ribbon_container_img {
+    position: absolute;
+    width: 360px;
+}
+
+.section_recruitment_ribbon_container_img.first_element {
+    top: -280px;
+    right: 25%;
+}
+
+.section_recruitment_ribbon_container_img.second_element {
+    top: 80px;
+    left: 65%;
+}
+
 .section_adn {
-    padding:0px 32px 80px 32px;
+    padding: 0px 32px 80px 32px;
 }
 
 .section_adn_offers {
     padding: 48px;
-    box-shadow: 0px 4px 50px rgba(56, 81, 107, 0.15);
     border-radius: 16px;
 }
 
@@ -500,89 +579,23 @@ main{
 
 .section_contact form input {
     height: 28px;
-    border-bottom: 1px solid #929292;
 }
 
 .section_contact form textarea {
-    border: 1px solid #929292;
     padding: 16px 24px;
     height: 100px;
 }
 
-input,
-textarea {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-style: normal;
-    font-weight: 400;
-    color: #929292;
-}
-
-.section_contact form .button_file {
-    border: 1px solid #38516B;
-    transition-property: all;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
-}
-
-.section_contact form .button_file:hover {
-    color: white;
-    background-color: #38516B;
-}
-
-
-
-
 
 /*==================== FOOTER ====================*/
+
 .footer_container {
     padding: 48px 10%;
 }
 
 
-/*==================== MEDIA QUERIES 576px ====================*/
-@media only screen and (max-width: 576px) {
-    .flex_column_under_576 {
-        flex-direction: column;
-    }
-
-    h2 {
-        font-size: 35px;
-        line-height: 52px;
-    }
-
-    .section_recruitment_presentation {
-        padding: 0px 24px;
-    }
-
-    .section_adn {
-        padding: 80px 24px;
-    }
-
-    .section_contact {
-        padding: 80px 8px 160px 8px;
-    }
-
-    .section_contact form {
-        padding: 0px 16px;
-    }
-
-    .section_contact form .button_box {
-        flex-direction: column;
-        align-items: start;
-        gap: 8px;
-    }
-}
-
-/*==================== MEDIA QUERIES 768px ====================*/
-@media only screen and (max-width: 768px) {
-    .section_recruitment_presentation {
-        padding: 0px 32px;
-    }
-}
-
 /*==================== MEDIA QUERIES 1200px ====================*/
+
 @media only screen and (max-width: 1200px) {
     .flex_column_center_center_under_1200 {
         display: flex;
@@ -590,29 +603,101 @@ textarea {
         justify-content: center;
         align-items: center;
     }
-
     .my_auto_under_1200 {
         margin-left: auto;
         margin-right: auto;
     }
-
     .mw_250_under_1200 {
         max-width: 250px;
     }
-
     .mb_32_under_1200 {
         margin-bottom: 32px;
     }
-
     .gap_8_under_1200 {
         gap: 8px;
     }
-
     .dblock_under_1200 {
         display: block;
     }
-
-    .text_center_1200 {
+    .text_center_under_1200 {
         text-align: center;
+    }
+    .section_recruitment_presentation {
+        margin-bottom: 500px;
+    }
+    .section_recruitment_ribbon_container_img.first_element {
+        top: -320px;
+        right: 5%;
+    }
+    .section_recruitment_ribbon_container_img.second_element {
+        top: 270px;
+        left: 5%;
+    }
+    .section_adn {
+        padding: 160px 32px 80px 32px;
+    }
+    .footer_container {
+        padding: 48px 16px;
+    }
+}
+
+
+/*==================== MEDIA QUERIES 768px ====================*/
+
+@media only screen and (max-width: 768px) {
+    .section_recruitment_presentation {
+        padding: 0px 32px;
+    }
+    .section_recruitment_ribbon_container {
+        top: -35%;
+        padding: 0px 32px;
+    }
+}
+
+
+/*==================== MEDIA QUERIES 576px ====================*/
+
+@media only screen and (max-width: 576px) {
+    .flex_column_under_576 {
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 35px;
+        line-height: 52px;
+    }
+    .section_recruitment_presentation {
+        padding: 0px 24px;
+    }
+    .section_recruitment_ribbon_container {
+        top: -45%;
+        padding: 0px 24px;
+    }
+    .section_recruitment_ribbon_container_img {
+        width: 180px;
+    }
+    .section_recruitment_ribbon_container_img.first_element {
+        top: -180px;
+        right: 5%;
+    }
+    .section_recruitment_ribbon_container_img.second_element {
+        top: 400px;
+        left: 5%;
+    }
+    .section_adn {
+        padding: 0px 24px 80px 24px;
+    }
+    .section_adn_offers {
+        padding: 48px 32px;
+    }
+    .section_contact {
+        padding: 80px 8px 160px 8px;
+    }
+    .section_contact form {
+        padding: 0px 16px;
+    }
+    .section_contact form .button_box {
+        flex-direction: column;
+        align-items: start;
+        gap: 8px;
     }
 }

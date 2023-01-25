@@ -1,10 +1,45 @@
 /* 
-Alexis:
 
-footer très grand écran : comportement ok, ou dans un bloc qui reste centré?
 
 logo workyn footer = un lien?
 si oui vers ou?
+
+bouton découvrir nos offres bloc 4 vers ou?
+
+SEO à voir aussi pour antoine
+
+
+
+
+
+SECTION 4 L’ADN de Workyn! Recrutement
+- pas de changement par rapport au figma
+- carte voir les offres : padding interne horizontal diminué sinon bouton passe sur 2 lignes sur des petits écrans
+
+SECTION 5 contact
+- formulaire mis en place avec 
+https://smtpjs.com/
+- outil externe, on neut pas gérer le formulaire directement depuis un site
+- à priori, compliqué d'intégrer la PJ
+
+
+footer
+- sur des grands écrans, prend toute la largeur?
+- tester les liens déjà si possible
+
+
+
+header + burger menu
+SECTION 1 Les recruteurs spécialisés Commerce & Luxe et Immobilier
+SECTION 2 Deux marques, une promesse
+SECTION 3 Nous proposons une expérience recrutement moderne et de proximité !
+
+
+SECTION 4 L’ADN de Workyn! Recrutement
+SECTION 5 Formulaire de contact
+footer
+
+
 
 
 
@@ -19,6 +54,8 @@ $grid-breakpoints: (
 );
 
 
+D0541A7BAEE97C84CF428124F1C7028F59D1
 
+c5306d78-131d-4951-9bcc-d5affcc4fd9a
 
 */
