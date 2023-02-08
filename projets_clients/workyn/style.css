@@ -3,6 +3,10 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    overflow: hidden;
+}
+
 *,
 ::after,
 ::before {
@@ -48,7 +52,7 @@ textarea:focus {
 }
 
 
-/*================================ VARIABLES COULEUR FONTS =======================================*/
+/*================================ COULEUR =======================================*/
 
 :root {
     --black: #000000;
@@ -134,19 +138,19 @@ textarea:focus {
     color: var(--pink);
 }
 
+/*================================ FONTS =======================================*/
 html {
+    color: var(--blue_strong);
+    background-color: var(--white);
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-style: normal;
     font-weight: 400;
-    color: var(--blue_strong);
-    background-color: var(--white);
 }
 
 
 /* Texte courant */
-
 p {
     font-weight: 400;
     font-size: 16px;
@@ -155,7 +159,6 @@ p {
 
 
 /* Texte small */
-
 .p_small {
     font-weight: 400;
     font-size: 12px;
@@ -164,14 +167,12 @@ p {
 
 
 /* Balise strong */
-
 strong {
     font-weight: 700;
 }
 
 
 /* Titres principaux */
-
 h1 {
     font-weight: 600;
     font-size: 22px;
@@ -202,21 +203,32 @@ h4 {
     line-height: 36px;
 }
 
-.h4_32_48 {
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 48px;
+@media only screen and (max-width: 576px) {
+    h2 {
+        font-size: 35px;
+        line-height: 52px;
+    }
+
+    .h2_60_72 {
+        font-size: 35px;
+        line-height: 39px;
+    }
+
+    h4 {
+        font-size: 19px;
+        line-height: 28px;
+    }
 }
 
 
 /* Font-weight */
 
 .fw_300 {
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .fw_400 {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .fw_500 {
@@ -313,7 +325,6 @@ h4 {
     flex-direction: column;
 }
 
-
 .flex_column_reverse {
     display: flex;
     flex-direction: column-reverse;
@@ -355,12 +366,33 @@ h4 {
     align-self: flex-end;
 }
 
+@media only screen and (max-width: 1200px) {
+    .flex_column_under_1200 {
+        flex-direction: column;
+    }
+
+    .flex_column_center_center_under_1200 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .flex_column_under_576 {
+        flex-direction: column;
+    }
+}
+
 
 /*================================ TEXT ALIGN BORDER RADIUS DISPLAY BLOCK & NONE =======================================*/
 
 .text_center {
     text-align: center;
 }
+
+
 
 .text_left {
     text-align: left;
@@ -386,6 +418,15 @@ h4 {
     display: none;
 }
 
+@media only screen and (max-width: 1200px) {
+    .text_center_under_1200 {
+        text-align: center;
+    }
+
+    .dblock_under_1200 {
+        display: block;
+    }
+}
 
 /*================================ MARGIN PADDING GAP WIDTH HEIGHT =======================================*/
 
@@ -422,6 +463,11 @@ h4 {
 
 .mw_1000_auto {
     max-width: 1000px;
+    margin: auto;
+}
+
+.mw_1090_auto {
+    max-width: 1090px;
     margin: auto;
 }
 
@@ -508,6 +554,41 @@ h4 {
     width: 100%;
 }
 
+@media only screen and (max-width: 1200px) {
+    .my_auto_under_1200 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mw_250_under_1200 {
+        max-width: 250px;
+    }
+
+    .mb_32_under_1200 {
+        margin-bottom: 32px;
+    }
+
+    .gap_8_under_1200 {
+        gap: 8px;
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
+    .gap_16_under_576 {
+        gap: 16px;
+    }
+
+    .gap_32_under_576 {
+        gap: 32px;
+    }
+
+    .mb_24_under_576 {
+        margin-bottom: 24px;
+    }
+}
+
+
 
 /*================================ COMPOSANTS PROJET =======================================*/
 
@@ -543,17 +624,10 @@ h4 {
     background-color: #38516B;
 }
 
-
-/*==================== SECTION PRINCIPALES ====================*/
-
-main {
-    overflow: hidden;
-}
-
+/*================================ SECTION 1 INTRODUCTION =======================================*/
 .section_introduction {
-    padding: 0px 60px 256px 60px;
+    padding: 170px 60px 256px 60px;
 }
-
 
 .section_introduction_illustration {
     width: 45%;
@@ -582,6 +656,33 @@ main {
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    .section_introduction_illustration {
+        width: 100%;
+        max-width: 600px;
+        margin-left: 0px;
+    }
+
+    .section_introduction_anchor {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .section_introduction {
+        padding: 0px 32px 90px 32px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .section_introduction {
+        padding: 0px 24px 90px 24px;
+
+    }
+}
+
+/*================================ SECTION 2 BRANDS =======================================*/
 .section_brands_content {
     padding: 0px 24px 80px 24px;
 }
@@ -640,6 +741,42 @@ main {
     transform: rotate(9deg);
 }
 
+@media only screen and (max-width: 1200px) {
+    .section_brands_ribbon {
+        height: 800px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .section_brands_content {
+        padding: 0px 124px 80px 124px;
+    }
+
+    .section_brands_content h3 strong img.second_element {
+        right: -80px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .section_brands_content {
+        padding: 0px 24px 80px 24px;
+    }
+
+    .section_brands_content h3 strong img.second_element {
+        right: -35px;
+    }
+
+    .section_brands_card {
+        padding: 32px;
+    }
+
+    .section_brands_ribbon {
+        height: 700px;
+    }
+}
+
+/*================================ SECTION 3 RECRUITMENT =======================================*/
 .section_recruitment {
     margin-top: 160px;
 }
@@ -697,89 +834,7 @@ main {
     left: 65%;
 }
 
-.section_adn {
-    padding: 0px 32px 80px 32px;
-}
-
-.section_adn_offers {
-    padding: 48px;
-    border-radius: 16px;
-}
-
-.section_contact {
-    padding: 80px 32px 160px 32px;
-}
-
-.section_contact form input {
-    height: 28px;
-}
-
-.section_contact form textarea {
-    padding: 16px 24px;
-    height: 100px;
-}
-
-
-/*==================== FOOTER ====================*/
-
-.footer_container {
-    padding: 48px 10%;
-}
-
-
-/*==================== MEDIA QUERIES 1200px ====================*/
-
 @media only screen and (max-width: 1200px) {
-    .flex_column_center_center_under_1200 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .flex_column_under_1200 {
-        flex-direction: column;
-    }
-
-    .my_auto_under_1200 {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .mw_250_under_1200 {
-        max-width: 250px;
-    }
-
-    .mb_32_under_1200 {
-        margin-bottom: 32px;
-    }
-
-    .gap_8_under_1200 {
-        gap: 8px;
-    }
-
-    .dblock_under_1200 {
-        display: block;
-    }
-
-    .text_center_under_1200 {
-        text-align: center;
-    }
-
-    .section_introduction_illustration {
-        width: 100%;
-        max-width: 600px;
-        margin-left: 0px;
-    }
-
-    .section_introduction_anchor {
-        display: none;
-    }
-
-    .section_brands_ribbon {
-        height: 800px;
-    }
-
     .section_recruitment_presentation {
         margin-bottom: 500px;
     }
@@ -793,33 +848,10 @@ main {
         top: 270px;
         left: 5%;
     }
-
-    .section_adn {
-        padding: 160px 32px 80px 32px;
-    }
-
-    .footer_container {
-        padding: 48px 16px;
-    }
 }
 
 
-/*==================== MEDIA QUERIES 768px ====================*/
-
 @media only screen and (max-width: 768px) {
-    .section_introduction {
-        padding: 0px 32px 90px 32px;
-
-    }
-
-    .section_brands_content {
-        padding: 0px 124px 80px 124px;
-    }
-
-    .section_brands_content h3 strong img.second_element {
-        right: -80px;
-    }
-
     .section_recruitment_presentation {
         padding: 0px 32px;
     }
@@ -830,58 +862,7 @@ main {
     }
 }
 
-
-/*==================== MEDIA QUERIES 576px ====================*/
-
 @media only screen and (max-width: 576px) {
-    .flex_column_under_576 {
-        flex-direction: column;
-    }
-
-    h2 {
-        font-size: 35px;
-        line-height: 52px;
-    }
-
-    .h2_60_72 {
-        font-size: 35px;
-        line-height: 39px;
-    }
-
-    h4 {
-        font-size: 19px;
-        line-height: 28px;
-    }
-
-    .gap_16_under_576 {
-        gap: 16px;
-    }
-
-    .mb_24_under_576 {
-        margin-bottom: 24px;
-    }
-
-    .section_introduction {
-        padding: 0px 24px 90px 24px;
-
-    }
-
-    .section_brands_content {
-        padding: 0px 24px 80px 24px;
-    }
-
-    .section_brands_content h3 strong img.second_element {
-        right: -35px;
-    }
-
-    .section_brands_card {
-        padding: 32px;
-    }
-
-    .section_brands_ribbon {
-        height: 700px;
-    }
-
     .section_recruitment_presentation {
         padding: 0px 24px;
     }
@@ -904,6 +885,26 @@ main {
         top: 400px;
         left: 5%;
     }
+}
+
+/*================================ SECTION 4 ADN =======================================*/
+.section_adn {
+    padding: 0px 32px 80px 32px;
+}
+
+.section_adn_offers {
+    padding: 48px;
+    border-radius: 16px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .section_adn {
+        padding: 160px 32px 80px 32px;
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
 
     .section_adn {
         padding: 0px 24px 80px 24px;
@@ -912,7 +913,23 @@ main {
     .section_adn_offers {
         padding: 48px 32px;
     }
+}
 
+/*================================ SECTION 5 CONTACT =======================================*/
+.section_contact {
+    padding: 80px 32px 160px 32px;
+}
+
+.section_contact form input {
+    height: 28px;
+}
+
+.section_contact form textarea {
+    padding: 16px 24px;
+    height: 100px;
+}
+
+@media only screen and (max-width: 576px) {
     .section_contact {
         padding: 80px 8px 160px 8px;
     }
@@ -925,5 +942,41 @@ main {
         flex-direction: column;
         align-items: start;
         gap: 8px;
+
+    }
+}
+
+/*================================ SECTION 1 INTRODUCTION SOUS PAGE =======================================*/
+.section_introduction_page {
+    padding: 240px 24px 256px 24px;
+}
+
+.section_introduction_page_content{
+    width: 533px;
+    max-width: 100%;
+}
+
+.section_introduction_page_img{
+    width: 425px;
+}
+
+.section_introduction_page_anchor{
+    margin-top: 130px;
+}
+
+@media only screen and (max-width: 576px) {
+    .section_introduction_page_img{
+        width: 225px;
+    }
+}
+
+/*================================ FOOTER =======================================*/
+.footer_container {
+    padding: 48px 10%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .footer_container {
+        padding: 48px 16px;
     }
 }
