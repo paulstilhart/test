@@ -51,6 +51,10 @@ textarea:focus {
     outline-color: transparent !important;
 }
 
+ul {
+    list-style-position: inside;
+}
+
 
 /*================================ COULEUR =======================================*/
 
@@ -526,6 +530,10 @@ h4 {
     margin-bottom: 48px;
 }
 
+.mb_56 {
+    margin-bottom: 56px;
+}
+
 .mb_64 {
     margin-bottom: 64px;
 }
@@ -722,10 +730,6 @@ h4 {
     border-radius: 32px;
     padding: 48px 80px;
     position: relative;
-}
-
-.section_brands_card ul {
-    list-style-position: inside;
 }
 
 .section_brands_card li {
@@ -954,7 +958,7 @@ h4 {
     }
 }
 
-/*================================ SECTION 1 INTRODUCTION SOUS PAGE =======================================*/
+/*================================ SECTION 1 SOUS PAGE INTRODUCTION =======================================*/
 .section_introduction_page {
     padding: 240px 24px 256px 24px;
 }
@@ -973,14 +977,19 @@ h4 {
 }
 
 @media only screen and (max-width: 576px) {
+    .section_introduction_page {
+        padding: 240px 24px 120px 24px;
+    }
+
     .section_introduction_page_img {
         width: 225px;
     }
 }
 
-/*================================ SECTION 2 GOALS =======================================*/
+/*================================ SECTION 2 SOUS PAGE GOALS =======================================*/
 .section_goals {
     position: relative;
+    margin-bottom: 110px;
 }
 
 .section_goals_ribbon_container {
@@ -1017,6 +1026,10 @@ h4 {
 }
 
 @media only screen and (max-width: 1200px) {
+    .section_goals {
+        margin-bottom: 75px;
+    }
+
     .section_goals_ribbon_container {
         height: 750px;
         top: -100px;
@@ -1048,16 +1061,109 @@ h4 {
 }
 
 @media only screen and (max-width: 576px) {
+    .section_goals {
+        margin-bottom: 35px;
+    }
+
     .section_goals_ribbon_container {
         height: 80%;
         top: 0px;
     }
+
     .section_goals_content_img {
         text-align: left;
         max-width: 250px;
     }
 }
 
+/*================================ SECTION 3 SOUS PAGE EXPERT =======================================*/
+.section_expert {
+    padding: 110px 64px 160px 64px;
+}
+
+.section_expert_container {
+    padding: 64px 72px;
+    border-radius: 24px;
+}
+
+.section_expert_content {
+    gap: 48px;
+}
+
+
+.section_expert_content_separator {
+    width: 1.5px;
+    height: 171px;
+}
+
+@media only screen and (max-width: 992px) {
+    .section_expert {
+        padding: 75px 64px 200px 64px;
+    }
+
+    .section_expert_content {
+        max-width: 333px;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    .section_expert_content_separator {
+        width: 171px;
+        height: 1.5px;
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
+    .section_expert {
+        padding: 35px 24px 125px 24px;
+    }
+
+    .section_expert_container {
+        padding: 64px 32px;
+    }
+}
+
+/*================================ SECTION 4 SOUS PAGE SECTORS =======================================*/
+.section_sectors {
+    padding: 0px 24px;
+}
+
+.section_sectors_container {
+    max-width: 675px;
+}
+
+.section_sectors_img_container {
+    max-width: 220px;
+    position: relative;
+}
+
+.section_sectors_container span {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    font-size: 20px;
+    line-height: 30px;
+    height: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+    .section_sectors_container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .section_sectors_container div {
+        flex-direction: column;
+        gap:32px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .section_sectors_img_container {
+        max-width: 180px;
+    }
+}
 
 /*================================ FOOTER =======================================*/
 .footer_container {
