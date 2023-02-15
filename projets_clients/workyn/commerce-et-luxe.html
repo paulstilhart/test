@@ -19,10 +19,32 @@
     <script defer src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- SCRIPT JS CUSTOM -->
-    <!--     <script type="text/javascript" src="./script.js" defer></script> -->
+    <script type="text/javascript" src="./script.js" defer></script>
 </head>
 
 <body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="flex_between_center background_white w_100 box_shadow">
+        <a class="header_link_home" href="./index.html"><img class="dblock w_100"
+                src="./sources/logos/logo_workyn_blue_header_157_41.svg" alt=""></a>
+        <nav class="flex_center_center gap_24">
+            <a class="nav_links_pages" href="./commerce-et-luxe.html"><img class="dblock"
+                    src="./sources/logos/logo_workyn_business_351_88.svg" alt="logo lien nav"></a>
+            <a class="nav_links_pages" href="./immobilier.html">
+                <img class="dblock" src="./sources/logos/logo_workyn_realestate_351_85.svg" alt="logo lien nav"></a>
+            <a class="nav_links business" href="#section_expert">Qui sommes-nous ?</a>
+            <a target="_blank" class="nav_links business" href="https://www.workyn-recrutement.com/#jobs">Nos offres d’emploi</a>
+            <a class="nav_links business" href="#section_contact_anchor">Contacts</a>
+            <a target="_blank" href="https://www.linkedin.com/company/workyn-recrutement"><img class="dblock"
+                    src="./sources/icons/linkedin_pink.svg" alt="logo linkedin"></a>
+        </nav>
+        <button class="dnone nav_toggler" type="button" aria-label="toggle curtain navigation">
+            <span class="line l1"></span>
+            <span class="line l2"></span>
+            <span class="line l3"></span>
+        </button>
+    </header>
+    <!-- ==================== MAIN ==================== -->
     <main>
         <!-- ==================== SECTION 1 Introduction sous page ==================== -->
         <section class="section_introduction_page background_white">
@@ -68,7 +90,7 @@
             </div>
         </section>
         <!-- ==================== SECTION 3 EXPERT ==================== -->
-        <section class="section_expert background_white">
+        <section id="section_expert" class="section_expert background_white">
             <div class="section_expert_container box_shadow mw_1000_auto">
                 <h2 class="text_center mb_56">Nos domaines <strong>d’expertise</strong></h2>
                 <div class="section_expert_content flex_between">
@@ -129,6 +151,68 @@
                 </div>
             </div>
         </section>
+        <!-- ==================== SECTION 5 APPROACH ==================== -->
+        <section class="section_approach background_green">
+            <h2 class="text_center color_white">L’approche <strong>Workyn!</strong></h2>
+            <div class="section_approach_cards_container mw_1440_auto flex gap_48">
+                <div class="section_approach_card">
+                    <div class="section_approach_card_image flex_center_center background_white w_100">
+                        <img class="dblock" src="./sources/logos/approach_business_card1.png"
+                            alt="image cards APPROACH">
+                    </div>
+                    <div class="section_approach_card_content background_blue_strong color_white w_100">
+                        <h4>La fiche de poste :</h4>
+                        <p><br>Nous prenons le temps d’échanger sur le profil recherché et nous vous aidons à affiner la
+                            fiche de poste grâce à notre connaissance du marché.</p>
+                    </div>
+                </div>
+                <div class="section_approach_card">
+                    <div class="section_approach_card_image flex_center_center background_white w_100">
+                        <img class="dblock" src="./sources/logos/approach_business_card2.png"
+                            alt="image cards APPROACH">
+                    </div>
+                    <div class="section_approach_card_content background_blue_strong color_white w_100">
+                        <h4>Les recherches par approche directe :</h4>
+                        <p><br>Parce que tous les candidats ne sont pas visibles, notre équipe de recruteurs est formée
+                            à la chasse de candidats.</p>
+                    </div>
+                </div>
+                <div class="section_approach_card">
+                    <div class="section_approach_card_image flex_center_center background_white w_100">
+                        <img class="dblock" src="./sources/logos/approach_business_card3.png"
+                            alt="image cards APPROACH">
+                    </div>
+                    <div class="section_approach_card_content background_blue_strong color_white w_100">
+                        <h4>Les entretiens :</h4>
+                        <p><br>Pas de questions pièges ! Nos échanges avec les candidats sont basés sur la transparence
+                            et la bienveillance</p>
+                    </div>
+                </div>
+                <div class="section_approach_card">
+                    <div class="section_approach_card_image flex_center_center background_white w_100">
+                        <img class="dblock" src="./sources/logos/approach_business_card4.png"
+                            alt="image cards APPROACH">
+                    </div>
+                    <div class="section_approach_card_content background_blue_strong color_white w_100">
+                        <h4>Les remontées d’informations :</h4>
+                        <p><br>Tout au long du processus de recrutement, nous vous partageons les informations
+                            spécifiques au secteur (rémunération, volumétrie de CV, concurrence…).</p>
+                    </div>
+                </div>
+                <div class="section_approach_card">
+                    <div class="section_approach_card_image flex_center_center background_white w_100">
+                        <img class="dblock" src="./sources/logos/approach_business_card5.png"
+                            alt="image cards APPROACH">
+                    </div>
+                    <div class="section_approach_card_content background_blue_strong color_white w_100">
+                        <h4>Le suivi post intégration :</h4>
+                        <p><br>Notre collaboration ne s’arrête pas au recrutement du candidat. Tous les candidats
+                            bénéficient d’un suivi personnalisé après leur prise de poste.</p>
+                    </div>
+                </div>
+            </div>
+            <span id="section_contact_anchor" class="anchor"></span>
+        </section>
         <!-- ==================== SECTION 6 CONTACT ==================== -->
         <section class="background_white">
             <div class="section_contact mw_700_auto">
@@ -165,7 +249,7 @@
             </div>
         </section>
     </main>
-    <!-- ==================== FOOTER DEBUT ==================== -->
+    <!-- ==================== FOOTER ==================== -->
     <footer>
         <div
             class="footer_container flex_between_center flex_column_center_center_under_1200 background_blue_strong color_white_break">
@@ -195,23 +279,6 @@
             </div>
         </div>
     </footer>
-    <!-- ==================== SCRIPT JS ==================== -->
-    <script type="text/javascript" defer>
-        function Mail() {
-            const name = document.getElementById("name");
-            const email = document.getElementById("email");
-            const message = document.getElementById("message");
-            Email.send({
-                SecureToken: "c5306d78-131d-4951-9bcc-d5affcc4fd9a",
-                To: 'paul.stilhart@gmail.com',
-                From: email.value,
-                Subject: "Formulaire de contact - Mail de - " + name.value,
-                Body: message.value,
-            }).then(
-                message => alert("Mail bien envoyé!")
-            );
-        };
-    </script>
 </body>
 
 </html>

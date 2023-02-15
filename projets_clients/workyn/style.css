@@ -640,9 +640,133 @@ h4 {
     background-color: #38516B;
 }
 
+.anchor {
+    position: absolute;
+}
+
+/*================================ HEADER =======================================*/
+header {
+    height: 120px;
+    padding: 0px 64px;
+    position: fixed;
+    z-index: 99;
+    /* transition: all 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84); */
+}
+
+.header_link_home {
+    width: 157px;
+}
+
+.nav_links_pages,
+.nav_links_pages img {
+    width: 107px;
+}
+
+.nav_links_pages {
+    margin-right: 28px;
+}
+
+.nav_links {
+    border-bottom: 2px solid rgba(29, 214, 202, 0);
+}
+
+.nav_links:hover {
+    border-bottom-color: var(--green);
+}
+
+.nav_links.realestate:hover {
+    border-bottom-color: var(--blue);
+}
+
+.nav_links.business:hover {
+    border-bottom-color: var(--pink);
+}
+
+.nav_toggler {
+    position: fixed;
+    z-index: 10;
+    /* au dessus de la navigation */
+    top: 35px;
+    right: 35px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    outline: none;
+    /* ici rien pour que ce soit + sympa, mais si accessibilité il faut le rajouter */
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    /* on voit que les spans */
+}
+
+.line {
+    position: absolute;
+    display: block;
+    /* pour pouvoir donner des dimensions aux éléments */
+    width: 100%;
+    height: 2px;
+    background: var(--blue_strong);
+    transition: transform 0.3s ease-out;
+    opacity: 0.1s ease-out;
+}
+
+.l1 {
+    transform: translateY(-10px);
+}
+
+.l3 {
+    transform: translateY(10px);
+}
+
+/* Pour créer la croix quand on clique dessus */
+.nav_toggler.active .l1 {
+    transform: translateY(0px) rotate(135deg);
+}
+
+.nav_toggler.active .l2 {
+    opacity: 0;
+}
+
+.nav_toggler.active .l3 {
+    transform: translateY(0px) rotate(-135deg);
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    header.active {
+        height: 350px;
+        justify-content: center;
+    }
+
+    header.active>.header_link_home {
+        display: none;
+    }
+
+    nav {
+        flex-direction: column !important;
+        transform: translateY(-100%);
+    }
+
+    nav.active {
+        display: flex !important;
+        transform: translate(0);
+    }
+
+    .nav_toggler {
+        display: flex;
+    }
+
+    .nav_links_pages {
+        margin-right: 0;
+    }
+}
+
+
 /*================================ SECTION 1 INTRODUCTION =======================================*/
 .section_introduction {
-    padding: 170px 60px 256px 60px;
+    padding: 170px 60px 128px 60px;
 }
 
 .section_introduction_illustration {
@@ -656,6 +780,7 @@ h4 {
 
 .section_introduction_anchor img {
     animation: scale 1600ms ease-out infinite;
+    margin-bottom: 5px;
 }
 
 @keyframes scale {
@@ -687,20 +812,20 @@ h4 {
 
 @media only screen and (max-width: 768px) {
     .section_introduction {
-        padding: 0px 32px 90px 32px;
+        padding: 170px 32px 45px 32px;
     }
 }
 
 @media only screen and (max-width: 576px) {
     .section_introduction {
-        padding: 0px 24px 90px 24px;
+        padding: 170px 24px 90px 24px;
 
     }
 }
 
 /*================================ SECTION 2 BRANDS =======================================*/
 .section_brands_content {
-    padding: 0px 24px 80px 24px;
+    padding: 128px 24px 80px 24px;
 }
 
 .section_brands_content h3 strong {
@@ -762,7 +887,7 @@ h4 {
 
 @media only screen and (max-width: 768px) {
     .section_brands_content {
-        padding: 0px 124px 80px 124px;
+        padding: 45px 124px 80px 124px;
     }
 
     .section_brands_content h3 strong img.second_element {
@@ -772,7 +897,7 @@ h4 {
 
 @media only screen and (max-width: 576px) {
     .section_brands_content {
-        padding: 0px 24px 80px 24px;
+        padding: 45px 24px 80px 24px;
     }
 
     .section_brands_content h3 strong img.second_element {
@@ -815,7 +940,6 @@ h4 {
 .section_recruitment_ribbon_container {
     position: relative;
     top: -25%;
-    z-index: 99;
     padding: 0px 64px;
 }
 
@@ -928,6 +1052,7 @@ h4 {
 }
 
 /*================================ SECTION 5 CONTACT =======================================*/
+
 .section_contact {
     padding: 80px 32px 160px 32px;
 }
@@ -960,7 +1085,7 @@ h4 {
 
 /*================================ SECTION 1 SOUS PAGE INTRODUCTION =======================================*/
 .section_introduction_page {
-    padding: 240px 24px 256px 24px;
+    padding: 240px 24px 0px 24px;
 }
 
 .section_introduction_page_content {
@@ -976,9 +1101,15 @@ h4 {
     margin-top: 130px;
 }
 
+@media only screen and (max-width: 1200px) {
+    .section_introduction_page {
+        padding: 240px 24px 0px 24px;
+    }
+}
+
 @media only screen and (max-width: 576px) {
     .section_introduction_page {
-        padding: 240px 24px 120px 24px;
+        padding: 240px 24px 0px 24px;
     }
 
     .section_introduction_page_img {
@@ -989,13 +1120,14 @@ h4 {
 /*================================ SECTION 2 SOUS PAGE GOALS =======================================*/
 .section_goals {
     position: relative;
-    margin-bottom: 110px;
+    padding: 190px 0px 110px 0px;
 }
+
 
 .section_goals_ribbon_container {
     position: absolute;
     left: -150%;
-    top: 0px;
+    top: 195px;
     width: 400%;
     height: 570px;
     transform: rotate(-9deg);
@@ -1027,12 +1159,12 @@ h4 {
 
 @media only screen and (max-width: 1200px) {
     .section_goals {
-        margin-bottom: 75px;
+        padding: 256px 0px 75px 0px;
     }
 
     .section_goals_ribbon_container {
         height: 750px;
-        top: -100px;
+        top: 150px;
     }
 
     .section_goals_content_img {
@@ -1062,12 +1194,12 @@ h4 {
 
 @media only screen and (max-width: 576px) {
     .section_goals {
-        margin-bottom: 35px;
+        padding: 120px 0px 35px 0px;
     }
 
     .section_goals_ribbon_container {
         height: 80%;
-        top: 0px;
+        top: 50px;
     }
 
     .section_goals_content_img {
@@ -1084,6 +1216,26 @@ h4 {
 .section_expert_container {
     padding: 64px 72px;
     border-radius: 24px;
+}
+
+.section_expert_container.realestate {
+    max-width: 1313px;
+    padding: 48px 64px;
+    flex-wrap: wrap;
+}
+
+.section_expert_separator.realestate {
+    width: 1.5px;
+    height: 25px;
+    background-color: var(--blue_strong);
+}
+
+.section_expert_container.realestate h3 {
+    white-space: nowrap
+}
+
+.section_expert_container.realestate {
+    gap: 20px;
 }
 
 .section_expert_content {
@@ -1110,6 +1262,15 @@ h4 {
     .section_expert_content_separator {
         width: 171px;
         height: 1.5px;
+    }
+
+    .section_expert_container.realestate {
+        flex-direction: column;
+        padding: 48px 16px;
+    }
+
+    .section_expert_separator.realestate {
+        rotate: 90deg;
     }
 }
 
@@ -1155,7 +1316,7 @@ h4 {
 
     .section_sectors_container div {
         flex-direction: column;
-        gap:32px;
+        gap: 32px;
     }
 }
 
@@ -1164,6 +1325,88 @@ h4 {
         max-width: 180px;
     }
 }
+
+/*================================ SECTION 5 SOUS PAGE APPROCHE =======================================*/
+.section_approach {
+    padding: 100px 0px 130px 0px;
+    margin: 160px 0px 80px 0px;
+}
+
+.section_approach h2 {
+    padding: 0px 24px 134px 24px;
+}
+
+.section_approach_cards_container {
+    padding: 0px 64px;
+    overflow-y: auto;
+}
+
+.section_approach_card {
+    width: 365px;
+    height: 634px;
+    flex: none;
+}
+
+.section_approach_card_image {
+    height: 47%;
+    border-radius: 24px 24px 0px 0px;
+}
+
+.section_approach_card_image img {
+    max-width: 64%;
+}
+
+.section_approach_card_content {
+    height: 53%;
+    border-radius: 0px 0px 24px 24px;
+    padding: 48px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .section_approach {
+        padding: 100px 0px;
+        margin: 200px 0px 80px 0px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .section_approach {
+        padding: 100px 0px;
+        margin: 125px 0px 45px 0px;
+    }
+
+    .section_approach h2 {
+        padding: 0px 24px 80px 24px;
+    }
+
+    .section_approach_cards_container {
+        padding: 0px 24px;
+        gap: 32px;
+    }
+
+    .section_approach_card {
+        width: 216px;
+        height: 384px;
+    }
+
+    .section_approach_card_content {
+        padding: 24px;
+    }
+
+    .section_approach_card_content h4 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .section_approach_card_content p {
+        font-size: 10px;
+        line-height: 15px;
+    }
+}
+
+
 
 /*================================ FOOTER =======================================*/
 .footer_container {
