@@ -1390,31 +1390,88 @@ header {
 /*================================ SECTION 4 BIS SECTORS OPERATIONS =======================================*/
 .section_operations {
     margin-top: 160px;
-    padding:0px 32px;
+    padding: 0px 32px;
 }
 
-.section_operations_container{
+.section_operations_container {
     border-radius: 24px;
     padding: 48px 88px;
 }
-.section_operations_content{
+
+.section_operations_content,
+.section_operations_content>div {
     justify-content: center;
+    gap: 24px;
 }
-.section_operations_content li{
+
+.section_operations_content_separator {
+    width: 1.5px;
+    max-height: 120px;
+    background-color: var(--blue);
+    flex: none;
+}
+
+.section_operations_content li {
     white-space: nowrap;
+}
+
+@media only screen and (max-width: 1200px) {
+    .section_operations_content {
+        flex-direction: column;
+    }
+
+    .section_operations_content ul {
+        width: 281px;
+        max-width: 50%;
+    }
+
+    .section_operations_content_bottom::before {
+        content: '';
+        display: block;
+        margin:30px 0px;
+        width: 160px;
+        height: 1.5px;
+        background-color: var(--blue);
+    }
+
+    .section_operations_content_separator {
+        display: none;
+    }
+
+    .section_operations_content {
+        gap: 0px;
+    }
+
+    .section_operations_content>div {
+        gap: 60px;
+    }
+
 }
 
 
 @media only screen and (max-width: 768px) {
-    .section_operations_container{
+    .section_operations_container {
         padding: 48px 32px;
+    }
+    .section_operations_content>div {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .section_operations_content_middle::before {
+        content: '';
+        display: block;
+        margin:30px 0px;
+        width: 160px;
+        height: 1.5px;
+        background-color: var(--blue);
     }
 }
 
 @media only screen and (max-width: 576px) {
     .section_operations {
         margin-top: 125px;
-        padding:0px 24px;
+        padding: 0px 24px;
     }
 }
 
@@ -1438,31 +1495,32 @@ header {
     height: 0 !important;
 }
 
-.section_approach_cards_buttons{
-    padding:24px;
+.section_approach_cards_buttons {
+    padding: 24px;
 }
 
-.section_approach_cards_buttons img{
+.section_approach_cards_buttons img {
     width: 50px;
     height: 50px;
 }
 
-.section_approach_cards_buttons span{
+.section_approach_cards_buttons span {
     cursor: pointer;
     transition: transform 200ms ease;
 }
 
-.section_approach_cards_buttons span:hover{
+.section_approach_cards_buttons span:hover {
     transform: scale(1.2);
 }
 
-#section_approach_cards_button_previous{
+#section_approach_cards_button_previous {
     rotate: 90deg;
 }
 
-#section_approach_cards_button_next{
+#section_approach_cards_button_next {
     rotate: -90deg;
 }
+
 .section_approach_card {
     width: 365px;
     height: 634px;
@@ -1498,9 +1556,11 @@ header {
     .section_approach {
         margin: 125px 0px 45px 0px;
     }
-    .section_approach_cards_buttons{
+
+    .section_approach_cards_buttons {
         display: none;
     }
+
     .section_approach h2 {
         padding: 0px 24px 80px 24px;
     }

@@ -63,11 +63,11 @@ window.addEventListener('scroll', () => {
 
     const { scrollTop } = document.documentElement;
 
-    if ((scrollTop > (lastScrollTop + 20)) & (scrollTop > 500)) {
+    if ((scrollTop > (lastScrollTop + 5)) & (scrollTop > 500)) {
         header.classList.add("dnone");
     };
 
-    if ((scrollTop < (lastScrollTop - 20))) {
+    if ((scrollTop < (lastScrollTop - 10))) {
         header.classList.remove("dnone");
     };
 
