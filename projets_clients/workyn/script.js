@@ -63,15 +63,124 @@ window.addEventListener('scroll', () => {
 
     const { scrollTop } = document.documentElement;
 
-    if ((scrollTop > lastScrollTop) & (scrollTop > 500)) {
+    if ((scrollTop > (lastScrollTop + 20)) & (scrollTop > 500)) {
         header.classList.add("dnone");
-        console.log('Scroll vers le bas');
     };
 
-    if ((scrollTop < lastScrollTop)) {
+    if ((scrollTop < (lastScrollTop - 20))) {
         header.classList.remove("dnone");
     };
 
     lastScrollTop = scrollTop;
-
 });
+
+
+/*================================ STOPSCROLL HORIZONTAL =======================================*/
+
+
+/* 
+let options = {
+    //root: null,
+    //rootMargin: '0',
+    threshold: 1,
+}
+const observer = new IntersectionObserver(handleIntersect, options);
+
+observer.observe(cardsContainer);
+function handleIntersect(entries) {
+    console.log(entries);
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            let currentScroll = 0;
+            window.addEventListener('scroll', () => {
+                const { scrollTop } = document.documentElement;
+
+                if (scrollTop >currentScroll) {
+                    console.log("je vais vers le bas");
+                };
+
+                currentScroll = scrollTop;
+            });
+        };
+        if(!(entry.isIntersecting)) {
+            console.log("je sors de la boucle")
+        };
+    })
+}
+function preventScroll(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+}
+
+function disable() {
+    document.querySelector('.scrollable').addEventListener('wheel', preventScroll);
+}
+
+function enable() {
+    document.querySelector('.scrollable').removeEventListener('wheel', preventScroll);
+}
+
+
+*/
+
+
+
+
+
+
+
+//Récupération de quelques éléments fixes
+const sectionApproach = document.querySelector(".section_approach");
+const cardsContainer = document.querySelector(".section_approach_cards_container");
+const previous = document.getElementById("section_approach_cards_button_previous");
+const next = document.getElementById("section_approach_cards_button_next");
+const nombrecartes = cardsContainer.children.length;
+const firstcard = cardsContainer.firstElementChild;
+const cards = document.querySelectorAll('.section_approach_card');
+
+
+//Click bouton next
+next.addEventListener("click", event => {
+
+    //on récupere le decalage de la premiere carte en unité positive ou négativ
+    let decalage = Math.round(((firstcard.getBoundingClientRect().x) - (cardsContainer.offsetLeft)) / 413);
+
+    if (decalage > (-nombrecartes + 1)) {
+        translateXvalue = 'translateX('.concat(((decalage * 413) - 413), 'px)');
+
+        cards.forEach(card => {
+            card.style["transform"] = translateXvalue;
+        });
+        return;//on sort de la boucle
+    };
+
+    cards.forEach(card => {
+        card.style["transform"] = "translateX(0)";
+    });
+    return;
+});
+
+
+//Click bouton previous
+previous.addEventListener("click", event => {
+
+    //on récupere le decalage de la premiere carte en unité positive ou négative
+    let decalage = Math.round(((firstcard.getBoundingClientRect().x) - (cardsContainer.offsetLeft)) / 413);
+
+    if (decalage < 0) {
+        translateXvalue = 'translateX('.concat(((decalage * 413) + 413), 'px)');
+
+        cards.forEach(card => {
+            card.style["transform"] = translateXvalue;
+        });
+        return;//on sort de la boucle
+    };
+
+    cards.forEach(card => {
+        translateXvalue = 'translateX('.concat(((-nombrecartes + 1) * 413), 'px)');
+        card.style["transform"] = translateXvalue;
+    });
+    return;
+});
+

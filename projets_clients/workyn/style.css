@@ -189,11 +189,19 @@ h2 {
     line-height: 90px;
 }
 
+.h2_48_72 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 72px;
+}
+
 .h2_60_72 {
     font-weight: 300;
     font-size: 60px;
     line-height: 72px;
 }
+
+
 
 h3 {
     font-weight: 400;
@@ -211,6 +219,11 @@ h4 {
     h2 {
         font-size: 35px;
         line-height: 52px;
+    }
+
+    .h2_48_72 {
+        font-size: 30px;
+        line-height: 45px;
     }
 
     .h2_60_72 {
@@ -327,6 +340,13 @@ h4 {
 .flex_column {
     display: flex;
     flex-direction: column;
+}
+
+.flex_column_center_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex_column_reverse {
@@ -566,6 +586,10 @@ h4 {
     gap: 48px;
 }
 
+.gap_80 {
+    gap: 80px;
+}
+
 .w_100 {
     width: 100%;
 }
@@ -588,6 +612,13 @@ h4 {
         gap: 8px;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .gap_48_under_768 {
+        gap: 48px;
+    }
+}
+
 
 
 @media only screen and (max-width: 576px) {
@@ -1277,7 +1308,7 @@ header {
 
 @media only screen and (max-width: 576px) {
     .section_expert {
-        padding: 35px 24px 125px 24px;
+        padding: 35px 16px 125px 16px;
     }
 
     .section_expert_container {
@@ -1299,6 +1330,16 @@ header {
     position: relative;
 }
 
+.section_sectors_container_realestate {
+    font-size: 20px;
+    line-height: 30px;
+    gap: 16px;
+}
+
+.section_sectors_container_realestate img {
+    width: 120px;
+}
+
 .section_sectors_container span {
     position: absolute;
     bottom: -30px;
@@ -1308,10 +1349,21 @@ header {
     height: 60px;
 }
 
+@media only screen and (max-width: 1200px) {
+    .section_sectors_container_realestate {
+        width: 300px;
+    }
+}
+
+
 @media only screen and (max-width: 768px) {
     .section_sectors_container {
         flex-direction: row;
         justify-content: center;
+    }
+
+    .section_sectors_container_realestate {
+        width: 170px;
     }
 
     .section_sectors_container div {
@@ -1324,27 +1376,98 @@ header {
     .section_sectors_img_container {
         max-width: 180px;
     }
+
+    .section_sectors_container_realestate {
+        gap: 10px;
+        width: 100%;
+    }
+
+    .section_sectors_container_realestate img {
+        width: 100px;
+    }
+}
+
+/*================================ SECTION 4 BIS SECTORS OPERATIONS =======================================*/
+.section_operations {
+    margin-top: 160px;
+    padding:0px 32px;
+}
+
+.section_operations_container{
+    border-radius: 24px;
+    padding: 48px 88px;
+}
+.section_operations_content{
+    justify-content: center;
+}
+.section_operations_content li{
+    white-space: nowrap;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .section_operations_container{
+        padding: 48px 32px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .section_operations {
+        margin-top: 125px;
+        padding:0px 24px;
+    }
 }
 
 /*================================ SECTION 5 SOUS PAGE APPROCHE =======================================*/
 .section_approach {
-    padding: 100px 0px 130px 0px;
+    padding: 100px 64px 130px 64px;
     margin: 160px 0px 80px 0px;
 }
 
 .section_approach h2 {
-    padding: 0px 24px 134px 24px;
+    padding: 0px 24px 34px 24px;
 }
 
 .section_approach_cards_container {
-    padding: 0px 64px;
     overflow-y: auto;
 }
 
+.section_approach_cards_container::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.section_approach_cards_buttons{
+    padding:24px;
+}
+
+.section_approach_cards_buttons img{
+    width: 50px;
+    height: 50px;
+}
+
+.section_approach_cards_buttons span{
+    cursor: pointer;
+    transition: transform 200ms ease;
+}
+
+.section_approach_cards_buttons span:hover{
+    transform: scale(1.2);
+}
+
+#section_approach_cards_button_previous{
+    rotate: 90deg;
+}
+
+#section_approach_cards_button_next{
+    rotate: -90deg;
+}
 .section_approach_card {
     width: 365px;
     height: 634px;
     flex: none;
+    transition: transform 500ms ease 0s;
 }
 
 .section_approach_card_image {
@@ -1366,23 +1489,23 @@ header {
 
 @media only screen and (max-width: 768px) {
     .section_approach {
-        padding: 100px 0px;
+        padding: 100px 24px;
         margin: 200px 0px 80px 0px;
     }
 }
 
 @media only screen and (max-width: 576px) {
     .section_approach {
-        padding: 100px 0px;
         margin: 125px 0px 45px 0px;
     }
-
+    .section_approach_cards_buttons{
+        display: none;
+    }
     .section_approach h2 {
         padding: 0px 24px 80px 24px;
     }
 
     .section_approach_cards_container {
-        padding: 0px 24px;
         gap: 32px;
     }
 
