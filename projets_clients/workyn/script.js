@@ -142,9 +142,11 @@ const cards = document.querySelectorAll('.section_approach_card');
 
 //Click bouton next
 next.addEventListener("click", event => {
+    console.log(nombrecartes);
 
     //on récupere le decalage de la premiere carte en unité positive ou négativ
     let decalage = Math.round(((firstcard.getBoundingClientRect().x) - (cardsContainer.offsetLeft)) / 413);
+    console.log(decalage);
 
     if (decalage > (-nombrecartes + 1)) {
         translateXvalue = 'translateX('.concat(((decalage * 413) - 413), 'px)');

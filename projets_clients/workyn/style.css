@@ -644,6 +644,10 @@ h4 {
     border-radius: 8px;
 }
 
+.button_hover_arrow:hover>img{
+    transform: translate(10px);
+}
+
 .border_1_grey {
     border: 1px solid var(--grey);
 }
@@ -888,6 +892,10 @@ header {
     position: relative;
 }
 
+.section_brands_card_logo{
+    width: 351px;
+}
+
 .section_brands_card li {
     margin-left: 10px;
 }
@@ -938,6 +946,11 @@ header {
     .section_brands_card {
         padding: 32px;
     }
+
+    .section_brands_card_logo{
+        width: 268px;
+    }
+    
 
     .section_brands_ribbon {
         height: 700px;
@@ -1086,6 +1099,10 @@ header {
 
 .section_contact {
     padding: 80px 32px 160px 32px;
+}
+
+.section_contact_icon{
+    width: 76px;
 }
 
 .section_contact form input {
@@ -1594,6 +1611,10 @@ header {
 /*================================ FOOTER =======================================*/
 .footer_container {
     padding: 48px 10%;
+}
+
+.footer_container_left img {
+    width: 157px;
 }
 
 @media only screen and (max-width: 1200px) {
