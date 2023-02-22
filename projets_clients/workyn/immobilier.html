@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./style.css">
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/svg" href="./sources/icons/favicon/favicon_workyn_blue_76_76.png">
+    <link rel="icon" type="image/svg" href="./sources/icons/favicon/favicon_workyn_blue_325_325.png">
 
     <!-- GOOGLE FONT POLICE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,25 +24,31 @@
     <script defer src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- SCRIPT JS CUSTOM -->
-    <script type="text/javascript" src="./script.js" defer></script>
+    <script type="text/javascript" src="./scripts/script.js" defer></script>
 </head>
 
 <body>
     <!-- ==================== HEADER ==================== -->
     <header class="flex_between_center background_white w_100 box_shadow">
-        <a class="header_link_home" href="./index.html"><img class="dblock w_100"
-                src="./sources/logos/workyn/blue/recrutement_4253_1012.png" alt="workyn logo accueil"></a>
+        <a class="header_link_home" href="./index.html">
+            <img class="header_link_home_logo dblock w_100" src="./sources/logos/workyn/blue/recrutement_4253_1012.png" alt="logo workyn">
+            <img class="header_link_home_icon dblock dnone w_100" src="./sources/icons/workyn/blue/recrutement_1357_1334.png" alt="logo workyn">
+        </a>
         <nav class="flex_center_center gap_24">
             <a class="nav_links_pages" href="./commerce-et-luxe.html"><img class="dblock"
                     src="./sources/logos/workyn/blue/business_4268_1020.png" alt="logo lien nav"></a>
             <a class="nav_links_pages" href="./immobilier.html">
                 <img class="dblock" src="./sources/logos/workyn/blue/realestate_4266_1017.png" alt="logo lien nav"></a>
-            <a class="nav_links realestate" href="#section_expert">Qui sommes-nous ?</a>
-            <a target="_blank" class="nav_links realestate" href="https://www.workyn.teamtailor.com/#jobs">Nos offres
-                d’emploi</a>
+            <a class="nav_links realestate" href="#section_recruitment_anchor">Qui sommes-nous ?</a>
+            <a target="_blank" class="nav_links realestate" href="https://www.workyn.teamtailor.com/#jobs">Nos offres d’emploi</a>
             <a class="nav_links realestate" href="#section_contact_anchor">Contacts</a>
             <a target="_blank" href="https://www.linkedin.com/company/workyn-recrutement"><img class="dblock"
                     src="./sources/icons/linkedin/linkedin_blue.svg" alt="logo linkedin"></a>
+            <div class="header_scroll dnone flex_center_center gap_24">
+                <p>|</p>
+                <a class="nav_links realestate" href="#section_contact_anchor">Je recrute</a>
+                <a class="nav_links realestate" target="_blank" href="https://www.workyn.teamtailor.com/#jobs">Toutes nos offres</a>
+            </div>
         </nav>
         <button class="dnone nav_toggler" type="button" aria-label="toggle curtain navigation">
             <span class="line l1"></span>
@@ -178,13 +184,6 @@
         <!-- ==================== SECTION 5 APPROACH ==================== -->
         <section class="section_approach background_green">
             <h2 class="text_center color_white">L’approche <strong>Workyn!</strong></h2>
-            <div class="section_approach_cards_buttons flex_start_center mw_1440_auto gap_24">
-                <span id="section_approach_cards_button_previous">
-                    <img class="dblock" src="./sources/icons/arrow/arrow_down_blue_28_28.svg" alt="arrow">
-                </span>
-                <span id="section_approach_cards_button_next"><img class="dblock"
-                        src="./sources/icons/arrow/arrow_down_blue_28_28.svg" alt="arrow"></span>
-            </div>
             <div class="section_approach_cards_container mw_1440_auto flex gap_48">
                 <div class="section_approach_card">
                     <div class="section_approach_card_image flex_center_center background_white w_100">
@@ -242,6 +241,13 @@
                     </div>
                 </div>
             </div>
+            <div class="section_approach_cards_buttons flex_center_center mw_1440_auto gap_24">
+                <span id="section_approach_cards_button_previous" class="section_approach_cards_button_previous">
+                    <img class="dblock" src="./sources/icons/arrow/arrow_down_blue_28_28.svg" alt="arrow">
+                </span>
+                <span id="section_approach_cards_button_next"><img class="dblock"
+                        src="./sources/icons/arrow/arrow_down_blue_28_28.svg" alt="arrow"></span>
+            </div>
             <span id="section_contact_anchor" class="anchor"></span>
         </section>
         <!-- ==================== SECTION 6 CONTACT ==================== -->
@@ -257,14 +263,14 @@
                 <form onsubmit="Mail(); reset(); return false;">
                     <div class="flex flex_column_under_576 gap_24 mb_48">
                         <input required class="color_grey border_1_bottom_grey dblock w_100" type="text" id="name"
-                            name="name" placeholder="Nom Prénom*" pattern="[( )a-zA-Z0-9._%+-]{2,30}" maxlength="30">
+                            name="name" placeholder="Nom Prénom*" pattern="[( )a-zA-Z0-9._%+-]{2,50}" maxlength="50">
                         <input required class="color_grey border_1_bottom_grey dblock w_100" type="text" id="email"
                             name="email" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                            maxlength="30">
+                            maxlength="50">
                     </div>
                     <div class="mb_48">
                         <textarea required class="color_grey border_1_grey dblock w_100" id="message" name="message"
-                            maxlength="500" placeholder="Votre message"></textarea>
+                            maxlength="1000" placeholder="Votre message"></textarea>
                     </div>
 
                     <div class="flex_between_center button_box">

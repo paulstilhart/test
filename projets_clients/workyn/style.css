@@ -645,7 +645,7 @@ h4 {
 }
 
 .button_hover_arrow:hover>img{
-    transform: translate(10px);
+    transform: scale(2);
 }
 
 .border_1_grey {
@@ -681,15 +681,35 @@ h4 {
 
 /*================================ HEADER =======================================*/
 header {
-    height: 120px;
+    height: 100px;
     padding: 0px 64px;
     position: fixed;
     z-index: 99;
     /* transition: all 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84); */
 }
 
-.header_link_home {
+.header_link_home_logo {
     width: 157px;
+}
+
+.header_link_home_icon{
+    width: 36px;
+}
+
+.header_scroll>a{
+    font-weight: 700;
+}
+
+header.header_big .header_link_home_logo{
+    display: none !important;
+}
+
+header.header_big .header_link_home_icon{
+    display: block !important;
+}
+
+header.header_big .header_scroll{
+    display: flex !important;
 }
 
 .nav_links_pages,
@@ -721,10 +741,10 @@ header {
     position: fixed;
     z-index: 10;
     /* au dessus de la navigation */
-    top: 35px;
+    top: 25px;
     right: 35px;
     height: 50px;
-    width: 50px;
+    width: 35px;
     border: none;
     outline: none;
     /* ici rien pour que ce soit + sympa, mais si accessibilité il faut le rajouter */
@@ -769,9 +789,9 @@ header {
 
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
     header.active {
-        height: 350px;
+        height: auto;
         justify-content: center;
     }
 
@@ -782,11 +802,20 @@ header {
     nav {
         flex-direction: column !important;
         transform: translateY(-100%);
+        padding:16px 0px;
     }
 
     nav.active {
         display: flex !important;
         transform: translate(0);
+    }
+
+    .header_scroll {
+        flex-direction: column;
+    }
+
+    .header_scroll>p{
+        display: none;
     }
 
     .nav_toggler {
@@ -801,7 +830,7 @@ header {
 
 /*================================ SECTION 1 INTRODUCTION =======================================*/
 .section_introduction {
-    padding: 170px 60px 128px 60px;
+    padding: 130px 60px 128px 60px;
 }
 
 .section_introduction_illustration {
@@ -847,13 +876,13 @@ header {
 
 @media only screen and (max-width: 768px) {
     .section_introduction {
-        padding: 170px 32px 45px 32px;
+        padding: 130px 32px 45px 32px;
     }
 }
 
 @media only screen and (max-width: 576px) {
     .section_introduction {
-        padding: 170px 24px 90px 24px;
+        padding: 130px 24px 90px 24px;
 
     }
 }
@@ -1133,7 +1162,7 @@ header {
 
 /*================================ SECTION 1 SOUS PAGE INTRODUCTION =======================================*/
 .section_introduction_page {
-    padding: 240px 24px 0px 24px;
+    padding: 220px 24px 0px 24px;
 }
 
 .section_introduction_page_content {
@@ -1151,13 +1180,13 @@ header {
 
 @media only screen and (max-width: 1200px) {
     .section_introduction_page {
-        padding: 240px 24px 0px 24px;
+        padding: 220px 24px 0px 24px;
     }
 }
 
 @media only screen and (max-width: 576px) {
     .section_introduction_page {
-        padding: 240px 24px 0px 24px;
+        padding: 220px 24px 0px 24px;
     }
 
     .section_introduction_page_img {
@@ -1499,11 +1528,11 @@ header {
 }
 
 .section_approach h2 {
-    padding: 0px 24px 34px 24px;
+    padding: 0px 24px 80px 24px;
 }
 
 .section_approach_cards_container {
-    overflow-y: auto;
+    overflow-y:visible;
 }
 
 .section_approach_cards_container::-webkit-scrollbar {
@@ -1526,12 +1555,23 @@ header {
     transition: transform 200ms ease;
 }
 
-.section_approach_cards_buttons span:hover {
+#section_approach_cards_button_next:hover {
     transform: scale(1.2);
 }
 
 #section_approach_cards_button_previous {
     rotate: 90deg;
+    opacity: 50%;
+    cursor:default;
+}
+
+.section_approach_cards_button_previous.active{
+    opacity: 100% !important;
+    cursor:pointer !important;
+}
+
+.section_approach_cards_button_previous.active:hover{
+    transform: scale(1.2);
 }
 
 #section_approach_cards_button_next {

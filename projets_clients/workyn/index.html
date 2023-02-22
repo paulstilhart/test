@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./style.css">
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/svg" href="./sources/icons/favicon/favicon_workyn_green_76_76.png">
+    <link rel="icon" type="image/svg" href="./sources/icons/favicon/favicon_workyn_green_325_325.svg">
 
     <!-- GOOGLE FONT POLICE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,14 +24,16 @@
     <script defer src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- SCRIPT JS CUSTOM -->
-    <script type="text/javascript" src="./script.js" defer></script>
+    <script type="text/javascript" src="./scripts/script.js" defer></script>
 </head>
 
 <body>
     <!-- ==================== HEADER ==================== -->
     <header class="flex_between_center background_green_light w_100 box_shadow">
-        <a class="header_link_home" href="./index.html"><img class="dblock w_100"
-                src="./sources/logos/workyn/blue/recrutement_4253_1012.png" alt="logo workyn"></a>
+        <a class="header_link_home" href="./index.html">
+            <img class="header_link_home_logo dblock w_100" src="./sources/logos/workyn/blue/recrutement_4253_1012.png" alt="logo workyn">
+            <img class="header_link_home_icon dblock dnone w_100" src="./sources/icons/workyn/blue/recrutement_1357_1334.png" alt="logo workyn">
+        </a>
         <nav class="flex_center_center gap_24">
             <a class="nav_links_pages" href="./commerce-et-luxe.html"><img class="dblock"
                     src="./sources/logos/workyn/blue/business_4268_1020.png" alt="logo lien nav"></a>
@@ -42,6 +44,11 @@
             <a class="nav_links" href="#section_contact_anchor">Contacts</a>
             <a target="_blank" href="https://www.linkedin.com/company/workyn-recrutement"><img class="dblock"
                     src="./sources/icons/linkedin/linkedin_green.svg" alt="logo linkedin"></a>
+            <div class="header_scroll dnone flex_center_center gap_24">
+                <p>|</p>
+                <a class="nav_links" href="#section_contact_anchor">Je recrute</a>
+                <a class="nav_links" target="_blank" href="https://www.workyn.teamtailor.com/#jobs">Toutes nos offres</a>
+            </div>
         </nav>
         <button class="dnone nav_toggler" type="button" aria-label="toggle curtain navigation">
             <span class="line l1"></span>
@@ -63,15 +70,17 @@
                     <div class="flex flex_wrap gap_48 gap_16_under_576">
                         <a class="button_classic button_hover_arrow flex_center_center gap_16 background_blue_strong color_white"
                             href="#section_contact_anchor">Je recrute<img class="transition_200ms_easeout dblock"
-                                src="./sources/icons/arrow/arrow_right_white_12_9.svg" alt="icone fleche blanche droite"></a>
+                                src="./sources/icons/arrow/arrow_right_white_12_9.svg"
+                                alt="icone fleche blanche droite"></a>
                         <a class="button_classic button_hover_arrow flex_center_center gap_16 background_blue_strong color_white"
                             href="https://www.workyn.teamtailor.com/#jobs" target="_blank">Toutes nos offres<img
-                                class="transition_200ms_easeout dblock" src="./sources/icons/arrow/arrow_right_white_12_9.svg"
+                                class="transition_200ms_easeout dblock"
+                                src="./sources/icons/arrow/arrow_right_white_12_9.svg"
                                 alt="icone fleche blanche droite"></a>
                     </div>
                 </div>
-                <img class="dblock section_introduction_illustration" src="./sources/logos/pages/recruitement_644_617.svg"
-                    alt="illustration section 1">
+                <img class="dblock section_introduction_illustration"
+                    src="./sources/logos/pages/recruitement_644_617.svg" alt="illustration section 1">
             </div>
             <div class="section_introduction_anchor flex_center">
                 <a href="#section_brands"><img class="dblock" src="./sources/icons/arrow/arrow_down_blue_28_28.svg"
@@ -84,7 +93,8 @@
                 <div class="section_brands_content my_auto background_green_light">
                     <h2 class="text_center mb_32">Deux marques, <strong class="color_green">une promesse :</strong></h2>
                     <h3 class="text_center"><strong><img class="dblock first_element"
-                                src="./sources/icons/quote/quote_blue_up_25_20.svg" alt="quote blue up">Mettre en relation les
+                                src="./sources/icons/quote/quote_blue_up_25_20.svg" alt="quote blue up">Mettre en
+                            relation les
                             meilleurs <span class="color_green">candidats</span> et <span
                                 class="color_green">entreprises</span><br>d’un même secteur.<img
                                 class="dblock second_element" src="./sources/icons/quote/quote_blue_down_25_20.svg"
@@ -188,7 +198,8 @@
                     </h3>
                     <a class="my_auto button_classic button_hover_arrow flex_center_center gap_16 background_blue_strong color_white"
                         href="https://www.workyn.teamtailor.com/#jobs" target="_blank">Toutes nos offres<img
-                            class="dblock transition_200ms_easeout" src="./sources/icons/arrow/arrow_right_white_12_9.svg"
+                            class="dblock transition_200ms_easeout"
+                            src="./sources/icons/arrow/arrow_right_white_12_9.svg"
                             alt="icone fleche blanche droite"></a>
                 </div>
                 <span id="section_contact_anchor" class="anchor"></span>
@@ -197,8 +208,8 @@
         <!-- ==================== SECTION 5 CONTACT ==================== -->
         <section class="background_green_light">
             <div class="section_contact mw_700_auto">
-                <img class="section_contact_icon dblock my_auto mb_64" src="./sources/icons/workyn/blue/recrutement_1357_1334.png"
-                    alt="logo workyn contact">
+                <img class="section_contact_icon dblock my_auto mb_64"
+                    src="./sources/icons/workyn/blue/recrutement_1357_1334.png" alt="logo workyn contact">
                 <h2 class="text_center fw_400 mb_80">
                     <strong class="color_green">Un renseignement ?</strong>
                     <br>Un conseil ?
@@ -207,14 +218,14 @@
                 <form onsubmit="Mail(); reset(); return false;">
                     <div class="flex flex_column_under_576 gap_24 mb_48">
                         <input required class="color_grey border_1_bottom_grey dblock w_100" type="text" id="name"
-                            name="name" placeholder="Nom Prénom*" pattern="[( )a-zA-Z0-9._%+-]{2,30}" maxlength="30">
+                            name="name" placeholder="Nom Prénom*" pattern="[( )a-zA-Z0-9._%+-]{2,50}" maxlength="50">
                         <input required class="color_grey border_1_bottom_grey dblock w_100" type="text" id="email"
                             name="email" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                            maxlength="30">
+                            maxlength="50">
                     </div>
                     <div class="mb_48">
                         <textarea required class="color_grey border_1_grey dblock w_100" id="message" name="message"
-                            maxlength="500" placeholder="Votre message"></textarea>
+                            maxlength="1000" placeholder="Votre message"></textarea>
                     </div>
 
                     <div class="flex_between_center button_box">
@@ -223,7 +234,8 @@
                             un fichier</button>
                         <button type="submit"
                             class="button_classic button_hover_arrow flex_center_center gap_16 background_blue_strong color_white">
-                            Envoyer<img class="dblock transition_200ms_easeout" src="./sources/icons/arrow/arrow_right_white_12_9.svg"
+                            Envoyer<img class="dblock transition_200ms_easeout"
+                                src="./sources/icons/arrow/arrow_right_white_12_9.svg"
                                 alt="icone fleche blanche droite"></button>
                     </div>
                 </form>
