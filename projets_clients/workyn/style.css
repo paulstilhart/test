@@ -644,7 +644,7 @@ h4 {
     border-radius: 8px;
 }
 
-.button_hover_arrow:hover>img{
+.button_hover_arrow:hover>img {
     transform: scale(2);
 }
 
@@ -692,23 +692,23 @@ header {
     width: 157px;
 }
 
-.header_link_home_icon{
+.header_link_home_icon {
     width: 36px;
 }
 
-.header_scroll>a{
+.header_scroll>a {
     font-weight: 700;
 }
 
-header.header_big .header_link_home_logo{
+header.header_big .header_link_home_logo {
     display: none !important;
 }
 
-header.header_big .header_link_home_icon{
+header.header_big .header_link_home_icon {
     display: block !important;
 }
 
-header.header_big .header_scroll{
+header.header_big .header_scroll {
     display: flex !important;
 }
 
@@ -802,7 +802,7 @@ header.header_big .header_scroll{
     nav {
         flex-direction: column !important;
         transform: translateY(-100%);
-        padding:16px 0px;
+        padding: 16px 0px;
     }
 
     nav.active {
@@ -814,7 +814,7 @@ header.header_big .header_scroll{
         flex-direction: column;
     }
 
-    .header_scroll>p{
+    .header_scroll>p {
         display: none;
     }
 
@@ -921,7 +921,7 @@ header.header_big .header_scroll{
     position: relative;
 }
 
-.section_brands_card_logo{
+.section_brands_card_logo {
     width: 351px;
 }
 
@@ -976,10 +976,10 @@ header.header_big .header_scroll{
         padding: 32px;
     }
 
-    .section_brands_card_logo{
+    .section_brands_card_logo {
         width: 268px;
     }
-    
+
 
     .section_brands_ribbon {
         height: 700px;
@@ -1130,7 +1130,7 @@ header.header_big .header_scroll{
     padding: 80px 32px 160px 32px;
 }
 
-.section_contact_icon{
+.section_contact_icon {
     width: 76px;
 }
 
@@ -1474,7 +1474,7 @@ header.header_big .header_scroll{
     .section_operations_content_bottom::before {
         content: '';
         display: block;
-        margin:30px 0px;
+        margin: 30px 0px;
         width: 160px;
         height: 1.5px;
         background-color: var(--blue);
@@ -1499,6 +1499,7 @@ header.header_big .header_scroll{
     .section_operations_container {
         padding: 48px 32px;
     }
+
     .section_operations_content>div {
         flex-direction: column;
         gap: 0px;
@@ -1507,7 +1508,7 @@ header.header_big .header_scroll{
     .section_operations_content_middle::before {
         content: '';
         display: block;
-        margin:30px 0px;
+        margin: 30px 0px;
         width: 160px;
         height: 1.5px;
         background-color: var(--blue);
@@ -1532,7 +1533,7 @@ header.header_big .header_scroll{
 }
 
 .section_approach_cards_container {
-    overflow-y:visible;
+    overflow-y: visible;
 }
 
 .section_approach_cards_container::-webkit-scrollbar {
@@ -1562,15 +1563,15 @@ header.header_big .header_scroll{
 #section_approach_cards_button_previous {
     rotate: 90deg;
     opacity: 50%;
-    cursor:default;
+    cursor: default;
 }
 
-.section_approach_cards_button_previous.active{
+.section_approach_cards_button_previous.active {
     opacity: 100% !important;
-    cursor:pointer !important;
+    cursor: pointer !important;
 }
 
-.section_approach_cards_button_previous.active:hover{
+.section_approach_cards_button_previous.active:hover {
     transform: scale(1.2);
 }
 
@@ -1624,6 +1625,7 @@ header.header_big .header_scroll{
 
     .section_approach_cards_container {
         gap: 32px;
+        overflow-y:scroll;
     }
 
     .section_approach_card {
