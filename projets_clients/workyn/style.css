@@ -643,9 +643,17 @@ h4 {
     padding: 16px 32px;
     border-radius: 8px;
 }
+.button_hover_arrow>span{
+    height: 20px;
+    width: 16px;
+    z-index: 10;
+}
+.button_hover_arrow>img {
+    margin-left: -6px;
+}
 
 .button_hover_arrow:hover>img {
-    transform: scale(2);
+    transform: translateX(6px);
 }
 
 .border_1_grey {
@@ -1215,6 +1223,10 @@ header.header_big .header_scroll {
     max-width: 490px;
 }
 
+.section_goals_content_img p {
+    width: 110%;
+}
+
 
 .section_goals_content {
     position: relative;
@@ -1254,6 +1266,10 @@ header.header_big .header_scroll {
 
     .section_goals_content_img img {
         max-width: 485px;
+    }
+
+    .section_goals_content_img p {
+        width: 100%;
     }
 
     .section_goals_content {
@@ -1625,7 +1641,7 @@ header.header_big .header_scroll {
 
     .section_approach_cards_container {
         gap: 32px;
-        overflow-y:scroll;
+        overflow-y: auto;
     }
 
     .section_approach_card {
