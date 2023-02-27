@@ -90,6 +90,7 @@ window.addEventListener('scroll', () => {
     text.forEach(item => {
         observer.observe(item);
     })
+    
     const { scrollTop } = document.documentElement;
     if (scrollTop > 500) {
         header.classList.add("header_big");

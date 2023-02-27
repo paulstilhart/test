@@ -183,6 +183,19 @@ h1 {
     line-height: 26.4px;
 }
 
+.h1_24_36 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+
+.h1_32_48 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+}
+
 h2 {
     font-weight: 300;
     font-size: 60px;
@@ -202,7 +215,6 @@ h2 {
 }
 
 
-
 h3 {
     font-weight: 400;
     font-size: 24px;
@@ -216,6 +228,11 @@ h4 {
 }
 
 @media only screen and (max-width: 576px) {
+    .h1_32_48 {
+        font-size: 19px;
+        line-height: 29px;
+    }
+
     h2 {
         font-size: 35px;
         line-height: 52px;
@@ -690,14 +707,16 @@ h4 {
 }
 
 .fadein {
-    animation: fadein 2s; 
+    animation: fadein 2s;
 }
+
 @keyframes fadein {
     0% {
-        opacity:0;
+        opacity: 0;
     }
+
     100% {
-        opacity:1;
+        opacity: 1;
     }
 }
 
