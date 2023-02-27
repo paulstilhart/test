@@ -21,6 +21,14 @@ const header = document.querySelector("header");//egalement l'élément nav
 const body = document.querySelector("main");
 const footer = document.querySelector("footer");
 
+const sectionApproach = document.querySelector(".section_approach");
+const cardsContainer = document.querySelector(".section_approach_cards_container");
+const previous = document.getElementById("section_approach_cards_button_previous");
+const next = document.getElementById("section_approach_cards_button_next");
+const nombrecartes = cardsContainer.children.length;
+const firstcard = cardsContainer.firstElementChild;
+const cards = document.querySelectorAll('.section_approach_card');
+
 
 
 //Au click sur le bouton, on vient déclencher la fonction callback toggleNav
@@ -60,7 +68,6 @@ window.addEventListener('scroll', () => {
     console.log(scrollTop, scrollHeight, clientHeight);
     dans le cas ou on aurait besoin de toutes ces propriétées, ici en l'occurence juste celle vers le haut
     */
-
     const { scrollTop } = document.documentElement;
     if (scrollTop > 500) {
         header.classList.add("header_big");
@@ -77,6 +84,15 @@ window.addEventListener('scroll', () => {
     };
 
     lastScrollTop = scrollTop;
+
+    if (window.innerWidth > 2600) {
+        next.classList.remove("active");
+        return;//on sort de la boucle
+    };
+    if ((window.innerWidth) < 2600 & !(previous.classList.contains("active"))) {
+        next.classList.add("active");
+        return;//on sort de la boucle
+    }
 });
 
 
@@ -131,28 +147,27 @@ function enable() {
 
 
 
-
-
-
-
-//Récupération de quelques éléments fixes
-const sectionApproach = document.querySelector(".section_approach");
-const cardsContainer = document.querySelector(".section_approach_cards_container");
-const previous = document.getElementById("section_approach_cards_button_previous");
-const next = document.getElementById("section_approach_cards_button_next");
-const nombrecartes = cardsContainer.children.length;
-const firstcard = cardsContainer.firstElementChild;
-const cards = document.querySelectorAll('.section_approach_card');
-
-
 //Click bouton next
 next.addEventListener("click", event => {
-    if ((window.innerWidth - ((cardsContainer.lastElementChild).getBoundingClientRect().x))>390) {
+    //on récupere le decalage de la premiere carte en unité positive ou négativ
+    let decalage = Math.round(((firstcard.getBoundingClientRect().x) - (cardsContainer.offsetLeft)) / 413);
+    let lastCardInner = (window.innerWidth - ((cardsContainer.lastElementChild).getBoundingClientRect().x));
+
+
+    if (lastCardInner > 365) {
         return;//on sort de la boucle
     };
 
-    //on récupere le decalage de la premiere carte en unité positive ou négativ
-    let decalage = Math.round(((firstcard.getBoundingClientRect().x) - (cardsContainer.offsetLeft)) / 413);
+    if (decalage > (-nombrecartes + 1) & lastCardInner > 0) {
+        next.classList.remove("active");
+        previous.classList.add("active");
+        translateXvalue = 'translateX('.concat(((decalage * 413) - 413), 'px)');
+
+        cards.forEach(card => {
+            card.style["transform"] = translateXvalue;
+        });
+        return;//on sort de la boucle
+    };
 
     if (decalage > (-nombrecartes + 1)) {
         previous.classList.add("active");
@@ -178,15 +193,12 @@ previous.addEventListener("click", event => {
     //on récupere le decalage de la premiere carte en unité positive ou négative
     let decalage = Math.round(((firstcard.getBoundingClientRect().x) - (cardsContainer.offsetLeft)) / 413);
 
-    if (decalage < -1) {
-        translateXvalue = 'translateX('.concat(((decalage * 413) + 413), 'px)');
-        cards.forEach(card => {
-            card.style["transform"] = translateXvalue;
-        });
+    if (decalage > (-0.5)) {
         return;//on sort de la boucle
     };
 
-    if (decalage = (-1)) {
+    if (decalage == (-1)) {
+        next.classList.add("active");
         previous.classList.remove("active");
         cards.forEach(card => {
             card.style["transform"] = "translateX(0)";
@@ -194,5 +206,13 @@ previous.addEventListener("click", event => {
         return;
     };
 
+    if (decalage < -1) {
+        next.classList.add("active");
+        translateXvalue = 'translateX('.concat(((decalage * 413) + 413), 'px)');
+        cards.forEach(card => {
+            card.style["transform"] = translateXvalue;
+        });
+        return;//on sort de la boucle
+    };
 });
 

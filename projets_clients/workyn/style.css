@@ -643,11 +643,13 @@ h4 {
     padding: 16px 32px;
     border-radius: 8px;
 }
-.button_hover_arrow>span{
+
+.button_hover_arrow>span {
     height: 20px;
     width: 16px;
     z-index: 10;
 }
+
 .button_hover_arrow>img {
     margin-left: -6px;
 }
@@ -1540,7 +1542,7 @@ header.header_big .header_scroll {
 
 /*================================ SECTION 5 SOUS PAGE APPROCHE =======================================*/
 .section_approach {
-    padding: 100px 64px 130px 64px;
+    padding: 100px 48px 130px 48px;
     margin: 160px 0px 80px 0px;
 }
 
@@ -1568,32 +1570,31 @@ header.header_big .header_scroll {
 }
 
 .section_approach_cards_buttons span {
-    cursor: pointer;
     transition: transform 200ms ease;
-}
-
-#section_approach_cards_button_next:hover {
-    transform: scale(1.2);
-}
-
-#section_approach_cards_button_previous {
-    rotate: 90deg;
-    opacity: 50%;
     cursor: default;
-}
-
-.section_approach_cards_button_previous.active {
-    opacity: 100% !important;
-    cursor: pointer !important;
-}
-
-.section_approach_cards_button_previous.active:hover {
-    transform: scale(1.2);
+    opacity: 50%;
 }
 
 #section_approach_cards_button_next {
     rotate: -90deg;
 }
+
+#section_approach_cards_button_previous {
+    rotate: 90deg;
+}
+
+#section_approach_cards_button_next.active,
+#section_approach_cards_button_previous.active {
+    opacity: 100% !important;
+    cursor: pointer !important;
+}
+
+#section_approach_cards_button_next.active:hover,
+#section_approach_cards_button_previous.active:hover {
+    transform: scale(1.2);
+}
+
+
 
 .section_approach_card {
     width: 365px;
