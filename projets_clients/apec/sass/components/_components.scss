@@ -1,0 +1,177 @@
+.min-height-full {
+    min-height: 100vh;
+}
+
+.profile-header {
+    img {
+        display: block;
+        width: 137px;
+        height: 47px;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+.profile-content {
+    h1 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 18px;
+    }
+}
+
+.profile-content-separator {
+    width: 320px;
+    height: 1px;
+    border: 1px solid #A1A1A1;
+}
+
+.profile-content-state-buttons {
+    flex-direction: column;
+    gap: 20px;
+
+    button {
+        width: 257px;
+        height: 35px;
+    }
+}
+
+.profile-content-steps-container {
+    margin-top: 50px;
+}
+
+.profile-content-steps>p {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration-line: underline;
+    color: #000000;
+    padding: 15px 0px;
+    margin: 0;
+}
+
+.profile-content-informations {
+    padding: 15px 28px 66px 28px;
+
+    h3 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 40px;
+    }
+
+    ul {
+        margin: 0px 0px 0px 28px;
+        padding: 0;
+        list-style-image: url("../sources/icons/check_green.svg");
+
+        li {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0px 0px 0px 10px;
+        }
+    }
+
+    >p {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 60px;
+    }
+
+}
+
+
+.profile-content-step {
+    margin-bottom: 15px;
+    gap: 15px;
+
+    .profile-content-step-icon {
+        width: 43px;
+        height: 43px;
+        font-weight: 600;
+        font-size: 14px;
+        flex: none;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.profile-content-buttons {
+    margin-top: 50px;
+    gap: 30px;
+
+    button {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .min-height-md-full {
+        min-height: 100vh;
+    }
+
+    .profile-header {
+        img {
+            width: 178px;
+            height: 61px;
+        }
+
+        h2 {
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .profile-content {
+        h1 {
+            font-size: 26px;
+        }
+    }
+
+    .profile-content-state-buttons {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .profile-content-steps-container {
+        margin-top: 100px;
+    }
+
+    .profile-content-step {
+        margin-bottom: 30px;
+
+        .profile-content-step-icon {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .profile-content-buttons {
+        margin-top: 90px;
+    }
+}

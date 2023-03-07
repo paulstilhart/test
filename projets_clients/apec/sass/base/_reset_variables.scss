@@ -1,0 +1,74 @@
+/*================================ RESET CSS =======================================*/
+:root {
+    --black: #000000;
+    --blue-strong: #00457F !important;
+    --grey: #DADADA !important;
+    --grey-soft: #FBFBFB !important;
+    --pink: #FFD8D8 !important;
+    --red : #BE1B1B !important;
+    --white: #ffffff !important;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px !important;
+}
+
+/*================================ COULEUR =======================================*/
+.color-black {
+    color: var(--black);
+}
+
+.background-black {
+    background-color: var(--black);
+}
+
+.color-white {
+    color: var(--white);
+}
+
+.background-white {
+    background-color: var(--white);
+}
+
+.color-grey {
+    color: var(--grey);
+}
+
+.background-grey {
+    background-color: var(--grey);
+}
+
+.color-grey-soft {
+    color: var(--grey-soft);
+}
+
+.background-grey-soft {
+    background-color: var(--grey-soft);
+}
+
+
+.color-blue-strong {
+    color: var(--blue-strong);
+}
+
+.background-blue-strong {
+    background-color: var(--blue-strong);
+}
+
+.color-pink {
+    color: var(--pink);
+}
+
+.background-pink {
+    background-color: var(--pink);
+}
+
+.color-red {
+    color: var(--red);
+}
+
+.background-red {
+    background-color: var(--red);
+}
