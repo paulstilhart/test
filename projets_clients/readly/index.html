@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Readly Quizz">
+    <title>Readly</title>
+
+    <!-- FEUILLE DE STYLE CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg" href="./sources/icons/favicon/favicon_workyn_green_325_325.svg">
+
+    <!-- GOOGLE FONT POLICE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- SCRIPT JS CUSTOM -->
+    <script type="text/javascript" src="./script.js" defer></script>
+</head>
+
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="background_black_soft flex_start_center">
+        <img src="./sources/logos/readly.svg" alt="logo readly header">
+    </header>
+
+    <!-- ==================== MAIN ==================== -->
+    <main>
+        <!-- ==================== SECTION 12 CITY ==================== -->
+        <section class="active section_0 background_yellow">
+            <img class="absolute" src="./sources/img/questions/page0_champi_425_487.png" alt="image section question">
+            <img class="absolute" src="./sources/img/questions/page0_ballon_338_364.png" alt="image section question">
+            <img class="absolute" src="./sources/img/questions/page0_oscar_672_536.png" alt="image section question">
+            <img class="absolute" src="./sources/img/questions/page0_brigitte_583_328.png" alt="image section question">
+            <div class="section_content_container flex_column_center_center">
+                <h4 class="background_white">Quelle ville représentes-tu ?</h4>
+                <select class="trigger_next_js background_grey_soft" name="city" id="city">
+                    <option value="">Choisir ma ville</option>
+                    <option value="dog">Toulouse</option>
+                    <option value="cat">Marseille</option>
+                </select>
+            </div>
+        </section>
+        <!-- ==================== SECTION 0 ACCUEIL ==================== -->
+        <section class="section_0 background_yellow">
+            <img class="absolute" src="./sources/img/questions/page0_champi_425_487.png" alt="image section question">
+            <img class="absolute" src="./sources/img/questions/page0_ballon_338_364.png" alt="image section question">
+            <img class="absolute" src="./sources/img/questions/page0_oscar_672_536.png" alt="image section question">
+            <img class="absolute" src="./sources/img/questions/page0_brigitte_583_328.png" alt="image section question">
+            <div class="section_content_container flex_column_center_center">
+                <h1 class="background_white">Découvre quel lecteur tu es !</h1>
+                <button class="trigger_next_js background_black_soft color_grey_soft">Participe au challenge pour
+                    défendre
+                    ta
+                    ville !</button>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 1 ==================== -->
+        <section class="section_1 background_yellow">
+            <img class="absolute" src="./sources/img/questions/page1_725_408.png" alt="image section question">
+            <div class="section_content_container">
+                <h3 class="mb_28 color_white">Question 1 sur 10</h3>
+                <div class="flex_between gap_64">
+                    <h2 class="mw_616">Brigitte Macron se positionne en faveur du retour de l'uniforme à l'école.
+                        <br>
+                        Vous expliquez donc à vos enfants que :
+                    </h2>
+                    <fieldset>
+                        <label class="trigger_next_js" for="inspired">
+                            <input type="radio" name="section1" id="inspired" value="inspired">
+                            Cette mesure réduira la dépendance aux marques et qu'en plus, ça donne
+                            un petit look très sympa.
+                        </label>
+                        <label class="trigger_next_js" for="curious">
+                            <input type="radio" name="section1" id="curious" value="curious">
+                            Les sorties extrascolaires seront désormais consacrées à parcourir les
+                            “Fashion Week” pour au moins en prendre plein les yeux quelque part.
+                        </label>
+                        <label class="trigger_next_js" for="informed">
+                            <input type="radio" name="section1" id="informed" value="informed">
+                            Adieu équations et dictées, à partir de maintenant, les devoirs c'est :
+                            éplucher les magazines de mode à la recherche d'inspiration pour pimper son look écolier
+                            !
+                        </label>
+                        <label class="trigger_next_js" for="passioned">
+                            <input type="radio" name="section1" id="passioned" value="passioned">
+                            Vous avez déjà réalisé un prototype d’uniforme et qu'il ne reste plus
+                            qu'à l'ajuster.
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 2 ==================== -->
+        <section class="section_2 background_white">
+            <img class="absolute" src="./sources/img/questions/page2_746_563.png" alt="image section question">
+            <div class="section_content_container">
+                <h3 class="mb_28 color_yellow">Question 2 sur 10</h3>
+                <div class="flex_between gap_64">
+                    <h2 class="mw_616">Zut ! Vous avez raté le cours de business de Kim K. à Harvard...
+                        <br>
+                        <br>
+                        Heureusement une nouvelle personnalité est sur le point de s'y rendre pour une
+                        conférence que cette fois, vous ne manquerez pour rien au monde.
+                        <br>
+                        <br>
+                        Il s'agit de :
+                    </h2>
+                    <fieldset>
+                        <label class="trigger_next_js" for="inspired">
+                            <input type="radio" name="section2" id="inspired" value="inspired">
+                            Cyril Dion, pour un cours sur l'écologie poétique
+                        </label>
+                        <label class="trigger_next_js" for="curious">
+                            <input type="radio" name="section2" id="curious" value="curious">
+                            Yayoi Kusama, icône de la pop culture qui peint depuis son asile psychiatrique
+                        </label>
+                        <label class="trigger_next_js" for="informed">
+                            <input type="radio" name="section2" id="informed" value="informed">
+                            Elon Musk qui vous apprendra à tweeter comme personne
+                        </label>
+                        <label class="trigger_next_js" for="passioned">
+                            <input type="radio" name="section2" id="passioned" value="passioned">
+                            Miley Cyrus, sur le self-love
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== SECTION 3 ==================== -->
+        <section class=" section_3 background_black_soft">
+            <img class="absolute" src="./sources/img/questions/page3_686_579.png" alt="image section question">
+            <div class="section_content_container">
+                <h3 class="mb_28 color_yellow">Question 3 sur 10</h3>
+                <div class="flex_between gap_64">
+                    <h2 class="mw_616 color_grey_soft">
+                        Les scientifiques sont formels, le Gulf Stream pourrait venir à disparaître !
+                        <br>
+                        Augmentation des tempêtes, baisse des températures en Europe de l’Ouest…
+                        <br>
+                        <br>
+                        Ni une ni deux, vous :
+                    </h2>
+                    <fieldset class="color_grey_soft">
+                        <label class="trigger_next_js" for="inspired">
+                            <input type="radio" name="section3" id="inspired" value="inspired">
+                            Cyril Dion, pour un cours sur l'écologie poétique
+                        </label>
+                        <label class="trigger_next_js" for="curious">
+                            <input type="radio" name="section3" id="curious" value="curious">
+                            Yayoi Kusama, icône de la pop culture qui peint depuis son asile psychiatrique
+                        </label>
+                        <label class="trigger_next_js" for="informed">
+                            <input type="radio" name="section3" id="informed" value="informed">
+                            Elon Musk qui vous apprendra à tweeter comme personne
+                        </label>
+                        <label class="trigger_next_js" for="passioned">
+                            <input type="radio" name="section3" id="passioned" value="passioned">
+                            Miley Cyrus, sur le self-love
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== SECTION 4 ==================== -->
+        <section class="section_4 background_yellow">
+            <img class="absolute" src="./sources/img/questions/page4_712_624.png" alt="image section question">
+            <div class="section_content_container">
+                <h3 class="mb_28 color_white">Question 4 sur 10</h3>
+                <div class="flex_between gap_64">
+                    <h2 class="mw_616">Ce soir, c'est cinoche !
+                        <br>
+                        Vous optez pour :
+                    </h2>
+                    <fieldset>
+                        <label class="trigger_next_js" for="inspired">
+                            <input type="radio" name="section4" id="inspired" value="inspired">
+                            Babylon : des looks, de l'amour, du glamour et du cinéma… What else ?!
+                        </label>
+                        <label class="trigger_next_js" for="curious">
+                            <input type="radio" name="section4" id="curious" value="curious">
+                            Avatar. Parce que l'attente a été trop longue pour passer à côté.
+                        </label>
+                        <label class="trigger_next_js" for="informed">
+                            <input type="radio" name="section4" id="informed" value="informed">
+                            Vous êtes plutôt télé. C’est parti pour un marathon de Cash Investigation.
+                        </label>
+                        <label class="trigger_next_js" for="passioned">
+                            <input type="radio" name="section4" id="passioned" value="passioned">
+                            Le dernier Astérix : il faut aider la création française à résister à l'envahisseur !
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== SECTION 5 ==================== -->
+        <section class="section_5 background_white">
+            <img class="absolute" src="./sources/img/questions/page5_657_623.png" alt="image section question">
+            <div class="section_content_container">
+                <h3 class="mb_28 color_yellow">Question 5 sur 10</h3>
+                <div class="flex_between gap_64">
+                    <h2 class="mw_616">Votre progéniture vous annonce qu'elle devient végan.
+                        <br>
+                        Vous :
+                    </h2>
+                    <fieldset>
+                        <label class="trigger_next_js" for="inspired">
+                            <input type="radio" name="section5" id="inspired" value="inspired">
+                            Inspirez très fort en pensant à vos propres idéaux de jeunesse…
+                        </label>
+                        <label class="trigger_next_js" for="curious">
+                            <input type="radio" name="section5" id="curious" value="curious">
+                            Lui demandez si elle ne regarde pas trop Hugo Clément.
+                        </label>
+                        <label class="trigger_next_js" for="informed">
+                            <input type="radio" name="section5" id="informed" value="informed">
+                            L'informez sur les aliments à adopter en tant que végan pour pallier les carences.
+                        </label>
+                        <label class="trigger_next_js" for="passioned">
+                            <input type="radio" name="section5" id="passioned" value="passioned">
+                            Épluchez les comptes Insta à l'affût de recettes pour lui faire plaisir !
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== SECTION 6 ==================== -->
+        <section class="section_6 background_black_soft">
+            <img class="absolute" src="./sources/img/questions/page6_642_515.png" alt="image section question">
+            <div class="section_content_container">
+                <h3 class="mb_28 color_yellow">Question 6 sur 10</h3>
+                <div class="flex_between gap_64">
+                    <h2 class="mw_616 color_grey_soft">
+                        Suite à une pandémie provoquée cette fois par un champignon mutant, le gouvernement annonce un
+                        nouveau confinement.
+                        <br>
+                        <br>
+                        Cette fois, vous mettrez ce temps à profit pour :
+                    </h2>
+                    <fieldset class="color_grey_soft">
+                        <label class="trigger_next_js" for="inspired">
+                            <input type="radio" name="section6" id="inspired" value="inspired">
+                            Aider les plus démunis.
+                        </label>
+                        <label class="trigger_next_js" for="curious">
+                            <input type="radio" name="section6" id="curious" value="curious">
+                            Tester un max de nouvelles recettes, lire Proust, vous mettre au yoga bikram dans votre
+                            salle de bain…
+                        </label>
+                        <label class="trigger_next_js" for="informed">
+                            <input type="radio" name="section6" id="informed" value="informed">
+                            Rattraper toutes vos newsletters, podcasts, séries, films et émissions en retard.
+                        </label>
+                        <label class="trigger_next_js" for="passioned">
+                            <input type="radio" name="section6" id="passioned" value="passioned">
+                            Devenir champion de construction d'édifices en allumettes.
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 7 ==================== -->
+        <section class="section_7 background_yellow">
+            <img class="absolute" src="./sources/img/questions/page7_435_434.png" alt="image section question">
+            <div class="section_content_container">
+                <h3 class="mb_28 color_white">Question 7 sur 10</h3>
+                <div class="flex_between gap_64">
+                    <h2 class="mw_616">Depuis ce matin, vos collègues n'arrêtent pas de parler d'un "ballon".
+                        <br>
+                        <br>
+                        Vous pensez immédiatement à :
+                    </h2>
+                    <fieldset>
+                        <label class="trigger_next_js" for="inspired">
+                            <input type="radio" name="section7" id="inspired" value="inspired">
+                            Serge Lama et ses ballons rouges.
+                        </label>
+                        <label class="trigger_next_js" for="curious">
+                            <input type="radio" name="section7" id="curious" value="curious">
+                            À un ballon météorologique, vous avez effectivement vu passer une info là-dessus.
+                        </label>
+                        <label class="trigger_next_js" for="informed">
+                            <input type="radio" name="section7" id="informed" value="informed">
+                            Ce ballon chinois abattu par les USA et qui risque de tendre fortement les relations entre
+                            les deux pays.
+                        </label>
+                        <label class="trigger_next_js" for="passioned">
+                            <input type="radio" name="section7" id="passioned" value="passioned">
+                            Ballon de foot, de rugby, de handball...
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== SECTION 8 ==================== -->
+        <section class="section_8 background_white">
+            <img class="absolute" src="./sources/img/questions/page8_653_418.png" alt="image section question">
+            <div class="section_content_container">
+                <h3 class="mb_28 color_yellow">Question 8 sur 10</h3>
+                <div class="flex_between gap_64">
+                    <h2 class="mw_616">Votre neveu a finalement lâché son téléphone et vous propose de l'accompagner au
+                        concert de Beyoncé au Stade de France.
+                        <br>
+                        <br>
+                        Vous êtes partant, surtout depuis que :
+                    </h2>
+                    <fieldset>
+                        <label class="trigger_next_js" for="inspired">
+                            <input type="radio" name="section8" id="inspired" value="inspired">
+                            Vous connaissez son implication dans les combats contre les discriminations.
+                        </label>
+                        <label class="trigger_next_js" for="curious">
+                            <input type="radio" name="section8" id="curious" value="curious">
+                            Vous savez qu'elle plaît à votre neveu, lui qui d'habitude ne jure que par Orelsan.
+                        </label>
+                        <label class="trigger_next_js" for="informed">
+                            <input type="radio" name="section8" id="informed" value="informed">
+                            Vous savez qu'elle est l'artiste la plus titrée par les Grammy Awards, que sa fortune est
+                            estimée à 450 millions de dollars et qu'elle est l'une des personnalités les plus influentes
+                            du monde. Respect.
+                        </label>
+                        <label class="trigger_next_js" for="passioned">
+                            <input type="radio" name="section8" id="passioned" value="passioned">
+                            Que vous la connaissez.
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION 9 ==================== -->
+        <section class="section_9 background_black_soft">
+            <img class="absolute" src="./sources/img/questions/page9_1047_587.png" alt="image section question">
+            <div class="section_content_container">
+                <h3 class="mb_28 color_yellow">Question 9 sur 10</h3>
+                <div class="flex_between gap_64">
+                    <h2 class="mw_616 color_grey_soft">
+                        Vous êtes plutôt du genre à célébrer :
+                    </h2>
+                    <fieldset class="color_grey_soft">
+                        <label class="trigger_next_js" for="inspired">
+                            <input type="radio" name="section9" id="inspired" value="inspired">
+                            La Fashion Revolution Day
+                        </label>
+                        <label class="trigger_next_js" for="curious">
+                            <input type="radio" name="section9" id="curious" value="curious">
+                            La Journée du Patrimoine
+                        </label>
+                        <label class="trigger_next_js" for="informed">
+                            <input type="radio" name="section9" id="informed" value="informed">
+                            La Journée Mondiale de la radio
+                        </label>
+                        <label class="trigger_next_js" for="passioned">
+                            <input type="radio" name="section9" id="passioned" value="passioned">
+                            La Grève Mondiale pour le climat
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== SECTION 10 ==================== -->
+        <section class="section_10 background_yellow">
+            <img class="absolute" src="./sources/img/questions/page10_712_679.png" alt="image section question">
+            <div class="section_content_container">
+                <h3 class="mb_28 color_white">Question 10 sur 10</h3>
+                <div class="flex_between gap_64">
+                    <h2 class="mw_616">Pour vous, la personnalité de l'année sera :
+                    </h2>
+                    <fieldset>
+                        <label class="trigger_next_js" for="inspired">
+                            <input type="radio" name="section10" id="inspired" value="inspired">
+                            Une activiste comme Greta Thunberg.
+                        </label>
+                        <label class="trigger_next_js" for="curious">
+                            <input type="radio" name="section10" id="curious" value="curious">
+                            Un homme d'affaires comme Jeff Bezos.
+                        </label>
+                        <label class="trigger_next_js" for="informed">
+                            <input type="radio" name="section10" id="informed" value="informed">
+                            Un politique comme  Volodymyr Zelensky.
+                        </label>
+                        <label class="trigger_next_js" for="passioned">
+                            <input type="radio" name="section10" id="passioned" value="passioned">
+                            Un sportif comme Lebron James.
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+                <!-- ==================== SECTION 11 ==================== -->
+                <section class="section_11 background_yellow">
+                    <div class="section_content_container">
+                        <h3 class="mb_28 color_yellow">Question 11 sur 10</h3>
+                        <div class="flex_between gap_64">
+                            <h2 class="mw_616">Votre mood pour cette année, c'est plutôt :
+                            </h2>
+                            <fieldset class="section_11_fieldset">
+                                <label class="background_white flex_center_center trigger_next_js" for="inspired">
+                                    <input type="radio" name="section11" id="inspired" value="inspired">
+                                    <img src="./sources/img/questions/page11_1.gif" alt="gif question 11">
+                                </label>
+                                <label class="background_white flex_center_center trigger_next_js" for="curious">
+                                    <input type="radio" name="section11" id="curious" value="curious">
+                                    <img src="./sources/img/questions/page11_2.gif" alt="gif question 11">
+                                </label>
+                                <label class="background_white flex_center_center trigger_next_js" for="informed">
+                                    <input type="radio" name="section11" id="informed" value="informed">
+                                    <img src="./sources/img/questions/page11_3.webp" alt="gif question 11">
+                                </label>
+                                <label class="background_white flex_center_center trigger_next_js" for="passioned">
+                                    <input type="radio" name="section11" id="passioned" value="passioned">
+                                    <img src="./sources/img/questions/page11_4.gif" alt="gif question 11">
+                                </label>
+                            </fieldset>
+                        </div>
+                    </div>
+                </section>
+    </main>
+
+</body>
+
+</html>
