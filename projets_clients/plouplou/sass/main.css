@@ -1066,12 +1066,10 @@ footer > .sub_container span {
   color: white;
 }
 
-@media only screen and (max-width: 768px) {
-  .section_solution_comparaison > .main_container {
-    overflow-x: scroll;
-  }
-}
 @media only screen and (max-width: 576px) {
+  .section_solution_comparaison {
+    overflow-x: hidden;
+  }
   .section_solution_comparaison > .sub_container {
     margin-bottom: 40px;
     align-items: flex-start;

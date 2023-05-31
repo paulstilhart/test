@@ -76,29 +76,36 @@ button_previous.addEventListener("click", event => {
 });
 
 
-// Variables pour le déplacement tactile
-let touchStartX = 0;
-let touchMoveX = 0;
+window.addEventListener('load', function () {
+    if (window.innerWidth < 576) {
+        // Variables pour le déplacement tactile
+        let touchStartX = 0;
+        let touchMoveX = 0;
 
-// Gestionnaire d'événement touchstart
-slider.addEventListener('touchstart', event => {
-    touchStartX = event.touches[0].clientX;
-});
 
-// Gestionnaire d'événement touchmove
-slider.addEventListener('touchmove', event => {
-    touchMoveX = event.touches[0].clientX;
-});
+        // Gestionnaire d'événement touchstart
+        slider.addEventListener('touchstart', event => {
+            touchStartX = event.touches[0].pageX;
+        });
 
-// Gestionnaire d'événement touchend
-slider.addEventListener('touchend', event => {
-    let touchDiff = touchStartX - touchMoveX;
+        // Gestionnaire d'événement touchmove
+        slider.addEventListener('touchmove', event => {
+            touchMoveX = event.touches[0].pageX;
+        });
 
-    if (touchDiff > 0) {
-        // Faites défiler vers la gauche (vers la droite dans la vue)
-        button_next.click();
-    } else if (touchDiff < 0) {
-        // Faites défiler vers la droite (vers la gauche dans la vue)
-        button_previous.click();
+        // Gestionnaire d'événement touchend
+        slider.addEventListener('touchend', event => {
+            let touchDiff = touchMoveX - touchStartX;
+
+            if (touchDiff > 0) {
+                // Faites défiler vers la droite (vers la gauche dans la vue)
+                button_previous.click();
+            } else if (touchDiff < 0) {
+                // Faites défiler vers la gauche (vers la droite dans la vue)
+                button_next.click();
+            }
+        });
     }
 });
+
+
