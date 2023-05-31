@@ -96,12 +96,10 @@ window.addEventListener('load', function () {
         // Gestionnaire d'événement touchend
         slider.addEventListener('touchend', event => {
             let touchDiff = touchMoveX - touchStartX;
-
-            if (touchDiff > 0) {
-                // Faites défiler vers la droite (vers la gauche dans la vue)
+            console.log(touchDiff);
+            if (touchDiff > 100) {  //ajuster la valeur selon les possibilités
                 button_previous.click();
-            } else if (touchDiff < 0) {
-                // Faites défiler vers la gauche (vers la droite dans la vue)
+            } else if (touchDiff < -100) {  // ajuster la valeur aussi
                 button_next.click();
             }
         });
