@@ -1,0 +1,56 @@
+/*================================ RESET CSS =======================================*/
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+a:focus,
+a:active,
+button:focus,
+button:active,
+input:active,
+input:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+    outline: none;
+    outline-color: transparent !important;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+img{
+    display: block;
+}
