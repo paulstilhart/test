@@ -20,21 +20,22 @@ if (nombreCartes < 2) {
 };
 
 //Pour enlever les boutons suivant le nombre de cartes --> mais on resize la fenetre (garde fou)
+let resizeTimeout; // Variable pour stocker le délai de temporisation
 window.addEventListener('resize', function () {
-    slider.style["transform"] = 'translateX(0px)';//on remet à 0
-    slider.setAttribute('data-translate', 0);//on remet à 0
-    if (nombreCartes < 2) {
-        button_box.classList.add('dnone');
-    } else if (nombreCartes < 4 && slider.offsetWidth >= 1100) {
-        button_box.classList.add('dnone');
-    } else if (nombreCartes < 4 && slider.offsetWidth <= 1100) {
-        button_box.classList.remove('dnone');
-    } else if (nombreCartes > 3) {
-        button_box.classList.remove('dnone');
-    };
-    return;//on sort de la boucle
+    clearTimeout(resizeTimeout); // Réinitialise le délai de temporisation à chaque redimensionnement
+    resizeTimeout = setTimeout(function () {
+        if (window.innerWidth < window.outerWidth - 10) { // Vérifie si le redimensionnement est horizontal avec une marge de 10 pixels
+            // Effectue les actions nécessaires lors du redimensionnement horizontal
+            slider.style.transform = 'translateX(0px)';
+            slider.setAttribute('data-translate', 0);
+            if (nombreCartes < 2 || (nombreCartes < 4 && slider.offsetWidth >= 1100)) {
+                button_box.classList.add('dnone');
+            } else {
+                button_box.classList.remove('dnone');
+            }
+        }
+    }, 200); // Délai de temporisation de 200 millisecondes pour limiter les appels fréquents lors du redimensionnement
 });
-
 
 
 
@@ -90,7 +91,14 @@ window.addEventListener('load', function () {
 
         // Gestionnaire d'événement touchmove
         slider.addEventListener('touchmove', event => {
-            touchMoveX = event.touches[0].pageX;
+            const touch = event.touches[0];
+            const touchMoveY = touch.pageY;
+            const touchDiffY = Math.abs(touchMoveY - touchStartY);
+            const touchDiffX = Math.abs(touchMoveX - touchStartX);
+            if (touchDiffY < touchDiffX) { // Vérifie si le déplacement vertical est inférieur au déplacement horizontal
+                event.preventDefault(); // Empêche le défilement vertical par défaut
+                touchMoveX = touch.pageX;
+            }
         });
 
         // Gestionnaire d'événement touchend
