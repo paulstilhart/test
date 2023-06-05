@@ -151,7 +151,6 @@ slider_container.addEventListener('mousedown', function (e) {
     pressed = true;
     startX = e.clientX;
     this.style.cursor = 'grabbing';
-    console.log(startX);
 });
 
 slider_container.addEventListener('mouseleave', function (e) {
@@ -166,14 +165,17 @@ slider_container.addEventListener('mouseup', function (e) {
 slider_container.addEventListener('mousemove', function (e) {
     let slider_container_width = slider_container.offsetWidth;
     if (!pressed) {
-        return
+        return;
     }
     else if ((startX - e.clientX) > 0) {
         this.scrollLeft += slider_container_width;
+        return;
     }
-    else if ((startX - e.clientX) < 0) {
+    else if ((startX - e.clientX) < -100) {
         this.scrollLeft -= slider_container_width;
+        return;
     }
+    console.log(startX - e.clientX);
 });
 
 

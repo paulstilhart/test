@@ -645,11 +645,15 @@
         .slider_container {
             display: flex;
             flex-wrap: nowrap;
-            overflow-x: hidden;
+            overflow-x: scroll;
             scroll-snap-type: x;
             scroll-behavior: smooth;
             cursor:grab;
             scrollbar-width: none;
+        }
+
+        .slider_container::-webkit-scrollbar {
+            display: none;
         }
 
         .slide {
