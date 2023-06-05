@@ -143,7 +143,6 @@ accordeons.forEach(accordeon => accordeon.addEventListener("click", event => {
 //*==================== SCRIPT SECTION SOLUTION TESTIMONY ====================*//
 const section_solution_contact_testimony = document.querySelector('.section_solution_contact_testimony');//la section testimony
 const slider_container = section_solution_contact_testimony.querySelector('.slider_container');//le slider_container
-//const slides = slider_container.querySelectorAll('.slide');//toutes les slides
 
 let pressed = false;
 let startX = 0;
@@ -165,14 +164,15 @@ slider_container.addEventListener('mouseup', function (e) {
 });
 
 slider_container.addEventListener('mousemove', function (e) {
+    let slider_container_width = slider_container.offsetWidth;
     if (!pressed) {
         return
     }
     else if ((startX - e.clientX) > 0) {
-        this.scrollLeft += 475;
+        this.scrollLeft += slider_container_width;
     }
     else if ((startX - e.clientX) < 0) {
-        this.scrollLeft -= 475;
+        this.scrollLeft -= slider_container_width;
     }
 });
 
