@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*================================ RESET CSS =======================================*/
 *,
 ::after,
@@ -5,10 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 a,
@@ -58,6 +55,7 @@ img {
 /*================================ VARIABLES =======================================*/
 :root {
   --black: #000000;
+  --grey:#F2F5F7;
   --white: #ffffff;
   --white_break: #F2F2F2;
   --blue_strong: #003E5C;
@@ -131,6 +129,17 @@ img {
 
 .border_blue_strong {
   border: 1px solid var(--blue_strong);
+}
+
+/*================================ HOVER =======================================*/
+.hover_blue_strong_white:hover {
+  background-color: var(--blue_strong);
+  color: var(--white);
+}
+
+.hover_white_blue_strong:hover {
+  background-color: var(--white);
+  color: var(--blue_strong);
 }
 
 /*================================ FONTS =======================================*/
@@ -526,10 +535,22 @@ footer > .sub_container span {
   font-size: 24px;
   line-height: 36px;
   margin-right: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--blue_strong);
 }
 .section_appel_hero > .sub_container .content .tchat img {
   width: 19px;
   margin-right: 13px;
+}
+.section_appel_hero > .sub_container .content .tchat .hover {
+  display: none;
+}
+.section_appel_hero > .sub_container .content .tchat:hover :first-child {
+  display: none;
+}
+.section_appel_hero > .sub_container .content .tchat:hover .hover {
+  display: block;
 }
 
 @media only screen and (max-width: 1920px) {
@@ -933,10 +954,16 @@ footer > .sub_container span {
   position: relative;
 }
 .section_solution_hero > .sub_container > div h3 {
-  padding: 40px 20px 30px 20px;
+  min-height: 100px;
+  /* Pour une homogénéité si on est sur 2 lignes*/
+  padding: 23px 20px 15px 20px;
+  line-height: 30px;
   border-radius: 40px 40px 0px 0px;
   box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.1607843137);
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .section_solution_hero > .sub_container > div .h3_elt_1,
 .section_solution_hero > .sub_container > div .h3_elt_2 {
@@ -976,6 +1003,12 @@ footer > .sub_container span {
   .section_solution_hero > .sub_container > div {
     width: 100%;
   }
+  .section_solution_hero > .sub_container > div h3 {
+    min-height: auto;
+    /* En mobile, définie par le padding interne */
+    padding: 40px 20px 30px 20px;
+    line-height: 36px;
+  }
   .section_solution_hero > .sub_container > div .h3_elt_2 {
     position: static;
     transform: none;
@@ -986,13 +1019,14 @@ footer > .sub_container span {
 }
 /*================================ SECTION SOLUTION COMPARAISON =======================================*/
 .section_solution_comparaison {
-  padding: 100px 16px;
-  max-width: 1132px;
-  margin: auto;
+  padding: 100px 0px;
+  overflow-x: hidden;
 }
 
 .section_solution_comparaison > .sub_container {
-  margin-bottom: 60px;
+  max-width: 1132px;
+  margin: 0 auto;
+  padding: 0 16px 60px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1021,6 +1055,9 @@ footer > .sub_container span {
 }
 
 .section_solution_comparaison > .main_container {
+  max-width: 1132px;
+  margin: 0 auto;
+  padding: 0 16px;
   overflow-x: visible;
   scrollbar-width: none;
 }
@@ -1060,10 +1097,6 @@ footer > .sub_container span {
   border-width: 1px;
   border-style: solid;
   border-color: inherit;
-}
-.section_solution_comparaison > .main_container > .slider > div > a:hover {
-  background-color: var(--blue_strong);
-  color: white;
 }
 
 @media only screen and (max-width: 576px) {
@@ -1131,6 +1164,134 @@ footer > .sub_container span {
     margin-bottom: 10px;
   }
 }
+/*================================ SECTION SOLUTION ACCORDEON =======================================*/
+.section_solution_accordeon {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 100px 0px 50px 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.section_solution_accordeon > .main_container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.section_solution_accordeon > .main_container h2 {
+  padding: 0 12.5% 20px 12.5%;
+}
+.section_solution_accordeon > .main_container .accordeon > div {
+  display: flex;
+  align-items: center;
+  padding: 20px 16px 20px 12.5%;
+  border-radius: 0px 20px 20px 0px;
+  width: 110%;
+  position: relative;
+  cursor: pointer;
+  height: 90px;
+}
+.section_solution_accordeon > .main_container .accordeon > div > span {
+  font-size: 40px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.section_solution_accordeon > .main_container .accordeon > div > p {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  padding: 0 30px;
+  flex: auto;
+}
+.section_solution_accordeon > .main_container .accordeon > div > img {
+  width: 24px;
+  transition: transform 0.4s ease-out;
+}
+.section_solution_accordeon > .main_container .accordeon > div > :nth-child(3) {
+  position: relative;
+  right: -24px;
+  visibility: hidden;
+  opacity: 0;
+}
+.section_solution_accordeon > .main_container .accordeon > div > :last-child {
+  visibility: visible;
+  opacity: 1;
+}
+.section_solution_accordeon > .main_container .accordeon > p {
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+}
+.section_solution_accordeon > .main_container .accordeon.active > div {
+  background: var(--grey);
+  color: var(--blue_strong);
+}
+.section_solution_accordeon > .main_container .accordeon.active > div > p {
+  color: var(--blue_soft);
+  text-decoration: underline;
+}
+.section_solution_accordeon > .main_container .accordeon.active > div > img {
+  transform: rotate(180deg);
+}
+.section_solution_accordeon > .main_container .accordeon.active > div > :nth-child(3) {
+  visibility: visible;
+  opacity: 1;
+}
+.section_solution_accordeon > .main_container .accordeon.active > div > :last-child {
+  visibility: hidden;
+  opacity: 0;
+}
+.section_solution_accordeon > .main_container .accordeon.active > p {
+  padding: 40px 12.5% 0px 12.5%;
+  height: auto;
+}
+
+.section_solution_accordeon > .sub_container {
+  width: 50%;
+  overflow: hidden;
+  height: 700px;
+}
+.section_solution_accordeon > .sub_container img {
+  object-fit: cover;
+  height: 100%;
+  width: 87.5%;
+  margin-right: 12.5%;
+  border-radius: 20px 20px 0px 20px;
+}
+
+@media only screen and (max-width: 576px) {
+  .section_solution_accordeon {
+    padding: 0px 0px 40px 0;
+    flex-direction: column-reverse;
+  }
+  .section_solution_accordeon > .main_container {
+    width: 100%;
+    row-gap: 30px;
+  }
+  .section_solution_accordeon > .main_container h2 {
+    padding: 0 16px 10px 16px;
+  }
+  .section_solution_accordeon > .main_container .accordeon > div {
+    padding: 20px 16px;
+    margin-right: 16px;
+    width: auto;
+  }
+  .section_solution_accordeon > .main_container .accordeon > p {
+    padding: 30px 30px 0px 16px;
+  }
+  .section_solution_accordeon > .sub_container {
+    width: 100%;
+    min-height: auto;
+    margin-bottom: 80px;
+  }
+  .section_solution_accordeon > .sub_container img {
+    width: 100%;
+    margin-right: 0;
+    border-radius: none;
+  }
+}
 /*================================ SECTION SOLUTION LEVIER =======================================*/
 .section_solution_levier {
   padding: 100px 16px;
@@ -1172,6 +1333,7 @@ footer > .sub_container span {
 
 @media only screen and (max-width: 576px) {
   .section_solution_levier {
+    padding: 80px 16px;
     flex-direction: column;
     align-items: start;
   }
@@ -1180,6 +1342,173 @@ footer > .sub_container span {
     align-self: center;
   }
   .section_solution_levier > .main_container h2 {
+    margin-bottom: 40px;
+  }
+}
+/*================================ SECTION SOLUTION CONTACT TEMOIGNAGES =======================================*/
+.section_solution_contact_testimony {
+  display: flex;
+}
+.section_solution_contact_testimony > :last-child {
+  border-bottom: solid 1px var(--blue_strong);
+}
+.section_solution_contact_testimony > .main_container {
+  width: 50%;
+  padding: 100px 0px;
+}
+.section_solution_contact_testimony .wrapper_left {
+  max-width: 960px;
+  margin-left: auto;
+}
+.section_solution_contact_testimony .wrapper_left > h2,
+.section_solution_contact_testimony .wrapper_left > h3 {
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  width: 75%;
+}
+.section_solution_contact_testimony .wrapper_left > button {
+  margin: 0 12.5%;
+}
+.section_solution_contact_testimony .wrapper_left h3 {
+  margin-bottom: 20px;
+}
+.section_solution_contact_testimony .wrapper_left .tel {
+  border-radius: 40px 0px 0px 40px;
+  display: flex;
+  height: 200px;
+  margin: 60px 0 60px auto;
+  width: 87.5%;
+}
+.section_solution_contact_testimony .wrapper_left .tel button {
+  width: 62%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+}
+.section_solution_contact_testimony .wrapper_left .tel img {
+  width: 47px;
+}
+.section_solution_contact_testimony .wrapper_left .tel p {
+  text-align: left;
+  margin-left: 16px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.section_solution_contact_testimony .wrapper_left .tel strong {
+  font-size: 33px;
+  line-height: 21px;
+  font-weight: 700;
+}
+.section_solution_contact_testimony .wrapper_left .tel > img {
+  width: 38%;
+  object-fit: cover;
+}
+.section_solution_contact_testimony .wrapper_left .tchat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+.section_solution_contact_testimony .wrapper_right {
+  max-width: 960px;
+  margin-right: auto;
+}
+.section_solution_contact_testimony .wrapper_right > div {
+  box-sizing: content-box;
+  margin: auto;
+  max-width: 475px;
+  padding: 0 16px;
+  overflow-x: hidden;
+}
+.section_solution_contact_testimony .wrapper_right img {
+  margin: auto;
+  width: 196px;
+}
+.section_solution_contact_testimony .wrapper_right h2 {
+  margin: 40px 0px;
+}
+.section_solution_contact_testimony .wrapper_right p {
+  margin-bottom: 60px;
+}
+.section_solution_contact_testimony .wrapper_right .slider_container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  scroll-snap-type: x;
+  scroll-behavior: smooth;
+  cursor: grab;
+  scrollbar-width: none;
+}
+.section_solution_contact_testimony .wrapper_right .slide {
+  width: 100%;
+  flex: none;
+  scroll-snap-align: start;
+  user-select: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .section_solution_contact_testimony .wrapper_left > h2,
+  .section_solution_contact_testimony .wrapper_left > h3 {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: auto;
+  }
+  .section_solution_contact_testimony .wrapper_left > button {
+    margin: 0 16px;
+  }
+  .section_solution_contact_testimony .wrapper_left .tel {
+    margin: 40px 0 60px 16px;
+    width: auto;
+  }
+  .section_solution_contact_testimony .wrapper_left .tel p {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  .section_solution_contact_testimony .wrapper_left .tel strong {
+    font-size: 28px;
+    line-height: 18px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section_solution_contact_testimony {
+    display: flex;
+    flex-direction: column;
+  }
+  .section_solution_contact_testimony > .main_container {
+    width: 100%;
+    padding: 80px 0px;
+  }
+  .section_solution_contact_testimony .wrapper_left .tel {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+  }
+  .section_solution_contact_testimony .wrapper_left .tel button {
+    width: 100%;
+    height: 120px;
+  }
+  .section_solution_contact_testimony .wrapper_left .tel > img {
+    width: 100%;
+    height: 180px;
+    border-bottom-left-radius: 40px;
+  }
+  .section_solution_contact_testimony .wrapper_left .tchat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  .section_solution_contact_testimony .wrapper_right p {
     margin-bottom: 40px;
   }
 }
@@ -1195,9 +1524,10 @@ footer > .sub_container span {
 
 .section_solution_push > .main_container {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   column-gap: 13.5%;
   row-gap: 20px;
-  flex-wrap: wrap;
 }
 .section_solution_push > .main_container a {
   text-align: center;

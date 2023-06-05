@@ -1,6 +1,7 @@
 /*================================ VARIABLES =======================================*/
 :root {
     --black: #000000;
+    --grey:#F2F5F7;
     --white: #ffffff;
     --white_break: #F2F2F2;
     --blue_strong: #003E5C;
@@ -75,4 +76,15 @@
 
 .border_blue_strong{
     border: 1px solid var(--blue_strong);
+}
+
+/*================================ HOVER =======================================*/
+.hover_blue_strong_white:hover{
+    background-color: var(--blue_strong);
+    color:var(--white);
+}
+
+.hover_white_blue_strong:hover{
+    background-color: var(--white);
+    color:var(--blue_strong);
 }

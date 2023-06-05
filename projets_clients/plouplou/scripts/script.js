@@ -1,9 +1,4 @@
-/* 
-Sur mobile, l’utilisateur peut aussi swiper pour faire défiler les Blocs Comparaison
-*/
-
-
-//*==================== SCRIPT SECTION SOLUTION COMPARAISO ====================*//
+//*==================== SCRIPT SECTION SOLUTION COMPARAISON ====================*//
 const section_solution_comparaison = document.querySelector('.section_solution_comparaison');//la section
 const slider = section_solution_comparaison.querySelector('.slider');//le container des cartes = slider
 const nombreCartes = slider.childElementCount;
@@ -91,6 +86,16 @@ window.addEventListener('load', function () {
 
         // Gestionnaire d'événement touchmove
         slider.addEventListener('touchmove', event => {
+            touchMoveX = event.touches[0].pageX;
+        });
+
+
+        /* 
+        // Gestionnaire d'événement touchmove
+        slider.addEventListener('touchmove', event => {
+            touchMoveX = event.touches[0].pageX;
+        });
+                slider.addEventListener('touchmove', event => {
             const touch = event.touches[0];
             const touchMoveY = touch.pageY;
             const touchDiffY = Math.abs(touchMoveY - touchStartY);
@@ -100,6 +105,7 @@ window.addEventListener('load', function () {
                 touchMoveX = touch.pageX;
             }
         });
+        */
 
         // Gestionnaire d'événement touchend
         slider.addEventListener('touchend', event => {
@@ -113,5 +119,99 @@ window.addEventListener('load', function () {
         });
     }
 });
+
+
+//*==================== SCRIPT SECTION SOLUTION ACCORDEON ====================*//
+const section_solution_accordeon = document.querySelector('.section_solution_accordeon');//la section accordeon
+const accordeons = section_solution_accordeon.querySelectorAll('.accordeon');//tous les accordéons de façon unitaires
+
+accordeons.forEach(accordeon => accordeon.addEventListener("click", event => {
+    if (accordeon.classList.contains('active')) {
+        accordeon.classList.remove('active');
+        return;//on sort de la boucle
+    }
+    else {
+        let accordeonActiveOld = section_solution_accordeon.querySelector('.accordeon.active');
+        if (accordeonActiveOld) {
+            accordeonActiveOld.classList.remove('active');
+        };
+        accordeon.classList.add('active');
+    }
+}));
+
+
+//*==================== SCRIPT SECTION SOLUTION TESTIMONY ====================*//
+const section_solution_contact_testimony = document.querySelector('.section_solution_contact_testimony');//la section testimony
+const slider_container = section_solution_contact_testimony.querySelector('.slider_container');//le slider_container
+//const slides = slider_container.querySelectorAll('.slide');//toutes les slides
+
+let pressed = false;
+let startX = 0;
+
+slider_container.addEventListener('mousedown', function (e) {
+    pressed = true;
+    startX = e.clientX;
+    this.style.cursor = 'grabbing';
+    console.log(startX);
+});
+
+slider_container.addEventListener('mouseleave', function (e) {
+    pressed = false;
+});
+
+slider_container.addEventListener('mouseup', function (e) {
+    pressed = false;
+    this.style.cursor = 'grab';
+});
+
+slider_container.addEventListener('mousemove', function (e) {
+    if (!pressed) {
+        return
+    }
+    else if ((startX - e.clientX) > 0) {
+        this.scrollLeft += 475;
+    }
+    else if ((startX - e.clientX) < 0) {
+        this.scrollLeft -= 475;
+    }
+});
+
+
+/* 
+//Les variables utiles
+let positionClic = 0;
+let positionDrag = 0;
+let posInitiale;
+let posFinale;
+let dragLimit;
+
+slider_container.addEventListener('onmousedown',dragStart);
+
+function dragStart(e){
+    e.preventDefault();
+
+    posInitiale = slider_container.offsetLeft;
+    positionClic = e.clientX;
+
+    document.addEventListener('mousemove', moveSliderContainer);
+    document.addEventListener('pointerup',dragEnd);
+};
+
+function moveSliderContainer(e){
+    positionDrag = positionClic - e.clientX;//clic -X actuel
+    positionClic = e.clientX;
+    console.log(`OLDposition : ${positionClic} NEWposition : ${e.clientX}`);
+
+
+    slider_container.style.left = `${slider_container.offsetLeft - positionDrag}px`;
+};
+
+
+
+
+
+
+*/
+
 
 
