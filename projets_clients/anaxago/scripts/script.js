@@ -15,29 +15,28 @@ button_next.addEventListener("click", event => {
     let cardWidth = last_card.offsetWidth;//largeur de la carte
     let gap = parseInt((window.getComputedStyle(slider).getPropertyValue('column-gap')).replace("px", ""));//on recupere le gap
 
-    if (decalage < (-cardWidth)) {
+    if (decalage < 0) {
         let currentTranslateX = parseInt(slider.getAttribute('data-translate'));
         let nextTranslateX = (currentTranslateX - (cardWidth + gap));
-        translateXvalue = 'translateX('.concat(nextTranslateX, 'px)');
+        /*         translateXvalue = 'translateX('.concat(nextTranslateX, 'px)');
+*/
+        translateXvalue =''.concat(nextTranslateX, 'px');
+        
+        console.log(translateXvalue);
         cards.forEach(card => {
-            card.style["transform"] = translateXvalue;
+            card.style["left"] = translateXvalue;
         });
         slider.setAttribute('data-translate', nextTranslateX);
-        button_previous.classList.add('active');
-        return;//on sort de la boucle
 
-    } else if ((decalage > (-cardWidth - 1)) && (decalage < 0)) {
-        let currentTranslateX = parseInt(slider.getAttribute('data-translate'));
-        let nextTranslateX = (currentTranslateX - (cardWidth + gap));
-        translateXvalue = 'translateX('.concat(nextTranslateX, 'px)');
-        cards.forEach(card => {
-            card.style["transform"] = translateXvalue;
-        });
-        slider.setAttribute('data-translate', nextTranslateX);
-        button_next.classList.remove('active');
-        return;//on sort de la boucle
+        if (decalage < (-cardWidth)) {
+            button_previous.classList.add('active');
+            return;//on sort de la boucle
+        }
+        else if ((decalage > (-cardWidth - 1))) {
+            button_next.classList.remove('active');
+            return;//on sort de la boucle
+        }
     }
-    return;//on sort de la boucle
 });
 
 

@@ -620,6 +620,8 @@ em {
   border-radius: 16px;
   text-align: center;
   transition: all 200ms ease;
+  position: relative;
+  left:0;
 }
 
 .recrutement_section_manifeste>.wrapper>.main_container>.slider>div>h2 {
