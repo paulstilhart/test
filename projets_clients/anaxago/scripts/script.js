@@ -1,89 +1,113 @@
 //*==================== SCRIPT SECTION MANIFESTE ====================*//
-const recrutement_section_manifeste = document.querySelector('.recrutement_section_manifeste');//la section
-const slider = recrutement_section_manifeste.querySelector('.slider');//le container des cartes = slider
-const cards = recrutement_section_manifeste.querySelectorAll('.slider>div');
-const nombreCartes = slider.childElementCount;
-const button_box = recrutement_section_manifeste.querySelector('.button_box');//la button box
-const button_previous = button_box.querySelectorAll('.button_box>button')[0];
-const button_next = button_box.querySelectorAll('.button_box>button')[1];
+//La section manifeste et le slider manifeste
+const recrutement_section_manifeste = document.querySelector('.recrutement_section_manifeste');
+const slider_manifeste = recrutement_section_manifeste.querySelector('.slider');
+const slider_manifeste_cards = recrutement_section_manifeste.querySelectorAll('.slider>div');
+
+//Bouton du slider
+const button_previous_manifeste = recrutement_section_manifeste.querySelectorAll('.button_box>button')[0];
+const button_next_manifeste = recrutement_section_manifeste.querySelectorAll('.button_box>button')[1];
+
+//Le gap entre les cartes = une constante
+const gap = parseInt((window.getComputedStyle(slider_manifeste).getPropertyValue('column-gap')).replace("px", ""));
 
 
-//Click bouton next
-button_next.addEventListener("click", event => {
-    let last_card = slider.lastElementChild;//on récupère le décalage de la dernière carte par rapport à la fenètre
-    let decalage = (window.innerWidth - last_card.getBoundingClientRect().right);//decalage dernière carte
-    let cardWidth = last_card.offsetWidth;//largeur de la carte
-    let gap = parseInt((window.getComputedStyle(slider).getPropertyValue('column-gap')).replace("px", ""));//on recupere le gap
+//1ere carte - decalage 1ere carte - largeur 1ere carte
+let first_card_manifeste = slider_manifeste.firstElementChild;
+let decalage_first_card = first_card_manifeste.getBoundingClientRect().left;
+let last_card_manifeste = slider_manifeste.lastElementChild;
+let decalage_last_card = ((window.innerWidth) - (last_card_manifeste.getBoundingClientRect().right));
+let cardWidth = first_card_manifeste.offsetWidth;
 
-    if (decalage < 0) {
-        let currentTranslateX = parseInt(slider.getAttribute('data-translate'));
-        let nextTranslateX = (currentTranslateX - (cardWidth + gap));
-        /*         translateXvalue = 'translateX('.concat(nextTranslateX, 'px)');
-*/
-        translateXvalue =''.concat(nextTranslateX, 'px');
-        
-        console.log(translateXvalue);
-        cards.forEach(card => {
-            card.style["left"] = translateXvalue;
-        });
-        slider.setAttribute('data-translate', nextTranslateX);
 
-        if (decalage < (-cardWidth)) {
-            button_previous.classList.add('active');
-            return;//on sort de la boucle
-        }
-        else if ((decalage > (-cardWidth - 1))) {
-            button_next.classList.remove('active');
-            return;//on sort de la boucle
-        }
-    }
+//CLICK BOUTON NEXT
+button_next_manifeste.addEventListener("click", event => {
+    //On vient simplement incrémenter le scrollLeft de la largeur carte + gap
+    let newscrollLeft = (cardWidth + gap);
+    slider_manifeste.scrollLeft += newscrollLeft;
 });
 
 
 //Click bouton previous
-button_previous.addEventListener("click", event => {
-    let first_card = slider.firstElementChild;//on récupère le decalage de la 1ere carte par rapport à la fenètre
-    let decalage = first_card.getBoundingClientRect().left;//decalage 1ere carte
-    let cardWidth = first_card.offsetWidth;//largeur de la carte
-    let gap = parseInt((window.getComputedStyle(slider).getPropertyValue('column-gap')).replace("px", ""));//on recupere le gap
-
-    if (decalage < (-cardWidth)) {
-        let currentTranslateX = parseInt(slider.getAttribute('data-translate'));
-        let nextTranslateX = (currentTranslateX + (cardWidth + gap));
-        translateXvalue = 'translateX('.concat(nextTranslateX, 'px)');
-        cards.forEach(card => {
-            card.style["transform"] = translateXvalue;
-        });
-        slider.setAttribute('data-translate', nextTranslateX);
-        button_next.classList.add('active');
-        return;//on sort de la boucle
-    }
-    else if ((decalage > (-cardWidth - 1)) && (decalage < 0)) {
-        let currentTranslateX = parseInt(slider.getAttribute('data-translate'));
-        let nextTranslateX = (currentTranslateX + (cardWidth + gap));
-        translateXvalue = 'translateX('.concat(nextTranslateX, 'px)');
-        cards.forEach(card => {
-            card.style["transform"] = translateXvalue;
-        });
-        slider.setAttribute('data-translate', nextTranslateX);
-        button_next.classList.add('active');
-        button_previous.classList.remove('active');
-        return;//on sort de la boucle
-    };
-    return;//on sort de la boucle
+button_previous_manifeste.addEventListener("click", event => {
+    //On vient simplement incrémenter le scrollLeft de la largeur carte + gap
+    let newscrollLeft = (cardWidth + gap);
+    slider_manifeste.scrollLeft -= newscrollLeft;
 });
+
+//Pour mettre à jour les boutons au scroll doigt dans le conteneur
+let previousScrollPosition = slider_manifeste.scrollLeft;
+slider_manifeste.addEventListener("scroll", event => {
+    let currentScrollPosition = slider_manifeste.scrollLeft;
+
+    if ((currentScrollPosition > previousScrollPosition)) { //scroll droite
+        button_previous_manifeste.classList.add('active');
+
+        if ((slider_manifeste.scrollWidth - (slider_manifeste.scrollLeft + slider_manifeste.clientWidth)) < 100) {
+            button_next_manifeste.classList.remove('active');
+        }
+    }
+    else if (currentScrollPosition < previousScrollPosition) { //scroll gauche
+        button_next_manifeste.classList.add('active');
+
+        if (slider_manifeste.scrollLeft < 100) {
+            button_previous_manifeste.classList.remove('active');
+        }
+    }
+    // Met à jour la position précédente pour la prochaine itération
+    previousScrollPosition = currentScrollPosition;
+});
+
 
 //Pour remettre le slider à 0 si on resize
-let resizeTimeout; // Variable pour stocker le délai de temporisation
+// Variable pour stocker le délai de temporisation
+let resizeTimeout;
 window.addEventListener('resize', function () {
-    clearTimeout(resizeTimeout); // Réinitialise le délai de temporisation à chaque redimensionnement
+    // Réinitialise le délai de temporisation à chaque redimensionnement
+    clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(function () {
         if (window.innerWidth < window.outerWidth - 10) { // Vérifie si le redimensionnement est horizontal avec une marge de 10 pixels
-            // Effectue les actions nécessaires lors du redimensionnement horizontal
-            cards.forEach(card => {
-                card.style["transform"] = 'translateX(0px)';
-            });
-            slider.setAttribute('data-translate', 0);
+            slider_manifeste.scrollLeft = 0;
         }
-    }, 200); // Délai de temporisation de 200 millisecondes pour limiter les appels fréquents lors du redimensionnement
+    }, 200);// Délai de temporisation de 200 millisecondes pour limiter les appels fréquents lors du redimensionnement
 });
+
+
+let isDragging = false;
+let startX = 0;
+
+slider_manifeste.addEventListener("mousedown", event => {
+    isDragging = true;
+    startX = event.clientX;
+    slider_manifeste.classList.add("grabbing");
+});
+
+slider_manifeste.addEventListener("mousemove", event => {
+    if (isDragging) {
+        let scroll = (startX - event.clientX);
+        if (scroll > 0) {
+            slider_manifeste.scrollLeft += scroll;
+            return;
+        }
+        else if (scroll < 0) {
+            slider_manifeste.scrollLeft -= Math.abs(scroll);
+            return;
+        }
+        console.log(startX - event.clientX);
+    }
+});
+
+
+window.addEventListener("mouseup", event => {
+    isDragging = false;
+    slider_manifeste.classList.remove("grabbing");
+});
+
+recrutement_section_manifeste.addEventListener("mouseleave", event => {
+    isDragging = false;
+    slider_manifeste.classList.remove("grabbing");
+});
+
+
+
+
