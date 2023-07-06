@@ -1,0 +1,1313 @@
+/*================================ RESET CSS =======================================*/
+/* 
+ATTENTION ICI RESET CSS A SUPPRIMER SI IL EST DÉJÀ PRÉSENT DANS VOTRE PROJET
+
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  text-decoration: none;
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a:focus,
+a:active,
+button:focus,
+button:active,
+input:active,
+input:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+  outline: none;
+  outline-color: transparent !important;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+img {
+  display: block;
+}
+
+/*================================ VARIABLES =======================================*/
+:root {
+  --black: #000000;
+  --primary_black: #01192A;
+  --white: #ffffff;
+  --white_break: #F5F5F5;
+  --secondary_beige: #FEFAF5;
+  --secondary_beige_2: #FFFEFD;
+  --secondary_border: #F3F0EC;
+  --secondary_groupe: #F8EBD6;
+  --dark_blue: #0B273A;
+  --dark_beige: #DAB575;
+}
+
+/*================================ BACKGROUND & COLORS =======================================*/
+/* 
+Dans le cas de classes utilitaires html
+*/
+
+
+/*================================ FONTS =======================================*/
+html {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--black);
+  background-color: var(--white);
+  scroll-behavior: smooth;
+}
+
+/* Balise html */
+
+i,
+mark {
+  font-style: italic;
+}
+
+em {
+  text-decoration: underline;
+}
+
+/* CLASSES UTILITAIRES */
+.text_justify {
+  text-align: justify;
+}
+
+
+
+/* CLASSES UTILITAIRES FONTS */
+.p_17_28 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.h1_recrutement {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 58px;
+}
+
+.h2_34_48 {
+  font-family: 'Lora';
+  font-style: normal;
+  font-size: 34px;
+  line-height: 48px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 992px) {
+  .h2_34_48 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .h1_recrutement {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .h2_34_48 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+
+/*================================ FONTS MQ =======================================*/
+
+/*================================ FONT-WEIGHT =======================================*/
+.fw_300 {
+  font-weight: 300;
+}
+
+.fw_400 {
+  font-weight: 400;
+}
+
+.fw_500 {
+  font-weight: 500;
+}
+
+.fw_600 {
+  font-weight: 600;
+}
+
+.fw_700 {
+  font-weight: 700;
+}
+
+.fw_800 {
+  font-weight: 800;
+}
+
+.fw_900 {
+  font-weight: 900;
+}
+
+/*================================ RECRUTEMENT - HERO SECTION =======================================*/
+.recrutement_section_hero {
+  height: 409px;
+  position: relative;
+  overflow: hidden;
+}
+
+.recrutement_section_hero>img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  bottom: -90%;
+}
+
+.recrutement_section_hero>.main_container {
+  margin: 0 auto;
+  padding: 65px 32px;
+  max-width: calc(750px + 2*32px);
+  text-align: center;
+}
+
+.recrutement_section_hero>.main_container>h4 {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.recrutement_section_hero>.main_container>h1 {
+  margin: 10px 0px 42px 0px;
+}
+
+.recrutement_section_hero>.main_container>a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--white);
+  background-color: var(--primary_black);
+  border-radius: 25.5px;
+  padding: 10px 34px;
+  display: inline-block;
+}
+
+.recrutement_section_hero>.main_container>a::after {
+  content: url('../sources/icones/arrow_right_white_15_11.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  transform: translateY(2px);
+  transition: transform .15s, width .15s, opacity .15s;
+}
+
+.recrutement_section_hero>.main_container>a:hover::after {
+  opacity: 1;
+  transform: translate(10px, 2px);
+  width: 15px;
+}
+
+.recrutement_section_hero>.main_container>a:hover {
+  background-color: var(--dark_blue);
+  transition: .15s;
+}
+
+@media only screen and (max-width: 1200px) {
+  .recrutement_section_hero>img {
+    bottom: -10%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .recrutement_section_hero {
+    height: 351px;
+  }
+
+  .recrutement_section_hero>.main_container {
+    padding: 35px 32px;
+  }
+
+  .recrutement_section_hero>.main_container>h4 {
+    font-size: 17px;
+  }
+
+  .recrutement_section_hero>.main_container>h1 {
+    margin: 7px 0px 37px 0px;
+  }
+}
+
+/*================================ RECRUTEMENT - AVENTURE SECTION =======================================*/
+.recrutement_section_aventure {
+  background-color: var(--secondary_beige);
+}
+
+.recrutement_section_aventure>.wrapper {
+  max-width: 1184px;
+  /* 560px*2 +16px +2*24px */
+  margin: auto;
+  padding: 96px 24px;
+  display: flex;
+  column-gap: 16px;
+  row-gap: 56px;
+}
+
+.recrutement_section_aventure>.wrapper>.main_container {
+  width: 50%;
+}
+
+.recrutement_section_aventure_content {
+  padding-right: 8.5%;
+}
+
+.recrutement_section_aventure_content>h2 {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: left;
+}
+
+.recrutement_section_aventure_content>p {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 28px;
+  padding: 32px 0px 56px 0px;
+  text-align: justify;
+}
+
+
+.recrutement_section_aventure_content>a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--white);
+  background-color: var(--primary_black);
+  border-radius: 25.5px;
+  padding: 10px 34px;
+  display: inline-block;
+  text-align: center;
+}
+
+.recrutement_section_aventure_content>a::after {
+  content: url('../sources/icones/arrow_right_white_15_11.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  transform: translateY(2px);
+  transition: transform .15s, width .15s, opacity .15s;
+}
+
+.recrutement_section_aventure_content>a:hover::after {
+  opacity: 1;
+  transform: translate(10px, 2px);
+  width: 15px;
+}
+
+.recrutement_section_aventure_content>a:hover {
+  background-color: var(--dark_blue);
+  transition: .15s;
+}
+
+.recrutement_section_aventure_cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.recrutement_section_aventure_cards>.cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.recrutement_section_aventure_cards>.cards>:nth-child(1),
+.recrutement_section_aventure_cards>.cards>:nth-child(2),
+.recrutement_section_aventure_cards>.cards>:nth-child(3) {
+  width: calc(33.33% - (2*16px)/3);
+}
+
+.recrutement_section_aventure_cards>.cards>:nth-child(4),
+.recrutement_section_aventure_cards>.cards>:nth-child(5) {
+  width: calc(50% - 16px/2);
+}
+
+.recrutement_section_aventure_cards>.cards>div {
+  background-color: var(--white);
+  border: 1px solid var(--secondary_border);
+  border-radius: 8px;
+  height: 155px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.recrutement_section_aventure_cards>.cards>div>p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.recrutement_section_aventure_cards>.cards>div>p>strong {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+  .recrutement_section_aventure>.wrapper {
+    padding: 56px 24px 40px 24px;
+    flex-direction: column;
+  }
+
+
+  .recrutement_section_aventure>.wrapper>.main_container {
+    width: 100%;
+  }
+
+  .recrutement_section_aventure_content>h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .recrutement_section_aventure_content>a {
+    width: 100%;
+  }
+
+  .recrutement_section_aventure_cards>.cards>:nth-child(1),
+  .recrutement_section_aventure_cards>.cards>:nth-child(2) {
+    width: calc(50% - 16px/2);
+  }
+
+  .recrutement_section_aventure_cards>.cards>:nth-child(3),
+  .recrutement_section_aventure_cards>.cards>:nth-child(4),
+  .recrutement_section_aventure_cards>.cards>:nth-child(5) {
+    width: 100%;
+  }
+}
+
+/*================================ RECRUTEMENT - ACTEUR SECTION =======================================*/
+.recrutement_section_acteur {
+  background-color: var(--white);
+  display: flex;
+  margin: auto;
+  max-width: 2000px;
+}
+
+.recrutement_section_acteur>.image_container {
+  width: 35%;
+  height: 658px;
+  overflow: hidden;
+}
+
+.recrutement_section_acteur>.image_container>img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.recrutement_section_acteur>.main_container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 65%;
+  padding: 24px 24px 24px 96px;
+}
+
+.recrutement_section_acteur>.main_container>.content {
+  width: 100%;
+}
+
+.recrutement_section_acteur>.main_container>.content>h2 {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.recrutement_section_acteur_cards {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.recrutement_section_acteur_cards>div {
+  background-color: #FEFAF5;
+  border: 1px solid #F3F0EC;
+  border-radius: 5px;
+  width: 50%;
+  max-width: 325px;
+  padding: 40px 16px 48px 24px;
+}
+
+.recrutement_section_acteur_cards>div>p>strong {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: justify;
+}
+
+.recrutement_section_acteur_cards>div>p {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 35px;
+}
+
+.recrutement_section_acteur_cards>div>span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 24px;
+  background: #FFFFFF;
+  border: 1px solid #F3F0EC;
+  border-radius: 25px;
+}
+
+.recrutement_section_acteur_cards>div>span>img {
+  width: 30px;
+  height: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .recrutement_section_acteur>.main_container {
+    padding: 24px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .recrutement_section_acteur {
+    flex-direction: column;
+  }
+
+  .recrutement_section_acteur>.image_container {
+    width: 100%;
+    height: 315px;
+  }
+
+  .recrutement_section_acteur>.main_container {
+    padding: 56px 24px;
+    width: 100%;
+  }
+
+  .recrutement_section_acteur>.main_container>.content>h2 {
+    font-size: 26px;
+    line-height: 42px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .recrutement_section_acteur_cards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .recrutement_section_acteur_cards>div {
+    width: 100%;
+    padding: 40px 16px 48px 32px;
+  }
+}
+
+/*================================ RECRUTEMENT - MANIFESTE SECTION =======================================*/
+.recrutement_section_manifeste {
+  background-color: var(--primary_black);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+.recrutement_section_manifeste>.wrapper {
+  max-width: 1184px;
+  /* 560px*2 +16px +2*24px */
+  margin: auto;
+  padding: 96px 24px 120px 24px;
+}
+
+.recrutement_section_manifeste>.wrapper>.sub_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 60px;
+  column-gap: 16px;
+  margin-bottom: 48px;
+}
+
+.recrutement_section_manifeste>.wrapper>.sub_container>h2 {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: left;
+}
+
+.recrutement_section_manifeste>.wrapper>.sub_container>.button_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  column-gap: 16px;
+}
+
+.recrutement_section_manifeste>.wrapper>.sub_container>.button_box>button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  opacity: 0.25;
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  transition: all 0.2s;
+  cursor: auto;
+}
+
+.recrutement_section_manifeste>.wrapper>.sub_container>.button_box>:first-child {
+  transform: rotate(180deg);
+}
+
+.recrutement_section_manifeste>.wrapper>.sub_container>.button_box>button.active {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+.recrutement_section_manifeste>.wrapper>.sub_container>.button_box>button.active:hover {
+  /* #  background-color: #11354d; */
+  scale: 1.15;
+}
+
+
+.recrutement_section_manifeste>.wrapper>.main_container {
+  overflow-x: visible;
+}
+
+
+.recrutement_section_manifeste>.wrapper>.main_container>.slider {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  column-gap: 24px;
+  width: 100%;
+  transition: all 0.2s;
+  overflow-x: visible;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  cursor: grab;
+  scrollbar-width: 0;
+}
+
+.recrutement_section_manifeste>.wrapper>.main_container>.slider.grabbing {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.recrutement_section_manifeste>.wrapper>.main_container::-webkit-scrollbar,
+.recrutement_section_manifeste>.wrapper>.main_container>.slider::-webkit-scrollbar {
+  display: none;
+
+}
+
+
+.recrutement_section_manifeste>.wrapper>.main_container>.slider>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 519px;
+  height: 396px;
+  padding: 32px;
+  background-color: #0F2A3D;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  text-align: center;
+  scroll-snap-align: start;
+  user-select: none;
+}
+
+
+.recrutement_section_manifeste>.wrapper>.main_container>.slider>div>h2 {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.recrutement_section_manifeste>.wrapper>.main_container>.slider>div>p:first-of-type {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.recrutement_section_manifeste>.wrapper>.main_container>.slider>div>p:first-of-type>strong {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 34px;
+}
+
+.recrutement_section_manifeste>.wrapper>.main_container>.slider>div>p:last-of-type {
+  font-size: 17px;
+  line-height: 28px;
+}
+
+
+@media only screen and (max-width: 576px) {
+  .recrutement_section_manifeste>.wrapper {
+    padding: 64px 24px 152px 24px;
+    position: relative;
+  }
+
+  .recrutement_section_manifeste>.wrapper>.sub_container>.button_box {
+    position: absolute;
+    bottom: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .recrutement_section_manifeste>.wrapper>.sub_container {
+    margin-bottom: 32px;
+  }
+
+  .recrutement_section_manifeste>.wrapper>.subcontainer>h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .recrutement_section_manifeste>.sub_container {
+    margin-bottom: 40px;
+    align-items: flex-start;
+  }
+
+
+  .recrutement_section_manifeste>.wrapper>.main_container>.slider>div {
+    width: 100%;
+    height: 472px;
+    padding: 24px;
+  }
+
+  .recrutement_section_manifeste>.wrapper>.main_container>.slider>div>p:first-of-type {
+    margin-bottom: 32px;
+  }
+}
+
+/*================================ RECRUTEMENT - METIERS SECTION =======================================*/
+.recrutement_section_metiers {
+  background-color: var(--white);
+  text-align: left;
+}
+
+.recrutement_section_metiers>.wrapper {
+  max-width: 1184px;
+  /* 560px*2 +16px +2*24px */
+  margin: auto;
+  padding: 80px 24px 64px 24px;
+}
+
+.recrutement_section_metiers>.wrapper>h2 {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  margin-bottom: 48px;
+}
+
+.recrutement_section_metiers>.wrapper>.main_container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+  row-gap: 24px;
+  flex-wrap: nowrap;
+}
+
+.recrutement_section_metiers_cards {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  flex-wrap: nowrap;
+}
+
+.recrutement_section_metiers_cards>div {
+  background-color: var(--secondary_beige_2);
+  border: 1px solid var(--secondary_border);
+  border-radius: 8px;
+  padding: 16px 50px 16px 16px;
+  display: flex;
+  column-gap: 32px;
+  min-height: 250px;
+}
+
+.recrutement_section_metiers_cards>div>div {
+  width: 132px;
+  height: auto;
+  flex: none;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.recrutement_section_metiers_cards>div>div>img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.recrutement_section_metiers_cards>div>p {
+  font-size: 17px;
+  line-height: 28px;
+  text-align: justify;
+  color: #0E2333;
+}
+
+.recrutement_section_metiers_cards>div>p>strong {
+  display: block;
+  padding: 21px 0px 16px 0px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 1200px) {
+
+
+  .recrutement_section_metiers_cards>div {
+    padding: 32px 32px 40px 32px;
+    flex-direction: column;
+  }
+
+  .recrutement_section_metiers_cards>div>div {
+    width: 100%;
+    height: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .recrutement_section_metiers_cards>div>p>strong {
+    padding: 28px 0px 16px 0px;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .recrutement_section_metiers>.wrapper {
+    padding: 64px 24px 56px 24px;
+  }
+
+  .recrutement_section_metiers>.wrapper>h2 {
+    font-size: 26px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .recrutement_section_metiers>.wrapper>.main_container {
+    flex-direction: column;
+  }
+
+  .recrutement_section_metiers_cards,
+  .recrutement_section_metiers_cards>div {
+    width: 100%;
+  }
+
+}
+
+/*================================ RECRUTEMENT - POSTES SECTION =======================================*/
+.recrutement_section_postes {
+  background-color: #FEFAF5;
+}
+
+.recrutement_section_postes>.wrapper {
+  max-width: 1184px;
+  /* 560px*2 +16px +2*24px */
+  margin: auto;
+  padding: 64px 24px;
+}
+
+.recrutement_section_postes>.wrapper>.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+  column-gap: 24px;
+  row-gap: 32px;
+}
+
+.recrutement_section_postes>.wrapper>.header>h2 {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: left;
+}
+
+.recrutement_section_postes>.wrapper>.header>a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--white);
+  background-color: var(--primary_black);
+  border-radius: 25.5px;
+  padding: 10px 34px;
+  display: inline-block;
+  text-align: center;
+}
+
+.recrutement_section_postes>.wrapper>.header>a::after {
+  content: url('../sources/icones/arrow_right_white_15_11.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  transform: translateY(2px);
+  transition: transform .15s, width .15s, opacity .15s;
+}
+
+.recrutement_section_postes>.wrapper>.header>a:hover::after {
+  opacity: 1;
+  transform: translate(10px, 2px);
+  width: 15px;
+}
+
+.recrutement_section_postes>.wrapper>.header>a:hover {
+  background-color: var(--dark_blue);
+  transition: .15s;
+}
+
+#welcomekit-embed ul,
+#welcomekit-embed li {
+  list-style-type: none;
+}
+
+.welcomekit-jobs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.welcomekit-jobs-list-item {
+  margin: 0;
+  padding: 0;
+  width: calc(50% - 16px/2);
+  background: #FFFFFF;
+  border: 1px solid #F3F0EC;
+  border-radius: 8px;
+}
+
+.welcomekit-jobs-list-item-link {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 8px;
+  width: 100%;
+  min-height: 94px;
+  height: 100%;
+  margin: 0;
+  padding: 16px 24px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.welcomekit-jobs-list-item-link:after {
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+  width: 20px;
+  height: 20px;
+  content: url('../sources/icones/arrow_right_black_15_11.svg');
+  transition: all 0.2s;
+}
+
+.welcomekit-jobs-list-item-link:hover {
+  background: var(--secondary_groupe);
+}
+
+.welcomekit-jobs-list-item-link:hover:after {
+  right: 20px;
+  border-top-color: #aaa;
+  border-right-color: #aaa;
+}
+
+.welcomekit-job-name {
+  margin: 0;
+  padding: 4px 0px 40px 0px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.welcomekit-job-infos {
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  height: 20px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  background-color: #8D929F;
+  color: var(--white);
+  border-radius: 9.5px;
+}
+
+.welcomekit-job-department {
+  position: absolute;
+  left: 24px;
+  bottom: 22px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #8D929F;
+}
+
+.welcomekit-job-officeCity {
+  display: flex;
+}
+
+.welcomekit-job-officeCity::after {
+  content: '/';
+  padding: 0px 8px;
+}
+
+
+.welcomekit-job-infos>li.welcomekit-job-description {
+  display: block;
+  margin: 10px 0 0 0;
+  padding: 10px 20px;
+  border-left: 2px solid #eee;
+}
+
+.welcomekit-job-infos>li.welcomekit-job-description p,
+.welcomekit-job-infos>li.welcomekit-job-description ul {
+  margin: 0;
+  padding: 0 0 10px 0;
+  color: #bbb;
+}
+
+.welcomekit-job-infos>li.welcomekit-job-description ul li {
+  border-left: 1px solid #eee;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.welcomekit-job-infos>li.welcomekit-job-description pre {
+  border-left: 1px solid #eee;
+  padding-left: 10px;
+  overflow: auto;
+}
+
+.welcomekit-job-infos>li.welcomekit-job-description:before {
+  display: none
+}
+
+.welcomekit-office-city,
+.welcomekit-department-name {
+  display: block;
+  padding: 15px;
+  background: #eee;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.welcomekit-warning {
+  display: block;
+  padding: 50px 0;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .recrutement_section_postes>.wrapper>.header {
+    margin-bottom: 64px;
+    justify-content: center;
+  }
+
+  .recrutement_section_postes>.wrapper>.header>h2 {
+    font-size: 26px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  .welcomekit-jobs-list-item {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .welcomekit-jobs-list-item-link {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .welcomekit-job-name {
+    padding-top: 0;
+  }
+
+  .welcomekit-job-infos {
+    align-self: flex-end;
+  }
+}
+
+
+/*================================ RECRUTEMENT - EQUIPE SECTION =======================================*/
+.recrutement_section_equipe {
+  background-color: var(--white);
+  text-align: left;
+}
+
+.recrutement_section_equipe>.wrapper {
+  max-width: 1184px;
+  /* 560px*2 +16px +2*24px */
+  margin: auto;
+  padding: 80px 24px;
+}
+
+.recrutement_section_equipe>.wrapper>.separator {
+  height: 40px;
+}
+
+
+.recrutement_section_equipe>.wrapper>h2 {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: left;
+}
+
+.recrutement_section_equipe>.wrapper>h3 {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  text-align: left;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.recrutement_section_equipe_cards {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 32px;
+}
+
+.recrutement_section_equipe_cards>a {
+  background: #FEFAF5;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 272px;
+  height: 409px;
+}
+
+.recrutement_section_equipe_cards>a>.image_container {
+  height: 289px;
+  overflow: hidden;
+}
+
+.recrutement_section_equipe_cards>a>.image_container>img {
+  margin: auto;
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.recrutement_section_equipe_cards>a>.content {
+  height: 120px;
+  background-color: var(--white);
+  border: 1px solid #F3F0EC;
+  border-radius: 0px 0px 8px 8px;
+  padding: 24px;
+}
+
+.recrutement_section_equipe_cards>a>.content>p>strong {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 6px;
+}
+
+.recrutement_section_equipe_cards>a>.content>p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.recrutement_section_equipe_cards>a>.content>p::after {
+  content: url('../sources/icones/linkedin.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: 6px;
+  opacity: 0.5;
+  transition: opacity .15s;
+}
+
+.recrutement_section_equipe_cards>a:hover>.content>p::after {
+  opacity: 1;
+}
+
+
+
+@media only screen and (max-width: 576px) {
+  .recrutement_section_equipe>.wrapper {
+    padding: 56px 24px;
+  }
+
+  .recrutement_section_equipe>.wrapper>h2 {
+    font-size: 26px;
+    line-height: 45px;
+    text-align: center;
+  }
+
+  .recrutement_section_equipe>.wrapper>h3 {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  .recrutement_section_equipe_cards {
+    justify-content: center;
+  }
+}
+
+
+
+/*================================ RECRUTEMENT - GROUPE SECTION =======================================*/
+.recrutement_section_groupe {
+  height: 272px;
+  position: relative;
+}
+
+.recrutement_section_groupe>.background_image_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recrutement_section_groupe>.background_image_container>img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translateY(10%);
+}
+
+.recrutement_section_groupe>.main_container {
+  margin: 0 auto;
+  padding: 75px 32px;
+  text-align: center;
+}
+
+.recrutement_section_groupe>.main_container>p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 34px;
+  color: var(--white);
+  padding-bottom: 20px;
+}
+
+.recrutement_section_groupe>.main_container>a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--primary_black);
+  background-color: var(--secondary_groupe);
+  border-radius: 25.5px;
+  padding: 10px 34px;
+  display: inline-block;
+  text-align: center;
+}
+
+
+.recrutement_section_groupe>.main_container>a::after {
+  content: url('../sources/icones/arrow_right_black_15_11.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  transform: translateY(2px);
+  transition: transform .15s, width .15s, opacity .15s;
+}
+
+.recrutement_section_groupe>.main_container>a:hover::after {
+  opacity: 1;
+  transform: translate(10px, 2px);
+  width: 15px;
+}
+
+.recrutement_section_groupe>.main_container>a:hover {
+  background-color: var(--dark_beige);
+  transform: .15s;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .recrutement_section_groupe>.background_image_container>img {
+    transform: translateY(0%);
+  }
+}
