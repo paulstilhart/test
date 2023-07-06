@@ -100,6 +100,15 @@ em {
 
 /* CLASSES UTILITAIRES FONTS */
 
+.p_8_16 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-size: 8px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+
 .p_10_16 {
   font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
@@ -107,6 +116,24 @@ em {
   line-height: 16px;
   font-weight: 400;
 }
+
+.p_12_16 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.p_12_24 {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+
 
 .p_13_22 {
   font-family: 'Proxima Nova', Arial, sans-serif;
@@ -130,6 +157,30 @@ em {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
+}
+
+.p_14_24_600 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.p_15_24_600 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.p_15_24_700 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .p_15_28 {
@@ -194,6 +245,14 @@ em {
   font-weight: 600;
 }
 
+.h3_21_34 {
+  font-family: 'Poppins', 'Lora', Arial, sans-serif;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 34px;
+  font-weight: 700;
+}
+
 .h3_24_34 {
   font-family: 'Poppins', 'Lora', Arial, sans-serif;
   font-style: normal;
@@ -226,6 +285,17 @@ em {
     line-height: 24px;
   }
 
+  .p_14_24_600 {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .p_15_24_600 {
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
   .h1_48_53 {
     font-size: 36px;
     line-height: 40px;
@@ -239,6 +309,11 @@ em {
   .h2_34_48 {
     font-size: 30px;
     line-height: 40px;
+  }
+
+  .h3_21_34 {
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .h3_18_34 {
@@ -273,6 +348,35 @@ em {
   }
 }
 
+/*================================ FONT-WEIGHT =======================================*/
+.fw_300 {
+  font-weight: 300;
+}
+
+.fw_400 {
+  font-weight: 400;
+}
+
+.fw_500 {
+  font-weight: 500;
+}
+
+.fw_600 {
+  font-weight: 600;
+}
+
+.fw_700 {
+  font-weight: 700;
+}
+
+.fw_800 {
+  font-weight: 800;
+}
+
+.fw_900 {
+  font-weight: 900;
+}
+
 /*================================ CLASSES UTILITAIRES =======================================*/
 /* wrapper_1184 = 2*24px de padding horizontal = 1136px de contenu = 2*560px + 16px de gap central */
 .wrapper_1184 {
@@ -284,6 +388,10 @@ em {
 
 .text_justify {
   text-align: justify;
+}
+
+.text_uppercase {
+  text-transform: uppercase;
 }
 
 .link_16_32 {
@@ -343,6 +451,17 @@ em {
   margin-left: 3px;
   transform: translateY(2px);
 }
+
+.after_locker::after {
+  content: url('../sources/icones/locker_12_16_white.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 11px;
+  margin-left: 8px;
+  transform: translateY(2px);
+}
+
 
 .underline_hover {
   position: relative;
@@ -903,7 +1022,7 @@ em {
 .homepage_section_invest>.span_container {
   width: 100%;
   text-align: center;
-  margin:16px 0px;
+  margin: 16px 0px;
 }
 
 .homepage_section_invest>.span_container>span {
@@ -969,12 +1088,176 @@ em {
 
 .homepage_section_invest>.wrapper>.main_container {
   height: 620px;
+  display: flex;
+  overflow: hidden;
 }
+
+.homepage_section_invest>.wrapper>.main_container>.card {
+  color: var(--white);
+  width: 50%;
+  height: 100%;
+  padding: 16px 8px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  transition: all 0.15s;
+}
+
+.homepage_section_invest>.wrapper>.main_container.realestate>.card {
+  margin-right: 8px;
+}
+
+.homepage_section_invest>.wrapper>.main_container.venturecapital>.card {
+  margin-left: 8px;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card:hover {
+  width: 100%;
+}
+
+.homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card,
+.homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover) {
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.checkbox_container,
+.homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.checkbox_container,
+.homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.content,
+.homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.content,
+.homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.checkbox_container::after,
+.homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.checkbox_container::after {
+  display: none;
+}
+
+.homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.checkbox_container::after,
+.homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.checkbox_container::after {
+  display: none;
+}
+
+
+.homepage_section_invest>.wrapper>.main_container.realestate>:nth-child(1) {
+  background-position: left;
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url("../sources/images/homepage/realestate/realestate1.jpg");
+}
+
+.homepage_section_invest>.wrapper>.main_container.realestate>:nth-child(2) {
+  background-position: right;
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url("../sources/images/homepage/realestate/realestate2.jpg");
+}
+
+.homepage_section_invest>.wrapper>.main_container.venturecapital>:nth-child(1) {
+  background-position: left;
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url("../sources/images/homepage/venturecapital/venturecapital1.jpg");
+}
+
+.homepage_section_invest>.wrapper>.main_container.venturecapital>:nth-child(2) {
+  background-position: right;
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url("../sources/images/homepage/venturecapital/venturecapital2.jpg");
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container {
+  position: relative;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container::after {
+  position: absolute;
+  top: -9px;
+  right: 20px;
+  content: url('../sources/icones/arrow_button_white.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 11px;
+  margin-right: 6px;
+  transform: translateY(1px);
+  transition: transform 0.15s;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card:hover>.checkbox_container::after {
+  transform: rotate(+180deg);
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container>span {
+  color: var(--white);
+  border-radius: 45px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2.5px);
+  padding: 8px 16px;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container>span::before {
+  content: url('../sources/icones/checkbox_white.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 11px;
+  margin-right: 6px;
+  transform: translateY(1px);
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.content>.name {
+  margin-bottom: 24px;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.content>.name>img {
+  max-width: 100%;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.rising {
+  display: none;
+  position: absolute;
+  bottom:24px;
+  right:16px;
+}
+.homepage_section_invest>.wrapper>.main_container>.card:hover >.rising {
+  display: block;
+}
+.homepage_section_invest>.wrapper>.main_container>.card>.rising>div {
+  border-radius: 8px;
+  border: 1px solid rgba(225, 225, 225, 0.15);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2px);
+  padding: 8px 24px;
+  margin-top:16px;
+  position: relative;
+}
+
+.rising_tooltip::after{
+  content: url('../sources/icones/tooltip_12_12_white.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 11px;
+  position: absolute;
+  top:-3px;
+  right:5px;
+}
+
+
+.homepage_section_invest>.wrapper>.main_container>.card>.rising>div>img {
+  position: absolute;
+  width: 51px;
+  right: 24px;
+  top:50%;
+  transform: translateY(-50%);
+}
+
 
 @media only screen and (max-width: 1200px) {
   .homepage_section_invest>.span_container {
-    margin:52px 0px 40px 0px;
+    margin: 52px 0px 40px 0px;
   }
+
   .homepage_section_invest>.span_container>span {
     padding: 0px 52px;
     text-align: center;
@@ -999,8 +1282,9 @@ em {
 
 @media only screen and (max-width: 768px) {
   .homepage_section_invest>.span_container {
-    margin:32px 0px 40px 0px;
+    margin: 32px 0px 40px 0px;
   }
+
   .homepage_section_invest>.span_container>span {
     padding: 0px 24px;
   }
@@ -1010,7 +1294,7 @@ em {
   }
 
   .homepage_section_invest>.wrapper.reverse {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .homepage_section_invest>.wrapper>div {
@@ -1029,6 +1313,19 @@ em {
   .homepage_section_invest>.wrapper>.main_container {
     height: 315px;
   }
+
+  .homepage_section_invest>.wrapper>.main_container {
+    padding: 56px 4px 0px 4px;
+  }
+
+  .homepage_section_invest>.wrapper>.main_container.realestate>.card {
+    margin: 0px 4px;
+  }
+
+  .homepage_section_invest>.wrapper>.main_container.venturecapital>.card {
+    margin: 0px 4px;
+  }
+
 
 }
 
@@ -1197,6 +1494,19 @@ em {
     flex-direction: column;
     align-items: center;
   }
+
+  .homepage_section_community>.wrapper>.main_container,
+  .homepage_section_community>.wrapper>.sub_container {
+    width: 100%;
+  }
+
+  .homepage_section_community>.wrapper>.main_container>h2 {
+    text-align: center;
+  }
+
+  .homepage_section_community>.wrapper>.main_container>.link_container {
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -1204,6 +1514,8 @@ em {
     padding-top: 56px;
     padding-bottom: 56px;
   }
+
+
 }
 
 /*================================ HOMEPAGE - EXPERTS SECTION =======================================*/
