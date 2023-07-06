@@ -650,7 +650,6 @@ em {
 .recrutement_section_manifeste>.wrapper>.main_container::-webkit-scrollbar,
 .recrutement_section_manifeste>.wrapper>.main_container>.slider::-webkit-scrollbar {
   display: none;
-
 }
 
 
