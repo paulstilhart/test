@@ -22,6 +22,11 @@
     <main>
         <!-- ==================== HOMEPAGE - HERO SECTION ==================== -->
         <section class="homepage_section_hero">
+            <div class="lines_container">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <img src="./sources/icones/icon_anaxago_white_49_37.svg" alt="icon anaxago white">
             <div class="iframe_container">
                 <iframe
@@ -46,25 +51,36 @@
                     <h2 class="h2_19_34">Crowdfunding Immobilier</h2>
                     <p class="p_14_24">Private Equity • Dette privée</p>
                     <p class="p_14_24"><strong>Rentabilité cible</strong><span>8-14%<sup>1</sup></span></p>
-                    <p class="p_14_24"><strong class="after_tooltip">Horizon CIBLE</strong><span>6 à 36 mois</span></p>
+                    <p class="p_14_24 tooltip_trigger"
+                        data-tooltip="L'horizon d'investissement cible est fourni à titre indicatif et ne constitue pas une garantie.">
+                        <strong class="tooltip_after">Horizon CIBLE</strong><span>6 à 36 mois</span>
+                    </p>
                 </a>
                 <a class="card" href="https://www.anaxago.com/operations-en-cours?product=innovation">
                     <h2 class="h2_19_34">Club-Deals VC</h2>
                     <p class="p_14_24">Financement de sociétés innovantes</p>
                     <p class="p_14_24"><strong>multiple cible</strong><span>x 2,5%<sup>1</sup></span></p>
-                    <p class="p_14_24"><strong class="after_tooltip">Horizon CIBLE</strong><span>4 à 7 ans</span></p>
+                    <p class="p_14_24 tooltip_trigger"
+                        data-tooltip="L'horizon d'investissement cible est fourni à titre indicatif et ne constitue pas une garantie.">
+                        <strong class="tooltip_after">Horizon CIBLE</strong><span>4 à 7 ans</span>
+                    </p>
                 </a>
                 <a class="card" href="https://www.anaxago.com/operations-en-cours?product=fund">
                     <h2 class="h2_19_34">Fonds de Private Equity</h2>
                     <p class="p_14_24">Immobilier • Venture Capital</p>
                     <p class="p_14_24"><strong>Rentabilité cible</strong><span>7-9%<sup>1</sup></span></p>
-                    <p class="p_14_24"><strong class="after_tooltip">Horizon CIBLE</strong><span>> 5 ans</span></p>
+                    <p class="p_14_24  tooltip_trigger"
+                        data-tooltip="L'horizon d'investissement cible est fourni à titre indicatif et ne constitue pas une garantie.">
+                        <strong class="tooltip_after">Horizon CIBLE</strong><span>> 5 ans</span>
+                    </p>
                 </a>
                 <a class="card" href="https://www.anaxago.com/assurance-vie">
                     <h2 class="h2_19_34">Assurance vie</h2>
                     <p class="p_14_24">Immobilier durable</p>
                     <p class="p_14_24"><strong>Rentabilité cible</strong><span>7%<sup>1</sup></span></p>
-                    <p class="p_14_24"><strong class="after_tooltip">Horizon CIBLE</strong><span>8 ans</span></p>
+                    <p class="p_14_24  tooltip_trigger"
+                        data-tooltip="L'horizon d'investissement cible est fourni à titre indicatif et ne constitue pas une garantie.""><strong class="
+                        tooltip_after">Horizon CIBLE</strong><span>8 ans</span></p>
                 </a>
             </div>
             <div class="sub_container wrapper_1184">
@@ -80,6 +96,15 @@
                     <p>Opérations financées depuis 2012*</p>
                     <h3 class="h3_24_34">350</h3>
                 </div>
+            </div>
+            <div class="disclaimer_container wrapper_1184">
+                <span class="p_14_22">Les performances passées ne préjugent pas des performances futures.
+                    <sup>1</sup>Objectif de
+                    rendement annuel cible. Ces données sont fournies à titre indicatif et ne présentent pas de garantie
+                    de performance. *Données en date du 01 mars 2023 pour les activités de Conseil en Investissements
+                    Participatifs (CIP) et de Conseil en Investissements Financiers (CIF) du Groupe Anaxago
+                    **Performance pour l’activité de crowdfunding immobilier d’Anaxago SAS (CIP).
+                </span>
             </div>
         </section>
         <!-- ==================== HOMEPAGE - INSTITUTIONNAL MANAGEMENT SECTION ==================== -->
@@ -99,15 +124,16 @@
                         Une <strong>sélection de projets</strong> minutieuse<br>
                         Une <strong>expérience 100% en ligne</strong><br>
                         Un <strong>scoring ESG</strong> pour chaque opportunité<br>
-                        Une <strong>fiscalité avantageuse (150 0 B - Ter, IR, PEA-PME)</strong>
+                        Une <strong>fiscalité avantageuse* (150 0 B - Ter, IR, PEA-PME)</strong>
                     </p>
                 </div>
             </div>
-            <div class="span_container wrapper_1184"><span class="p_14_22"><sup>1</sup>Objectif de rendement annuel cible. Ces données sont
-                    fournies à titre indicatif et ne présentent pas de garantie de performance. *Données en date du 01
-                    mars 2023 pour les activités de Conseil en Investissements Participatifs (CIP) et de Conseil en
-                    Investissements Financiers (CIF) du Groupe Anaxago **Performance pour l’activité de crowdfunding
-                    immobilier d’Anaxago SAS (CIP), les performances passées ne préjugent pas des performances futures.
+            <div class="disclaimer_container wrapper_1184">
+                <span class="p_14_22">*Pour profiter des avantages fiscaux une durée obligatoire de conservation du
+                    titre peut être demandée et peut dépendre de la situation individuelle de chaque client, susceptible
+                    d’être modifié ultérieurement. Les avantages fiscaux sont également offerts en contrepartie d’un
+                    risque de perte en capital et d’une durée de blocage des avoirs qui dépendra de la nature de l’offre
+                    et peut être supérieure à la détention fiscale minimale.
                 </span>
             </div>
         </section>
@@ -223,8 +249,9 @@
                                     <span class="text_uppercase">Taux CIBLE</span>&ensp;
                                     <strong class="fw_800">9,5 %* / an</strong>
                                 </p>
-                                <p class="p_14_24_600">
-                                    <span class="text_uppercase after_tooltip">Horizon CIBLE</span>&ensp;
+                                <p class="p_14_24_600 tooltip_trigger"
+                                    data-tooltip="L'horizon d'investissement cible est fourni à titre indicatif et ne constitue pas une garantie.">
+                                    <span class="text_uppercase tooltip_after">Horizon CIBLE</span>&ensp;
                                     <strong class="fw_800">6-18 mois</strong>
                                 </p>
                                 <p class="p_14_24_600">
@@ -255,8 +282,9 @@
                                     <span class="text_uppercase">Taux CIBLE</span>&ensp;
                                     <strong class="fw_800">9 %* / an</strong>
                                 </p>
-                                <p class="p_14_24_600">
-                                    <span class="text_uppercase after_tooltip">Horizon CIBLE</span>&ensp;
+                                <p class="p_14_24_600 tooltip_trigger"
+                                    data-tooltip="L'horizon d'investissement cible est fourni à titre indicatif et ne constitue pas une garantie.">
+                                    <span class="text_uppercase tooltip_after">Horizon CIBLE</span>&ensp;
                                     <strong class="fw_800">36-46 mois</strong>
                                 </p>
                                 <p class="p_14_24_600">
@@ -275,7 +303,7 @@
                     </div>
                 </div>
             </div>
-            <div class="span_container"><span class="p_14_22">Objectif de rendement annuel cible. Ces données sont
+            <div class="disclaimer_container"><span class="p_14_22">Objectif de rendement annuel cible. Ces données sont
                     fournies à titre
                     indicatif et ne présentent pas de garantie de performance.</span>
             </div>
@@ -310,8 +338,9 @@
                                     <span class="text_uppercase after_locker">Taux CIBLE</span>&ensp;
                                     <strong class="fw_800"></strong>
                                 </p>
-                                <p class="p_14_24_600">
-                                    <span class="text_uppercase after_tooltip">Horizon CIBLE</span>&ensp;
+                                <p class="p_14_24_600 tooltip_trigger"
+                                    data-tooltip="L'horizon d'investissement cible est fourni à titre indicatif et ne constitue pas une garantie.">
+                                    <span class="text_uppercase tooltip_after">Horizon CIBLE</span>&ensp;
                                     <strong class="fw_800">60 mois</strong>
                                 </p>
                                 <p class="p_14_24_600">
@@ -326,6 +355,9 @@
                                 <p class="p_15_24_700">8,3</p>
                                 <p class="p_8_16">Note d’engagement</p>
                                 <img src="./sources/images/homepage/venturecapital/8.3.svg" alt="rising note">
+                                <div data-tooltip="Ce score donné par Anaxago permet de mesurer l’engagement du projet en faveur de critères ESG (Environnement, Société, Gouvernance)">
+                                    <img src="./sources/icones/tooltip_12_12_white.svg" alt="">
+                                </div>
                             </div>
                             <div>
                                 <p class="p_12_16">Investissement CapHorn</p>
@@ -347,8 +379,9 @@
                                     <span class="text_uppercase after_locker">Taux CIBLE</span>&ensp;
                                     <strong class="fw_800"></strong>
                                 </p>
-                                <p class="p_14_24_600">
-                                    <span class="text_uppercase after_tooltip">Horizon CIBLE</span>&ensp;
+                                <p class="p_14_24_600  tooltip_trigger"
+                                    data-tooltip="L'horizon d'investissement cible est fourni à titre indicatif et ne constitue pas une garantie.">
+                                    <span class="text_uppercase tooltip_after">Horizon CIBLE</span>&ensp;
                                     <strong class="fw_800">60 mois</strong>
                                 </p>
                                 <p class="p_14_24_600">
@@ -363,6 +396,9 @@
                                 <p class="p_15_24_700">6.7</p>
                                 <p class="p_8_16">Note d’engagement</p>
                                 <img src="./sources/images/homepage/venturecapital/6.7.svg" alt="rising note">
+                                <div data-tooltip="Ce score donné par Anaxago permet de mesurer l’engagement du projet en faveur de critères ESG (Environnement, Société, Gouvernance)">
+                                    <img src="./sources/icones/tooltip_12_12_white.svg" alt="">
+                                </div>
                             </div>
                             <div>
                                 <p class="p_12_16">Investissement CapHorn</p>
@@ -373,7 +409,8 @@
                     </div>
                 </div>
             </div>
-            <div class="span_container reverse"><span class="p_14_22">Objectif de rendement annuel cible. Ces données
+            <div class="disclaimer_container reverse"><span class="p_14_22">Objectif de rendement annuel cible. Ces
+                    données
                     sont
                     fournies à titre
                     indicatif et ne présentent pas de garantie de performance.</span>

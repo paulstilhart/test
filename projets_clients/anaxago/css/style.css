@@ -395,9 +395,9 @@ em {
 }
 
 
-.link_disabled{
+.link_disabled {
   pointer-events: none;
-	cursor: default;
+  cursor: default;
 }
 
 .link_16_32 {
@@ -448,7 +448,7 @@ em {
   width: 15px;
 }
 
-.after_tooltip::after {
+.tooltip_after::after {
   content: url('../sources/icones/tooltip_12_12_white.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -457,6 +457,35 @@ em {
   margin-left: 3px;
   transform: translateY(2px);
 }
+
+.tooltip_trigger {
+  position: relative;
+  cursor: help;
+  width: fit-content;
+}
+
+.tooltip_trigger::after {
+  content: attr(data-tooltip);
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  transform: translateY(-100%);
+  background-color: var(--black);
+  color: var(--white);
+  width: 200px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+.tooltip_trigger:hover::after {
+  display: block;
+}
+
+
 
 .after_locker::after {
   content: url('../sources/icones/locker_12_16_white.svg');
@@ -512,6 +541,23 @@ em {
   height: 460px;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+}
+
+.homepage_section_hero>.lines_container {
+  position: absolute;
+  top: -25%;
+  left: 0%;
+  height: 150%;
+  display: flex;
+  column-gap: 96px;
+  transform: rotate(25deg);
+}
+
+.homepage_section_hero>.lines_container>span {
+  background-color: #F2ECE5;
+  height: 100%;
+  width: 1px;
 }
 
 .homepage_section_hero>img {
@@ -561,6 +607,15 @@ em {
 .homepage_section_hero>.main_container>a:hover {
   background-color: var(--dark_beige);
 }
+
+@media only screen and (max-width: 1200px) {
+  .homepage_section_hero>.lines_container {
+    display: none;
+  }
+}
+
+
+
 
 @media only screen and (max-width: 992px) {
   .homepage_section_hero {
@@ -619,7 +674,7 @@ em {
 
 .homepage_section_sectors>.main_container>.card {
   color: var(--white);
-  min-width: 200px;
+  min-width: 163px;
   width: 350px;
   max-width: 350px;
   height: 350px;
@@ -631,7 +686,7 @@ em {
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: all 0.15s;
+  transition: all 0.3s;
 }
 
 .homepage_section_sectors>.main_container>.card:hover {
@@ -717,8 +772,8 @@ em {
 
 
 .homepage_section_sectors>.sub_container {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 52px;
+  padding-bottom: 24px;
   display: flex;
   justify-content: space-between;
   gap: 8px;
@@ -736,6 +791,11 @@ em {
 .homepage_section_sectors>.sub_container>.card>p {
   font-size: 13px;
   line-height: 22px;
+}
+
+.homepage_section_sectors>.disclaimer_container {
+  text-align: center;
+  color: #C9C0B9;
 }
 
 @media only screen and (max-width: 992px) {
@@ -758,7 +818,7 @@ em {
     width: calc(50% - 4px);
     max-width: 350px;
   }
-  
+
 
   .homepage_section_sectors>.sub_container>:nth-child(3) {
     width: 708px;
@@ -777,13 +837,98 @@ em {
     padding-bottom: 24px;
   }
 
+  .homepage_section_sectors>.main_container>.card {
+    padding: 32px 8px;
+  }
+
+
   .homepage_section_sectors>.sub_container>.card>p {
     font-size: 12px;
     line-height: 22px;
   }
 }
 
-/*================================ HOMEPAGE - SECTORS SECTION =======================================*/
+/*================================ HOMEPAGE - INSTITUTIONNAL MANAGEMENT SECTION =======================================*/
+.homepage_section_institutionnal {
+  background-color: var(--secondary_beige);
+  color: var(--black);
+  padding-top: 72px;
+  padding-bottom: 52px;
+}
+
+.homepage_section_institutionnal>.disclaimer_container {
+  text-align: center;
+  margin-top: 64px;
+  color: #C9C0B9;
+}
+
+
+
+.homepage_section_institutionnal>.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 16px;
+  row-gap: 56px;
+}
+
+.homepage_section_institutionnal>.wrapper>.main_container {
+  width: 55%;
+}
+
+.homepage_section_institutionnal>.wrapper>.main_container>h2 {
+  margin-bottom: 40px;
+}
+
+.homepage_section_institutionnal>.wrapper>.sub_container {
+  width: 42%;
+  max-width: 474px;
+  border-radius: 5px;
+  border: 1px solid #F2ECE5;
+  padding: 32px 8px 32px 48px;
+}
+
+.homepage_section_institutionnal>.wrapper>.sub_container>p {
+  font-size: 16px;
+  line-height: 35px;
+}
+
+@media only screen and (max-width: 992px) {
+  .homepage_section_institutionnal {
+    padding-top: 56px;
+    padding-bottom: 40px;
+  }
+
+  .homepage_section_institutionnal>.disclaimer_container {
+    margin-top: 40px;
+  }
+
+  .homepage_section_institutionnal>.wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage_section_institutionnal>.wrapper>.main_container,
+  .homepage_section_institutionnal>.wrapper>.sub_container {
+    width: 100%;
+  }
+
+  .homepage_section_institutionnal>.wrapper>.main_container>h2 {
+    margin-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .homepage_section_institutionnal>.wrapper {
+    row-gap: 40px;
+  }
+
+  .homepage_section_institutionnal>.wrapper>.sub_container {
+    padding: 24px 32px;
+  }
+}
+
+/*================================ HOMEPAGE - OPPORTUNITIES SECTION =======================================*/
 .homepage_section_opportunities {
   background-color: var(--white);
   color: var(--black)
@@ -815,6 +960,10 @@ em {
   margin-top: 32px;
   background-color: var(--primary_black);
   color: var(--white);
+}
+
+.homepage_section_opportunities>.wrapper>.sub_container>div>a:hover {
+  background-color: var(--dark_blue);
 }
 
 .homepage_section_opportunities>.wrapper>.main_container {
@@ -915,7 +1064,7 @@ em {
 
 .homepage_section_opportunities>.wrapper>.main_container>.card.active>.content {
   display: flex;
-  animation: slidein 1s;
+  animation: slidein 0.2s;
 }
 
 @keyframes slidein {
@@ -1026,13 +1175,13 @@ em {
   position: relative;
 }
 
-.homepage_section_invest>.span_container {
+.homepage_section_invest>.disclaimer_container {
   width: 100%;
   text-align: center;
   margin: 16px 0px;
 }
 
-.homepage_section_invest>.span_container>span {
+.homepage_section_invest>.disclaimer_container>span {
   color: #C9C0B9;
   display: inline-block;
   width: 1432px;
@@ -1041,7 +1190,7 @@ em {
   text-align: left;
 }
 
-.homepage_section_invest>.span_container.reverse>span {
+.homepage_section_invest>.disclaimer_container.reverse>span {
   text-align: right;
 }
 
@@ -1089,9 +1238,14 @@ em {
 }
 
 .homepage_section_invest>.wrapper>.sub_container>a {
-  background-color: var(--dark_blue);
+  background-color: var(--primary_black);
   color: var(--white)
 }
+
+.homepage_section_invest>.wrapper>.sub_container>a:hover {
+  background-color: var(--dark_blue);
+}
+
 
 .homepage_section_invest>.wrapper>.main_container {
   height: 620px;
@@ -1111,7 +1265,7 @@ em {
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: auto auto;
-  transition: all 0.15s;
+  transition: all 0.3s;
 }
 
 .homepage_section_invest>.wrapper>.main_container.realestate>.card {
@@ -1120,32 +1274,6 @@ em {
 
 .homepage_section_invest>.wrapper>.main_container.venturecapital>.card {
   margin-left: 8px;
-}
-
-.homepage_section_invest>.wrapper>.main_container>.card:hover {
-  width: 100%;
-}
-
-
-.homepage_section_invest>.wrapper>.main_container>.card:hover + .card,
-.homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover) {
-  width: 0;
-  padding: 0;
-  margin: 0;
-}
-
-.homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.checkbox_container,
-.homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.checkbox_container,
-.homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.content,
-.homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.content,
-.homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.checkbox_container::after,
-.homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.checkbox_container::after {
-  display: none;
-}
-
-.homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.checkbox_container::after,
-.homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.checkbox_container::after {
-  display: none;
 }
 
 
@@ -1191,10 +1319,6 @@ em {
   transition: transform 0.15s;
 }
 
-.homepage_section_invest>.wrapper>.main_container>.card:hover>.checkbox_container::after {
-  transform: rotate(+180deg);
-}
-
 .homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container>span {
   color: var(--white);
   border-radius: 45px;
@@ -1224,50 +1348,69 @@ em {
 .homepage_section_invest>.wrapper>.main_container>.card>.rising {
   display: none;
   position: absolute;
-  bottom:24px;
-  right:16px;
+  bottom: 24px;
+  right: 16px;
 }
-.homepage_section_invest>.wrapper>.main_container>.card:hover >.rising {
-  display: block;
-}
+
 .homepage_section_invest>.wrapper>.main_container>.card>.rising>div {
   border-radius: 8px;
   border: 1px solid rgba(225, 225, 225, 0.15);
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(2px);
   padding: 8px 24px;
-  margin-top:16px;
+  margin-top: 16px;
   position: relative;
 }
-
-.rising_tooltip::after{
-  content: url('../sources/icones/tooltip_12_12_white.svg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display: inline-block;
-  width: 11px;
-  position: absolute;
-  top:-3px;
-  right:5px;
-}
-
 
 .homepage_section_invest>.wrapper>.main_container>.card>.rising>div>img {
   position: absolute;
   width: 51px;
   right: 24px;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
+.rising_tooltip>div {
+  width: 11px;
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  cursor:help;
+}
+
+.rising_tooltip>div::after {
+  content: attr(data-tooltip);
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 2px;
+  z-index: 99;
+  transform: translateY(-100%);
+  background-color: var(--black);
+  color: var(--white);
+  width: 200px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+.rising_tooltip>div:hover::after {
+  display: block;
+}
 
 @media only screen and (max-width: 1200px) {
-  .homepage_section_invest>.span_container {
+  .homepage_section_invest>.disclaimer_container {
     margin: 52px 0px 40px 0px;
   }
 
-  .homepage_section_invest>.span_container>span {
+  .homepage_section_invest>.disclaimer_container>span {
     padding: 0px 52px;
+    text-align: center;
+  }
+
+  .homepage_section_invest>.disclaimer_container.reverse>span {
     text-align: center;
   }
 
@@ -1289,11 +1432,11 @@ em {
 
 
 @media only screen and (max-width: 768px) {
-  .homepage_section_invest>.span_container {
+  .homepage_section_invest>.disclaimer_container {
     margin: 32px 0px 40px 0px;
   }
 
-  .homepage_section_invest>.span_container>span {
+  .homepage_section_invest>.disclaimer_container>span {
     padding: 0px 24px;
   }
 
@@ -1333,81 +1476,78 @@ em {
   .homepage_section_invest>.wrapper>.main_container.venturecapital>.card {
     margin: 0px 4px;
   }
-
-
-}
-
-/*================================ HOMEPAGE - INSTITUTIONNAL MANAGEMENT SECTION =======================================*/
-.homepage_section_institutionnal {
-  background-color: var(--secondary_beige);
-  color: var(--black);
-  padding-top: 72px;
-  padding-bottom: 52px;
-}
-
-.homepage_section_institutionnal>.span_container {
-  text-align: center;
-  margin-top: 64px;
-}
-
-
-
-.homepage_section_institutionnal>.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  column-gap: 16px;
-  row-gap: 56px;
-}
-
-.homepage_section_institutionnal>.wrapper>.main_container {
-  width: 55%;
-}
-
-.homepage_section_institutionnal>.wrapper>.main_container>h2 {
-  margin-bottom: 40px;
-}
-
-.homepage_section_institutionnal>.wrapper>.sub_container {
-  width: 42%;
-  max-width: 474px;
-  border-radius: 5px;
-  border: 1px solid #F2ECE5;
-  padding: 32px 8px 32px 48px;
-}
-
-.homepage_section_institutionnal>.wrapper>.sub_container>p {
-  font-size: 16px;
-  line-height: 35px;
-}
-
-@media only screen and (max-width: 992px) {
-  .homepage_section_institutionnal>.wrapper {
-    padding-top: 56px;
-    padding-bottom: 40px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .homepage_section_institutionnal>.wrapper>.main_container,
-  .homepage_section_institutionnal>.wrapper>.sub_container {
-    width: 100%;
-  }
-
-  .homepage_section_institutionnal>.wrapper>.main_container>h2 {
-    margin-bottom: 32px;
-  }
 }
 
 @media only screen and (max-width: 576px) {
-  .homepage_section_institutionnal>.wrapper {
-    row-gap: 40px;
+  .homepage_section_invest>.wrapper>.main_container {
+    flex-direction: column;
+    height: auto;
+    row-gap: 8px;
+    padding: 56px 8px 0px 8px;
   }
 
-  .homepage_section_institutionnal>.wrapper>.sub_container {
-    padding: 24px 32px;
+  .homepage_section_invest>.wrapper>.main_container>.card {
+    width: 100%;
+    height: 315px;
+    margin: 0 !important;
+    padding: 16px;
+  }
+
+  .homepage_section_invest>.wrapper>.main_container>.card>.rising {
+    display: block;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container::after {
+    display: none;
   }
 }
+
+
+@media only screen and (min-width: 576px) {
+  .homepage_section_invest>.wrapper>.main_container>.card:hover {
+    width: 100%;
+  }
+
+  .homepage_section_invest>.wrapper>.main_container>.card:hover+.card{
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover) {
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.checkbox_container,
+  .homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.checkbox_container,
+  .homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.content,
+  .homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.content,
+  .homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.checkbox_container::after,
+  .homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.checkbox_container::after {
+    display: none;
+  }
+
+  .homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.checkbox_container::after,
+  .homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.checkbox_container::after {
+    display: none;
+  }
+
+  .homepage_section_invest>.wrapper>.main_container>.card:hover>.rising {
+    display: block;
+  }
+
+  .homepage_section_invest>.wrapper>.main_container>.card:hover>.checkbox_container::after {
+    transform: rotate(+180deg);
+  }
+}
+
+
+
+
 
 
 /*================================ HOMEPAGE - COMMUNITY SECTION =======================================*/
