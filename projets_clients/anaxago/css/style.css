@@ -143,7 +143,7 @@ em {
   font-weight: 400;
 }
 
-.p_14_22 {
+.p_14_22_400 {
   font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -245,6 +245,22 @@ em {
   font-weight: 600;
 }
 
+.h3_18_34_700 {
+  font-family: 'Poppins', 'Lora', Arial, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 34px;
+  font-weight: 700;
+}
+
+.h3_20_30 {
+  font-family: 'Poppins', 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
 .h3_21_34 {
   font-family: 'Poppins', 'Lora', Arial, sans-serif;
   font-style: normal;
@@ -319,6 +335,11 @@ em {
   .h3_18_34 {
     font-size: 16px;
     line-height: 34px;
+  }
+
+  .h3_18_34_700 {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -943,7 +964,7 @@ em {
   margin-bottom: 72px;
   display: flex;
   justify-content: space-between;
-  gap:24px 16px;
+  gap: 24px 16px;
 }
 
 .homepage_section_opportunities>.wrapper>.sub_container>h2,
@@ -957,7 +978,7 @@ em {
 
 .homepage_section_opportunities>.wrapper>.sub_container>div>p:nth-of-type(2) {
   color: #C9C0B9;
-  margin:16px 0px;
+  margin: 16px 0px;
 }
 
 .homepage_section_opportunities>.wrapper>.sub_container>div>a {
@@ -1757,5 +1778,201 @@ em {
 
   .homepage_section_experts>.main_container>.wrapper {
     padding: 48px 24px 64px 24px;
+  }
+}
+
+/*================================ HOMEPAGE - PLATFORM SECTION =======================================*/
+.homepage_section_platform {
+  background-color: var(--secondary_beige);
+  color: var(--black);
+  padding-top: 88px;
+  padding-bottom: 52px;
+  overflow-x: hidden;
+}
+
+.homepage_section_platform>.sub_container {
+  text-align: center;
+}
+
+.homepage_section_platform>.sub_container>h3 {
+  text-align: left;
+  margin-bottom: 48px;
+}
+
+.homepage_section_platform>.sub_container>a {
+  background-color: var(--primary_black);
+  color: var(--white);
+  margin: 52px 0px 16px 0px;
+}
+
+.homepage_section_platform>.sub_container>a:hover {
+  background-color: var(--dark_blue);
+}
+
+.homepage_section_platform>.sub_container>.cards_container {
+  display: flex;
+  gap: 8px;
+  animation: slide-infinite 20s linear infinite;
+}
+
+.homepage_section_platform>.sub_container>.cards_container:hover {
+  animation:none;
+}
+
+@keyframes slide-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-334px * 9));
+  }
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.card {
+  color: var(--white);
+  width: 334px;
+  height: 443px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(1) {
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url('../sources/images/homepage/platform/team1.jpg');
+}
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(1):hover {
+  background-image: url('../sources/images/homepage/platform/team1.jpg');
+}
+
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(2) {
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url('../sources/images/homepage/platform/team2.jpg');
+}
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(2):hover {
+  background-image: url('../sources/images/homepage/platform/team2.jpg');
+}
+
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(3) {
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url('../sources/images/homepage/platform/team3.jpg');
+}
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(3):hover {
+  background-image: url('../sources/images/homepage/platform/team3.jpg');
+}
+
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(4) {
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url('../sources/images/homepage/platform/team4.jpg');
+}
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(4):hover {
+  background-image: url('../sources/images/homepage/platform/team4.jpg');
+}
+
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(5) {
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url('../sources/images/homepage/platform/team5.jpg');
+}
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(5):hover {
+  background-image: url('../sources/images/homepage/platform/team5.jpg');
+}
+
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(6) {
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url('../sources/images/homepage/platform/team6.jpg');
+}
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(6):hover {
+  background-image: url('../sources/images/homepage/platform/team6.jpg');
+}
+
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(7) {
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url('../sources/images/homepage/platform/team7.jpg');
+}
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(7):hover {
+  background-image: url('../sources/images/homepage/platform/team7.jpg');
+}
+
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(8) {
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url('../sources/images/homepage/platform/team8.jpg');
+}
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(8):hover {
+  background-image: url('../sources/images/homepage/platform/team8.jpg');
+}
+
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(9) {
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url('../sources/images/homepage/platform/team9.jpg');
+}
+
+.homepage_section_platform>.sub_container>.cards_container>:nth-child(9):hover {
+  background-image: url('../sources/images/homepage/platform/team9.jpg');
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+  .homepage_section_platform {
+    padding-top: 72px;
+    padding-bottom: 48px;
+  }
+
+  .homepage_section_platform>.sub_container>h3 {
+    max-width: 380px;
+  }
+
+  .homepage_section_platform>.sub_container>a {
+    margin: 32px 0px 16px 0px;
+  }
+
+  .homepage_section_platform>.sub_container>.cards_container>.card {
+    width: 207.601px;
+    height: 281.566px;
+  }
+
+}
+
+
+@media only screen and (max-width: 576px) {
+  .homepage_section_platform {
+    padding-top: 56px;
+    padding-bottom: 48px;
+  }
+
+  .homepage_section_platform>.sub_container>h3 {
+    margin-bottom: 32px;
+  }
+
+  .homepage_section_platform>.sub_container>a {
+    margin: 48px 0px 16px 0px;
   }
 }
