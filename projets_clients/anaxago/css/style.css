@@ -943,8 +943,7 @@ em {
   margin-bottom: 72px;
   display: flex;
   justify-content: space-between;
-  column-gap: 16px;
-  row-gap: 24px;
+  gap:24px 16px;
 }
 
 .homepage_section_opportunities>.wrapper>.sub_container>h2,
@@ -952,12 +951,21 @@ em {
   width: 50%;
 }
 
-.homepage_section_opportunities>.wrapper>.sub_container>div> {
+.homepage_section_opportunities>.wrapper>.sub_container>div>p {
   text-align: justify;
 }
 
+.homepage_section_opportunities>.wrapper>.sub_container>div>p:nth-of-type(2) {
+  color: #C9C0B9;
+  margin:16px 0px;
+}
+
 .homepage_section_opportunities>.wrapper>.sub_container>div>a {
-  margin-top: 32px;
+  background-color: var(--primary_black);
+  color: var(--white);
+}
+
+.homepage_section_opportunities>.wrapper>.sub_container>div>a {
   background-color: var(--primary_black);
   color: var(--white);
 }
@@ -1375,7 +1383,7 @@ em {
   position: absolute;
   top: 4px;
   right: 6px;
-  cursor:help;
+  cursor: help;
 }
 
 .rising_tooltip>div::after {
@@ -1510,17 +1518,19 @@ em {
     width: 100%;
   }
 
-  .homepage_section_invest>.wrapper>.main_container>.card:hover+.card{
+  .homepage_section_invest>.wrapper>.main_container>.card:hover+.card {
     width: 0;
     padding: 0;
     margin: 0;
   }
+
 
   .homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover) {
     width: 0;
     padding: 0;
     margin: 0;
   }
+
 
   .homepage_section_invest>.wrapper>.main_container>:nth-child(1):hover+.card>.checkbox_container,
   .homepage_section_invest>.wrapper>.main_container>.card:has(+ .card:hover)>.checkbox_container,
