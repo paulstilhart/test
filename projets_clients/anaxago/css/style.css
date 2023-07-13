@@ -66,7 +66,7 @@ img {
   --secondary_border: #F3F0EC;
   --secondary_groupe: #F8EBD6;
   --dark_blue: #0B273A;
-  --dark_beige: #DAB575;
+  --dark_beige: #F3E3C8;
 }
 
 /*================================ BACKGROUND & COLORS =======================================*/
@@ -101,7 +101,6 @@ em {
 /* CLASSES UTILITAIRES FONTS */
 
 .p_8_16 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
   font-size: 8px;
   line-height: 16px;
@@ -110,7 +109,6 @@ em {
 
 
 .p_10_16 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
   font-size: 10px;
   line-height: 16px;
@@ -118,7 +116,6 @@ em {
 }
 
 .p_12_16 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
   font-size: 12px;
   line-height: 16px;
@@ -136,7 +133,6 @@ em {
 
 
 .p_13_22 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
   font-size: 13px;
   line-height: 22px;
@@ -144,7 +140,6 @@ em {
 }
 
 .p_14_22_400 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 22px;
@@ -152,7 +147,6 @@ em {
 }
 
 .p_14_24 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 24px;
@@ -160,7 +154,6 @@ em {
 }
 
 .p_14_24_600 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 24px;
@@ -168,7 +161,6 @@ em {
 }
 
 .p_15_24_600 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
   font-size: 15px;
   line-height: 24px;
@@ -176,7 +168,6 @@ em {
 }
 
 .p_15_24_700 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
   font-size: 15px;
   line-height: 24px;
@@ -192,7 +183,6 @@ em {
 }
 
 .p_17_28 {
-  font-family: 'Proxima Nova', Arial, sans-serif;
   font-style: normal;
   font-size: 17px;
   line-height: 28px;
@@ -293,6 +283,13 @@ em {
   font-weight: 600;
 }
 
+ul,
+li {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
 
 
 @media only screen and (max-width: 992px) {
@@ -577,6 +574,7 @@ em {
 
 .homepage_section_hero>.lines_container>span {
   background-color: #F2ECE5;
+  opacity: 0.4;
   height: 100%;
   width: 1px;
 }
@@ -682,6 +680,7 @@ em {
 .homepage_section_sectors {
   background-color: var(--white);
   color: var(--black);
+  padding-bottom: 60px;
 }
 
 .homepage_section_sectors>.main_container {
@@ -964,7 +963,7 @@ em {
   margin-bottom: 72px;
   display: flex;
   justify-content: space-between;
-  gap: 24px 16px;
+  gap: 24px 32px;
 }
 
 .homepage_section_opportunities>.wrapper>.sub_container>h2,
@@ -1088,7 +1087,7 @@ em {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   flex: auto;
-  padding: 48px 48px 16px 48px;
+  padding: 48px 48px 32px 48px;
 }
 
 .homepage_section_opportunities>.wrapper>.main_container>.card.active>.content {
@@ -1294,7 +1293,7 @@ em {
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: auto auto;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 .homepage_section_invest>.wrapper>.main_container.realestate>.card {
@@ -1588,8 +1587,8 @@ em {
 }
 
 .homepage_section_community>.wrapper {
-  padding-top: 72px;
-  padding-bottom: 72px;
+  padding-top: 54px;
+  padding-bottom: 54px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -1790,13 +1789,58 @@ em {
   overflow-x: hidden;
 }
 
+.homepage_section_platform>.main_container {
+  display: flex;
+}
+
+.homepage_section_platform>.main_container>div {
+  width: 50%;
+}
+
+.homepage_section_platform>.main_container>div>h2 {
+  text-transform: uppercase;
+  margin: 16px 0px 48px 0px;
+}
+
+.homepage_section_platform>.main_container>div>div {
+  padding: 24px 0px 96px 0px;
+  position: relative;
+}
+
+.homepage_section_platform>.main_container>div>div:nth-of-type(1)::before{
+  content: "";
+  background-color: #E8E3DE;
+  display: inline-block;
+  width: 176px;
+  height: 1px;
+  position: absolute;
+  top:0;
+}
+
+.homepage_section_platform>.main_container>div>div::after{
+  content: "";
+  background-color: #E8E3DE;
+  display: inline-block;
+  width: 176px;
+  height: 1px;
+  position: absolute;
+  bottom:0;
+}
+.homepage_section_platform>.main_container>div>div>ul {
+  margin-top: 32px;
+  list-style-type: circle;
+  list-style-position: outside;
+  margin-left: 20px;
+}
+
+
 .homepage_section_platform>.sub_container {
   text-align: center;
 }
 
 .homepage_section_platform>.sub_container>h3 {
   text-align: left;
-  margin-bottom: 48px;
+  margin: 24px 0px 48px 0px;
 }
 
 .homepage_section_platform>.sub_container>a {
@@ -1816,13 +1860,14 @@ em {
 }
 
 .homepage_section_platform>.sub_container>.cards_container:hover {
-  animation:none;
+  animation: none;
 }
 
 @keyframes slide-infinite {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-334px * 9));
   }
@@ -1844,6 +1889,9 @@ em {
 }
 
 
+.homepage_section_platform>.sub_container>.cards_container>.card:hover {
+  scale: 1.02;
+}
 
 
 
@@ -1946,6 +1994,10 @@ em {
     padding-bottom: 48px;
   }
 
+  .homepage_section_platform>.main_container>div>div {
+    padding: 24px 0px 80px 0px;
+  }
+
   .homepage_section_platform>.sub_container>h3 {
     max-width: 380px;
   }
@@ -1959,6 +2011,15 @@ em {
     height: 281.566px;
   }
 
+}
+
+@media only screen and (max-width: 768px) {
+  .homepage_section_platform>.main_container>:nth-child(1) {
+    width: 100%;
+  }
+  .homepage_section_platform>.main_container>:nth-child(2) {
+    display: none;
+  }
 }
 
 
