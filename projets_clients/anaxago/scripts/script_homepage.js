@@ -33,3 +33,22 @@ window.addEventListener('resize', function () {
         }
     }
 });
+
+
+//*==================== SCRIPT SECTION 9 PLATFORM ====================*//
+// Sélectionnez le slider et les cartes
+const homepage_section_platform = document.querySelector('.homepage_section_platform');
+const cards_container = homepage_section_platform.querySelector('.cards_container');
+var cards = cards_container.querySelectorAll('.card');
+
+// Clonez les cartes et ajoutez-les à la fin du slider
+cards.forEach(function(card) {
+  var clone = card.cloneNode(true);
+  cards_container.appendChild(clone);
+});
+
+// Démarrez le slider
+var sliderWidth = cards_container.offsetWidth;
+var cardWidth = cards[0].offsetWidth;
+var animationDuration = (cardWidth / sliderWidth) * cards.length * 150; // Ajustez la vitesse
+cards_container.style.animationDuration = animationDuration + 's';
