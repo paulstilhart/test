@@ -11,7 +11,6 @@ ATTENTION ICI RESET CSS A SUPPRIMER SI IL EST DÉJÀ PRÉSENT DANS VOTRE PROJET
   box-sizing: border-box;
 }
 
-
 a,
 button,
 input,
@@ -1872,29 +1871,35 @@ li {
   background-color: var(--dark_blue);
 }
 
-.homepage_section_platform>.sub_container>.cards_container {
-  display: flex;
-  gap: 8px;
-  width: calc(334px * 18 + 8px * (18 - 1));
-  animation: scrollInfiniX 40s linear infinite;
+:root {
+  --animationSpeed: 20s;
 }
 
-.homepage_section_platform>.sub_container>.cards_container:hover {
+.homepage_section_platform>.sub_container>.cards_container>.slider {
+  display: flex;
+  gap: 8px;
+  animation-name: translateX;
+  animation-duration: calc(20s * 10000);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+@keyframes translateX {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(calc(-100% * 10000));
+  }
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.slider:hover {
   animation-play-state: paused;
 }
 
-@keyframes scrollInfiniX {
-  0% {
-    transform: translate(0);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-
-.homepage_section_platform>.sub_container>.cards_container>.card {
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card {
   color: var(--white);
   width: 334px;
   height: 443px;
@@ -1907,26 +1912,70 @@ li {
   border-radius: 5px;
   text-align: left;
   position: relative;
-  background: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.homepage_section_platform>.sub_container>.cards_container>.card:hover {
-  background: none;
-}
 
-.homepage_section_platform>.sub_container>.cards_container>.card>img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  width: 100%;
-  z-index: -1;
-}
-
-.homepage_section_platform>.sub_container>.cards_container>.card:hover {
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card:hover {
   scale: 1.02;
 }
 
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%);
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card:hover::after {
+  background: none;
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card>h3,
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card>p {
+  z-index: 1;
+}
+
+
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="1"] {
+  background-image: url(../sources/images/homepage/platform/team1.jpg);
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="2"] {
+  background-image: url(../sources/images/homepage/platform/team2.jpg);
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="3"] {
+  background-image: url(../sources/images/homepage/platform/team3.jpg);
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="4"] {
+  background-image: url(../sources/images/homepage/platform/team4.jpg);
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="5"] {
+  background-image: url(../sources/images/homepage/platform/team5.jpg);
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="6"] {
+  background-image: url(../sources/images/homepage/platform/team6.jpg);
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="7"] {
+  background-image: url(../sources/images/homepage/platform/team7.jpg);
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="8"] {
+  background-image: url(../sources/images/homepage/platform/team8.jpg);
+}
+
+.homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="9"] {
+  background-image: url(../sources/images/homepage/platform/team9.jpg);
+}
 
 @media only screen and (max-width: 992px) {
   .homepage_section_platform {
@@ -1949,11 +1998,14 @@ li {
   .homepage_section_platform>.sub_container>.cards_container {
     display: flex;
     gap: 8px;
-    /*  animation: slide-infinite 7s linear infinite;*/
-    width: calc((207px * 18) + (8px * (18 - 1)));
+    /* width: calc((207px * 18) + (8px * (18 - 1)));*/
   }
 
-  .homepage_section_platform>.sub_container>.cards_container>.card {
+  .homepage_section_platform>.sub_container>.cards_container>.slider {
+    animation-duration: calc(var(--animationSpeed) * (334 / 207) * 1000);
+  }
+
+  .homepage_section_platform>.sub_container>.cards_container>.slider>.card {
     width: 207px;
     height: 281px;
   }
