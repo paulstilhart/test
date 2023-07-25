@@ -182,6 +182,13 @@ em {
   font-weight: 600;
 }
 
+.p_16_32_600 {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
 .p_17_28 {
   font-style: normal;
   font-size: 17px;
@@ -194,6 +201,32 @@ em {
   font-style: normal;
   font-size: 18px;
   line-height: 32px;
+  font-weight: 400;
+}
+
+.p_20_34 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: 600;
+}
+
+.p_20_34_400_lora {
+  font-family: 'Lora', Arial, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: 400;
+}
+
+
+
+.h1_40_58 {
+  font-family: 'Lora', Arial, sans-serif;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 58px;
   font-weight: 400;
 }
 
@@ -227,6 +260,13 @@ em {
   font-weight: 400;
 }
 
+.h3_14_32_600 {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
 .h3_18_34 {
   font-family: 'Poppins', 'Lora', Arial, sans-serif;
   font-style: normal;
@@ -251,6 +291,15 @@ em {
   font-weight: 500;
 }
 
+.h3_20_34_600 {
+  font-family: 'Poppins', 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 34px;
+}
+
+
 .h3_21_34 {
   font-family: 'Poppins', 'Lora', Arial, sans-serif;
   font-style: normal;
@@ -267,7 +316,7 @@ em {
   font-weight: 500;
 }
 
-.h3_28_34 {
+.h3_24_34 {
   font-family: 'Poppins', 'Lora', Arial, sans-serif;
   font-style: normal;
   font-size: 28px;
@@ -289,6 +338,14 @@ em {
   font-size: 15px;
   line-height: 28px;
   font-weight: 600;
+}
+
+.h4_28_34 {
+  font-family: 'Poppins', 'Lora', Arial, sans-serif;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 500;
 }
 
 ul,
@@ -357,7 +414,22 @@ li {
 }
 
 @media only screen and (max-width: 576px) {
+  .p_20_34 {
+    font-size: 16px;
+    line-height: 34px;
+  }
+
+  .p_20_34_400_lora {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
   .h1_48_53 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .h1_40_58 {
     font-size: 32px;
     line-height: 36px;
   }
@@ -371,6 +443,10 @@ li {
   .h3_24_34 {
     font-size: 22px;
     line-height: 32px;
+  }
+
+  .h3_24_34 {
+    font-size: 22px;
   }
 
   .h3_28_34 {
@@ -1872,14 +1948,14 @@ li {
 }
 
 :root {
-  --animationSpeed: 20s;
+  --animationSpeed: 50s;
 }
 
 .homepage_section_platform>.sub_container>.cards_container>.slider {
   display: flex;
   gap: 8px;
   animation-name: translateX;
-  animation-duration: calc(20s * 10000);
+  animation-duration: calc(var(--animationSpeed) * 10000);
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   position: relative;
@@ -1914,11 +1990,12 @@ li {
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: 100ms ease-in-out;
 }
 
 
 .homepage_section_platform>.sub_container>.cards_container>.slider>.card:hover {
-  scale: 1.02;
+  transform: scale(1.02);
 }
 
 .homepage_section_platform>.sub_container>.cards_container>.slider>.card::after {
@@ -2035,5 +2112,728 @@ li {
 
   .homepage_section_platform>.sub_container>a {
     margin: 48px 0px 16px 0px;
+  }
+}
+
+
+/*================================ THESES - HERO SECTION =======================================*/
+.theses_section_hero {
+  height: 409px;
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+  text-align: center;
+}
+
+.theses_section_hero>img {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+}
+
+.theses_section_hero>.main_container {
+  padding: 96px 24px;
+}
+
+
+.theses_section_hero>.main_container>h1 {
+  max-width: 850px;
+  margin: 8px auto 8px auto;
+}
+
+
+
+@media only screen and (max-width: 576px) {
+  .theses_section_hero {
+    height: 337px;
+  }
+
+  .theses_section_hero>img {
+    width: 200%;
+  }
+
+  .theses_section_hero>.main_container {
+    padding: 56px 24px 40px 24px;
+  }
+
+  .theses_section_hero>.main_container>h1 {
+    margin: 8px auto 24px auto;
+  }
+}
+
+/*================================ THESES - ECOLOGY SECTION =======================================*/
+.theses_section_ecology {
+  background-color: var(--secondary_beige);
+  color: var(--black);
+}
+
+.theses_section_ecology>.wrapper_1184:nth-of-type(2) {
+  padding-top: 16px;
+  padding-bottom: 80px;
+}
+
+.theses_section_ecology>.wrapper_1184:nth-of-type(2)>a {
+  background-color: var(--primary_black);
+  color: var(--white);
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.theses_section_ecology>.wrapper_1184>a:hover {
+  background-color: var(--dark_blue);
+}
+
+.theses_section_ecology>.wrapper {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 16px;
+  row-gap: 32px;
+  padding-top: 72px;
+}
+
+.theses_section_ecology>.wrapper>div {
+  width: 50%;
+}
+
+.theses_section_ecology>.wrapper>.main_container>h2 {
+  margin-bottom: 32px;
+}
+
+.theses_section_ecology>.wrapper>.sub_container {
+  border-radius: 5px;
+  border: 1px solid #F2ECE5;
+  padding: 56px 24px 32px 24px;
+  max-width: 474px;
+  text-align: center;
+}
+
+.theses_section_ecology>.wrapper>.sub_container>p::before {
+  content: url('../sources/icones/quotation.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  width: 30px;
+  margin: auto;
+}
+
+.theses_section_ecology>.wrapper>.sub_container>p::after {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  width: 127px;
+  height: 1px;
+  margin: 16px auto 16px auto;
+  background-color: #EEE9E3;
+}
+
+@media only screen and (max-width: 768px) {
+  .theses_section_ecology>.wrapper>div {
+    width: 100%;
+  }
+
+  .theses_section_ecology>.wrapper_1184:nth-of-type(2) {
+    padding-top: 40px;
+    padding-bottom: 56px;
+    text-align: center;
+  }
+
+  .theses_section_ecology>.wrapper {
+    flex-direction: column;
+    padding-top: 56px;
+    align-items: center;
+  }
+
+  .theses_section_ecology>.wrapper>.sub_container {
+    padding: 40px 24px 24px 24px;
+  }
+}
+
+/*================================ THESES - EXPERTS SECTION =======================================*/
+.theses_section_experts {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.theses_section_experts>.wrapper {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 16px;
+  row-gap: 32px;
+  padding-top: 80px;
+  padding-bottom: 72px;
+}
+
+.theses_section_experts>.wrapper>.main_container {
+  width: 58%;
+}
+
+.theses_section_experts>.wrapper>.main_container>a {
+  background-color: var(--primary_black);
+  color: var(--white);
+  text-align: center;
+  margin-top: 40px;
+}
+
+.theses_section_experts>.wrapper>.main_container>a:hover {
+  background-color: var(--dark_blue);
+}
+
+@media only screen and (max-width: 768px) {
+  .theses_section_experts>.wrapper {
+    flex-direction: column;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .theses_section_experts>.wrapper>.main_container {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*================================ HOMEPAGE - INVEST REAL ESTATE SECTION =======================================*/
+.theses_section_sectors {
+  background-color: var(--secondary_beige);
+  color: var(--black);
+  border-bottom: solid 1px #F2ECE5;
+  overflow: hidden;
+}
+
+.theses_section_sectors>.wrapper {
+  max-width: 1432px;
+  margin: 0 auto;
+  display: flex;
+  padding: 72px 0px 160px 0px;
+}
+
+.theses_section_sectors>.wrapper>div {
+  width: 50%;
+}
+
+.theses_section_sectors>.wrapper>.sub_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 96px;
+}
+
+.theses_section_sectors>.wrapper>.sub_container>h2 {
+  text-transform: uppercase;
+  margin: 16px 0px 32px 0px;
+}
+
+
+.homepage_section_invest>.wrapper>.sub_container>div {
+  width: 296px;
+  max-width: 100%;
+  margin: 52px 0px;
+  padding: 16px 24px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #F2ECE5;
+}
+
+
+
+/*================================ OK =======================================*/
+
+
+
+
+
+.homepage_section_invest>.wrapper>.main_container {
+  height: 620px;
+  display: flex;
+  overflow: hidden;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card {
+  color: var(--white);
+  width: 50%;
+  height: 100%;
+  padding: 16px 8px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  transition: all 0.5s;
+}
+
+.homepage_section_invest>.wrapper>.main_container.realestate>.card {
+  margin-right: 8px;
+}
+
+.homepage_section_invest>.wrapper>.main_container.venturecapital>.card {
+  margin-left: 8px;
+}
+
+
+.homepage_section_invest>.wrapper>.main_container.realestate>:nth-child(1) {
+  background-position: left;
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url("../sources/images/homepage/realestate/realestate1.jpg");
+}
+
+.homepage_section_invest>.wrapper>.main_container.realestate>:nth-child(2) {
+  background-position: right;
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url("../sources/images/homepage/realestate/realestate2.jpg");
+}
+
+.homepage_section_invest>.wrapper>.main_container.venturecapital>:nth-child(1) {
+  background-position: left;
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url("../sources/images/homepage/venturecapital/venturecapital1.jpg");
+}
+
+.homepage_section_invest>.wrapper>.main_container.venturecapital>:nth-child(2) {
+  background-position: right;
+  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
+    url("../sources/images/homepage/venturecapital/venturecapital2.jpg");
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container {
+  position: relative;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container::after {
+  position: absolute;
+  top: -9px;
+  right: 20px;
+  content: url('../sources/icones/arrow_button_white.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 11px;
+  margin-right: 6px;
+  transform: translateY(1px);
+  transition: transform 0.15s;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container>span {
+  color: var(--white);
+  border-radius: 45px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2.5px);
+  padding: 8px 16px;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container>span::before {
+  content: url('../sources/icones/checkbox_white.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 11px;
+  margin-right: 6px;
+  transform: translateY(1px);
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.content>.name {
+  margin-bottom: 24px;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.content>.name>img {
+  max-width: 100%;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.rising {
+  display: none;
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.rising>div {
+  border-radius: 8px;
+  border: 1px solid rgba(225, 225, 225, 0.15);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2px);
+  padding: 8px 24px;
+  margin-top: 16px;
+  position: relative;
+}
+
+.homepage_section_invest>.wrapper>.main_container>.card>.rising>div>img {
+  position: absolute;
+  width: 51px;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rising_tooltip>div {
+  width: 11px;
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  cursor: help;
+}
+
+.rising_tooltip>div::after {
+  content: attr(data-tooltip);
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 2px;
+  z-index: 99;
+  transform: translateY(-100%);
+  background-color: var(--black);
+  color: var(--white);
+  width: 200px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+.rising_tooltip>div:hover::after {
+  display: block;
+}
+
+@media only screen and (max-width: 1200px) {
+  .theses_section_sectors>.wrapper>.sub_container {
+    padding: 0px 52px;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+  .theses_section_sectors>.wrapper {
+    padding: 56px 0px;
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .theses_section_sectors>.wrapper {
+    flex-direction: column;
+  }
+  .theses_section_sectors>.wrapper>div {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+}
+
+
+@media only screen and (min-width: 576px) {
+}
+
+
+
+
+/*================================ THESES - KEYNUMBERS SECTION =======================================*/
+.theses_section_keynumbers {
+  background-color: var(--white);
+  color: var(--black);
+  text-align: center;
+}
+
+.theses_section_keynumbers>.wrapper {
+  padding-top: 72px;
+  padding-bottom: 64px;
+}
+
+.theses_section_keynumbers>.wrapper>h2 {
+  margin-bottom: 56px;
+}
+
+.theses_section_keynumbers>.wrapper>p {
+  color: #C9C0B9;
+  padding: 40px 0px 16px 0px;
+}
+
+
+.theses_section_keynumbers>.wrapper>.main_container {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 24px;
+  column-gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.theses_section_keynumbers>.wrapper>.main_container>.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.theses_section_keynumbers>.wrapper>.main_container>.card>h3 {
+  margin-bottom: 8px;
+}
+
+.theses_section_keynumbers>.wrapper>.main_container>.card>p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  border-radius: 3px;
+  color: #8E837A;
+  border: 0.5px solid #F2ECE5;
+  background: var(--secondary_beige);
+  flex: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+}
+
+@media only screen and (max-width: 992px) {
+  .theses_section_keynumbers>.wrapper>.main_container {
+    flex-wrap: wrap;
+  }
+
+  .theses_section_keynumbers>.wrapper>.main_container>.card {
+    width: calc(50% - 4px);
+  }
+
+  .theses_section_keynumbers>.wrapper>.main_container>.card>p {
+    font-size: 11px;
+    line-height: 15px;
+    padding: 8px;
+  }
+  
+}
+
+@media only screen and (max-width: 576px) {
+  .theses_section_keynumbers>.wrapper {
+    padding: 56px 8px 64px 8px;
+  }
+
+  .theses_section_keynumbers>.sub_container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .theses_section_keynumbers>.sub_container>.card>p {
+    font-size: 11px;
+    line-height: 15px;
+    padding: 8px 8px;
+  }
+
+  .theses_section_keynumbers>.wrapper>p {
+    color: #C9C0B9;
+    padding: 48px 0px 0px 0px;
+  }
+
+  .theses_section_keynumbers>.wrapper>a {
+    display: none;
+  }
+}
+
+/*================================ THESES - ANALYSE SECTION =======================================*/
+.theses_section_analyse {
+  background-color: var(--primary_black);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+.theses_section_analyse>.wrapper {
+  padding-top: 72px;
+  padding-bottom: 80px;
+}
+
+.theses_section_analyse>.wrapper>.sub_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding-bottom: 64px;
+}
+
+.theses_section_analyse>.wrapper>.sub_container>h2 {
+  max-width: 700px;
+}
+
+.theses_section_analyse>.wrapper>.sub_container>.button_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+.theses_section_analyse>.wrapper>.sub_container>.button_box>button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  opacity: 0.25;
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  transition: all 0.2s;
+  cursor: auto;
+}
+
+.theses_section_analyse>.wrapper>.sub_container>.button_box>button:first-of-type {
+  transform: rotate(180deg);
+}
+
+.theses_section_analyse>.wrapper>.sub_container>.button_box>button.active {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+.theses_section_analyse>.wrapper>.sub_container>.button_box>button.active:hover {
+  scale: 1.15;
+}
+
+
+.theses_section_analyse>.wrapper>.main_container>.slider {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 24px;
+  width: 100%;
+  transition: all 0.2s;
+  overflow-x: visible;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  cursor: grab;
+  scrollbar-width: 0;
+}
+
+.theses_section_analyse>.wrapper>.main_container>.slider.grabbing {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.theses_section_analyse>.wrapper>.main_container::-webkit-scrollbar,
+.theses_section_analyse>.wrapper>.main_container>.slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+.theses_section_analyse>.wrapper>.main_container>.slider>div {
+  flex: none;
+  width: 865px;
+  height: 466px;
+  background-color: #0F2A3D;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: left;
+  scroll-snap-align: start;
+  user-select: none;
+  position: relative;
+  padding: 48px;
+}
+
+.theses_section_analyse>.wrapper>.main_container>.slider>div>.content {
+  max-width: 455px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.theses_section_analyse>.wrapper>.main_container>.slider>div>.content>h4 {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+
+@media only screen and (max-width: 992px) {
+  .theses_section_analyse>.wrapper>.main_container>.slider>div {
+    width: 636px;
+    height: 487px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .theses_section_analyse>.wrapper>.main_container>.slider>div {
+    width: 337px;
+    height: 619px;
+    padding: 40px;
+  }
+
+  .theses_section_analyse>.wrapper>.main_container>.slider>div>.content {
+    max-width: 365px;
+  }
+}
+
+
+
+@media only screen and (max-width: 576px) {
+  .theses_section_analyse>.wrapper {
+    padding-top: 64px;
+    padding-bottom: 72px;
+  }
+
+  .theses_section_analyse>.wrapper>.sub_container {
+    margin-bottom: 24px;
+    flex-direction: column;
+  }
+
+  .theses_section_analyse>.wrapper>.sub_container>.button_box {
+    align-self: flex-end;
+  }
+
+  .theses_section_analyse>.wrapper>.main_container>.slider {
+    gap: 16px;
+  }
+
+  .theses_section_analyse>.wrapper>.main_container>.slider>div {
+    width: 337px;
+    height: 619px;
+    padding: 80px 24px 24px 24px;
+  }
+}
+
+
+/*================================ RECRUTEMENT - GROUPE SECTION =======================================*/
+.theses_section_groupe {
+  color: var(--primary_black);
+  height: 272px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theses_section_groupe>.background_image_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theses_section_groupe>.background_image_container>img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translateY(10%);
+}
+
+.theses_section_groupe>a {
+  background-color: var(--secondary_groupe);
+}
+
+.theses_section_groupe>a:hover {
+  background-color: var(--dark_beige);
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .theses_section_groupe>.background_image_container>img {
+    transform: translateY(0%);
   }
 }
