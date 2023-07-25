@@ -1,14 +1,29 @@
-//*==================== SCRIPT CARDS CARROUSEL ====================*//
+//*==================== SCRIPT JS 4 BLOCS ACTIVE ====================*//
+const js_section_trigger = document.querySelectorAll('.js_section_trigger');//les triggers
+const js_section_show = document.querySelectorAll('.js_section_show');//les sections à afficher ou non
+
+//Ecoute d'evenement click sur un js_section_trigger
+
+js_section_trigger.forEach(trigger => trigger.addEventListener("click", event => {
+    let trigger_number = trigger.getAttribute('data-trigger');
+    js_section_trigger.forEach(trigger => trigger.classList.remove('active'));
+    trigger.classList.add('active');
+
+    js_section_show.forEach(section => section.classList.remove('active'));
+    (document.querySelector(`[data-trigger="${trigger_number}"].js_section_show`)).classList.add('active');
+}));
+
+//*==================== SCRIPT JS CARDS CARROUSEL ====================*//
 const js_slider = document.querySelector('.js_slider');//le slider
 const js_button_previous = document.querySelectorAll('.js_button_box>button')[0];//button previous
 const js_button_next = document.querySelectorAll('.js_button_box>button')[1];
 
 
 //1ere carte - decalage 1ere carte - largeur 1ere carte
-let gap = parseInt((window.getComputedStyle(js_slider).getPropertyValue('column-gap')).replace("px", ""));//gap entre les cartes
-let js_first_card = js_slider.firstElementChild;
-let js_card_width = js_first_card.offsetWidth;
-let js_new_scrollLeft = (js_card_width + gap);//largeur carte + gap
+var gap = parseInt((window.getComputedStyle(js_slider).getPropertyValue('column-gap')).replace("px", ""));//gap entre les cartes
+var js_first_card = js_slider.firstElementChild;
+var js_card_width = js_first_card.offsetWidth;
+var js_new_scrollLeft = (js_card_width + gap);//largeur carte + gap
 /*  
 let decalage_first_card = js_first_card.getBoundingClientRect().left;
 let last_card_manifeste = js_slider.lastElementChild;
@@ -59,10 +74,10 @@ window.addEventListener('resize', function () {
     resizeTimeout = setTimeout(function () {
         if (window.innerWidth < window.outerWidth - 10) { // Vérifie si le redimensionnement est horizontal avec une marge de 10 pixels
             js_slider.scrollLeft = 0;
-            let gap = parseInt((window.getComputedStyle(js_slider).getPropertyValue('column-gap')).replace("px", ""));//gap entre les cartes
-            let js_first_card = js_slider.firstElementChild;
-            let js_card_width = js_first_card.offsetWidth;
-            let js_new_scrollLeft = (js_card_width + gap);//largeur carte + gap
+            gap = parseInt((window.getComputedStyle(js_slider).getPropertyValue('column-gap')).replace("px", ""));//gap entre les cartes
+            js_first_card = js_slider.firstElementChild;
+            js_card_width = js_first_card.offsetWidth;
+            js_new_scrollLeft = (js_card_width + gap);//largeur carte + gap
         }
     }, 200);// Délai de temporisation de 200 millisecondes pour limiter les appels fréquents lors du redimensionnement
 });

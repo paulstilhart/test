@@ -160,6 +160,11 @@ em {
   font-weight: 600;
 }
 
+.p_15_26 {
+  font-size: 15px;
+  line-height: 26px;
+}
+
 .p_15_24_600 {
   font-style: normal;
   font-size: 15px;
@@ -180,6 +185,11 @@ em {
   font-size: 15px;
   line-height: 28px;
   font-weight: 600;
+}
+
+.p_16_23 {
+  font-size: 16px;
+  line-height: 23px;
 }
 
 .p_16_32_600 {
@@ -266,6 +276,23 @@ em {
   line-height: 32px;
   font-weight: 600;
 }
+
+.h3_15_28_600 {
+  font-family: 'Poppins', 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.h3_16_32_500 {
+  font-family: 'Poppins', 'Proxima Nova', Arial, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
 
 .h3_18_34 {
   font-family: 'Poppins', 'Lora', Arial, sans-serif;
@@ -368,6 +395,11 @@ li {
     line-height: 24px;
   }
 
+  .p_15_26 {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
   .p_15_24_600 {
     font-size: 12px;
     line-height: 24px;
@@ -438,6 +470,11 @@ li {
   .h2_34_48 {
     font-size: 26px;
     line-height: 34px;
+  }
+
+  .h3_16_32_600 {
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .h3_24_34 {
@@ -2019,39 +2056,39 @@ li {
 
 
 .homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="1"] {
-  background-image: url(../sources/images/homepage/platform/team1.jpg);
+  background-image: url("../sources/images/homepage/platform/team1.jpg");
 }
 
 .homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="2"] {
-  background-image: url(../sources/images/homepage/platform/team2.jpg);
+  background-image: url("../sources/images/homepage/platform/team2.jpg");
 }
 
 .homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="3"] {
-  background-image: url(../sources/images/homepage/platform/team3.jpg);
+  background-image: url("../sources/images/homepage/platform/team3.jpg");
 }
 
 .homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="4"] {
-  background-image: url(../sources/images/homepage/platform/team4.jpg);
+  background-image: url("../sources/images/homepage/platform/team4.jpg");
 }
 
 .homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="5"] {
-  background-image: url(../sources/images/homepage/platform/team5.jpg);
+  background-image: url("../sources/images/homepage/platform/team5.jpg");
 }
 
 .homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="6"] {
-  background-image: url(../sources/images/homepage/platform/team6.jpg);
+  background-image: url("../sources/images/homepage/platform/team6.jpg");
 }
 
 .homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="7"] {
-  background-image: url(../sources/images/homepage/platform/team7.jpg);
+  background-image: url("../sources/images/homepage/platform/team7.jpg");
 }
 
 .homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="8"] {
-  background-image: url(../sources/images/homepage/platform/team8.jpg);
+  background-image: url("../sources/images/homepage/platform/team8.jpg");
 }
 
 .homepage_section_platform>.sub_container>.cards_container>.slider>.card[data-image="9"] {
-  background-image: url(../sources/images/homepage/platform/team9.jpg);
+  background-image: url("../sources/images/homepage/platform/team9.jpg");
 }
 
 @media only screen and (max-width: 992px) {
@@ -2297,7 +2334,7 @@ li {
   }
 }
 
-/*================================ HOMEPAGE - INVEST REAL ESTATE SECTION =======================================*/
+/*================================ THESES - SECTORS SECTION =======================================*/
 .theses_section_sectors {
   background-color: var(--secondary_beige);
   color: var(--black);
@@ -2305,11 +2342,90 @@ li {
   overflow: hidden;
 }
 
+.theses_section_sectors>.selectors {
+  border-bottom: solid 1px #F2ECE5;
+  border-top: solid 1px #F2ECE5;
+  padding: 0px 56px;
+  margin-bottom: 241px;
+  position: relative;
+}
+
+.theses_section_sectors>.selectors>div>button>img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(calc(100% + 1px));
+  width: 100%;
+  height: 241px;
+  overflow: hidden;
+  object-fit: cover;
+  pointer-events: none;
+  display: none;
+  animation: keyframe_opacity 0.5s linear;
+}
+
+@keyframes keyframe_opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.theses_section_sectors>.selectors>div>button.active>img {
+  display: block;
+}
+
+
+.theses_section_sectors>.selectors>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  height: 65px;
+  padding: 0px;
+}
+
+
+.theses_section_sectors>.selectors>div>button {
+  padding: 0px 32px;
+  height: 100%;
+  text-align: center;
+}
+
+.theses_section_sectors>.selectors>div>button.active>h3 {
+  font-weight: 600;
+  position: relative;
+}
+
+.theses_section_sectors>.selectors>div>button.active>h3::after {
+  content: "";
+  background-color: var(--primary_black);
+  position: absolute;
+  left: 50%;
+  bottom: -17px;
+  transform: translateX(-50%);
+  display: block;
+  width: 220px;
+  height: 4px;
+  border-radius: 2px;
+}
+
 .theses_section_sectors>.wrapper {
   max-width: 1432px;
   margin: 0 auto;
-  display: flex;
+  display: none;
   padding: 72px 0px 160px 0px;
+  row-gap: 56px;
+  opacity: 0;
+  animation: keyframe_opacity 0.5s linear;
+}
+
+.theses_section_sectors>.wrapper.active {
+  display: flex;
+  opacity: 1;
 }
 
 .theses_section_sectors>.wrapper>div {
@@ -2330,97 +2446,119 @@ li {
 }
 
 
-.homepage_section_invest>.wrapper>.sub_container>div {
-  width: 296px;
-  max-width: 100%;
-  margin: 52px 0px;
-  padding: 16px 24px;
-  text-align: center;
-  border-radius: 8px;
+.theses_section_sectors>.wrapper>.sub_container>div {
+  width: 100%;
+  margin-top: 56px;
+  padding: 32px;
+  border-radius: 5px;
   border: 1px solid #F2ECE5;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 
-
-/*================================ OK =======================================*/
-
-
-
-
-
-.homepage_section_invest>.wrapper>.main_container {
+.theses_section_sectors>.wrapper>.main_container {
   height: 620px;
   display: flex;
   overflow: hidden;
+  column-gap: 8px;
+  row-gap: 16px;
+  padding: 0px 8px;
 }
 
-.homepage_section_invest>.wrapper>.main_container>.card {
+.theses_section_sectors>.wrapper>.main_container>.card {
   color: var(--white);
   width: 50%;
   height: 100%;
-  padding: 16px 8px 40px 24px;
+  padding: 16px 24px 40px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
   border-radius: 5px;
+  overflow: hidden;
   background-repeat: no-repeat;
-  background-size: auto auto;
-  transition: all 0.5s;
-}
-
-.homepage_section_invest>.wrapper>.main_container.realestate>.card {
-  margin-right: 8px;
-}
-
-.homepage_section_invest>.wrapper>.main_container.venturecapital>.card {
-  margin-left: 8px;
-}
-
-
-.homepage_section_invest>.wrapper>.main_container.realestate>:nth-child(1) {
-  background-position: left;
-  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
-    url("../sources/images/homepage/realestate/realestate1.jpg");
-}
-
-.homepage_section_invest>.wrapper>.main_container.realestate>:nth-child(2) {
-  background-position: right;
-  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
-    url("../sources/images/homepage/realestate/realestate2.jpg");
-}
-
-.homepage_section_invest>.wrapper>.main_container.venturecapital>:nth-child(1) {
-  background-position: left;
-  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
-    url("../sources/images/homepage/venturecapital/venturecapital1.jpg");
-}
-
-.homepage_section_invest>.wrapper>.main_container.venturecapital>:nth-child(2) {
-  background-position: right;
-  background-image: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%),
-    url("../sources/images/homepage/venturecapital/venturecapital2.jpg");
-}
-
-.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container {
+  background-size: cover;
   position: relative;
 }
 
-.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container::after {
+.theses_section_sectors>.wrapper>.main_container>.card::after {
+  content: '';
   position: absolute;
-  top: -9px;
-  right: 20px;
-  content: url('../sources/icones/arrow_button_white.svg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display: inline-block;
-  width: 11px;
-  margin-right: 6px;
-  transform: translateY(1px);
-  transition: transform 0.15s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(3, 4, 14, 0.85) 7.50%, rgba(3, 4, 14, 0.72) 24.13%, rgba(3, 4, 14, 0.64) 42.08%, rgba(3, 4, 14, 0.00) 70.98%);
 }
 
-.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container>span {
+.theses_section_sectors>.wrapper[data-trigger="1"]>.main_container>.card:first-of-type {
+  background-image: url("../sources/images/theses/sectors/1_card1.png");
+}
+
+.theses_section_sectors>.wrapper[data-trigger="1"]>.main_container>.card:first-of-type>.content>img {
+  width: 166px;
+}
+
+
+.theses_section_sectors>.wrapper[data-trigger="1"]>.main_container>.card:last-of-type {
+  background-image: url("../sources/images/theses/sectors/1_card2.png");
+  background-position: 50%;
+}
+
+.theses_section_sectors>.wrapper[data-trigger="1"]>.main_container>.card:last-of-type>.content>img {
+  width: 101px;
+}
+
+.theses_section_sectors>.wrapper[data-trigger="2"]>.main_container>.card:first-of-type {
+  background-image: url("../sources/images/theses/sectors/2_card_1.jpeg");
+}
+
+.theses_section_sectors>.wrapper[data-trigger="2"]>.main_container>.card:last-of-type {
+  background-image: url("../sources/images/theses/sectors/2_card_2.jpeg");
+  background-position: 15%;
+}
+
+.theses_section_sectors>.wrapper[data-trigger="3"]>.main_container>.card:first-of-type {
+  background-image: url("../sources/images/theses/sectors/3_card_1.jpeg");
+}
+
+.theses_section_sectors>.wrapper[data-trigger="3"]>.main_container>.card:first-of-type>.content>img {
+  width: 145px;
+}
+
+
+.theses_section_sectors>.wrapper[data-trigger="3"]>.main_container>.card:last-of-type {
+  background-image: url("../sources/images/theses/sectors/3_card_2.jpeg");
+  background-position: 85%;
+}
+
+.theses_section_sectors>.wrapper[data-trigger="3"]>.main_container>.card:last-of-type>.content>img {
+  width: 140px;
+}
+
+.theses_section_sectors>.wrapper[data-trigger="4"]>.main_container>.card:first-of-type {
+  background-image: url("../sources/images/theses/sectors/4_card_1.jpeg");
+}
+
+.theses_section_sectors>.wrapper[data-trigger="4"]>.main_container>.card:first-of-type>.content>img {
+  width: 145px;
+}
+
+.theses_section_sectors>.wrapper[data-trigger="4"]>.main_container>.card:last-of-type {
+  background-image: url("../sources/images/theses/sectors/4_card_2.jpeg");
+}
+
+.theses_section_sectors>.wrapper[data-trigger="4"]>.main_container>.card:last-of-type>.content>img {
+  width: 163px;
+}
+
+
+.theses_section_sectors>.wrapper>.main_container>.card>div {
+  z-index: 1;
+}
+
+.theses_section_sectors>.wrapper>.main_container>.card>.checkbox_container>span {
   color: var(--white);
   border-radius: 45px;
   background: rgba(255, 255, 255, 0.25);
@@ -2428,7 +2566,7 @@ li {
   padding: 8px 16px;
 }
 
-.homepage_section_invest>.wrapper>.main_container>.card>.checkbox_container>span::before {
+.theses_section_sectors>.wrapper>.main_container>.card>.checkbox_container>span::before {
   content: url('../sources/icones/checkbox_white.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -2438,68 +2576,14 @@ li {
   transform: translateY(1px);
 }
 
-.homepage_section_invest>.wrapper>.main_container>.card>.content>.name {
-  margin-bottom: 24px;
+.theses_section_sectors>.wrapper>.main_container>.card>.content>p:first-of-type {
+  margin-top: 8px;
 }
 
-.homepage_section_invest>.wrapper>.main_container>.card>.content>.name>img {
-  max-width: 100%;
+.theses_section_sectors>.wrapper>.main_container>.card>.content>p:last-of-type {
+  margin-top: 24px;
 }
 
-.homepage_section_invest>.wrapper>.main_container>.card>.rising {
-  display: none;
-  position: absolute;
-  bottom: 24px;
-  right: 16px;
-}
-
-.homepage_section_invest>.wrapper>.main_container>.card>.rising>div {
-  border-radius: 8px;
-  border: 1px solid rgba(225, 225, 225, 0.15);
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(2px);
-  padding: 8px 24px;
-  margin-top: 16px;
-  position: relative;
-}
-
-.homepage_section_invest>.wrapper>.main_container>.card>.rising>div>img {
-  position: absolute;
-  width: 51px;
-  right: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.rising_tooltip>div {
-  width: 11px;
-  position: absolute;
-  top: 4px;
-  right: 6px;
-  cursor: help;
-}
-
-.rising_tooltip>div::after {
-  content: attr(data-tooltip);
-  display: none;
-  position: absolute;
-  top: 0px;
-  right: 2px;
-  z-index: 99;
-  transform: translateY(-100%);
-  background-color: var(--black);
-  color: var(--white);
-  width: 200px;
-  padding: 16px;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 400;
-  border-radius: 5px;
-}
-
-.rising_tooltip>div:hover::after {
-  display: block;
-}
 
 @media only screen and (max-width: 1200px) {
   .theses_section_sectors>.wrapper>.sub_container {
@@ -2512,6 +2596,53 @@ li {
   .theses_section_sectors>.wrapper {
     padding: 56px 0px;
   }
+
+  .theses_section_sectors>.wrapper {
+    flex-direction: column;
+  }
+
+  .theses_section_sectors>.wrapper>div {
+    width: 100%;
+  }
+
+  .theses_section_sectors>.selectors {
+    padding: 0px;
+    margin-bottom: 138px;
+  }
+
+  .theses_section_sectors>.selectors>div>button>img {
+    height: 138px;
+  }
+
+  .theses_section_sectors>.selectors>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1px;
+    height: 140px;
+    padding: 0px;
+    background-color: #F2ECE5;
+  }
+
+  .theses_section_sectors>.selectors>div>button {
+    width: calc(50% - 0.6px);
+    height: 69.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary_beige);
+  }
+
+  .theses_section_sectors>.selectors>div>button.active>h3::after {
+    display: none;
+  }
+
+  .theses_section_sectors>.selectors>div>button.active {
+    background-color: var(--primary_black);
+    color: var(--white);
+  }
+
 }
 
 
@@ -2520,18 +2651,28 @@ li {
   .theses_section_sectors>.wrapper {
     flex-direction: column;
   }
-  .theses_section_sectors>.wrapper>div {
-    width: 100%;
+
+  .theses_section_sectors>.wrapper>.sub_container {
+    padding: 0px 24px;
   }
 }
 
 @media only screen and (max-width: 576px) {
+  .theses_section_sectors>.wrapper>.main_container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .theses_section_sectors>.wrapper>.main_container>.card {
+    width: 100%;
+    height: 270px;
+    padding: 16px;
+  }
+
+  .theses_section_sectors>.wrapper>.main_container>.card>.content>p:last-of-type {
+    margin-top: 8px;
+  }
 }
-
-
-@media only screen and (min-width: 576px) {
-}
-
 
 
 
@@ -2604,7 +2745,7 @@ li {
     line-height: 15px;
     padding: 8px;
   }
-  
+
 }
 
 @media only screen and (max-width: 576px) {
@@ -2730,10 +2871,19 @@ li {
   user-select: none;
   position: relative;
   padding: 48px;
+  overflow: hidden;
 }
 
+.theses_section_analyse>.wrapper>.main_container>.slider>div>img {
+  position: absolute;
+  bottom: -35px;
+  right: -85px;
+  width: 350px;
+}
+
+
+
 .theses_section_analyse>.wrapper>.main_container>.slider>div>.content {
-  max-width: 455px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -2743,11 +2893,24 @@ li {
   color: rgba(255, 255, 255, 0.15);
 }
 
+.theses_section_analyse>.wrapper>.main_container>.slider>div>.content>p:first-of-type {
+  max-width: 455px;
+}
+
+
 
 @media only screen and (max-width: 992px) {
   .theses_section_analyse>.wrapper>.main_container>.slider>div {
     width: 636px;
     height: 487px;
+  }
+
+  .theses_section_analyse>.wrapper>.main_container>.slider>div>img {
+    display: none;
+  }
+
+  .theses_section_analyse>.wrapper>.main_container>.slider>div>.content>p:first-of-type {
+    max-width: none;
   }
 }
 
@@ -2755,12 +2918,8 @@ li {
 @media only screen and (max-width: 768px) {
   .theses_section_analyse>.wrapper>.main_container>.slider>div {
     width: 337px;
-    height: 619px;
+    height: 680px;
     padding: 40px;
-  }
-
-  .theses_section_analyse>.wrapper>.main_container>.slider>div>.content {
-    max-width: 365px;
   }
 }
 
@@ -2783,12 +2942,6 @@ li {
 
   .theses_section_analyse>.wrapper>.main_container>.slider {
     gap: 16px;
-  }
-
-  .theses_section_analyse>.wrapper>.main_container>.slider>div {
-    width: 337px;
-    height: 619px;
-    padding: 80px 24px 24px 24px;
   }
 }
 
