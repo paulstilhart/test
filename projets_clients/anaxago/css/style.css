@@ -367,6 +367,12 @@ em {
   font-weight: 600;
 }
 
+.h4_22_32 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
 .h4_28_34 {
   font-family: 'Poppins', 'Lora', Arial, sans-serif;
   font-style: normal;
@@ -488,6 +494,11 @@ li {
 
   .h3_28_34 {
     font-size: 22px;
+    line-height: 32px;
+  }
+
+  .h4_22_32 {
+    font-size: 17px;
     line-height: 32px;
   }
 }
@@ -2502,12 +2513,12 @@ li {
 
 
 .theses_section_sectors>.wrapper[data-trigger="1"]>.main_container>.card:last-of-type {
-  background-image: url("../sources/images/theses/sectors/1_card2.png");
+  background-image: url("../sources/images/theses/sectors/1_card2.jpeg");
   background-position: 50%;
 }
 
 .theses_section_sectors>.wrapper[data-trigger="1"]>.main_container>.card:last-of-type>.content>img {
-  width: 101px;
+  width: 169px;
 }
 
 .theses_section_sectors>.wrapper[data-trigger="2"]>.main_container>.card:first-of-type {
@@ -2581,6 +2592,7 @@ li {
 }
 
 .theses_section_sectors>.wrapper>.main_container>.card>.content>p:last-of-type {
+  text-align: justify;
   margin-top: 24px;
 }
 
@@ -2628,6 +2640,7 @@ li {
   .theses_section_sectors>.selectors>div>button {
     width: calc(50% - 0.6px);
     height: 69.4px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2671,6 +2684,10 @@ li {
 
   .theses_section_sectors>.wrapper>.main_container>.card>.content>p:last-of-type {
     margin-top: 8px;
+  }
+
+  .theses_section_sectors>.wrapper[data-trigger="4"]>.main_container>.card:first-of-type {
+    background-position: 50%;
   }
 }
 
@@ -2987,6 +3004,119 @@ li {
 
 @media only screen and (max-width: 768px) {
   .theses_section_groupe>.background_image_container>img {
+    transform: translateY(0%);
+  }
+}
+
+
+
+/*================================ REAL ESTATE CROWDFUNDING - HERO SECTION =======================================*/
+.realestate_section_hero {
+  height: 409px;
+  position: relative;
+  overflow: hidden;
+  color: var(--black);
+  text-align: center;
+}
+
+.realestate_section_hero>img {
+  position: absolute;
+  bottom: -55%;
+  left: 0;
+  object-fit: cover;
+  width: 120%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.realestate_section_hero>.main_container {
+  padding: 64px 24px;
+}
+
+
+.realestate_section_hero>.main_container>h1 {
+  max-width: 750px;
+  margin: 8px auto 48px auto;
+}
+
+.realestate_section_hero>.main_container>a {
+  background-color: var(--primary_black);
+  color:var(--white);
+}
+
+.realestate_section_hero>.main_container>a:hover {
+  background-color: var(--dark_blue);
+}
+
+
+
+@media only screen and (max-width: 992px) {
+  .realestate_section_hero>img {
+    bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .realestate_section_hero {
+    height: 337px;
+  }
+
+  .realestate_section_hero>.main_container {
+    padding: 56px 24px 40px 24px;
+  }
+
+  .realestate_section_hero>.main_container>h1 {
+    margin: 8px auto 40px auto;
+  }
+}
+
+
+
+
+
+
+
+/*================================ REAL ESTATE CROWDFUNDING - GROUPE SECTION =======================================*/
+.realestate_section_groupe {
+  color: var(--white);
+  height: 272px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.realestate_section_groupe>.background_image_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.realestate_section_groupe>.background_image_container>img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translateY(25%);
+}
+
+.realestate_section_groupe>a {
+  background-color: var(--primary_black);
+}
+
+.realestate_section_groupe>a:hover {
+  background-color: var(--dark_blue);
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .realestate_section_groupe>.background_image_container>img {
     transform: translateY(0%);
   }
 }
