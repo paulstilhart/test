@@ -1,0 +1,157 @@
+/*
+
+
+
+selection et checkbox
+
+suivi parrainage dates
+
+
+
+
+
+
+
+
+
+code de parrainage pattern
+
+
+si filleul non eligible, appliquer la classe au header
+
+
+
+header_filleul_non_eligible
+header_code_expire
+header_code_invalide
+header_code_valide
+
+
+
+header_selection_parrain
+header_pas_de_resultats
+
+
+
+FONCTIONNALITES
+
+Fonction pour ne pas afficher les tableaux si les datas sont vides à l'origine
+Gérer automatiquement en front avec function noDatas(datas, tableId)
+--> toujours envoyer un tableau vide vers le front [] pour que cela fonctionne
+
+PAGINATION
+pagination générique faite
+tout est fonctionnel + garde fou qui supprime le bloc si tous les éléments sont affichés dans la page directement
+pleinement fonctionnelle, après avoir recherché, filtré, trier....
+
+
+TRI sur les thead
+instantanné et sur chaque colonne
+pour plus de performance, si on trie et qu'on est déjà paginé on est renvoyé en page 1, et on peut repaginer ensuite
+performance ++
+
+
+RECHERCHER UN PARRAIN FILLEUL
+chaine de caractère quelconque
+marche au clic sur la loupe ou entrée
+si on enleve tous les caractères, on réinitialise, pour une meilleure UX
+
+
+SUIVI PARRAINAGE AVEC 2 DATES PICKERS standards html5 qui vient filtrer sur la colonne 3 / 9 des 2 tableaux en mm temps
+
+--> datepicker standard non stylisé car chaque navigateur impose le sien (chrome / firefox / edge...)
+ne pas le faire justement car problème de compatibilité
+chaque navigateur impose le sien
+
+Il manquait un bout d'UX ici:
+- on avait pas moyen de réinitailiser le tableau car pas de bouton apres avoir rentré des dates
+- j'ai donc rajouté la fonctionnalité suivante : si on revient cliquer sur le datepicker, le form est reset()
+- possibilité d'ajouter un bouton reset en front directement aussi en V2
+
+
+
+Pour le header, il faut venir ajouter la classe au header pour gérer les 4 cas automatique
+
+header_filleul_non_eligible
+header_code_expire
+header_code_invalide
+
+
+il y a un garde fou meme si le tableau datas_selection_parrain est plein ou nul, en ajoutant ces classes on a pas de soucis
+Cette classe est donc à ajouter en php au rechargement de la page une fois que l'on a ajouté un code de parrainage
+
+l'input code de parrainage est contenu dans un formulaire classique avec bouton submit et code qui passe en url
+id="codeParrainage"
+la page est rechargée automatiquement
+
+le champ est required, et les éléments suivants sont à venir modifier dans le html si besoin: 
+pattern="[0-9]+" minlength="5" maxlength="30"
+
+
+Pour
+
+header_selection_parrain
+header_pas_de_resultats
+
+c'est automatique en js
+
+si le tableau est vide, on a automatique l'encart pas de résultats qui s'affiche
+
+si on clique sur un parrain on est ensuite automatiquement redirigés vers Code valable / Parrainage validé
+en terme d'UX on est au bout du tunnel, à voir si c'est l'attendu
+
+
+
+
+
+Je n'ai pas intégré la flèche imbriquée car très compliqué en css étant donné que la hauteur peut varier
+si on a 3 parrains sur la droite par exemple
+Possible en Js mais rajoute de la complexité juste pour du design
+A rediscuter si vraiment contrainte forte
+
+
+
+
+
+
+https://www.figma.com/file/fmgbUT95fWyVJ8xhBaRfvs/Sonova?node-id=502%3A694&mode=dev
+
+
+
+
+
+1376px de large
++ 2 *32px de padding = 1440px
+
+
+
+
+
+100	Thin (Hairline)
+200	Extra Light (Ultra Light)
+300	Light
+400	Normal (Regular)
+500	Medium
+600	Semi Bold (Demi Bold)
+700	Bold
+800	Extra Bold (Ultra Bold)
+900	Black (Heavy)
+950	Extra Black (Ultra Black)
+
+
+xxl: 1400px
+xl: 1200px
+lg: 992px
+md: 768px
+sm: 576px
+xs: 0
+
+
+L’entité HTML &nbsp; (« non breaking space ») va nous permettre d’ajouter une espace simple dit espace « insécable » ;
+L’entité HTML &ensp; (« en space ») va nous permettre de créer une espace double ;
+L’entité HTML &emsp; (« em space ») va nous permettre de créer une espace quadruple ;
+L’entité HTML &thinsp; (« thin space ») va nous permettre de créer un espace très fin (demi-espace).
+
+
+
+*/

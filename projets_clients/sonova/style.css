@@ -1,640 +1,346 @@
-/*==================== RESET CSS ====================*/
-*,
-::after,
-::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-a,
-button,
-select,
-textarea {
-    text-decoration: none;
-    cursor: pointer;
-    color: inherit;
-    background: none;
-    border: none;
-    outline: none;
-}
-
-a:focus,
-a:active,
-button:focus,
-button:active,
-input:active,
-input:focus select:active,
-select:focus,
-textarea:active,
-textarea:focus {
-    outline: none;
-    outline-color: transparent !important;
-}
-
-
-/*================================ CLASSES UTILITAIRES DEBUT /*=======================================*/
-/*==================== MARGIN PADDING GAP WIDTH HEIGHT ====================*/
-
-.mw_500_my_auto {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.mw_1000_auto {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.m_auto {
-    margin: auto;
-}
-
-.my_auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.mw_1332_auto {
-    max-width: 1332px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.mt_2 {
-    margin-top: 2px;
-}
-
-.mt_4 {
-    margin-top: 4px;
-}
-
-.mt_24 {
-    margin-top: 24px;
-}
-
-.mb_8 {
-    margin-bottom: 8px;
-}
-
-.mb_20 {
-    margin-bottom: 20px;
-}
-
-.mb_32 {
-    margin-bottom: 32px;
-}
-
-.pt_24 {
-    padding-top: 24px;
-}
-
-.pb_16 {
-    padding-bottom: 16px;
-}
-
-.pb_24 {
-    padding-bottom: 24px;
-}
-
-.pl_16 {
-    padding-left: 16px;
-}
-
-
-.gap_8 {
-    gap: 8px;
-}
-
-.gap_14 {
-    gap: 14px;
-}
-
-.gap_16 {
-    gap: 16px;
-}
-
-.gap_24 {
-    gap: 24px;
-}
-
-.gap_32 {
-    gap: 32px;
-}
-
-.w_20 {
-    width: 20%;
-}
-
-.w_75 {
-    width: 75%;
-}
-
-.w_100 {
-    width: 100%;
-}
-
-.h_40 {
-    height: 40px;
-}
-
-
-/*==================== FLEXBOX ====================*/
-.flex {
-    display: flex;
-    flex-direction: row;
-}
-
-.flex_center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.flex_start_start {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: start;
-}
-
-.flex_start_center {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.flex_start_end {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-
-.flex_center_center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex_center_start {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: start;
-}
-
-.flex_between {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.flex_between_center {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.flex_end_center {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.flex_column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex_column_reverse {
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-
-.flex_column_end {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-.flex_column_between {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-.flex_wrap {
-    flex-wrap: wrap;
-}
-
-.flex_nowrap {
-    flex-wrap: nowrap;
-}
-
-.flex_none {
-    flex: none;
-}
-
-
-/*==================== TEXT ALIGN BORDER RADIUS DISPLAY BLOCK & NONE ====================*/
-.text_center {
-    text-align: center;
-}
-
-.text_left {
-    text-align: left;
-}
-
-.border_radius_5 {
-    border-radius: 5px;
-}
-
-.border_radius_5_left {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-.border_radius_5_right {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.border_radius_10 {
-    border-radius: 10px;
-}
-
-.dblock {
-    display: block;
-}
-
-.dnone {
-    display: none;
-}
-
-.position_relative {
-    position: relative;
-}
-
-/*================================ CLASSES UTILITAIRES FIN /*=======================================*/
-
-
-/*==================== FONT-FAMILY ====================*/
-html {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-style: normal;
-    font-weight: 400;
-    color: #2B2E2A;
-    background-color: #FFFFFF;
-}
-
-
-/* Titre section */
-h1,
-h2 {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 26.4px;
-}
-
-/* Titre formulaire */
-h3 {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21.6px;
-}
-
-
-/* Texte courant */
-p,
-input,
-textarea,
-select {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-/* Pour les labels du formulaire */
-.label,
-button {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-/* Messages d'erreur */
-.warning {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16.8px;
-}
-
-
-/*==================== BACKGROUNDS & COLORS ====================*/
-.background_grey_strong {
-    background-color: #92B838;
-}
-
-.color_grey_strong {
-    color: #92B838;
-}
-
-.background_grey_medium {
-    background-color: #ABD34B;
-}
-
-.color_grey_medium {
-    color: #ABD34B;
-}
-
-.background_grey_soft {
-    background-color: #F3F7E6;
-}
-
-.color_grey_soft {
-    color: #F3F7E6;
-}
-
-.background_red {
-    background-color: #E03727;
-}
-
-.color_red {
-    color: #E03727;
-}
-
-.background_black {
-    background-color: #2B2E2A;
-}
-
-.color_black {
-    color: #2B2E2A;
-}
-
-.background_grey {
-    background-color: #949494;
-}
-
-.color_grey {
-    color: #949494;
-}
-
-.background_white_break {
-    background-color: #F4F4F4;
-}
-
-.color_white_break {
-    color: #F4F4F4;
-}
-
-.background_white {
-    background-color: #ffffff;
-}
-
-.color_white {
-    color: #ffffff;
-}
-
-.box_shadow {
-    box-shadow: 0px 2px 4px #9c9c9c40;
-}
-
-
-/*==================== PROJET ====================*/
+/*================================ GLOBAL =======================================*/
 body {
-    min-height: 100vh;
     background-image: url('./sources/background_1440_787.png');
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 20vh;
+    padding-bottom: 32px;
+    background-attachment: fixed;
 }
 
-/* Pour un conteneur avec des marges constantes 80px quand la largeur vaut 1280px margin: 0 6.25%*/
-main {
-    margin: 0 16px;
+
+/*================================ HEADER =======================================*/
+header {
+    display: flex;
+    margin-bottom: 32px;
+    min-height: 230px;
+    gap: 24px;
 }
+
+header>div {
+    width: calc(50% - 12px);
+    flex: 1;
+    border-radius: 10px;
+    padding: 32px;
+    position: relative;
+}
+
+
+header>div:first-of-type>form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+header>div:first-of-type>form>button {
+    align-self: flex-end;
+}
+
+header>div:last-of-type>.filleul_non_eligible,
+header>div:last-of-type>.code_expire,
+header>div:last-of-type>.code_invalide {
+    display: none;
+}
+
+/* header_filleul_non_eligible */
+header.header_filleul_non_eligible>div:first-of-type::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--white_classic);
+    opacity: 0.85;
+    z-index: 99;
+}
+
+header.header_filleul_non_eligible>div:last-of-type>.filleul_non_eligible {
+    display: block;
+}
+
+header.header_filleul_non_eligible>div:last-of-type>.selection_parrain_container {
+    display: none;
+}
+
+header.header_filleul_non_eligible>div:last-of-type>.filleul_non_eligible>div {
+    display: flex;
+    column-gap: 8px;
+}
+
+header.header_filleul_non_eligible>div:last-of-type>.filleul_non_eligible>div>div {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 4px);
+    row-gap: 16px;
+}
+
+header.header_filleul_non_eligible>div:last-of-type>.filleul_non_eligible>div>div>p {
+    display: flex;
+    align-items: center;
+}
+
+/* header_code_expire */
+header.header_code_expire>div:last-of-type>.code_expire {
+    display: block;
+}
+
+header.header_code_expire>div:last-of-type>.selection_parrain_container {
+    display: none;
+}
+
+/* header_code_invalide */
+header.header_code_invalide>div:last-of-type>.code_invalide {
+    display: block;
+}
+
+header.header_code_invalide>div:last-of-type>.selection_parrain_container {
+    display: none;
+}
+
+/* header_code_valide */
+
+header.header_code_expire>div:last-of-type>.code_expire>p:last-of-type,
+header.header_code_invalide>div:last-of-type>.code_invalide>p:last-of-type,
+.selection_parrain_container>.code_valable>p:last-of-type {
+    height: 48px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+
+.selection_parrain_container {
+    height: 100%;
+    width: 100%;
+}
+
+/* HEADER.table_selection_parrain */
+.table_selection_parrain,
+.table_selection_parrain tr,
+.table_selection_parrain th,
+.table_selection_parrain td {
+    text-align: left;
+}
+
+/* Hauteur des lignes */
+.table_selection_parrain>thead>tr {
+    height: 40px;
+}
+
+.table_selection_parrain>tbody>tr {
+    height: 64px;
+}
+
+/* Repartition de la largeur */
+.table_selection_parrain>thead>tr>th:first-of-type,
+.table_selection_parrain>tbody>tr>td:first-of-type {
+    padding-left: 16px;
+    width: 15%;
+}
+
+.table_selection_parrain>thead>tr>th:nth-child(2),
+.table_selection_parrain>tbody>tr>td:nth-child(2) {
+    padding-left: 8px;
+    width: 27%;
+}
+
+.table_selection_parrain>thead>tr>th:nth-child(3),
+.table_selection_parrain>tbody>tr>td:nth-child(3) {
+    padding-left: 8px;
+    width: 30%;
+}
+
+.table_selection_parrain>thead>tr>th:last-of-type,
+.table_selection_parrain>tbody>tr>td:last-of-type {
+    padding-left: 8px;
+    padding-right: 16px;
+    width: 28%;
+}
+
+
+/* header_pas_de_resultats */
+header .pas_de_resultats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+
+
+/*================================ MAIN =======================================*/
+main {
+    border-radius: 10px;
+}
+
 
 .main_container {
-    max-height: 100vh;
-    padding-top: 20vh;
-    padding-bottom: 8vh;
+    border-radius: 10px;
 }
 
-.left_container {
-    width: 500px;
-    height: 72vh;
-    flex: none;
-}
-
-.right_container {
-    width: 800px;
-    height: 72vh;
-    flex: none;
-}
-
-.left_container_header,
-.right_container_header {
-    height: 118px;
+.main_container>div {
+    padding: 32px;
 }
 
 
-.label_box {
-    gap: 130px;
-    padding: 14px 0px 4px 56px;
+/* container_suivi_parrainage */
+.container_suivi_parrainage>form {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
 }
 
-.reports {
-    padding: 8px;
-}
-
-.report .separator {
-    display: inline-block;
-    width: 2px;
-    height: 30px;
-    background: #F4F4F4;
-    border-radius: 2px;
-    margin: 0px 8px;
-}
-
-.report_name {
-    max-width: 265px;
-    text-transform: uppercase;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.view_delete_box div {
-    min-width: 49px;
-}
-
-form {
-    max-width: 524px;
-    padding-right: 24px;
-    margin: 24px auto;
-    height: calc(72vh - 166px);
-    overflow-y: auto;
+.container_suivi_parrainage>form>input {
+    width: 280px;
+    height: 40px;
+    padding: 0px 16px;
 }
 
 
-.prescriber label {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21.6px;
-}
 
-.prescriber input {
-    background: #F4F4F4;
-    border: 1.5px solid #949494;
-    border-radius: 5px;
-}
-
-.prescriber input::placeholder {
-    color: #2B2E2A;
-}
-
-input,
-textarea,
-select {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #949494;
-    border-radius: 5px;
-}
-
-textarea {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: #2B2E2A;
-    min-height: 175px;
-    padding: 8px 16px;
-}
-
-textarea::placeholder {
-    color: #949494;
-}
-
-input:focus,
-select:focus {
-    border-width: 2px;
-    border-color: #2B2E2A;
+.container_suivi_parrainage>form>:last-child {
+    margin-left: 8px;
 }
 
 
-/* Valide si non focus et une valeur est entrée (pas de placeholder) */
-input:not(:focus):not(:placeholder-shown):valid,
-select:not(:focus):not(:placeholder-shown):valid {
-    border-color: #2B2E2A;
+.container_parrains {
+    margin-bottom: 40px;
 }
 
-/* De la meme façon pour la bordure rouge invalide */
-input:not(:focus):not(:placeholder-shown):invalid {
-    border-width: 2px;
-    border-color: #E03727;
+.container_parrains>.pas_de_resultats,
+.container_filleuls>.pas_de_resultats {
+    height: 176px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-/* Et pareil pour le message d'erreur */
-input:not(:placeholder-shown):invalid~span {
+
+
+/* table_container */
+.table_container>div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table_container>div:first-of-type>div:first-of-type>div {
+    width: 527px;
     display: flex;
 }
 
-
-.warning_box {
-    position: absolute;
-    bottom: -22px;
+.table_container>div:first-of-type>div:first-of-type>div>input {
+    flex: 1;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    border-right: none;
 }
 
-.button_next,
-.button_previous {
-    padding: 8px 24px;
-    border-radius: 5px;
-}
 
-.button_previous {
-    border: 2px solid #92B838;
-}
-
-.button_next:hover,
-.button_previous:hover {
-    background-color: #ABD34B;
-    border-color: #ABD34B;
-    color: white;
-}
-
-.radio_box {
-    position: relative;
-    width: 95px;
+.table_container>div:first-of-type>div:first-of-type>div>button {
+    width: 40px;
     height: 40px;
+    position: relative;
+}
+
+.table_container>div:first-of-type>div:first-of-type>div>button::after {
+    content: url("./sources/icons/loop_green.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.table_container>div:first-of-type>div:first-of-type>div>button:hover::after {
+    content: url("./sources/icons/loop_green_hover.svg");
+}
+
+
+
+.table_container>div:first-of-type>div:last-of-type {
+    width: 255px;
+}
+
+.table_container>div>div:last-of-type>select {
+    width: 100%;
+}
+
+
+
+
+/* main_table */
+.main_table,
+.main_table tr,
+.main_table th,
+.main_table td {
+    text-align: center;
+}
+
+.main_table th {
+    cursor: pointer;
+    position: relative;
+}
+
+.main_table th::after {
+    content: url("./sources/icons/thead_tri.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    margin-left: 8px;
+    transform: translateY(4px);
+}
+
+
+.main_table>thead>tr {
+    height: 72px;
+}
+
+.main_table>tbody>tr {
+    height: 64px;
+}
+
+
+
+
+
+
+/* Pagination */
+.pagination_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 8px;
+    margin-top: 24px;
+}
+
+.pagination_container>div {
     display: flex;
     justify-content: center;
     align-items: center;
+    column-gap: 4px;
+    border-radius: 5px;
 }
 
-.radio_box input[type="radio"] {
-    width: 95px;
-    height: 40px;
-    cursor: pointer;
-    opacity: 0;
-    position: absolute;
-    top: 0px;
-    left: 0;
-}
-
-.radio_box label {
-    color: #949494;
-    width: 95px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border: 1px solid #949494;
-}
-
-.radio_box input[type="radio"]:hover+label {
-    color: #2B2E2A;
-    background-color: #F3F7E6;
-}
-
-.radio_box input[type="radio"]:checked+label {
-    color: #2B2E2A;
-    background-color: #DCE9C2;
-    border: 2px solid #92B838;
-}
-
-.radio_box_type,
-.radio_box input[name="type"],
-.radio_box_type label {
-    width: 140px;
-    height: 40px;
-}
-
-.radio_box_implication,
-.radio_box input[name="implication"],
-.radio_box_implication label {
-    width: 110px;
-    height: 40px;
-}
-
-.radio_box_classic {
-    height: 24px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
-}
-
-.radio_box_classic input {
-    width: 16px;
-    height: 16px;
+.pagination_container>div>button {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    border-radius: 5px;
 }

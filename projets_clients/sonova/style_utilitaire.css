@@ -1,0 +1,477 @@
+/*================================ RESET CSS =======================================*/
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+
+input,
+select,
+textarea {
+    cursor: text;
+}
+
+
+
+a:focus,
+a:active,
+button:focus,
+button:active,
+input:active,
+input:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+    outline: none;
+    outline-color: transparent;
+}
+
+
+ul {
+    list-style-position: inside;
+}
+
+img {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/*================================ VARIABLES =======================================*/
+:root {
+    --white_classic: #ffffff;
+    --black_classic: #000000;
+
+    --green: #92B838;
+    --green_hover: #ABD34B;
+    --green_hover_table: #F3F7E6;
+
+    --warning: #E03727;
+
+    --black: #2B2E2A;
+    --black_soft: #2b2e2aad;
+
+    --grey: #949494;
+    --grey_soft: #F4F4F4;
+    --grey_border: #E6E6E6;
+    --grey_button: #2b2e2a61;
+
+
+    --code_invalide: #F2ACA6;
+    --code_valide: #E7F1D0;
+}
+
+/*================================ BACKGROUND & COLORS =======================================*/
+.background_white_classic {
+    background-color: var(--white_classic);
+}
+
+.color_white {
+    color: var(--white_classic);
+}
+
+.background_black_classic {
+    background-color: var(--black_classic);
+}
+
+.color_black_classic {
+    color: var(--black_classic);
+}
+
+.background_green {
+    background-color: var(--green);
+}
+
+.color_green {
+    color: var(--green);
+}
+
+.background_green_hover {
+    background-color: var(--green_hover);
+}
+
+.color_green_hover {
+    color: var(--green_hover);
+}
+
+.background_green_hover_table {
+    background-color: var(--green_hover_table);
+}
+
+
+.color_green_hover_table {
+    color: var(--green_hover_table);
+}
+
+.background_warning {
+    background-color: var(--warning);
+}
+
+.color_warning {
+    color: var(--warning);
+}
+
+.background_black {
+    background-color: var(--black);
+}
+
+.color_black {
+    color: var(--black);
+}
+
+.background_black_soft {
+    background-color: var(--black_soft);
+}
+
+.color_black_soft {
+    color: var(--black_soft);
+}
+
+.background_grey {
+    background-color: var(--grey);
+}
+
+.color_grey {
+    color: var(--grey);
+}
+
+.background_grey_soft {
+    background-color: var(--grey_soft);
+}
+
+.color_grey_soft {
+    color: var(--grey_soft);
+}
+
+.background_grey_border {
+    background-color: var(--grey_border);
+}
+
+.color_grey_border {
+    color: var(--grey_border);
+}
+
+.background_code_valide {
+    background-color: var(--code_valide);
+}
+
+.color_code_valide {
+    color: var(--code_valide);
+}
+
+.background_code_invalide {
+    background-color: var(--code_invalide);
+}
+
+.color_code_invalide {
+    color: var(--code_invalide);
+}
+
+.grey_filter {
+    filter: grayscale(100%);
+    /* Appliquer un filtre gris à 100% */
+    opacity: 0.2;
+    /* Définir l'opacité de l'élément à 50% (0.5) */
+}
+
+.box_shadow {
+    box-shadow: 0px 2px 4px #9c9c9c40;
+}
+
+/*================================ FONTS =======================================*/
+html {
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    /* ou 16px, mais 14px le plus utilisé */
+    line-height: 24px;
+    scroll-behavior: smooth;
+    color: var(--black);
+    background-color: var(--white_classic);
+}
+
+strong {
+    font-weight: 600;
+}
+
+i,
+mark {
+    font-style: italic;
+}
+
+em {
+    text-decoration: underline;
+}
+
+
+/* Titre section */
+h1,
+h2 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 120%;
+}
+
+/* Titre formulaire */
+h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.6px;
+}
+
+/* Pour les inputs */
+input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* Pour les labels du formulaire */
+label,
+button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Messages d'erreur */
+.warning {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+}
+
+.p_14_24_600 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+table {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+table,
+tr,
+th,
+td {
+    vertical-align: middle;
+}
+
+table {
+    outline: 1px solid var(--grey_border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+table>tbody>tr {
+    border-top: 1px solid var(--grey_border);
+}
+
+table>tbody>tr:hover {
+    background-color: var(--green_hover_table);
+}
+
+/*================================ CLASSES UTILITAIRES =======================================*/
+
+.dnone {
+    display: none !important;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.mb_4 {
+    margin-bottom: 4px;
+}
+
+.mb_8 {
+    margin-bottom: 8px;
+}
+
+.mb_16 {
+    margin-bottom: 16px;
+}
+
+
+.mb_24 {
+    margin-bottom: 24px;
+}
+
+
+
+.button_classic {
+    height: 40px;
+    padding: 8px 24px;
+    border-radius: 5px;
+}
+
+.button_green {
+    background-color: var(--green);
+    color: var(--white_classic);
+}
+
+.button_green:hover {
+    background-color: var(--green_hover);
+}
+
+.button_green_border,
+.pagination_container>button {
+    cursor: pointer;
+    background-color: var(--white_classic);
+    color: var(--green);
+    outline: solid 2px var(--green);
+}
+
+.button_green_border:hover,
+.pagination_container>button:hover {
+    background-color: var(--green);
+    color: var(--white_classic);
+}
+
+
+
+.button_grey_soft,
+.pagination_container>button[disabled] {
+    cursor: default;
+    background-color: var(--grey_soft);
+    color: var(--grey_button);
+    outline: none;
+}
+
+.button_grey_soft:hover,
+.pagination_container>button[disabled] {
+    background-color: var(--grey_soft);
+}
+
+
+.span_encours,
+.span_termine,
+.span_expire {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 47px;
+    font-weight: 600;
+}
+
+.span_encours {
+    color:var(--white_classic);
+    background-color: var(--green);
+}
+
+.span_termine {
+    outline: 2px solid var(--green);
+    background-color: var(--white_classic);
+}
+
+.span_expire {
+    background-color: var(--grey_border);
+}
+
+
+
+.check_yes_before::before {
+    content: url("./sources/icons/check_yes.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 16px;
+}
+
+.check_no_before::before {
+    content: url("./sources/icons/check_no.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 16px;
+}
+
+.wrapper_1440 {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+input,
+textarea,
+select {
+    height: 40px;
+    padding-left: 16px;
+    border-radius: 5px;
+    border: solid 1px var(--grey);
+}
+
+
+input:focus,
+input:focus-visible,
+input:focus-within,
+input:active,
+input:target,
+select:focus,
+select:focus-visible,
+select:focus-within,
+select:active,
+select:target {
+    border: solid 2px var(--black);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--grey);
+}
+
+
+/* Valide si non focus et une valeur est entrée (pas de placeholder) */
+input:not(:focus):not(:placeholder-shown):valid,
+select:not(:focus):not(:placeholder-shown):valid {
+    border: solid 1px var(--black);
+}

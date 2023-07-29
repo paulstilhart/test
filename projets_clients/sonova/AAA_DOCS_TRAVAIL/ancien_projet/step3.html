@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etape 3 - Profil du patient</title>
+
+    <!-- FEUILLE DE STYLE CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+    <main>
+        <div class="main_container mw_1332_auto flex_between_center gap_32">
+
+
+            <div class="left_container background_white border_radius_10">
+                <!-- ==================== REPORTS HEADER START ==================== -->
+                <div class="left_container_header box_shadow">
+                    <h2 class="pt_24 text_center ">Liste compte(s) rendu(s) pour :
+                        <br>
+                        <span id="doctor_name">Merlo Alain</span>
+                    </h2>
+                    <div class="label_box flex">
+                        <p class="label">Date</p>
+                        <p class="label">Modèle</p>
+                    </div>
+                </div>
+                <!-- ==================== REPORTS HEADER END ==================== -->
+
+                <!-- ==================== REPORTS START ==================== -->
+                <div class="reports flex_column gap_14">
+                    <!-- début boucle sur les comptes rendus -->
+                    <div class="report flex_between_center">
+                        <div class="report_informations flex_start_center">
+                            <p class="report_datetime"><span class="date">30/12/22</span> à <span
+                                    class="time">16h30</span></p>
+                            <span class="separator"></span>
+                            <p class="report_name">AUDIONOVA DX 30 R 312</p>
+                        </div>
+                        <div class="view_delete_box flex_end_center">
+                            <span class="separator"></span>
+                            <div class="flex_end_center gap_8">
+                                <button class="dblock"><img class="dblock" src="./sources/icons/delete_17_17.svg"
+                                        alt="delete button"></button>
+                                <button class="dblock"><img class="dblock" src="./sources/icons/view_26_16.svg"
+                                        alt="view button"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report flex_between_center">
+                        <div class="report_informations flex_start_center">
+                            <p class="report_datetime"><span class="date">30/12/22</span> à <span
+                                    class="time">16h30</span></p>
+                            <span class="separator"></span>
+                            <p class="report_name">12345678912345678912345678912</p>
+                        </div>
+                        <div class="view_delete_box flex_end_center">
+                            <span class="separator"></span>
+                            <div class="flex_end_center gap_8">
+                                <button class="dblock"><img class="dblock" src="./sources/icons/delete_17_17.svg"
+                                        alt="delete button"></button>
+                                <button class="dblock"><img class="dblock" src="./sources/icons/view_26_16.svg"
+                                        alt="view button"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report flex_between_center">
+                        <div class="report_informations flex_start_center">
+                            <p class="report_datetime"><span class="date">30/12/22</span> à <span
+                                    class="time">16h30</span></p>
+                            <span class="separator"></span>
+                            <p class="report_name">123456789123456789123456789123456789</p>
+                        </div>
+                        <div class="view_delete_box flex_end_center">
+                            <span class="separator"></span>
+                            <div class="flex_end_center gap_8">
+                                <button class="dnone"><img class="dblock" src="./sources/icons/delete_17_17.svg"
+                                        alt="delete button"></button>
+                                <button class="dblock"><img class="dblock" src="./sources/icons/view_26_16.svg"
+                                        alt="view button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fin boucle sur les comptes rendus -->
+                </div>
+                <!-- ==================== REPORTS END ==================== -->
+            </div>
+
+
+            <div class="right_container background_white border_radius_10">
+                <!-- ==================== FORM HEADER START ==================== -->
+                <div class="right_container_header box_shadow">
+                    <h1 class="text_center pt_24 pb_16">Nouveau compte rendu ORL</h1>
+                    <div class="form_header flex_center_center pb_24">
+                        <img class="dblock" src="./sources/icons/number_check_26_26.svg" alt="number check">
+                        <p>&nbsp;Prescripteur&ensp;-&ensp;</p>
+                        <img class="dblock" src="./sources/icons/number_check_26_26.svg" alt="number check">
+                        <p>&nbsp;Caractéristique audiométrie&ensp;-&ensp;</p>
+                        <img class="dblock" src="./sources/icons/number_check_26_26.svg" alt="number check">
+                        <p>&nbsp;Profil du patient&ensp;-&ensp;</p>
+                        <img class="dblock" src="./sources/icons/number_4_26_26.svg" alt="number check">
+                        <p>&nbsp;Complément</p>
+                    </div>
+                </div>
+                <!-- ==================== FORM HEADER END ==================== -->
+
+                <!-- ==================== FORM START ==================== -->
+                <form action="/step4.html">
+                    <h3 class="mb_8">Profil du patient</h3>
+
+                    <!-- Modèle d'appareil -->
+                    <div class="mb_20">
+                        <p class="label mb_8">Modèle d'appareil</p>
+
+                        <!-- boucle start -->
+                        <div class="radio_box_classic">
+                            <input required type="radio" name="model" id="model1" value="model1">
+                            <label for="model1">UNITRON AUDIONOVA DX 30 R 312eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</label>
+                        </div>
+                        <div class="radio_box_classic">
+                            <input required type="radio" name="model" id="model2" value="model2">
+                            <label for="model2">AUDEO L50-R</label>
+                        </div>
+                        <div class="radio_box_classic">
+                            <input required type="radio" name="model" id="model3" value="model3">
+                            <label for="model3">UNITRON AUDIONOVA DX 30 R 312</label>
+                        </div>
+                        <div class="radio_box_classic">
+                            <input required type="radio" name="model" id="model4" value="model4">
+                            <label for="model4">AUDEO L50-Reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</label>
+                        </div>
+                        <!-- boucle end -->
+                    </div>
+
+                    <!-- Implication -->
+                    <div class="mb_20">
+                        <p class="label mb_8">Implication</p>
+                        <div class="flex_start_center">
+                            <div class="radio_box radio_box_implication">
+                                <input required type="radio" name="implication" id="opposite" value="opposite">
+                                <label class="border_radius_5_left" for="opposite">Opposé</label>
+                            </div>
+                            <div class="radio_box radio_box_implication">
+                                <input required type="radio" name="implication" id="low" value="low">
+                                <label for="low">Peu motivé</label>
+                            </div>
+                            <div class="radio_box radio_box_implication">
+                                <input required type="radio" name="implication" id="medium" value="medium">
+                                <label for="medium">Motivé</label>
+                            </div>
+                            <div class="radio_box radio_box_implication">
+                                <input required type="radio" name="implication" id="hight" value="hight">
+                                <label class="border_radius_5_right" for="hight">Très motivé</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Nombre d’heure de port par jour -->
+                    <div class="mb_20">
+                        <div>
+                            <label class="dblock label mb_8" for="keeptime">Nombre d’heure de port par jour</label>
+                            <input required class="dblock pl_16 w_20 h_40" type="text" id="keeptime" name="keeptime"
+                                placeholder="Ex : 3" pattern="[0-9]{0,2}" maxlength="2">
+                        </div>
+                    </div>
+
+
+                    <!-- Résultat d'essai -->
+                    <div class="mb_32">
+                        <label class="dblock label mb_8" for="result">Résultat d'essai</label>
+                        <select required class="dblock pl_16 w_100 h_40" name="result" id="result">
+                            <option value="" disabled selected>Sélectionner un résultat</option>
+                            <option value="result1">Concluant (garde ses appareils)</option>
+                            <option value="result2">2dn essai (essaye une 2dne paire d’aides auditives)</option>
+                            <option value="result3">Echec (ne conserve pas ses aides ou repousse son appareillage)
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <!-- Bouton submit -->
+                    <div class="flex_between_center button">
+                        <a class="button_previous color_grey_medium background_white"
+                            href=javascript:history.go(-1)>Précédent</a>
+                        <button class="button_next color_white background_grey_strong" type="submit">Suivant</button>
+                    </div>
+                </form>
+                <!-- ==================== FORM END ==================== -->
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
