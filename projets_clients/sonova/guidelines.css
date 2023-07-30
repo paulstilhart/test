@@ -162,48 +162,4 @@ instantanné au clic sur chaque colonne
 pour plus de performance et de simplicité, si on trie et qu'on est déjà paginé on est renvoyé en page 1, et on peut repaginer ensuite
 
 
-
-
-
-
-https://www.figma.com/file/fmgbUT95fWyVJ8xhBaRfvs/Sonova?node-id=502%3A694&mode=dev
-
-
-
-
-
-1376px de large
-+ 2 *32px de padding = 1440px
-
-
-
-
-
-100	Thin (Hairline)
-200	Extra Light (Ultra Light)
-300	Light
-400	Normal (Regular)
-500	Medium
-600	Semi Bold (Demi Bold)
-700	Bold
-800	Extra Bold (Ultra Bold)
-900	Black (Heavy)
-950	Extra Black (Ultra Black)
-
-
-xxl: 1400px
-xl: 1200px
-lg: 992px
-md: 768px
-sm: 576px
-xs: 0
-
-
-L’entité HTML &nbsp; (« non breaking space ») va nous permettre d’ajouter une espace simple dit espace « insécable » ;
-L’entité HTML &ensp; (« en space ») va nous permettre de créer une espace double ;
-L’entité HTML &emsp; (« em space ») va nous permettre de créer une espace quadruple ;
-L’entité HTML &thinsp; (« thin space ») va nous permettre de créer un espace très fin (demi-espace).
-
-
-
 */

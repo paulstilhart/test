@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lien de parrainage</title>
 
-    <!-- FEUILLE DE STYLE CSS UTILITAIRE -->
-    <link rel="stylesheet" href="./style_utilitaire.css">
     <!-- FEUILLE DE STYLE CSS -->
     <link rel="stylesheet" href="./style.css">
 
@@ -18,9 +16,10 @@
 
 
 <body>
-    <header class="wrapper_1440">
+    <!-- CLASSE A APPLIQUER ICI -->
+    <header class="">
 
-        <!-- HEADER PARTIE DE GAUCHE DEBUT -->
+        <!-- HEADER PARTIE DE GAUCHE codeParrainage -->
         <div class="background_white_classic">
             <h2 class="mb_16">Ajouter un Filleul</h2>
             <form>
@@ -30,12 +29,10 @@
                 <button type="submit" class="button_classic button_green">Valider</button>
             </form>
         </div>
-        <!-- HEADER PARTIE DE GAUCHE FIN -->
 
-        <!-- HEADER PARTIE DE DROITE DEBUT -->
+        <!-- HEADER PARTIE DE DROITE -->
         <div class="background_white_classic">
 
-            <!-- HEADER 4 CAS filleul_non_eligible OU code_expire OU code_invalide OU code_valide DEBUT -->
             <div class="filleul_non_eligible">
                 <h2 class="mb_16">Filleul non éligible</h2>
                 <div>
@@ -64,13 +61,12 @@
                 <p class="check_no_before background_code_invalide"><strong>Le code est invalide</strong></p>
             </div>
 
-            <!-- HEADER 4 CAS filleul_non_eligible OU code_expire OU code_invalide OU code_valide FIN -->
 
             <!-- HEADER header_selection_parrain OU header_pas_de_resultats -->
             <div class="selection_parrain_container">
-                <div id="js_table_selection_parrain_table_container" class="selection_parrain">
+                <div id="js_table_selection_parrain_table_container">
                     <h2 class="mb_16">Sélectionner le parrain</h2>
-    
+
                     <table id="js_table_selection_parrain" class="table_selection_parrain">
                         <thead class="background_grey_soft color_black_soft">
                             <tr>
@@ -82,9 +78,8 @@
                         </thead>
                         <tbody></tbody>
                     </table>
-    
                 </div>
-    
+
                 <div id="js_table_selection_parrain_pas_de_resultats" class="pas_de_resultats dnone">
                     <img style="width: 60px;" class="mb_16" src="./sources/icons/loop_61_60.svg" alt="icon loop">
                     <p>Pas de résultat à afficher.
@@ -96,35 +91,34 @@
                 <div id="js_table_selection_parrain_code_valable" class="code_valable dnone">
                     <h2 class="mb_16">Code valable</h2>
                     <p class="p_14_24_600 mb_8">Motif :</p>
-                    <p class="check_yes_before background_code_valide"><strong>Parrainage validé</strong></p>
+                    <p class="check_yes_before background_code_valable"><strong>Parrainage validé</strong></p>
                 </div>
             </div>
-            <!-- HEADER header_selection_parrain OU header_pas_de_resultats -->
 
 
         </div>
-        <!-- HEADER PARTIE DE DROITE FIN -->
 
     </header>
 
     <main class="wrapper_1440">
         <div class="main_container background_white_classic">
 
-            <!-- SUIVI PARRAINAGE DEBUT -->
+            <!-- SUIVI PARRAINAGE DATE PICKER -->
             <div class="container_suivi_parrainage box_shadow">
                 <h2 class="mb_16">Suivi parrainage</h2>
                 <form id="js_sorted_dates" class="js_forms_only_front">
                     <p>Parrainage du</p>
-                    <input required value="aaaa-mm-jj" type="date" id="suivi_parrainage_start" name="suivi_parrainage_start">
+                    <input required value="aaaa-mm-jj" type="date" id="suivi_parrainage_start"
+                        name="suivi_parrainage_start">
                     <p>au</p>
-                    <input required value="aaaa-mm-jj" type="date" id="suivi_parrainage_end" name="suivi_parrainage_end">
+                    <input required value="aaaa-mm-jj" type="date" id="suivi_parrainage_end"
+                        name="suivi_parrainage_end">
                     <button type="submit" class="button_classic button_green button_grey_soft">Valider</button>
                 </form>
             </div>
-            <!-- SUIVI PARRAINAGE FIN -->
 
             <div>
-                <!-- PARRAINS DEBUT -->
+                <!-- TABLE PARRAINS -->
                 <div class="container_parrains">
                     <h2 class="mb_16">Liste des parrains du magasin de Nantes</h2>
 
@@ -147,11 +141,27 @@
                             </div>
                             <div>
                                 <p class="p_14_24_600 mb_4">Sélectionner les statuts</p>
-                                <select name="etat" id="etat" multiple style="width: 200px;">
-                                    <option value="en_cours">En cours</option>
-                                    <option value="termine">Terminé</option>
-                                    <option value="expire">Expiré</option>
-                                </select>
+
+                                <div id="js_table_parrains_statuts_container" class="statuts_container">
+                                    <div>
+                                        <p>Statuts : <span class="statut_span">Multiples</span></p>
+                                        <div class="statuts_checkbox_container">
+                                            <div data-state="En cours">
+                                                <input type="checkbox" checked>
+                                                <p>En cours</p>
+                                            </div>
+                                            <div data-state="Terminé">
+                                                <input type="checkbox" checked>
+                                                <p>Terminé</p>
+                                            </div>
+                                            <div data-state="Expiré">
+                                                <input type="checkbox" checked>
+                                                <p>Expiré</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
@@ -179,9 +189,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- PARRAINS FIN -->
 
-                <!-- FILLEULS DEBUT -->
+
+                <!-- TABLE FILLEULS -->
                 <div class="container_filleuls">
                     <h2 class="mb_16">Liste des filleuls du magasin de Nantes</h2>
 
@@ -204,11 +214,25 @@
                             </div>
                             <div>
                                 <p class="p_14_24_600 mb_4">Sélectionner les statuts</p>
-                                <select name="etat" id="etat" multiple style="width: 200px;">
-                                    <option value="en_cours">En cours</option>
-                                    <option value="termine">Terminé</option>
-                                    <option value="expire">Expiré</option>
-                                </select>
+                                <div id="js_table_filleuls_statuts_container" class="statuts_container">
+                                    <div>
+                                        <p>Statuts : <span class="statut_span">Multiples</span></p>
+                                        <div class="statuts_checkbox_container">
+                                            <div data-state="En cours">
+                                                <input type="checkbox" checked>
+                                                <p>En cours</p>
+                                            </div>
+                                            <div data-state="Terminé">
+                                                <input type="checkbox" checked>
+                                                <p>Terminé</p>
+                                            </div>
+                                            <div data-state="Expiré">
+                                                <input type="checkbox" checked>
+                                                <p>Expiré</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -236,7 +260,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- FILLEULS FIN -->
             </div>
         </div>
     </main>

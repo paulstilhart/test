@@ -42,20 +42,38 @@ export function formsOnlyFront(formSelector) {
 //Fonction SPECIFIQUE pour la table sélection parrain
 export function createTableSelectionParrain(datas, tableId) {
     const tableTbody = document.querySelector(`#${tableId}>tbody`);
-    tableTbody.innerHTML = datas.map(rowData => `
-            <tr>
-                ${rowData.map(cellData => `<td>${cellData}</td>`).join('')}
-                <td><button class="button_classic button_green">Sélectionner</button></td>
-            </tr>
-        `).join('');
+    tableTbody.innerHTML = datas.map((rowData, rowIndex) => `
+        <tr>
+            ${rowData.map((cellData, cellIndex) => `<td>${cellData}</td>`).join('')}
+            <td><button class="button_classic button_green" data-row="${rowIndex}" data-name="${rowData[1]}">Sélectionner</button></td>
+        </tr>
+    `).join('');
 
     // Ajouter l'écouteur de clic sur les boutons "Sélectionner"
     const buttons = document.querySelectorAll(`#${tableId} td button`);
     buttons.forEach(button => {
         button.addEventListener('click', () => {
+            const rowIndex = button.getAttribute('data-row');
+            const name = button.getAttribute('data-name');
+
             document.querySelector(`#${tableId}_table_container`).classList.add('dnone');
             document.querySelector(`#${tableId}_code_valable`).classList.remove('dnone');
+
+            const parrainChoisi = { rowIndex: parseInt(rowIndex), name: name, };
+            console.log(parrainChoisi);
+            return parrainChoisi;
         });
+    });
+}
+
+
+
+// Fonction pour réinitialiser la sélection des états
+function resetStatesSelection(tableId) {
+    const checkboxes = document.querySelectorAll(`#${tableId}_statuts_container input[type="checkbox"]`);
+    document.querySelector(`#${tableId}_statuts_container .statut_span`).textContent = 'Multiples';
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = true;
     });
 }
 
@@ -197,6 +215,7 @@ export function orderByThead(datas, tableId, itemsPerPage, currentPage) {
     // Ajouter un seul écouteur d'événement sur le thead pour les clics sur les en-têtes de colonnes
     tableThead.addEventListener('click', (event) => {
         if (event.target.tagName === 'TH') {
+            resetStatesSelection(tableId);
             const sortType = event.target.getAttribute('data-sorttype');
             const sortIndex = event.target.getAttribute('data-sortindex');
             generateAndPaginateTable(datas, tableId, itemsPerPage, currentPage, sortType, sortIndex);
@@ -204,45 +223,65 @@ export function orderByThead(datas, tableId, itemsPerPage, currentPage) {
     });
 }
 
+//================ FONCTION en fonction des statuts
+export function orderbyStates(datas, tableId, itemsPerPage, currentPage) {
+    const statutsContainer = document.querySelector(`#${tableId}_statuts_container`);
+    const checkboxes = statutsContainer.querySelectorAll('input[type="checkbox"]');
+    const statutSpan = statutsContainer.querySelector('.statut_span');
 
-//================ FONCTION pour chercher dans l'input
-export function search(datas, tableId, itemsPerPage, currentPage, sorttype, sortindex) {
-    const searchButton = document.querySelector(`#${tableId}_search>button`);
-    const searchInput = document.querySelector(`#${tableId}_search>input`);
+    const updateTable = () => {
+        const selectedStates = new Set(Array.from(checkboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.parentNode.getAttribute('data-state').toLowerCase()));
 
-    // Fonction de recherche pour effectuer la recherche
-    function performSearch() {
-        const searchTerm = searchInput.value.trim().toLowerCase();// Récupérer la valeur de recherche et la formater en minuscules
-        const filteredData = datas.filter(data => {
-            const secondElement = data[1] && data[1].toString().toLowerCase();
-            return secondElement && secondElement.includes(searchTerm);
-        });
-        generateAndPaginateTable(filteredData, tableId, itemsPerPage, currentPage, sorttype, sortindex);
-    }
+        if (selectedStates.size === 1) {
+            statutSpan.textContent = selectedStates.values().next().value;
+        } else if (selectedStates.size > 1) {
+            statutSpan.textContent = 'Multiples';
+        } else {
+            statutSpan.textContent = 'Aucun';
+        }
 
-    // Écouteur d'événement pour le clic sur le bouton de recherche
-    searchButton.addEventListener("click", function () {
-        performSearch();
-    });
+        const filteredData = datas.filter(data => selectedStates.has(data[8].toLowerCase()));
+        generateAndPaginateTable(filteredData, tableId, itemsPerPage, currentPage);
+    };
 
-    // Écouteur d'événement pour la touche "Entrée" dans le champ de saisie
-    searchInput.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            performSearch();
+    // Utilisation de la délégation d'événements pour gérer les changements de case à cocher
+    statutsContainer.addEventListener('change', (event) => {
+        if (event.target.type === 'checkbox') {
+            updateTable();
         }
     });
 
-    // Écouteur d'événement pour détecter lorsque l'utilisateur vide le champ de saisie
-    searchInput.addEventListener("input", function () {
-        if (searchInput.value.trim() === "") {
-            // Si le champ de saisie est vide, réinitialiser la table en affichant toutes les données d'origine
-            generateAndPaginateTable(datas, tableId, itemsPerPage, currentPage, sorttype, sortindex);
+    // Gérer le clic sur les div pour cocher/décocher automatiquement la case correspondante
+    const statutsDivs = statutsContainer.querySelectorAll('.statuts_checkbox_container > div');
+    statutsDivs.forEach(div => {
+        const checkbox = div.querySelector('input[type="checkbox"]');
+        div.addEventListener('click', (event) => {
+            // Vérifier si le clic vient de la case à cocher ou de son étiquette (<p>)
+            if (!event.target.matches('input[type="checkbox"]')) {
+                checkbox.checked = !checkbox.checked;
+            }
+            updateTable();
+        });
+    });
+    //Pour ouvrir le menu
+    document.querySelector(`#${tableId}_statuts_container > div > p`).addEventListener('click', () => {
+        statutsContainer.classList.toggle('active');
+    });
+
+    // Fermer le menu si on clique en dehors du statuts_checkbox_container
+    document.addEventListener('click', (event) => {
+        const targetElement = event.target;
+        if (!statutsContainer.contains(targetElement) && !targetElement.closest(`#${tableId}_statuts_container`)) {
+            statutsContainer.classList.remove('active');
         }
     });
 }
 
 
+
+//================ FONCTION pour filtrer avec les dates
 export function addDateFilterFunctionality(datas1, datas2, tableId1, tableId2, itemsPerPage1, itemsPerPage2, currentPage) {
     const form = document.getElementById('js_sorted_dates');
     const startDateInput = document.getElementById('suivi_parrainage_start');
@@ -264,6 +303,8 @@ export function addDateFilterFunctionality(datas1, datas2, tableId1, tableId2, i
 
     form.addEventListener('submit', event => {
         event.preventDefault();
+        resetStatesSelection(tableId1);
+        resetStatesSelection(tableId2);
 
         //On crée 2 objets JavaScript avec Date()
         //Les 2 objets ont directement la norme ISO 8601 AAAA-MM-JJ car c'est un input de type date html 5
@@ -281,3 +322,43 @@ export function addDateFilterFunctionality(datas1, datas2, tableId1, tableId2, i
     startDateInput.addEventListener('click', resetTable);
     endDateInput.addEventListener('click', resetTable);
 }
+
+//================ FONCTION pour chercher dans l'input
+export function search(datas, tableId, itemsPerPage, currentPage, sorttype, sortindex) {
+    const searchButton = document.querySelector(`#${tableId}_search>button`);
+    const searchInput = document.querySelector(`#${tableId}_search>input`);
+
+    // Fonction de recherche pour effectuer la recherche
+    function performSearch() {
+        const searchTerm = searchInput.value.trim().toLowerCase();// Récupérer la valeur de recherche et la formater en minuscules
+        const filteredData = datas.filter(data => {
+            const secondElement = data[1] && data[1].toString().toLowerCase();
+            return secondElement && secondElement.includes(searchTerm);
+        });
+        generateAndPaginateTable(filteredData, tableId, itemsPerPage, currentPage, sorttype, sortindex);
+    }
+
+    // Écouteur d'événement pour le clic sur le bouton de recherche
+    searchButton.addEventListener("click", function () {
+        performSearch();
+        resetStatesSelection(tableId);
+    });
+
+    // Écouteur d'événement pour la touche "Entrée" dans le champ de saisie
+    searchInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            performSearch();
+            resetStatesSelection(tableId);
+        }
+    });
+
+    // Écouteur d'événement pour détecter lorsque l'utilisateur vide le champ de saisie
+    searchInput.addEventListener("input", function () {
+        if (searchInput.value.trim() === "") {
+            // Si le champ de saisie est vide, réinitialiser la table en affichant toutes les données d'origine
+            generateAndPaginateTable(datas, tableId, itemsPerPage, currentPage, sorttype, sortindex);
+        }
+    });
+}
+
