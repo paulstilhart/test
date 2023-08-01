@@ -6,55 +6,66 @@ function unfoldAccordions() {
     const title = item.querySelector('.js_accordion_title');
     const content = item.querySelector('.js_accordion_content');
 
-    // Ouvrir tous les éléments d'accordéon en définissant la propriété 'max-height' sur la hauteur réelle du contenu
-    // Ceci est fait pour éviter des transitions abruptes au chargement de la page
-    content.style.maxHeight = content.scrollHeight + 'px';
+
+    function openAccordions() {
+      // Ouvrir accordion si il a js_accordion_default_open en définissant la propriété 'max-height' sur la hauteur réelle du contenu
+      // Ceci est fait pour éviter des transitions abruptes au chargement de la page
+      // Sinon, laisser l'élément fermé en définissant la propriété 'max-height' sur '0px'
+      if (item.classList.contains('js_accordion_default_open')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = '0px';
+      }
+    }
+
 
     title.addEventListener('click', () => {// Ajout d'un écouteur d'événement 'click' au titre
       // Inversion de l'état de la section de contenu (affichée ou masquée) lors du clic sur le titre
       content.style.maxHeight = content.style.maxHeight === '0px' ? content.scrollHeight + 'px' : '0px';
-      item.classList.toggle('open', content.style.maxHeight !== '0px');//pour l'icome de fleche
+      item.classList.toggle('js_accordion_default_open', content.style.maxHeight !== '0px');//pour l'icome de fleche
     });
 
     //Garde-fou si on resize la fenetre
     window.addEventListener('resize', () => {
-      content.style.maxHeight = content.scrollHeight + 'px';
+      openAccordions();
     });
+
+    openAccordions();
   });
 }
 
 
-function intersectionObserverSection(sectionElement, paginationContainer) {
-  //root : null car on utilise le viewport / rootMargin: "0px" (pas de marge autour de root) / threshold: 0.2 car sections hautes
-  const options = { root: null, rootMargin: "0px", threshold: 0.2 };
+//Retourne la hauteur visible d'un element entre 0 et 100
+function hauteurVisible(element) {
+  const boundingRect = element.getBoundingClientRect();
+  const viewportHeight = window.innerHeight;
 
-  const callback = (entries, observer) => { // Callback appelée lorsque l'intersection change
-    entries.forEach(entry => {
+  // Calcul de la hauteur visible en prenant en compte le défilement vertical
+  const hauteurVisible = Math.max(0, Math.min(boundingRect.bottom, viewportHeight) - Math.max(boundingRect.top, 0));
 
-      if (entry.isIntersecting) {// La section est en cours d'intersection avec le viewport
-        const sectionId = sectionElement.id;
-        const intersectionLink = paginationContainer.querySelector(`a[href="#${sectionId}"]`);
-
-        if (intersectionLink) {
-          paginationContainer.querySelectorAll('a').forEach(link => link.classList.remove('active'));
-          intersectionLink.classList.add('active');
-        }
-      }
-    });
-  };
-
-  // Créer l'instance de l'IntersectionObserver + Observer la section cible
-  const intersectionObserver = new IntersectionObserver(callback, options);
-  intersectionObserver.observe(sectionElement);
-
+  return ((hauteurVisible / viewportHeight) * 100);
 }
 
-
-function ObserveSections() {
+function paginationGuide() {
   const sections = document.querySelectorAll('.js_intersection_section');
-  const paginationContainer = document.querySelector('.js_pagination_container > div > div');
-  sections.forEach(section => intersectionObserverSection(section, paginationContainer));
+  const paginationContainer = document.querySelector('.js_pagination_container');
+  
+  sections.forEach(section => {
+    const hauteurVisibleElement = hauteurVisible(section);
+
+    if (hauteurVisibleElement > 50) {
+      const sectionId = section.id;
+      const intersectionLink = paginationContainer.querySelector(`a[href="#${sectionId}"]`);
+
+      if (!intersectionLink.classList.contains('active')) {
+        paginationContainer.querySelectorAll('a').forEach(link => link.classList.remove('active'));
+        intersectionLink.classList.add('active');
+      } 
+
+    }
+  });
 }
+
 
 
 //Fonction click et MajButtons
@@ -136,5 +147,5 @@ function unfoldCard() {
 
 unfoldCard();
 unfoldAccordions();//document.addEventListener('DOMContentLoaded', setupAccordion);
-ObserveSections();
 sliders();
+window.addEventListener('scroll', paginationGuide);
