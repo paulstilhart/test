@@ -289,9 +289,11 @@ main>.wrapper {
     padding: 80px 0px 255px 0px;
     min-height: calc(100vh - 55px);
     background-repeat: no-repeat;
-    background-image: url("./sources/logos/main_background.svg");
-    background-size: 100% 255px;
-    background-position: bottom;
+    background-image: url("./sources/logos/main_background.png");
+    /* valeur 1 width et valeur 2 height */
+    background-size: 1392px auto;
+    background-position: center bottom -500px; /* Centre l'image horizontalement, décale vers le haut de 300 pixels */
+
 }
 
 main>.wrapper>h1 {
@@ -309,8 +311,14 @@ main>.wrapper>div:first-of-type>a {
     width: 500px;
     height: 200px;
     border-radius: 20px;
-    padding:26px 28px;
+    padding: 26px 28px;
     background-repeat: no-repeat;
+}
+
+main>.wrapper>div:first-of-type>a:nth-child(1) {
+    background-image: url("./sources/logos/cards/card1.svg");
+    background-size: 481px auto;
+    background-position: right -100px bottom -100px;
 }
 
 main>.wrapper>div:first-of-type>a:nth-child(2) {
