@@ -1,0 +1,332 @@
+/*================================ RESET CSS =======================================*/
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+
+input,
+select,
+textarea {
+    cursor: text;
+}
+
+
+
+a:focus,
+a:active,
+button:focus,
+button:active,
+input:active,
+input:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+    outline: none;
+    outline-color: transparent;
+}
+
+
+ul {
+    list-style-position: inside;
+}
+
+img {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/*================================ VARIABLES =======================================*/
+:root {
+    --white: #ffffff;
+    --black: #000000;
+
+    --dark_blue: #00295E;
+    --light_blue: #D8E8F3;
+    --header_blue: #002D5B;
+
+    --grey: #E8E8E8;
+}
+
+/*================================ BACKGROUND & COLORS =======================================*/
+.background_white {
+    background-color: var(--white);
+}
+
+.color_white {
+    color: var(--white);
+}
+
+.background_black {
+    background-color: var(--black);
+}
+
+.color_black {
+    color: var(--black);
+}
+
+.background_header_blue {
+    background-color: var(--header_blue);
+}
+
+.color_header_blue {
+    color: var(--header_blue);
+}
+
+.background_dark_blue {
+    background-color: var(--dark_blue);
+}
+
+.color_dark_blue {
+    color: var(--dark_blue);
+}
+
+.background_light_blue {
+    background-color: var(--light_blue);
+}
+
+.color_light_blue {
+    color: var(--light_blue);
+}
+
+.background_grey {
+    background-color: var(--grey);
+}
+
+.color_grey {
+    color: var(--grey);
+}
+
+/*================================ FONTS =======================================*/
+html {
+    font-family: 'Lexend', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    scroll-behavior: smooth;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+strong {
+    font-weight: 600;
+    /* Semi Bold (Demi Bold) */
+}
+
+i,
+mark {
+    font-style: italic;
+}
+
+em {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 72px;
+}
+
+/* Font-size */
+.fs_10 {
+    font-size: 10px;
+}
+
+.fs_12 {
+    font-size: 12px;
+}
+
+.fs_14 {
+    font-size: 14px;
+}
+
+
+/* Font-weight */
+.fw_300 {
+    font-weight: 300;
+}
+
+.fw_400 {
+    font-weight: 400;
+}
+
+.fw_500 {
+    font-weight: 500;
+}
+
+.fw_600 {
+    font-weight: 600;
+}
+
+.fw_700 {
+    font-weight: 700;
+}
+
+.fw_800 {
+    font-weight: 800;
+}
+
+.fw_900 {
+    font-weight: 900;
+}
+
+
+
+/*================================ CLASSES UTILITAIRES =======================================*/
+.wrapper_1200 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dnone {
+    display: none !important;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.text_center {
+    text-align: center;
+}
+
+/* marges margin */
+.mb_4 {
+    margin-bottom: 4px;
+}
+
+.mb_8 {
+    margin-bottom: 8px;
+}
+
+.mb_16 {
+    margin-bottom: 16px;
+}
+
+.mb_24 {
+    margin-bottom: 24px;
+}
+
+
+
+/*================================ PROJET =======================================*/
+body {
+    min-width: 800px;
+    /* car pas de responsive */
+}
+
+header>.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 12px;
+    height: 55px;
+    overflow: hidden;
+}
+
+header>.wrapper>div:first-of-type {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    height: 100%;
+}
+
+header>.wrapper>div:first-of-type>img {
+    width: 172px;
+}
+
+header>.wrapper>div:first-of-type>a {
+    letter-spacing: 0.489px;
+    line-height: 55px;
+    white-space: nowrap;
+}
+
+header>.wrapper>div:last-of-type {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+header>.wrapper>div:last-of-type>img {
+    width: 24px;
+}
+
+
+main>.wrapper {
+    padding: 80px 0px 255px 0px;
+    min-height: calc(100vh - 55px);
+    background-repeat: no-repeat;
+    background-image: url("./sources/logos/main_background.svg");
+    background-size: 100% 255px;
+    background-position: bottom;
+}
+
+main>.wrapper>h1 {
+    padding: 0px 35px 74px 35px;
+}
+
+main>.wrapper>div:first-of-type {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+main>.wrapper>div:first-of-type>a {
+    width: 500px;
+    height: 200px;
+    border-radius: 20px;
+    padding:26px 28px;
+    background-repeat: no-repeat;
+}
+
+main>.wrapper>div:first-of-type>a:nth-child(2) {
+    background-image: url("./sources/logos/cards/card2.png");
+    background-size: 300px auto;
+    background-position: right bottom;
+}
+
+main>.wrapper>div:first-of-type>a:nth-child(3) {
+    background-image: url("./sources/logos/cards/card3.svg");
+    background-size: 130px auto;
+    background-position: right 56px bottom 37px;
+}
+
+main>.wrapper>div:first-of-type>a:nth-child(4) {
+    background-image: url("./sources/logos/cards/card4.svg");
+    background-size: 157px auto;
+    background-position: right 50px bottom 39px;
+}
