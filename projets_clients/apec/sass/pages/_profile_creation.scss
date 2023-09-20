@@ -61,7 +61,7 @@ main{
     }
 
     &::before {
-        content: url('../../sources/logos/apec.svg');
+        content: url('/sources/logos/apec.svg');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         display: block;
@@ -89,7 +89,7 @@ main{
         position: relative;
 
         &::before {
-            content: url('../../sources/icons/4fleches.svg');
+            content: url('/sources/icons/4fleches.svg');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             display: block;
@@ -255,7 +255,7 @@ main{
         }
 
         &::before {
-            content: url('../../sources/icons/triangle.svg');
+            content: url('/sources/icons/triangle.svg');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             display: none;
