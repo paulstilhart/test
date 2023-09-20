@@ -20192,7 +20192,7 @@ main {
   }
 }
 .profile_creation__col--left::before {
-  content: url("/sources/logos/apec.svg");
+  content: url("../../sources/logos/apec.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: block;
@@ -20220,7 +20220,7 @@ main {
   position: relative;
 }
 .profile_creation__col--left h2::before {
-  content: url("/sources/icons/4fleches.svg");
+  content: url("../../sources/icons/4fleches.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: block;
@@ -20375,7 +20375,7 @@ main {
   }
 }
 .profile_creation__col--right .content_box::before {
-  content: url("/sources/icons/triangle.svg");
+  content: url("../../sources/icons/triangle.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: block;

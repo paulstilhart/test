@@ -61,7 +61,7 @@ main{
     }
 
     &::before {
-        content: url('../../sources/logos/apec.svg')
+        content: url('../../sources/logos/apec.svg');
         background-repeat: no-repeat;
         background-size: 100% 100%;
         display: block;
