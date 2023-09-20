@@ -1,0 +1,71 @@
+$white: #ffffff;
+$black: #000000;
+$border-grey: #cfcfcf;
+$bluegray: #7a8999;
+$primary-yellow: #fdc300;
+$neutre: #000000;
+$neutre-hover: #000000;
+$primary-yellow-hover: #ffd038;
+$primary-blue: #232558; //1B3744
+$primary-blue-hover: #232558; //1B3744
+$secondary-blue: #026096;
+$terciary-blue: #0089FF;
+$quaternary-blue: #6b6de7;
+$primary-green: #00C4A5;
+$secondary-green: #33d04d;
+$primary-orange: #FF531F; // rgb(255,83,31)
+$secondary-orange: #FFA300; // rgb(255,163,0)
+$candidat: $secondary-blue;
+$candidat-hover: lighten($secondary-blue, .5);
+/*$candidat: #ff4365;*/
+/*$candidat-hover: #f72d52;*/ //FA4A41
+$recruteur: $secondary-blue;
+$recruteur-hover: lighten($secondary-blue, .5);
+/*$recruteur: #00b6e7;
+$recruteur-hover: #0198c2;*/
+$centres: #71a13a;
+$centres-hover: #294b2b;
+$outils: #e73b2b;
+$outils-hover: #e73b2b;
+$tendances: #e869a4;
+$tendances-hover: #e2388c;
+$evenements: #005795;
+$evenements-hover: #003a5d;
+$card-problematic: #6b6de7;
+$card-testimony: #6b6de7;
+
+/* Background */
+$bg: #fff;
+$bg-cadre: hwb(206 11% 73% / 0.1);
+$bg-card-beige: rgba(247, 244, 238, 1.0); /*#f7f4ee*/
+$bg-secondary-blue-light: #E5EFF4; /* equivalent à rgba($secondary-blue, .1) et rgba(2, 96, 150, 0.1); */
+$bg-card: #ff531f;
+$gradient-candidat-dark: #f57558;
+$gradient-candidat-light: #fcb096;
+$gradient-recruteur-light: #005795;
+$gradient-recruteur-dark: #003a5d;
+
+/* Typo */
+$text: #232558;
+$caption: #7997af;
+$alert: #e73b2b;
+
+/* Other */
+
+$nav-border: #edf7f7;
+$overlay-popin: #011b1f;
+
+/* Shadow */
+$card-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+$card-shadow-hover: 0px 1px 6px 1px rgba(0, 0, 0, 0.3);
+
+/* Slidetoggle */
+
+$slide-toggle-bar-bg: rgba($primary-blue, 0.4);
+$slide-toggle-bar-checked-bg: rgba($primary-blue, 0.8);
+
+/* Calendar */
+$calendar-header-bg: #0089FF;
+
+/* marge du title-page */
+$title-page-mt: 3.7rem;

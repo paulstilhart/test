@@ -1,6 +1,4 @@
-@import "./base/reset_variables";
-@import "./base/global";
-@import "./base/template";
-@import "./components/components";
-@import "./layout/header";
-@import "./layout/footer";
+@import "../sass/base/variables";
+@import "../sass/base/global";
+@import "../sass/base/template";
+@import "../sass/pages/profile_creation";
