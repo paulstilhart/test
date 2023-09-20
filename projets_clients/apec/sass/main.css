@@ -20378,12 +20378,17 @@ main {
   content: url("../../sources/icons/triangle.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  display: block;
+  display: none;
   width: 21px;
   height: 20px;
   position: absolute;
   top: -15px;
   left: 30px;
+}
+@media (min-width: 992px) {
+  .profile_creation__col--right .content_box::before {
+    display: block;
+  }
 }
 .profile_creation__col--right .content_box > div:first-of-type {
   width: auto;
