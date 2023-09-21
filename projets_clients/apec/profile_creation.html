@@ -86,7 +86,7 @@
           </div>
           <div class="button_box">
             <button>Reprendre plus tard</button>
-            <button disabled>COMMENCER</button>
+            <button class="js_button_start" disabled>COMMENCER</button>
           </div>
         </div>
       </div>
@@ -98,16 +98,23 @@
   <script>
     const js_trigger = document.querySelectorAll('.js_trigger');//les triggers
     const js_show = document.querySelectorAll('.js_show');//les items à afficher ou non
+    const js_button_start = document.querySelector('.js_button_start');//le bouton start
 
     //Ecouteur d'evenement click sur un js_trigger
     js_trigger.forEach(trigger => trigger.addEventListener("click", event => {
+      js_button_start.removeAttribute('disabled');
+      
       let trigger_number = trigger.getAttribute('data-trigger');
+
       js_trigger.forEach(trigger => trigger.classList.remove('active'));
       trigger.classList.add('active');
 
       js_show.forEach(item => item.classList.remove('active'));
       (document.querySelector(`[data-trigger="${trigger_number}"].js_show`)).classList.add('active');
+
+      
     }));
+
   </script>
   <!-- FIN script JS à récupérer -->
 
