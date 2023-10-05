@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('../../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../../fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: 'Montserrat-Regular';
+    src: url('../../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('../../fonts/Roboto-Thin.woff2') format('woff2'),
+        url('../../fonts/Roboto-Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../../fonts/Roboto-Medium.woff2') format('woff2'),
+        url('../../fonts/Roboto-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+$ms_semibold: 'Montserrat-SemiBold',
+Verdana,
+Arial,
+sans-serif;
+
+$ms_regular: 'Montserrat-Regular',
+Verdana,
+Arial,
+sans-serif;
+
+$rb_thin: 'Roboto-Thin',
+Verdana,
+Arial,
+sans-serif;
+
+$rb_regular: 'Roboto-Regular',
+Verdana,
+Arial,
+sans-serif;
+
+$rb_medium: 'Roboto-Medium',
+Verdana,
+Arial,
+sans-serif;
+
+$rb_bold: 'Roboto-Bold',
+Verdana,
+Arial,
+sans-serif;
+
+@mixin ms_semibold {
+    font-family: $ms_semibold;
+}
+
+@mixin ms_regular {
+    font-family: $ms_regular;
+}
+
+@mixin rb_thin {
+    font-family: $rb_thin;
+}
+
+@mixin rb_regular {
+    font-family: $rb_regular;
+}
+
+@mixin rb_medium {
+    font-family: $rb_medium;
+}
+
+@mixin rb_bold {
+    font-family: $rb_bold;
+}

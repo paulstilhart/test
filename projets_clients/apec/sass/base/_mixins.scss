@@ -1,0 +1,146 @@
+@import 'variables';
+@import 'fonts';
+
+
+@mixin font-size($sizeValue, $important: false) {
+    @if $important {
+        font-size: $sizeValue + px !important;
+        font-size: ($sizeValue / 10) + rem !important;
+    }
+    @else {
+        font-size: $sizeValue + px;
+        font-size: ($sizeValue / 10) + rem;
+    }
+}
+
+@mixin line-height($sizeValue) {
+    line-height: $sizeValue + px;
+    line-height: ($sizeValue / 10) + rem;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin button-base($background: $primary-yellow, $color: $primary-blue, $background-hover: $primary-yellow-hover, $border: none, $border-hover: none, $negative: $white ) {
+    background-color: $background;
+    color:  $color;
+    border: $border;
+    text-decoration: none;
+    outline: 0;
+    border-radius: 3px;
+    @include ms_semibold;
+    @include font-size(12);
+    line-height: normal;
+    padding: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    min-width: 20rem;
+    width: fit-content;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+    &:hover {
+        transition: all 0.3s ease;
+        background-color: $background-hover;
+        color: $color;
+        text-decoration: none;
+    }
+    &:focus {
+         box-shadow: none;
+     }
+
+    &:active:focus {
+        box-shadow: none !important;
+    }
+    &.btn-negative {
+        border: 1px solid $negative;
+    }
+}
+
+@mixin button-small-base($background: $primary-yellow, $color: $primary-blue, $background-hover: $primary-yellow-hover, $border: none, $border-hover: none, $negative: $white ) {
+    background-color: $background;
+    color:  $color;
+    border: $border;
+    text-decoration: none;
+    outline: 0;
+    border-radius: 3px;
+    @include ms_semibold;
+    @include font-size(12);
+    line-height: normal;
+    padding: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    min-width: 90px;
+    width: fit-content;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+    &:hover {
+        transition: all 0.3s ease;
+        background-color: $background-hover;
+        color: $color;
+        text-decoration: none;
+    }
+    &:focus {
+         box-shadow: none;
+     }
+
+    &:active:focus {
+        box-shadow: none !important;
+    }
+    &.btn-negative {
+        border: 1px solid $negative;
+    }
+}
+
+@mixin button-icone($background: rgba(255, 83, 31, 0.17), $color: $text, $background-neutre: rgba(#707070, .14) ) {
+    height: 37px;
+    min-width: 38px;
+    border-radius: 3px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $background;
+    svg, img{
+        max-height: 20px;
+        height:18px;
+        margin: 10px;
+    }
+    &.delate{
+        svg{
+            width: 15px;
+        }
+    }
+    span{
+        margin-right: 10px;
+    }
+
+
+    &.neutre{
+        background: $background-neutre;
+        color: $color;
+        svg{
+            fill: $color;
+        }
+    }
+}

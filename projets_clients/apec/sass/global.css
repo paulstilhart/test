@@ -33,7 +33,7 @@ $recruteur-hover: #0198c2;*/
 /* Slidetoggle */
 /* Calendar */
 /* marge du title-page */
-@import url(../angular/composants/comp_chart-radar.css);
+/*  @import url(../angular/composants/comp_chart-radar.css);*/
 @font-face {
   font-family: 'Montserrat-SemiBold';
   src: url("../../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../../fonts/Montserrat-SemiBold.woff") format("woff");
