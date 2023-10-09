@@ -24,6 +24,7 @@
 }
 
 
+
 //================================ CODE SCSS DU PROJET =======================================
 
 .creation_profil {
@@ -100,7 +101,7 @@
 
     >.action_box {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
         column-gap: 40px;
@@ -171,7 +172,7 @@
             flex-direction: row;
         }
 
-        &::before{
+        &::before {
             content: '';
             background-repeat: no-repeat;
             background-size: 100% 100%;
@@ -192,7 +193,7 @@
             }
         }
 
-        &[data-trigger='2']::before{
+        &[data-trigger='2']::before {
             left: 260px;
         }
 

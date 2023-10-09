@@ -164,7 +164,7 @@ $recruteur-hover: #0198c2;*/
 }
 .creation_profil > .action_box {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   -moz-column-gap: 40px;
