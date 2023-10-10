@@ -88,10 +88,15 @@
                 cursor: pointer;
                 padding: 0px 20px;
                 width: fit-content;
+                transition: box-shadow 0.2s;
 
                 &.active {
                     color: $white;
                     background-color: $text;
+                }
+
+                &:hover {
+                    box-shadow: $card-shadow;
                 }
             }
         }
@@ -130,6 +135,7 @@
             font-style: normal;
             font-weight: 700;
             line-height: 18px;
+            text-transform: capitalize;
             text-decoration-line: underline;
             color: $text;
             background-color: $white;
@@ -137,20 +143,26 @@
 
 
         button:last-of-type {
-            font-family: $ms_regular;
+            font-family: $ms_semibold;
             font-size: 12px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 600;
             line-height: normal;
-            text-transform: uppercase;
-            border-radius: 5px;
+            text-transform: capitalize;
+            border-radius: 3px;
             padding: 16px 40px;
             color: $text;
             background-color: $primary-yellow;
+            transition: background-color 0.2s;
 
             &[disabled] {
                 color: $white;
                 background-color: $border-grey;
+            }
+
+            &:not([disabled]):hover {
+                color: $text;
+                background-color: $primary-yellow-hover;
             }
         }
     }
@@ -172,28 +184,37 @@
             flex-direction: row;
         }
 
-        &::before {
-            content: '';
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            display: none;
-            /* Définissez les dimensions du carré */
-            width: 21px;
-            height: 20px;
+        >span {
+            display: block;
+            background-color: $white;
+            height: 1px;
+            width: 15px;
             position: absolute;
-            top: -20px;
+            top: -1px;
             left: 30px;
-            background-color: $secondary-blue;
-
-            /* Définissez la forme découpée en un carré de 30px par 30px */
-            clip-path: polygon(0 100%, 50% 0, 100% 100%, 94% 100%, 50% 11%, 7% 100%);
+            display: none;
 
             @include lg992 {
                 display: block;
             }
+
+            &::before {
+                content: '';
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 17px;
+                height: 15px;
+                position: absolute;
+                top: -14px;
+                left: -1px;
+                background-color: $secondary-blue;
+
+                /* Définissez la forme découpée en un carré de 30px par 30px */
+                clip-path: polygon(0 100%, 50% 0, 100% 100%, 94% 100%, 50% 12%, 6% 100%);
+            }
         }
 
-        &[data-trigger='2']::before {
+        &[data-trigger='2']>span {
             left: 260px;
         }
 
@@ -306,6 +327,7 @@
             em {
                 font-size: 13px;
                 font-style: italic;
+                line-height: 22px;
             }
         }
     }

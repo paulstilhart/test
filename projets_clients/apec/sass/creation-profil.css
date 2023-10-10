@@ -157,10 +157,14 @@ $recruteur-hover: #0198c2;*/
   padding: 0px 20px;
   width: -moz-fit-content;
   width: fit-content;
+  transition: box-shadow 0.2s;
 }
 .creation_profil > .situation_box > div button.active {
   color: #ffffff;
   background-color: #232558;
+}
+.creation_profil > .situation_box > div button:hover {
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
 }
 .creation_profil > .action_box {
   display: flex;
@@ -194,25 +198,31 @@ $recruteur-hover: #0198c2;*/
   font-style: normal;
   font-weight: 700;
   line-height: 18px;
+  text-transform: capitalize;
   text-decoration-line: underline;
   color: #232558;
   background-color: #ffffff;
 }
 .creation_profil > .action_box button:last-of-type {
-  font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
-  text-transform: uppercase;
-  border-radius: 5px;
+  text-transform: capitalize;
+  border-radius: 3px;
   padding: 16px 40px;
   color: #232558;
   background-color: #fdc300;
+  transition: background-color 0.2s;
 }
 .creation_profil > .action_box button:last-of-type[disabled] {
   color: #ffffff;
   background-color: #cfcfcf;
+}
+.creation_profil > .action_box button:last-of-type:not([disabled]):hover {
+  color: #232558;
+  background-color: #ffd038;
 }
 .creation_profil > .content_box {
   padding: 20px;
@@ -232,28 +242,36 @@ $recruteur-hover: #0198c2;*/
     flex-direction: row;
   }
 }
-.creation_profil > .content_box::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display: none;
-  /* Définissez les dimensions du carré */
-  width: 21px;
-  height: 20px;
+.creation_profil > .content_box > span {
+  display: block;
+  background-color: #ffffff;
+  height: 1px;
+  width: 15px;
   position: absolute;
-  top: -20px;
+  top: -1px;
   left: 30px;
-  background-color: #026096;
-  /* Définissez la forme découpée en un carré de 30px par 30px */
-  -webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%, 94% 100%, 50% 11%, 7% 100%);
-          clip-path: polygon(0 100%, 50% 0, 100% 100%, 94% 100%, 50% 11%, 7% 100%);
+  display: none;
 }
 @media (min-width: 992px) {
-  .creation_profil > .content_box::before {
+  .creation_profil > .content_box > span {
     display: block;
   }
 }
-.creation_profil > .content_box[data-trigger="2"]::before {
+.creation_profil > .content_box > span::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 17px;
+  height: 15px;
+  position: absolute;
+  top: -14px;
+  left: -1px;
+  background-color: #026096;
+  /* Définissez la forme découpée en un carré de 30px par 30px */
+  -webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%, 94% 100%, 50% 12%, 6% 100%);
+          clip-path: polygon(0 100%, 50% 0, 100% 100%, 94% 100%, 50% 12%, 6% 100%);
+}
+.creation_profil > .content_box[data-trigger="2"] > span {
   left: 260px;
 }
 .creation_profil > .content_box > div {
@@ -346,4 +364,5 @@ $recruteur-hover: #0198c2;*/
 .creation_profil > .content_box > div:last-of-type em {
   font-size: 13px;
   font-style: italic;
+  line-height: 22px;
 }
