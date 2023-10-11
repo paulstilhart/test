@@ -198,7 +198,6 @@ $recruteur-hover: #0198c2;*/
   font-style: normal;
   font-weight: 700;
   line-height: 18px;
-  text-transform: capitalize;
   text-decoration-line: underline;
   color: #232558;
   background-color: #ffffff;
@@ -209,7 +208,6 @@ $recruteur-hover: #0198c2;*/
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  text-transform: capitalize;
   border-radius: 3px;
   padding: 16px 40px;
   color: #232558;
@@ -296,10 +294,13 @@ $recruteur-hover: #0198c2;*/
   color: #232558;
   display: inline-flex;
   align-items: center;
+  min-height: 52px;
 }
 .creation_profil > .content_box > div:first-of-type > p {
   margin: 32px 0px;
   font-weight: 700;
+  line-height: 22px;
+  min-height: auto;
 }
 .creation_profil > .content_box > div:first-of-type span {
   font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;

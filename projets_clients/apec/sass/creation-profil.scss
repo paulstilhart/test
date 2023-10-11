@@ -135,7 +135,6 @@
             font-style: normal;
             font-weight: 700;
             line-height: 18px;
-            text-transform: capitalize;
             text-decoration-line: underline;
             color: $text;
             background-color: $white;
@@ -148,7 +147,6 @@
             font-style: normal;
             font-weight: 600;
             line-height: normal;
-            text-transform: capitalize;
             border-radius: 3px;
             padding: 16px 40px;
             color: $text;
@@ -242,11 +240,14 @@
                 color: $text;
                 display: inline-flex;
                 align-items: center;
+                min-height: 52px;
             }
 
             >p {
                 margin: 32px 0px;
                 font-weight: 700;
+                line-height: 22px;
+                min-height: auto;
             }
 
             span {
