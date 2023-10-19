@@ -100,26 +100,20 @@ $recruteur-hover: #0198c2;*/
 .creation_profil {
   background-color: #ffffff;
   color: #232558;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
-  padding: 16px;
+  padding: 0px 15px 0px 15px;
   display: flex;
   flex-direction: column;
-  row-gap: 35px;
-}
-@media (min-width: 992px) {
-  .creation_profil {
-    padding: 20px !important;
-  }
 }
 .creation_profil > h1 {
   margin: 0;
   color: #232558;
-  font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
   font-size: 30px;
   font-style: normal;
-  font-weight: 500;
   line-height: 35px;
   text-align: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .creation_profil > .situation_box > p {
   margin: 0;
@@ -231,6 +225,7 @@ $recruteur-hover: #0198c2;*/
        column-gap: 40px;
   row-gap: 28px;
   display: none;
+  margin-top: 30px;
 }
 .creation_profil > .content_box.active {
   display: flex;

@@ -30,26 +30,21 @@
 .creation_profil {
     background-color: $white;
     color: $text;
-    box-shadow: $card-shadow;
-    padding: 16px;
+    padding: 0px 15px 0px 15px;
     display: flex;
     flex-direction: column;
-    row-gap: 35px;
 
-    @include lg992 {
-        padding: 20px !important;
-    }
 
     >h1 {
         margin: 0;
         color: $text;
-        font-family: $ms_regular;
+        font-family: $ms_semibold;
         font-size: 30px;
         font-style: normal;
-        font-weight: 500;
         line-height: 35px;
         text-align: left;
-
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     >.situation_box {
@@ -173,6 +168,7 @@
         column-gap: 40px;
         row-gap: 28px;
         display: none;
+        margin-top: 30px;
 
         &.active {
             display: flex;
