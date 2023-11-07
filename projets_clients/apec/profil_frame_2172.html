@@ -28,12 +28,12 @@
       <div class="container">
         <div class="row">
           <!-- DEBUT CODE A RECUPERER -->
-          <div class="wish_profil card col-xl-9 col-lg-9">
+          <div class="wish_profil js_wish_profil card col-xl-9 col-lg-9">
 
             <div class="pagination_box">
-              <span></span>
-              <span class="active"></span>
-              <span></span>
+              <a href="#"></a>
+              <a class="active" href="#"></a>
+              <a href="#"></a>
             </div>
 
             <h1>Vos souhaits professionnels</h1>
@@ -46,7 +46,7 @@
 
               <div class="salary_box">
                 <p>Salaire minimal (brut annuel K€) * </p>
-                <input maxlength="10" type="text" placeholder="Ex. : 35 000" id="minimum_salary">
+                <input max="999" type="number" placeholder="Ex. : 36" id="minimum_salary">
                 <div>
                   <input type="checkbox" id="minimum_salary_hide" name="minimum_salary_hide"
                     value="minimum_salary_hide" />
@@ -54,44 +54,68 @@
                 </div>
               </div>
 
-              <div class="job_box">
+              <div class="job_box js_job_box">
                 <p>Les métiers les plus représentatifs du poste souhaité *</p>
                 <p>Nous vous proposons ces métiers par rapport au poste que vous recherchez.</p>
+
                 <div>
-                  <div>
-                    <span>Métier</span>
-                    <span>Métier</span>
-                    <span>Métier</span>
+
+                  <div class="js_job_box_items">
+                    <p title="Auditeur externe"><span>Auditeur externe</span></p>
+                    <p title="Responsable de la relation clients"><span>Responsable de la relation clients</span></p>
+                    <p title="Architecte BTP"><span>Architecte BTP</span></p>
+                    <p title="Ingénieur d’études réseaux et communications"><span>Ingénieur d’études réseaux et
+                        communications</span></p>
+                    <p title="Architecte naval"><span>Architecte naval</span></p>
+                    <p title="Chef de projet travaux"><span>Chef de projet travaux</span></p>
                   </div>
-                  <button>Aucune suggestion ne correspond au métier que vous recherchez ?</button>
+
+                  <p class="js_job_box_warning_maximum">!! Nombre de métiers maximum atteint</p>
+                  <p class="active js_job_box_suggestions">Obtenez plus de suggestions en renseignant un intitulé dans
+                    le champ
+                    ci-dessous</p>
+                  <p class="js_job_box_no_suggestions">Aucune suggestion ne correspond au poste que vous avez
+                    saisi. Saisissez un intitulé
+                    dans
+                    le champ ci-dessous et choisissez le(s) métier(s) proposé(s)</p>
+                  <input class="js_job_box_warning_maximum" maxlength="50" type="text"
+                    placeholder="Saisissez un intitulé de poste" id="adress">
                 </div>
+
               </div>
 
-              <div class="sector_box">
+              <div class="sector_box js_sector_box">
                 <p>Un ou des secteurs que vous souhaitez (5 max) *</p>
                 <p>Nous vous proposons ces secteurs par rapport à ceux qui recrutent le plus en ce moment.</p>
                 <div>
-                  <div>
-                    <span>Secteur d’activité</span>
-                    <span>Secteur d’activité</span>
-                    <span>Secteur d’activité</span>
-                    <span>Secteur d’activité</span>
-                    <span>Secteur d’activité</span>
-                    <span>Secteur d’activité</span>
+                  <div class="js_sector_box_items">
+                    <p>Secteur d’activité</p>
+                    <p>Secteur d’activité</p>
+                    <p>Secteur d’activité</p>
+                    <p>Secteur d’activité</p>
+                    <p>Secteur d’activité</p>
+                    <p>Secteur d’activité</p>
+                    <p>Secteur d’activité</p>
+                    <p>Secteur d’activité</p>
+                    <p>Secteur d’activité</p>
+                    <p>Secteur d’activité</p>
+                    <p>Secteur d’activité</p>
+                    <p>Secteur d’activité</p>
                   </div>
-                  <button>Voir plus</button>
+                  <p class="js_sector_box_warning_maximum">!! Nombre de secteurs maximum atteint</p>
+                  <button class="js_sector_box_unfold_trigger">Voir plus</button>
                 </div>
               </div>
 
 
               <div class="location_box">
                 <p>Les lieux où vous recherchez un poste *</p>
-                <input maxlength="50" type="text" placeholder="Ex. : Saisissez une région, un département, une ville"
+                <input maxlength="50" type="text" placeholder="Saisissez un pays, une région ou un département"
                   id="adress">
                 <div>
-                  <span>Boulogne billancourt - 5 km</span>
-                  <span>Val-de-Marne (94)</span>
-                  <span>Val-de-Marne (94)</span>
+                  <p>Boulogne billancourt - 5 km</p>
+                  <p>Val-de-Marne (94)</p>
+                  <p>Val-de-Marne (94)</p>
                 </div>
               </div>
 
@@ -99,9 +123,9 @@
 
             <div class="action_box">
               <div>
-                <button class="js_button_start" disabled>Précédent</button>
+                <button class="js_button_start">Précédent</button>
                 <p>Etape 2/3</p>
-                <button class="js_button_start" disabled>Continuer et enregistrer</button>
+                <button class="js_button_start">Continuer et enregistrer</button>
               </div>
               <button>Reprendre plus tard</button>
             </div>
@@ -109,10 +133,25 @@
           </div>
 
           <div class="wish_profil_help col-xl-3 col-lg-3">
-            <div class="card">
-              <h3>Une ou des catégories la plus représentative de votre métier</h3>
-              <p>Les catégories nous permettent de faciliter votre recherche auprès des recruteurs. Plus votre métier
-                est précis grâce aux catégories, plus votre profil ressortira dans leur recherche</p>
+            <div class="card js_job_box_help">
+              <h3>Les métiers souhaités</h3>
+              <p><em>Choisissez-en plusieurs. Vous pouvez aussi élargir avec d’autres métiers qui vous correspondraient
+                davantage. Evitez de valider un seul métier ou tous les métiers : plus le poste souhaité est précis
+                grâce aux métiers, plus votre profil ressortira dans la recherche des recruteurs <strong>correspondant à leur
+                besoin.</strong>
+                <br>
+                <br>
+                Vous pourrez constater une différence entre ce que vous avez saisi et l’étiquette affichée. Il s’agit de
+                la correspondance entre le poste saisi et les métiers selon le référentiel Apec.</em></p>
+            </div>
+            <div class="card js_sector_box_help">
+              <h3>Les secteurs souhaités</h3>
+              <p><em>Concentrez-vous sur le ou les secteurs d’activité les plus représentatifs de la zone d’emploi sur
+                laquelle vous souhaitez travailler.
+                <br>
+                <br>
+                Ce choix optimise vos opportunités d’être contacté par les recruteurs de ces secteurs</em>
+              </p>
             </div>
           </div>
           <!-- FIN CODE A RECUPERER -->
@@ -125,7 +164,159 @@
 
 
   <!-- DEBUT script JS à récupérer -->
-  <script></script>
+  <script>
+
+    //Pour réguler la longueur d'un input
+    function limitInputLength(inputId, maxLength) {
+      const inputElement = document.getElementById(inputId);
+
+      if (inputElement) {
+        inputElement.addEventListener('input', function () {
+          if (this.value.length > maxLength) {
+            this.value = this.value.slice(0, maxLength);
+          }
+        });
+      } else {
+        console.error(`Element with ID ${inputId} not found.`);
+      }
+    };
+
+
+    //si pas de métiers à l'arrivée sur la page
+    //Il faut bien ne pas envoyer d'éléments <p> vers le front pour que ce script js fonctionne
+    function jobsEmpty(boxClass) {
+      const pItems = document.querySelectorAll(`.${boxClass}_items>p`);
+      const noSuggestions = document.querySelector(".js_job_box_no_suggestions");
+      const suggestions = document.querySelector(".js_job_box_suggestions");
+
+      noSuggestions.classList.toggle("active", pItems.length < 1);
+      suggestions.classList.toggle("active", pItems.length >= 1);
+    };
+
+
+    function toggleActiveClassAndCheckMaxJobs(boxClass, maxActiveJobs) {
+      const pItems = document.querySelectorAll(`.${boxClass}_items>p`);
+      const pWarningMaximum = document.querySelector("p.js_job_box_warning_maximum");
+      const inputWarningMaximum = document.querySelector("input.js_job_box_warning_maximum");
+
+      pItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const pItemsActive = document.querySelectorAll(`.${boxClass}_items>p.active`);
+
+          if (pItemsActive.length === maxActiveJobs && !item.classList.contains("active")) {
+            return;
+          }
+
+          if (pItemsActive.length === maxActiveJobs - 1 && !item.classList.contains("active")) {
+            pWarningMaximum.classList.add("active");
+            inputWarningMaximum.setAttribute("disabled", "true");
+            inputWarningMaximum.placeholder = "Vous avez atteint la limite maximum de cinq métiers.";
+
+          } else {
+            pWarningMaximum.classList.remove("active");
+            inputWarningMaximum.removeAttribute("disabled");
+            inputWarningMaximum.placeholder = "Saisissez un intitulé de poste";
+          }
+
+          item.classList.toggle('active');
+
+        });
+      });
+    };
+
+
+
+    function toggleActiveClassAndCheckMaxSectors(boxClass, maxActiveSectors) {
+      const pItems = document.querySelectorAll(`.${boxClass}_items>p`);
+      const pWarningMaximum = document.querySelector("p.js_sector_box_warning_maximum");
+
+      pItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const pItemsActive = document.querySelectorAll(`.${boxClass}_items>p.active`);
+
+          if (pItemsActive.length === maxActiveSectors && !item.classList.contains("active")) {
+            return;
+          }
+
+          if (pItemsActive.length === maxActiveSectors - 1 && !item.classList.contains("active")) {
+            pWarningMaximum.classList.add("active");
+
+          } else {
+            pWarningMaximum.classList.remove("active");
+          }
+
+          item.classList.toggle('active');
+        });
+      });
+    };
+
+
+    function unfoldJobs() {
+      const js_sector_box_items = document.querySelector(".js_sector_box_items");
+      const js_sector_box_unfold_trigger = document.querySelector(".js_sector_box_unfold_trigger");
+
+      js_sector_box_unfold_trigger.addEventListener("click", function () {
+        const js_sector_box_items_height = js_sector_box_items.scrollHeight;
+
+        if (js_sector_box_items.classList.contains('active')) {
+          js_sector_box_items.style.maxHeight = "";
+          js_sector_box_items.classList.remove('active');
+          js_sector_box_unfold_trigger.classList.remove('active');
+          js_sector_box_unfold_trigger.textContent = "Voir plus";
+
+        } else {
+          js_sector_box_items.style.maxHeight = js_sector_box_items_height + 'px';
+          js_sector_box_items.classList.add('active');
+          js_sector_box_unfold_trigger.classList.add('active');
+          js_sector_box_unfold_trigger.textContent = "Voir moins";
+        }
+      });
+    }
+
+
+    function distanceBetweenItems(classeElement1, classeElement2) {
+      const element1 = document.querySelector(classeElement1);
+      const element2 = document.querySelector(classeElement2);
+
+      if (element1 && element2) {
+        // Calculer la hauteur entre les deux éléments
+        return element2.offsetTop - element1.offsetTop;
+      } else {
+        console.error(`L'un ou les deux éléments n'ont pas été trouvés : ${classeElement1}, ${classeElement2}`);
+        return null;
+      }
+    }
+
+
+    function applyTranslateYHelp() {
+      const js_job_box_help = document.querySelector('.js_job_box_help');
+      const js_sector_box_help = document.querySelector('.js_sector_box_help');
+
+      if (js_job_box_help) {
+        translateYValue = distanceBetweenItems(".js_wish_profil", ".js_job_box");
+        js_job_box_help.style.marginTop = `${translateYValue}px`;
+      }
+
+      /*  
+      if (js_sector_box_help) {
+        translateYValue = distanceBetweenItems(".js_wish_profil", ".js_sector_box");
+        js_sector_box_help.style.transform = `translateY(${translateYValue}px)`;
+      }
+      */
+    }
+
+
+    //Que l'on applique à minimum salary
+    limitInputLength('minimum_salary', 3);
+    jobsEmpty('js_job_box');
+    toggleActiveClassAndCheckMaxJobs('js_job_box', 5);
+    toggleActiveClassAndCheckMaxSectors('js_sector_box', 5);
+    unfoldJobs();
+    applyTranslateYHelp();
+
+
+
+  </script>
   <!-- FIN script JS à récupérer -->
 
 </body>

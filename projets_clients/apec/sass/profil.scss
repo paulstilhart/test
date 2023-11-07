@@ -352,7 +352,7 @@
             top: 50px;
         }
 
-        >span {
+        >a {
             width: 20px;
             height: 20px;
             border-radius: 100px;
@@ -443,8 +443,13 @@
             padding: 10px;
             margin: 6px 0px 16px 0px;
 
-            ::placeholder {
+            &::placeholder {
                 color: $bluegray;
+            }
+
+            &:focus,
+            &:focus-visible {
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
             }
         }
 
@@ -513,21 +518,23 @@
             >div {
                 display: flex;
                 flex-wrap: wrap;
-                column-gap: 17px;
+                column-gap: 10px;
                 row-gap: 10px;
 
-                >span {
+
+                >p {
+                    margin: 0;
                     font-family: $ms_regular;
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 20px;
                     border-radius: 6px;
-                    outline: 1px solid $secondary-blue;
+                    border: 1px solid $secondary-blue;
                     padding: 10px 16px;
                     display: inline-flex;
                     align-items: center;
-
+                    cursor: pointer;
 
                     &::after {
                         content: url('../sources/icons/plus.svg');
@@ -535,27 +542,89 @@
                         width: 20px;
                         height: 20px;
                         margin-left: 10px;
-                        cursor: pointer;
                     }
+
+                    >span {
+                        max-width: 188px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+
+
+                    &:hover {
+                        box-shadow: $card-shadow;
+                    }
+
+
+                    &.active {
+                        color: $white;
+                        background-color: $text;
+
+                        &::after {
+                            content: url('../sources/icons/delete_white.svg');
+                        }
+                    }
+
                 }
             }
 
-            button {
+            >p {
                 margin: 0;
                 color: $text;
-                font-family: $ms_semibold;
+                font-family: $ms_regular;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+                text-align: left;
+                display: none;
+                margin: 15px 0px;
+
+                &.active {
+                    display: block;
+                }
+
+                &:first-of-type {
+                    color: $alert;
+                    font-family: $ms_semibold;
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+
+                &:last-of-type {
+                    margin: 0px 0px 30px 0px;
+                }
+            }
+
+            >input {
+                margin: 0;
+                color: $text;
+                font-family: $ms_regular;
                 font-size: 12px;
                 font-style: normal;
-                font-weight: 700;
-                line-height: 18px;
-                text-decoration-line: underline;
-                background-color: unset;
-                padding: 0;
-                border: none;
-                outline: none;
-                cursor: pointer;
-                margin-top: 10px;
-                text-align: left;
+                font-weight: 400;
+                line-height: 22px;
+                border-radius: 2px;
+                border: 1px solid $border-grey;
+                width: 550px;
+                max-width: 100%;
+                height: 32px;
+                padding: 10px;
+                margin-bottom: 10px;
+
+                &[disabled] {
+                    background-color: $bg-cadre;
+                }
+
+                &::placeholder {
+                    color: $bluegray;
+                }
+
+                &:focus,
+                &:focus-visible {
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                }
             }
         }
     }
@@ -605,18 +674,23 @@
                 flex-wrap: wrap;
                 column-gap: 17px;
                 row-gap: 10px;
+                max-height: 96px;
+                overflow-y: hidden;
+                transition: max-height 0.3s ease;
 
-                >span {
+                >p {
+                    margin: 0;
                     font-family: $ms_regular;
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 20px;
                     border-radius: 6px;
-                    outline: 1px solid $secondary-blue;
+                    border: 1px solid $secondary-blue;
                     padding: 10px 16px;
                     display: inline-flex;
                     align-items: center;
+                    cursor: pointer;
 
 
                     &::after {
@@ -625,8 +699,38 @@
                         width: 20px;
                         height: 20px;
                         margin-left: 10px;
-                        cursor: pointer;
                     }
+
+                    &:hover {
+                        box-shadow: $card-shadow;
+                    }
+
+
+                    &.active {
+                        color: $white;
+                        background-color: $text;
+
+                        &::after {
+                            content: url('../sources/icons/delete_white.svg');
+                        }
+                    }
+                }
+            }
+
+            >p {
+                margin: 0;
+                color: $alert;
+                font-family: $ms_semibold;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 18px;
+                text-align: left;
+                display: none;
+                margin-top: 10px;
+
+                &.active {
+                    display: block;
                 }
             }
 
@@ -653,6 +757,12 @@
                     display: inline-block;
                     width: 20px;
                     height: 20px;
+                    transition: transform 0.3s;
+                    transform: rotate(0deg);
+                }
+
+                &.active::before {
+                    transform: rotate(180deg);
                 }
             }
         }
@@ -685,8 +795,13 @@
             padding: 10px;
             margin: 6px 0px 10px 0px;
 
-            ::placeholder {
+            &::placeholder {
                 color: $bluegray;
+            }
+
+            &:focus,
+            &:focus-visible {
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
             }
         }
 
@@ -696,17 +811,19 @@
             column-gap: 17px;
             row-gap: 10px;
 
-            >span {
+            >p {
+                margin: 0;
                 font-family: $ms_regular;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 16.8px;
                 border-radius: 6px;
-                outline: 1px solid $secondary-blue;
+                border: 1px solid $secondary-blue;
                 padding: 10px 16px;
                 display: inline-flex;
                 align-items: center;
+                cursor: pointer;
 
 
                 &::after {
@@ -715,7 +832,6 @@
                     width: 16px;
                     height: 16px;
                     margin-left: 18px;
-                    cursor: pointer;
                 }
             }
         }
@@ -763,11 +879,12 @@
                 border-radius: 5px;
                 cursor: pointer;
                 transition: all 0.2s;
+                outline: none;
 
                 &:first-of-type {
                     color: $secondary-blue;
                     background-color: $white;
-                    outline: 1px solid $secondary-blue;
+                    border: 1px solid $secondary-blue;
 
                     &:hover {
                         box-shadow: $card-shadow;
@@ -796,14 +913,18 @@
             background-color: $white;
             cursor: pointer;
             margin-top: 10px;
+            outline: none;
         }
     }
 }
 
 .wish_profil_help {
+    >div:first-of-type{
+        margin-top: 0px;
+        margin-bottom:15px;
+    }
     >div {
         padding: 15px;
-        transform: translateY(100px);
 
         >h3 {
             margin: 0;
@@ -833,6 +954,10 @@
             font-style: normal;
             font-weight: 400;
             line-height: 22px;
+
+            >em {
+                font-style: italic;
+            }
         }
     }
 }
