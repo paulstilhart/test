@@ -590,6 +590,20 @@
                     font-family: $ms_semibold;
                     font-size: 12px;
                     font-weight: 700;
+                    width: 100%;
+                    margin-bottom: 0px;
+
+                    &.active {
+                        display: inline-flex;
+                    }
+    
+                    &::before {
+                        content: url('../sources/icons/icon_warning.png');
+                        display: inline-block;
+                        width: 20px;
+                        height: 18px;
+                        margin-right: 10px;
+                    }
                 }
 
                 &:last-of-type {
@@ -701,6 +715,13 @@
                         margin-left: 10px;
                     }
 
+                    >span {
+                        max-width: 245px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+
                     &:hover {
                         box-shadow: $card-shadow;
                     }
@@ -728,9 +749,19 @@
                 text-align: left;
                 display: none;
                 margin-top: 10px;
+                align-items: center;
+                width: 100%;
 
                 &.active {
-                    display: block;
+                    display: inline-flex;
+                }
+
+                &::before {
+                    content: url('../sources/icons/icon_warning.png');
+                    display: inline-block;
+                    width: 20px;
+                    height: 18px;
+                    margin-right: 10px;
                 }
             }
 
@@ -751,6 +782,7 @@
                 margin-top: 10px;
                 display: inline-flex;
                 align-items: center;
+                width: 100%;
 
                 &::before {
                     content: url('../sources/icons/cheveron-down.svg');

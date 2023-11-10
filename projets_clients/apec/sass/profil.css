@@ -592,6 +592,18 @@ $recruteur-hover: #0198c2;*/
   font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
+  width: 100%;
+  margin-bottom: 0px;
+}
+.wish_profil .job_box > div > p:first-of-type.active {
+  display: inline-flex;
+}
+.wish_profil .job_box > div > p:first-of-type::before {
+  content: url("../sources/icons/icon_warning.png");
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  margin-right: 10px;
 }
 .wish_profil .job_box > div > p:last-of-type {
   margin: 0px 0px 30px 0px;
@@ -691,6 +703,12 @@ $recruteur-hover: #0198c2;*/
   height: 20px;
   margin-left: 10px;
 }
+.wish_profil .sector_box > div > div > p > span {
+  max-width: 245px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .wish_profil .sector_box > div > div > p:hover {
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
 }
@@ -712,9 +730,18 @@ $recruteur-hover: #0198c2;*/
   text-align: left;
   display: none;
   margin-top: 10px;
+  align-items: center;
+  width: 100%;
 }
 .wish_profil .sector_box > div > p.active {
-  display: block;
+  display: inline-flex;
+}
+.wish_profil .sector_box > div > p::before {
+  content: url("../sources/icons/icon_warning.png");
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  margin-right: 10px;
 }
 .wish_profil .sector_box > div button {
   margin: 0;
@@ -733,6 +760,7 @@ $recruteur-hover: #0198c2;*/
   margin-top: 10px;
   display: inline-flex;
   align-items: center;
+  width: 100%;
 }
 .wish_profil .sector_box > div button::before {
   content: url("../sources/icons/cheveron-down.svg");
