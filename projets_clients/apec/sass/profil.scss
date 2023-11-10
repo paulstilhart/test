@@ -340,16 +340,18 @@
     position: relative;
 
     .pagination_box {
-        position: absolute;
-        top: 13px;
-        right: 15px;
         display: flex;
         align-items: center;
+        justify-content: center;
         column-gap: 20px;
         flex-wrap: nowrap;
+        margin-top: 40px;
 
-        @include md768 {
+        @include lg992 {
+            position: absolute;
             top: 50px;
+            right: 15px;
+            margin-top: 0px;
         }
 
         >a {
@@ -485,6 +487,32 @@
             font-weight: 700;
             line-height: 22px;
             text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include lg992 {
+                display: block;
+            }
+
+            >button {
+                content: '?';
+                flex: none;
+                font-family: $ms_semibold;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                color: $white;
+                background-color: $text;
+                border-radius: 100%;
+                cursor: pointer;
+                padding:0px 7px;
+                line-height: 24px;
+
+                @include lg992 {
+                    display: none;
+                }
+            }
         }
 
         >p:nth-child(2) {
@@ -596,7 +624,7 @@
                     &.active {
                         display: inline-flex;
                     }
-    
+
                     &::before {
                         content: url('../sources/icons/icon_warning.png');
                         display: inline-block;
@@ -653,6 +681,32 @@
             font-weight: 700;
             line-height: 22px;
             text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include lg992 {
+                display: block;
+            }
+
+            >button {
+                content: '?';
+                flex: none;
+                font-family: $ms_semibold;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                color: $white;
+                background-color: $text;
+                border-radius: 100%;
+                cursor: pointer;
+                padding:0px 7px;
+                line-height: 24px;
+
+                @include lg992 {
+                    display: none;
+                }
+            }
         }
 
         >p:nth-child(2) {
@@ -951,10 +1005,16 @@
 }
 
 .wish_profil_help {
-    >div:first-of-type{
+    >div:first-of-type {
         margin-top: 0px;
-        margin-bottom:15px;
+        margin-bottom: 15px;
+
+        @include lg992 {
+            margin-top: 345px;
+
+        }
     }
+
     >div {
         padding: 15px;
 

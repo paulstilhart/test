@@ -370,18 +370,20 @@ $recruteur-hover: #0198c2;*/
   position: relative;
 }
 .wish_profil .pagination_box {
-  position: absolute;
-  top: 13px;
-  right: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
   flex-wrap: nowrap;
+  margin-top: 40px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .wish_profil .pagination_box {
+    position: absolute;
     top: 50px;
+    right: 15px;
+    margin-top: 0px;
   }
 }
 .wish_profil .pagination_box > a {
@@ -501,6 +503,33 @@ $recruteur-hover: #0198c2;*/
   font-weight: 700;
   line-height: 22px;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .wish_profil .job_box > p:first-of-type {
+    display: block;
+  }
+}
+.wish_profil .job_box > p:first-of-type > button {
+  content: "?";
+  flex: none;
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #232558;
+  border-radius: 100%;
+  cursor: pointer;
+  padding: 0px 7px;
+  line-height: 24px;
+}
+@media (min-width: 992px) {
+  .wish_profil .job_box > p:first-of-type > button {
+    display: none;
+  }
 }
 .wish_profil .job_box > p:nth-child(2) {
   margin: 0;
@@ -645,6 +674,33 @@ $recruteur-hover: #0198c2;*/
   font-weight: 700;
   line-height: 22px;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .wish_profil .sector_box > p:first-of-type {
+    display: block;
+  }
+}
+.wish_profil .sector_box > p:first-of-type > button {
+  content: "?";
+  flex: none;
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #232558;
+  border-radius: 100%;
+  cursor: pointer;
+  padding: 0px 7px;
+  line-height: 24px;
+}
+@media (min-width: 992px) {
+  .wish_profil .sector_box > p:first-of-type > button {
+    display: none;
+  }
 }
 .wish_profil .sector_box > p:nth-child(2) {
   margin: 0;
@@ -910,6 +966,11 @@ $recruteur-hover: #0198c2;*/
 .wish_profil_help > div:first-of-type {
   margin-top: 0px;
   margin-bottom: 15px;
+}
+@media (min-width: 992px) {
+  .wish_profil_help > div:first-of-type {
+    margin-top: 345px;
+  }
 }
 .wish_profil_help > div {
   padding: 15px;
