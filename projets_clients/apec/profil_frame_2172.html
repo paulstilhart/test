@@ -55,7 +55,8 @@
               </div>
 
               <div class="job_box js_job_box">
-                <p>Les métiers les plus représentatifs du poste souhaité *<button>?</button></p>
+                <p>Les métiers les plus représentatifs du poste souhaité *<button data-help="js_job_box_help"
+                    class="help_trigger js_help_trigger">?</button></p>
                 <p>Nous vous proposons ces métiers par rapport au poste que vous recherchez.</p>
 
                 <div>
@@ -85,7 +86,8 @@
               </div>
 
               <div class="sector_box js_sector_box">
-                <p>Un ou des secteurs que vous souhaitez (5 max) *<button>?</button></p>
+                <p>Un ou des secteurs que vous souhaitez (5 max) *<button data-help="js_sector_box_help"
+                    class="help_trigger js_help_trigger">?</button></p>
                 <p>Nous vous proposons ces secteurs par rapport à ceux qui recrutent le plus en ce moment.</p>
                 <div>
                   <div class="js_sector_box_items">
@@ -150,15 +152,17 @@
             <div class="card js_job_box_help">
               <h3>Les métiers souhaités</h3>
               <p><em>Saisissez un intitulé ou un mot clé qui soit le plus représentatif de votre métier.
-                Vous pouvez aussi élargir avec d'autres métiers.
-                <br>
-                Vous pourrez constater une différence entre ce que vous avez saisi et l'étiquette affichée. Il s'agit de la correspondance avec les métiers Apec.</em></p>
+                  Vous pouvez aussi élargir avec d'autres métiers.
+                  <br>
+                  Vous pourrez constater une différence entre ce que vous avez saisi et l'étiquette affichée. Il s'agit
+                  de la correspondance avec les métiers Apec.</em></p>
             </div>
             <div class="card js_sector_box_help">
               <h3>Les secteurs souhaités</h3>
-              <p><em>Concentrez-vous sur les secteurs d'activité les plus représentatif de la zone d'emploi sur laquelle vous souhaitez travailler.
-                <br>
-                Ce choix optimise vos opportunités d’être contacté par les recruteurs de ces secteurs.</em>
+              <p><em>Concentrez-vous sur les secteurs d'activité les plus représentatif de la zone d'emploi sur laquelle
+                  vous souhaitez travailler.
+                  <br>
+                  Ce choix optimise vos opportunités d’être contacté par les recruteurs de ces secteurs.</em>
               </p>
             </div>
           </div>
@@ -212,15 +216,12 @@
           const pItemsActive = document.querySelectorAll(`.${boxClass}_items>p.active`);
 
           if (pItemsActive.length === maxActiveJobs && !item.classList.contains("active")) {
-            return;
-          }
-
-          if (pItemsActive.length === maxActiveJobs - 1 && !item.classList.contains("active")) {
             pWarningMaximum.classList.add("active");
             inputWarningMaximum.setAttribute("disabled", "true");
             inputWarningMaximum.placeholder = "Vous avez atteint la limite maximum de cinq métiers.";
-
-          } else {
+            return;
+          }
+          else {
             pWarningMaximum.classList.remove("active");
             inputWarningMaximum.removeAttribute("disabled");
             inputWarningMaximum.placeholder = "Saisissez un intitulé de poste";
@@ -243,13 +244,10 @@
           const pItemsActive = document.querySelectorAll(`.${boxClass}_items>p.active`);
 
           if (pItemsActive.length === maxActiveSectors && !item.classList.contains("active")) {
+            pWarningMaximum.classList.add("active");
             return;
           }
-
-          if (pItemsActive.length === maxActiveSectors - 1 && !item.classList.contains("active")) {
-            pWarningMaximum.classList.add("active");
-
-          } else {
+          else {
             pWarningMaximum.classList.remove("active");
           }
 
@@ -302,15 +300,13 @@
 
       if (js_job_box_help) {
         translateYValue = distanceBetweenItems(".js_wish_profil", ".js_job_box");
-        js_job_box_help.style.marginTop = `${translateYValue}px`;
+        js_job_box_help.style.top = `${translateYValue}px`;
       }
 
-      /*  
       if (js_sector_box_help) {
         translateYValue = distanceBetweenItems(".js_wish_profil", ".js_sector_box");
-        js_sector_box_help.style.transform = `translateY(${translateYValue}px)`;
+        js_sector_box_help.style.top = `${translateYValue}px`;
       }
-      */
     }
 
 
@@ -320,7 +316,7 @@
     toggleActiveClassAndCheckMaxJobs('js_job_box', 5);
     toggleActiveClassAndCheckMaxSectors('js_sector_box', 5);
     unfoldJobs();
-    //applyTranslateYHelp();
+    applyTranslateYHelp();
 
 
 
