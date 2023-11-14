@@ -1,0 +1,515 @@
+/*=========================================== VARIABLES ===========================================*/
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --white_break: #F5F5F5;
+  --grey: #f8f8f8;
+  --grey_border: #C0C0C0;
+  --gold: #c49c5c;
+  --gold_hover: #dbbc86;
+  --primary_black: #404040;
+  --secondary_black: #17213a;
+}
+
+/*=========================================== BACKGROUND & COLORS ===========================================*/
+
+.background_black {
+  background-color: var(--black);
+}
+
+.color_black {
+  color: var(--black);
+}
+
+.background_white {
+  background-color: var(--white);
+}
+
+.color_white {
+  color: var(--white);
+}
+
+.background_grey {
+  background-color: var(--grey);
+}
+
+.color_grey {
+  color: var(--grey);
+}
+
+.background_gold {
+  background-color: var(--gold);
+}
+
+.color_gold {
+  color: var(--gold);
+}
+
+.background_primary_black {
+  background-color: var(--primary_black);
+}
+
+.color_primary_black {
+  color: var(--primary_black);
+}
+
+.background_secondary_black {
+  background-color: var(--secondary_black);
+}
+
+.color_secondary_black {
+  color: var(--secondary_black);
+}
+
+.grey_border {
+  border-color: var(--grey_border);
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+
+
+/*=========================================== FONTS ===========================================*/
+@font-face {
+  font-family: 'Futuraltbook';
+  src: url('https://img.edenly.com/fonts/futura_lt_book.eof');
+  src: url('https://img.edenly.com/fonts/futura_lt_book.eot?#iefix') format('embedded-opentype'), url('https://img.edenly.com/fonts/futura_lt_book.woff') format('woff'), url('https://img.edenly.com/fonts/futura_lt_book.ttf') format('truetype'), url('https://img.edenly.com/fonts/futura_lt_book.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* CRITICAL */
+@font-face {
+  font-family: 'Futuraltbold';
+  src: url('https://img.edenly.com/fonts/futuralt-bold.eof');
+  src: url('https://img.edenly.com/fonts/futuralt-bold.eot?#iefix') format('embedded-opentype'), url('https://img.edenly.com/fonts/futuralt-bold.woff') format('woff'), url('https://img.edenly.com/fonts/futuralt-bold.ttf') format('truetype'), url('https://img.edenly.com/fonts/futuralt-bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* CRITICAL */
+@font-face {
+  font-family: 'Cardo';
+  src: url('https://img.edenly.com/fonts/cardo-regular.eof');
+  src: url('https://img.edenly.com/fonts/cardo-regular.eot?#iefix') format('embedded-opentype'), url('https://img.edenly.com/fonts/cardo-regular.woff') format('woff'), url('https://img.edenly.com/fonts/cardo-regular.ttf') format('truetype'), url('https://img.edenly.com/fonts/cardo-regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* CRITICAL */
+@font-face {
+  font-family: 'Cardoitalic';
+  src: url('https://img.edenly.com/fonts/cardo-italic.eof');
+  src: url('https://img.edenly.com/fonts/cardo-italic.eot?#iefix') format('embedded-opentype'), url('https://img.edenly.com/fonts/cardo-italic.woff') format('woff'), url('https://img.edenly.com/fonts/cardo-italic.ttf') format('truetype'), url('https://img.edenly.com/fonts/cardo-italic.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* CRITICAL */
+@font-face {
+  font-family: 'Cardobold';
+  src: url('https://img.edenly.com/fonts/cardo-bold.eof');
+  src: url('https://img.edenly.com/fonts/cardo-bold.eot?#iefix') format('embedded-opentype'), url('https://img.edenly.com/fonts/cardo-bold.woff') format('woff'), url('https://img.edenly.com/fonts/cardo-bold.ttf') format('truetype'), url('https://img.edenly.com/fonts/cardo-bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* CRITICAL */
+@font-face {
+  font-family: 'learning';
+  src: url('https://img.edenly.com/fonts/learning-curve-pro.eof');
+  src: url('https://img.edenly.com/fonts/learning-curve-pro.eot?#iefix') format('embedded-opentype'), url('https://img.edenly.com/fonts/learning-curve-pro.woff') format('woff'), url('https://img.edenly.com/fonts/learning-curve-pro.ttf') format('truetype'), url('https://img.edenly.com/fonts/learning-curve-pro.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+:root {
+  font-family: 'Futuraltbook', 'Open Sans', sans-serif, Tahoma;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 12px;
+  color: var(--white);
+  background-color: var(--grey);
+}
+
+.family_futuraltbook {
+  font-family: 'Futuraltbook', 'Open Sans', sans-serif, Tahoma;
+}
+
+.family_futuraltbold {
+  font-family: 'Futuraltbold', 'Open Sans', sans-serif, Tahoma;
+}
+
+
+.family_cardo {
+  font-family: 'Cardo', 'Times New Roman';
+}
+
+.family_cardo_italic {
+  font-family: 'Cardoitalic', 'Times New Roman';
+}
+
+
+/*=========================================== CLASSES UTILITAIRES PROJET ===========================================*/
+section {
+  overflow: hidden;
+}
+
+.overflow_ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.wrapper_1020 {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.wrapper_1000 {
+  max-width: 1000px;
+  margin: 40px auto 10px auto;
+  padding: 0 2%;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .wrapper_1000 {
+    padding: 0;
+    margin: 40px auto 20px auto;
+  }
+}
+
+
+
+.button_classic {
+  padding: 10px 30px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.button_gold {
+  background-color: var(--gold);
+  color: var(--white);
+}
+
+.button_gold_hover {
+  background-color: var(--white);
+  color: var(--gold_hover);
+  border: 1px solid var(--gold_hover);
+}
+
+.button_gold_hover:hover {
+  background-color: var(--gold_hover);
+  color: var(--white);
+}
+
+
+.h2_underline {
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.15em;
+  position: relative;
+}
+
+.h2_underline>span {
+  background-color: var(--grey);
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.h2_underline::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--grey_border);
+}
+
+@media only screen and (max-width: 479px) {
+  .h2_underline::after {
+    top: unset;
+    bottom: 0;
+  }
+}
+
+.slider_button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 0.5px solid var(--grey_border);
+}
+
+.slider_button::after {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 12px;
+  height: 12px;
+  border-top: 1px solid var(--secondary_black);
+  border-right: 1px solid var(--secondary_black);
+  transform: rotate(45deg);
+}
+
+.slider_button.left::after {
+  transform: rotate(-135deg);
+}
+
+.slider_button:hover {
+  background-color: var(--gold);
+  border-color: var(--gold);
+}
+
+.slider_button:hover::after {
+  border-color: var(--white);
+}
+
+
+
+
+/*=========================================== section_hero ===========================================*/
+.section_hero picture.section_hero_background_image,
+.section_hero picture.section_hero_background_image>img {
+  max-width: 100%;
+}
+
+.section_hero>div>a {
+  position: relative;
+}
+
+.section_hero_logo {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section_hero_logo>img {
+  width: 143px;
+  height: 65px;
+}
+
+.section_hero_cta {
+  position: absolute;
+  bottom: 26%;
+  left: 6%;
+  width: 50%;
+}
+
+.section_hero_cta>p {
+  letter-spacing: 0.15em;
+}
+
+.section_hero_cta>img {
+  margin-top: 10px;
+}
+
+.section_hero_cta>button {
+  margin-top: 45px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .section_hero_cta {
+    position: absolute;
+    bottom: 10%;
+    left: 6%;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .section_hero_logo>img {
+    width: 115px;
+    height: 52px;
+  }
+
+  .section_hero_cta {
+    position: absolute;
+    bottom: 33%;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    width: 80%;
+  }
+
+  .section_hero_cta>button {
+    margin-top: 30px;
+  }
+}
+
+
+/*=========================================== section_selection ===========================================*/
+
+.section_selection_cards {
+  display: flex;
+  column-gap: 10px;
+  row-gap: 20px;
+  margin-top: 25px;
+}
+
+.section_selection_card {
+  flex: 1;
+}
+
+.section_selection_card>img {
+  width: 100%;
+}
+
+.section_selection_card>div {
+  position: relative;
+  margin: -60px auto 0;
+  width: 70%;
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0 1px 5px rgba(24, 32, 35, .2);
+}
+
+.section_selection_card>div>h3 {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.section_selection_card:hover>div>button {
+  background-color: var(--gold_hover);
+  color: var(--white);
+}
+
+
+@media only screen and (max-width: 600px) {
+  .section_selection_card>div>h3 {
+    font-size: 13px;
+  }
+}
+
+
+@media only screen and (max-width: 479px) {
+  .section_selection_cards {
+    flex-direction: column;
+  }
+}
+
+
+/*=========================================== section_essential ===========================================*/
+
+.section_essential_slider {
+  display: flex;
+  column-gap: 20px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.section_essential_slide {
+  width: 235px;
+  flex: none;
+}
+
+
+.section_essential_slide>div>img {
+  width: 150px;
+  height: 150px;
+  margin: 30px auto;
+}
+
+.section_essential_slide>h3 {
+  line-height: 23px;
+  letter-spacing: 0.05em;
+}
+
+.section_essential_slide>h4 {
+  line-height: 14px;
+  letter-spacing: 0.08em;
+}
+
+.section_essential_slide>p {
+  line-height: 26px;
+  margin-top: 7px;
+}
+
+.section_essential_slide>p>span {
+  line-height: 20px;
+  margin-left: 7px;
+  padding: 2px 3px;
+  border-radius: 3px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .section_essential_slide {
+    width: 210px;
+  }
+
+  .section_essential_slide>div>img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+/*=========================================== section_collection ===========================================*/
+.section_collection_slider {
+  display: flex;
+  margin: 25px auto 0 auto;
+  overflow: hidden;
+}
+
+.section_collection_slide {
+  width: 33.33%;
+  padding: 0 5px;
+  flex: none;
+}
+
+.section_collection_slide>img {
+  width: 100%;
+}
+
+.section_collection_slide>h3 {
+  margin-top: 24px;
+}
+
+.section_collection_slide>h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background-color: var(--secondary_black);
+  margin: 5px auto 0 auto;
+  visibility: hidden;
+}
+
+.section_collection_slide:hover>h3::after {
+  visibility: visible;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .section_collection_slider {
+    margin: 25px 42px 0px 42px;
+  }
+
+  .section_collection_slide {
+    width: 100%;
+    padding: 0 3%;
+  }
+}

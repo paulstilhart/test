@@ -1,0 +1,62 @@
+/*=========================================== RESET CSS ===========================================*/
+/* ATTENTION ICI RESET CSS A SUPPRIMER SI IL EST DÉJÀ PRÉSENT DANS VOTRE PROJET */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+img {
+  display: block;
+}
+
+i,
+em,
+mark {
+  font-style: italic;
+}
+
+
+a,
+button {
+  cursor: pointer;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  text-decoration: none;
+  background: none;
+  color: inherit;
+  border: none;
+  outline: none;
+
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a:focus,
+a:active,
+button:focus,
+button:active,
+input:focus,
+input:active,
+select:focus,
+select:active,
+textarea:focus,
+textarea:active {
+  outline: none;
+  outline-color: transparent !important;
+}

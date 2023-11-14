@@ -1,0 +1,127 @@
+/*=========================================== MARGES ET PADDING ===========================================*/
+/* 8 16 24 32 40 48 56 64 72 80 */
+.mb_8 {
+  margin-bottom: 8px;
+}
+
+.mb_16 {
+  margin-bottom: 16px;
+}
+
+.mb_24 {
+  margin-bottom: 24px;
+}
+
+.mb_32 {
+  margin-bottom: 32px;
+}
+
+.mb_40 {
+  margin-bottom: 40px;
+}
+
+.mb_48 {
+  margin-bottom: 48px;
+}
+
+.mb_56 {
+  margin-bottom: 56px;
+}
+
+.mb_64 {
+  margin-bottom: 64px;
+}
+
+.mb_72 {
+  margin-bottom: 64px;
+}
+
+.mb_80 {
+  margin-bottom: 64px;
+}
+
+/*=========================================== TEXTE ET ALIGNEMENT ===========================================*/
+
+.text_center {
+  text-align: center;
+}
+
+.text_justify {
+  text-align: justify;
+}
+
+.text_uppercase {
+  text-transform: uppercase;
+}
+
+.text_underline {
+  text-decoration: underline;
+}
+
+/*=========================================== FONT-SIZE ===========================================*/
+.fs_10 {
+  font-size: 10px;
+}
+
+.fs_11 {
+  font-size: 11px;
+}
+
+.fs_12 {
+  font-size: 12px;
+}
+
+.fs_13 {
+  font-size: 13px;
+}
+
+.fs_14 {
+  font-size: 14px;
+}
+
+.fs_15 {
+  font-size: 15px;
+}
+
+.fs_16 {
+  font-size: 16px;
+}
+
+
+
+/*=========================================== FONT-WEIGHT ===========================================*/
+.fw_100 {
+  font-weight: 100;
+}
+
+.fw_200 {
+  font-weight: 200;
+}
+
+.fw_300 {
+  font-weight: 300;
+}
+
+.fw_400 {
+  font-weight: 400;
+}
+
+.fw_500 {
+  font-weight: 500;
+}
+
+.fw_600 {
+  font-weight: 600;
+}
+
+.fw_700 {
+  font-weight: 700;
+}
+
+.fw_800 {
+  font-weight: 800;
+}
+
+.fw_900 {
+  font-weight: 900;
+}
