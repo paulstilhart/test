@@ -17,6 +17,12 @@
     }
 }
 
+@mixin lg992Down {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
 @mixin xl1200 {
     @media (min-width: 1200px) {
         @content;
@@ -45,6 +51,102 @@
     }
 }
 
+.action_box button {
+    cursor: pointer;
+    visibility: hidden;
+
+    &.active {
+        visibility: visible;
+    }
+
+    &[disabled] {
+        cursor: default;
+    }
+}
+
+.popin_active::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    opacity: 60%;
+    z-index: 99;
+}
+
+.help_box {
+    position: relative;
+
+    >div {
+        padding: 15px;
+
+        @include lg992Down {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: none;
+            padding: 24px 15px 40px 15px;
+            z-index: 1000;
+
+            &::before {
+                content: '';
+                background-color: $border-grey;
+                display: block;
+                width: 154px;
+                height: 8px;
+                border-radius: 10px;
+                margin: 0 auto 32px auto;
+            }
+
+            &.active {
+                display: block;
+            }
+        }
+
+        >h3 {
+            margin: 0;
+            color: $text;
+            font-family: $ms_semibold;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 21px;
+            margin-bottom: 15px;
+            display: inline-flex;
+
+            &::before {
+                content: url('../sources/icons/lightbulb-flash-line.svg');
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                margin-right: 15px;
+            }
+        }
+
+        >p {
+            margin: 0;
+            color: $text;
+            font-family: $ms_regular;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+
+            >em {
+                font-style: italic;
+            }
+        }
+    }
+
+    >div[data-help="help_job"] {
+        @include lg992 {
+            margin: 345px 0px 15px 0px;
+        }
+    }
+}
 
 
 //================================ PAGE CREATION PROFIL = FRAME 2171  =======================================
@@ -138,11 +240,6 @@
         border: none;
         outline: none;
         width: fit-content;
-        cursor: pointer;
-
-        &[disabled] {
-            cursor: default;
-        }
     }
 
     button:first-of-type {
@@ -565,6 +662,7 @@
                 display: inline-flex;
                 align-items: center;
                 cursor: pointer;
+                max-width: 100%;
 
                 &::after {
                     content: url('../sources/icons/plus.svg');
@@ -742,6 +840,7 @@
                 display: inline-flex;
                 align-items: center;
                 cursor: pointer;
+                max-width: 100%;
 
 
                 &::after {
@@ -847,6 +946,7 @@
         font-weight: 700;
         line-height: 22px;
         text-align: left;
+        margin-bottom: 6px;
     }
 
     >input {
@@ -862,7 +962,6 @@
         max-width: 100%;
         height: 32px;
         padding: 10px;
-        margin: 6px 0px 10px 0px;
 
         &::placeholder {
             color: $bluegray;
@@ -875,12 +974,14 @@
     }
 
     >div {
+        margin-top: 10px;
+        width: 248px;
+        max-width: 100%;
         display: flex;
-        flex-wrap: wrap;
-        column-gap: 17px;
+        flex-direction: column;
         row-gap: 10px;
 
-        >p {
+        >p:first-of-type {
             margin: 0;
             font-family: $ms_regular;
             font-size: 14px;
@@ -888,21 +989,67 @@
             font-weight: 500;
             line-height: 16.8px;
             border-radius: 6px;
+            color: $text;
             border: 1px solid $secondary-blue;
             padding: 10px 16px;
             display: inline-flex;
             align-items: center;
-            cursor: pointer;
+            width: fit-content;
 
-
-            &::after {
-                content: url('../sources/icons/cross.svg');
-                display: inline-block;
-                width: 16px;
-                height: 16px;
+            >button {
                 margin-left: 18px;
+                height: 16px;
+                background-color: unset;
+                padding: 0 4px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+
+                &::after {
+                    content: url('../sources/icons/cross.svg');
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+
+                }
             }
         }
+
+        >p:nth-child(2) {
+            margin: 0;
+            font-family: $ms_regular;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            color: $text;
+
+
+            >strong {
+                font-family: $ms_semibold;
+                font-weight: 700;
+            }
+        }
+
+        >p:last-of-type {
+            margin: 0;
+            font-family: $ms_regular;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            color: $bluegray;
+            display: inline-flex;
+            justify-content: space-between;
+        }
+
+        >input {
+            accent-color: $text;
+            cursor: pointer;
+
+        }
+
+
     }
 }
 
@@ -946,7 +1093,6 @@
             height: 50px;
             padding: 10px 40px;
             border-radius: 5px;
-            cursor: pointer;
             transition: all 0.2s;
             outline: none;
 
@@ -1026,5 +1172,277 @@
                 font-style: italic;
             }
         }
+    }
+}
+
+
+//================================ PAGE CREATION PROFIL  = FRAME 2173  =======================================
+.position {
+    background-color: $white;
+    color: $text;
+    padding: 0px 15px 0px 15px;
+    position: relative;
+
+    >h1 {
+        margin: 0;
+        color: $text;
+        font-family: $ms_semibold;
+        font-size: 30px;
+        font-style: normal;
+        line-height: 35px;
+        text-align: left;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    >p:first-of-type {
+        margin: 0;
+        color: $bluegray;
+        font-family: $ms_regular;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+    }
+}
+
+.position>.pagination_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+
+    @include lg992 {
+        position: absolute;
+        top: 50px;
+        right: 15px;
+        margin-top: 0px;
+    }
+
+    >a {
+        width: 20px;
+        height: 20px;
+        border-radius: 100px;
+        background-color: $border-grey;
+        cursor: pointer;
+
+        &.active {
+            width: 60px;
+            background-color: $text;
+        }
+    }
+}
+
+.position .position_box {
+    margin: 40px 0;
+
+    @include lg992 {
+        margin: 10px 0 24px 0;
+    }
+
+    >p {
+        margin: 0;
+        color: $text;
+        font-family: $ms_semibold;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: left;
+        margin-bottom: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include lg992 {
+            display: block;
+        }
+    }
+
+    >input {
+        color: $text;
+        font-family: $ms_regular;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        border-radius: 2px;
+        border: 1px solid $border-grey;
+        width: 380px;
+        max-width: 100%;
+        height: 32px;
+        padding: 10px;
+
+        @include lg992 {
+            width: 380px;
+        }
+
+        &::placeholder {
+            color: $bluegray;
+        }
+
+        &:focus,
+        &:focus-visible {
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+        }
+    }
+}
+
+.position .experience_box {
+    >p {
+        margin: 0;
+        color: $text;
+        font-family: $ms_semibold;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: left;
+        margin-bottom: 16px;
+
+        @include lg992 {
+            margin-bottom: 7px;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        @include md768 {
+            flex-direction: row;
+        }
+
+        label {
+            font-family: $ms_regular;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            color: $text;
+            border: 1px solid $text;
+            background-color: $white;
+            margin: 0;
+            padding: 6px 20px;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+
+            @include md768 {
+                width: fit-content;
+            }
+
+            strong {
+                font-family: $ms_semibold;
+                font-weight: 600;
+                line-height: 24px;
+            }
+
+            &:hover {
+                box-shadow: $card-shadow;
+            }
+        }
+
+        input {
+            display: none;
+
+            &:checked+label {
+                color: $white;
+                background-color: $text;
+            }
+        }
+    }
+}
+
+.position>.action_box {
+    margin: 0;
+    text-align: center;
+
+    @include md768 {
+        margin: 68px 0px 20px 0px;
+    }
+
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 10px;
+        row-gap: 10px;
+
+        @include md768 {
+            flex-direction: row;
+        }
+
+        >p {
+            margin: 0;
+            color: $text;
+            text-align: center;
+            font-family: $ms_regular;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px;
+        }
+
+        >button {
+            margin: 0;
+            font-family: $ms_semibold;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            width: 193px;
+            height: 50px;
+            padding: 10px 40px;
+            border-radius: 5px;
+            transition: all 0.2s;
+            outline: none;
+
+            &:first-of-type {
+                color: $secondary-blue;
+                background-color: $white;
+                border: 1px solid $secondary-blue;
+
+                &:hover {
+                    box-shadow: $card-shadow;
+                }
+            }
+
+            &:last-of-type {
+                color: $text;
+                background-color: $primary-yellow;
+
+                &[disabled] {
+                    color: $white;
+                    background-color: $border-grey;
+                }
+
+                &:not([disabled]):hover {
+                    color: $text;
+                    background-color: $primary-yellow-hover;
+                }
+            }
+        }
+    }
+
+    >button:last-of-type {
+        font-family: $ms_semibold;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        text-decoration-line: underline;
+        color: $text;
+        background-color: $white;
+        cursor: pointer;
+        margin-top: 10px;
+        outline: none;
     }
 }

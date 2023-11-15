@@ -117,6 +117,94 @@ $recruteur-hover: #0198c2;*/
   }
 }
 
+.action_box button {
+  cursor: pointer;
+  visibility: hidden;
+}
+.action_box button.active {
+  visibility: visible;
+}
+.action_box button[disabled] {
+  cursor: default;
+}
+
+.popin_active::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 60%;
+  z-index: 99;
+}
+
+.help_box {
+  position: relative;
+}
+.help_box > div {
+  padding: 15px;
+}
+@media (max-width: 992px) {
+  .help_box > div {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    padding: 24px 15px 40px 15px;
+    z-index: 1000;
+  }
+  .help_box > div::before {
+    content: "";
+    background-color: #cfcfcf;
+    display: block;
+    width: 154px;
+    height: 8px;
+    border-radius: 10px;
+    margin: 0 auto 32px auto;
+  }
+  .help_box > div.active {
+    display: block;
+  }
+}
+.help_box > div > h3 {
+  margin: 0;
+  color: #232558;
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  margin-bottom: 15px;
+  display: inline-flex;
+}
+.help_box > div > h3::before {
+  content: url("../sources/icons/lightbulb-flash-line.svg");
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+.help_box > div > p {
+  margin: 0;
+  color: #232558;
+  font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+.help_box > div > p > em {
+  font-style: italic;
+}
+@media (min-width: 992px) {
+  .help_box > div[data-help=help_job] {
+    margin: 345px 0px 15px 0px;
+  }
+}
+
 .creation_profil {
   background-color: #ffffff;
   color: #232558;
@@ -203,10 +291,6 @@ $recruteur-hover: #0198c2;*/
   outline: none;
   width: -moz-fit-content;
   width: fit-content;
-  cursor: pointer;
-}
-.creation_profil > .action_box button[disabled] {
-  cursor: default;
 }
 .creation_profil > .action_box button:first-of-type {
   font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
@@ -241,7 +325,7 @@ $recruteur-hover: #0198c2;*/
 
 .creation_profil > .content_box {
   padding: 20px;
-  border: 1px solid #026096;
+  border: 1px solid #330296;
   position: relative;
   flex-direction: column;
   -moz-column-gap: 40px;
@@ -282,7 +366,7 @@ $recruteur-hover: #0198c2;*/
   position: absolute;
   top: -14px;
   left: -1px;
-  background-color: #026096;
+  background-color: #330296;
   /* Définissez la forme découpée en un carré de 30px par 30px */
   -webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%, 94% 100%, 50% 12%, 6% 100%);
           clip-path: polygon(0 100%, 50% 0, 100% 100%, 94% 100%, 50% 12%, 6% 100%);
@@ -339,12 +423,12 @@ $recruteur-hover: #0198c2;*/
   flex-direction: column;
 }
 .creation_profil > .content_box > div:first-of-type > div:first-of-type span {
-  background-color: #026096;
+  background-color: #330296;
   color: #ffffff;
 }
 .creation_profil > .content_box > div:first-of-type > div:last-of-type span {
   background-color: #E5EFF4;
-  color: #026096;
+  color: #330296;
 }
 .creation_profil > .content_box > div:first-of-type .separator {
   width: 3px;
@@ -541,7 +625,7 @@ $recruteur-hover: #0198c2;*/
 }
 .wish_profil .job_box > p:nth-child(2) {
   margin: 0;
-  color: #026096;
+  color: #330296;
   font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -563,7 +647,7 @@ $recruteur-hover: #0198c2;*/
 .wish_profil .job_box > div {
   padding: 10px;
   border-radius: 6px;
-  outline: 1px solid #026096;
+  outline: 1px solid #330296;
 }
 .wish_profil .job_box > div > div {
   display: flex;
@@ -580,11 +664,12 @@ $recruteur-hover: #0198c2;*/
   font-weight: 500;
   line-height: 20px;
   border-radius: 6px;
-  border: 1px solid #026096;
+  border: 1px solid #330296;
   padding: 10px 16px;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  max-width: 100%;
 }
 .wish_profil .job_box > div > div > p::after {
   content: url("../sources/icons/plus.svg");
@@ -694,7 +779,7 @@ $recruteur-hover: #0198c2;*/
 }
 .wish_profil .sector_box > p:nth-child(2) {
   margin: 0;
-  color: #026096;
+  color: #330296;
   font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -716,7 +801,7 @@ $recruteur-hover: #0198c2;*/
 .wish_profil .sector_box > div {
   padding: 10px;
   border-radius: 6px;
-  outline: 1px solid #026096;
+  outline: 1px solid #330296;
 }
 .wish_profil .sector_box > div > div {
   display: flex;
@@ -736,11 +821,12 @@ $recruteur-hover: #0198c2;*/
   font-weight: 500;
   line-height: 20px;
   border-radius: 6px;
-  border: 1px solid #026096;
+  border: 1px solid #330296;
   padding: 10px 16px;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  max-width: 100%;
 }
 .wish_profil .sector_box > div > div > p::after {
   content: url("../sources/icons/plus.svg");
@@ -829,6 +915,7 @@ $recruteur-hover: #0198c2;*/
   font-weight: 700;
   line-height: 22px;
   text-align: left;
+  margin-bottom: 6px;
 }
 .wish_profil .location_box > input {
   color: #232558;
@@ -843,7 +930,6 @@ $recruteur-hover: #0198c2;*/
   max-width: 100%;
   height: 32px;
   padding: 10px;
-  margin: 6px 0px 10px 0px;
 }
 .wish_profil .location_box > input::-moz-placeholder {
   color: #7a8999;
@@ -855,13 +941,14 @@ $recruteur-hover: #0198c2;*/
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .wish_profil .location_box > div {
+  margin-top: 10px;
+  width: 248px;
+  max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  -moz-column-gap: 17px;
-       column-gap: 17px;
+  flex-direction: column;
   row-gap: 10px;
 }
-.wish_profil .location_box > div > p {
+.wish_profil .location_box > div > p:first-of-type {
   margin: 0;
   font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
   font-size: 14px;
@@ -869,18 +956,56 @@ $recruteur-hover: #0198c2;*/
   font-weight: 500;
   line-height: 16.8px;
   border-radius: 6px;
-  border: 1px solid #026096;
+  color: #232558;
+  border: 1px solid #330296;
   padding: 10px 16px;
   display: inline-flex;
   align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.wish_profil .location_box > div > p:first-of-type > button {
+  margin-left: 18px;
+  height: 16px;
+  background-color: unset;
+  padding: 0 4px;
+  border: none;
+  outline: none;
   cursor: pointer;
 }
-.wish_profil .location_box > div > p::after {
+.wish_profil .location_box > div > p:first-of-type > button::after {
   content: url("../sources/icons/cross.svg");
   display: inline-block;
   width: 16px;
   height: 16px;
-  margin-left: 18px;
+}
+.wish_profil .location_box > div > p:nth-child(2) {
+  margin: 0;
+  font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: #232558;
+}
+.wish_profil .location_box > div > p:nth-child(2) > strong {
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
+  font-weight: 700;
+}
+.wish_profil .location_box > div > p:last-of-type {
+  margin: 0;
+  font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: #7a8999;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.wish_profil .location_box > div > input {
+  accent-color: #232558;
+  cursor: pointer;
 }
 
 .wish_profil > .action_box {
@@ -922,14 +1047,13 @@ $recruteur-hover: #0198c2;*/
   height: 50px;
   padding: 10px 40px;
   border-radius: 5px;
-  cursor: pointer;
   transition: all 0.2s;
   outline: none;
 }
 .wish_profil > .action_box > div > button:first-of-type {
-  color: #026096;
+  color: #330296;
   background-color: #ffffff;
-  border: 1px solid #026096;
+  border: 1px solid #330296;
 }
 .wish_profil > .action_box > div > button:first-of-type:hover {
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
@@ -991,4 +1115,262 @@ $recruteur-hover: #0198c2;*/
 }
 .wish_profil_help > div > p > em {
   font-style: italic;
+}
+
+.position {
+  background-color: #ffffff;
+  color: #232558;
+  padding: 0px 15px 0px 15px;
+  position: relative;
+}
+.position > h1 {
+  margin: 0;
+  color: #232558;
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  line-height: 35px;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.position > p:first-of-type {
+  margin: 0;
+  color: #7a8999;
+  font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+
+.position > .pagination_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  flex-wrap: nowrap;
+  margin-top: 40px;
+}
+@media (min-width: 992px) {
+  .position > .pagination_box {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    margin-top: 0px;
+  }
+}
+.position > .pagination_box > a {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: #cfcfcf;
+  cursor: pointer;
+}
+.position > .pagination_box > a.active {
+  width: 60px;
+  background-color: #232558;
+}
+
+.position .position_box {
+  margin: 40px 0;
+}
+@media (min-width: 992px) {
+  .position .position_box {
+    margin: 10px 0 24px 0;
+  }
+}
+.position .position_box > p {
+  margin: 0;
+  color: #232558;
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: left;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .position .position_box > p {
+    display: block;
+  }
+}
+.position .position_box > input {
+  color: #232558;
+  font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  width: 380px;
+  max-width: 100%;
+  height: 32px;
+  padding: 10px;
+}
+@media (min-width: 992px) {
+  .position .position_box > input {
+    width: 380px;
+  }
+}
+.position .position_box > input::-moz-placeholder {
+  color: #7a8999;
+}
+.position .position_box > input::placeholder {
+  color: #7a8999;
+}
+.position .position_box > input:focus, .position .position_box > input:focus-visible {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.position .experience_box > p {
+  margin: 0;
+  color: #232558;
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+@media (min-width: 992px) {
+  .position .experience_box > p {
+    margin-bottom: 7px;
+  }
+}
+.position .experience_box form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+@media (min-width: 768px) {
+  .position .experience_box form {
+    flex-direction: row;
+  }
+}
+.position .experience_box form label {
+  font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  color: #232558;
+  border: 1px solid #232558;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 6px 20px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .position .experience_box form label {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.position .experience_box form label strong {
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 24px;
+}
+.position .experience_box form label:hover {
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+}
+.position .experience_box form input {
+  display: none;
+}
+.position .experience_box form input:checked + label {
+  color: #ffffff;
+  background-color: #232558;
+}
+
+.position > .action_box {
+  margin: 0;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .position > .action_box {
+    margin: 68px 0px 20px 0px;
+  }
+}
+.position > .action_box > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
+}
+@media (min-width: 768px) {
+  .position > .action_box > div {
+    flex-direction: row;
+  }
+}
+.position > .action_box > div > p {
+  margin: 0;
+  color: #232558;
+  text-align: center;
+  font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+}
+.position > .action_box > div > button {
+  margin: 0;
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 193px;
+  height: 50px;
+  padding: 10px 40px;
+  border-radius: 5px;
+  transition: all 0.2s;
+  outline: none;
+}
+.position > .action_box > div > button:first-of-type {
+  color: #330296;
+  background-color: #ffffff;
+  border: 1px solid #330296;
+}
+.position > .action_box > div > button:first-of-type:hover {
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+}
+.position > .action_box > div > button:last-of-type {
+  color: #232558;
+  background-color: #fdc300;
+}
+.position > .action_box > div > button:last-of-type[disabled] {
+  color: #ffffff;
+  background-color: #cfcfcf;
+}
+.position > .action_box > div > button:last-of-type:not([disabled]):hover {
+  color: #232558;
+  background-color: #ffd038;
+}
+.position > .action_box > button:last-of-type {
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration-line: underline;
+  color: #232558;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin-top: 10px;
+  outline: none;
 }
