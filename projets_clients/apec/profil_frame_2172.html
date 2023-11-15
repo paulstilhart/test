@@ -124,7 +124,7 @@
               </div>
 
 
-              <div class="location_box">
+              <div class="location_box js_location_box">
 
                 <p>Les lieux où vous recherchez un poste *</p>
                 <input maxlength="50" type="text" placeholder="Saisissez un pays, une région ou un département"
@@ -357,17 +357,24 @@
         input.addEventListener('change', (event) => {
           let span = input.parentElement.querySelector('strong + span');
           if (span) {
-                span.textContent = event.target.value;
-            }
+            span.textContent = event.target.value;
+          }
         });
       });
     }
 
-    
+
+    function removeLocationBoxItem() {
+      document.querySelector('.js_location_box').addEventListener('click', function (e) {
+        if (e.target.nodeName === 'BUTTON') {
+          let item = e.target.parentNode.parentNode;
+          item.parentNode.removeChild(item);
+        }
+      });
+    }
 
 
 
-    //Que l'on applique à minimum salary
     limitInputLength('minimum_salary', 3);
     jobsEmpty('js_job_box');
     toggleActiveClassAndCheckMaxJobs('js_job_box', 5);
@@ -377,6 +384,7 @@
     //applyTranslateYHelp();
     showHelp();
     showRayonValue();
+    removeLocationBoxItem();
 
 
 
