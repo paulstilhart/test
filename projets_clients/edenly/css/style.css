@@ -6,6 +6,8 @@
   --grey: #f8f8f8;
   --grey_border: #C0C0C0;
   --gold: #c49c5c;
+  --gold_secondary: #AD874B;
+  --gold_prod: #fffaf2;
   --gold_hover: #dbbc86;
   --primary_black: #404040;
   --secondary_black: #17213a;
@@ -43,6 +45,22 @@
 
 .color_gold {
   color: var(--gold);
+}
+
+.background_gold_secondary {
+  background-color: var(--gold_secondary);
+}
+
+.color_gold_secondary {
+  color: var(--gold_secondary);
+}
+
+.background_gold_prod {
+  background-color: var(--gold_prod);
+}
+
+.color_gold_prod {
+  color: var(--gold_prod);
 }
 
 .background_primary_black {
@@ -158,6 +176,10 @@
   font-family: 'Cardoitalic', 'Times New Roman';
 }
 
+.family_cardo_bold {
+  font-family: 'Cardobold', 'Times New Roman';
+}
+
 
 /*=========================================== CLASSES UTILITAIRES PROJET ===========================================*/
 section {
@@ -177,17 +199,23 @@ section {
 
 .wrapper_1000 {
   max-width: 1000px;
-  margin: 40px auto 10px auto;
-  padding: 0 2%;
+  margin: 0 auto;
+  padding: 40px 2% 10px 2%;
+  box-sizing: content-box;
 }
 
+.wrapper_800 {
+  max-width: 800px;
+  margin: 40px auto 10px auto;
+  padding: 0 2%;
+  box-sizing: content-box;
+}
 
 
 
 @media only screen and (max-width: 600px) {
   .wrapper_1000 {
-    padding: 0;
-    margin: 40px auto 20px auto;
+    padding: 40px 0 20px 0;
   }
 }
 
@@ -254,6 +282,11 @@ section {
   border-radius: 50%;
   background-color: var(--white);
   border: 0.5px solid var(--grey_border);
+  display: none;
+}
+
+.slider_button.active {
+  display: inline-block;
 }
 
 .slider_button::after {
@@ -282,6 +315,23 @@ section {
 
 
 
+/*=========================================== ICONES ===========================================*/
+
+.sprites {
+  background: url('https://www.edenly.com/img/sprites24.png') no-repeat;
+}
+
+.etoile-fav,
+.etoile-infav {
+  width: 26px;
+  height: 22px;
+  background-position: -396px -2px !important;
+  display: inline-block;
+}
+
+.etoile-fav:hover {
+  background-position: -396px -23px !important;
+}
 
 /*=========================================== section_hero ===========================================*/
 .section_hero picture.section_hero_background_image,
@@ -412,12 +462,41 @@ section {
 
 /*=========================================== section_essential ===========================================*/
 
+.section_essential_slider_container {
+  position: relative;
+}
+
+.section_essential_slider_container>.slider_button {
+  bottom: 55%;
+}
+
+.section_essential_slider_container>.slider_button.left {
+  left: -20px;
+}
+
+.section_essential_slider_container>.slider_button.right {
+  right: -20px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .section_essential_slider_container>.slider_button.left {
+    left: -4px;
+  }
+
+  .section_essential_slider_container>.slider_button.right {
+    right: -4px;
+  }
+}
+
+
 .section_essential_slider {
   display: flex;
   column-gap: 20px;
   overflow: hidden;
   margin-top: 40px;
 }
+
 
 .section_essential_slide {
   width: 235px;
@@ -434,6 +513,13 @@ section {
 .section_essential_slide>h3 {
   line-height: 23px;
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section_essential_slide>h3>i {
+  padding: 10px;
 }
 
 .section_essential_slide>h4 {
@@ -467,6 +553,22 @@ section {
 
 
 /*=========================================== section_collection ===========================================*/
+.section_collection_slider_container {
+  position: relative;
+}
+
+.section_collection_slider_container>.slider_button {
+  top: 40%;
+}
+
+.section_collection_slider_container>.slider_button.left {
+  left: 5px;
+}
+
+.section_collection_slider_container>.slider_button.right {
+  right: 5px;
+}
+
 .section_collection_slider {
   display: flex;
   margin: 25px auto 0 auto;
@@ -511,5 +613,136 @@ section {
   .section_collection_slide {
     width: 100%;
     padding: 0 3%;
+  }
+}
+
+
+/*=========================================== section_edito ===========================================*/
+.section_edito>div {
+  padding: 75px 2% 60px 2%;
+}
+
+
+.section_edito>div>a:first-of-type>h2 {
+  line-height: 55px;
+}
+
+.section_edito>div>a:first-of-type>h2::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: var(--gold);
+  margin: auto;
+}
+
+.section_edito>div>a:first-of-type>p {
+  padding: 10px 0 25px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.section_edito>div>p:first-of-type {
+  line-height: 20px;
+  padding: 10px 0px 30px 0px;
+}
+
+
+.section_edito>div>a:last-of-type {
+  margin: 30px auto 0 auto;
+  line-height: 22px;
+  display: inline-block;
+}
+
+.section_edito>div>a:last-of-type::after {
+  content: ">";
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--grey_border);
+  font-family: 'Cardoitalic';
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.section_edito>div>a:last-of-type:hover {
+  color: var(--gold);
+}
+
+.section_edito>div>a:last-of-type:hover::after {
+  background-color: var(--gold);
+  color: var(--white);
+  border-color: var(--gold);
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .section_edito>div {
+    padding: 55px 15px 50px 15px;
+  }
+}
+
+
+/*=========================================== section_numbers ===========================================*/
+.section_numbers {
+  display: block;
+}
+
+.section_numbers>div {
+  padding: 70px 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section_numbers>div>div {
+  width: 33.33%;
+  padding: 30px 3%;
+}
+
+.section_numbers>div>div:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 1px;
+  background-color: var(--gold);
+}
+
+.section_numbers>div>div>h3 {
+  line-height: 35px;
+  letter-spacing: 0.2em;
+}
+
+.section_numbers>div>div>p {
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  padding: 13px 0 20px 0;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .section_numbers>div {
+    padding: 30px 2%;
+  }
+
+  .section_numbers>div>div {
+    width: 50%;
+    padding: 30px 2%;
+  }
+
+  .section_numbers>div>div>h3 {
+    font-size: 16px;
+    line-height: 20px;
+    width: min-content;
+    margin:0 auto;
   }
 }
