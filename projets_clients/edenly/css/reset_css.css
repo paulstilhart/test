@@ -25,7 +25,8 @@ mark {
 
 
 a,
-button {
+button,
+i {
   cursor: pointer;
 }
 
