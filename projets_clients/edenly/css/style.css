@@ -272,7 +272,7 @@ section {
 
 .h2_underline {
   font-size: 15px;
-  line-height: 30px;
+  line-height: 2em;
   letter-spacing: 0.15em;
   position: relative;
 }
@@ -733,7 +733,7 @@ section {
   padding: 30px 3%;
 }
 
-.section_numbers>div>div:after {
+.section_numbers>div>div::after {
   content: "";
   display: block;
   margin: 0 auto;
@@ -943,3 +943,294 @@ section {
   letter-spacing: 0.04em;
 }
 
+/*=========================================== section_presentation ===========================================*/
+
+.section_presentation_slider_container {
+  position: relative;
+}
+
+.section_presentation_slider_container>.slider_button {
+  bottom: 25%;
+}
+
+.section_presentation_slider_container>.slider_button.left {
+  left: 10%;
+}
+
+.section_presentation_slider_container>.slider_button.right {
+  right: 10%;
+}
+
+.section_presentation_slider {
+  display: flex;
+  overflow: hidden;
+  column-gap: 15px;
+}
+
+.section_presentation_slide {
+  width: 385px;
+  min-height: 600px;
+  flex: none;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section_presentation_slide>div:first-of-type {
+  max-width: 250px;
+}
+
+.section_presentation_slide>div:first-of-type>h3 {
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  padding-bottom: 15px;
+}
+
+.section_presentation_slide>div:first-of-type>p {
+  line-height: 19px;
+}
+
+.section_presentation_slide>div:first-of-type>p::after {
+  content: "";
+  display: block;
+  margin: 10px auto 5px auto;
+  width: 160px;
+  height: 1px;
+  background-color: var(--grey_border);
+}
+
+.section_presentation_slide>div:first-of-type>p:last-of-type:after {
+  visibility: hidden;
+}
+
+.section_presentation_slide>div:last-of-type>img {
+  width: 100%;
+}
+
+
+.section_presentation_slide>div:last-of-type>p {
+  line-height: 22px;
+  margin: 0 auto 40px auto;
+}
+
+.section_presentation_slide>div:last-of-type>p::after {
+  content: ">";
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--grey_border);
+  font-family: 'Cardoitalic';
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.section_presentation_slide>div:last-of-type>p:hover {
+  color: var(--gold);
+}
+
+.section_presentation_slide>div:last-of-type>p:hover::after {
+  background-color: var(--gold);
+  color: var(--white);
+  border-color: var(--gold);
+}
+
+
+@media only screen and (max-width: 600px) {
+  .section_presentation_slide {
+    width: 245px;
+    min-height: 480px;
+  }
+}
+
+/*=========================================== section_guarantees ===========================================*/
+.section_guarantees>div {
+  padding: 70px 2% 60px 2%;
+}
+
+.section_guarantees>div>h2 {
+  line-height: 60px;
+  /* 50px + paddingtop 3px paddingbottom 7px */
+}
+
+.section_guarantees>div>h2::before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 1px;
+  background-color: var(--gold);
+}
+
+.section_guarantees>div>h3 {
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  padding-bottom: 50px;
+}
+
+.section_guarantees_cards {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 35px;
+}
+
+.section_guarantees_card {
+  width: 25%;
+  padding: 0 10px;
+}
+
+.section_guarantees_card>span {
+  display: inline-block;
+  height: 30px;
+  width: 40px;
+  background-size: 30px 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 auto;
+}
+
+.section_guarantees_card:nth-child(1)>span {
+  background-image: url('https://img.edenly.com/ico-prix.svg');
+}
+
+.section_guarantees_card:nth-child(2)>span {
+  background-image: url('https://img.edenly.com/ico-calendrier60.svg');
+}
+
+.section_guarantees_card:nth-child(3)>span {
+  background-image: url('https://img.edenly.com/ico-gbague.svg');
+}
+
+.section_guarantees_card:nth-child(4)>span {
+  background-image: url('https://img.edenly.com/ico-gravure.svg');
+}
+
+.section_guarantees_card:nth-child(5)>span {
+  background-image: url('https://img.edenly.com/ico-20.svg');
+}
+
+.section_guarantees_card:nth-child(6)>span {
+  background-image: url('https://img.edenly.com/ico-certificat.svg');
+}
+
+.section_guarantees_card:nth-child(7)>span {
+  background-image: url('https://img.edenly.com/ico-livraison.svg');
+}
+
+.section_guarantees_card:nth-child(8)>span {
+  background-image: url('https://img.edenly.com/ico-2ans-fr.svg');
+}
+
+.section_guarantees_card>p {
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  padding-top: 10px;
+}
+
+.section_guarantees_card>p::after {
+  content: "";
+  margin: 0 auto;
+  display: block;
+  width: 80px;
+  height: 1px;
+  background-color: var(--secondary_black);
+  visibility: hidden;
+  position: relative;
+  bottom: -5px;
+}
+
+.section_guarantees_card:hover>p::after {
+  visibility: visible;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .section_guarantees>div {
+    padding: 70px 2% 60px 2%;
+  }
+
+  .section_guarantees_card {
+    width: 50%;
+  }
+}
+
+
+
+/*=========================================== section_advertising ===========================================*/
+.section_advertising>div {
+  padding: 55px 2% 80px 2%;
+}
+
+
+.section_advertising_slider_container {
+  position: relative;
+}
+
+.section_advertising_slider_container>.slider_button {
+  top: 35%;
+}
+
+.section_advertising_slider_container>.slider_button.left {
+  left: 0;
+}
+
+.section_advertising_slider_container>.slider_button.right {
+  right: 0;
+}
+
+.section_advertising_slider {
+  display: flex;
+  overflow: hidden;
+  column-gap: 10px;
+}
+
+.section_advertising_slide {
+  width: 140px;
+  height: 205px;
+  flex: none;
+}
+
+.section_advertising_slide>img {
+  max-width: 100%;
+  width: 140px;
+  height: 160px;
+}
+
+.section_advertising_slide>h3 {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.section_advertising_slide>h3::after {
+  content: "";
+  position: relative;
+  top: 5px;
+  margin: 0 auto;
+  display: block;
+  width: 80px;
+  height: 1px;
+  background-color: var(--secondary_black);
+  visibility: hidden;
+}
+
+.section_advertising_slide:hover>h3::after {
+  visibility: visible;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .section_advertising>div {
+    padding: 15px 0 80px 0;
+  }
+}
