@@ -339,6 +339,28 @@ section {
   border-color: var(--white);
 }
 
+.infosplus_after:after {
+  content: "+";
+  font-family: arial;
+  background-color: var(--white);
+  border: 1px solid var(--grey_border);
+  color: var(--black);
+  cursor: pointer;
+  margin: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 16px;
+  line-height: 18px;
+  min-width: 18px;
+  border-radius: 18px;
+}
+
+.infosplus_after.active:after {
+  content: "-";
+}
 
 
 /*=========================================== ICONES ===========================================*/
@@ -645,7 +667,7 @@ section {
 
 
 /*=========================================== section_edito ===========================================*/
-.section_edito>div {
+.section_edito>div.wrapper_1000 {
   padding: 75px 2% 60px 2%;
 }
 
@@ -711,7 +733,7 @@ section {
 
 
 @media only screen and (max-width: 600px) {
-  .section_edito>div {
+  .section_edito>div.wrapper_1000 {
     padding: 55px 15px 50px 15px;
   }
 }
@@ -722,7 +744,7 @@ section {
   display: block;
 }
 
-.section_numbers>div {
+.section_numbers>div.wrapper_1000 {
   padding: 70px 2%;
   display: flex;
   flex-wrap: wrap;
@@ -757,7 +779,7 @@ section {
 
 
 @media only screen and (max-width: 600px) {
-  .section_numbers>div {
+  .section_numbers>div.wrapper_1000 {
     padding: 30px 2%;
   }
 
@@ -778,7 +800,7 @@ section {
 
 /*=========================================== section_thisweek ===========================================*/
 
-.section_thisweek>div {
+.section_thisweek>div.wrapper_1000 {
   padding: 40px 2%;
 }
 
@@ -875,7 +897,7 @@ section {
 
 
 @media screen and (max-width: 600px) {
-  .section_thisweek>div {
+  .section_thisweek>div.wrapper_1000 {
     padding: 40px 2%;
   }
 
@@ -1050,7 +1072,7 @@ section {
 }
 
 /*=========================================== section_guarantees ===========================================*/
-.section_guarantees>div {
+.section_guarantees>div.wrapper_1000 {
   padding: 70px 2% 60px 2%;
 }
 
@@ -1156,7 +1178,7 @@ section {
 
 
 @media only screen and (max-width: 600px) {
-  .section_guarantees>div {
+  .section_guarantees>div.wrapper_1000 {
     padding: 70px 2% 60px 2%;
   }
 
@@ -1168,7 +1190,7 @@ section {
 
 
 /*=========================================== section_advertising ===========================================*/
-.section_advertising>div {
+.section_advertising>div.wrapper_1000 {
   padding: 55px 2% 80px 2%;
 }
 
@@ -1230,7 +1252,96 @@ section {
 
 
 @media only screen and (max-width: 600px) {
-  .section_advertising>div {
+  .section_advertising>div.wrapper_1000 {
     padding: 15px 0 80px 0;
+  }
+}
+
+
+
+/*=========================================== footer ===========================================*/
+footer>div.wrapper_1000 {
+  padding: 40px 2% 30px 2%;
+}
+
+footer>div>a:last-of-type {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+footer>div>a:last-of-type>img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer_links>a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 7px 0 5px;
+  border-right: solid 1px var(--secondary_black);
+}
+
+.footer_links>a:last-of-type {
+  border-right: none
+}
+
+.footer_container {
+  margin: 50px auto 40px;
+  max-width: 720px;
+  width: 96%;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.footer_container>div {
+  width: 180px;
+  border-right: 1px solid var(--grey_border);
+  padding: 0 10px;
+  flex: none;
+}
+
+.footer_container>div:last-of-type {
+  border-right: none;
+}
+
+.footer_container h3 {
+  line-height: normal;
+  padding-bottom: 3px;
+}
+
+.footer_container a {
+  display: block;
+}
+
+.footer_container>:nth-child(3)>a.infosplus_after {
+  margin: 5px 0;
+}
+
+.footer_container>:nth-child(3)>a:last-of-type {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.footer_container>:nth-child(3)>a:last-of-type>img {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+
+.footer_container>:nth-child(4) h4 {
+  padding: 8px 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  footer>div.wrapper_1000 {
+    padding: 40px 2% 10px 2%;
   }
 }
