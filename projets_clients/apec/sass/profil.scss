@@ -4,6 +4,7 @@
 @import "./base/fonts";
 
 
+
 //================================ MIXINS PAUL POUR LES MEDIA QUERIES =======================================
 @mixin md768 {
     @media (min-width: 768px) {
@@ -533,7 +534,7 @@
     >span {
         font-family: $ms_regular;
         font-weight: 500;
-        line-height: 16.8px;
+        line-height: 22px;/* a la place de 16.8px alignement mauvais remonté par quentin */
     }
 }
 

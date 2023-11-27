@@ -325,7 +325,7 @@ $recruteur-hover: #0198c2;*/
 
 .creation_profil > .content_box {
   padding: 20px;
-  border: 1px solid #330296;
+  border: 1px solid #026096;
   position: relative;
   flex-direction: column;
   -moz-column-gap: 40px;
@@ -366,7 +366,7 @@ $recruteur-hover: #0198c2;*/
   position: absolute;
   top: -14px;
   left: -1px;
-  background-color: #330296;
+  background-color: #026096;
   /* Définissez la forme découpée en un carré de 30px par 30px */
   -webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%, 94% 100%, 50% 12%, 6% 100%);
           clip-path: polygon(0 100%, 50% 0, 100% 100%, 94% 100%, 50% 12%, 6% 100%);
@@ -423,12 +423,12 @@ $recruteur-hover: #0198c2;*/
   flex-direction: column;
 }
 .creation_profil > .content_box > div:first-of-type > div:first-of-type span {
-  background-color: #330296;
+  background-color: #026096;
   color: #ffffff;
 }
 .creation_profil > .content_box > div:first-of-type > div:last-of-type span {
   background-color: #E5EFF4;
-  color: #330296;
+  color: #026096;
 }
 .creation_profil > .content_box > div:first-of-type .separator {
   width: 3px;
@@ -550,7 +550,7 @@ $recruteur-hover: #0198c2;*/
 .wish_profil .position_box > span {
   font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
   font-weight: 500;
-  line-height: 16.8px;
+  line-height: 22px; /* a la place de 16.8px alignement mauvais remonté par quentin */
 }
 
 .wish_profil .salary_box > p:first-of-type {
@@ -625,7 +625,7 @@ $recruteur-hover: #0198c2;*/
 }
 .wish_profil .job_box > p:nth-child(2) {
   margin: 0;
-  color: #330296;
+  color: #026096;
   font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -647,7 +647,7 @@ $recruteur-hover: #0198c2;*/
 .wish_profil .job_box > div {
   padding: 10px;
   border-radius: 6px;
-  outline: 1px solid #330296;
+  outline: 1px solid #026096;
 }
 .wish_profil .job_box > div > div {
   display: flex;
@@ -664,7 +664,7 @@ $recruteur-hover: #0198c2;*/
   font-weight: 500;
   line-height: 20px;
   border-radius: 6px;
-  border: 1px solid #330296;
+  border: 1px solid #026096;
   padding: 10px 16px;
   display: inline-flex;
   align-items: center;
@@ -747,7 +747,7 @@ $recruteur-hover: #0198c2;*/
   margin-bottom: 10px;
 }
 .wish_profil .job_box > div > input[disabled] {
-  background-color: rgba(28, 51, 69, 0.1019607843);
+  background-color: rgba(27, 50, 68, 0.1);
 }
 .wish_profil .job_box > div > input::-moz-placeholder {
   color: #7a8999;
@@ -779,7 +779,7 @@ $recruteur-hover: #0198c2;*/
 }
 .wish_profil .sector_box > p:nth-child(2) {
   margin: 0;
-  color: #330296;
+  color: #026096;
   font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -801,7 +801,7 @@ $recruteur-hover: #0198c2;*/
 .wish_profil .sector_box > div {
   padding: 10px;
   border-radius: 6px;
-  outline: 1px solid #330296;
+  outline: 1px solid #026096;
 }
 .wish_profil .sector_box > div > div {
   display: flex;
@@ -821,7 +821,7 @@ $recruteur-hover: #0198c2;*/
   font-weight: 500;
   line-height: 20px;
   border-radius: 6px;
-  border: 1px solid #330296;
+  border: 1px solid #026096;
   padding: 10px 16px;
   display: inline-flex;
   align-items: center;
@@ -957,7 +957,7 @@ $recruteur-hover: #0198c2;*/
   line-height: 16.8px;
   border-radius: 6px;
   color: #232558;
-  border: 1px solid #330296;
+  border: 1px solid #026096;
   padding: 10px 16px;
   display: inline-flex;
   align-items: center;
@@ -1051,9 +1051,9 @@ $recruteur-hover: #0198c2;*/
   outline: none;
 }
 .wish_profil > .action_box > div > button:first-of-type {
-  color: #330296;
+  color: #026096;
   background-color: #ffffff;
-  border: 1px solid #330296;
+  border: 1px solid #026096;
 }
 .wish_profil > .action_box > div > button:first-of-type:hover {
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
@@ -1342,9 +1342,9 @@ $recruteur-hover: #0198c2;*/
   outline: none;
 }
 .position > .action_box > div > button:first-of-type {
-  color: #330296;
+  color: #026096;
   background-color: #ffffff;
-  border: 1px solid #330296;
+  border: 1px solid #026096;
 }
 .position > .action_box > div > button:first-of-type:hover {
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);

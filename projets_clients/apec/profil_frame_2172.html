@@ -127,7 +127,7 @@
               <div class="location_box js_location_box">
 
                 <p>Les lieux où vous recherchez un poste *</p>
-                <input maxlength="50" type="text" placeholder="Saisissez un pays, une région ou un département"
+                <input maxlength="50" type="text" placeholder="Saisissez une région, un département, une ville"
                   id="adress">
 
                 <div class="js_location_box_item">
@@ -354,7 +354,9 @@
       let inputs = document.querySelectorAll('.js_location_box_item input[type="range"]');
 
       inputs.forEach((input) => {
-        input.addEventListener('change', (event) => {
+        input.addEventListener('input', (event) => {
+          //on met 'input' au lieu de 'change' pour suivre en temps réel
+          //car avec 'change' il faut que l'on relache le curseur pour ce soir à jour
           let span = input.parentElement.querySelector('strong + span');
           if (span) {
             span.textContent = event.target.value;
