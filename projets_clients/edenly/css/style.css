@@ -440,6 +440,69 @@ section {
 }
 
 
+/* classes icones récupérées sur site actuel */
+.isearch {
+  display: inline-block;
+  width: 18px;
+  height: 19px;
+  background-position: -428px -4px;
+  vertical-align: -6px;
+  cursor: pointer;
+}
+
+.ifavoris {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  background-position: -430px -31px;
+  margin-left: 1px;
+  vertical-align: -2px;
+}
+.user2 {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background-position: -430px -55px;
+  margin-left: 1px;
+  vertical-align: -2px;
+}
+
+.ipanier {
+  display: inline-block;
+  width: 12px;
+  height: 17px;
+  background-position: -433px -104px;
+  margin-left: 1px;
+  vertical-align: -2px;
+}
+
+.icontact {
+  display: inline-block;
+  width: 15px;
+  height: 18px;
+  background-position: -431px -77px;
+  margin-left: 1px;
+  vertical-align: -2px;
+}
+
+.flags {
+  background-image: url(https://img.edenly.com/flagsp.png);
+  background-repeat: no-repeat;
+  background-size: 100% 49494%;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  box-sizing: content-box;
+  width: 21px;
+  height: 14px;
+}
+
+.flags.flag-fr {
+  background-position: center 41.2432%;
+}
+
+
 
 /*=========================================== header ===========================================*/
 
@@ -532,7 +595,7 @@ nav {
   position: fixed;
   left: 0;
   height: 100vh;
-  width: 200px;
+  width: 19%;
   z-index: 999;
   border-right: 1px solid var(--grey_border);
   transform: translateX(-100%);
@@ -562,12 +625,20 @@ nav>button:first-of-type {
 .nav_links>a {
   line-height: 20px;
   padding: 2px 0;
-  display: inline-block;
+  display: block;
 }
 
 .nav_links>.separator {
   height: 1px;
   border-bottom: 1px solid var(--grey_border);
+  margin: 10px 0;
+}
+
+.nav_links_pictos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 15px;
   margin: 10px 0;
 }
 
@@ -595,16 +666,36 @@ nav>button:first-of-type {
     opacity: 60%;
     z-index: 99;
   }
-}
 
-@media only screen and (min-width: 768px) {
-  nav.active~main {
-    margin-left: 200px;
+  nav {
+    width: 200px;
   }
+
 
   nav.active~header>.nav_bar {
     margin-left: 200px;
     width: calc(100% - 200px);
+  }
+
+  nav.active~header>.nav_bar>div>button:first-of-type {
+    visibility: hidden;
+  }
+
+  .nav_links>a {
+    line-height: 30px;
+    padding-top: 0;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  nav.active~main {
+    margin-left: 19%;
+  }
+
+  nav.active~header>.nav_bar {
+    margin-left: 19%;
+    width: 81%;
   }
 
   nav.active~header>.nav_bar>div>button:first-of-type {
@@ -627,9 +718,7 @@ nav>button:first-of-type {
   transform: translateX(-50%);
   z-index: 99;
   padding: 20px 10px 10px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
 }
 
 .section_hero_logo>img {
@@ -718,6 +807,7 @@ nav>button:first-of-type {
 
 .section_selection_card {
   flex: 1;
+  display: block;
 }
 
 .section_selection_card>img {
@@ -802,6 +892,7 @@ nav>button:first-of-type {
 .section_essential_slide {
   width: 235px;
   flex: none;
+  display: block;
 }
 
 
@@ -882,6 +973,7 @@ nav>button:first-of-type {
   width: 33.33%;
   padding: 0 5px;
   flex: none;
+  display: block;
 }
 
 .section_collection_slide>img {
@@ -924,6 +1016,11 @@ nav>button:first-of-type {
 .section_edito>div.wrapper_1000 {
   padding: 75px 2% 60px 2%;
 }
+
+.section_edito>div>a {
+  display: block;
+}
+
 
 
 .section_edito>div>a:first-of-type>h2 {
@@ -1087,6 +1184,7 @@ nav>button:first-of-type {
   width: 23%;
   margin: 0 1%;
   position: relative;
+  display: block;
 }
 
 .section_thisweek_card>i {
@@ -1373,6 +1471,7 @@ nav>button:first-of-type {
 .section_guarantees_card {
   width: 25%;
   padding: 0 10px;
+  display: block;
 }
 
 .section_guarantees_card>span {
@@ -1489,6 +1588,7 @@ nav>button:first-of-type {
   width: 140px;
   height: 205px;
   flex: none;
+  display: block;
 }
 
 .section_advertising_slide>img {
@@ -1532,9 +1632,18 @@ footer>div.wrapper_1000 {
   padding: 40px 2% 30px 2%;
 }
 
-footer>div>a:last-of-type {
-  display: inline-block;
+footer>div>a {
+  display: block;
   margin: 0 auto;
+  width: fit-content;
+}
+
+footer>div>a:first-of-type {
+  display: none;
+  margin: 30px auto 10px;
+  width: 180px;
+  height: 30px;
+  line-height: 30px;
 }
 
 footer>div>a:last-of-type>img {
@@ -1623,6 +1732,10 @@ footer>div>a:last-of-type>img {
 @media only screen and (max-width: 600px) {
   footer>div.wrapper_1000 {
     padding: 40px 2% 10px 2%;
+  }
+
+  footer>div>a:first-of-type {
+    display: block;
   }
 
   .footer_container>div {
