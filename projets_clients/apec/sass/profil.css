@@ -550,7 +550,8 @@ $recruteur-hover: #0198c2;*/
 .wish_profil .position_box > span {
   font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
   font-weight: 500;
-  line-height: 22px; /* a la place de 16.8px alignement mauvais remonté par quentin */
+  line-height: 22px;
+  /* a la place de 16.8px alignement mauvais remonté par quentin */
 }
 
 .wish_profil .salary_box > p:first-of-type {
@@ -730,7 +731,7 @@ $recruteur-hover: #0198c2;*/
 .wish_profil .job_box > div > p:last-of-type {
   margin: 0px 0px 30px 0px;
 }
-.wish_profil .job_box > div > input {
+.wish_profil .job_box > div > div > input {
   margin: 0;
   color: #232558;
   font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
@@ -746,16 +747,16 @@ $recruteur-hover: #0198c2;*/
   padding: 10px;
   margin-bottom: 10px;
 }
-.wish_profil .job_box > div > input[disabled] {
+.wish_profil .job_box > div > div > input[disabled] {
   background-color: rgba(27, 50, 68, 0.1);
 }
-.wish_profil .job_box > div > input::-moz-placeholder {
+.wish_profil .job_box > div > div > input::-moz-placeholder {
   color: #7a8999;
 }
-.wish_profil .job_box > div > input::placeholder {
+.wish_profil .job_box > div > div > input::placeholder {
   color: #7a8999;
 }
-.wish_profil .job_box > div > input:focus, .wish_profil .job_box > div > input:focus-visible {
+.wish_profil .job_box > div > div > input:focus, .wish_profil .job_box > div > div > input:focus-visible {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
@@ -809,9 +810,14 @@ $recruteur-hover: #0198c2;*/
   -moz-column-gap: 17px;
        column-gap: 17px;
   row-gap: 10px;
-  max-height: 96px;
+  max-height: 144px;
   overflow-y: hidden;
   transition: max-height 0.3s ease;
+}
+@media (min-width: 768px) {
+  .wish_profil .sector_box > div > div {
+    max-height: 96px;
+  }
 }
 .wish_profil .sector_box > div > div > p {
   margin: 0;
@@ -940,15 +946,20 @@ $recruteur-hover: #0198c2;*/
 .wish_profil .location_box > input:focus, .wish_profil .location_box > input:focus-visible {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-.wish_profil .location_box > div {
+.wish_profil .location_box > .js_location_box_container {
   margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.wish_profil .location_box > .js_location_box_container > div {
   width: 248px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
-.wish_profil .location_box > div > p:first-of-type {
+.wish_profil .location_box > .js_location_box_container > div > p:first-of-type {
   margin: 0;
   font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
   font-size: 14px;
@@ -964,7 +975,7 @@ $recruteur-hover: #0198c2;*/
   width: -moz-fit-content;
   width: fit-content;
 }
-.wish_profil .location_box > div > p:first-of-type > button {
+.wish_profil .location_box > .js_location_box_container > div > p:first-of-type > button {
   margin-left: 18px;
   height: 16px;
   background-color: unset;
@@ -973,13 +984,13 @@ $recruteur-hover: #0198c2;*/
   outline: none;
   cursor: pointer;
 }
-.wish_profil .location_box > div > p:first-of-type > button::after {
+.wish_profil .location_box > .js_location_box_container > div > p:first-of-type > button::after {
   content: url("../sources/icons/cross.svg");
   display: inline-block;
   width: 16px;
   height: 16px;
 }
-.wish_profil .location_box > div > p:nth-child(2) {
+.wish_profil .location_box > .js_location_box_container > div > p:nth-child(2) {
   margin: 0;
   font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
   font-size: 14px;
@@ -988,11 +999,11 @@ $recruteur-hover: #0198c2;*/
   line-height: 22px;
   color: #232558;
 }
-.wish_profil .location_box > div > p:nth-child(2) > strong {
+.wish_profil .location_box > .js_location_box_container > div > p:nth-child(2) > strong {
   font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
   font-weight: 700;
 }
-.wish_profil .location_box > div > p:last-of-type {
+.wish_profil .location_box > .js_location_box_container > div > p:last-of-type {
   margin: 0;
   font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
   font-size: 12px;
@@ -1003,7 +1014,7 @@ $recruteur-hover: #0198c2;*/
   display: inline-flex;
   justify-content: space-between;
 }
-.wish_profil .location_box > div > input {
+.wish_profil .location_box > .js_location_box_container > div > input {
   accent-color: #232558;
   cursor: pointer;
 }
@@ -1115,6 +1126,41 @@ $recruteur-hover: #0198c2;*/
 }
 .wish_profil_help > div > p > em {
   font-style: italic;
+}
+
+.input_autocompletion {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.input_autocompletion > ul {
+  position: absolute;
+  bottom: 1px;
+  transform: translateY(100%);
+  width: 100%;
+  background-color: #ffffff;
+  border: 0.5px solid #cfcfcf;
+  border-radius: 2px;
+  list-style: none;
+  padding: 11px 11px 7px 44px;
+}
+
+.input_autocompletion > ul > li {
+  font-family: "Montserrat-Regular", Verdana, Arial, sans-serif;
+  color: #232558;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.input_autocompletion > ul > li > strong {
+  font-family: "Montserrat-SemiBold", Verdana, Arial, sans-serif;
+  font-weight: 700;
 }
 
 .position {
