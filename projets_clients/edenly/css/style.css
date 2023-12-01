@@ -276,14 +276,13 @@ section {
   font-weight: 400;
   font-size: 11px;
   line-height: 17px;
-  border: 1px solid #C0A169;
-  color: var(--primary_black);
+  border: 1px solid var(--gold);
+  color: var(--secondary_black);
 }
 
 .button_gold_hover:hover {
-  background-color: var(--gold_hover);
+  background-color: var(--gold);
   color: var(--white);
-  border-color: var(--gold_hover);
 }
 
 
@@ -458,6 +457,7 @@ section {
   margin-left: 1px;
   vertical-align: -2px;
 }
+
 .user2 {
   display: inline-block;
   width: 15px;
@@ -575,6 +575,7 @@ section {
   display: block;
   width: fit-content;
   margin: auto;
+  text-align: center;
 }
 
 
@@ -638,7 +639,6 @@ nav>button:first-of-type {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  column-gap: 15px;
   margin: 10px 0;
 }
 
@@ -831,9 +831,8 @@ nav>button:first-of-type {
 }
 
 .section_selection_card:hover>div>button {
-  background-color: var(--gold_hover);
+  background-color: var(--gold);
   color: var(--white);
-  border-color: var(--gold_hover);
 }
 
 
@@ -1042,6 +1041,12 @@ nav>button:first-of-type {
   letter-spacing: 0.02em;
 }
 
+
+.section_edito>div>p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .section_edito>div>p:first-of-type {
   line-height: 20px;
   padding: 10px 0px 30px 0px;
@@ -1067,7 +1072,7 @@ nav>button:first-of-type {
   justify-content: center;
   align-items: center;
   height: 20px;
-  padding-top: 3px;
+  padding-top: 4px;
   width: 20px;
   border-radius: 50%;
   margin-left: 10px;
@@ -1329,6 +1334,9 @@ nav>button:first-of-type {
 }
 
 /*=========================================== section_presentation ===========================================*/
+.section_presentation {
+  padding-bottom: 40px;
+}
 
 .section_presentation_slider_container {
   position: relative;
@@ -1377,18 +1385,15 @@ nav>button:first-of-type {
   line-height: 19px;
 }
 
-.section_presentation_slide>div:first-of-type>p::after {
-  content: "";
+.section_presentation_slide>div:first-of-type>hr {
   display: block;
   margin: 10px auto 5px auto;
   width: 160px;
   height: 1px;
-  background-color: #ccc;
+  color: var(--grey);
+  border-top: 1px solid #ccc;
 }
 
-.section_presentation_slide>div:first-of-type>p:last-of-type:after {
-  visibility: hidden;
-}
 
 .section_presentation_slide>div:last-of-type>img {
   width: 100%;
@@ -1413,7 +1418,7 @@ nav>button:first-of-type {
   justify-content: center;
   align-items: center;
   height: 20px;
-  padding-top: 3px;
+  padding-top: 4px;
   width: 20px;
   border-radius: 50%;
   margin-left: 10px;
