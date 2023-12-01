@@ -946,8 +946,11 @@ nav>button:first-of-type {
 
 
 /*=========================================== section_collection ===========================================*/
+
 .section_collection_slider_container {
   position: relative;
+  margin-left: -5px;
+  width: calc(100% + 10px);
 }
 
 .section_collection_slider_container>.slider_button {
