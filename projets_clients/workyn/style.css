@@ -65,13 +65,13 @@ ul {
     --grey: #929292;
     --blue_strong: #38516B;
     --blue: #236FE0;
-    --blue_light:#236FE014;
+    --blue_light: #236FE014;
     --green: #1DD6C9;
     --green_light: #F5FFFE;
     --pink: #FFBDE0;
     --pink_light: #FFBDE026;
     --red: #800639;
-    --red_light:#F8F2F5;
+    --red_light: #F8F2F5;
 }
 
 .background_black {
@@ -767,7 +767,7 @@ header {
     /* transition: all 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84); */
 }
 
-header>.wrapper{
+header>.wrapper {
     height: 100px;
     padding: 0px 32px;
 }
@@ -887,7 +887,7 @@ nav>:nth-child(3):hover {
 }
 
 @media only screen and (max-width: 1440px) {
-    header>.wrapper{
+    header>.wrapper {
         padding: 0 32px;
     }
 }
@@ -1181,7 +1181,7 @@ nav>:nth-child(3):hover {
 
 /*================================ SECTION 4 ADN =======================================*/
 .section_adn {
-    padding: 0px 32px 80px 32px;
+    padding: 0px 32px 0px 32px;
 }
 
 .section_adn_offers {
@@ -1195,7 +1195,7 @@ nav>:nth-child(3):hover {
 
 @media only screen and (max-width: 1200px) {
     .section_adn {
-        padding: 160px 32px 80px 32px;
+        padding: 160px 32px 0px 32px;
     }
 }
 
@@ -1203,7 +1203,7 @@ nav>:nth-child(3):hover {
 @media only screen and (max-width: 576px) {
 
     .section_adn {
-        padding: 0px 24px 80px 24px;
+        padding: 0px 24px 0px 24px;
     }
 
     .section_adn_offers {
@@ -1214,7 +1214,7 @@ nav>:nth-child(3):hover {
 /*================================ SECTION 5 CONTACT =======================================*/
 
 .section_contact {
-    padding: 80px 32px 160px 32px;
+    padding: 160px 32px 160px 32px;
 }
 
 .section_contact_icon {
@@ -1232,7 +1232,7 @@ nav>:nth-child(3):hover {
 
 @media only screen and (max-width: 576px) {
     .section_contact {
-        padding: 80px 8px 160px 8px;
+        padding: 125px 8px 160px 8px;
     }
 
     .section_contact form {
@@ -1620,7 +1620,7 @@ nav>:nth-child(3):hover {
 /*================================ SECTION 5 SOUS PAGE APPROCHE =======================================*/
 .section_approach {
     padding: 100px 48px 130px 48px;
-    margin: 160px 0px 80px 0px;
+    margin: 160px 0px 0px 0px;
 }
 
 .section_approach h2 {
@@ -1683,16 +1683,22 @@ nav>:nth-child(3):hover {
 .section_approach_card_image {
     height: 47%;
     border-radius: 24px 24px 0px 0px;
+
+    /* SHADOW-1 */
+    box-shadow: 0px 4px 50px 0px rgba(56, 81, 107, 0.15);
 }
 
 .section_approach_card_image img {
-    max-width: 64%;
+    width: 64%;
 }
 
 .section_approach_card_content {
     height: 53%;
     border-radius: 0px 0px 24px 24px;
     padding: 48px;
+    background-color: #445D78;
+    /* SHADOW-2 */
+    box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.10);
 }
 
 
@@ -1700,13 +1706,13 @@ nav>:nth-child(3):hover {
 @media only screen and (max-width: 768px) {
     .section_approach {
         padding: 100px 24px;
-        margin: 200px 0px 80px 0px;
+        margin: 200px 0px 0px 0px;
     }
 }
 
 @media only screen and (max-width: 576px) {
     .section_approach {
-        margin: 125px 0px 45px 0px;
+        margin: 125px 0px 0px 0px;
     }
 
     .section_approach_cards_buttons {
