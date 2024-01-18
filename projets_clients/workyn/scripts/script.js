@@ -17,7 +17,7 @@ function Mail() {
 /*================================ NAVIGATION MOBILE BURGER MENU =======================================*/
 const burgerButton = document.querySelector(".nav_toggler");//On vient récupérer le bouton du burger menu
 const navigation = document.querySelector("nav");//egalement l'élément nav
-const header = document.querySelector("header");//egalement l'élément nav
+const headerWrapper = document.querySelector("header>.wrapper");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 const sections = document.querySelectorAll("section");
@@ -44,16 +44,16 @@ footer.addEventListener("click", toggleNavIfOpen);
 function toggleNav() {
     burgerButton.classList.toggle("active");
     navigation.classList.toggle("active");
-    header.classList.toggle("active");
+    headerWrapper.classList.toggle("active");
 };
 
 
 //Permet de fermer le menu en cliquant à l'extérieur
 function toggleNavIfOpen() {
-    if (header.classList.contains("active")) {
+    if (headerWrapper.classList.contains("active")) {
         burgerButton.classList.toggle("active");
         navigation.classList.toggle("active");
-        header.classList.toggle("active");
+        headerWrapper.classList.toggle("active");
     }
 };
 

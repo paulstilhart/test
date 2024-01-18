@@ -65,9 +65,13 @@ ul {
     --grey: #929292;
     --blue_strong: #38516B;
     --blue: #236FE0;
+    --blue_light:#236FE014;
     --green: #1DD6C9;
     --green_light: #F5FFFE;
     --pink: #FFBDE0;
+    --pink_light: #FFBDE026;
+    --red: #800639;
+    --red_light:#F8F2F5;
 }
 
 .background_black {
@@ -118,6 +122,14 @@ ul {
     color: var(--blue);
 }
 
+.background_blue_light {
+    background-color: var(--blue_light);
+}
+
+.color_blue_light {
+    color: var(--blue_light);
+}
+
 .background_green {
     background-color: var(--green);
 }
@@ -140,6 +152,30 @@ ul {
 
 .color_pink {
     color: var(--pink);
+}
+
+.background_pink_light {
+    background-color: var(--pink_light);
+}
+
+.color_pink_light {
+    color: var(--pink_light);
+}
+
+.background_red {
+    background-color: var(--red);
+}
+
+.color_red {
+    color: var(--red);
+}
+
+.background_red_light {
+    background-color: var(--red_light);
+}
+
+.color_red_light {
+    color: var(--red_light);
 }
 
 /*================================ FONTS =======================================*/
@@ -483,6 +519,10 @@ h4 {
     max-width: 560px;
 }
 
+.mw_581 {
+    max-width: 581px;
+}
+
 .mw_650 {
     max-width: 650px;
 }
@@ -722,11 +762,14 @@ h4 {
 
 /*================================ HEADER =======================================*/
 header {
-    height: 100px;
-    padding: 0px 64px;
     position: fixed;
     z-index: 99;
     /* transition: all 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84); */
+}
+
+header>.wrapper{
+    height: 100px;
+    padding: 0px 32px;
 }
 
 .header_link_home_logo {
@@ -753,17 +796,10 @@ header.header_big .header_scroll {
     display: flex !important;
 }
 
-.nav_links_pages,
-.nav_links_pages img {
-    width: 107px;
-}
-
-.nav_links_pages {
-    margin-right: 28px;
-}
 
 .nav_links {
     border-bottom: 2px solid rgba(29, 214, 202, 0);
+    font-size: 14px;
 }
 
 .nav_links:hover {
@@ -777,6 +813,28 @@ header.header_big .header_scroll {
 .nav_links.business:hover {
     border-bottom-color: var(--pink);
 }
+
+.nav_links.legal:hover {
+    border-bottom-color: var(--red);
+}
+
+nav>:nth-child(1):hover {
+    border-bottom-color: var(--pink);
+}
+
+nav>:nth-child(2):hover {
+    border-bottom-color: var(--blue);
+}
+
+nav>:nth-child(3):hover {
+    border-bottom-color: var(--red);
+}
+
+/* pas possible car trop d'éléments au scroll */
+/* nav>:nth-child(3) {
+    margin-right: 50px;
+} */
+
 
 .nav_toggler {
     position: fixed;
@@ -828,15 +886,19 @@ header.header_big .header_scroll {
     transform: translateY(0px) rotate(-135deg);
 }
 
-
+@media only screen and (max-width: 1440px) {
+    header>.wrapper{
+        padding: 0 32px;
+    }
+}
 
 @media only screen and (max-width: 1400px) {
-    header.active {
+    header>.wrapper.active {
         height: auto;
         justify-content: center;
     }
 
-    header.active>.header_link_home {
+    header>.wrapper.active>.header_link_home {
         display: none;
     }
 
@@ -863,15 +925,15 @@ header.header_big .header_scroll {
         display: flex;
     }
 
-    .nav_links_pages {
-        margin-right: 0;
+    nav>:nth-child(3) {
+        margin-right: 0px;
     }
 }
 
 
 /*================================ SECTION 1 INTRODUCTION =======================================*/
 .section_introduction {
-    padding: 130px 60px 128px 60px;
+    padding: 130px 60px 88px 60px;
 }
 
 .section_introduction_illustration {
@@ -930,7 +992,7 @@ header.header_big .header_scroll {
 
 /*================================ SECTION 2 BRANDS =======================================*/
 .section_brands_content {
-    padding: 128px 24px 80px 24px;
+    padding: 88px 24px 80px 24px;
 }
 
 .section_brands_content h3 strong {
@@ -1057,9 +1119,6 @@ header.header_big .header_scroll {
     padding: 0px 64px;
 }
 
-.section_recruitment_ribbon_container_img {
-    position: absolute;
-}
 
 .section_recruitment_ribbon_container div img {
     width: 87px;
@@ -1070,34 +1129,24 @@ header.header_big .header_scroll {
 }
 
 .section_recruitment_ribbon_container_img {
+    filter: drop-shadow(4px 4px 9px rgba(0, 0, 0, 0.10));
     position: absolute;
-    width: 360px;
+    width: 40%;
+    top: -250px;
+    right: 0;
 }
 
-.section_recruitment_ribbon_container_img.first_element {
-    top: -280px;
-    right: 25%;
-}
-
-.section_recruitment_ribbon_container_img.second_element {
-    top: 80px;
-    left: 65%;
-}
 
 @media only screen and (max-width: 1200px) {
     .section_recruitment_presentation {
         margin-bottom: 500px;
     }
 
-    .section_recruitment_ribbon_container_img.first_element {
-        top: -320px;
+    .section_recruitment_ribbon_container_img {
+        top: -110%;
         right: 5%;
     }
 
-    .section_recruitment_ribbon_container_img.second_element {
-        top: 270px;
-        left: 5%;
-    }
 }
 
 
@@ -1109,6 +1158,11 @@ header.header_big .header_scroll {
     .section_recruitment_ribbon_container {
         top: -35%;
         padding: 0px 32px;
+    }
+
+    .section_recruitment_ribbon_container_img {
+        width: 180px;
+        top: -110px;
     }
 }
 
@@ -1122,19 +1176,7 @@ header.header_big .header_scroll {
         padding: 0px 24px;
     }
 
-    .section_recruitment_ribbon_container_img {
-        width: 180px;
-    }
 
-    .section_recruitment_ribbon_container_img.first_element {
-        top: -180px;
-        right: 5%;
-    }
-
-    .section_recruitment_ribbon_container_img.second_element {
-        top: 400px;
-        left: 5%;
-    }
 }
 
 /*================================ SECTION 4 ADN =======================================*/
@@ -1143,8 +1185,12 @@ header.header_big .header_scroll {
 }
 
 .section_adn_offers {
-    padding: 48px;
+    padding: 88px 48px;
     border-radius: 16px;
+    background-image: url('./sources/img/homepage_background.png');
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
 }
 
 @media only screen and (max-width: 1200px) {
