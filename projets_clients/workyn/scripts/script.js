@@ -17,6 +17,7 @@ function Mail() {
 /*================================ NAVIGATION MOBILE BURGER MENU =======================================*/
 const burgerButton = document.querySelector(".nav_toggler");//On vient récupérer le bouton du burger menu
 const navigation = document.querySelector("nav");//egalement l'élément nav
+const header = document.querySelector("header");
 const headerWrapper = document.querySelector("header>.wrapper");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
