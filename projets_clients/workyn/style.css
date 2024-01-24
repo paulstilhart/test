@@ -72,6 +72,8 @@ ul {
     --pink_light: #FFBDE026;
     --red: #800639;
     --red_light: #F8F2F5;
+    /* SHADOW-1 */
+    --shadow-1: 0px 4px 50px 0px rgba(56, 81, 107, 0.15);
 }
 
 .background_black {
@@ -1478,10 +1480,77 @@ nav>:nth-child(3):hover {
     gap: 48px;
 }
 
+.section_expert_container.legal {
+    padding: 0;
+    border-radius: unset;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    column-gap: 28px;
+    row-gap: 20px;
+}
+
+.section_expert_domain{
+    min-width: 282px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap:21px;
+}
+
+.section_expert_domain::before{
+    content: '';
+    background-image: url('./sources/logos/sectors/legal/card1.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.section_expert_domain:nth-child(2):before{
+    background-image: url('./sources/logos/sectors/legal/card2.svg');
+}
+.section_expert_domain:nth-child(3):before{
+    background-image: url('./sources/logos/sectors/legal/card3.svg');
+}
+
+.section_expert_domain:nth-child(4):before{
+    background-image: url('./sources/logos/sectors/legal/card4.svg');
+}
+
+
+.section_expert_domain_content{
+    padding: 16px 16px 16px 24px;
+    border-radius: 24px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-1);
+    flex: auto;
+}
+
+.section_expert_domain_content ul{
+    list-style-position:outside;
+    margin-left: 16px;
+}
+
+
+.section_expert_domain_content h4{
+    margin-bottom: 16px;
+}
+
 
 .section_expert_content_separator {
     width: 1.5px;
     height: 171px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .section_expert_container.legal{
+        flex-flow: row wrap;
+    }
+    .section_expert_domain{
+        width: calc(50% - 14px);
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -1509,6 +1578,21 @@ nav>:nth-child(3):hover {
         rotate: 90deg;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .section_expert_domain{
+        width: 100%;
+        gap:16px;
+    }
+
+    .section_expert_domain::before{
+        width: 100px;
+        height: 100px;
+    }
+    
+}
+
+
 
 
 @media only screen and (max-width: 576px) {
