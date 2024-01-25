@@ -2,50 +2,40 @@ const title = document.querySelector('.js_title_animation');
 const texts = ["Légal & RH", "Commerce & Luxe", "Immobilier"];
 let currentTextIndex = 0;
 
-const typingSpeed = 200; // Vitesse de frappe, en millisecondes
-const eraseSpeed = 200; // Vitesse d'effacement, en millisecondes
-const initialDelay = 1000; // Délai initial avant le démarrage de la frappe
-const eraseDelay = 1000; // Délai avant le début de l'effacement
+const typingSpeed = 150;
+const eraseSpeed = 150;
+const initialDelay = 1000;
+const eraseDelay = 1500;
 
-function typewriter(element, word, speed, delay, index = 0, erase = false) {
-    if (erase) {
-        if (index >= 0) {
-            setTimeout(() => {
-                const spanLength = index;
-                element.innerHTML = `<span>${word.substring(0, spanLength)}</span>`;
-                typewriter(element, word, speed, 0, index - 1, true);
-            }, speed);
-        } else {
-            // Commence l'écriture après un délai
-            setTimeout(() => {
-                typewriter(element, getNextText(), speed, 0);
-            }, eraseDelay);
-        }
-    } else {
+function getNextText() {
+    return texts[++currentTextIndex % texts.length];
+}
+
+function animateText(element, word, speed, index, direction) {
+    if (direction === 'type') {
         if (index <= word.length) {
-            setTimeout(() => {
-                const spanLength = index;
-                element.innerHTML = `<span>${word.substring(0, spanLength)}</span>`;
-                typewriter(element, word, speed, 0, index + 1);
-            }, speed);
+            element.innerHTML = `<span>${word.substring(0, index)}</span>`;
+            setTimeout(() => animateText(element, word, speed, index + 1, 'type'), speed);
         } else {
-            // Commence l'effacement après un délai
-            setTimeout(() => {
-                typewriter(element, word, eraseSpeed, 0, word.length, true);
-            }, eraseDelay);
+            setTimeout(() => animateText(element, word, eraseSpeed, word.length, 'erase'), eraseDelay);
+        }
+    } else if (direction === 'erase') {
+        if (index >= 0) {
+            element.innerHTML = `<span>${word.substring(0, index)}</span>`;
+            setTimeout(() => animateText(element, word, speed, index - 1, 'erase'), speed);
+        } else {
+            setTimeout(() => animateText(element, getNextText(), typingSpeed, 0, 'type'), eraseDelay);
         }
     }
 }
 
-function getNextText() {
-    currentTextIndex = (currentTextIndex + 1) % texts.length;
-    return texts[currentTextIndex];
+function typewriter(element, word, speed, index = 0) {
+    animateText(element, word, speed, index, 'type');
 }
 
-// Démarrage de la frappe après le délai initial
-setTimeout(() => {
-    typewriter(title, getNextText(), typingSpeed, 0);
-}, initialDelay);
+// Démarrage de la frappe
+setTimeout(() => typewriter(title, getNextText(), typingSpeed, 0), initialDelay);
+
 
 
 
