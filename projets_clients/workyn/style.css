@@ -977,14 +977,14 @@ nav>:nth-child(3):hover {
     margin-bottom: 16px;
 }
 
-.section_introduction_animation_container span {
+.section_introduction_animation_container span:last-of-type {
     position: relative;
 }
 
-.section_introduction_animation_container span::after {
+.section_introduction_animation_container span:last-of-type:after {
     content: '';
     position: absolute;
-    right: -5px;
+    right: 8px;
     display: inline-block;
     height: 72px;
     width: 3px;
@@ -1045,7 +1045,7 @@ nav>:nth-child(3):hover {
         min-height: 39px;
     }
 
-    .section_introduction_animation_container span::after {
+    .section_introduction_animation_container span:last-of-type:after {
         height: 39px;
     }
 }
