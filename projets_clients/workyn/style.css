@@ -972,6 +972,41 @@ nav>:nth-child(3):hover {
     }
 }
 
+.section_introduction_animation_container {
+    min-height: 72px;
+    margin-bottom: 16px;
+}
+
+.section_introduction_animation_container span {
+    position: relative;
+}
+
+.section_introduction_animation_container span::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    display: inline-block;
+    height: 72px;
+    width: 3px;
+    background-color: var(--green);
+    /* animation: cursor 1s infinite */
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
 .section_introduction {
     padding: 192px 64px 88px 64px;
 }
@@ -1005,6 +1040,14 @@ nav>:nth-child(3):hover {
         padding: 192px 24px 90px 24px;
 
     }
+
+    .section_introduction_animation_container {
+        min-height: 39px;
+    }
+
+    .section_introduction_animation_container span::after {
+        height: 39px;
+    }
 }
 
 /*================================ SECTION 2 BRANDS =======================================*/
@@ -1033,20 +1076,34 @@ nav>:nth-child(3):hover {
 .section_brands_cards {
     padding: 0px 24px;
     position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 36px;
 }
 
 .section_brands_card {
     border-radius: 32px;
-    padding: 48px 80px;
+    padding: 48px 40px;
     position: relative;
+    width: calc(33.33% - 24px);
+    max-width: 413px;
 }
 
 .section_brands_card_logo {
-    width: 351px;
+    display: block;
+    margin: 0 auto 64px auto;
+    width: 281px;
+    max-width: 100%;
+    height: auto;
 }
 
 .section_brands_card li {
     margin-left: 10px;
+}
+
+.section_brands_card a {
+    margin: auto auto 0 0;
 }
 
 .section_brands_ribbon_container {
@@ -1070,7 +1127,31 @@ nav>:nth-child(3):hover {
     .section_brands_ribbon {
         height: 800px;
     }
+
 }
+
+@media only screen and (max-width: 992px) {
+
+    .section_brands_cards {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .section_brands_card {
+        width: 100%;
+        max-width: 413px;
+    }
+
+    .section_brands_card {
+        padding: 32px;
+    }
+
+    .section_brands_card_logo {
+        width: 268px;
+        margin: 0 auto 24px auto;
+    }
+}
+
 
 
 @media only screen and (max-width: 768px) {
@@ -1092,13 +1173,7 @@ nav>:nth-child(3):hover {
         right: -35px;
     }
 
-    .section_brands_card {
-        padding: 32px;
-    }
 
-    .section_brands_card_logo {
-        width: 268px;
-    }
 
 
     .section_brands_ribbon {
@@ -1377,15 +1452,16 @@ nav>:nth-child(3):hover {
 }
 
 @media only screen and (min-width: 1200px) {
-    .section_goals_content_text img:first-of-type{
-        top:30px;
+    .section_goals_content_text img:first-of-type {
+        top: 30px;
     }
-    .section_goals_content_text.legal img:first-of-type{
+
+    .section_goals_content_text.legal img:first-of-type {
         left: -40px;
     }
 
-    .section_goals_content_text img:last-of-type{
-        bottom:30px;
+    .section_goals_content_text img:last-of-type {
+        bottom: 30px;
     }
 }
 
@@ -1490,14 +1566,14 @@ nav>:nth-child(3):hover {
     row-gap: 20px;
 }
 
-.section_expert_domain{
+.section_expert_domain {
     min-width: 282px;
     display: flex;
     flex-flow: column nowrap;
-    gap:21px;
+    gap: 21px;
 }
 
-.section_expert_domain::before{
+.section_expert_domain::before {
     content: '';
     background-image: url('./sources/logos/sectors/legal/card1.svg');
     background-repeat: no-repeat;
@@ -1508,19 +1584,20 @@ nav>:nth-child(3):hover {
     margin: 0 auto;
 }
 
-.section_expert_domain:nth-child(2):before{
+.section_expert_domain:nth-child(2):before {
     background-image: url('./sources/logos/sectors/legal/card2.svg');
 }
-.section_expert_domain:nth-child(3):before{
+
+.section_expert_domain:nth-child(3):before {
     background-image: url('./sources/logos/sectors/legal/card3.svg');
 }
 
-.section_expert_domain:nth-child(4):before{
+.section_expert_domain:nth-child(4):before {
     background-image: url('./sources/logos/sectors/legal/card4.svg');
 }
 
 
-.section_expert_domain_content{
+.section_expert_domain_content {
     padding: 16px 16px 16px 24px;
     border-radius: 24px;
     background-color: var(--white);
@@ -1528,13 +1605,13 @@ nav>:nth-child(3):hover {
     flex: auto;
 }
 
-.section_expert_domain_content ul{
-    list-style-position:outside;
+.section_expert_domain_content ul {
+    list-style-position: outside;
     margin-left: 16px;
 }
 
 
-.section_expert_domain_content h4{
+.section_expert_domain_content h4 {
     margin-bottom: 16px;
 }
 
@@ -1545,10 +1622,11 @@ nav>:nth-child(3):hover {
 }
 
 @media only screen and (max-width: 1400px) {
-    .section_expert_container.legal{
+    .section_expert_container.legal {
         flex-flow: row wrap;
     }
-    .section_expert_domain{
+
+    .section_expert_domain {
         width: calc(50% - 14px);
     }
 }
@@ -1580,16 +1658,16 @@ nav>:nth-child(3):hover {
 }
 
 @media only screen and (max-width: 768px) {
-    .section_expert_domain{
+    .section_expert_domain {
         width: 100%;
-        gap:16px;
+        gap: 16px;
     }
 
-    .section_expert_domain::before{
+    .section_expert_domain::before {
         width: 100px;
         height: 100px;
     }
-    
+
 }
 
 

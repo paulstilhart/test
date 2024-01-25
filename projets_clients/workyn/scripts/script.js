@@ -1,3 +1,60 @@
+const title = document.querySelector('.js_title_animation');
+const texts = ["Légal & RH", "Commerce & Luxe", "Immobilier"];
+let currentTextIndex = 0;
+
+const typingSpeed = 200; // Vitesse de frappe, en millisecondes
+const eraseSpeed = 200; // Vitesse d'effacement, en millisecondes
+const initialDelay = 1000; // Délai initial avant le démarrage de la frappe
+const eraseDelay = 1000; // Délai avant le début de l'effacement
+
+function typewriter(element, word, speed, delay, index = 0, erase = false) {
+    if (erase) {
+        if (index >= 0) {
+            setTimeout(() => {
+                const spanLength = index;
+                element.innerHTML = `<span>${word.substring(0, spanLength)}</span>`;
+                typewriter(element, word, speed, 0, index - 1, true);
+            }, speed);
+        } else {
+            // Commence l'écriture après un délai
+            setTimeout(() => {
+                typewriter(element, getNextText(), speed, 0);
+            }, eraseDelay);
+        }
+    } else {
+        if (index <= word.length) {
+            setTimeout(() => {
+                const spanLength = index;
+                element.innerHTML = `<span>${word.substring(0, spanLength)}</span>`;
+                typewriter(element, word, speed, 0, index + 1);
+            }, speed);
+        } else {
+            // Commence l'effacement après un délai
+            setTimeout(() => {
+                typewriter(element, word, eraseSpeed, 0, word.length, true);
+            }, eraseDelay);
+        }
+    }
+}
+
+function getNextText() {
+    currentTextIndex = (currentTextIndex + 1) % texts.length;
+    return texts[currentTextIndex];
+}
+
+// Démarrage de la frappe après le délai initial
+setTimeout(() => {
+    typewriter(title, getNextText(), typingSpeed, 0);
+}, initialDelay);
+
+
+
+
+
+
+
+
+
 /*================================ ENVOI DU MAIL DEPUIS FORMULAIRE =======================================*/
 function Mail() {
     const name = document.getElementById("name");
@@ -91,7 +148,7 @@ window.addEventListener('scroll', () => {
     text.forEach(item => {
         observer.observe(item);
     })
-    
+
     const { scrollTop } = document.documentElement;
     if (scrollTop > 500) {
         header.classList.add("header_big");
@@ -109,8 +166,8 @@ window.addEventListener('scroll', () => {
 
     lastScrollTop = scrollTop;
 
-    if(next){
-        if(window.innerWidth > 2600) {
+    if (next) {
+        if (window.innerWidth > 2600) {
             next.classList.remove("active");
             return;//on sort de la boucle
         };
