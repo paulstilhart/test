@@ -1,5 +1,5 @@
 const title = document.querySelector('.js_title_animation');
-const texts = ["Légal & RH", "Commerce & Luxe", "Immobilier"];
+const texts = ["Commerce & Luxe", "Légal & RH", "Immobilier"];
 let currentTextIndex = 0;
 
 const typingSpeed = 150;
@@ -7,34 +7,29 @@ const eraseSpeed = 150;
 const initialDelay = 1000;
 const eraseDelay = 1500;
 
-function getNextText() {
-    return texts[++currentTextIndex % texts.length];
-}
-
 function animateText(element, word, speed, index, direction) {
     if (direction === 'type') {
         if (index <= word.length) {
-            element.innerHTML = `<span>${word.substring(0, index)}</span>`;
+            element.textContent = word.substring(0, index);
             setTimeout(() => animateText(element, word, speed, index + 1, 'type'), speed);
         } else {
             setTimeout(() => animateText(element, word, eraseSpeed, word.length, 'erase'), eraseDelay);
         }
     } else if (direction === 'erase') {
         if (index >= 0) {
-            element.innerHTML = `<span>${word.substring(0, index)}</span>`;
+            element.textContent = word.substring(0, index);
             setTimeout(() => animateText(element, word, speed, index - 1, 'erase'), speed);
         } else {
-            setTimeout(() => animateText(element, getNextText(), typingSpeed, 0, 'type'), eraseDelay);
+            currentTextIndex = (currentTextIndex + 1) % texts.length;
+            setTimeout(() => animateText(element, texts[currentTextIndex], typingSpeed, 0, 'type'), eraseDelay);
         }
     }
 }
 
-function typewriter(element, word, speed, index = 0) {
-    animateText(element, word, speed, index, 'type');
-}
 
 // Démarrage de la frappe
-setTimeout(() => typewriter(title, getNextText(), typingSpeed, 0), initialDelay);
+setTimeout(() => animateText(title, texts[currentTextIndex], typingSpeed, 0, 'type'), initialDelay);
+
 
 
 
