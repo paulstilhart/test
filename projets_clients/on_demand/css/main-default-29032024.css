@@ -3953,6 +3953,10 @@ td {}
     max-width: 300px;
 }
 
+.max-w-\[328px\] {
+    max-width: 328px;
+}
+
 .max-w-\[375px\] {
     max-width: 375px;
 }
@@ -3963,6 +3967,14 @@ td {}
 
 .max-w-\[475px\] {
     max-width: 475px;
+}
+
+.max-w-\[calc\(368px\+1\.5rem\)\] {
+    max-width: calc(368px + 1.5rem);
+}
+
+.max-w-\[calc\(399px\+1\.5rem\)\] {
+    max-width: calc(399px + 1.5rem);
 }
 
 .max-w-full {
@@ -3993,20 +4005,20 @@ td {}
     max-width: 375px;
 }
 
-.max-w-\[368px\] {
-    max-width: 368px;
+.max-w-\[324px\] {
+    max-width: 324px;
 }
 
-.max-w-\[calc\(368px\+1\.5rem\)\] {
-    max-width: calc(368px + 1.5rem);
+.max-w-\[377px\] {
+    max-width: 377px;
 }
 
-.max-w-\[calc\(399px\+1\.5rem\)\] {
-    max-width: calc(399px + 1.5rem);
+.max-w-\[327px\] {
+    max-width: 327px;
 }
 
-.max-w-\[328px\] {
-    max-width: 328px;
+.max-w-\[518px\] {
+    max-width: 518px;
 }
 
 .flex-1 {
@@ -4154,6 +4166,10 @@ td {}
 
 .flex-wrap {
     flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
 }
 
 .items-start {
@@ -4341,10 +4357,6 @@ td {}
 
 .overflow-x-hidden {
     overflow-x: hidden;
-}
-
-.overflow-x-scroll {
-    overflow-x: scroll;
 }
 
 .break-words {
@@ -4585,8 +4597,6 @@ td {}
     --tw-border-opacity: 1;
     border-color: rgb(255 118 20 / var(--tw-border-opacity));
 }
-
-
 
 .border-l-tertiary-blue-xhigh {
     --tw-border-opacity: 1;
@@ -5953,10 +5963,6 @@ td {}
     padding: 1.5rem;
 }
 
-.p-block-xs {
-    padding: 1.5rem;
-}
-
 .p-component-2xs {
     padding: 0.25rem;
 }
@@ -6227,11 +6233,11 @@ td {}
 }
 
 .font-mono {
-    font-family: Manrope, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+    font-family: Manrope, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .font-sans {
-    font-family: Work Sans, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+    font-family: Work Sans, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .text-2xl {
@@ -6432,12 +6438,6 @@ td {}
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
-
-
-
-
-
 
 .underline {
     text-decoration-line: underline;
@@ -7271,44 +7271,6 @@ td {}
     --tw-ring-color: transparent;
 }
 
-.\[\&\:xl_button\]\:btn-size-base:xl button {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.5rem;
-    min-width: 160px;
-    max-width: 280px;
-    flex: none;
-    gap: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-
-.\[\&\:xl_button\]\:btn-size-base:xl button svg {
-    height: 24px;
-    width: 24px;
-}
-
-.\[\&_button\]\:btn-size-xs button {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.25rem;
-    min-width: 120px;
-    max-width: 240px;
-    flex: none;
-    gap: 0.25rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 0.125rem;
-    padding-bottom: 0.125rem;
-}
-
-.\[\&_button\]\:btn-size-xs button svg {
-    height: 16px;
-    width: 16px;
-}
-
 .\[\&_button\]\:btn-size-sm button {
     font-size: 14px;
     font-weight: 700;
@@ -7326,46 +7288,6 @@ td {}
 .\[\&_button\]\:btn-size-sm button svg {
     height: 16px;
     width: 16px;
-}
-
-.\[\&_button\]\:btn-size-base button {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.5rem;
-    min-width: 160px;
-    max-width: 280px;
-    flex: none;
-    gap: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-
-.\[\&_button\]\:btn-size-base button svg {
-    height: 24px;
-    width: 24px;
-}
-
-@media not all and (min-width: 1400px) {
-    .max-xl\:\[\&_button\]\:btn-size-xs button {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 1.25rem;
-        min-width: 120px;
-        max-width: 240px;
-        flex: none;
-        gap: 0.25rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-top: 0.125rem;
-        padding-bottom: 0.125rem;
-    }
-
-    .max-xl\:\[\&_button\]\:btn-size-xs button svg {
-        height: 16px;
-        width: 16px;
-    }
 }
 
 @media (min-width: 768px) {
@@ -7883,15 +7805,6 @@ td {}
     --tw-shadow-color: #6987D3;
     --tw-shadow: var(--tw-shadow-colored);
 }
-
-.hover\:shadow-primary-surface-md:hover {
-    --tw-shadow-color: #6987D3;
-    --tw-shadow: var(--tw-shadow-colored);
-}
-
-
-
-
 
 .after\:hover\:pointer-events-none:hover::after {
     content: var(--tw-content);
@@ -9110,14 +9023,6 @@ td {}
         width: auto;
     }
 
-    .xl\:w-\[340px\] {
-        width: 340px;
-    }
-
-    .xl\:max-w-\[416px\] {
-        max-width: 416px;
-    }
-
     .xl\:flex-grow {
         flex-grow: 1;
     }
@@ -9359,36 +9264,6 @@ td {}
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.\[\&\:hover\+div\]\:bg-primary-surface-md:hover+div {
-    --tw-bg-opacity: 1;
-    background-color: rgb(105 135 211 / var(--tw-bg-opacity));
-}
-
-.\[\&\:hover\+div\]\:bg-tertiary-blue-xhigh:hover+div {
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 148 232 / var(--tw-bg-opacity));
-}
-
-.\[\&\:hover\+div\]\:transition-all:hover+div {
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-}
-
-.\[\&\:hover\+div\]\:duration-500:hover+div {
-    transition-duration: 500ms;
-}
-
-.\[\&\:hover\+div_span\]\:text-neutral-text-xlow:hover+div span {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.\[\&\:hover\+div_svg\]\:text-neutral-text-xlow:hover+div svg {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .\[\&\:hover\>div\]\:bg-primary-surface-md:hover>div {
     --tw-bg-opacity: 1;
     background-color: rgb(105 135 211 / var(--tw-bg-opacity));
@@ -9429,16 +9304,6 @@ td {}
     --tw-shadow: inset 0 -2px;
     --tw-shadow-colored: inset 0 -2px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.\[\&\:hover_div\]\:transition-all:hover div {
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-}
-
-.\[\&\:hover_div\]\:duration-500:hover div {
-    transition-duration: 500ms;
 }
 
 .\[\&\:hover_span\]\:shadow-link-1:hover span {
@@ -9672,8 +9537,6 @@ td {}
     fill: #6987D3;
 }
 
-
-
 .\[\&_svg\]\:fill-tertiary-blue-xhigh svg {
     fill: #0094E8;
 }
@@ -9737,73 +9600,3 @@ td {}
 .\[\&_tr\:not\(\:last-of-type\)\]\:border-b tr:not(:last-of-type) {
     border-bottom-width: 1px;
 }
-
-
-
-
-/* PAUL CSS */
-
-.text-brand-primary-text-md {
-    --tw-text-opacity: 1;
-    color: rgb(177 9 103 / var(--tw-text-opacity));
-
-}
-
-.text-brand-secondary-text-md {
-    --tw-text-opacity: 1;
-    color: rgb(65 39 97 / var(--tw-text-opacity));
-    /* Brand/Secondary/text/md #412761 rgb(65 39 97) */
-}
-
-.brand-primary-stroke-md {
-    --tw-border-opacity: 1;
-    border-color: rgb(177 9 103 / var(--tw-border-opacity));
-    /* Brand/Primary/stroke/md  #B10967*/
-}
-
-.brand-secondary-stroke-md {
-    --tw-border-opacity: 1;
-    border-color: rgb(65 39 97 / var(--tw-border-opacity));
-    /* Brand/Secondary/stroke/md  #412761 rgb(65 39 97)*/
-}
-
-
-
-.\[\&_svg\]\:fill-brand-primary-icon-md svg {
-    fill: #B10967;
-}
-
-
-.hover\:shadow-brand-primary-stroke-md:hover {
-    --tw-shadow-color: var(--Brand-Primary-stroke-md, #B10967);
-    --tw-shadow: var(--tw-shadow-colored);
-}
-
-
-.hover\:shadow-brand-secondary-stroke-md:hover {
-    --tw-shadow-color: var(--Brand-Secondary-stroke-md, #412761);
-    --tw-shadow: var(--tw-shadow-colored);
-}
-
-
-
-.hover\:bg-brand-primary-surface-md:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(177 9 103 / var(--tw-bg-opacity));
-    /* Brand/Primary/surface/md  background: var(--Brand-Primary-surface-md, #B10967); */
-}
-
-
-
-.text-brand-tertiary-blue-xhigh {
-    --tw-text-opacity: 1;
-    color: rgb(1 122 205 / var(--tw-text-opacity));
-    /* Brand/Tertiary/blue/xhigh #017ACD rgb(1 122 205) */
-}
-
-.stroke-brand-tertiary-blue-xhigh {
-    --tw-border-opacity: 1;
-    border-color: rgb(1 122 205 / var(--tw-text-opacity));
-    /* Brand/Tertiary/blue/xhigh #017ACD rgb(1 122 205) */
-}
-
