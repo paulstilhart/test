@@ -575,13 +575,52 @@ html {
   top: 0px;
 }
 
+.right-0 {
+  right: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.-mb-4 {
+  margin-bottom: -1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -592,6 +631,38 @@ html {
   height: 31px;
 }
 
+.h-auto {
+  height: auto;
+}
+
+.h-\[auto\] {
+  height: auto;
+}
+
+.h-\[476px\] {
+  height: 476px;
+}
+
+.h-\[192px\] {
+  height: 192px;
+}
+
+.h-\[34px\] {
+  height: 34px;
+}
+
+.max-h-\[\] {
+  max-height: ;
+}
+
+.max-h-\[96px\] {
+  max-height: 96px;
+}
+
+.min-h-full {
+  min-height: 100%;
+}
+
 .w-\[150px\] {
   width: 150px;
 }
@@ -600,20 +671,100 @@ html {
   width: 31px;
 }
 
+.w-\[\] {
+  width: ;
+}
+
+.w-\[316px\] {
+  width: 316px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.min-w-full {
+  min-width: 100%;
+}
+
 .max-w-\[992px\] {
   max-width: 992px;
+}
+
+.max-w-\[1280px\] {
+  max-width: 1280px;
+}
+
+.max-w-\[1400px\] {
+  max-width: 1400px;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.max-w-none {
+  max-width: none;
 }
 
 .flex-1 {
   flex: 1 1 0%;
 }
 
+.flex-none {
+  flex: none;
+}
+
+.snap-x {
+  scroll-snap-type: x var(--tw-scroll-snap-strictness);
+}
+
+.snap-mandatory {
+  --tw-scroll-snap-strictness: mandatory;
+}
+
+.snap-proximity {
+  --tw-scroll-snap-strictness: proximity;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-items-start {
+  justify-items: start;
 }
 
 .gap-6 {
@@ -624,8 +775,34 @@ html {
   gap: 1.75rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
 }
 
 .rounded-full {
@@ -656,9 +833,63 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-\[url\(\'\/img\/hero-pattern\.svg\'\)\] {
+  background-image: url('/img/hero-pattern.svg');
+}
+
+.bg-\[url\(\'\.\/sources\/icons\/\'\)\] {
+  background-image: url('./sources/icons/');
+}
+
+.bg-\[url\(\'\.\/sources\/icons\/location\.svg\'\)\] {
+  background-image: url('./sources/icons/location.svg');
+}
+
+.bg-\[url\(\'\/sources\/icons\/location\.svg\'\)\] {
+  background-image: url('/sources/icons/location.svg');
+}
+
+.bg-\[url\(\'\.\.\/sources\/icons\/location\.svg\'\)\] {
+  background-image: url('../sources/icons/location.svg');
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .pb-14 {
@@ -703,6 +934,50 @@ html {
 
 .pt-28 {
   padding-top: 7rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pb-28 {
+  padding-bottom: 7rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pb-9 {
+  padding-bottom: 2.25rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .text-center {
@@ -760,6 +1035,11 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 /* 
 => Donné par google font pour importer la montserrat, mais non utilisée au final
 
@@ -800,9 +1080,39 @@ html {
   inset: -0.125rem;
 }
 
+.before\:mr-3::before {
+  content: var(--tw-content);
+  margin-right: 0.75rem;
+}
+
 .before\:inline-block::before {
   content: var(--tw-content);
   display: inline-block;
+}
+
+.before\:flex::before {
+  content: var(--tw-content);
+  display: flex;
+}
+
+.before\:h-\[24px\]::before {
+  content: var(--tw-content);
+  height: 24px;
+}
+
+.before\:w-\[\]::before {
+  content: var(--tw-content);
+  width: ;
+}
+
+.before\:w-\[24px\]::before {
+  content: var(--tw-content);
+  width: 24px;
+}
+
+.before\:flex-none::before {
+  content: var(--tw-content);
+  flex: none;
 }
 
 .before\:-translate-y-1::before {
@@ -815,6 +1125,31 @@ html {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(245 145 30 / var(--tw-bg-opacity));
+}
+
+.before\:bg-contain::before {
+  content: var(--tw-content);
+  background-size: contain;
+}
+
+.before\:bg-no-repeat::before {
+  content: var(--tw-content);
+  background-repeat: no-repeat;
+}
+
+.before\:pr-3::before {
+  content: var(--tw-content);
+  padding-right: 0.75rem;
+}
+
+.before\:content-\[\'\*\'\]::before {
+  --tw-content: '*';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'\'\]::before {
+  --tw-content: '';
+  content: var(--tw-content);
 }
 
 .after\:inline-block::after {
@@ -830,6 +1165,18 @@ html {
 .after\:w-full::after {
   content: var(--tw-content);
   width: 100%;
+}
+
+.after\:rotate-90::after {
+  content: var(--tw-content);
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after\:rotate-180::after {
+  content: var(--tw-content);
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .after\:bg-primary-orange::after {
