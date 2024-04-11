@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* si besoin de définir une font custom */
+@layer base {
+  html {
+    font-family: "Roboto", sans-serif;
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* depuis le figma */
+  }
+}
+
+
+/* Si besoin de définir des apply sur des éléments */
+@layer components {
+  .btninverted {
+    @apply inline-block text-sm font-bold text-white bg-primary-red border-primary-red border-2 border-solid rounded-2xl py-1 pr-4 pl-6 bg-ico-btn-white bg-no-repeat bg-[10px_center] hover:bg-ico-btn-red hover:text-black hover:bg-white;
+  }
+
+  .btnfront {
+    @apply inline-block text-sm font-bold text-black bg-white border-black border-2 border-solid rounded-2xl py-1 pr-4 pl-6 bg-ico-btn-red bg-no-repeat bg-[10px_center] hover:bg-ico-btn-white hover:text-white hover:bg-primary-red hover:border-primary-red;
+  }
+
+  .btnfront_white {
+    @apply inline-block text-sm font-bold text-black bg-white border-black border-2 border-solid rounded-2xl py-1 pr-4 pl-6 bg-ico-btn-red bg-no-repeat bg-[10px_center] hover:bg-ico-btn-white hover:text-white hover:bg-primary-red hover:border-white;
+  }
+
+  .wrapper_1440 {
+    @apply max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-20;
+  }
+
+  .collapse{
+    @apply !visible rounded-2xl	overflow-hidden border-t 
+  }
+
+  .collapse-title{
+    @apply  bg-white text-black p-8 cursor-pointer peer-checked:bg-primary-red peer-checked:text-white
+  }
+
+  .collapse-content{
+    @apply bg-gray-100 text-black p-0  invisible	h-0 transition-[padding] ease-out duration-200	
+    peer-checked:overflow-visible peer-checked:p-5 peer-checked:h-fit peer-checked:visible
+  }
+}
+
+.custom_css_gradient {
+  background: linear-gradient(180deg, #333 0%, rgba(51, 51, 51, 0.20) 90%, rgba(255, 255, 255, 0.00) 100%);
+}
+
