@@ -1,0 +1,33 @@
+<!--card-newsroom start-->
+<!--variant 1-->
+<div class="relative  flex flex-col items-start md:items-end border-radius-xs bg-tertiary-beige-xlow shadow-lg">
+    <div class="flex rounded-t-lg md:rounded-tr-lg md:rounded-tl-none md:rounded-bl [&_span]:w-full xl[&_span]:w-auto [&_span]:rounded-none w-full md:w-auto overflow-hidden">
+        <!-- @badge variant base-->
+        <span class="flex flex-none items-center justify-center h-fit px-component-md py-component-2xs rounded-full gap-space-between-xs bg-secondary-surface-md overflow-hidden label-m-bold text-neutral-text-xlow font-mono [&_svg]:w-badge-icon-2 [&_svg]:h-badge-icon-2 [&_svg]:fill-white">
+            ${category}
+        </span>
+        <!-- @badge variant base end-->
+    </div>
+    <div class="flex flex-col self-start w-full p-component-xl gap-space-between-lg xl:gap-space-between-xl">
+        <div class="flex flex-col gap-space-between-xl">
+            <h3 class="title-s text-secondary-text-md font-sans"> ${label}</h3>
+            <div class="body-l text-neutral-text-xhigh font-mono">
+                ${description}
+            </div>
+        </div>
+        <div class="flex flex-col items-end [&_a:focus]:shadow-none">
+            <!-- @link variant base-->
+            <a href="#" class="inline-flex items-center justify-center h-fit px-component-sm py-component-2xs text-primary-text-md shadow-current [&:hover_span]:shadow-link-2 focus:shadow-link-focus border-radius-2xs after:flex after:absolute after:z-10 after:w-full after:h-full after:inset-0 after:focus:outline after:outline-primary-stroke-md after:outline-offset-4 after:border-radius-xs appearance-none focus:outline-none">
+                <span class="inline-flex items-center gap-space-between-md py-space-between-2xs label-m-bold font-mono shadow-current   [&_svg]:w-link-icon-1 [&_svg]:h-link-icon-1 [&_svg]:fill-current">
+                    ${linkText}
+                    <svg class="arrows-caret-right" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.7074 16.7076L12.7074 26.7076C12.6145 26.8005 12.5042 26.8742 12.3828 26.9245C12.2614 26.9747 12.1313 27.0006 11.9999 27.0006C11.8686 27.0006 11.7384 26.9747 11.617 26.9245C11.4957 26.8742 11.3854 26.8005 11.2924 26.7076C11.1995 26.6147 11.1258 26.5044 11.0756 26.383C11.0253 26.2616 10.9994 26.1315 10.9994 26.0001C10.9994 25.8687 11.0253 25.7386 11.0756 25.6172C11.1258 25.4958 11.1995 25.3855 11.2924 25.2926L20.5862 16.0001L11.2924 6.70757C11.1048 6.51993 10.9994 6.26543 10.9994 6.00007C10.9994 5.7347 11.1048 5.48021 11.2924 5.29257C11.4801 5.10493 11.7346 4.99951 11.9999 4.99951C12.2653 4.99951 12.5198 5.10493 12.7074 5.29257L22.7074 15.2926C22.8004 15.3854 22.8742 15.4957 22.9245 15.6171C22.9748 15.7385 23.0007 15.8687 23.0007 16.0001C23.0007 16.1315 22.9748 16.2616 22.9245 16.383C22.8742 16.5044 22.8004 16.6147 22.7074 16.7076Z" fill="currentColor"></path>
+                                </svg>
+                </span>
+            </a>
+            <!-- @link variant base end-->
+        </div>
+    </div>
+</div>
+<!--variant 1 end-->
+<!--card-newsroom end-->

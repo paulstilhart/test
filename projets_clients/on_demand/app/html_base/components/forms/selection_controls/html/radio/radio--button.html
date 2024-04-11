@@ -1,0 +1,20 @@
+<!--PROPS
+state:
+[
+"default",
+"checked",
+"disabled",
+"invalid",
+]
+
+label
+PROPS END-->
+
+<!-- radio-button start-->
+<div class="flex relative w-fit h-fit">
+    <input ${state} id="default-radio-1" type="radio" value="" name="default-radio" class="${state} peer/radio   flex absolute top-0 bottom-0 m-auto left-component-lg z-10 w-3.5 h-3.5 mx-0.5 box-border bg-clip-content bg-white !border-none checked:bg-none text-white checked:bg-none checked:bg-secondary-icon-md checked:appearance-none checked:p-[3px] focus:ring-transparent focus:ring-offset-0 shadow-radio shadow-secondary-stroke-md [&.disabled]:bg-neutral-surface-high [&.disabled]:shadow-neutral-stroke-high checked:[&.disabled]:bg-neutral-stroke-high [&.invalid]:shadow-error-stroke-md pointer-events-none">
+    <label for="default-radio-1" class="flex  gap-space-between-sm items-center justify-start h-fit w-[120px] min-w-[115px] py-component-md px-component-lg text-wrap body-s-bold font-mono text-neutral-text-xhigh top-0 left-0 w-full bg-neutral-surface-md border border-neutral-stroke-md border-radius-xs hover:bg-secondary-surface-xlow hover:border-secondary-stroke-md peer-focus/radio:ring-[1.5px] peer-focus/radio:ring-secondary-stroke-md peer-focus/radio:ring-offset-1 peer-checked/radio:bg-tertiary-green-xlow peer-disabled/radio:bg-neutral-surface-high hover:peer-disabled/radio:border-neutral-surface-high peer-[.invalid]/radio:border-error-stroke-md">
+        <span class="ml-6">${label}</span>
+    </label>
+</div>
+<!-- radio-button end-->

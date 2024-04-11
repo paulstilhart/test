@@ -1,0 +1,43 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+
+<Meta title="Identity/Layout & grid/Default" />
+
+# Layout & Grid
+
+Our color palette is an essential part of our brand identity. It includes a range of colors with various shades that are used across all our products and marketing materials.
+
+## Breakpoints
+
+3 Points de rupture appliquées sur l’ensemble du site : utilisation des prefix responsive tailwind 'md' et 'xl'
+<Canvas>
+  <Story id="identity-layout-grid-default--breakpoints" />
+</Canvas>
+
+## Containers
+
+Le container permet de normer et contrôler la largeur maximum de la grille (ou parfois d’un contenu) selon les devices et breakpoint.
+L'utilisation du token screen tailwind suivant permet d'utiliser les classes .container et .max-w-screen-[token] pour contrôler la largeur de la grille.
+
+
+<Canvas>
+  <Story id="identity-layout-grid-default--containers" />
+</Canvas>
+
+## Grid
+
+Système de colonnage permettant d’organiser, aligner et adapter le contenu d’une page web de façon harmonieuse sur l’ensemble des devices.
+La grille s'adapte au points de rupture grâce au classes tailwind de la façon suivante (à visualiser dans votre navigateur en mode adaptatif):
+
+
+<Canvas>
+  <Story id="identity-layout-grid-default--grid" />
+</Canvas>
+
+## Layout
+
+Application d’un container et d’une grid selon le device (à visualiser dans votre navigateur en mode adaptatif)
+
+<Canvas>
+  <Story id="identity-layout-grid-default--layout" />
+</Canvas>

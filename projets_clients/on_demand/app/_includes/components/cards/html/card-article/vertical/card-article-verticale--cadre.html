@@ -1,0 +1,30 @@
+<!--card-article-verticale start-->
+<!--variant cadre-->
+<div class="relative flex flex-col flex-1 items-start max-w-[328px] border-radius-xs shadow-lg  media-effect">
+    <a href="" class="after:flex after:absolute after:z-10 after:w-full after:h-full after:inset-0 after:focus:outline after:outline-primary-stroke-md after:outline-offset-4 after:border-radius-xs [&:hover_div[data-link]_span]:shadow-link-2 appearance-none focus:outline-none">
+        ${shipsComponent}
+    <!--    content-->
+    <div class="relative flex flex-col justify-end w-full h-[292px] xl:h-fit self-start bg-transparent xl:bg-neutral-surface-xlow border-radius-xs overflow-hidden">
+
+        <!--    image-->
+        <div class="absolute xl:relative xl:z-10 flex h-[292px] xl:h-[220px] w-full [&_img]:object-cover [&_img]:object-center [&_img]:w-full max-xl:rounded-lg xl:rounded-t-lg pointer-events-none overflow-hidden ">
+            <img src="./../../assets/img/media.jpg" alt="image-alt">
+            <div class="absolute xl:hidden h-full w-full bg-image-card-gradiant"></div>
+        </div>
+        <!--    content-->
+        <div class="z-10 xl:z-0 flex flex-col xl:h-fit px-component-lg py-component-md xl:p-component-xl gap-space-between-xl ">
+            <div class="flex flex-col gap-space-between-xl">
+                <div class="flex flex-col gap-space-between-xl">
+                    <h3 class="title-s text-neutral-text-xlow xl:text-neutral-text-xhigh font-sans line-clamp-3">${title}</h3>
+                    <div class="body-l hidden text-neutral-text-xlow xl:text-neutral-text-xhigh font-mono  xl:line-clamp-5">
+                        ${text}
+                    </div>
+                </div>
+            </div>
+            ${timeLinksComponent}
+        </div>
+    </div>
+    </a>
+</div>
+<!--variant cadre end-->
+<!--card-article-verticale end-->

@@ -1,0 +1,15 @@
+<!-- button ${color} Outline start-->
+<!-- text+icon -->
+<div class="relative flex gap-space-between-lg flex-wrap">
+    <!-- variant ${size} -->
+    <div class="mt-component-xs gap-space-between-xs">
+        <button type="button" class="relative inline-flex items-center justify-center h-fit btn-size-${size} rounded-full overflow-hidden font-mono text-${color}-text-md bg-neutral-surface-xlow after:absolute after:inset-0 after:rounded-full after:shadow-button-outline after:shadow-${color}-stroke-md hover:shadow-sm hover:bg-${color}-surface-xlow focus:ring focus:ring-offset-2 focus:ring-tertiary-dark-blue-xhigh active:bg-${color}-surface-low [&.active]:bg-${color}-surface-low [&.disabled]:btn-outline-disabled [&.success]:btn-success [&_svg]:fill-current transition-transform hover:-translate-y-space-between-xs appearance-none focus:outline-none ${state}">
+          <span class="line-clamp-1">
+                ${label}
+            </span>
+        </button>
+    </div>
+    <!-- variant ${size} end-->
+</div>
+<!-- text+icon end -->
+<!-- button ${color} Outline end-->

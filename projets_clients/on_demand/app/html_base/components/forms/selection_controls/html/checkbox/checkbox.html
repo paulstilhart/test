@@ -1,0 +1,18 @@
+<!--PROPS
+state:
+[
+"default",
+"checked",
+"disabled",
+"invalid",
+]
+
+label
+PROPS END-->
+
+<!-- checkbox start-->
+<div class="flex gap-space-between-lg items-center">
+    <input ${state} id="default-checkbox" type="checkbox" value="" name="default-radio" class="${state} w-3.5 h-3.5 bg-clip-content bg-white !border-none checked:bg-none text-white checked:bg-none checked:bg-secondary-icon-md checked:appearance-none checked:p-[3px] focus:ring-transparent shadow-radio shadow-secondary-stroke-md [&.disabled]:bg-neutral-surface-high [&.disabled]:shadow-neutral-stroke-high checked:[&.disabled]:bg-neutral-stroke-high [&.invalid]:shadow-error-stroke-md">
+    <label for="default-checkbox" class="body-s-bold font-mono text-neutral-text-xhigh">${label}</label>
+</div>
+<!-- checkbox end-->

@@ -1,0 +1,58 @@
+
+<div class="flex w-[295px]">
+    <!--card-testimonial start-->
+    <figure class="relative flex flex-col flex-1 items-center justify-center w-full rounded-tl-[128px] rounded-br-[128px] shadow-lg  px-component-xl py-component-2xl gap-space-between-xl bg-neutral-surface-xlow">
+        <!--avatar-->
+        <div class="flex">
+            <!--@avatar variant sm success-->
+            <div class="avatar-size--md rounded-full border-success-stroke-md overflow-hidden">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                    <circle cx="32" cy="32" r="32" fill="url(#pattern0)"/>
+                    <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_3099_106031" transform="scale(0.015625)"/>
+                        </pattern>
+                        <image id="image0_3099_106031" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAONJREFUeF7t20EOhEAIRFG4/6F7DvEnYeFzryQIv6pBd2behOu9dPvsbog+k+NLgArQAqmJcw9iAAhSgZKB3IJkkAySQTJ4CiE+gA8oBeg0mH3Ai084P89HhqwEqIA209ICsQdjAeaZIgaAYKxBDMCAYy8fXwAIgiAIcoJpJEYGI4VjB3YrbC9gL2AvkCB43cM5PgZgAAZgQFnNZAhdGykQBEEQBEEQDBmgAm2glM/z+QUYisYUGoldO7kY32IEAzCg6RgIRgjFAsw+AgRBMNYgBmCAT2TCYfoPPz/HCqQCX1eBHzHnv7C7WhBSAAAAAElFTkSuQmCC"/>
+                    </defs>
+                </svg>
+            </div>
+            <!--@avatar variant sm success end-->
+        </div>
+        <!--text-->
+        <div class="flex flex-col z-10 flex-1 gap-space-between-xl self-stretch items-center">
+            <figcaption class="flex flex-col gap-space-between-sm items-center self-stretch flex-1">
+                    <h3 class="title-l font-sans text-secondary-text-md text-center self-stretch">
+                       ${titre}
+                    </h3>
+                    <div class="flex flex-col gap-space-between-2xs items-center self-stretch justify-center">
+                    <span class="body-s-bold font-mono text-tertiary-dark-blue-high text-center self-stretch">
+                       ${label1}
+                    </span>
+                        <span class="body-s-bold font-mono text-secondary-text-md text-center self-stretch">
+                        ${label2}
+                    </span>
+                    </div>
+            </figcaption>
+            <blockquote class="relative body-m font-mono text-neutral-text-xhigh text-center self-stretch ">
+               ${description}
+                <div class="flex absolute -z-10 top-0 left-0 w-full h-full ">
+                    <div class="absolute -top-[35px] -left-[5px]">
+                        <svg class="w-[40px] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 28" fill="none">
+                            <path d="M40 18.9961C40 20.2405 39.7616 21.4118 39.2847 22.5098C38.8446 23.5712 38.221 24.5229 37.414 25.3647C36.6071 26.1699 35.6534 26.8105 34.553 27.2863C33.4892 27.7621 32.3338 28 31.0867 28C29.5094 28 28.1155 27.6523 26.9051 26.9569C25.7313 26.2614 24.7226 25.3647 23.879 24.2667C23.072 23.132 22.4484 21.851 22.0083 20.4235C21.6048 18.9595 21.403 17.4771 21.403 15.9765C21.403 14.3294 21.6231 12.7007 22.0633 11.0902C22.5034 9.47974 23.127 7.97908 23.934 6.58824C24.7776 5.19739 25.8047 3.93464 27.0151 2.8C28.2256 1.66536 29.5828 0.732026 31.0867 0L35.9285 2.58039C34.9748 3.53203 34.1495 4.63007 33.4525 5.87451C32.7923 7.11895 32.4622 8.4183 32.4622 9.77255V10.2667C33.5259 10.4497 34.5163 10.7974 35.4333 11.3098C36.3503 11.8222 37.1389 12.4627 37.7992 13.2314C38.4961 14 39.028 14.8784 39.3948 15.8667C39.7983 16.8549 40 17.898 40 18.9961ZM18.597 18.9961C18.597 20.2405 18.3586 21.4118 17.8817 22.5098C17.4415 23.5712 16.818 24.5229 16.011 25.3647C15.204 26.1699 14.2503 26.8105 13.1499 27.2863C12.0862 27.7621 10.9308 28 9.68363 28C8.10637 28 6.71252 27.6523 5.50206 26.9569C4.32829 26.2614 3.31958 25.3647 2.47593 24.2667C1.66896 23.132 1.04539 21.851 0.605227 20.4235C0.201742 18.9595 0 17.4771 0 15.9765C0 14.3294 0.220083 12.7007 0.660248 11.0902C1.10041 9.47974 1.72398 7.97908 2.53095 6.58824C3.3746 5.19739 4.40165 3.93464 5.6121 2.8C6.82256 1.66536 8.17973 0.732026 9.68363 0L14.5254 2.58039C13.5718 3.53203 12.7464 4.63007 12.0495 5.87451C11.3893 7.11895 11.0591 8.4183 11.0591 9.77255V10.2667C12.1229 10.4497 13.1133 10.7974 14.0303 11.3098C14.9473 11.8222 15.7359 12.4627 16.3961 13.2314C17.0931 14 17.6249 14.8784 17.9917 15.8667C18.3952 16.8549 18.597 17.898 18.597 18.9961Z" fill="#F2F2F2"/>
+                        </svg>
+                    </div>
+                    <div class="absolute -bottom-[35px] right-[62px] rotate-180">
+                        <svg class="w-[40px] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 28" fill="none">
+                            <path d="M40 18.9961C40 20.2405 39.7616 21.4118 39.2847 22.5098C38.8446 23.5712 38.221 24.5229 37.414 25.3647C36.6071 26.1699 35.6534 26.8105 34.553 27.2863C33.4892 27.7621 32.3338 28 31.0867 28C29.5094 28 28.1155 27.6523 26.9051 26.9569C25.7313 26.2614 24.7226 25.3647 23.879 24.2667C23.072 23.132 22.4484 21.851 22.0083 20.4235C21.6048 18.9595 21.403 17.4771 21.403 15.9765C21.403 14.3294 21.6231 12.7007 22.0633 11.0902C22.5034 9.47974 23.127 7.97908 23.934 6.58824C24.7776 5.19739 25.8047 3.93464 27.0151 2.8C28.2256 1.66536 29.5828 0.732026 31.0867 0L35.9285 2.58039C34.9748 3.53203 34.1495 4.63007 33.4525 5.87451C32.7923 7.11895 32.4622 8.4183 32.4622 9.77255V10.2667C33.5259 10.4497 34.5163 10.7974 35.4333 11.3098C36.3503 11.8222 37.1389 12.4627 37.7992 13.2314C38.4961 14 39.028 14.8784 39.3948 15.8667C39.7983 16.8549 40 17.898 40 18.9961ZM18.597 18.9961C18.597 20.2405 18.3586 21.4118 17.8817 22.5098C17.4415 23.5712 16.818 24.5229 16.011 25.3647C15.204 26.1699 14.2503 26.8105 13.1499 27.2863C12.0862 27.7621 10.9308 28 9.68363 28C8.10637 28 6.71252 27.6523 5.50206 26.9569C4.32829 26.2614 3.31958 25.3647 2.47593 24.2667C1.66896 23.132 1.04539 21.851 0.605227 20.4235C0.201742 18.9595 0 17.4771 0 15.9765C0 14.3294 0.220083 12.7007 0.660248 11.0902C1.10041 9.47974 1.72398 7.97908 2.53095 6.58824C3.3746 5.19739 4.40165 3.93464 5.6121 2.8C6.82256 1.66536 8.17973 0.732026 9.68363 0L14.5254 2.58039C13.5718 3.53203 12.7464 4.63007 12.0495 5.87451C11.3893 7.11895 11.0591 8.4183 11.0591 9.77255V10.2667C12.1229 10.4497 13.1133 10.7974 14.0303 11.3098C14.9473 11.8222 15.7359 12.4627 16.3961 13.2314C17.0931 14 17.6249 14.8784 17.9917 15.8667C18.3952 16.8549 18.597 17.898 18.597 18.9961Z" fill="#F2F2F2"/>
+                        </svg>
+                    </div>
+                </div>
+            </blockquote>
+        </div>
+        <!-- quotes-->
+
+
+    </figure>
+    <!--card-testimonial end-->
+</div>
+

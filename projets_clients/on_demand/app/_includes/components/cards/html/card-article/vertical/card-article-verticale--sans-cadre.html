@@ -1,0 +1,30 @@
+<!--card-article-verticale start-->
+<!--variant sans-cadre-->
+<div class="relative flex flex-col flex-1 items-start max-w-[328px] border-radius-xs  media-effect">
+    <a href="" class="after:flex after:absolute after:z-10 after:w-full after:h-full after:inset-0 after:focus:outline after:outline-primary-stroke-md after:outline-offset-4 after:border-radius-xs [&:hover_div[data-link]_span]:shadow-link-2 appearance-none focus:outline-none">
+        ${shipsComponent}
+    <!--    content-->
+    <div class="relative flex flex-col justify-end h-[264px] xl:h-fit w-full self-start bg-transparent xl:bg-neutral-surface-xlow flex-1">
+        <!--    image-->
+        <div class="relative flex h-[128px] xl:h-[220px] w-full [&_img]:object-cover [&_img]:object-center [&_img]:w-full rounded-t-lg pointer-events-none overflow-hidden shadow-lg">
+            <img src="./../../assets/img/media.jpg" alt="image-alt">
+        </div>
+        <!--    content-->
+        <div class="flex flex-col flex-1 self-stretch py-component-xl gap-space-between-xl">
+            <div class="flex flex-col gap-space-between-xl">
+                <div class="flex flex-col gap-space-between-xl">
+                    <h3 class="title-s text-neutral-text-xhigh font-sans line-clamp-3">${title}</h3>
+                    <div class="body-l hidden text-neutral-text-xhigh font-mono xl:line-clamp-5">
+                       ${text}
+                    </div>
+                </div>
+            </div>
+            ${timeLinksComponent}
+        </div>
+
+    </div>
+    </a>
+</div>
+<!--variant sans-cadre end-->
+
+<!--card-article-verticale end-->

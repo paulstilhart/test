@@ -1,0 +1,4 @@
+/*STORYBOOK FIX*/
+html, body, #storybook-root {
+    height: 100%;
+}

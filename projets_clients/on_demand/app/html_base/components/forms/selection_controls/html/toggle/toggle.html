@@ -1,0 +1,19 @@
+<!--PROPS
+state:
+[
+"default",
+"checked",
+"disabled",
+"invalid",
+]
+
+label
+PROPS END-->
+
+<!-- toggle start-->
+<label class="relative inline-flex items-center gap-space-between-sm self-stretch">
+    <input ${state} type="checkbox" value="" class="sr-only peer/checkbox ${state}">
+    <div class="w-10 h-5 cursor-pointer bg-neutral-stroke-high peer-focus/checkbox:outline-none peer-focus/checkbox:ring-transparent rounded-full peer peer-checked/checkbox:appearance-none peer-checked/checkbox:after:translate-x-5 rtl:peer-checked/checkbox:after:-translate-x-5 peer-checked/checkbox:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-white after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked/checkbox:bg-secondary-surface-md peer-disabled/checkbox:after:bg-neutral-surface-high peer-disabled/checkbox:after:border-neutral-surface-high peer-disabled/checkbox:cursor-default"></div>
+    <span class="body-s-bold font-mono text-neutral-text-xhigh">${label}</span>
+</label>
+<!-- toggle end-->

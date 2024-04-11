@@ -1,0 +1,409 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /*TABLE*/
+    table {
+        @apply bg-neutral-surface-xlow text-neutral-text-xhigh
+    }
+    thead {
+    }
+    th {
+    }
+    tbody tr {
+    }
+    td {
+    }
+}
+
+@layer components {
+
+    /* TYPOGRAPHY*/
+    /*display*/
+    .display-xl {
+     @apply text-10xl font-bold leading-15 lg:text-15xl lg:font-bold lg:leading-34
+    }
+    .display-l {
+        @apply text-8xl font-bold leading-14 lg:text-12xl lg:font-bold lg:leading-24
+    }
+    .display-m {
+        @apply text-6xl font-bold leading-11 lg:text-9xl lg:font-bold lg:leading-17
+    }
+    .display-s {
+        @apply text-4xl font-bold leading-9 lg:text-7xl lg:font-bold lg:leading-13
+    }
+    /*title*/
+    .title-xl {
+        @apply text-3xl font-bold leading-9 lg:text-5xl lg:font-bold lg:leading-12
+    }
+    .title-l {
+        @apply text-2xl font-bold leading-8 lg:text-4xl lg:font-bold lg:leading-11
+    }
+    .title-m {
+        @apply text-xl font-bold leading-7 lg:text-3xl lg:font-bold lg:leading-9
+    }
+    .title-s {
+        @apply text-lg font-bold leading-7 lg:text-2xl lg:font-bold lg:leading-8
+    }
+    .title-xs {
+        @apply text-base font-bold leading-6 lg:text-xl lg:font-bold lg:leading-7
+    }
+    /*body*/
+    .body-xl {
+        @apply text-xl font-regular leading-8
+    }
+    .body-l {
+        @apply text-lg font-regular leading-7
+    }
+    .body-m {
+        @apply text-base font-regular leading-6
+    }
+    .body-s {
+        @apply text-sm font-regular leading-5
+    }
+    .body-xs {
+        @apply text-xs font-regular leading-5
+    }
+
+    .body-xl-bold {
+        @apply text-xl font-bold leading-8
+    }
+    .body-l-bold {
+        @apply text-lg font-bold leading-7
+    }
+    .body-m-bold {
+        @apply text-base font-bold leading-6
+    }
+    .body-s-bold {
+        @apply text-sm font-bold leading-5
+    }
+    .body-xs-bold {
+        @apply text-xs font-bold leading-5
+    }
+
+    .body-xl-underline {
+        @apply text-xl font-regular underline leading-8
+    }
+    .body-l-underline {
+        @apply text-lg font-regular underline leading-7
+    }
+    .body-m-underline {
+        @apply text-base font-regular underline leading-6
+    }
+    .body-s-underline {
+        @apply text-sm font-regular underline leading-5
+    }
+    .body-xs-underline {
+        @apply text-xs font-regular underline leading-5
+    }
+    /*label*/
+    .label-2xl {
+        @apply text-2xl font-regular leading-8
+    }
+    .label-xl {
+        @apply text-xl font-regular leading-8
+    }
+    .label-l {
+        @apply text-lg font-regular leading-7
+    }
+    .label-m {
+        @apply text-base font-regular leading-6
+    }
+    .label-s {
+        @apply text-sm font-regular leading-5
+    }
+
+    .label-2xl-bold {
+        @apply text-2xl font-bold leading-8
+    }
+    .label-xl-bold {
+        @apply text-xl font-bold leading-8
+    }
+    .label-l-bold {
+        @apply text-lg font-bold leading-7
+    }
+    .label-m-bold {
+        @apply text-base font-bold leading-6
+    }
+    .label-s-bold {
+        @apply text-sm font-bold leading-5
+    }
+
+    /*RADIUS*/
+    .border-radius-2xs {
+        @apply rounded
+    }
+    .border-radius-xs {
+        @apply rounded-lg
+    }
+    .border-radius-sm {
+        @apply rounded-2xl
+    }
+    .border-radius-md {
+        @apply rounded-4xl
+    }
+    .border-radius-lg {
+        @apply rounded-5xl lg:rounded-7xl
+    }
+    .border-radius-xl {
+        @apply rounded-5xl lg:rounded-8xl
+    }
+    .border-radius-full {
+        @apply rounded-full
+    }
+    .border-leaf{
+        @apply rounded-tl-[33%] rounded-br-[33%]
+    }
+
+    /*Button*/
+    .btn-size-xs {
+        @apply flex-none min-w-[120px] max-w-[240px] px-component-sm py-component-3xs gap-space-between-xs label-s-bold [&_svg]:w-link-icon-1 [&_svg]:h-link-icon-1;
+    }
+    .btn-size-sm {
+        @apply flex-none min-w-[120px] max-w-[240px] px-component-lg py-component-xs gap-space-between-xs label-s-bold [&_svg]:w-link-icon-1 [&_svg]:h-link-icon-1;
+    }
+    .btn-size-base {
+        @apply flex-none min-w-[160px] max-w-[280px] px-component-lg py-component-sm gap-space-between-sm label-m-bold [&_svg]:w-link-icon-2 [&_svg]:h-link-icon-2;
+    }
+    .btn-size-lg {
+        @apply flex-none min-w-[160px] max-w-[280px] px-component-xl py-component-md gap-space-between-sm label-m-bold [&_svg]:w-link-icon-2 [&_svg]:h-link-icon-2;
+    }
+    .btn-size-xl {
+        @apply flex-none min-w-[160px] max-w-[280px] px-component-xl py-component-lg gap-space-between-md label-m-bold [&_svg]:w-link-icon-2 [&_svg]:h-link-icon-2;
+    }
+
+    .btn-size-xs--icon {
+        @apply flex-none min-w-[24px] max-w-[24px] p-component-2xs [&_svg]:min-w-link-icon-1 [&_svg]:h-link-icon-1;
+    }
+    .btn-size-sm--icon {
+        @apply flex-none min-w-[32px] max-w-[32px] p-component-sm [&_svg]:min-w-link-icon-1 [&_svg]:h-link-icon-1;
+    }
+    .btn-size-base--icon {
+        @apply flex-none min-w-[40px] max-w-[40px] p-component-sm [&_svg]:min-w-link-icon-2 [&_svg]:h-link-icon-2;
+    }
+    .btn-size-lg--icon {
+        @apply flex-none min-w-[48px] max-w-[48px] p-component-md [&_svg]:min-w-link-icon-2 [&_svg]:h-link-icon-2;
+    }
+    .btn-size-xl--icon {
+        @apply flex-none min-w-[80px] max-w-[80px] p-component-xl [&_svg]:min-w-link-icon-3 [&_svg]:h-link-icon-3;
+    }
+
+    .btn-size-xs--spinner {
+        @apply flex-none min-w-[120px] max-w-[240px] px-component-2xl py-component-2xs [&_svg]:w-link-icon-1 [&_svg]:h-link-icon-1;
+    }
+    .btn-size-sm--spinner {
+        @apply flex-none min-w-[120px] max-w-[240px] px-component-2xl py-component-sm [&_svg]:w-link-icon-1 [&_svg]:h-link-icon-1;
+    }
+    .btn-size-base--spinner {
+        @apply flex-none min-w-[160px] max-w-[280px] px-component-2xl py-component-sm [&_svg]:w-link-icon-2 [&_svg]:h-link-icon-2;
+    }
+    .btn-size-lg--spinner {
+        @apply flex-none min-w-[160px] max-w-[280px] px-component-2xl py-component-md [&_svg]:w-link-icon-2 [&_svg]:h-link-icon-2;
+    }
+    .btn-size-xl--spinner {
+        @apply flex-none min-w-[160px] max-w-[280px] px-component-2xl py-component-lg [&_svg]:w-link-icon-2 [&_svg]:h-link-icon-2;
+    }
+
+    /*disabled*/
+    .btn-outline-disabled {
+        @apply cursor-not-allowed !text-neutral-text-high !bg-neutral-surface-md after:shadow-neutral-stroke-high hover:shadow-none focus:ring-transparent after:shadow-neutral-stroke-high hover:translate-y-0 hover:transition-none
+    }
+    .btn-disabled {
+        @apply cursor-not-allowed !text-neutral-text-xhigh !bg-neutral-surface-high !shadow-none focus:ring-transparent hover:translate-y-0 hover:transition-none
+    }
+    .btn-success {
+        @apply !text-neutral-text-xlow !bg-success-surface-md !shadow-none after:shadow-transparent hover:translate-y-0 hover:transition-none focus:ring-transparent
+    }
+
+
+    /*LINKS*/
+    .link-size--sm {
+        @apply gap-space-between-sm py-space-between-2xs label-s [&_svg]:w-link-icon-1 [&_svg]:h-link-icon-1;
+    }
+    .link-size--base {
+        @apply gap-space-between-md py-space-between-2xs label-m-bold [&_svg]:w-link-icon-1 [&_svg]:h-link-icon-1;
+    }
+    .link-size--lg {
+        @apply gap-space-between-md py-space-between-2xs label-l-bold [&_svg]:w-link-icon-2 [&_svg]:h-link-icon-2;
+    }
+    .link-size--xl {
+        @apply gap-space-between-md py-space-between-2xs label-xl-bold [&_svg]:w-link-icon-2 [&_svg]:h-link-icon-2;
+    }
+    .link-size--2xl {
+        @apply gap-space-between-md py-space-between-2xs label-2xl-bold [&_svg]:w-link-icon-2 [&_svg]:h-link-icon-2;
+    }
+
+    /*deprecated @todo delete*/
+    .btn-variant-primary {
+        @apply text-neutral-text-xlow bg-primary-surface-md hover:bg-primary-surface-xhigh focus:ring-tertiary-dark-blue-xhigh;
+    }
+    .btn-variant-secondary {
+        @apply text-neutral-text-xlow bg-secondary-surface-md hover:bg-secondary-surface-xhigh focus:ring-tertiary-dark-blue-xhigh;
+    }
+    .btn-variant-tertiary {
+        @apply text-tertiary-blue-xhigh bg-neutral-surface-xlow hover:bg-tertiary-blue-high hover:text-neutral-text-xlow focus:ring-tertiary-dark-blue-xhigh;
+    }
+    /*deprecated end*/
+
+    /*ICON SHAPES*/
+    /*dark*/
+    .icon-shapes-dark-size--xs {
+        @apply w-icon-shapes-4 h-icon-shapes-4 [&_svg]:w-icon-shapes-1 [&_svg]:h-icon-shapes-1;
+    }
+    .icon-shapes-dark-size--sm {
+        @apply w-icon-shapes-6 h-icon-shapes-6 [&_svg]:w-icon-shapes-2 [&_svg]:h-icon-shapes-2;
+    }
+    .icon-shapes-dark-size--base {
+        @apply w-icon-shapes-7 h-icon-shapes-7 [&_svg]:w-icon-shapes-3 [&_svg]:h-icon-shapes-3;
+    }
+    .icon-shapes-dark-size--lg {
+        @apply w-icon-shapes-8 h-icon-shapes-8 [&_svg]:w-icon-shapes-5 [&_svg]:h-icon-shapes-5;
+    }
+    .icon-shapes-dark-size--xl {
+        @apply w-icon-shapes-9 h-icon-shapes-9 [&_svg]:w-icon-shapes-6 [&_svg]:h-icon-shapes-6;
+    }
+    /*light*/
+    .icon-shapes-light-size--xs {
+        @apply w-icon-shapes-4 h-icon-shapes-4 [&_svg]:w-icon-shapes-1 [&_svg]:h-icon-shapes-1 border-2;
+    }
+    .icon-shapes-light-size--sm {
+        @apply w-icon-shapes-6 h-icon-shapes-6 [&_svg]:w-icon-shapes-2 [&_svg]:h-icon-shapes-2 border-2;
+    }
+    .icon-shapes-light-size--base {
+        @apply w-icon-shapes-7 h-icon-shapes-7 [&_svg]:w-icon-shapes-3 [&_svg]:h-icon-shapes-3 border-3;
+    }
+    .icon-shapes-light-size--lg {
+        @apply w-icon-shapes-8 h-icon-shapes-8 [&_svg]:w-icon-shapes-5 [&_svg]:h-icon-shapes-5 border-3;
+    }
+    .icon-shapes-light-size--xl {
+        @apply w-icon-shapes-9 h-icon-shapes-9 [&_svg]:w-icon-shapes-6 [&_svg]:h-icon-shapes-6 border-4;
+    }
+
+    /*BADGES*/
+
+    /*label*/
+    .badge-label-size--sm {
+       @apply px-component-sm gap-space-between-xs label-s-bold [&_svg]:w-badge-icon-1 [&_svg]:h-badge-icon-1;
+    }
+    .badge-label-size--base {
+        @apply px-component-md py-component-2xs gap-space-between-xs label-m-bold [&_svg]:w-badge-icon-2 [&_svg]:h-badge-icon-2;
+    }
+    .badge-label-size--lg {
+        @apply px-component-md py-component-3xs gap-space-between-sm label-l-bold [&_svg]:w-badge-icon-4 [&_svg]:h-badge-icon-4;
+    }
+    .badge-label-size--xl {
+        @apply px-component-lg py-component-2xs gap-space-between-sm label-2xl-bold [&_svg]:w-badge-icon-4 [&_svg]:h-badge-icon-4;
+    }
+
+    .badge-label-outline-size--sm {
+        @apply px-component-sm gap-space-between-xs label-s-bold [&_svg]:w-badge-icon-1 [&_svg]:h-badge-icon-1 shadow-badge-inner;
+    }
+    .badge-label-outline-size--base {
+        @apply px-component-md py-component-2xs gap-space-between-xs label-m-bold [&_svg]:w-badge-icon-2 [&_svg]:h-badge-icon-2 shadow-badge-inner;
+    }
+    .badge-label-outline-size--lg {
+        @apply px-component-md py-component-3xs gap-space-between-sm label-l-bold [&_svg]:w-badge-icon-4 [&_svg]:h-badge-icon-4 shadow-badge-inner;
+    }
+    .badge-label-outline-size--xl {
+        @apply px-component-lg py-component-2xs gap-space-between-sm label-2xl-bold [&_svg]:w-badge-icon-4 [&_svg]:h-badge-icon-4 shadow-badge-inner;
+    }
+
+    /*Chips*/
+    .badge-chips-size--sm {
+        @apply px-component-sm gap-space-between-xs label-s-bold [&_svg]:w-badge-icon-1 [&_svg]:h-badge-icon-1;
+    }
+    .badge-chips-size--base {
+        @apply py-component-2xs px-component-md gap-space-between-xs label-m-bold [&_svg]:w-badge-icon-2 [&_svg]:h-badge-icon-2;
+    }
+    .badge-chips-size--lg {
+        @apply py-component-2xs px-component-md gap-space-between-sm label-l-bold [&_svg]:w-badge-icon-3 [&_svg]:h-badge-icon-3;
+    }
+    .badge-chips-size--xl {
+        @apply py-component-2xs px-component-lg gap-space-between-sm label-2xl-bold [&_svg]:w-badge-icon-3 [&_svg]:h-badge-icon-3;
+    }
+
+    /*TABLES*/
+    .table-cell-spacing-md {
+        @apply p-space-between-lg
+    }
+    .table-cell-spacing-sm {
+        @apply px-space-between-lg py-space-between-sm
+    }
+
+    /*DATEPICKER*/
+    .datepicker {
+        @apply font-mono
+    }
+    .datepicker .text-gray-900 {
+        @apply text-neutral-text-xhigh
+    }
+    .datepicker .datepicker-cell {
+        @apply body-xs-bold font-mono p-2 h-fit
+    }
+    .datepicker .view-switch {
+        @apply body-xs-bold font-mono h-fit
+    }
+    .datepicker .dow {
+        @apply body-xs-bold font-mono px-2 py-1 h-fit text-neutral-text-xhigh
+    }
+    .datepicker .range, .datepicker .bg-gray-200 {
+        @apply bg-primary-surface-xlow text-primary-text-md border-y border-primary-stroke-md m-[-0.5px] box-border hover:bg-primary-surface-low
+    }
+    .datepicker .range-start.bg-gray-200 {
+        @apply border-l border-primary-stroke-md m-[-0.5px]
+    }
+    .datepicker .range-end.bg-gray-200 {
+        @apply border-r border-primary-stroke-md m-[-0.5px]
+    }
+    .datepicker .range-start.bg-blue-700, .datepicker .range-end.bg-blue-700 {
+       @apply border border-primary-stroke-md m-[-0.5px] !border-primary-surface-xhigh
+    }
+
+    .datepicker-controls button.today-btn {
+        @apply inline-flex items-center justify-center h-fit btn-size-xs rounded-full  overflow-hidden font-mono text-neutral-text-xlow !bg-primary-surface-md hover:shadow-sm hover:bg-primary-surface-xhigh focus:ring focus:ring-offset-2 focus:ring-tertiary-dark-blue-xhigh active:bg-primary-surface-xhigh [&_svg]:fill-current transition-transform hover:-translate-y-space-between-xs
+    }
+    .datepicker-controls button.clear-btn {
+        @apply border-0 relative inline-flex items-center justify-center h-fit btn-size-xs rounded-full overflow-hidden font-mono text-primary-text-md bg-neutral-surface-xlow after:absolute after:inset-0 after:rounded-full after:shadow-button-outline after:shadow-primary-stroke-md hover:shadow-sm hover:bg-primary-surface-xlow focus:ring focus:ring-offset-2 focus:ring-tertiary-dark-blue-xhigh active:bg-primary-surface-low [&_svg]:fill-current transition-transform hover:-translate-y-space-between-xs
+    }
+    .datepicker-controls button.prev-btn svg path, .datepicker-controls button.next-btn svg path {
+        @apply stroke-1
+    }
+
+    /*search*/
+    .search-primary {
+        @apply border-primary-icon-md bg-primary-surface-md
+    }
+    .search-secondary {
+        @apply border-secondary-icon-md bg-secondary-surface-md
+    }
+    .search-tertiary {
+        @apply border-tertiary-blue-xhigh bg-tertiary-blue-xhigh
+    }
+    .search-icon-base {
+        @apply h-[48px] [&_svg]:w-[32px]
+    }
+    .search-icon-sm {
+        @apply h-[40px] [&_svg]:w-[26px]
+    }
+
+    /*Media*/
+    .media-effect {
+        @apply [&_img]:scale-100 [&_img]:hover:scale-125 [&_img]:ease-out [&_img]:duration-300
+    }
+
+    /*Container override*/
+    @media screen(xl) {
+        .container {
+            max-width: 1280px;
+        }
+    }
+    @media screen(2xl) {
+        .container {
+            max-width: 1536px;
+        }
+    }
+
+
+
+}

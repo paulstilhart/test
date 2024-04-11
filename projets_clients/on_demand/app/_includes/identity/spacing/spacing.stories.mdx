@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Identity/Spacing/Default" />
+
+# Spacing
+
+Différents tokens customs sont dédiées aux margin, padding et espacements intérieurs (gap/space)
+exemple de classes utilisant ces tokens: my-block-xs p-component-xl gap-space-between-2xl
+
+## blocks (maring)
+
+5 tokens dédiées uniquement aux margins des UI-Block
+mobile : toutes valeurs au-dessus de block-xs(40px/2.5rem) passent à block-xs
+tablette(md) : toutes valeurs au-dessus de block-md(64px/4rem) passent à block-md
+Utiliser pour ce faire les breakpoints prefix. exemple: my-block-xs md:my-block-md lg:my-block-xl
+
+<Canvas>
+  <Story id="identity-spacing-default--blocks" />
+</Canvas>
+
+## Component (padding)
+
+8 tokens dédiées aux espacements intérieurs (padding) des composants (cards, buttons, labels...)
+mobile : toutes valeurs au-dessus de component-xl(40px/2.5rem) passent à component-xl
+tablette(md) : toutes valeurs au-dessus de component-3xl(64px/4rem) passent à component-3xl
+Utiliser pour ce faire les breakpoints prefix. exemple: p-component-xl md:p-component-3xl lg:p-component-4xl
+
+<Canvas>
+  <Story id="identity-spacing-default--component" />
+</Canvas>
+
+## Space-between (gap/space)
+
+8 tokens dédiées aux espacements intérieurs (gap/space) des composants (cards, buttons, labels...)
+mobile : toutes valeurs au-dessus de space-between-2xl(40px/2.5rem) passent à space-between-2xl
+Utiliser pour ce faire les breakpoints prefix. exemple: gap-spacing-component-2xl md:gap-spacing-component-4xl
+
+<Canvas>
+  <Story id="identity-spacing-default--gap" />
+</Canvas>
+

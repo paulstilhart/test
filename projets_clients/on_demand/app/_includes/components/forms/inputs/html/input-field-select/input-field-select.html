@@ -1,0 +1,62 @@
+
+<div data-lmg-dropdown-select class="relative max-w-[324px]">
+    <div class="flex flex-col gap-space-between-xs">
+        <div class="relative w-full ${state} peer/form-element">
+            <input type="text" readonly="true" role="listbox" id="floating_outlined" data-dropdown-toggle="dropdown-default" value="" data-dropdown-offset-distance=0 value="" ${state} class="${state} cursor-default [&.disabled]:cursor-not-allowed [&.disabled]:bg-neutral-surface-md enabled:bg-neutral-surface-xlow [&.invalid]:border-error-stroke-md peer/input block h-[50px] w-full px-component-lg pr-12 input-icon-right input-icon-left gap-space-between-sm border border-neutral-stroke-md text-neutral-text-xhigh body-m font-mono border-radius-2xs appearance-none focus:border-secondary-stroke-md focus:outline-none focus:ring-0 !bg-none" placeholder="&nbsp;" >
+
+            <label for="floating_outlined" class="peer-[.disabled]/input:hidden absolute body-s-bold font-mono text-neutral-text-xhigh dark:text-gray-400 duration-300 transform translate-x-1 -translate-y-4 top-2 left-2  origin-[0] bg-white dark:bg-gray-900 px-2  start-1 peer-placeholder-shown/input:body-m  peer-placeholder-shown/input:translate-x-1 peer-placeholder-shown/input:-translate-y-1/2 peer-placeholder-shown/input:top-1/2
+        peer-valid/input:px-2  peer-valid/input:top-2 peer-valid/input:body-s-bold peer-valid/input:translate-x-1 peer-valid/input:-translate-y-4 rtl:peer-valid/input:translate-x-1/4 rtl:peer-valid/input:left-auto">${label}</label>
+            <!--state icons-->
+            <div data-name="icon-invalid" class="peer-[.invalid]/input:visible invisible absolute inset-y-0 end-10 flex items-center p-component-lg pointer-events-none">
+                <svg class="security-warnings-warning-circle text-error-stroke-md" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 3C13.4288 3 10.9154 3.76244 8.77759 5.1909C6.63975 6.61935 4.97351 8.64968 3.98957 11.0251C3.00563 13.4006 2.74819 16.0144 3.2498 18.5362C3.75141 21.0579 4.98953 23.3743 6.80762 25.1924C8.6257 27.0105 10.9421 28.2486 13.4638 28.7502C15.9856 29.2518 18.5995 28.9944 20.9749 28.0104C23.3503 27.0265 25.3807 25.3603 26.8091 23.2224C28.2376 21.0846 29 18.5712 29 16C28.9964 12.5533 27.6256 9.24882 25.1884 6.81163C22.7512 4.37445 19.4467 3.00364 16 3ZM16 27C13.8244 27 11.6977 26.3549 9.88873 25.1462C8.07979 23.9375 6.66989 22.2195 5.83733 20.2095C5.00477 18.1995 4.78693 15.9878 5.21137 13.854C5.63581 11.7202 6.68345 9.7602 8.22183 8.22183C9.76021 6.68345 11.7202 5.6358 13.854 5.21136C15.9878 4.78692 18.1995 5.00476 20.2095 5.83733C22.2195 6.66989 23.9375 8.07979 25.1462 9.88873C26.3549 11.6977 27 13.8244 27 16C26.9967 18.9164 25.8367 21.7123 23.7745 23.7745C21.7123 25.8367 18.9164 26.9967 16 27ZM15 17V10C15 9.73478 15.1054 9.48043 15.2929 9.29289C15.4804 9.10536 15.7348 9 16 9C16.2652 9 16.5196 9.10536 16.7071 9.29289C16.8946 9.48043 17 9.73478 17 10V17C17 17.2652 16.8946 17.5196 16.7071 17.7071C16.5196 17.8946 16.2652 18 16 18C15.7348 18 15.4804 17.8946 15.2929 17.7071C15.1054 17.5196 15 17.2652 15 17ZM17.5 21.5C17.5 21.7967 17.412 22.0867 17.2472 22.3334C17.0824 22.58 16.8481 22.7723 16.574 22.8858C16.2999 22.9993 15.9983 23.0291 15.7074 22.9712C15.4164 22.9133 15.1491 22.7704 14.9393 22.5607C14.7296 22.3509 14.5867 22.0836 14.5288 21.7926C14.471 21.5017 14.5007 21.2001 14.6142 20.926C14.7277 20.6519 14.92 20.4176 15.1667 20.2528C15.4133 20.088 15.7033 20 16 20C16.3978 20 16.7794 20.158 17.0607 20.4393C17.342 20.7206 17.5 21.1022 17.5 21.5Z" fill="currentColor"></path>
+                </svg>
+            </div>
+
+            <div data-name="icon-valid" class="peer-[.valid]/input:visible invisible absolute inset-y-0 end-10 flex items-center p-component-lg pointer-events-none">
+                <svg class="system-devices-check-circle text-success-icon-md" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.7075 12.2925C21.8005 12.3854 21.8742 12.4957 21.9246 12.6171C21.9749 12.7385 22.0008 12.8686 22.0008 13C22.0008 13.1314 21.9749 13.2615 21.9246 13.3829C21.8742 13.5043 21.8005 13.6146 21.7075 13.7075L14.7075 20.7075C14.6146 20.8005 14.5043 20.8742 14.3829 20.9246C14.2615 20.9749 14.1314 21.0008 14 21.0008C13.8686 21.0008 13.7385 20.9749 13.6171 20.9246C13.4957 20.8742 13.3854 20.8005 13.2925 20.7075L10.2925 17.7075C10.1049 17.5199 9.99945 17.2654 9.99945 17C9.99945 16.7346 10.1049 16.4801 10.2925 16.2925C10.4801 16.1049 10.7346 15.9994 11 15.9994C11.2654 15.9994 11.5199 16.1049 11.7075 16.2925L14 18.5863L20.2925 12.2925C20.3854 12.1995 20.4957 12.1258 20.6171 12.0754C20.7385 12.0251 20.8686 11.9992 21 11.9992C21.1314 11.9992 21.2615 12.0251 21.3829 12.0754C21.5043 12.1258 21.6146 12.1995 21.7075 12.2925ZM29 16C29 18.5712 28.2376 21.0846 26.8091 23.2224C25.3807 25.3603 23.3503 27.0265 20.9749 28.0104C18.5995 28.9944 15.9856 29.2518 13.4638 28.7502C10.9421 28.2486 8.6257 27.0105 6.80762 25.1924C4.98953 23.3743 3.75141 21.0579 3.2498 18.5362C2.74819 16.0144 3.00563 13.4006 3.98957 11.0251C4.97351 8.64968 6.63975 6.61935 8.77759 5.1909C10.9154 3.76244 13.4288 3 16 3C19.4467 3.00364 22.7512 4.37445 25.1884 6.81163C27.6256 9.24882 28.9964 12.5533 29 16ZM27 16C27 13.8244 26.3549 11.6977 25.1462 9.88873C23.9375 8.07979 22.2195 6.66989 20.2095 5.83733C18.1995 5.00476 15.9878 4.78692 13.854 5.21136C11.7202 5.6358 9.76021 6.68345 8.22183 8.22183C6.68345 9.7602 5.63581 11.7202 5.21137 13.854C4.78693 15.9878 5.00477 18.1995 5.83733 20.2095C6.66989 22.2195 8.07979 23.9375 9.88873 25.1462C11.6977 26.3549 13.8244 27 16 27C18.9164 26.9967 21.7123 25.8367 23.7745 23.7745C25.8367 21.7123 26.9967 18.9164 27 16Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <!--        Icons-->
+            <div data-name="icon-end" class="absolute inset-y-0 end-0 flex items-center p-component-lg pointer-events-none peer-[.disabled]/input:[&_svg]:text-neutral-icon-md peer-focus/input:rotate-180 transition ease duration-200">
+                <svg class="arrows-caret-down text-primary-icon-md" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.7074 12.7076L16.7074 22.7076C16.6146 22.8005 16.5043 22.8743 16.3829 22.9246C16.2615 22.975 16.1314 23.0009 15.9999 23.0009C15.8685 23.0009 15.7384 22.975 15.617 22.9246C15.4956 22.8743 15.3853 22.8005 15.2924 22.7076L5.29245 12.7076C5.1048 12.5199 4.99939 12.2654 4.99939 12.0001C4.99939 11.7347 5.1048 11.4802 5.29245 11.2926C5.48009 11.1049 5.73458 10.9995 5.99995 10.9995C6.26531 10.9995 6.5198 11.1049 6.70745 11.2926L15.9999 20.5863L25.2924 11.2926C25.3854 11.1997 25.4957 11.126 25.6171 11.0757C25.7384 11.0254 25.8686 10.9995 25.9999 10.9995C26.1313 10.9995 26.2614 11.0254 26.3828 11.0757C26.5042 11.126 26.6145 11.1997 26.7074 11.2926C26.8004 11.3855 26.8741 11.4958 26.9243 11.6172C26.9746 11.7386 27.0005 11.8687 27.0005 12.0001C27.0005 12.1315 26.9746 12.2616 26.9243 12.383C26.8741 12.5044 26.8004 12.6147 26.7074 12.7076Z" fill="currentColor"></path>
+                </svg>
+            </div>
+
+        </div>
+        ${helperText}
+    </div>
+    <!-- dropdown default start-->
+    <div data-lmg-dropdown-container id="dropdown-default" class="w-full z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700">
+        <!-- list-group exemple 3 start-->
+        <ul class="flex flex-col items-start border-radius-xs border border-neutral-stroke-low bg-neutral-surface-xlow">
+            <!--list-item--horizontal -->
+            <li tabindex="0" class="relative text-secondary-text-md flex items-center self-stretch px-space-between-lg py-space-between-md gap-space-between-lg hover:bg-neutral-surface-md hover:shadow-button-nav-hover hover:shadow-primary-surface-md transition-all duration-300 ease-in-out after:flex after:absolute after:z-10 after:w-full after:h-full after:hover:pointer-events-none after:inset-0 focus-visible:after:outline after:outline-primary-stroke-md after:-outline-offset-[3px] after:border-radius-2xs appearance-none outline-none focus-visible:outline-none cursor-pointer ">
+                <div class="flex items-center flex-1 gap-space-between-lg ">
+                    <div class="flex flex-1 items-center gap-space-between-sm">
+                        <div class="flex flex-col flex-1 gap-space-between-2xs justify-center items-start ">
+                            <!--                    Descritpion-->
+                            <span class="flex flex-1 body-l font-mono text-neutral-text-xhigh self-stretch">
+                            Description
+                            </span>
+                            <!--                    Description end-->
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--list-item--horizontal end-->
+
+        </ul>
+        <!-- list-group exemple 3 end-->
+    </div>
+    <!-- dropdown default end-->
+
+    <select class="hidden">
+        <option value="option 1">option 1</option>
+        <option value="option 2">option 2</option>
+        <option value="option 3">option 3</option>
+        <option value="option 4">option 4</option>
+    </select>
+</div>
