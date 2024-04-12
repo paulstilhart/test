@@ -13,16 +13,19 @@
 
 
 <body class="bg-white">
-    <header class="custom_css_gradient sticky top-0 z-10">
+
+    <header class="bg-white shadow-md  sticky top-0 z-10">
         <div class="h-20 wrapper_1440 py-0  flex justify-between items-center gap-2">
             <a href="" target="_blank">
                 <img class="w-auto h-[72px]" src="./sources/logos/Logo-Clovis.svg" alt=""></a>
             <a target="_blank" href="" class="btninverted">Je souhaite être recontacté</a>
         </div>
     </header>
+
     <main>
 
         <section class="bg-white text-black relative flex flex-col lg:block">
+
             <div class="bg-hero-background bg-no-repeat bg-center bg-cover">
                 <div class="wrapper_1440 pt-56 pb-32">
                     <div class="w-full lg:w-[57%] max-w-full mr-auto">
@@ -33,58 +36,58 @@
                     </div>
                 </div>
             </div>
-    
-            <div class="-mt-16 mb-6  lg:m-0 static lg:absolute right-0 top-[300px] w-full">
-                <div class="wrapper_1440">
-                    <div class="bg-white text-black shadow-md pt-6 pb-8 px-8 rounded-3xl w-full  lg:w-[40%] max-w-full ml-auto">
-                        <h2 class="text-3xl font-medium pb-6">Demander un devis</h2>
-                        <p class="text-base font-bold pb-2">Je suis interessé par :</p>
-                        <div class="flex flex-wrap gap-x-6 gap-y-2 pb-6">
-                            <div class="flex gap-2 items-center">
-                                <input checked name="radio" type="radio" id="radio_1" value="radio_1"
-                                    class="w-5 h-5 text-black bg-black border-black focus:ring-black accent-black">
-                                <label for="radio_1" class="text-base font-medium">Fleet management</label>
-                            </div>
-                            <div class="flex gap-2 items-center">
-                                <input name="radio" type="radio" id="radio_2" value="radio_2"
-                                    class="w-5 h-5 text-black bg-black border-black focus:ring-black accent-black">
-                                <label for="radio_2" class="text-base font-medium">Location de véhicule</label>
-                            </div>
+
+            <div class="wrapper_1440 -mt-16 lg:m-0 pb-6 lg:p-0
+            w-full max-w-full  lg:w-[40%] lg:max-w-[520px] static lg:absolute left-[55%] top-[300px]">
+                <div class="bg-white text-black shadow-md pt-6 pb-8 px-8 rounded-3xl">
+                    <h2 class="text-3xl font-medium pb-6">Demander un devis</h2>
+                    <p class="text-base font-bold pb-2">Je suis interessé par :</p>
+                    <div class="flex flex-wrap gap-x-6 gap-y-2 pb-6">
+                        <div class="flex gap-2 items-center">
+                            <input checked name="radio" type="radio" id="radio_1" value="radio_1"
+                                class="w-5 h-5 text-black bg-black border-black focus:ring-black accent-black">
+                            <label for="radio_1" class="text-base font-medium">Fleet management</label>
                         </div>
-                        <div class="flex flex-wrap gap-5 pb-8">
-                            <input type="text" id="company" name="company" placeholder="Nom de votre entreprise"
-                                class="bg-white placeholder:text-grey-dark w-full text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
-                            <select name="sector" id="sector"
-                            class="bg-white placeholder:text-grey-dark  w-full text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2">
-                                <option value="">Votre secteur d’activité</option>
-                                <option value="test">test</option>
-                            </select>
-                            <input type="text" id="firstname" name="firstname" placeholder="Prénom"
-                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
-                            <input type="text" id="lastname" name="lastname" placeholder="Nom de famille"
-                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
-    
-                            <input type="number" id="zipcode" name="zipcode" placeholder="Code Postal"
-                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
-                            <input type="text" id="city" name="city" placeholder="Ville"
-                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
-    
-                            <input type="mail" id="mail" name="mail" placeholder="Adresse email"
-                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
-                            <input type="number" id="phone" name="phone" placeholder="Téléphone"
-                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
+                        <div class="flex gap-2 items-center">
+                            <input name="radio" type="radio" id="radio_2" value="radio_2"
+                                class="w-5 h-5 text-black bg-black border-black focus:ring-black accent-black">
+                            <label for="radio_2" class="text-base font-medium">Location de véhicule</label>
                         </div>
-                        <button class="btninverted">Je souhaite être recontacté</button>
-    
                     </div>
+                    <div class="flex flex-wrap gap-5 pb-8">
+                        <input type="text" id="company" name="company" placeholder="Nom de votre entreprise"
+                            class="bg-white placeholder:text-grey-dark w-full text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
+                        <select name="sector" id="sector"
+                            class="bg-white placeholder:text-grey-dark  w-full text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2">
+                            <option value="">Votre secteur d’activité</option>
+                            <option value="test">test</option>
+                        </select>
+                        <input type="text" id="firstname" name="firstname" placeholder="Prénom"
+                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
+                        <input type="text" id="lastname" name="lastname" placeholder="Nom de famille"
+                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
+
+                        <input type="number" id="zipcode" name="zipcode" placeholder="Code Postal"
+                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
+                        <input type="text" id="city" name="city" placeholder="Ville"
+                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
+
+                        <input type="mail" id="mail" name="mail" placeholder="Adresse email"
+                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
+                        <input type="number" id="phone" name="phone" placeholder="Téléphone"
+                            class="bg-white placeholder:text-grey-dark w-[calc(50%-10px)] text-base font-medium rounded pt-4 pb-3 px-4 border-solid border-l-grey-semi border-2" />
+                    </div>
+                    <button class="btninverted">Je souhaite être recontacté</button>
                 </div>
             </div>
-    
-    
-    
-    
+
+
+
+
+
+
             <div class=" bg-black text-white">
-                <div class="wrapper_1440 pt-14 pb-4">
+                <div class="wrapper_1440 py-14">
                     <div class="w-full lg:w-[57%] max-w-full mr-auto">
                         <h2 class="text-3xl font-medium mb-14">Nos services et nos avantages</h2>
                         <div class="flex flex-wrap gap-6">
@@ -133,18 +136,19 @@
                                     class="inline-block w-8 h-8 flex-none  bg-transparent bg-ico-leaf bg-no-repeat bg-center bg-contain"></span>
                                 <div>
                                     <h3 class="text-lg font-bold pb-2">Engagement écologique</h3>
-                                    <p class="text-base font-medium">Biocarburant, électromobilité, gaz naturel comprimé.
+                                    <p class="text-base font-medium">Biocarburant, électromobilité, gaz naturel
+                                        comprimé.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </section>
 
-        
+
 
         <section class="bg-white text-black">
             <div class="wrapper_1440 py-8  gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
@@ -167,92 +171,102 @@
         <section class="bg-white text-black">
             <div class="wrapper_1440 pt-20 pb-16 text-center">
                 <h2 class="text-3xl font-medium pb-20 text-left">Clovis a les réponses à vos questions !</h2>
-    
+
                 <div class="pb-12 max-w-[846px] mx-auto">
                     <div class="shadow-md rounded-2xl overflow-hidden">
-    
+
                         <div class="collapse">
                             <input type="checkbox" class="peer hidden">
-    
+
                             <div class="collapse-title">
-                                <h2 class=" text-3xl font-medium text-left uppercase ">Quels documents faut-il pour générer une voiture ?</h2>
+                                <h2 class=" text-3xl font-medium text-left uppercase ">Quels documents faut-il pour
+                                    générer une voiture ?</h2>
                             </div>
-    
+
                             <div class="collapse-content">
-                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne. Bénéficiez de conseils
+                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne.
+                                    Bénéficiez de conseils
                                     personnalisés avec un interlocuteur unique.</p>
                             </div>
                         </div>
-    
+
                         <div class="collapse">
                             <input type="checkbox" class="peer hidden">
-    
+
                             <div class="collapse-title">
-                                <h2 class=" text-3xl font-medium text-left uppercase ">Comment louer un véhicule pour un trajet uniquement aller ?</h2>
+                                <h2 class=" text-3xl font-medium text-left uppercase ">Comment louer un véhicule pour un
+                                    trajet uniquement aller ?</h2>
                             </div>
-    
+
                             <div class="collapse-content">
-                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne. Bénéficiez de conseils
+                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne.
+                                    Bénéficiez de conseils
                                     personnalisés avec un interlocuteur unique.</p>
                             </div>
                         </div>
-    
-    
+
+
                         <div class="collapse">
                             <input type="checkbox" class="peer hidden">
-    
+
                             <div class="collapse-title">
-                                <h2 class=" text-3xl font-medium text-left uppercase ">Quel est le montant de la caution pour louer un véhicule utilitaire ?</h2>
+                                <h2 class=" text-3xl font-medium text-left uppercase ">Quel est le montant de la caution
+                                    pour louer un véhicule utilitaire ?</h2>
                             </div>
-    
+
                             <div class="collapse-content">
-                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne. Bénéficiez de conseils
+                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne.
+                                    Bénéficiez de conseils
                                     personnalisés avec un interlocuteur unique.</p>
                             </div>
                         </div>
-    
+
                         <div class="collapse">
                             <input type="checkbox" class="peer hidden">
-    
-                            <div class="collapse-title">
-                                <h2 class=" text-3xl font-medium text-left uppercase ">Que faire en cas de vol ?</h2>
-                            </div>
-    
-                            <div class="collapse-content">
-                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne. Bénéficiez de conseils
-                                    personnalisés avec un interlocuteur unique.</p>
-                            </div>
-                        </div>
-    
-                        <div class="collapse">
-                            <input type="checkbox" class="peer hidden">
-    
+
                             <div class="collapse-title">
                                 <h2 class=" text-3xl font-medium text-left uppercase ">Que faire en cas de vol ?</h2>
                             </div>
-    
+
                             <div class="collapse-content">
-                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne. Bénéficiez de conseils
+                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne.
+                                    Bénéficiez de conseils
                                     personnalisés avec un interlocuteur unique.</p>
                             </div>
                         </div>
-    
+
                         <div class="collapse">
                             <input type="checkbox" class="peer hidden">
-    
+
                             <div class="collapse-title">
-                                <h2 class=" text-3xl font-medium text-left uppercase ">Est-on remboursé en cas d'annulation ?</h2>
+                                <h2 class=" text-3xl font-medium text-left uppercase ">Que faire en cas de vol ?</h2>
                             </div>
-    
+
                             <div class="collapse-content">
-                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne. Bénéficiez de conseils
+                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne.
+                                    Bénéficiez de conseils
                                     personnalisés avec un interlocuteur unique.</p>
                             </div>
                         </div>
-    
+
+                        <div class="collapse">
+                            <input type="checkbox" class="peer hidden">
+
+                            <div class="collapse-title">
+                                <h2 class=" text-3xl font-medium text-left uppercase ">Est-on remboursé en cas
+                                    d'annulation ?</h2>
+                            </div>
+
+                            <div class="collapse-content">
+                                <p class=" text-base text-left ">Echangez avec un partenaire de confiance et pérenne.
+                                    Bénéficiez de conseils
+                                    personnalisés avec un interlocuteur unique.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-    
+
                 <a target="_blank" href="" class="btninverted">Je demande un devis</a>
             </div>
         </section>
@@ -311,7 +325,8 @@
         <section class="bg-primary-red text-white">
             <div class="wrapper_1440 py-10  flex flex-col md:flex-row gap-6 justify-between">
                 <div class="max-w-full md:max-w-[411px]">
-                    <h2 class="text-3xl font-medium pb-8">Un éventail de services pour construire ensemble votre solution
+                    <h2 class="text-3xl font-medium pb-8">Un éventail de services pour construire ensemble votre
+                        solution
                         sur-mesure.</h2>
                     <a href="" target="_blank" class="btnfront_white">Notre gamme de véhicules</a>
                 </div>
@@ -358,9 +373,8 @@
 
 
 
-    <footer class="bg-black text-white mt-14">
-        <div
-            class="wrapper_1440 py-20  flex flex-col md:flex-row gap-6 justify-between flex-wrap">
+    <footer class="bg-black text-white">
+        <div class="wrapper_1440 py-20  flex flex-col md:flex-row gap-6 justify-between flex-wrap">
             <div class="flex items-center gap-6">
                 <a href="" target="_blank"
                     class="w-6 h-6 bg-transparent bg-social-facebook bg-no-repeat bg-center bg-contain"></a>
@@ -376,7 +390,8 @@
                 <span class="hidden md:inline-block h-[12px] w-[1px] bg-white"></span>
                 <a href="" target="_blank" class="text-base font-bold uppercase tracking-widest">Mentions légales</a>
                 <span class="hidden md:inline-block h-[12px] w-[1px] bg-white"></span>
-                <a href="" target="_blank" class="text-base font-bold uppercase tracking-widest">Politique confidentialité
+                <a href="" target="_blank" class="text-base font-bold uppercase tracking-widest">Politique
+                    confidentialité
                     et cookie</a>
             </div>
         </div>
@@ -384,14 +399,14 @@
 
 
     <script defer>
-    document.querySelectorAll('.collapse-title').forEach(title => {
-        title.addEventListener('click', () => {
-            const checkbox = title.parentElement.querySelector('.collapse input[type="checkbox"]');
-            checkbox.checked = !checkbox.checked;
+        document.querySelectorAll('.collapse-title').forEach(title => {
+            title.addEventListener('click', () => {
+                const checkbox = title.parentElement.querySelector('.collapse input[type="checkbox"]');
+                checkbox.checked = !checkbox.checked;
+            });
         });
-    });
     </script>
-    
+
 
 </body>
 

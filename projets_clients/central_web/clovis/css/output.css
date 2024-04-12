@@ -742,8 +742,8 @@ html {
   position: sticky;
 }
 
-.right-0{
-  right: 0px;
+.left-\[55\%\]{
+  left: 55%;
 }
 
 .top-0{
@@ -771,20 +771,8 @@ html {
   margin-bottom: 3.5rem;
 }
 
-.mb-6{
-  margin-bottom: 1.5rem;
-}
-
-.ml-auto{
-  margin-left: auto;
-}
-
 .mr-auto{
   margin-right: auto;
-}
-
-.mt-14{
-  margin-top: 3.5rem;
 }
 
 .mt-auto{
@@ -1158,10 +1146,6 @@ html {
   padding-bottom: 2rem;
 }
 
-.pt-14{
-  padding-top: 3.5rem;
-}
-
 .pt-20{
   padding-top: 5rem;
 }
@@ -1260,10 +1244,6 @@ html {
 
 /* Si besoin de définir des apply sur des éléments */
 
-.custom_css_gradient {
-  background: linear-gradient(180deg, #333 0%, rgba(51, 51, 51, 0.20) 90%, rgba(255, 255, 255, 0.00) 100%);
-}
-
 .placeholder\:text-grey-dark::-moz-placeholder{
   --tw-text-opacity: 1;
   color: rgb(95 108 120 / var(--tw-text-opacity));
@@ -1334,6 +1314,14 @@ html {
 
   .lg\:w-\[57\%\]{
     width: 57%;
+  }
+
+  .lg\:max-w-\[520px\]{
+    max-width: 520px;
+  }
+
+  .lg\:p-0{
+    padding: 0px;
   }
 }
 
