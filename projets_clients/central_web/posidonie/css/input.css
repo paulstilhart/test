@@ -1,34 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-
-/* 
-=> Donné par google font pour importer la montserrat, mais non utilisée au final
-
-
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-*/
-
-
 @layer base {
-    html {
-        font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-    }
+  html {
+      font-family: "Montserrat", system-ui, sans-serif;
+      font-optical-sizing: auto;
+  }
+}
+
+@layer components {
+  .frame_primary_orange strong {
+    @apply  bg-primary-orange text-white font-medium inline-block leading-[1.2em] pt-2;
+}
 }
 
 
@@ -40,3 +29,6 @@
   background: transparent linear-gradient(58deg, #62D4A8 0%, #4FBDA3 15%, #369E9C 37%, #248997 59%, #197C94 80%, #167894 100%) 
   0% 0% no-repeat padding-box;
 }
+
+
+

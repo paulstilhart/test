@@ -8,38 +8,98 @@
 
     <!-- lien avec la feuille de style compilée tailwind -->
     <link rel="stylesheet" href="./css/output.css">
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </head>
 
 <body>
 
+
+
+
     <main>
+
+        <!-- section hero -->
+        <section class="bg-white ">
+            <div class="max-w-[1920px] mx-auto lg:pr-[50px]  flex flex-col relative ">
+
+                <div class="lg:z-10 static lg:absolute left-0 top-0 h-full w-full lg:w-[40%] lg:max-w-[600px]
+                background_gradient lg:bg-background-wave-hero lg:bg-no-repeat lg:bg-right lg:bg-cover">
+                    <div
+                        class="px-4 lg:px-10 py-10 h-full w-full  flex flex-col justify-center items-center lg:items-start">
+                        <h1
+                            class="frame_primary_orange text-white font-regular text-4xl leading-[44px] pb-4 text-center lg:text-left">
+                            L’HERBIER
+                            <br>
+                            <strong>DE POSIDONIE</strong>
+                            <br>
+                            SANS LUI,
+                            <br>
+                            LA MER S’ALTÈRE
+                        </h1>
+                        <a href=""
+                            class="text-sm font-medium pt-2 pb-2.5 pr-7 pl-5 rounded-full bg-primary-blue text-white">EN
+                            SAVOIR +</a>
+                    </div>
+                </div>
+
+                <div class=" w-full h-[300px] lg:h-[500px] lg:rounded-r-xl overflow-hidden relative">
+                    <swiper-container class="bg-gray-400 w-full h-full" :slides-per-view="1"
+                        :loopFillGroupWithBlank="true" :spaceBetween="50" :navigation="true" :pagination="false"
+                        :modules="modules" :breakpoints="{'1280': {slidesPerView: 3},'768': {slidesPerView: 2}}">
+                        <swiper-slide>
+                            <img :src="https://naturdive.com/wp-content/uploads/BPT7494-2-e1654874659726.jpg"
+                                :alt="$getDisplayText(m)" class="block w-full h-full object-cover" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img :src="$getFirstMediaUrlById(m.content?.img,450,450,'crop')" :alt="$getDisplayText(m)"
+                                class="block w-full h-full object-cover" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img :src="$getFirstMediaUrlById(m.content?.img,450,450,'crop')" :alt="$getDisplayText(m)"
+                                class="block w-full h-full object-cover" />
+                        </swiper-slide>
+                        <!--     dans la partie script 
+                        import { FreeMode, Pagination, Navigation } from 'swiper/modules'; const modules = [FreeMode,Pagination,Navigation] 
+                    -->
+                    </swiper-container>
+
+                    <div
+                        class="px-4 z-10 absolute left-[50%] top-[70px] lg:top-[170px] -translate-x-1/2 text-center max-w-full">
+                        <h2 class="mb-2 text-8xl font-normal text-white opacity-65">HELP!</h2>
+                        <a href=""
+                            class="text-xl font-medium pt-2 pb-3 pr-16 pl-10 rounded-full bg-primary-orange text-white ">AGIR
+                            ENSEMBLE</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
 
         <!-- section Tous engagés pour une méditerranée vivante et préservée -->
         <section class="bg-white">
-            <div class="pt-16 pb-20 px-8 mx-auto max-w-[992px]">
+            <div class="max-w-[992px] mx-auto px-4 md:px-8 pt-16 pb-20 ">
                 <h2 class="text-3xl font-medium text-primary-blue text-center pb-14">
-                    <strong class="font-bold text-primary-orange">Tous engagés</strong> pour une méditerranée vivante et
-                    préservée
+                    <b class="font-bold text-primary-orange">Tous engagés</b> pour une méditerranée vivante et préservée
                 </h2>
                 <div class="flex flex-col md:flex-row gap-6 ">
                     <div
                         class="flex-1 flex flex-col items-center gap-6 text-white bg-primary-blue pt-16 px-8 pb-7 relative">
                         <span class="inline-block absolute top-0 left-0 w-[31px] h-[31px] bg-white overflow-hidden 
-                clip-path-polygon 
-                after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
-                        <h3 class="text-xl text-white font-medium text-center">
-                            LA<span
-                                class="relative inline-block 
-                        before:inline-block before:absolute before:-inset-0.5 before:bg-primary-orange before:-translate-y-1">
-                                <span class="relative text-white">&nbsp;POSIDONIE&nbsp;</span>
-                            </span>
-                            <br><strong class="font-black">Un bien précieux… en danger</strong>
+                        clip-path-polygon 
+                        after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
+                        <h3 class="frame_primary_orange text-xl text-white font-medium text-center">
+                            LA<strong>&nbsp;POSIDONIE&nbsp;</strong>
+                            <br>
+                            <b class="font-black">Un bien précieux... sous pressions</b>
                         </h3>
-                        <p class="text-base font-normal text-center text-white">Posidonia oceanica, c'est un peu la
-                            forêt
-                            amazonienne sous-marine de la Méditerranée ! Emblématique et protégé, cet eco-système
-                            constitue
-                            nurseries et habitats pour la faune et la flore marines tout en protégeant le littoral de
+                        <p class="text-base font-normal text-center text-white"><span class="italic">Posidonia
+                                oceanica</span>, c'est un peu notre
+                            forêt amazonienne sous-marine de la Méditerranée ! Emblématique et protégé, cet écosystème
+                            constitue habitats pour la faune et la flore et nurseries pour les poissons tout en
+                            protégeant le littoral de
                             l'érosion.
                         </p>
                         <a href=""
@@ -49,21 +109,17 @@
                     <div
                         class="flex-1 flex flex-col items-center gap-6 text-white bg-primary-blue pt-16 px-8 pb-7 relative">
                         <span class="inline-block absolute top-0 left-0 w-[31px] h-[31px] bg-white overflow-hidden 
-                clip-path-polygon 
-                after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
-                        <h3 class="text-xl text-white font-medium text-center">IL Y A
-                            <span
-                                class=" relative inline-block before:inline-block before:absolute before:-inset-0.5 before:bg-primary-orange before:-translate-y-1">
-                                <span class="relative text-white">&nbsp;URGENCE&nbsp;</span>
-                            </span>
-                            <br><strong class="font-black">Nous pouvons agir ensemble</strong>
+                        clip-path-polygon 
+                        after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
+
+                        <h3 class="frame_primary_orange text-xl text-white font-medium text-center">
+                            IL Y A<strong>&nbsp;URGENCE&nbsp;</strong>
+                            <br>
+                            <b class="font-black">Nous pouvons agir ensemble</b>
                         </h3>
-                        <p class="text-base font-normal text-center text-white">Malgré de nombreuses pressions
-                            anthropiques,
-                            liées à l’utilisation du littoral méditerranéen par l’homme, il existe des solutions pour
-                            sauver
-                            la
-                            Posidonie sur notre littoral méditerranéen.</p>
+                        <p class="text-base font-normal text-center text-white">Malgré les nombreuses pressions
+                            anthropiques liées à nos usages, il existe des solutions pour sauver la Posidonie du
+                            littoral méditerranéen.</p>
                         <a href=""
                             class="text-sm font-medium pt-2 pb-2.5 pr-7 pl-5 rounded-full bg-primary-orange text-white">EN
                             SAVOIR +</a>
@@ -72,9 +128,10 @@
             </div>
         </section>
 
+
         <!-- section AGISSONS ENSEMBLE -->
-        <section class="background_gradient">
-            <div class="pt-28 pb-24 px-8 mx-auto max-w-[992px] flex flex-col items-center gap-7">
+        <section class="bg-background-wave bg-no-repeat bg-top bg-cover">
+            <div class="   max-w-[992px] mx-auto px-4 md:px-8 pt-28 pb-24 flex flex-col items-center gap-7">
                 <h2 class="text-3xl font-medium text-white text-center">AGISSONS ENSEMBLE</h2>
                 <hr class="w-[150px] border-t-[1px] border-white">
                 <p class="text-base font-normal text-center text-white">Alliance Posidonia met en place une démarche
@@ -88,23 +145,27 @@
         </section>
 
         <!-- sections actus -->
-        <section class="bg-black">
-            <div class="pt-10 pb-28 px-8 mx-auto max-w-[1400px]">
-                <h2 class="text-3xl font-bold text-white text-center pb-10">ACTUS</h2>
-                <div class="snap-x snap-mandatory sm:snap-none flex gap-6 max-w-full	overflow-x-auto">
+        <section class="background_gradient">
+            <div class="   max-w-[1400px] mx-auto px-4 md:px-8 pt-10 pb-28">
+                <h2 class="text-3xl font-bold text-white text-center pb-10">À la <span
+                        class="text-primary-orange">une</span></h2>
+                <div class=" snap-x snap-mandatory sm:snap-none flex gap-6 max-w-full	overflow-x-auto">
                     <div
-                        class="snap-center  w-[316px] max-w-full h-auto flex-none bg-white pt-4 pr-5 pb-9 pl-4 relative">
+                        class="flex flex-col snap-center  w-[316px] max-w-full h-auto flex-none bg-white pt-4 pr-5 pb-9 pl-4 relative">
                         <div class="flex justify-center items-center w-full h-[192px] overflow-hidden mb-4">
                             <img class="object-cover block min-w-full min-h-full max-w-none"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8EoNvlfRJ0cKZdRhXYVuJspHqMBrth9dggaVGeHmrsA&s"
                                 alt="section actus image homepage">
                         </div>
                         <h3 class="mb-4 text-3xl font-bold text-primary-blue">M Pierre</h3>
-                        <h4 class="mb-2 text-base font-normal text-black flex items-center justify-start">
-                            <img class="pr-2 inline-block flex-none w-auto h-[34px]" src="./sources/icons/location.svg"
-                                alt="icon location">
-                            La Ciotat
-                        </h4>
+                        <div class="flex justify-start items-center mb-2 gap-2">
+                            <svg class="fill-primary-orange" height="34" width="34" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -960 960 960">
+                                <path
+                                    d="M480-470q38 0 64-26t26-64q0-38-26-64t-64-26q-38 0-64 26t-26 64q0 38 26 64t64 26Zm0 257q115-104 171.5-183T708-556q0-101.968-66.035-166.984t-162-65.016Q384-788 318-722.984T252-556q0 81 56.5 159.5T480-213Zm0 167Q303-193 214.5-313T126-556q0-163.719 106.753-260.86Q339.506-914 480-914q140.494 0 247.247 97.14Q834-719.719 834-556q0 123-88.5 243T480-46Zm0-514Z" />
+                            </svg>
+                            <h4 class="text-base font-normal text-black">La Ciotat</h4>
+                        </div>
                         <p class="mb-8 font-normal text-base text-black line-clamp-4 overflow-hidden max-h-[96px]">
                             Lorem,
                             ipsum dolor sit amet consectetur adipisicing elit. Voluptatem consequatur asperiores vitae
@@ -112,27 +173,32 @@
                             quam quasi obcaecati temporibus, adipisci corrupti accusantium nihil odit nam nemo labore
                             qui
                             facere quidem animi reprehenderit.</p>
-                        <p class="font-normal text-base text-black flex justify-between items-center">
+                        <p class="mt-auto font-normal text-base text-black flex justify-between items-center">
                             <span>16/03/2024</span>
-                            <a target="_blank" href="" class="text-primary-orange inline-block px-3">VOIR PLUS</a>
+                            <a target="_blank" href="" class="text-primary-orange font-bold inline-block px-3">VOIR
+                                PLUS</a>
                         </p>
-                        <span class="inline-block absolute bottom-0 right-0 w-[31px] h-[31px] bg-black overflow-hidden 
-                    clip-path-polygon after:rotate-180
-                    after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
+                        <span
+                            class="inline-block absolute bottom-0 right-0 w-[31px] h-[31px] bg-black overflow-hidden 
+                            clip-path-polygon after:rotate-180
+                            after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
                     </div>
                     <div
-                        class="snap-center  w-[316px] max-w-full h-auto flex-none bg-white pt-4 pr-5 pb-9 pl-4 relative">
+                        class="flex flex-col snap-center  w-[316px] max-w-full h-auto flex-none bg-white pt-4 pr-5 pb-9 pl-4 relative">
                         <div class="flex justify-center items-center w-full h-[192px] overflow-hidden mb-4">
                             <img class="object-cover block min-w-full min-h-full max-w-none"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8EoNvlfRJ0cKZdRhXYVuJspHqMBrth9dggaVGeHmrsA&s"
                                 alt="section actus image homepage">
                         </div>
                         <h3 class="mb-4 text-3xl font-bold text-primary-blue">M Pierre</h3>
-                        <h4 class="mb-2 text-base font-normal text-black flex items-center justify-start">
-                            <img class="object-contain pr-2 inline-block flex-none w-auto h-[34px]" src="./sources/icons/location.svg"
-                                alt="icon location">
-                            La Ciotat
-                        </h4>
+                        <div class="flex justify-start items-center mb-2 gap-2">
+                            <svg class="fill-secondary-green" height="34" width="34" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -960 960 960">
+                                <path
+                                    d="M480-470q38 0 64-26t26-64q0-38-26-64t-64-26q-38 0-64 26t-26 64q0 38 26 64t64 26Zm0 257q115-104 171.5-183T708-556q0-101.968-66.035-166.984t-162-65.016Q384-788 318-722.984T252-556q0 81 56.5 159.5T480-213Zm0 167Q303-193 214.5-313T126-556q0-163.719 106.753-260.86Q339.506-914 480-914q140.494 0 247.247 97.14Q834-719.719 834-556q0 123-88.5 243T480-46Zm0-514Z" />
+                            </svg>
+                            <h4 class="text-base font-normal text-black">La Ciotat</h4>
+                        </div>
                         <p class="mb-8 font-normal text-base text-black line-clamp-4 overflow-hidden max-h-[96px]">
                             Lorem,
                             ipsum dolor sit amet consectetur adipisicing elit. Voluptatem consequatur asperiores vitae
@@ -140,27 +206,32 @@
                             quam quasi obcaecati temporibus, adipisci corrupti accusantium nihil odit nam nemo labore
                             qui
                             facere quidem animi reprehenderit.</p>
-                        <p class="font-normal text-base text-black flex justify-between items-center">
+                        <p class="mt-auto font-normal text-base text-black flex justify-between items-center">
                             <span>16/03/2024</span>
-                            <a target="_blank" href="" class="text-primary-orange inline-block px-3">VOIR PLUS</a>
+                            <a target="_blank" href="" class="text-secondary-green font-bold inline-block px-3">VOIR
+                                PLUS</a>
                         </p>
-                        <span class="inline-block absolute bottom-0 right-0 w-[31px] h-[31px] bg-black overflow-hidden 
-                    clip-path-polygon after:rotate-180
-                    after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
+                        <span
+                            class="inline-block absolute bottom-0 right-0 w-[31px] h-[31px] bg-black overflow-hidden 
+                            clip-path-polygon after:rotate-180
+                            after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
                     </div>
                     <div
-                        class="snap-center  w-[316px] max-w-full h-auto flex-none bg-white pt-4 pr-5 pb-9 pl-4 relative">
+                        class="flex flex-col snap-center  w-[316px] max-w-full h-auto flex-none bg-white pt-4 pr-5 pb-9 pl-4 relative">
                         <div class="flex justify-center items-center w-full h-[192px] overflow-hidden mb-4">
                             <img class="object-cover block min-w-full min-h-full max-w-none"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8EoNvlfRJ0cKZdRhXYVuJspHqMBrth9dggaVGeHmrsA&s"
                                 alt="section actus image homepage">
                         </div>
                         <h3 class="mb-4 text-3xl font-bold text-primary-blue">M Pierre</h3>
-                        <h4 class="mb-2 text-base font-normal text-black flex items-center justify-start">
-                            <img class="object-contain pr-2 inline-block flex-none w-auto h-[34px]" src="./sources/icons/location.svg"
-                                alt="icon location">
-                            La Ciotat
-                        </h4>
+                        <div class="flex justify-start items-center mb-2 gap-2">
+                            <svg class="fill-primary-orange" height="34" width="34" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -960 960 960">
+                                <path
+                                    d="M480-470q38 0 64-26t26-64q0-38-26-64t-64-26q-38 0-64 26t-26 64q0 38 26 64t64 26Zm0 257q115-104 171.5-183T708-556q0-101.968-66.035-166.984t-162-65.016Q384-788 318-722.984T252-556q0 81 56.5 159.5T480-213Zm0 167Q303-193 214.5-313T126-556q0-163.719 106.753-260.86Q339.506-914 480-914q140.494 0 247.247 97.14Q834-719.719 834-556q0 123-88.5 243T480-46Zm0-514Z" />
+                            </svg>
+                            <h4 class="text-base font-normal text-black">La Ciotat</h4>
+                        </div>
                         <p class="mb-8 font-normal text-base text-black line-clamp-4 overflow-hidden max-h-[96px]">
                             Lorem,
                             ipsum dolor sit amet consectetur adipisicing elit. Voluptatem consequatur asperiores vitae
@@ -168,27 +239,32 @@
                             quam quasi obcaecati temporibus, adipisci corrupti accusantium nihil odit nam nemo labore
                             qui
                             facere quidem animi reprehenderit.</p>
-                        <p class="font-normal text-base text-black flex justify-between items-center">
+                        <p class="mt-auto font-normal text-base text-black flex justify-between items-center">
                             <span>16/03/2024</span>
-                            <a target="_blank" href="" class="text-primary-orange inline-block px-3">VOIR PLUS</a>
+                            <a target="_blank" href="" class="text-primary-orange font-bold inline-block px-3">VOIR
+                                PLUS</a>
                         </p>
-                        <span class="inline-block absolute bottom-0 right-0 w-[31px] h-[31px] bg-black overflow-hidden 
-                    clip-path-polygon after:rotate-180
-                    after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
+                        <span
+                            class="inline-block absolute bottom-0 right-0 w-[31px] h-[31px] bg-black overflow-hidden 
+                            clip-path-polygon after:rotate-180
+                            after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
                     </div>
                     <div
-                        class="snap-center  w-[316px] max-w-full h-auto flex-none bg-white pt-4 pr-5 pb-9 pl-4 relative">
+                        class="flex flex-col snap-center  w-[316px] max-w-full h-auto flex-none bg-white pt-4 pr-5 pb-9 pl-4 relative">
                         <div class="flex justify-center items-center w-full h-[192px] overflow-hidden mb-4">
                             <img class="object-cover block min-w-full min-h-full max-w-none "
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8EoNvlfRJ0cKZdRhXYVuJspHqMBrth9dggaVGeHmrsA&s"
                                 alt="section actus image homepage">
                         </div>
                         <h3 class="mb-4 text-3xl font-bold text-primary-blue">M Pierre</h3>
-                        <h4 class="mb-2 text-base font-normal text-black flex items-center justify-start">
-                            <img class="pr-2 inline-block flex-none w-auto h-[34px] object-contain" src="./sources/icons/location.svg"
-                                alt="icon location">
-                            La Ciotat
-                        </h4>
+                        <div class="flex justify-start items-center mb-2 gap-2">
+                            <svg class="fill-secondary-green" height="34" width="34" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -960 960 960">
+                                <path
+                                    d="M480-470q38 0 64-26t26-64q0-38-26-64t-64-26q-38 0-64 26t-26 64q0 38 26 64t64 26Zm0 257q115-104 171.5-183T708-556q0-101.968-66.035-166.984t-162-65.016Q384-788 318-722.984T252-556q0 81 56.5 159.5T480-213Zm0 167Q303-193 214.5-313T126-556q0-163.719 106.753-260.86Q339.506-914 480-914q140.494 0 247.247 97.14Q834-719.719 834-556q0 123-88.5 243T480-46Zm0-514Z" />
+                            </svg>
+                            <h4 class="text-base font-normal text-black">La Ciotat</h4>
+                        </div>
                         <p class="mb-8 font-normal text-base text-black line-clamp-4 overflow-hidden max-h-[96px]">
                             Lorem,
                             ipsum dolor sit amet consectetur adipisicing elit. Voluptatem consequatur asperiores vitae
@@ -196,13 +272,15 @@
                             quam quasi obcaecati temporibus, adipisci corrupti accusantium nihil odit nam nemo labore
                             qui
                             facere quidem animi reprehenderit.</p>
-                        <p class="font-normal text-base text-black flex justify-between items-center">
+                        <p class="mt-auto font-normal text-base text-black flex justify-between items-center">
                             <span>16/03/2024</span>
-                            <a target="_blank" href="" class="text-primary-orange inline-block px-3">VOIR PLUS</a>
+                            <a target="_blank" href="" class="text-secondary-green font-bold inline-block px-3">VOIR
+                                PLUS</a>
                         </p>
-                        <span class="inline-block absolute bottom-0 right-0 w-[31px] h-[31px] bg-black overflow-hidden 
-                    clip-path-polygon after:rotate-180
-                    after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
+                        <span
+                            class="inline-block absolute bottom-0 right-0 w-[31px] h-[31px] bg-black overflow-hidden 
+                            clip-path-polygon after:rotate-180
+                            after:content[''] after:inline-block after:w-full after:h-full after:bg-primary-orange"></span>
                     </div>
                 </div>
             </div>
@@ -210,57 +288,66 @@
 
         <!-- section avec les logos -->
         <section class="bg-white">
-            <div class="py-20 px-8 mx-auto max-w-[1280px] flex items-center flex-wrap justify-around  gap-6">
-                <img class="block h-auto w-[150px] object-contain" src="./sources/logos/section_logo_exemple.jpg"
-                    alt="section logo homepage">
-                <img class="block h-auto w-[150px] object-contain" src="./sources/logos/section_logo_exemple.jpg"
-                    alt="section logo homepage">
-                <img class="block h-auto w-[150px] object-contain" src="./sources/logos/section_logo_exemple.jpg"
-                    alt="section logo homepage">
-                <img class="block h-auto w-[150px] object-contain" src="./sources/logos/section_logo_exemple.jpg"
-                    alt="section logo homepage">
+            <div class="max-w-[1280px] mx-auto px-4 md:px-8  py-20   flex items-center flex-wrap justify-evenly  gap-6">
+                <img class="block h-[80px] w-auto max-w-full object-contain"
+                    src="./sources/logos/section_logo_exemple.jpg" alt="section logo homepage">
+                <img class="block h-[80px] w-auto max-w-full object-contain"
+                    src="./sources/logos/section_logo_exemple.jpg" alt="section logo homepage">
+                <img class="block h-[80px] w-auto max-w-full object-contain"
+                    src="./sources/logos/section_logo_exemple.jpg" alt="section logo homepage">
+                <img class="block h-[80px] w-auto max-w-full object-contain"
+                    src="./sources/logos/section_logo_exemple.jpg" alt="section logo homepage">
             </div>
         </section>
-
     </main>
 
     <footer class="bg-primary-blue">
-        <div class="pt-7 px-8 mx-auto max-w-[914px] ">
+        <div class=" max-w-[914px] mx-auto px-4 md:px-8  pt-7 ">
             <div class="flex flex-col md:flex-row items-stretch justify-between gap-6">
                 <img class="block h-auto max-w-[225px] w-full flex-none object-contain self-start"
                     src="./sources/logos/alliance_posidionia_white.png" alt="logo alliance posidionia footer">
                 <div class="flex flex-col text-white">
                     <a class="text-lg font-normal text-white no-underline	w-fit" href="" target="_blank">Accueil</a>
-                    <a  class="text-lg font-normal text-white no-underline	w-fit"  href="" target="_blank">La posidonie</a>
-                    <a  class="text-lg font-normal text-white no-underline	w-fit"  href="" target="_blank">Agir ensemble</a>
-                    <a  class="text-lg font-normal text-white no-underline	w-fit"  href="" target="_blank">Alliance Posidonia</a>
+                    <a class="text-lg font-normal text-white no-underline	w-fit" href="" target="_blank">La
+                        posidonie</a>
+                    <a class="text-lg font-normal text-white no-underline	w-fit" href="" target="_blank">Agir
+                        ensemble</a>
+                    <a class="text-lg font-normal text-white no-underline	w-fit" href="" target="_blank">Alliance
+                        Posidonia</a>
                 </div>
                 <div class="flex flex-col text-white">
                     <a class="text-lg font-normal text-white no-underline	w-fit" href="" target="_blank">Médiathèque</a>
-                    <a  class="text-lg font-normal text-white no-underline	w-fit"  href="" target="_blank">Contact</a>
-                    <a  class="text-lg font-normal text-white no-underline	w-fit"  href="" target="_blank">Mentions légales</a>
-                    <a  class="text-lg font-normal text-white no-underline	w-fit"  href="" target="_blank">Politique de confidentialité</a>
+                    <a class="text-lg font-normal text-white no-underline	w-fit" href="" target="_blank">Contact</a>
+                    <a class="text-lg font-normal text-white no-underline	w-fit" href="" target="_blank">Mentions
+                        légales</a>
+                    <a class="text-lg font-normal text-white no-underline	w-fit" href="" target="_blank">Politique de
+                        confidentialité</a>
                 </div>
                 <div class="flex flex-row md:flex-col justify-start md:justify-center">
-                    <a class="w-[35px] h-[35px] bg-primary-orange flex justify-center items center overflow-hidden" target="_blank" href="">
-                        <img  class="block h-auto w-[20px] flex-none object-contain" src="./sources/icons/twitter.png" alt="icone footer social">
-                    </a>
-                    <a class="w-[35px] h-[35px] bg-secondary-blue flex justify-center items center overflow-hidden" target="_blank" href="">
-                        <img  class="block h-auto w-[20px] flex-none object-contain" src="./sources/icons/youtube.png" alt="icone footer social">
-                    </a>
-                    <a class="w-[35px] h-[35px] bg-primary-green flex justify-center items center overflow-hidden" target="_blank" href="">
-                        <img  class="block h-auto w-[20px] flex-none object-contain" src="./sources/icons/mail.png" alt="icone footer social">
-                    </a>
+                    <a class="w-[35px] h-[35px] bg-primary-orange overflow-hidden bg-ico-linkedin bg-no-repeat bg-center bg-[length:20px_auto]"
+                        href="" target="_blank"></a>
+                    <a class="w-[35px] h-[35px] bg-secondary-blue overflow-hidden bg-ico-youtube bg-no-repeat bg-center bg-[length:20px_auto]"
+                        href="" target="_blank"></a>
+                    <a class="w-[35px] h-[35px] bg-primary-green  overflow-hidden bg-ico-mail bg-no-repeat bg-center bg-[length:20px_auto]"
+                        href="" target="_blank"></a>
                 </div>
             </div>
-            <div class="mt-10 p-6 rounded-t-md  bg-white flex flex-wrap gap-6 justify-center">
-                <img class="block h-auto max-h-[100px] w-auto max-w-[100px] flex-none object-contain"
+            <div class="mt-10 p-6 rounded-t-md  bg-white flex flex-wrap gap-6 justify-between">
+                <img class="block h-[80px] w-auto max-w-full flex-none object-contain"
                     src="./sources/logos/footer/1 - LogoPrefetPACA.png" alt="logo footer">
-                <img class="block h-auto max-h-[100px] w-auto max-w-[100px] flex-none object-contain"
+                <img class="block h-[80px] w-auto max-w-full flex-none object-contain"
                     src="./sources/logos/footer/2 - PREF_Maritime_Mediterranee_Transparent.png" alt="logo footer">
-                <img class="block h-auto max-h-[100px] w-auto max-w-[100px] flex-none object-contain"
+                <img class="block h-[80px] w-auto max-w-full flex-none object-contain"
                     src="./sources/logos/footer/3 - 2022-SE_Charge_Mer_RVB.png" alt="logo footer">
-                <img class="block h-auto max-h-[100px] w-auto max-w-[100px] flex-none object-contain"
+                <img class="block h-[80px] w-auto max-w-full flex-none object-contain"
+                    src="./sources/logos/footer/4 - bloc-marque-RF-OFB_horizontal.jpg" alt="logo footer">
+                <img class="block h-[80px] w-auto max-w-full flex-none object-contain"
+                    src="./sources/logos/footer/1 - LogoPrefetPACA.png" alt="logo footer">
+                <img class="block h-[80px] w-auto max-w-full flex-none object-contain"
+                    src="./sources/logos/footer/2 - PREF_Maritime_Mediterranee_Transparent.png" alt="logo footer">
+                <img class="block h-[80px] w-auto max-w-full flex-none object-contain"
+                    src="./sources/logos/footer/3 - 2022-SE_Charge_Mer_RVB.png" alt="logo footer">
+                <img class="block h-[80px] w-auto max-w-full flex-none object-contain"
                     src="./sources/logos/footer/4 - bloc-marque-RF-OFB_horizontal.jpg" alt="logo footer">
             </div>
         </div>
