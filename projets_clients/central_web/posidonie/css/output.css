@@ -572,6 +572,14 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.pop_up_active{
+  overflow-y: hidden;
+}
+
+.pop_up_active .pop_up{
+  display: flex !important;
+}
+
 .static{
   position: static;
 }
@@ -626,6 +634,10 @@ html {
 
 .z-10{
   z-index: 10;
+}
+
+.z-40{
+  z-index: 40;
 }
 
 .z-50{
@@ -748,12 +760,20 @@ html {
   height: 100%;
 }
 
+.max-h-\[1118px\]{
+  max-height: 1118px;
+}
+
 .max-h-\[96px\]{
   max-height: 96px;
 }
 
 .min-h-full{
   min-height: 100%;
+}
+
+.min-h-\[237px\]{
+  min-height: 237px;
 }
 
 .w-\[150px\]{
@@ -801,8 +821,16 @@ html {
   width: 100%;
 }
 
+.w-1{
+  width: 0.25rem;
+}
+
 .min-w-full{
   min-width: 100%;
+}
+
+.max-w-\[1068px\]{
+  max-width: 1068px;
 }
 
 .max-w-\[1280px\]{
@@ -865,6 +893,18 @@ html {
   max-width: none;
 }
 
+.max-w-\[391px\]{
+  max-width: 391px;
+}
+
+.max-w-\[\]{
+  max-width: ;
+}
+
+.max-w-\[236px\]{
+  max-width: 236px;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -922,6 +962,10 @@ html {
   justify-content: flex-start;
 }
 
+.justify-end{
+  justify-content: flex-end;
+}
+
 .justify-center{
   justify-content: center;
 }
@@ -932,6 +976,14 @@ html {
 
 .justify-evenly{
   justify-content: space-evenly;
+}
+
+.justify-stretch{
+  justify-content: stretch;
+}
+
+.gap-1{
+  gap: 0.25rem;
 }
 
 .gap-2{
@@ -971,6 +1023,14 @@ html {
   overflow-x: auto;
 }
 
+.overflow-y-auto{
+  overflow-y: auto;
+}
+
+.overflow-y-hidden{
+  overflow-y: hidden;
+}
+
 .rounded-3xl{
   border-radius: 1.5rem;
 }
@@ -979,9 +1039,34 @@ html {
   border-radius: 9999px;
 }
 
+.rounded{
+  border-radius: 0.25rem;
+}
+
+.rounded-md{
+  border-radius: 0.375rem;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
+.rounded-xl{
+  border-radius: 0.75rem;
+}
+
+.rounded-2xl{
+  border-radius: 1rem;
+}
+
 .rounded-t-md{
   border-top-left-radius: 0.375rem;
   border-top-right-radius: 0.375rem;
+}
+
+.rounded-l{
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 
 .border-b-8{
@@ -1016,6 +1101,10 @@ html {
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-black_pop_up{
+  background-color: #000000cc;
 }
 
 .bg-gray-400{
@@ -1057,12 +1146,21 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-primary-grey{
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 240 240 / var(--tw-bg-opacity));
+}
+
 .bg-background-wave{
   background-image: url('../sources/img/wave_background.png');
 }
 
 .bg-gradient-to-br{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.bg-ico-close{
+  background-image: url('../sources/icons/close.svg');
 }
 
 .bg-ico-linkedin{
@@ -1131,6 +1229,14 @@ html {
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-12{
+  padding: 3rem;
+}
+
+.p-4{
+  padding: 1rem;
 }
 
 .p-6{
@@ -1292,6 +1398,10 @@ html {
   padding-top: 1.75rem;
 }
 
+.text-left{
+  text-align: left;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1407,14 +1517,13 @@ html {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.clip-path-polygon::after{
+.clip-path-polygon::after {
   -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
           clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
 
-.background_gradient{
-  background: transparent linear-gradient(58deg, #62D4A8 0%, #4FBDA3 15%, #369E9C 37%, #248997 59%, #197C94 80%, #167894 100%) 
-  0% 0% no-repeat padding-box;
+.background_gradient {
+  background: transparent linear-gradient(58deg, #62D4A8 0%, #4FBDA3 15%, #369E9C 37%, #248997 59%, #197C94 80%, #167894 100%) 0% 0% no-repeat padding-box;
 }
 
 .after\:inline-block::after{
@@ -1477,6 +1586,18 @@ html {
     order: 0;
   }
 
+  .md\:h-\[\]{
+    height: ;
+  }
+
+  .md\:h-\[237\]{
+    height: 237;
+  }
+
+  .md\:h-\[237px\]{
+    height: 237px;
+  }
+
   .md\:max-h-\[400px\]{
     max-height: 400px;
   }
@@ -1509,6 +1630,10 @@ html {
     width: 33.333333%;
   }
 
+  .md\:max-w-\[236px\]{
+    max-width: 236px;
+  }
+
   .md\:flex-row{
     flex-direction: row;
   }
@@ -1519,6 +1644,10 @@ html {
 
   .md\:justify-center{
     justify-content: center;
+  }
+
+  .md\:p-12{
+    padding: 3rem;
   }
 
   .md\:px-8{
@@ -1606,6 +1735,3 @@ html {
     text-align: left;
   }
 }
-
-
-

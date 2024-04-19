@@ -9,26 +9,30 @@
 
 @layer base {
   html {
-      font-family: "Montserrat", system-ui, sans-serif;
-      font-optical-sizing: auto;
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-optical-sizing: auto;
   }
 }
 
 @layer components {
   .frame_primary_orange strong {
-    @apply  bg-primary-orange text-white font-medium inline-block leading-[1.2em] pt-2;
-}
+    @apply bg-primary-orange text-white font-medium inline-block leading-[1.2em] pt-2;
+  }
+
+  .pop_up_active{
+    @apply overflow-y-hidden ;
+  }
+
+  .pop_up_active .pop_up{
+    @apply !flex ;
+  }
 }
 
 
-.clip-path-polygon::after{
+.clip-path-polygon::after {
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
 
-.background_gradient{
-  background: transparent linear-gradient(58deg, #62D4A8 0%, #4FBDA3 15%, #369E9C 37%, #248997 59%, #197C94 80%, #167894 100%) 
-  0% 0% no-repeat padding-box;
+.background_gradient {
+  background: transparent linear-gradient(58deg, #62D4A8 0%, #4FBDA3 15%, #369E9C 37%, #248997 59%, #197C94 80%, #167894 100%) 0% 0% no-repeat padding-box;
 }
-
-
-
