@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>AGIR ENSEMBLE</title>
 
     <!-- lien avec la feuille de style compilée tailwind -->
     <link rel="stylesheet" href="./css/output.css">
 
+
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
 </head>
 
-<body>
+<body class="">
 
-    
+
 
     <header class=" bg-white shadow-md h-28  sticky top-0 z-40">
         <div class="flex-none flex flex-col justify-center fixed right-0 top-[190px] lg:top-[292px]">
@@ -108,138 +110,151 @@
         </div>
     </header>
 
-
-
-
     <main>
 
-        <!-- section hero -->
+        <!-- section full texte -->
+        <section class="bg-white text-primary-blue">
+            <div class="max-w-[1280px] mx-auto px-4 md:px-8  py-20   ">
+                <p class="text-base font-normal text-center">L’herbier de Posidonies est un écosystème pivot de la
+                    Méditerranée.
+                    <br>
+                    Malgré de nombreux statuts de protection, les pressions anthropiques liées à
+                    l’utilisation du littoral constituent toujours une menace pour la Posidonie. L’une d’entre elles
+                    concerne l’ancrage des navires. Les campagnes de sensibilisation menées ces dernières années ont
+                    favorisé la prise de conscience et préparé le changement. Elles doivent être renforcées et enrichies
+                    par de nouvelles approches mobilisant des modes de communication qui renforcent les synergies.
+                    <br>
+                    <br>
+                    <strong class="font-bold">LA DÉMARCHE D'ENGAGEMENTS VOLONTAIRES EST PROPOSÉES AUX ACTEURS
+                        SOCIO-ÉCONOMIQUES. VOS ENGAGEMENTS SONT LE FRUIT DE VOS CONVICTIONS, CHACUN AGIT EN FONCTION DE
+                        SES POSSIBILITÉS.</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- section UN OBJECTIF PARTAGÉ =  3 blocs images/contenu intercalés 56px paddingTop et 1440px largeur contenu max-->
         <section class="bg-white ">
-            <div class="max-w-[1920px] mx-auto lg:pr-[50px]  flex flex-col relative ">
+            <div class="max-w-[1440px] mx-auto">
 
-                <div class="lg:z-10 static lg:absolute left-0 top-0 h-full w-full lg:w-[40%] lg:max-w-[600px]
-                background_gradient lg:bg-background-wave-hero lg:bg-no-repeat lg:bg-right lg:bg-cover">
+                <div class="flex flex-wrap items-stretch">
                     <div
-                        class="px-4 lg:px-10 py-10 h-full w-full  flex flex-col justify-center items-center lg:items-start">
-                        <h1
-                            class="frame_primary_orange text-white font-normal text-4xl leading-[44px] pb-4 text-center lg:text-left">
-                            L’HERBIER
-                            <br>
-                            <strong>DE POSIDONIE</strong>
-                            <br>
-                            SANS LUI,
-                            <br>
-                            LA MER S’ALTÈRE
-                        </h1>
-                        <a href=""
-                            class="text-sm font-medium pt-2 pb-2.5 pr-7 pl-5 rounded-full bg-primary-blue text-white">EN
-                            SAVOIR +</a>
+                        class="px-4 py-8 w-full md:w-1/2  bg-primary-blue text-white text-center flex flex-col gap-5 justify-center items-center">
+                        <h2 class="text-3xl font-medium">
+                            <strong class="font-bold">UN OBJECTIF PARTAGÉ :</strong><br>La Préservation de la Posidonie
+                        </h2>
+                        <p class="max-w-[500px] text-base font-normal">Toutes les initiatives pertinentes permettant,
+                            dans le respect de la règlementation, de sensibiliser les différents publics sur le rôle et
+                            la négatifs des usages sur les habitats reposant sur cette espèce, et de favoriser
+                            l’émergence de solutions préventives et/ou correctives sont bienvenues.</p>
+                    </div>
+                    <div
+                        class=" w-full md:w-1/2 md:min-h-[350px] md:max-h-[450px] flex justify-center items-center overflow-hidden">
+                        <img class="object-cover block min-w-full min-h-full max-w-none "
+                            src="./sources/img/page_posidonie/role_1.png" alt="">
                     </div>
                 </div>
 
-                <div class=" w-full h-[300px] lg:h-[500px] lg:rounded-r-xl overflow-hidden relative">
-                    
-                    <swiper-container class="bg-gray-400 w-full h-full" :slides-per-view="1"
-                        :loopFillGroupWithBlank="true" :spaceBetween="50" :navigation="true" :pagination="false"
-                        :modules="modules" :breakpoints="{'1280': {slidesPerView: 3},'768': {slidesPerView: 2}}">
-                        <swiper-slide>
-                            <img :src="./sources/img/page_posidonie/role_1.png"
-                                :alt="$getDisplayText(m)" class="block w-full h-full object-cover" />
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img :src="$getFirstMediaUrlById(m.content?.img,450,450,'crop')" :alt="$getDisplayText(m)"
-                                class="block w-full h-full object-cover" />
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img :src="$getFirstMediaUrlById(m.content?.img,450,450,'crop')" :alt="$getDisplayText(m)"
-                                class="block w-full h-full object-cover" />
-                        </swiper-slide>
-                        <!--     dans la partie script 
-                        import { FreeMode, Pagination, Navigation } from 'swiper/modules'; const modules = [FreeMode,Pagination,Navigation] 
-                    -->
-                    </swiper-container>
-                    
-
+                <div class="flex flex-wrap items-stretch">
                     <div
-                        class="px-4 z-10 absolute left-[50%] top-[70px] lg:top-[170px] -translate-x-1/2 text-center max-w-full">
-                        <h2 class="mb-2 text-8xl font-normal text-white opacity-65">HELP!</h2>
-                        <a href=""
-                            class="text-xl font-medium pt-2 pb-3 pr-16 pl-10 rounded-full bg-primary-orange text-white ">AGIR
-                            ENSEMBLE</a>
+                        class="w-full md:w-1/2 px-4 py-8   bg-primary-green text-white text-center flex flex-col gap-5 justify-center items-center">
+                        <h2 class="text-3xl font-medium">DES VALEURS COMMUNES</h2>
+                        <ul class="marker_tertiary_orange list-disc	 max-w-[500px] text-base font-normal text-left">
+                            <li><strong class="font-bold">Un esprit collectif et de coopération.</strong></li>
+                            <li><strong class="font-bold">De la confiance et de la bienveillance.</strong></li>
+                            <li><strong class="font-bold">Une liberté d'action : </strong>vous définissez vos propres
+                                actions, moyens, modes de communication et calendrier dans le respect des objectifs
+                                communs.</li>
+                        </ul>
                     </div>
+                    <div
+                        class="w-full md:w-1/2 md:min-h-[336px] md:max-h-[400px] order-none md:order-first  flex justify-center items-center overflow-hidden">
+                        <img class="object-cover block min-w-full min-h-full max-w-none "
+                            src="./sources/img/page_posidonie/role_2.png" alt="">
+                    </div>
+                </div>
 
+                <div class="flex flex-wrap items-stretch">
+                    <div
+                        class="w-full md:w-1/2 px-4 py-8   bg-tertiary-blue text-white text-center flex flex-col gap-5 justify-center items-center">
+                        <h2 class="text-3xl font-medium">UN PROCESS PARTAGÉ</h2>
+                        <p class="max-w-[500px] text-base font-normal"></p>
+                        <ul class="marker_tertiary_orange list-disc	 max-w-[500px] text-base font-normal text-left">
+                            <li>Dès que la signature de votre engagement est validée par le Comité de Pilotage, vous
+                                pourrez utiliser le nom et le logo d'Alliance Posidonia afin de communiquer sur vos
+                                engagements.</li>
+                            <li>La liste des organismes signataires est mise en ligne sur notre plateforme :
+                                www.xxxxxxxx</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 md:min-h-[350px] md:max-h-[400px]  flex justify-center items-center overflow-hidden">
+                        <img class="object-cover block min-w-full min-h-full max-w-none "
+                            src="./sources/img/page_posidonie/role_3.png" alt="">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- section Tous engagés pour une méditerranée vivante et préservée -->
-        <section class="bg-white">
-            <div class="max-w-[992px] mx-auto px-4 md:px-8 pt-16 pb-32 ">
-                <h2 class="text-3xl font-medium text-primary-blue text-center pb-14">
-                    <b class="font-bold text-primary-orange">Tous engagés</b> pour une méditerranée vivante et préservée
+            <!-- section Agissez avec l'Alliance Posidonia Vous êtes… -->
+    <section
+    class="mt-32 pt-32 pb-36 bg-[#B28359] text-white bg-logo_alliance_posidionia_white bg-no-repeat bg-left-bottom bg-contain relative">
+    <img src="./sources/icons/alarm.png" alt="icone alarme"
+        class="object-cover block max-w-full w-[193px] h-auto absolute top-[20px] left-[50%] -translate-x-2/4 -translate-y-2/4	">
+    <h2 class="pb-14 text-3xl font-medium text-center">
+        <strong class="font-bold">Agissez avec l'Alliance Posidonia</strong>
+        <br>Vous êtes…
+    </h2>
+
+    <div class="max-w-[1400px] mx-auto px-4 md:px-8 flex flex-wrap justify-center gap-4">
+        <a href="" class="bg-white max-w-full w-[321px] h-[360px] flex flex-col items-center justify-end  rounded-xl">
+            <img src="./sources/icons/vous_etes/vous_etes_entreprise.png" alt="icone"
+            class="block max-w-full w-auto h-[106px]">
+            <span class="mb-2 mt-8 w-[180px] h-[180px] text-base font-bold text-center flex justify-center items-center  bg-background-round-orange bg-cover">Une<br>ENTREPRISE</span>
+        </a>
+        <a href="" class="bg-white max-w-full w-[321px] h-[360px] flex flex-col items-center justify-end  rounded-xl">
+            <img src="./sources/icons/vous_etes/vous_etes_port.png" alt="icone"
+            class="block max-w-full w-auto h-[106px]">
+            <span class="mb-2 mt-8 w-[180px] h-[180px] text-base font-bold text-center flex justify-center items-center  bg-background-round-orange bg-cover">Un<br>PORT</span>
+        </a>
+        <a href="" class="bg-white max-w-full w-[321px] h-[360px] flex flex-col items-center justify-end  rounded-xl">
+            <img src="./sources/icons/vous_etes/vous_etes_collectivite.png" alt="icone"
+            class="block max-w-full w-auto h-[106px]">
+            <span class="mb-2 mt-8 w-[180px] h-[180px] text-base font-bold text-center flex justify-center items-center  bg-background-round-orange bg-cover">Une<br>COLLECTIVITÉ</span>
+        </a>
+        <a href="" class="bg-white max-w-full w-[321px] h-[360px] flex flex-col items-center justify-end  rounded-xl">
+            <img src="./sources/icons/vous_etes/vous_etes_association.png" alt="icone"
+            class="block max-w-full w-auto h-[106px]">
+            <span class="mb-2 mt-8 w-[180px] h-[180px] text-base font-bold text-center flex justify-center items-center  bg-background-round-orange bg-cover">Une<br>ASSOCIATION</span>
+        </a>
+    </div>
+
+</section>
+
+        <!-- section avec les logos -->
+        <section class="bg-white text-primary-blue">
+            <div class="max-w-[1280px] mx-auto px-4 md:px-8  py-20   ">
+                <h2 class="strong_primary_orange_bold pb-20 text-3xl font-medium text-center">Ils ont rejoint
+                    <strong>l’Alliance Posidonia</strong>
                 </h2>
-                <div class="flex flex-col md:flex-row gap-6 ">
-                    <div
-                        class="notch_top_left after:bg-primary-orange flex-1 flex flex-col items-center gap-6 text-white bg-primary-blue pt-16 px-8 pb-7">
-                        <h3 class="frame_primary_orange text-xl text-white font-medium text-center">
-                            LA <strong>&nbsp;POSIDONIE&nbsp;</strong>
-                            <br>
-                            <b class="font-black">Un bien précieux... sous pressions</b>
-                        </h3>
-                        <p class="text-base font-normal text-center text-white"><span class="italic">Posidonia
-                                oceanica</span>, c'est un peu notre
-                            forêt amazonienne sous-marine de la Méditerranée ! Emblématique et protégé, cet écosystème
-                            constitue habitats pour la faune et la flore et nurseries pour les poissons tout en
-                            protégeant le littoral de
-                            l'érosion.
-                        </p>
-                        <a href=""
-                            class="text-sm font-medium pt-2 pb-2.5 pr-7 pl-5 rounded-full bg-primary-orange text-white ">EN
-                            SAVOIR +</a>
-                    </div>
-                    <div
-                        class="notch_top_left after:bg-primary-orange flex-1 flex flex-col items-center gap-6 text-white bg-primary-blue pt-16 px-8 pb-7 relative">
-
-                        <h3 class="frame_primary_orange text-xl text-white font-medium text-center">
-                            IL Y A<strong>&nbsp;URGENCE&nbsp;</strong>
-                            <br>
-                            <b class="font-black">Nous pouvons agir ensemble</b>
-                        </h3>
-                        <p class="text-base font-normal text-center text-white">Malgré les nombreuses pressions
-                            anthropiques liées à nos usages, il existe des solutions pour sauver la Posidonie du
-                            littoral méditerranéen.</p>
-                        <a href=""
-                            class="text-sm font-medium pt-2 pb-2.5 pr-7 pl-5 rounded-full bg-primary-orange text-white">EN
-                            SAVOIR +</a>
-                    </div>
+                <div class="flex items-center flex-wrap justify-evenly  gap-6">
+                    <img class="block h-[80px] w-auto max-w-full object-contain" src="./sources/icons/alarm.png"
+                        alt="logos section">
+                    <img class="block h-[80px] w-auto max-w-full object-contain" src="./sources/icons/alarm.png"
+                        alt="logos section">
+                    <img class="block h-[80px] w-auto max-w-full object-contain" src="./sources/icons/alarm.png"
+                        alt="logos section">
+                    <img class="block h-[80px] w-auto max-w-full object-contain" src="./sources/icons/alarm.png"
+                        alt="logos section">
                 </div>
             </div>
         </section>
 
-
-    <!-- section AGISSONS ENSEMBLE -->
-    <section class="bg-background-wave-orange bg-no-repeat bg-top bg-cover relative">
-        <img src="./sources/icons/alarm.png" alt="icone alarme"
-            class="object-cover block max-w-full w-[193px] h-auto absolute top-[20px] left-[50%] -translate-x-2/4 -translate-y-2/4	">
-        <div class="px-4 pt-28 pb-16 ">
-            <div
-                class="bg-white text-primary-blue w-[960px] max-w-full mx-auto px-4 pt-4 pb-6 flex flex-col items-center gap-4 rounded-2xl">
-                <h2 class="text-3xl font-medium text-center">AGISSONS ENSEMBLE</h2>
-                <p class="max-w-[750px] mx-auto text-base font-medium text-center uppercase">ALLIANCE POSIDONIA MET EN
-                    PLACE
-                    UNE DÉMARCHE D’ENGAGEMENTS VOLONTAIRES DES ACTEURS SOCIO-ECONOMIQUES. QUE VOUS SOYEZ ACTEURS PUBLICS
-                    OU
-                    PRIVÉS, VOUS POUVEZ AGIR À VOTRE NIVEAU.</p>
-                <a href=""
-                    class="inline-block w-fit pt-1 pb-2 px-10 bg-primary-orange text-white text-xl font-medium  rounded-full  uppercase">J’AGIS</a>
-            </div>
-        </div>
-    </section>
 
         <!-- sections actus -->
         <section class="background_gradient">
             <div class="   max-w-[1400px] mx-auto px-4 md:px-8 pt-10 pb-28">
-                <h2 class="strong_primary_orange_bold text-3xl font-bold text-white text-center pb-10">À la <strong>une</strong></h2>
+                <h2 class="strong_primary_orange_bold text-3xl font-bold text-white text-center pb-10">La vie d'Alliance
+                    Posidonia</h2>
                 <div class=" snap-x snap-mandatory sm:snap-none flex gap-6 max-w-full	overflow-x-auto">
                     <div
                         class="notch_bottom_right after:bg-primary-orange flex flex-col snap-center  w-[316px] max-w-full h-auto flex-none bg-white pt-4 pr-5 pb-9 pl-4 relative">
@@ -362,20 +377,11 @@
             </div>
         </section>
 
-        <!-- section avec les logos -->
-        <section class="bg-white">
-            <div class="max-w-[1280px] mx-auto px-4 md:px-8  py-20   flex items-center flex-wrap justify-evenly  gap-6">
-                <img class="block h-[80px] w-auto max-w-full object-contain"
-                    src="./sources/logos/section_logo_exemple.jpg" alt="section logo homepage">
-                <img class="block h-[80px] w-auto max-w-full object-contain"
-                    src="./sources/logos/section_logo_exemple.jpg" alt="section logo homepage">
-                <img class="block h-[80px] w-auto max-w-full object-contain"
-                    src="./sources/logos/section_logo_exemple.jpg" alt="section logo homepage">
-                <img class="block h-[80px] w-auto max-w-full object-contain"
-                    src="./sources/logos/section_logo_exemple.jpg" alt="section logo homepage">
-            </div>
-        </section>
     </main>
+
+
+
+
 
     <footer class="bg-primary-blue">
         <div class=" max-w-[914px] mx-auto px-4 md:px-8  pt-7 ">
@@ -428,6 +434,9 @@
             </div>
         </div>
     </footer>
+
+
+
 
 </body>
 

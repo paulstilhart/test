@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANDING PAGE</title>
+
+    <!-- lien avec la feuille de style compilée tailwind -->
+    <link rel="stylesheet" href="./css/output.css">
+
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+</head>
+
+<body class="">
+
+    <!-- section hero -->
+    <section class="bg-white ">
+        <div class="max-w-[1920px] mx-auto lg:pr-[50px]  flex flex-col relative ">
+
+            <div class="lg:z-10 static lg:absolute left-0 top-0 h-full w-full lg:w-[40%] lg:max-w-[600px]
+                background_gradient lg:bg-background-wave-hero lg:bg-no-repeat lg:bg-right lg:bg-cover">
+                <div
+                    class="px-4 lg:px-10 py-10 h-full w-full  flex flex-col justify-center items-center lg:items-start">
+                    <img src="./sources/logos/alliance_posidionia_blue.png" alt="icone alarme"
+                        class="pb-16 max-w-full w-[193px] h-auto  object-cover block ">
+                    <h1
+                        class="frame_primary_orange text-white font-normal text-4xl leading-[47px] text-center lg:text-left">
+                        NOTRE LITTORAL
+                        <br>
+                        A DU CARACTÈRE,
+                        <br>
+                        PROTÉGEONS-LE !
+                    </h1>
+                </div>
+            </div>
+
+            <div class=" w-full h-[300px] lg:h-[500px] lg:rounded-r-xl overflow-hidden relative">
+                <swiper-container class="bg-gray-400 w-full h-full" :slides-per-view="1" :loopFillGroupWithBlank="true"
+                    :spaceBetween="50" :navigation="true" :pagination="false" :modules="modules"
+                    :breakpoints="{'1280': {slidesPerView: 3},'768': {slidesPerView: 2}}">
+                    <swiper-slide>
+                        <img :src="https://naturdive.com/wp-content/uploads/BPT7494-2-e1654874659726.jpg"
+                            :alt="$getDisplayText(m)" class="block w-full h-full object-cover" />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img :src="$getFirstMediaUrlById(m.content?.img,450,450,'crop')" :alt="$getDisplayText(m)"
+                            class="block w-full h-full object-cover" />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img :src="$getFirstMediaUrlById(m.content?.img,450,450,'crop')" :alt="$getDisplayText(m)"
+                            class="block w-full h-full object-cover" />
+                    </swiper-slide>
+                    <!--     dans la partie script 
+                        import { FreeMode, Pagination, Navigation } from 'swiper/modules'; const modules = [FreeMode,Pagination,Navigation] 
+                    -->
+                </swiper-container>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- section help/sos double carte -->
+    <section class="bg-transparent">
+        <section class="bg-white text-primary-blue max-w-[850px] mx-auto px-4 py-5 rounded-2xl shadow-md">
+            <h2 class="strong_primary_orange_medium mb-4 text-3xl font-medium  text-center">Herbiers, banquettes…
+                <strong>Sauvons la posidonie !</strong>
+            </h2>
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="flex-1 w-full md:h-[258px] flex justify-center items-center relative">
+                    <img src="./sources/img/page_posidonie/protegee.png" alt="icone alarme"
+                    class="object-cover block ">
+
+                    <h2 class="mb-2 text-8xl font-normal text-white opacity-65">HELP!</h2>
+                    <a href=""
+                        class="text-xs font-medium pt-2 pb-3 pr-6 pl-5 rounded-full bg-primary-orange text-white ">EN SAVOIR +</a>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+
+</body>
+
+</html>
