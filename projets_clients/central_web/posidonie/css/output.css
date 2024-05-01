@@ -735,6 +735,10 @@ html {
   margin-top: auto;
 }
 
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
 .line-clamp-4{
   overflow: hidden;
   display: -webkit-box;
@@ -826,6 +830,10 @@ html {
   height: 100%;
 }
 
+.h-\[38px\]{
+  height: 38px;
+}
+
 .max-h-\[1118px\]{
   max-height: 1118px;
 }
@@ -844,6 +852,10 @@ html {
 
 .min-h-full{
   min-height: 100%;
+}
+
+.w-\[107px\]{
+  width: 107px;
 }
 
 .w-\[112px\]{
@@ -905,6 +917,14 @@ html {
 
 .w-full{
   width: 100%;
+}
+
+.w-\[31px\]{
+  width: 31px;
+}
+
+.w-\[\]{
+  width: ;
 }
 
 .min-w-full{
@@ -981,6 +1001,14 @@ html {
 
 .max-w-none{
   max-width: none;
+}
+
+.max-w-\[1980px\]{
+  max-width: 1980px;
+}
+
+.max-w-\[350px\]{
+  max-width: 350px;
 }
 
 .flex-1{
@@ -1096,6 +1124,14 @@ html {
 
 .gap-6{
   gap: 1.5rem;
+}
+
+.gap-0{
+  gap: 0px;
+}
+
+.gap-8{
+  gap: 2rem;
 }
 
 .gap-x-4{
@@ -1227,16 +1263,40 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\]{
+  background-color: ;
+}
+
+.bg-\[\#6CAB9F\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(108 171 159 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#527F9A\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 127 154 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#9CD9B1\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 217 177 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#658DA5\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(101 141 165 / var(--tw-bg-opacity));
+}
+
 .bg-background-landingPage1{
   background-image: url('../sources/img/landing_page/landing_page_1.png');
 }
 
-.bg-background-round-orange{
-  background-image: url('../sources/img/background-round-orange.png');
+.bg-background-landingPage2{
+  background-image: url('../sources/img/landing_page/landing_page_2.png');
 }
 
-.bg-background-wave-hero{
-  background-image: url('../sources/img/wave_hero.png');
+.bg-background-round-orange{
+  background-image: url('../sources/img/background-round-orange.png');
 }
 
 .bg-background-wave-orange{
@@ -1271,8 +1331,8 @@ html {
   background-image: url('../sources/logos/alliance_posidionia_white.png');
 }
 
-.bg-background-landingPage2{
-  background-image: url('../sources/img/landing_page/landing_page_2.png');
+.bg-ico-download{
+  background-image: url('../sources/icons/download.png');
 }
 
 .from-\[\#2DADB5\]{
@@ -1385,6 +1445,11 @@ html {
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .py-2{
@@ -1516,8 +1581,16 @@ html {
   padding-top: 0.5rem;
 }
 
+.pt-20{
+  padding-top: 5rem;
+}
+
 .pt-28{
   padding-top: 7rem;
+}
+
+.pt-3{
+  padding-top: 0.75rem;
 }
 
 .pt-32{
@@ -1532,12 +1605,29 @@ html {
   padding-top: 1.75rem;
 }
 
+.pb-8{
+  padding-bottom: 2rem;
+}
+
+.pt-5{
+  padding-top: 1.25rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
+}
+
 .text-left{
   text-align: left;
 }
 
 .text-center{
   text-align: center;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl{
@@ -1628,6 +1718,21 @@ html {
 .text-\[\#0068AC\]{
   --tw-text-opacity: 1;
   color: rgb(0 104 172 / var(--tw-text-opacity));
+}
+
+.text-\[\#2C4480\]{
+  --tw-text-opacity: 1;
+  color: rgb(44 68 128 / var(--tw-text-opacity));
+}
+
+.text-\[\#777776\]{
+  --tw-text-opacity: 1;
+  color: rgb(119 119 118 / var(--tw-text-opacity));
+}
+
+.text-\[\#DA9B3B\]{
+  --tw-text-opacity: 1;
+  color: rgb(218 155 59 / var(--tw-text-opacity));
 }
 
 .text-black{

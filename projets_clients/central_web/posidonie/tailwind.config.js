@@ -30,7 +30,8 @@ module.exports = {
         "ico-location": "url('../sources/icons/location.svg')",
         "ico-close": "url('../sources/icons/close.svg')",
         "ico-alarm": "url('../sources/icons/alarm.png')",
-        
+        "ico-download": "url('../sources/icons/download.png')",
+
         "background-wave": "url('../sources/img/wave_background.png')",
         "background-wave-hero": "url('../sources/img/wave_hero.png')",
         "background-wave-orange": "url('../sources/img/wave_orange.png')",
