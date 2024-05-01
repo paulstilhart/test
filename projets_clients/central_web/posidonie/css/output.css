@@ -1227,16 +1227,16 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/sources\/img\/landing_page\/landing_page_1\.png\'\)\]{
-  background-image: url('/sources/img/landing_page/landing_page_1.png');
-}
-
-.bg-\[url\(\'\/sources\/img\/landing_page\/landing_page_2\.png\'\)\]{
-  background-image: url('/sources/img/landing_page/landing_page_2.png');
+.bg-background-landingPage1{
+  background-image: url('../sources/img/landing_page/landing_page_1.png');
 }
 
 .bg-background-round-orange{
   background-image: url('../sources/img/background-round-orange.png');
+}
+
+.bg-background-wave-hero{
+  background-image: url('../sources/img/wave_hero.png');
 }
 
 .bg-background-wave-orange{
@@ -1269,6 +1269,10 @@ html {
 
 .bg-logo_alliance_posidionia_white{
   background-image: url('../sources/logos/alliance_posidionia_white.png');
+}
+
+.bg-background-landingPage2{
+  background-image: url('../sources/img/landing_page/landing_page_2.png');
 }
 
 .from-\[\#2DADB5\]{
