@@ -25,8 +25,8 @@
                 background_gradient lg:bg-background-wave-hero lg:bg-no-repeat lg:bg-right lg:bg-cover">
                 <div
                     class="px-4 lg:px-10 py-10 h-full w-full  flex flex-col justify-center items-center lg:items-start">
-                    <img src="./sources/logos/alliance_posidionia_blue.png" alt="icone alarme"
-                        class="pb-16 max-w-full w-[193px] h-auto  object-cover block ">
+                    <img src="./sources/logos/alliance_posidionia_blue_transparent.png" alt="icone alarme"
+                        class="pb-16 max-w-full w-[250px] h-auto  object-cover block ">
                     <h1
                         class="frame_primary_orange text-white font-normal text-4xl leading-[47px] text-center lg:text-left">
                         NOTRE LITTORAL
@@ -64,23 +64,43 @@
     </section>
 
     <!-- section help/sos double carte -->
-    <section class="bg-transparent">
-        <section class="bg-white text-primary-blue max-w-[850px] mx-auto px-4 py-5 rounded-2xl shadow-md">
-            <h2 class="strong_primary_orange_medium mb-4 text-3xl font-medium  text-center">Herbiers, banquettes…
-                <strong>Sauvons la posidonie !</strong>
-            </h2>
-            <div class="flex flex-col md:flex-row gap-10">
-                <div class="flex-1 w-full md:h-[258px] flex justify-center items-center relative">
-                    <img src="./sources/img/page_posidonie/protegee.png" alt="icone alarme"
-                    class="object-cover block ">
-
-                    <h2 class="mb-2 text-8xl font-normal text-white opacity-65">HELP!</h2>
-                    <a href=""
-                        class="text-xs font-medium pt-2 pb-3 pr-6 pl-5 rounded-full bg-primary-orange text-white ">EN SAVOIR +</a>
+    <section class="max-w-[1920px] mx-auto relative lg:top-[-130px] bg-transparent ">
+        <div class="max-w-[882px] mx-auto px-4 py-8  text-primary-blue">
+            <div class="bg-white   px-4 py-5 rounded-2xl shadow-md relative z-10">
+                <h2 class="mb-4 strong_primary_orange_medium  text-3xl font-medium  text-center">Herbiers, banquettes…
+                    <strong>Sauvons la posidonie !</strong>
+                </h2>
+                <div class="flex flex-col md:flex-row gap-10">
+                    <div class=" w-full md:w-1/2 h-[258px] flex flex-col justify-center items-center 
+                    bg-[url('/sources/img/landing_page/landing_page_1.png')] bg-cover bg-no-repeat">
+                        <h2 class="mb-2 text-8xl font-normal text-white opacity-65">HELP!</h2>
+                        <a class="text-xs font-medium pt-2 pb-3 pr-6 pl-5 rounded-full bg-primary-orange text-white "
+                            target="_blank" href="">EN
+                            SAVOIR +</a>
+                    </div>
+                    <div class=" w-full md:w-1/2 h-[258px] flex flex-col justify-center items-center 
+                    bg-[url('/sources/img/landing_page/landing_page_2.png')] bg-cover bg-no-repeat">
+                        <h2 class="mb-2 text-8xl font-normal text-white opacity-75">S.O.S</h2>
+                        <a class="text-xs font-medium pt-2 pb-3 pr-6 pl-5 rounded-full bg-primary-orange text-white "
+                            target="_blank" href="">EN
+                            SAVOIR +</a>
+                    </div>
                 </div>
             </div>
+            <p class="mt-14 text-xl font-normal text-center">Il est encore temps d’agir !
+                <br>Nous pouvons créer une dynamique capable de modifier les perceptions de notre posidonie et les
+                comportements qui la mettent en danger.
+            </p>
+        </div>
 
-        </section>
+        <div class="w-[112px] mx-4 lg:mx-10 my-8 flex flex-col gap-1 static xl:absolute bottom-0 left-0">
+            <p class="text-xs font-light text-center text-[#0068AC]">Avec le soutien de</p>
+            <img src="./sources/logos/landing_page/landing_page_1.png" alt="logo landing page" class=" w-full h-auto block ">
+            <hr class="w-full h-[1px] border-[#0068AC]">
+            <img src="./sources/logos/landing_page/landing_page_2.png" alt="logo landing page" class=" w-full h-auto block ">
+            <hr class="w-full h-[1px] border-[#0068AC]">
+        </div>
+
     </section>
 
 
