@@ -28,10 +28,12 @@ module.exports = {
         "ico-youtube": "url('../sources/icons/youtube.png')",
         "ico-mail": "url('../sources/icons/mail.png')",
         "ico-location": "url('../sources/icons/location.svg')",
-        "ico-close": "url('../sources/icons/close.svg')",
+        "ico-close-white": "url('../sources/icons/close_white.svg')",
+        "ico-close-blue": "url('../sources/icons/close_blue.svg')",
         "ico-alarm": "url('../sources/icons/alarm.png')",
         "ico-download": "url('../sources/icons/download.png')",
         "ico-plus": "url('../sources/icons/plus.svg')",
+        "ico-burger": "url('../sources/icons/burger.svg')",
 
         "background-wave": "url('../sources/img/wave_background.png')",
         "background-wave-hero": "url('../sources/img/wave_hero.png')",
@@ -43,7 +45,7 @@ module.exports = {
 
         "logo_alliance_posidionia_blue": "url('../sources/logos/alliance_posidionia_blue.png')",
         "logo_alliance_posidionia_white": "url('../sources/logos/alliance_posidionia_white.png')",
-
+        "alliance_posidionia_white_no_text_empty": "url('../sources/logos/alliance_posidionia_white_no_text_empty.png')",
       },
     },
   },

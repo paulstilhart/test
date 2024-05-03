@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="./css/output.css">
 
 
+    <!-- lien avec le scriptJS -->
+    <script defer src="./js/script.js"></script>
+
+
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 </head>
 
 <body class="">
-
 
 
     <header class=" bg-white shadow-md h-28  sticky top-0 z-40">
@@ -29,86 +32,101 @@
             bg-ico-mail bg-no-repeat bg-center bg-[length:30px_auto]"></a>
         </div>
 
-        <div class="max-w-[1920px] mx-auto px-[50px] h-full flex justify-between items-end">
+        <div class="max-w-[1920px] mx-auto px-4 lg:px-[50px] h-full flex justify-between items-end">
             <a class="inline-block w-[250px] h-[88px] mb-2 overflow-hidden bg-logo_alliance_posidionia_blue bg-no-repeat bg-center bg-cover"
-                href="" target="_blank"></a>
+                href="" target=""></a>
 
-            <div class="flex gap-x-4">
+            <button
+                class="js_nav_open w-[50px] h-[50px] inline-block lg:hidden flex-none self-center bg-ico-burger bg-no-repeat bg-center bg-cover"></button>
+
+            <div aria-expanded="false"
+                class="js_nav bg-white flex  flex-col   w-screen  h-screen  fixed  top-0 left-0 z-50 overflow-y-auto py-4 px-4 
+                -translate-y-full aria-expanded:translate-y-0	
+                lg:flex lg:flex-row lg:gap-x-4 lg:w-auto lg:h-auto lg:static lg:z-auto lg:p-0 lg:overflow-y-visible lg:translate-y-0">
+                <button
+                    class="js_nav_close inline-block lg:hidden w-[50px] h-[50px] flex-none self-end bg-ico-close-blue bg-no-repeat bg-center bg-cover"></button>
                 <div
-                    class="py-4 px-2 relative border-b-8 border-solid border-transparent hover:border-primary-orange cursor-pointer group">
+                    class="py-4 lg:px-2 relative border-solid border-t-[1px] lg:border-t-0 border-slate-300 lg:border-b-8  lg:border-transparent lg:hover:border-primary-orange cursor-pointer group">
                     <p class=" text-primary-blue text-sm font-medium uppercase ">LA POSIDONIE</p>
-                    <ul class="w-[268px] absolute top-[59px] right-0 bg-primary-blue hidden group-hover:block">
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-bold uppercase hover:bg-primary-orange"
+                    <ul
+                        class="py-2 lg:py-0 lg:w-[268px] lg:absolute top-[59px] right-0 lg:bg-primary-blue lg:hidden lg:group-hover:block">
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">LES OBJECTIFS ET MISSIONS DE L’ALLIANCE</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES FONDATEURS</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES PARTENAIRES</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">NOUS REJOINDRE</a>
                         </li>
                     </ul>
                 </div>
                 <div
-                    class="py-4 px-2 relative border-b-8 border-solid border-transparent hover:border-primary-orange cursor-pointer group">
+                    class="py-4 lg:px-2 relative border-solid border-t-[1px] lg:border-t-0 border-slate-300 lg:border-b-8  lg:border-transparent lg:hover:border-primary-orange cursor-pointer group">
                     <p class=" text-primary-blue text-sm font-medium uppercase ">AGIR ENSEMBLE</p>
-                    <ul class="w-[268px] absolute top-[59px] right-0 bg-primary-blue hidden group-hover:block">
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-bold uppercase hover:bg-primary-orange"
+                    <ul
+                        class="py-2 lg:py-0 lg:w-[268px] lg:absolute top-[59px] right-0 lg:bg-primary-blue lg:hidden lg:group-hover:block">
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">LES OBJECTIFS ET MISSIONS DE L’ALLIANCE</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES FONDATEURS</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES PARTENAIRES</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">NOUS REJOINDRE</a>
                         </li>
                     </ul>
                 </div>
                 <div
-                    class="py-4 px-2 relative border-b-8 border-solid border-transparent hover:border-primary-orange cursor-pointer group">
+                    class="py-4 lg:px-2 relative border-solid border-t-[1px] lg:border-t-0 border-slate-300 lg:border-b-8  lg:border-transparent lg:hover:border-primary-orange cursor-pointer group">
                     <p class=" text-primary-blue text-sm font-medium uppercase ">ALLIANCE POSIDONIA</p>
-                    <ul class="w-[268px] absolute top-[59px] right-0 bg-primary-blue hidden group-hover:block">
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-bold uppercase hover:bg-primary-orange"
+                    <ul
+                        class="py-2 lg:py-0 lg:w-[268px] lg:absolute top-[59px] right-0 lg:bg-primary-blue lg:hidden lg:group-hover:block">
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">LES OBJECTIFS ET MISSIONS DE L’ALLIANCE</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES FONDATEURS</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES PARTENAIRES</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">NOUS REJOINDRE</a>
                         </li>
                     </ul>
                 </div>
                 <div
-                    class="py-4 px-2 relative border-b-8 border-solid border-transparent hover:border-primary-orange cursor-pointer group">
+                    class="py-4 lg:px-2 relative border-solid border-t-[1px] lg:border-t-0 border-slate-300 lg:border-b-8  lg:border-transparent lg:hover:border-primary-orange cursor-pointer group">
                     <p class=" text-primary-blue text-sm font-medium uppercase ">MÉDIATHÈQUE</p>
-                    <ul class="w-[268px] absolute top-[59px] right-0 bg-primary-blue hidden group-hover:block">
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-bold uppercase hover:bg-primary-orange"
+                    <ul
+                        class="py-2 lg:py-0 lg:w-[268px] lg:absolute top-[59px] right-0 lg:bg-primary-blue lg:hidden lg:group-hover:block">
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">LES OBJECTIFS ET MISSIONS DE L’ALLIANCE</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES FONDATEURS</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES PARTENAIRES</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">NOUS REJOINDRE</a>
                         </li>
                     </ul>
                 </div>
             </div>
+
+
         </div>
     </header>
+
 
     <main>
 
@@ -117,28 +135,30 @@
             <div class="max-w-[1920px] mx-auto lg:pr-[50px]  flex flex-col relative ">
 
                 <div class="lg:z-10 static lg:absolute left-0 top-0 h-full w-full lg:w-[40%] lg:max-w-[600px]
-                background_gradient lg:bg-background-wave-hero lg:bg-no-repeat lg:bg-right lg:bg-cover">
+                        background_gradient lg:bg-background-wave-hero lg:bg-no-repeat lg:bg-right lg:bg-cover">
                     <div
                         class="px-4 lg:px-10 py-10 h-full w-full  flex flex-col justify-center items-center lg:items-start">
-                        <img src="./sources/logos/alliance_posidionia_white_no_text.png" alt="icone alarme"
-                            class="pb-4 max-w-full w-[107px] h-auto  object-cover block ">
-                        <h1 class="frame_primary_orange text-white font-normal text-4xl text-center lg:text-left">
-                            <span class="font-bold">TOUS ENGAGÉS</span>
+                        <h1
+                            class="frame_primary_orange text-white font-normal text-4xl leading-[44px] pb-4 text-center lg:text-left uppercase">
+                            L’HERBIER
                             <br>
-                            POUR UNE MÉDITERRANÉE
+                            <strong>DE POSIDONIE</strong>
                             <br>
-                            VIVANTE ET PRÉSERVÉE
+                            SANS LUI,
+                            <br>
+                            LA MER VA MAL
                         </h1>
                     </div>
                 </div>
 
                 <div class=" w-full h-[300px] lg:h-[500px] lg:rounded-r-xl overflow-hidden relative">
+
                     <swiper-container class="bg-gray-400 w-full h-full" :slides-per-view="1"
                         :loopFillGroupWithBlank="true" :spaceBetween="50" :navigation="true" :pagination="false"
                         :modules="modules" :breakpoints="{'1280': {slidesPerView: 3},'768': {slidesPerView: 2}}">
                         <swiper-slide>
-                            <img :src="https://naturdive.com/wp-content/uploads/BPT7494-2-e1654874659726.jpg"
-                                :alt="$getDisplayText(m)" class="block w-full h-full object-cover" />
+                            <img :src="./sources/img/page_posidonie/role_1.png" :alt="$getDisplayText(m)"
+                                class="block w-full h-full object-cover" />
                         </swiper-slide>
                         <swiper-slide>
                             <img :src="$getFirstMediaUrlById(m.content?.img,450,450,'crop')" :alt="$getDisplayText(m)"
@@ -149,9 +169,12 @@
                                 class="block w-full h-full object-cover" />
                         </swiper-slide>
                         <!--     dans la partie script 
-                        import { FreeMode, Pagination, Navigation } from 'swiper/modules'; const modules = [FreeMode,Pagination,Navigation] 
-                    -->
+                                import { FreeMode, Pagination, Navigation } from 'swiper/modules'; const modules = [FreeMode,Pagination,Navigation] 
+                            -->
                     </swiper-container>
+
+
+
 
                 </div>
             </div>
@@ -242,71 +265,41 @@
                             <p class="text-sm font-bold text-left text-[#2C4480] uppercase">PRÉFECTURE MARITIME DE LA
                                 MÉDITERRANÉE</p>
                             <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
                         </div>
                     </div>
                     <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
                         <button
                             class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
                         <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
-                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">DIRECTION INTERRÉGIONALE DE LA MER MÉDITERRANÉE</p>
+                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">DIRECTION INTERRÉGIONALE DE
+                                LA MER MÉDITERRANÉE</p>
                             <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
                         </div>
                     </div>
                     <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
                         <button
                             class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
                         <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
-                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">OFFICE FRANÇAIS DE LA BIODIVERSITÉ</p>
+                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">OFFICE FRANÇAIS DE LA
+                                BIODIVERSITÉ</p>
                             <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
                         </div>
                     </div>
                     <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
                         <button
                             class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
                         <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
-                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">AGENCE DE L’EAU RHÔNE MÉDITERRANÉE CORSE</p>
+                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">AGENCE DE L’EAU RHÔNE
+                                MÉDITERRANÉE CORSE</p>
                             <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
-                        </div>
-                    </div>
-
-                    <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
-                        <button
-                            class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
-                        <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
-                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">RÉGION SUD PROVENCE-ALPES- CÔTE D’AZUR</p>
-                            <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
-                        </div>
-                    </div>
-                    <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
-                        <button
-                            class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
-                        <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
-                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">OFFICE DE L’ENVIRONNEMENT DE LA CORSE</p>
-                            <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
-                        </div>
-                    </div>
-                    <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
-                        <button
-                            class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
-                        <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
-                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">RÉGION OCCITANIE PYRÉNÉES- MÉDITERRANÉE</p>
-                            <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
-                        </div>
-                    </div>
-                    <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
-                        <button
-                            class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
-                        <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
-                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">CPIE DES ÎLES DE LÉRINS ET PAYS D’AZUR</p>
-                            <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
                         </div>
                     </div>
 
@@ -314,27 +307,78 @@
                         <button
                             class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
                         <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
-                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">L’UNION DES PORTS DE PLAISANCE PROVENCE-ALPES- CÔTE D’AZUR ET MONACO</p>
+                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">RÉGION SUD PROVENCE-ALPES-
+                                CÔTE D’AZUR</p>
                             <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
                         </div>
                     </div>
                     <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
                         <button
                             class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
                         <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
-                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">LA FÉDÉRATION DES INDUSTRIES NAUTIQUES</p>
+                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">OFFICE DE L’ENVIRONNEMENT DE
+                                LA CORSE</p>
                             <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
                         </div>
                     </div>
                     <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
                         <button
                             class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
                         <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
-                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">L'UNION DES PORTS DE PLAISANCE D'OCCITANIE</p>
+                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">RÉGION OCCITANIE PYRÉNÉES-
+                                MÉDITERRANÉE</p>
                             <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
+                        </div>
+                    </div>
+                    <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
+                        <button
+                            class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
+                        <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
+                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">CPIE DES ÎLES DE LÉRINS ET
+                                PAYS D’AZUR</p>
+                            <img class="block object-contain h-[70px] w-auto max-w-full "
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
+                        </div>
+                    </div>
+
+                    <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
+                        <button
+                            class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
+                        <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
+                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">L’UNION DES PORTS DE
+                                PLAISANCE PROVENCE-ALPES- CÔTE D’AZUR ET MONACO</p>
+                            <img class="block object-contain h-[70px] w-auto max-w-full "
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
+                        </div>
+                    </div>
+                    <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
+                        <button
+                            class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
+                        <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
+                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">LA FÉDÉRATION DES INDUSTRIES
+                                NAUTIQUES</p>
+                            <img class="block object-contain h-[70px] w-auto max-w-full "
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
+                        </div>
+                    </div>
+                    <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
+                        <button
+                            class="w-[30px] h-[30px] p-2  overflow-hidden bg-ico-plus bg-no-repeat bg-center bg-[length:150%_auto] absolute bottom-1 right-1"></button>
+                        <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
+                            <p class="text-sm font-bold text-left text-[#2C4480] uppercase">L'UNION DES PORTS DE
+                                PLAISANCE D'OCCITANIE</p>
+                            <img class="block object-contain h-[70px] w-auto max-w-full "
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
                         </div>
                     </div>
                     <div class="w-[231px] max-w-full h-[231px]  bg-primary-grey rounded-2xl  relative overflow-hidden">
@@ -343,7 +387,8 @@
                         <div class="h-full pt-5 pb-14 px-4 flex flex-col justify-between">
                             <p class="text-sm font-bold text-left text-[#2C4480] uppercase">WWF</p>
                             <img class="block object-contain h-[70px] w-auto max-w-full "
-                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg" alt="logo membres fondateurs">
+                                src="./sources/logos/footer/8 - OC-1702-instit-logo carre-RVB-150x150-300dpi.jpg"
+                                alt="logo membres fondateurs">
                         </div>
                     </div>
                 </div>

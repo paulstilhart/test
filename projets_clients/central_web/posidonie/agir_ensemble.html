@@ -9,13 +9,17 @@
     <!-- lien avec la feuille de style compilée tailwind -->
     <link rel="stylesheet" href="./css/output.css">
 
+    <!-- lien avec le scriptJS -->
+    <script defer src="./js/script.js"></script>
 
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
+
+
 </head>
 
-<body class="">
+<body>
 
 
 
@@ -29,88 +33,155 @@
             bg-ico-mail bg-no-repeat bg-center bg-[length:30px_auto]"></a>
         </div>
 
-        <div class="max-w-[1920px] mx-auto px-[50px] h-full flex justify-between items-end">
+        <div class="max-w-[1920px] mx-auto px-4 lg:px-[50px] h-full flex justify-between items-end">
             <a class="inline-block w-[250px] h-[88px] mb-2 overflow-hidden bg-logo_alliance_posidionia_blue bg-no-repeat bg-center bg-cover"
-                href="" target="_blank"></a>
+                href="" target=""></a>
 
-            <div class="flex gap-x-4">
+            <button
+                class="js_nav_open w-[50px] h-[50px] inline-block lg:hidden flex-none self-center bg-ico-burger bg-no-repeat bg-center bg-cover"></button>
+
+            <div aria-expanded="false"
+                class="js_nav bg-white flex  flex-col   w-screen  h-screen  fixed  top-0 left-0 z-50 overflow-y-auto py-4 px-4 
+                -translate-y-full aria-expanded:translate-y-0	
+                lg:flex lg:flex-row lg:gap-x-4 lg:w-auto lg:h-auto lg:static lg:z-auto lg:p-0 lg:overflow-y-visible lg:translate-y-0">
+                <button
+                    class="js_nav_close inline-block lg:hidden w-[50px] h-[50px] flex-none self-end bg-ico-close-blue bg-no-repeat bg-center bg-cover"></button>
                 <div
-                    class="py-4 px-2 relative border-b-8 border-solid border-transparent hover:border-primary-orange cursor-pointer group">
+                    class="py-4 lg:px-2 relative border-solid border-t-[1px] lg:border-t-0 border-slate-300 lg:border-b-8  lg:border-transparent lg:hover:border-primary-orange cursor-pointer group">
                     <p class=" text-primary-blue text-sm font-medium uppercase ">LA POSIDONIE</p>
-                    <ul class="w-[268px] absolute top-[59px] right-0 bg-primary-blue hidden group-hover:block">
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-bold uppercase hover:bg-primary-orange"
+                    <ul
+                        class="py-2 lg:py-0 lg:w-[268px] lg:absolute top-[59px] right-0 lg:bg-primary-blue lg:hidden lg:group-hover:block">
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">LES OBJECTIFS ET MISSIONS DE L’ALLIANCE</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES FONDATEURS</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES PARTENAIRES</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">NOUS REJOINDRE</a>
                         </li>
                     </ul>
                 </div>
                 <div
-                    class="py-4 px-2 relative border-b-8 border-solid border-transparent hover:border-primary-orange cursor-pointer group">
+                    class="py-4 lg:px-2 relative border-solid border-t-[1px] lg:border-t-0 border-slate-300 lg:border-b-8  lg:border-transparent lg:hover:border-primary-orange cursor-pointer group">
                     <p class=" text-primary-blue text-sm font-medium uppercase ">AGIR ENSEMBLE</p>
-                    <ul class="w-[268px] absolute top-[59px] right-0 bg-primary-blue hidden group-hover:block">
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-bold uppercase hover:bg-primary-orange"
+                    <ul
+                        class="py-2 lg:py-0 lg:w-[268px] lg:absolute top-[59px] right-0 lg:bg-primary-blue lg:hidden lg:group-hover:block">
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">LES OBJECTIFS ET MISSIONS DE L’ALLIANCE</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES FONDATEURS</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES PARTENAIRES</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">NOUS REJOINDRE</a>
                         </li>
                     </ul>
                 </div>
                 <div
-                    class="py-4 px-2 relative border-b-8 border-solid border-transparent hover:border-primary-orange cursor-pointer group">
+                    class="py-4 lg:px-2 relative border-solid border-t-[1px] lg:border-t-0 border-slate-300 lg:border-b-8  lg:border-transparent lg:hover:border-primary-orange cursor-pointer group">
                     <p class=" text-primary-blue text-sm font-medium uppercase ">ALLIANCE POSIDONIA</p>
-                    <ul class="w-[268px] absolute top-[59px] right-0 bg-primary-blue hidden group-hover:block">
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-bold uppercase hover:bg-primary-orange"
+                    <ul
+                        class="py-2 lg:py-0 lg:w-[268px] lg:absolute top-[59px] right-0 lg:bg-primary-blue lg:hidden lg:group-hover:block">
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">LES OBJECTIFS ET MISSIONS DE L’ALLIANCE</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES FONDATEURS</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES PARTENAIRES</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">NOUS REJOINDRE</a>
                         </li>
                     </ul>
                 </div>
                 <div
-                    class="py-4 px-2 relative border-b-8 border-solid border-transparent hover:border-primary-orange cursor-pointer group">
+                    class="py-4 lg:px-2 relative border-solid border-t-[1px] lg:border-t-0 border-slate-300 lg:border-b-8  lg:border-transparent lg:hover:border-primary-orange cursor-pointer group">
                     <p class=" text-primary-blue text-sm font-medium uppercase ">MÉDIATHÈQUE</p>
-                    <ul class="w-[268px] absolute top-[59px] right-0 bg-primary-blue hidden group-hover:block">
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-bold uppercase hover:bg-primary-orange"
+                    <ul
+                        class="py-2 lg:py-0 lg:w-[268px] lg:absolute top-[59px] right-0 lg:bg-primary-blue lg:hidden lg:group-hover:block">
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">LES OBJECTIFS ET MISSIONS DE L’ALLIANCE</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES FONDATEURS</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">MEMBRES PARTENAIRES</a>
                         </li>
-                        <li><a class="inline-block w-full py-2 px-3 text-white text-sm font-medium uppercase hover:bg-primary-orange"
+                        <li><a class="inline-block w-full py-2 lg:px-3 text-primary-blue lg:text-white text-sm font-bold uppercase lg:hover:bg-primary-orange"
                                 href="" target="_blank">NOUS REJOINDRE</a>
                         </li>
                     </ul>
                 </div>
             </div>
+
+
         </div>
     </header>
 
+
     <main>
+
+        <!-- section hero -->
+        <section class="bg-white ">
+            <div class="max-w-[1920px] mx-auto lg:pr-[50px]  flex flex-col relative ">
+
+                <div class="lg:z-10 static lg:absolute left-0 top-0 h-full w-full lg:w-[40%] lg:max-w-[600px]
+                        background_gradient lg:bg-background-wave-hero lg:bg-no-repeat lg:bg-right lg:bg-cover">
+                    <div
+                        class="px-4 lg:px-10 py-10 h-full w-full  flex flex-col justify-center items-center lg:items-start">
+                        <h1
+                            class="frame_primary_orange text-white font-normal text-4xl leading-[44px] pb-4 text-center lg:text-left uppercase">
+                            <strong>AGISSONS</strong>
+                            <br>
+                            ENSEMBLE
+                            <br>
+                            POUR PRÉSERVER
+                            <br>
+                            LA POSIDONIE
+                        </h1>
+                    </div>
+                </div>
+
+                <div class=" w-full h-[300px] lg:h-[500px] lg:rounded-r-xl overflow-hidden relative">
+
+                    <swiper-container class="bg-gray-400 w-full h-full" :slides-per-view="1"
+                        :loopFillGroupWithBlank="true" :spaceBetween="50" :navigation="true" :pagination="false"
+                        :modules="modules" :breakpoints="{'1280': {slidesPerView: 3},'768': {slidesPerView: 2}}">
+                        <swiper-slide>
+                            <img :src="./sources/img/page_posidonie/role_1.png" :alt="$getDisplayText(m)"
+                                class="block w-full h-full object-cover" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img :src="$getFirstMediaUrlById(m.content?.img,450,450,'crop')" :alt="$getDisplayText(m)"
+                                class="block w-full h-full object-cover" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img :src="$getFirstMediaUrlById(m.content?.img,450,450,'crop')" :alt="$getDisplayText(m)"
+                                class="block w-full h-full object-cover" />
+                        </swiper-slide>
+                        <!--     dans la partie script 
+                                        import { FreeMode, Pagination, Navigation } from 'swiper/modules'; const modules = [FreeMode,Pagination,Navigation] 
+                                    -->
+                    </swiper-container>
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+
 
         <!-- section full texte -->
         <section class="bg-white text-primary-blue">
@@ -158,7 +229,8 @@
                     <div
                         class="w-full md:w-1/2 px-4 py-8   bg-primary-green text-white text-center flex flex-col gap-5 justify-center items-center">
                         <h2 class="text-3xl font-medium">DES VALEURS COMMUNES</h2>
-                        <ul class="marker_tertiary_orange list-disc	 max-w-[500px] text-base font-normal text-left">
+                        <ul
+                            class="marker_tertiary_orange ml-4 list-disc	 max-w-[500px] text-base font-normal text-left">
                             <li><strong class="font-bold">Un esprit collectif et de coopération.</strong></li>
                             <li><strong class="font-bold">De la confiance et de la bienveillance.</strong></li>
                             <li><strong class="font-bold">Une liberté d'action : </strong>vous définissez vos propres
@@ -178,7 +250,8 @@
                         class="w-full md:w-1/2 px-4 py-8   bg-tertiary-blue text-white text-center flex flex-col gap-5 justify-center items-center">
                         <h2 class="text-3xl font-medium">UN PROCESS PARTAGÉ</h2>
                         <p class="max-w-[500px] text-base font-normal"></p>
-                        <ul class="marker_tertiary_orange list-disc	 max-w-[500px] text-base font-normal text-left">
+                        <ul
+                            class="marker_tertiary_orange ml-4 list-disc	 max-w-[500px] text-base font-normal text-left">
                             <li>Dès que la signature de votre engagement est validée par le Comité de Pilotage, vous
                                 pourrez utiliser le nom et le logo d'Alliance Posidonia afin de communiquer sur vos
                                 engagements.</li>
@@ -196,11 +269,11 @@
         </section>
 
         <!-- section Agissez avec l'Alliance Posidonia Vous êtes… -->
-        <section
-            class="mt-32  bg-[#B28359] text-white  relative">
+        <section class="mt-32  bg-[#B28359] text-white  relative">
             <img src="./sources/icons/alarm.png" alt="icone alarme"
-            class="object-cover block max-w-full w-[193px] h-auto absolute top-[20px] left-[50%] -translate-x-2/4 -translate-y-2/4	">
-            <div class="max-w-[1920px] mx-auto pt-32 pb-36 px-4 md:px-8  bg-logo_alliance_posidionia_white bg-no-repeat bg-left-bottom bg-contain">
+                class="object-cover block max-w-full w-[193px] h-auto absolute top-[20px] left-[50%] -translate-x-2/4 -translate-y-2/4	">
+            <div class="max-w-[1920px] mx-auto pt-32 pb-36 px-4 md:px-8  
+                bg-alliance_posidionia_white_no_text_empty bg-no-repeat bg-left-bottom bg-[length:auto_200px]">
                 <h2 class="pb-14 text-3xl font-medium text-center">
                     <strong class="font-bold">Agissez avec l'Alliance Posidonia</strong>
                     <br>Vous êtes…
