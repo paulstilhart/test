@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOS SERVICES</title>
+
+    <!-- lien avec la feuille de style compilée tailwind -->
+    <link rel="stylesheet" href="../css/output.css">
+
+
+    <!-- alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <header x-data="{ open: false }" class="z-50 fixed w-full px-7 pt-10">
+        <div class="pt-5 md:pt-0 px-7 md:px-16 background-header border-white rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
+            <div class="flex items-center justify-between">
+                <a href="/" class="inline-block w-[89px] h-[19px] md:w-[130px] md:h-[27px] bg-logo-header-slick.svg bg-no-repeat bg-cover bg-center"></a>
+                <button x-on:click="open = ! open" :aria-expanded="open.toString()" aria-controls="main-menu" class="inline-block md:hidden h-5 w-8 bg-ico-burger-open aria-expanded:bg-ico-burger-close bg-no-repeat bg-contain bg-center"></button>
+            </div>
+            <nav x-show="open" x-transition class="md:!block pb-10 md:pb-0">
+                <ul class="flex flex-col md:flex-row gap-x-14 gap-y-10 text-black text-lg md:text-sm font-neue font-medium">
+                    <li><a href="/" class="inline-block">Nos voitures<span class="text-primary-green">.</span></a></li>
+                    <li><a href="/" class="inline-block">Nos services<span class="text-primary-green">.</span></a></li>
+                    <li><a href="/" class="inline-block">Nous contacter<span class="text-primary-green">.</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+
+    <main>
+
+
+
+
+        <section class="text-black bg-white ">
+            <div class="px-7 pt-44 md:pt-72 pb-36 md:pb-40 max-w-[1184px] mx-auto">
+                <div class="max-w-[910px] mx-auto pb-28 md:pb-32 gap-3 md:gap-8 flex flex-col flex-nowrap ">
+                    <h1
+                        class="text-left md:text-center  font-oswald font-semibold  text-6xl md:text-9xl md:leading-[120px] uppercase">
+                        NOS
+                        services<span class="text-primary-green">.</span>
+                    </h1>
+                    <p class="text-left md:text-center font-neue font-medium  text-2xl">
+                        Depuis des années, Slick cultive et développe un réseau de partenaires dans le monde de
+                        l’automobile
+                        sportive. Passer par nos services, c’est bénéficier de conseils avisés et sécuriser votre achat
+                        automobile.
+                    </p>
+                </div>
+                <div class="text-white flex flex-wrap gap-5 md:gap-9">
+                    <a href="#"
+                        class="group h-[283px] md:h-[412px] w-full md:w-2/5 rounded-xl background-services-cards-vente">
+                        <div class="px-6 py-5 gap-1 md:gap-2 h-full flex flex-col justify-end relative">
+                            <h2 class="font-oswald text-2xl md:text-5xl font-semibold uppercase">ventes<span
+                                    class="text-primary-green">.</span></h2>
+                            <p class="font-neue font-medium text-sm md:text-lg">Une sélection de véhicules garantis et
+                                révisés. Chez Slick,
+                                nous sommes attentifs à la qualité des produits proposés.</p>
+
+                            <button class="rounded-full border border-white  inline-block absolute top-[20px] right-[20px] md:top-[22px] md:right-[22px] 
+                        h-[33px] w-[33px] md:h-[52px] md:w-[52px] ">
+                                <span
+                                    class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:50%_auto] 
+                                transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span></button>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="group h-[239px] md:h-[412px] w-full md:flex-1 rounded-xl background-services-cards-achat order-none md:order-first">
+                        <div class="px-6 py-5 gap-1 md:gap-2 h-full flex flex-col justify-end relative">
+                            <h2 class="font-oswald text-2xl md:text-5xl font-semibold uppercase">achats<span
+                                    class="text-primary-green">.</span></h2>
+                            <p class="font-neue font-medium text-sm md:text-lg">Afin de concrétiser plus facilement
+                                votre
+                                prochain projet automobile, notre équipe peut vous proposer une offre de rachat sur
+                                votre
+                                véhicule .</p>
+
+                            <button class="rounded-full border border-white  inline-block absolute top-[20px] right-[20px] md:top-[22px] md:right-[22px] 
+                            h-[33px] w-[33px] md:h-[52px] md:w-[52px] ">
+                                <span
+                                    class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:50%_auto] 
+                                    transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span></button>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="group h-[309px] md:h-[278px] w-full rounded-xl background-services-cards-recherche">
+                        <div class="px-6 py-5 gap-1 md:gap-2 h-full flex flex-col justify-end relative">
+                            <h2 class="font-oswald text-2xl md:text-5xl font-semibold uppercase">recherche
+                                personnalisée<span class="text-primary-green">.</span></h2>
+                            <p class="font-neue font-medium text-sm md:text-lg">Si l’automobile de vos rêves n’est pas
+                                disponible chez Slick, notre équipe vous déniche la perle rare à travers son réseau de
+                                partenaires
+                                <br>
+                                et vous fait bénéficier de son expertise pour un achat en toute sécurité.
+                            </p>
+
+                            <button class="rounded-full border border-white  inline-block absolute top-[20px] right-[20px] md:top-[22px] md:right-[22px] 
+                        h-[33px] w-[33px] md:h-[52px] md:w-[52px] ">
+                                <span
+                                    class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:50%_auto] 
+                                transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span></button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-white bg-black ">
+            <div class="max-w-[1512px] mx-auto bg-background-text-cta bg-no-repeat bg-[left_-36px_bottom_0px]  md:bg-[left_12px_top_39px] 
+        bg-[length:201px_157px] md:bg-[length:341px_266px]">
+                <div
+                    class="px-7  py-16 md:py-20 max-w-[1184px] mx-auto flex flex-col flex-nowrap md:flex-row items-center justify-between gap-6 ">
+                    <div
+                        class="max-w-[775px] text-center md:text-left flex flex-col items-center md:items-start  gap-2 md:gap-5">
+                        <h2 class="font-neue text-2xl md:text-5xl font-medium">Financement<span
+                                class="text-primary-green">.</span></h2>
+                        <p class="font-neue text-base md:text-2xl font-normal">Pour faciliter l’accès à votre prochain
+                            rêve
+                            à quatre roues, nous proposons tous les types de financement : leasing, crédit simple,
+                            crédit
+                            ballon.</p>
+                    </div>
+
+                    <a href="#" target="_blank" class="px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap
+                bg-transparent text-white border-white border text-xs md:text-lg font-neue font-medium
+                flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
+                        <span>Contactez-nous</span>
+                        <span class="bg-ico-arrow-right-green w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
+                    transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class=" bg-white text-black">
+            <div
+                class=" px-7 pt-52 pb-32 md:py-44 max-w-[1184px] mx-auto flex flex-col md:flex-row gap-9 md:items-stretch">
+                <div class="h-[450px] md:h-auto md:flex-1 bg-background-pages-services bg-no-repeat bg-center bg-cover">
+                </div>
+                <div class="md:flex-1 flex flex-col justify-center gap-2 md:gap-3">
+                    <h2 class=" text-xl md:text-3xl font-oswald  font-normal uppercase">
+                        Vos interlocuteurs chez Slick<span class="text-primary-green">.</span></h2>
+                    <p class="text-sm leading-[23px] md:text-xl md:leading-[34px] font-neue  font-medium">Mathieu, notre
+                        Directeur Commercial, vous fera bénéficier de ses conseils avisés et partagera avec
+                        vous sa passion pour l’automobile. Son réseau étendu de partenaires, bâti depuis des années chez
+                        des
+                        professionnels reconnus, couvre tous les aspects essentiels tels que le transport, l'assurance,
+                        les
+                        garanties, la mécanique, la carrosserie et le financement. Avec lui, vos demandes et besoins
+                        automobiles sont entre de bonnes mains.
+                        <br>
+                        <br>
+                        Tom travaille avec lui sur les aspects commerciaux, sur la communication (contenus, réseaux
+                        sociaux)
+                        et la logistique.
+                        <br>
+                        <br>
+                        Quant à Gracivina, elle gère la partie back-office, et s'assure que l'administratif et les
+                        problématiques d'immatriculation soient gérés avec efficacité et professionnalisme.
+                        <br>
+                        <br>
+                        Ensemble, ils travaillent sans relâche pour concrétiser vos projets sereinement et rapidement,
+                        avec
+                        pour objectif de vous offrir un service et une expérience dépassant vos attentes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="text-white bg-black ">
+            <div class="max-w-[1512px] mx-auto bg-background-text-cta bg-no-repeat bg-[left_-36px_bottom_0px]  md:bg-[left_12px_top_39px] 
+        bg-[length:201px_157px] md:bg-[length:341px_266px]">
+                <div
+                    class="px-7  py-16 md:py-20 max-w-[1184px] mx-auto flex flex-col flex-nowrap md:flex-row items-center justify-between gap-6 ">
+                    <div
+                        class="max-w-[775px] text-center md:text-left flex flex-col items-center md:items-start  gap-2 md:gap-5">
+                        <h2 class="font-neue text-2xl md:text-5xl font-medium">Notre instagram<span
+                                class="text-primary-green">.</span></h2>
+                        <p class="font-neue text-base md:text-2xl font-normal">Suivez-nous pour ne rien manquer de notre
+                            actualité !</p>
+                    </div>
+
+                    <a href="#" target="_blank" class="px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap
+                bg-transparent text-white border-white border text-xs md:text-lg font-neue font-medium
+                flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
+                        <span>S’abonner</span>
+                        <span class="bg-ico-arrow-right-green w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
+                    transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer class=" bg-white text-black">
+        <div class="max-w-[1251px] mx-auto px-7 pt-20 md:pt-24 pb-8 md:pb-11 ">
+            <div class="px-2 md:px-9 pb-5 md:py-5 flex flex-col-reverse md:flex-row justify-between items-center gap-6 ">
+                <nav class="flex gap-6 md:gap-10">
+                    <ul class="flex gap-6 md:gap-10 text-black text-[11px] md:text-base font-neue font-medium">
+                        <li><a href="/" class="inline-block">Nos voitures</a></li>
+                        <li><a href="/" class="inline-block">Nos services</a></li>
+                        <li><a href="/" class="inline-block">Nous contacter</a></li>
+                    </ul>
+                </nav>
+                <a href="/" class="flex-none inline-block h-[21.6px] w-[21.6px] md:w-9 md:h-9 bg-ico-instagram bg-contain bg-center bg-no-repeat"></a>
+            </div>
+            <hr class="border-t-[1px] border-secondary-grey">
+            <div class="px-2 md:px-9 pt-5 md:pt-7 pb-4 md:pb-2 flex justify-between items-center gap-6 font-neue font-medium text-[8px] md:text-xs">
+                <div class="flex gap-6">
+                    <a href="/" class="inline-block">@ Copyright 2024</a>
+                    <a href="/" class="inline-block">Mentions légales</a>
+                </div>
+                <a href="/" class="inline-block">Beaugrenelle - 75015 Paris</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
