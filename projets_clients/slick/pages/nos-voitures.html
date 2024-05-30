@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOS VOITURES</title>
+
+    <!-- lien avec la feuille de style compilée tailwind -->
+    <link rel="stylesheet" href="../css/output.css">
+
+
+    <!-- alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <header x-data="{ open: false }" class="z-50 fixed w-full px-7 pt-10">
+        <div
+            class="pt-5 md:pt-0 px-7 md:px-16 background-header border-white rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
+            <div class="flex items-center justify-between">
+                <a href="/"
+                    class="inline-block w-[89px] h-[19px] md:w-[130px] md:h-[27px] bg-logo-header-slick.svg bg-no-repeat bg-cover bg-center"></a>
+                <button x-on:click="open = ! open" :aria-expanded="open.toString()" aria-controls="main-menu"
+                    class="inline-block md:hidden h-5 w-8 bg-ico-burger-open aria-expanded:bg-ico-burger-close bg-no-repeat bg-contain bg-center"></button>
+            </div>
+            <nav x-show="open" x-transition class="md:!block pb-10 md:pb-0">
+                <ul
+                    class="flex flex-col md:flex-row gap-x-14 gap-y-10 text-black text-lg md:text-sm font-neue font-medium">
+                    <li><a href="/" class="inline-block">Nos voitures<span class="text-primary-green">.</span></a></li>
+                    <li><a href="/" class="inline-block">Nos services<span class="text-primary-green">.</span></a></li>
+                    <li><a href="/" class="inline-block">Nous contacter<span class="text-primary-green">.</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+
+
+
+
+        <section class="text-black bg-white ">
+            <div class="px-7 pt-44 md:pt-72 pb-12 md:pb-40 max-w-[1184px] mx-auto">
+                <div class="gap-3 md:gap-8 max-w-[910px] mx-auto flex flex-col flex-nowrap ">
+                    <h1
+                        class="text-left md:text-center  font-oswald font-semibold  text-6xl md:text-9xl md:leading-[120px] uppercase">
+                        NOS VOITURES<span class="text-primary-green">.</span>
+                    </h1>
+                    <p class="text-left md:text-center font-neue font-medium  text-2xl">Actuellement dans notre showroom
+                        parisien</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="text-white bg-white ">
+            <div class="px-7 pb-10 md:pb-20 max-w-[1184px] mx-auto 
+            grid items-stretch grid-cols-1 md:grid-cols-2 gap-5 md:gap-9 auto-rows-[193px] md:auto-rows-[380px] ">
+
+                <a href="/" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group element relative bg-no-repeat bg-center bg-cover 
+                ">
+
+                    <button
+                        class="inline-block rounded-full border border-white  
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[25px] w-[25px] md:h-[40px] md:w-[40px] ">
+                        <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 group-hover:translate-x-1">
+                        </span>
+                    </button>
+
+
+                    <div
+                        class="absolute bottom-[6px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-full">
+                        <div class="w-full md:transition-transform md:transform md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-[80%] font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                                Porsche
+                                Cayenne turbo<span class="text-primary-green">.</span></h3>
+                            <h4 class="truncate max-w-[80%] font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
+                                V8
+                                550CH.</h4>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="/" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group element relative bg-no-repeat bg-center bg-cover 
+                ">
+
+                    <button
+                        class="inline-block rounded-full border border-white  
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[25px] w-[25px] md:h-[40px] md:w-[40px] ">
+                        <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 group-hover:translate-x-1">
+                        </span>
+                    </button>
+
+
+                    <div
+                        class="absolute bottom-[6px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-full">
+                        <div class="w-full md:transition-transform md:transform md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-[80%] font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                                Porsche
+                                Cayenne turbo<span class="text-primary-green">.</span></h3>
+                            <h4 class="truncate max-w-[80%] font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
+                                V8
+                                550CH.</h4>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="/" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group element relative bg-no-repeat bg-center bg-cover 
+                ">
+
+                    <button
+                        class="inline-block rounded-full border border-white  
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[25px] w-[25px] md:h-[40px] md:w-[40px] ">
+                        <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 group-hover:translate-x-1">
+                        </span>
+                    </button>
+
+
+                    <div
+                        class="absolute bottom-[6px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-full">
+                        <div class="w-full md:transition-transform md:transform md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-[80%] font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                                Porsche
+                                Cayenne turbo<span class="text-primary-green">.</span></h3>
+                            <h4 class="truncate max-w-[80%] font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
+                                V8
+                                550CH.</h4>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="/" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group element relative bg-no-repeat bg-center bg-cover 
+                ">
+
+                    <button
+                        class="inline-block rounded-full border border-white  
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[25px] w-[25px] md:h-[40px] md:w-[40px] ">
+                        <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 group-hover:translate-x-1">
+                        </span>
+                    </button>
+
+
+                    <div
+                        class="absolute bottom-[6px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-full">
+                        <div class="w-full md:transition-transform md:transform md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-[80%] font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                                Porsche
+                                Cayenne turbo<span class="text-primary-green">.</span></h3>
+                            <h4 class="truncate max-w-[80%] font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
+                                V8
+                                550CH.</h4>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="/" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group element relative bg-no-repeat bg-center bg-cover 
+                ">
+
+                    <button
+                        class="inline-block rounded-full border border-white  
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[25px] w-[25px] md:h-[40px] md:w-[40px] ">
+                        <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 group-hover:translate-x-1">
+                        </span>
+                    </button>
+
+
+                    <div
+                        class="absolute bottom-[6px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-full">
+                        <div class="w-full md:transition-transform md:transform md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-[80%] font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                                Porsche
+                                Cayenne turbo<span class="text-primary-green">.</span></h3>
+                            <h4 class="truncate max-w-[80%] font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
+                                V8
+                                550CH.</h4>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="/" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group element relative bg-no-repeat bg-center bg-cover 
+                ">
+
+                    <button
+                        class="inline-block rounded-full border border-white  
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[25px] w-[25px] md:h-[40px] md:w-[40px] ">
+                        <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 group-hover:translate-x-1">
+                        </span>
+                    </button>
+
+
+                    <div
+                        class="absolute bottom-[6px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-full">
+                        <div class="w-full md:transition-transform md:transform md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-[80%] font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                                Porsche
+                                Cayenne turbo<span class="text-primary-green">.</span></h3>
+                            <h4 class="truncate max-w-[80%] font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
+                                V8
+                                550CH.</h4>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+        </section>
+
+
+
+
+        <section class="text-white bg-black ">
+            <div
+                class="max-w-[1512px] mx-auto 
+            bg-background-text-cta bg-no-repeat bg-[left_-36px_bottom_0px]  md:bg-[left_12px_top_39px] bg-[length:201px_157px] md:bg-[length:341px_266px">
+                <div
+                    class="px-7  py-16 md:py-20 max-w-[1184px] mx-auto flex flex-col flex-nowrap md:flex-row items-center justify-between gap-6 ">
+                    <div
+                        class="max-w-[775px] text-center md:text-left flex flex-col items-center md:items-start  gap-2 md:gap-5">
+                        <h2 class="font-neue text-lg md:text-4xl md:leading-[60px] font-normal">
+                            Une recherche particulière ?
+                            <br>
+                            Nous pouvons trouver votre idéal automobile.
+                        </h2>
+                    </div>
+
+                    <a href="#" target="_blank" class="px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap
+                bg-transparent text-white border-white border text-xs md:text-lg font-neue font-medium
+                flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
+                        <span>Contactez-nous</span>
+                        <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
+                    transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="text-white bg-white ">
+            <div class="px-7 pt-10 md:pt-16 max-w-[1184px] mx-auto 
+            grid items-stretch grid-cols-1 md:grid-cols-2 gap-5 md:gap-9 auto-rows-[193px] md:auto-rows-[380px] ">
+
+                <a href="/" aria-disabled="false" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group element relative bg-no-repeat bg-center bg-cover
+                 aria-disabled:pointer-events-none aria-disabled:before:bg-none aria-disabled:before:bg-white aria-disabled:before:opacity-70 aria-disabled:before:z-50 ">
+
+                    <button
+                        class="inline-block rounded-full border border-white  
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[25px] w-[25px] md:h-[40px] md:w-[40px] ">
+                        <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 group-hover:translate-x-1">
+                        </span>
+                    </button>
+
+
+                    <div
+                        class="absolute bottom-[6px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-full">
+                        <div class="w-full md:transition-transform md:transform md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-[80%] font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                                Porsche
+                                Cayenne turbo<span class="text-primary-green">.</span></h3>
+                            <h4 class="truncate max-w-[80%] font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
+                                V8
+                                550CH.</h4>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="/" aria-disabled="true" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group element relative bg-no-repeat bg-center bg-cover aria-disabled:pointer-events-none aria-disabled:before:bg-none aria-disabled:before:bg-white aria-disabled:before:opacity-70 aria-disabled:before:z-50 
+                ">
+
+                    <button
+                        class="inline-block rounded-full border border-white  
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[25px] w-[25px] md:h-[40px] md:w-[40px] ">
+                        <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 group-hover:translate-x-1">
+                        </span>
+                    </button>
+
+
+                    <div
+                        class="absolute bottom-[6px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-full">
+                        <div class="w-full md:transition-transform md:transform md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-[80%] font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                                Porsche
+                                Cayenne turbo<span class="text-primary-green">.</span></h3>
+                            <h4 class="truncate max-w-[80%] font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
+                                V8
+                                550CH.</h4>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="/" aria-disabled="true" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group element relative bg-no-repeat bg-center bg-cover aria-disabled:pointer-events-none aria-disabled:before:bg-none aria-disabled:before:bg-white aria-disabled:before:opacity-70 aria-disabled:before:z-50 
+                ">
+
+                    <button
+                        class="inline-block rounded-full border border-white  
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[25px] w-[25px] md:h-[40px] md:w-[40px] ">
+                        <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 group-hover:translate-x-1">
+                        </span>
+                    </button>
+
+
+                    <div
+                        class="absolute bottom-[6px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-full">
+                        <div class="w-full md:transition-transform md:transform md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-[80%] font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                                Porsche
+                                Cayenne turbo<span class="text-primary-green">.</span></h3>
+                            <h4 class="truncate max-w-[80%] font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
+                                V8
+                                550CH.</h4>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="/" aria-disabled="true" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group element relative bg-no-repeat bg-center bg-cover aria-disabled:pointer-events-none aria-disabled:before:bg-none aria-disabled:before:bg-white aria-disabled:before:opacity-70 aria-disabled:before:z-50 
+                ">
+
+                    <button
+                        class="inline-block rounded-full border border-white  
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[25px] w-[25px] md:h-[40px] md:w-[40px] ">
+                        <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 group-hover:translate-x-1">
+                        </span>
+                    </button>
+
+
+                    <div
+                        class="absolute bottom-[6px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-full">
+                        <div class="w-full md:transition-transform md:transform md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-[80%] font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                                Porsche
+                                Cayenne turbo<span class="text-primary-green">.</span></h3>
+                            <h4 class="truncate max-w-[80%] font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
+                                V8
+                                550CH.</h4>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+
+    <footer class=" bg-white text-black">
+        <div class="max-w-[1251px] mx-auto px-7 pt-20 md:pt-24 pb-8 md:pb-11 ">
+            <div
+                class="px-2 md:px-9 pb-5 md:py-5 flex flex-col-reverse md:flex-row justify-between items-center gap-6 ">
+                <nav class="flex gap-6 md:gap-10">
+                    <ul class="flex gap-6 md:gap-10 text-black text-[11px] md:text-base font-neue font-medium">
+                        <li><a href="/" class="inline-block">Nos voitures</a></li>
+                        <li><a href="/" class="inline-block">Nos services</a></li>
+                        <li><a href="/" class="inline-block">Nous contacter</a></li>
+                    </ul>
+                </nav>
+                <a href="/"
+                    class="flex-none inline-block h-[21.6px] w-[21.6px] md:w-9 md:h-9 bg-ico-instagram bg-contain bg-center bg-no-repeat"></a>
+            </div>
+            <hr class="border-t-[1px] border-secondary-grey">
+            <div
+                class="px-2 md:px-9 pt-5 md:pt-7 pb-4 md:pb-2 flex justify-between items-center gap-6 font-neue font-medium text-[8px] md:text-xs">
+                <div class="flex gap-6">
+                    <a href="/" class="inline-block">@ Copyright 2024</a>
+                    <a href="/" class="inline-block">Mentions légales</a>
+                </div>
+                <a href="/" class="inline-block">Beaugrenelle - 75015 Paris</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

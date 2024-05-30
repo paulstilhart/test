@@ -54,3 +54,30 @@
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(10px);
 }
+
+
+
+.mask_cars::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 61.5%, #000 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.mask_cars_inactive{
+  pointer-events: none;
+
+}
+.mask_cars_inactive::after{
+  background-color: white;
+  opacity: 0.7;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
