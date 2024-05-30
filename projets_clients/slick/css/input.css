@@ -55,7 +55,16 @@
   backdrop-filter: blur(10px);
 }
 
-
+.mask_cards::before {
+  background-color: black;
+  opacity: 0.3;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
 .mask_cars::before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 61.5%, #000 100%);
