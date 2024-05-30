@@ -14,6 +14,8 @@ module.exports = {
         //white:'#FFFFFF',//rgb(255, 255, 255)
         //black:'#000000',//rgb(0, 0, 0)
 
+        "white-50%": "#ffffff80",     //(255, 255, 255, 0.5)
+
         "primary-green": "#02EC8E", //rgb(2, 236, 142)
         "primary-black": "#000000", //rgb(0, 0, 0)
         "primary-grey": "#B5B5B5", //rgb(181, 181, 181)

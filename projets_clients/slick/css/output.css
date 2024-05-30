@@ -614,6 +614,14 @@ html {
   top: 20px;
 }
 
+.bottom-\[8px\]{
+  bottom: 8px;
+}
+
+.bottom-\[16px\]{
+  bottom: 16px;
+}
+
 .z-50{
   z-index: 50;
 }
@@ -747,6 +755,10 @@ html {
   width: 71px;
 }
 
+.w-\[80\%\]{
+  width: 80%;
+}
+
 .w-\[87px\]{
   width: 87px;
 }
@@ -762,18 +774,6 @@ html {
 
 .w-full{
   width: 100%;
-}
-
-.w-\[80\%\]{
-  width: 80%;
-}
-
-.w-\[90\%\]{
-  width: 90%;
-}
-
-.w-\[85\%\]{
-  width: 85%;
 }
 
 .max-w-\[1128px\]{
@@ -796,10 +796,6 @@ html {
   max-width: 775px;
 }
 
-.max-w-\[80\%\]{
-  max-width: 80%;
-}
-
 .max-w-\[910px\]{
   max-width: 910px;
 }
@@ -810,6 +806,10 @@ html {
 
 .max-w-full{
   max-width: 100%;
+}
+
+.max-w-\[800px\]{
+  max-width: 800px;
 }
 
 .flex-none{
@@ -886,6 +886,10 @@ html {
   gap: 2.5rem;
 }
 
+.gap-12{
+  gap: 3rem;
+}
+
 .gap-2{
   gap: 0.5rem;
 }
@@ -908,10 +912,6 @@ html {
 
 .gap-9{
   gap: 2.25rem;
-}
-
-.gap-12{
-  gap: 3rem;
 }
 
 .gap-x-14{
@@ -987,6 +987,10 @@ html {
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-white-50\%{
+  border-color: #ffffff80;
 }
 
 .bg-black{
@@ -1150,6 +1154,10 @@ html {
   padding-bottom: 4rem;
 }
 
+.pb-20{
+  padding-bottom: 5rem;
+}
+
 .pb-28{
   padding-bottom: 7rem;
 }
@@ -1170,8 +1178,8 @@ html {
   padding-bottom: 1.25rem;
 }
 
-.pb-7{
-  padding-bottom: 1.75rem;
+.pb-6{
+  padding-bottom: 1.5rem;
 }
 
 .pb-8{
@@ -1337,29 +1345,22 @@ html {
   transition-duration: 300ms;
 }
 
-.background-services-cards-achat {
-  background:
-    linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%),
-    url("../sources/img/services/cards/achat.jpeg") lightgray 50% / cover no-repeat;
-}
-
-.background-services-cards-vente {
-  background:
-    linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
-    url("../sources/img/services/cards/vente.jpeg") lightgray 50% / cover no-repeat;
-}
-
-.background-services-cards-recherche {
-  background:
-    linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%),
-    url("../sources/img/services/cards/recherche.jpeg") lightgray 50% / cover no-repeat;
-}
-
 .background-header {
   background: linear-gradient(320deg, rgba(255, 255, 255, 0.58) 9.87%, rgba(255, 255, 255, 0.18) 94.37%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+}
+
+.mask_home::before {
+  background-color: black;
+  opacity: 0.1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .mask_cards::before {
@@ -1383,21 +1384,6 @@ html {
   bottom: 0;
 }
 
-.mask_cars_inactive{
-  pointer-events: none;
-}
-
-.mask_cars_inactive::after{
-  background-color: white;
-  opacity: 0.7;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
 .hover\:translate-x-1:hover{
   --tw-translate-x: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1405,11 +1391,6 @@ html {
 
 .group:hover .group-hover\:translate-x-1{
   --tw-translate-x: 0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:translate-x-10{
-  --tw-translate-x: 2.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1580,10 +1561,6 @@ html {
     flex: 1 1 0%;
   }
 
-  .md\:transform{
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
   .md\:auto-rows-\[380px\]{
     grid-auto-rows: 380px;
   }
@@ -1618,10 +1595,6 @@ html {
 
   .md\:gap-10{
     gap: 2.5rem;
-  }
-
-  .md\:gap-12{
-    gap: 3rem;
   }
 
   .md\:gap-2{
@@ -1705,10 +1678,6 @@ html {
     padding-bottom: 0px;
   }
 
-  .md\:pb-10{
-    padding-bottom: 2.5rem;
-  }
-
   .md\:pb-11{
     padding-bottom: 2.75rem;
   }
@@ -1719,10 +1688,6 @@ html {
 
   .md\:pb-20{
     padding-bottom: 5rem;
-  }
-
-  .md\:pb-24{
-    padding-bottom: 6rem;
   }
 
   .md\:pb-28{
@@ -1789,8 +1754,8 @@ html {
     line-height: 1;
   }
 
-  .md\:text-7xl{
-    font-size: 4.5rem;
+  .md\:text-6xl{
+    font-size: 3.75rem;
     line-height: 1;
   }
 
@@ -1828,10 +1793,6 @@ html {
     line-height: 120px;
   }
 
-  .md\:leading-\[130px\]{
-    line-height: 130px;
-  }
-
   .md\:leading-\[34px\]{
     line-height: 34px;
   }
@@ -1844,8 +1805,12 @@ html {
     line-height: 60px;
   }
 
-  .md\:leading-\[90px\]{
-    line-height: 90px;
+  .md\:leading-\[70px\]{
+    line-height: 70px;
+  }
+
+  .md\:leading-\[50px\]{
+    line-height: 50px;
   }
 
   .md\:transition-transform{
@@ -1856,18 +1821,6 @@ html {
 
   .md\:duration-300{
     transition-duration: 300ms;
-  }
-
-  .md\:duration-100{
-    transition-duration: 100ms;
-  }
-
-  .md\:duration-1000{
-    transition-duration: 1000ms;
-  }
-
-  .md\:duration-500{
-    transition-duration: 500ms;
   }
 
   .group:hover .md\:group-hover\:-translate-y-\[40px\]{

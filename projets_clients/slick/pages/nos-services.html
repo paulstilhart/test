@@ -25,7 +25,7 @@
 
 
     <header x-data="{ open: false }" class="z-50 fixed w-full px-7 pt-10">
-        <div class="pt-5 md:pt-0 px-7 md:px-16 background-header border-white rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
+        <div class="pt-5 md:pt-0 px-7 md:px-16 background-header border-white-50% rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
             <div class="flex items-center justify-between">
                 <a href="/" class="inline-block w-[89px] h-[19px] md:w-[130px] md:h-[27px] bg-logo-header-slick.svg bg-no-repeat bg-cover bg-center"></a>
                 <button x-on:click="open = ! open" :aria-expanded="open.toString()" aria-controls="main-menu" class="inline-block md:hidden h-5 w-8 bg-ico-burger-open aria-expanded:bg-ico-burger-close bg-no-repeat bg-contain bg-center"></button>
@@ -49,7 +49,7 @@
 
         <section class="text-black bg-white ">
             <div class="px-7 pt-44 md:pt-72 pb-28 md:pb-32 max-w-[1184px] mx-auto">
-                <div class="gap-3 md:gap-8 max-w-[910px] mx-auto flex flex-col flex-nowrap ">
+                <div class="gap-3 md:gap-8 max-w-[800px] mx-auto flex flex-col flex-nowrap ">
                     <h1
                         class="text-left md:text-center  font-oswald font-semibold  text-6xl md:text-9xl md:leading-[120px] uppercase">
                         NOS
@@ -69,7 +69,7 @@
         <section class="text-white bg-white ">
             <div class="px-7 pb-36 md:pb-40 gap-5 md:gap-9 max-w-[1184px] mx-auto flex flex-wrap ">
                     <a href="#"
-                        class="mask_cards relative h-[283px] md:h-[380px] w-full md:w-2/5 rounded-xl bg-background-cards-vente bg-no-repeat bg-center bg-cover ">
+                        class="mask_cards relative h-[283px] md:h-[380px] w-full md:w-2/5 rounded-xl overflow-hidden bg-background-cards-vente bg-no-repeat bg-center bg-cover ">
                         <div class="px-6 py-5 gap-1 md:gap-2 h-full flex flex-col justify-end relative">
                             <h2 class="font-oswald text-2xl md:text-4xl font-semibold uppercase">ventes<span
                                     class="text-primary-green">.</span></h2>
@@ -85,7 +85,7 @@
                         </div>
                     </a>
                     <a href="#"
-                        class="mask_cards relative h-[239px] md:h-[380px] w-full md:flex-1 rounded-xl bg-background-cards-achat bg-no-repeat bg-center bg-cover order-none md:order-first">
+                        class="mask_cards relative h-[239px] md:h-[380px] w-full md:flex-1 rounded-xl overflow-hidden bg-background-cards-achat bg-no-repeat bg-center bg-cover order-none md:order-first">
                         <div class="px-6 py-5 gap-1 md:gap-2 h-full flex flex-col justify-end relative">
                             <h2 class="font-oswald text-2xl md:text-4xl font-semibold uppercase">achats<span
                                     class="text-primary-green">.</span></h2>
@@ -103,7 +103,7 @@
                         </div>
                     </a>
                     <a href="#"
-                        class="mask_cards relative h-[309px] md:h-[280px] w-full rounded-xl bg-background-cards-recherche bg-no-repeat bg-center bg-cover"">
+                        class="mask_cards relative h-[309px] md:h-[280px] w-full rounded-xl overflow-hidden bg-background-cards-recherche bg-no-repeat bg-center bg-cover"">
                         <div class="px-6 py-5 gap-1 md:gap-2 h-full flex flex-col justify-end relative">
                             <h2 class="font-oswald text-2xl md:text-4xl font-semibold uppercase">recherche
                                 personnalisée<span class="text-primary-green">.</span></h2>

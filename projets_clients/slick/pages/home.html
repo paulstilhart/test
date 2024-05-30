@@ -26,7 +26,7 @@
 
     <header x-data="{ open: false }" class="z-50 fixed w-full px-7 pt-10">
         <div
-            class="pt-5 md:pt-0 px-7 md:px-16 background-header border-white rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
+            class="pt-5 md:pt-0 px-7 md:px-16 background-header border-white-50% rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
             <div class="flex items-center justify-between">
                 <a href="/"
                     class="inline-block w-[89px] h-[19px] md:w-[130px] md:h-[27px] bg-logo-header-slick.svg bg-no-repeat bg-cover bg-center"></a>
@@ -49,20 +49,20 @@
 
     <main>
 
-        <section class="bg-black text-white min-h-screen bg-background-homepage bg-center bg-no-repeat bg-cover">
-            <div class="h-full min-h-screen w-full pt-28 pb-7 md:pb-10 px-7 max-w-[1184px] mx-auto flex flex-col justify-end items-start">
+        <section class="mask_home relative bg-black text-white min-h-screen bg-background-homepage bg-center bg-no-repeat bg-cover">
+            <div class="relative z-50 h-full min-h-screen w-full pt-28 pb-6 px-7 max-w-[1184px] mx-auto flex flex-col justify-end items-start">
                 <h1 class="font-oswald font-semibold text-6xl md:text-9xl md:leading-[120px] uppercase ">
                     Bienvenue<br>chez Slick<span class="text-primary-green">.</span></h1>
-                    <p class="pt-3 pb-28 md:pt-6 md:pb-24 font-neue font-medium text-sm md:text-2xl">Achat, vente et recherche personnalisée de véhicules d’exception</p>
-                <a href="#anchor_homepage" class="inline-block self-center w-[34px] h-[34px] md:w-[52px] md:h-[52px] rounded-full border border-white rotate-90
-                bg-ico-arrow-right-green-cta bg-no-repeat bg-center bg-[length:50%_auto] "></a>
+                    <p class="pt-3 md:pt-6 pb-20  font-neue font-normal text-sm md:text-xl">Achat, vente et recherche personnalisée de véhicules d’exception</p>
+                <a href="#anchor_homepage" class="inline-block self-center w-[34px] h-[34px] md:w-[42px] md:h-[42px] rounded-full border border-white rotate-90
+                bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] "></a>
             </div>
 
         </section>
 
         <section id="anchor_homepage" class=" bg-white text-black">
             <div class=" px-7 py-64 md:py-80 max-w-[1184px] mx-auto">
-                <h2 class="text-center font-neue font-medium text-2xl md:text-7xl leading-[65px] md:leading-[130px]">
+                <h2 class="text-center font-neue font-medium text-2xl md:text-6xl leading-[65px] md:leading-[120px]">
                     Slick, <span class="text-secondary-grey">une équipe passionnée <br>et expérimentée pour</span> concrétiser
                     <br>vos projets automobiles
                 </h2>
@@ -85,7 +85,7 @@
                         h-[33px] w-[33px] md:h-[52px] md:w-[52px] ">
                             <span
                                 class="inline-block w-full h-full bg-ico-arrow-right-green-cta bg-no-repeat bg-center bg-[length:50%_auto] 
-                                transition-transform duration-300 translate-x-0 group-hover:translate-x-10"></span></button>
+                                transition-transform duration-300 translate-x-0 group-hover:translate-x-1"></span></button>
                     </div>
                 </a>
                 <div class="md:flex-1 flex flex-col gap-5 md:gap-9">
@@ -100,7 +100,7 @@
                             h-[33px] w-[33px] md:h-[52px] md:w-[52px] ">
                                 <span
                                     class="inline-block w-full h-full bg-ico-arrow-right-green-cta bg-no-repeat bg-center bg-[length:50%_auto] 
-                                    transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span></button>
+                                    transition-transform duration-300 translate-x-0 group-hover:translate-x-1"></span></button>
                         </div>
                     </a>
                     <a href="#"
@@ -113,7 +113,7 @@
                             <button class="rounded-full border border-white  inline-block absolute top-[20px] right-[20px] md:top-[22px] md:right-[22px] 
                     h-[33px] w-[33px] md:h-[52px] md:w-[52px] ">
                                 <span class="inline-block w-full h-full bg-ico-arrow-right-green-cta bg-no-repeat bg-center bg-[length:50%_auto] 
-                            transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span></button>
+                            transition-transform duration-300 translate-x-0 group-hover:translate-x-1"></span></button>
                         </div>
                     </a>
                 </div>
@@ -132,15 +132,11 @@
 
         <section class=" bg-white text-black">
             <div class="text-center px-7 py-52 max-w-[1184px] mx-auto">
-                <p class="pb-16 md:pb-28 max-w-[930px] mx-auto font-neue font-medium text-base leading-[40px] md:text-4xl md:leading-[90px] ">
+                <p class="pb-16 md:pb-28 max-w-[930px] mx-auto font-neue font-medium text-base leading-[40px] md:text-3xl md:leading-[70px] ">
                     Tous nos véhicules sont révisés et garantis.
                     <br>
-                    <br>
-                    Notre showroom est situé dans le 15e arrondissement de Paris
-                    <br>
-                    et accessible uniquement sur rendez vous
-                    pour préserver
-                    <br>la confidentialité du lieu.
+                    Notre showroom est situé dans le 15e arrondissement de Paris et accessible uniquement sur rendez vous
+                    pour préserver la confidentialité du lieu.
                 </p>
                 <a href="#" target="_blank" class="mx-auto bg-transparent text-black border-black px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap
                  border text-xs md:text-lg font-neue font-medium
