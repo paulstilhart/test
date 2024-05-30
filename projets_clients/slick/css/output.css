@@ -764,6 +764,18 @@ html {
   width: 100%;
 }
 
+.w-\[80\%\]{
+  width: 80%;
+}
+
+.w-\[90\%\]{
+  width: 90%;
+}
+
+.w-\[85\%\]{
+  width: 85%;
+}
+
 .max-w-\[1128px\]{
   max-width: 1128px;
 }
@@ -794,6 +806,10 @@ html {
 
 .max-w-\[930px\]{
   max-width: 930px;
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 .flex-none{
@@ -892,6 +908,10 @@ html {
 
 .gap-9{
   gap: 2.25rem;
+}
+
+.gap-12{
+  gap: 3rem;
 }
 
 .gap-x-14{
@@ -1378,6 +1398,11 @@ html {
   bottom: 0;
 }
 
+.hover\:translate-x-1:hover{
+  --tw-translate-x: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group:hover .group-hover\:translate-x-1{
   --tw-translate-x: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1593,6 +1618,10 @@ html {
 
   .md\:gap-10{
     gap: 2.5rem;
+  }
+
+  .md\:gap-12{
+    gap: 3rem;
   }
 
   .md\:gap-2{
@@ -1823,6 +1852,22 @@ html {
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
+  }
+
+  .md\:duration-300{
+    transition-duration: 300ms;
+  }
+
+  .md\:duration-100{
+    transition-duration: 100ms;
+  }
+
+  .md\:duration-1000{
+    transition-duration: 1000ms;
+  }
+
+  .md\:duration-500{
+    transition-duration: 500ms;
   }
 
   .group:hover .md\:group-hover\:-translate-y-\[40px\]{
