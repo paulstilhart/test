@@ -101,7 +101,7 @@
                     $refs.slider.scrollLeft = scrollLeft + (startX - $event.pageX); 
                     if (Math.abs(startX - $event.pageX) > 5) { moved = true; } 
                 }" x-ref="slider" :class="{ '!cursor-grabbing': isDown }"
-                    class="h-[135px] md:h-[275px] gap-6 md:gap-12  grid grid-flow-col auto-cols-[222px] md:auto-cols-[441px] cursor-grab overflow-hidden">
+                    class="px-7 h-[135px] md:h-[275px] gap-6 md:gap-12  grid grid-flow-col auto-cols-[222px] md:auto-cols-[441px] cursor-grab overflow-hidden">
     
                     <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
                         :class="{ '!cursor-grabbing': isDown }" href="/pages/nos-voitures.html"
