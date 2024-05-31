@@ -639,6 +639,14 @@ html {
   margin-right: auto;
 }
 
+.-mt-2{
+  margin-top: -0.5rem;
+}
+
+.-mt-1{
+  margin-top: -0.25rem;
+}
+
 .block{
   display: block;
 }
@@ -812,6 +820,14 @@ html {
   max-width: 100%;
 }
 
+.max-w-\[\]{
+  max-width: ;
+}
+
+.max-w-\[1000px\]{
+  max-width: 1000px;
+}
+
 .flex-none{
   flex: none;
 }
@@ -831,12 +847,24 @@ html {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.cursor-grab{
-  cursor: grab;
+.\!cursor-grab{
+  cursor: grab !important;
 }
 
 .cursor-grabbing{
   cursor: grabbing;
+}
+
+.cursor-grab{
+  cursor: grab;
+}
+
+.\!cursor-grabbing{
+  cursor: grabbing !important;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .auto-cols-\[222px\]{
@@ -1023,11 +1051,6 @@ html {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-red-50{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
-}
-
 .bg-transparent{
   background-color: transparent;
 }
@@ -1158,11 +1181,6 @@ html {
   padding-bottom: 13rem;
 }
 
-.py-64{
-  padding-top: 16rem;
-  padding-bottom: 16rem;
-}
-
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1248,12 +1266,24 @@ html {
   padding-top: 14px;
 }
 
+.pt-\[130px\]{
+  padding-top: 130px;
+}
+
+.pt-\[100px\]{
+  padding-top: 100px;
+}
+
 .text-left{
   text-align: left;
 }
 
 .text-center{
   text-align: center;
+}
+
+.\!font-sans{
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
 .font-neue{
@@ -1496,6 +1526,14 @@ html {
     order: -9999;
   }
 
+  .md\:-mt-2{
+    margin-top: -0.5rem;
+  }
+
+  .md\:mt-0{
+    margin-top: 0px;
+  }
+
   .md\:\!block{
     display: block !important;
   }
@@ -1637,6 +1675,10 @@ html {
     gap: 2.5rem;
   }
 
+  .md\:gap-12{
+    gap: 3rem;
+  }
+
   .md\:gap-2{
     gap: 0.5rem;
   }
@@ -1659,10 +1701,6 @@ html {
 
   .md\:gap-9{
     gap: 2.25rem;
-  }
-
-  .md\:gap-12{
-    gap: 3rem;
   }
 
   .md\:bg-\[length\:341px_266px\]{
@@ -1711,11 +1749,6 @@ html {
   .md\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-  }
-
-  .md\:py-80{
-    padding-top: 20rem;
-    padding-bottom: 20rem;
   }
 
   .md\:pb-0{
@@ -1772,6 +1805,18 @@ html {
 
   .md\:pt-72{
     padding-top: 18rem;
+  }
+
+  .md\:pt-20{
+    padding-top: 5rem;
+  }
+
+  .md\:pt-\[130px\]{
+    padding-top: 130px;
+  }
+
+  .md\:pt-\[120px\]{
+    padding-top: 120px;
   }
 
   .md\:text-left{
@@ -1865,6 +1910,11 @@ html {
 
   .group:hover .md\:group-hover\:-translate-y-\[42px\]{
     --tw-translate-y: -42px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-\[40px\]{
+    --tw-translate-y: -40px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
