@@ -26,12 +26,12 @@
 
     <header x-data="{ open: false }" class="z-50 fixed w-full px-7 pt-10">
         <div
-            class="pt-5 md:pt-0 px-7 md:px-16 background-header border-white-50% rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
+            class="pt-[14px] md:pt-0 px-7 md:px-16 background-header border-white-50% rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
             <div class="flex items-center justify-between">
                 <a href="/"
                     class="inline-block w-[89px] h-[19px] md:w-[130px] md:h-[27px] bg-logo-header-slick.svg bg-no-repeat bg-cover bg-center"></a>
                 <button x-on:click="open = ! open" :aria-expanded="open.toString()" aria-controls="main-menu"
-                    class="inline-block md:hidden h-5 w-8 bg-ico-burger-open aria-expanded:bg-ico-burger-close bg-no-repeat bg-contain bg-center"></button>
+                    class="inline-block md:!hidden h-8 w-8 bg-ico-burger-open aria-expanded:bg-ico-burger-close bg-no-repeat bg-contain bg-center"></button>
             </div>
             <nav x-show="open" x-transition class="md:!block pb-10 md:pb-0">
                 <ul
@@ -47,6 +47,7 @@
 
 
 
+
     <main>
 
 
@@ -59,7 +60,7 @@
                         class="text-left md:text-center  font-oswald font-semibold  text-6xl md:text-9xl md:leading-[120px] uppercase">
                         NOS VOITURES<span class="text-primary-green">.</span>
                     </h1>
-                    <p class="text-left md:text-center font-neue font-medium  text-sm md:text-lg">Actuellement dans notre showroom
+                    <p class="text-left md:text-center font-neue font-normal  text-sm md:text-lg">Actuellement dans notre showroom
                         parisien</p>
                 </div>
             </div>
@@ -68,14 +69,14 @@
 
         <section class="text-white bg-white ">
             <div class="px-7 pb-10 md:pb-20 max-w-[1184px] mx-auto 
-            grid items-stretch grid-cols-1 md:grid-cols-2 gap-5 md:gap-9 auto-rows-[193px] md:auto-rows-[380px] ">
+            grid items-stretch grid-cols-1 md:grid-cols-2 gap-5 md:gap-9 auto-rows-[210px] md:auto-rows-[350px] ">
 
                 <a href="/" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group relative bg-no-repeat bg-center bg-cover 
                 ">
 
                     <button
                         class="inline-block rounded-full border border-white  
-                    absolute bottom-[16px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                         <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
                         transition-transform duration-300 translate-x-0 hover:translate-x-1">
                         </span>
@@ -84,8 +85,8 @@
 
                     <div
                         class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
-                            <h3 class="truncate max-w-full font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[42px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-full font-oswald font-normal text-xl md:text-3xl uppercase">
                                 Porsche
                                 Cayenne turbo<span class="text-primary-green">.</span></h3>
                             <h4 class="truncate max-w-full font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
@@ -100,7 +101,7 @@
 
                     <button
                         class="inline-block rounded-full border border-white  
-                    absolute bottom-[16px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                         <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
                         transition-transform duration-300 translate-x-0 hover:translate-x-1">
                         </span>
@@ -109,8 +110,8 @@
 
                     <div
                         class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
-                            <h3 class="truncate max-w-full font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[42px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-full font-oswald font-normal text-xl md:text-3xl uppercase">
                                 Porsche
                                 Cayenne turbo<span class="text-primary-green">.</span></h3>
                             <h4 class="truncate max-w-full font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
@@ -125,7 +126,7 @@
 
                     <button
                         class="inline-block rounded-full border border-white  
-                    absolute bottom-[16px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                         <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
                         transition-transform duration-300 translate-x-0 hover:translate-x-1">
                         </span>
@@ -134,8 +135,8 @@
 
                     <div
                         class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
-                            <h3 class="truncate max-w-full font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[42px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-full font-oswald font-normal text-xl md:text-3xl uppercase">
                                 Porsche
                                 Cayenne turbo<span class="text-primary-green">.</span></h3>
                             <h4 class="truncate max-w-full font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
@@ -150,7 +151,7 @@
 
                     <button
                         class="inline-block rounded-full border border-white  
-                    absolute bottom-[16px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                         <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
                         transition-transform duration-300 translate-x-0 hover:translate-x-1">
                         </span>
@@ -159,8 +160,8 @@
 
                     <div
                         class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
-                            <h3 class="truncate max-w-full font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[42px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-full font-oswald font-normal text-xl md:text-3xl uppercase">
                                 Porsche
                                 Cayenne turbo<span class="text-primary-green">.</span></h3>
                             <h4 class="truncate max-w-full font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
@@ -175,7 +176,7 @@
 
                     <button
                         class="inline-block rounded-full border border-white  
-                    absolute bottom-[16px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                         <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
                         transition-transform duration-300 translate-x-0 hover:translate-x-1">
                         </span>
@@ -184,8 +185,8 @@
 
                     <div
                         class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
-                            <h3 class="truncate max-w-full font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[42px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-full font-oswald font-normal text-xl md:text-3xl uppercase">
                                 Porsche
                                 Cayenne turbo<span class="text-primary-green">.</span></h3>
                             <h4 class="truncate max-w-full font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
@@ -200,7 +201,7 @@
 
                     <button
                         class="inline-block rounded-full border border-white  
-                    absolute bottom-[16px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                         <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
                         transition-transform duration-300 translate-x-0 hover:translate-x-1">
                         </span>
@@ -209,8 +210,8 @@
 
                     <div
                         class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
-                            <h3 class="truncate max-w-full font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[42px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-full font-oswald font-normal text-xl md:text-3xl uppercase">
                                 Porsche
                                 Cayenne turbo<span class="text-primary-green">.</span></h3>
                             <h4 class="truncate max-w-full font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
@@ -255,14 +256,14 @@
 
         <section class="text-white bg-white ">
             <div class="px-7 pt-10 md:pt-16 max-w-[1184px] mx-auto 
-            grid items-stretch grid-cols-1 md:grid-cols-2 gap-5 md:gap-9 auto-rows-[193px] md:auto-rows-[380px] ">
+            grid items-stretch grid-cols-1 md:grid-cols-2 gap-5 md:gap-9 auto-rows-[210px] md:auto-rows-[350px] ">
 
                 <a href="/" aria-disabled="false" class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] mask_cars group relative bg-no-repeat bg-center bg-cover
                  aria-disabled:pointer-events-none aria-disabled:before:bg-none aria-disabled:before:bg-white aria-disabled:before:opacity-70 aria-disabled:before:z-50 ">
 
                     <button
                         class="inline-block rounded-full border border-white  
-                    absolute bottom-[16px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                         <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
                         transition-transform duration-300 translate-x-0 hover:translate-x-1">
                         </span>
@@ -271,8 +272,8 @@
 
                     <div
                         class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
-                            <h3 class="truncate max-w-full font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[42px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-full font-oswald font-normal text-xl md:text-3xl uppercase">
                                 Porsche
                                 Cayenne turbo<span class="text-primary-green">.</span></h3>
                             <h4 class="truncate max-w-full font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
@@ -287,7 +288,7 @@
 
                     <button
                         class="inline-block rounded-full border border-white  
-                    absolute bottom-[16px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                         <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
                         transition-transform duration-300 translate-x-0 hover:translate-x-1">
                         </span>
@@ -296,8 +297,8 @@
 
                     <div
                         class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
-                            <h3 class="truncate max-w-full font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[42px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-full font-oswald font-normal text-xl md:text-3xl uppercase">
                                 Porsche
                                 Cayenne turbo<span class="text-primary-green">.</span></h3>
                             <h4 class="truncate max-w-full font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
@@ -312,7 +313,7 @@
 
                     <button
                         class="inline-block rounded-full border border-white  
-                    absolute bottom-[16px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                         <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
                         transition-transform duration-300 translate-x-0 hover:translate-x-1">
                         </span>
@@ -321,8 +322,8 @@
 
                     <div
                         class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
-                            <h3 class="truncate max-w-full font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[42px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-full font-oswald font-normal text-xl md:text-3xl uppercase">
                                 Porsche
                                 Cayenne turbo<span class="text-primary-green">.</span></h3>
                             <h4 class="truncate max-w-full font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
@@ -337,7 +338,7 @@
 
                     <button
                         class="inline-block rounded-full border border-white  
-                    absolute bottom-[16px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
+                    absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                         <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
                         transition-transform duration-300 translate-x-0 hover:translate-x-1">
                         </span>
@@ -346,8 +347,8 @@
 
                     <div
                         class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[40px] flex flex-col md:gap-2">
-                            <h3 class="truncate max-w-full font-oswald font-normal text-2xl md:text-4xl md:leading-[36px] uppercase">
+                        <div class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[42px] flex flex-col md:gap-2">
+                            <h3 class="truncate max-w-full font-oswald font-normal text-xl md:text-3xl uppercase">
                                 Porsche
                                 Cayenne turbo<span class="text-primary-green">.</span></h3>
                             <h4 class="truncate max-w-full font-neue font-medium uppercase text-sm md:text-2xl">9YA 4.0
