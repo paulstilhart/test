@@ -103,7 +103,7 @@
                     $refs.slider.scrollLeft = scrollLeft + (startX - $event.pageX); 
                     if (Math.abs(startX - $event.pageX) > 5) { moved = true; } 
                 }" x-ref="slider"
-                    class="px-7 h-[135px] md:h-[275px] gap-6 md:gap-12 grid grid-flow-col auto-cols-[222px] md:auto-cols-[441px] overflow-auto no_scrollbar select-none touch-pan-y	">
+                    class="px-7 h-[135px] md:h-[275px] gap-6 md:gap-12 grid grid-flow-col auto-cols-[222px] md:auto-cols-[441px] overflow-auto no_scrollbar">
                     
 
                     <a  x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
