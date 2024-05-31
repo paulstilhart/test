@@ -13,7 +13,8 @@
     <!-- alpine JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-
+    <!-- script JS car bug carrousel sur certaines versions de firefox -->
+    <script defer src="../js/script.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
 
     <header x-data="{ open: false }" class="z-50 fixed w-full px-7 pt-10">
         <div
-            class="pt-[14px] md:pt-0 px-7 md:px-16 background-header border-white-50% rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
+            class="pt-[14px] md:pt-0 px-7 md:px-16 background_header border-white-50% rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
             <div class="flex items-center justify-between">
                 <a href="/"
                     class="inline-block w-[89px] h-[19px] md:w-[130px] md:h-[27px] bg-logo-header-slick.svg bg-no-repeat bg-cover bg-center"></a>
@@ -90,23 +91,25 @@
                         <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
                             transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span>
                     </a>
-    
+
                 </div>
-    
-    
+
+
+                
                 <div x-data="{ isDown: false, startX: 0, scrollLeft: 0, slideWidth: 0, moved: false }"
                     x-init="slideWidth = $refs.slider.clientWidth"
-                    @pointerdown="isDown = true; startX = $event.pageX - $refs.slider.offsetLeft; scrollLeft = $refs.slider.scrollLeft; moved = false;"
-                    @pointerup="isDown = false" @pointerleave="isDown = false" @pointermove.prevent="if (isDown) { 
+                    @mousedown="isDown = true; startX = $event.pageX - $refs.slider.offsetLeft; scrollLeft = $refs.slider.scrollLeft; moved = false;"
+                    @mouseup="isDown = false" @mouseleave="isDown = false" @mousemove.prevent="if (isDown) { 
                     $refs.slider.scrollLeft = scrollLeft + (startX - $event.pageX); 
                     if (Math.abs(startX - $event.pageX) > 5) { moved = true; } 
-                }" x-ref="slider" :class="{ '!cursor-grabbing': isDown }"
-                    class="px-7 h-[135px] md:h-[275px] gap-6 md:gap-12  grid grid-flow-col auto-cols-[222px] md:auto-cols-[441px] cursor-grab overflow-hidden">
-    
-                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
-                        :class="{ '!cursor-grabbing': isDown }" href="/pages/nos-voitures.html"
+                }" x-ref="slider"
+                    class="px-7 h-[135px] md:h-[275px] gap-6 md:gap-12 grid grid-flow-col auto-cols-[222px] md:auto-cols-[441px] overflow-auto no_scrollbar select-none touch-pan-y	">
+                    
+
+                    <a  x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                        href="/pages/nos-voitures.html"
                         class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
-    
+
                         <div
                             class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
                             <div
@@ -121,7 +124,7 @@
                                     550CH.</h4>
                             </div>
                         </div>
-    
+
                         <button
                             class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                             <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
@@ -129,11 +132,11 @@
                             </span>
                         </button>
                     </a>
-    
-                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
-                        :class="{ '!cursor-grabbing': isDown }" href="/pages/nos-voitures.html"
+
+                    <a  x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                        href="/pages/nos-voitures.html"
                         class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
-    
+
                         <div
                             class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
                             <div
@@ -148,7 +151,7 @@
                                     550CH.</h4>
                             </div>
                         </div>
-    
+
                         <button
                             class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                             <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
@@ -156,11 +159,11 @@
                             </span>
                         </button>
                     </a>
-    
-                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
-                        :class="{ '!cursor-grabbing': isDown }" href="/pages/nos-voitures.html"
+
+                    <a  x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                        href="/pages/nos-voitures.html"
                         class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
-    
+
                         <div
                             class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
                             <div
@@ -175,7 +178,7 @@
                                     550CH.</h4>
                             </div>
                         </div>
-    
+
                         <button
                             class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                             <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
@@ -183,11 +186,11 @@
                             </span>
                         </button>
                     </a>
-    
-                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
-                        :class="{ '!cursor-grabbing': isDown }" href="/pages/nos-voitures.html"
+
+                    <a  x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                        href="/pages/nos-voitures.html"
                         class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
-    
+
                         <div
                             class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
                             <div
@@ -202,7 +205,7 @@
                                     550CH.</h4>
                             </div>
                         </div>
-    
+
                         <button
                             class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                             <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
@@ -210,11 +213,11 @@
                             </span>
                         </button>
                     </a>
-    
-                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
-                        :class="{ '!cursor-grabbing': isDown }" href="/pages/nos-voitures.html"
+
+                    <a  x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                        href="/pages/nos-voitures.html"
                         class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
-    
+
                         <div
                             class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
                             <div
@@ -229,7 +232,7 @@
                                     550CH.</h4>
                             </div>
                         </div>
-    
+
                         <button
                             class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[33px] w-[33px] md:h-[40px] md:w-[40px] ">
                             <span
@@ -237,19 +240,19 @@
                             </span>
                         </button>
                     </a>
-    
-    
+
+
                 </div>
-    
+
             </div>
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
         </section>
 
 
