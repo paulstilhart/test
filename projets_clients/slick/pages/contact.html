@@ -71,160 +71,140 @@
 
         <section class="text-black bg-white ">
             <div class="px-7 max-w-[636px] mx-auto flex flex-col items-center">
-
-                <section class="text-black bg-white ">
-                    <div class="px-7 max-w-[636px] mx-auto flex flex-col items-center">
-            
-                        <form x-data="{ isChecked: false }" class="w-full flex flex-col gap-6 md:gap-9 items-stretch">
-                            <input type="email" id="email" name="email" placeholder="Email"
-                                class="h-11 text-lg font-neue font-medium   text-black  placeholder:text-primary-grey border-b border-primary-grey
-                                focus:outline-none focus:border-primary-green active:border-primary-green  hover:border-primary-green">
-            
-                            <input type="text" id="firstname" name="firstname" placeholder="Prénom"
-                                class="h-11 text-lg font-neue font-medium   text-black  placeholder:text-primary-grey border-b border-primary-grey
-                                focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
-            
-                            <input type="text" id="lastname" name="lastname" placeholder="Nom"
-                                class="h-11 text-lg font-neue font-medium   text-black  placeholder:text-primary-grey border-b border-primary-grey
-                                focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
-            
-            
-                            <div class="pt-3 flex flex-col gap-2">
-                                <p class=" text-black font-neue font-medium text-lg">Motif</p>
-                                <div class="flex gap-3 flex-wrap">
-                                    <label for="buy" class="cursor-pointer">
-                                        <input type="radio" id="buy" name="category" class="peer hidden">
-                                        <span
-                                            class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
-                                         peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Achat</span>
-                                    </label>
-                                    <label for="sell" class="cursor-pointer">
-                                        <input type="radio" id="sell" name="category" class="peer hidden">
-                                        <span
-                                            class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
-                                         peer-checked:border-black peer-checked:text-black  hover:border-black hover:text-black">Vente</span>
-                                    </label>
-                                    <label for="search" class="cursor-pointer">
-                                        <input type="radio" id="search" name="category" class="peer hidden">
-                                        <span
-                                            class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
-                                         peer-checked:border-black peer-checked:text-black  hover:border-black hover:text-black">Recherche</span>
-                                    </label>
-                                    <label for="others" class=" cursor-pointer">
-                                        <input type="radio" id="others" name="category" class="peer hidden">
-                                        <span
-                                            class=" inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
-                                         peer-checked:border-black peer-checked:text-black  hover:border-black hover:text-black">Autres</span>
-                                    </label>
-                                </div>
-                            </div>
-            
-                            <div class="pt-3 flex flex-col gap-2">
-                                <p class=" text-black font-neue font-medium text-lg">Modèle de voiture</p>
-                                <div class="flex gap-3 flex-wrap">
-                                    <label for="model_1" class="cursor-pointer">
-                                        <input type="radio" id="model_1" name="model" class="peer hidden">
-                                        <span
-                                            class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
-                                         peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Porche Cayenn 212</span>
-                                    </label>
-                                    <label for="model_2" class="cursor-pointer">
-                                        <input type="radio" id="model_2" name="model" class="peer hidden">
-                                        <span
-                                            class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
-                                         peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Mini Cooper</span>
-                                    </label>
-                                    <label for="model_3" class="cursor-pointer">
-                                        <input type="radio" id="model_3" name="model" class="peer hidden">
-                                        <span
-                                            class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
-                                         peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Porsche carrera</span>
-                                    </label>
-                                    <label for="model_4" class="cursor-pointer">
-                                        <input type="radio" id="model_4" name="model" class="peer hidden">
-                                        <span
-                                            class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
-                                         peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Porche RS</span>
-                                    </label>
-                                    <label for="model_5" class="cursor-pointer">
-                                        <input type="radio" id="model_5" name="model" class="peer hidden">
-                                        <span
-                                            class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
-                                         peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Audi GT8</span>
-                                    </label>
-                                    <label for="model_6" class="cursor-pointer">
-                                        <input type="radio" id="model_6" name="model" class="peer hidden">
-                                        <span
-                                            class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
-                                         peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Jeep Canyon</span>
-                                    </label>
-                                </div>
-                            </div>
-            
-            
-            
-            
-                            <textarea id="message" name="message" placeholder="Message" class="mt-4 pt-2 h-11 text-lg  font-neue font-medium   text-black  placeholder:text-primary-grey border-b  border-primary-grey
-                            focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green 
-                            resize-y"></textarea>
-            
-                            <div class="flex items-center h-6 select-none">
-                                <input x-model="isChecked" type="checkbox" id="funding" name="funding" class="flex-none h-4 w-4 rounded-sm border-[3px] border-white outline outline-primary-grey  appearance-none cursor-pointer
-                                     checked:bg-primary-green">
-                                <label for="funding"
-                                    class="pl-3 w-full text-lg font-neue font-medium text-primary-grey cursor-pointer">Je souhaite
-                                    financer mon achat</label>
-                            </div>
-            
-                            <div x-show="isChecked" x-transition class="pt-3 w-full flex flex-col gap-6 md:gap-9 items-stretch">
-            
-                                <input type="text" id="bring" name="bring" placeholder="Apport *"
-                                    class="h-11 text-lg font-neue font-medium   text-black  placeholder:text-primary-grey border-b border-primary-grey
-                                focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
-            
-            
-                                <select name="state" id="state"
-                                    class=" h-11 text-lg font-neue font-medium bg-transparent  text-primary-grey selection:text-black placeholder:text-primary-grey border-b border-primary-grey focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
-                                    <option value="" disabled hidden selected class="text-primary-green">Sélectionnez votre statut *</option>
-                                    <option class="text-2xl text-black" value="particular">Particulier</option>
-                                    <option class="text-2xl text-black" value="professional">Professionnel</option>
-                                </select>
-            
-            
-            
-            
-            
-                                <input type="text" id="monthly" name="monthly" placeholder="Mensualité maximum souhaitée"
-                                    class="h-11 text-lg font-neue font-medium   text-black  placeholder:text-primary-grey border-b border-primary-grey
-                                focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
-                            </div>
-                        </form>
-            
-            
-                        <button href="#" target="_blank" class="mt-20 mb-28 md:mt-20 md:mb-28 px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap bg-transparent  border-black border text-xs md:text-lg font-neue font-medium 
-                        flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
-                            <span>Envoyer</span>
-                            <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
-                        transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span>
-                        </button>
-            
-                        <p class="font-oswald font-normal text-sm uppercase">SUPPORT<span class="text-primary-green">.</span>
-                        </p>
-                        <p class="text-primary-grey font-neue font-medium text-sm">
-                            <a href="tel:+33679334228">06 79 33 42 28</a>&ensp;•&ensp;<a
-                                href="mailto:contact@slick.club">contact@slick.club</a>
-                        </p>
+    
+                <form x-data="{ isChecked: false }" class="w-full flex flex-col gap-6 md:gap-9 items-stretch">
+                    <input type="email" id="email" name="email" placeholder="Email"
+                        class="h-11 text-lg font-neue font-medium   text-black  placeholder:text-primary-grey border-b border-primary-grey
+                        focus:outline-none focus:border-primary-green active:border-primary-green  hover:border-primary-green">
+    
+                    <input type="text" id="firstname" name="firstname" placeholder="Prénom"
+                        class="h-11 text-lg font-neue font-medium   text-black  placeholder:text-primary-grey border-b border-primary-grey
+                        focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
+    
+                    <input type="text" id="lastname" name="lastname" placeholder="Nom"
+                        class="h-11 text-lg font-neue font-medium   text-black  placeholder:text-primary-grey border-b border-primary-grey
+                        focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
+    
+    
+                    <div class="pt-3 flex flex-col gap-2">
+                        <p class=" text-black font-neue font-medium text-lg">Motif</p>
+                        <div class="flex gap-3 flex-wrap">
+                            <label for="buy" class="cursor-pointer">
+                                <input type="radio" id="buy" name="category" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Achat</span>
+                            </label>
+                            <label for="sell" class="cursor-pointer">
+                                <input type="radio" id="sell" name="category" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black  hover:border-black hover:text-black">Vente</span>
+                            </label>
+                            <label for="search" class="cursor-pointer">
+                                <input type="radio" id="search" name="category" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black  hover:border-black hover:text-black">Recherche</span>
+                            </label>
+                            <label for="others" class=" cursor-pointer">
+                                <input type="radio" id="others" name="category" class="peer hidden">
+                                <span
+                                    class=" inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black  hover:border-black hover:text-black">Autres</span>
+                            </label>
+                        </div>
                     </div>
-                </section>
-
-
+    
+                    <div class="pt-3 flex flex-col gap-2">
+                        <p class=" text-black font-neue font-medium text-lg">Modèle de voiture</p>
+                        <div class="flex gap-3 flex-wrap">
+                            <label for="model_1" class="cursor-pointer">
+                                <input type="radio" id="model_1" name="model" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Porche Cayenn 212</span>
+                            </label>
+                            <label for="model_2" class="cursor-pointer">
+                                <input type="radio" id="model_2" name="model" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Mini Cooper</span>
+                            </label>
+                            <label for="model_3" class="cursor-pointer">
+                                <input type="radio" id="model_3" name="model" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Porsche carrera</span>
+                            </label>
+                            <label for="model_4" class="cursor-pointer">
+                                <input type="radio" id="model_4" name="model" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Porche RS</span>
+                            </label>
+                            <label for="model_5" class="cursor-pointer">
+                                <input type="radio" id="model_5" name="model" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Audi GT8</span>
+                            </label>
+                            <label for="model_6" class="cursor-pointer">
+                                <input type="radio" id="model_6" name="model" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Jeep Canyon</span>
+                            </label>
+                        </div>
+                    </div>
+    
+    
+    
+    
+                    <textarea id="message" name="message" placeholder="Message" class="mt-4 pt-2 h-11 text-lg  font-neue font-medium   text-black  placeholder:text-primary-grey border-b  border-primary-grey
+                    focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green 
+                    resize-y"></textarea>
+    
+                    <div class="flex items-center h-6 select-none">
+                        <input x-model="isChecked" type="checkbox" id="funding" name="funding" class="flex-none h-4 w-4 rounded-sm border-[3px] border-white outline outline-primary-grey  appearance-none cursor-pointer
+                             checked:bg-primary-green">
+                        <label for="funding"
+                            class="pl-3 w-full text-lg font-neue font-medium text-primary-grey cursor-pointer">Je souhaite
+                            financer mon achat</label>
+                    </div>
+    
+                    <div x-show="isChecked" x-transition class="pt-3 w-full flex flex-col gap-6 md:gap-9 items-stretch">
+    
+                        <input type="text" id="bring" name="bring" placeholder="Apport *"
+                            class="h-11 text-lg font-neue font-medium   text-black  placeholder:text-primary-grey border-b border-primary-grey
+                        focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
+    
+    
+                        <select name="state" id="state"
+                            class=" h-11 text-lg font-neue font-medium bg-transparent  text-primary-grey selection:text-black placeholder:text-primary-grey border-b border-primary-grey focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
+                            <option value="" disabled hidden selected class="text-primary-green">Sélectionnez votre statut *</option>
+                            <option class="text-2xl text-black" value="particular">Particulier</option>
+                            <option class="text-2xl text-black" value="professional">Professionnel</option>
+                        </select>
+    
+    
+    
+    
+    
+                        <input type="text" id="monthly" name="monthly" placeholder="Mensualité maximum souhaitée"
+                            class="h-11 text-lg font-neue font-medium   text-black  placeholder:text-primary-grey border-b border-primary-grey
+                        focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
+                    </div>
+                </form>
+    
+    
                 <button href="#" target="_blank" class="mt-20 mb-28 md:mt-20 md:mb-28 px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap bg-transparent  border-black border text-xs md:text-lg font-neue font-medium 
                 flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
                     <span>Envoyer</span>
                     <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
                 transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span>
                 </button>
-
+    
                 <p class="font-oswald font-normal text-sm uppercase">SUPPORT<span class="text-primary-green">.</span>
                 </p>
                 <p class="text-primary-grey font-neue font-medium text-sm">
