@@ -35,7 +35,11 @@ module.exports = {
         "ico-burger-close": "url('../sources/icons/burger-close.svg')",
         "ico-burger-open": "url('../sources/icons/burger-open.svg')",
         "ico-instagram": "url('../sources/icons/instagram.svg')",
-        "ico-arrow-bottom-grey": "url('../sources/icons/arrow-bottom-grey.svg')",
+        "ico-accordion-close": "url('../sources/icons/accordion-close.svg')",
+        "ico-accordion-open": "url('../sources/icons/accordion-open.svg')",
+        "ico-button-arrow-white": "url('../sources/icons/button-arrow-white.svg')",
+
+        
 
         "logo-header-slick.svg": "url('../sources/logos/header-slick.svg')",
 

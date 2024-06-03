@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOS VOITURES</title>
+    <title>DETAIL VOITURE</title>
 
     <!-- lien avec la feuille de style compilée tailwind -->
     <link rel="stylesheet" href="../css/output.css">
@@ -53,6 +53,43 @@
 
 
         <section class=" bg-white text-black">
+            <div x-data="{
+                            activeImage: 0,
+                            images: [
+                                '../sources/img/detail_voiture/habitacle/habitacle_1.jpeg',
+                                '../sources/img/homepage.jpg',
+                                '../sources/img/detail_voiture/habitacle/habitacle_2.png'
+                            ],
+                            setActiveImage(index) { this.activeImage = index; },
+                            next() { this.activeImage = (this.activeImage + 1) % this.images.length; },
+                            prev() { this.activeImage = (this.activeImage - 1 + this.images.length) % this.images.length; }
+                        }" class="relative h-svh">
+
+                <div class="w-full h-full flex justify-center items-center overflow-hidden">
+                    <img :src="images[activeImage]" :alt="'image habitacle ' + (activeImage + 1)"
+                        class="  object-cover max-w-none min-h-full min-w-full">
+                </div>
+
+                <button @click="prev()" aria-label="Image précédente"
+                    class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 z-50 bg-transparent 
+                                h-[24px] w-[24px] md:w-[52px] md:h-[52px] bg-ico-button-arrow-white bg-center bg-no-repeat bg-contain cursor-pointer"></button>
+                <button @click="next()" aria-label="Image suivante"
+                    class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 rotate-180 z-50 bg-transparent 
+                                h-[24px] w-[24px] md:w-[52px] md:h-[52px] bg-ico-button-arrow-white bg-center bg-no-repeat bg-contain cursor-pointer"></button>
+
+                <div
+                    class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-50">
+                    <template x-for="(image, index) in images" :key="index">
+                        <button @click="setActiveImage(index)" :aria-selected="activeImage === index ? 'true' : 'false'"
+                            class="h-[7px] w-[7px] md:h-[13px] md:w-[13px] border border-white rounded-full focus:outline-none bg-transparent cursor-pointer aria-selected:bg-white aria-selected:w-[23px] aria-selected:md:w-[43px] aria-selected:cursor-default"></button>
+                    </template>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class=" bg-white text-black">
             <div
                 class=" px-7 pt-3 md:pt-8 pb-44 md:pb-64 max-w-[1184px] mx-auto flex flex-col items-stretch gap-36 md:gap-56">
 
@@ -68,7 +105,7 @@
                 </div>
 
                 <div class="gap-2 md:gap-3 flex flex-col items-center max-w-[810px] mx-auto text-center">
-                    <h3 class="font-oswald text-xl md:text-2xl font-normal uppercase">DESCRIPTION</h3>
+                    <h2 class="font-oswald text-xl md:text-2xl font-normal uppercase">DESCRIPTION</h2>
                     <p class="font-neue font-medium text-sm md:text-xl leading-relaxed	md:leading-loose">Véritable
                         monument automobile sorti en 2002, le Cayenne est un succès instantané. Souvent imité mais
                         jamais égalé il restera la référence du SUV de Luxe et le sauveur de la marque Porsche.
@@ -88,7 +125,7 @@
 
         <section class=" bg-white text-white">
             <div
-                class="px-7 pb-12 md:pb-20 max-w-[1184px] mx-auto 
+                class="px-7  max-w-[1184px] mx-auto 
                 grid items-stretch grid-cols-1 md:grid-cols-[minmax(320px,430px)_minmax(360px,2fr)] auto-rows-auto gap-5 lg:gap-9 ">
                 <div class=" md:row-span-2 bg-black px-9 lg:px-11 pt-8 md:pt-10 pb-11 md:pb-14">
                     <h3 class="font-oswald text-2xl md:text-4xl font-normal uppercase">caractéristiques<span
@@ -178,10 +215,100 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <section x-data="{ open: false }" class=" bg-white text-black">
+            <div class=" px-7 pt-12 md:pt-20 pb-20 max-w-[1024px] mx-auto">
+
+                <div x-show="open" x-transition class="mb-12 md:mb-16 pl-4 md:pl-9 border-l-4 border-primary-green">
+                    <p class="font-neue font-medium text-sm leading-relaxed md:text-xl md:leading-loose">
+                        Véritable monument
+                        automobile sorti en 2002, le Cayenne est un succès instantané. Souvent imité mais jamais égalé
+                        il
+                        restera la référence du SUV de Luxe et le sauveur de la marque Porsche.
+                        <br>
+                        L’exemplaire ici proposé est assez rare, puisque de nombreux acheteurs se sont tournés vers le
+                        Turbo
+                        S e-hybride afin d’éviter le malus. Notre Cayenne dispose déjà de ses papiers français, est très
+                        bien optionné et n’affiche que 54 600 km au compteur.
+                        <br>
+                        <br>
+                        ACPL : Apple Car play
+                        <br>
+                        ADAS : ADAS Full Pack
+                        <br>
+                        CALY : Etrier de freins jaunes
+                        <br>
+                        ADAS : ADAS Full Pack
+                        <br>
+                        CALY : Etrier de freins jaunes
+                    </p>
+                </div>
+
+                <button x-on:click="open = ! open" :aria-expanded="open.toString()" aria-controls="accordion-item"
+                    class="mx-auto px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap
+            bg-transparent border-black border text-xs md:text-lg font-neue font-medium
+                flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
+                    <span class="group-aria-expanded:hidden">Afficher tous les équipements et options</span>
+                    <span class="hidden group-aria-expanded:block">Masquer tous les équipements et options</span>
+                    <span class="flex-non bg-ico-accordion-open w-[14px] md:w-[20.3px] h-[14px] md:h-[20.3px] bg-no-repeat bg-center bg-contain 
+                group-aria-expanded:bg-ico-accordion-close group-aria-expanded:bg-[length:105%_auto]"></span>
+                </button>
+            </div>
+        </section>
+
+
+        <section class=" bg-white text-black">
+            <div class=" px-7 pt-20 pb-24 md:pb-52 max-w-[1184px] mx-auto">
+                <h2 class="pb-2 font-oswald text-xl md:text-2xl font-normal uppercase">L’HABITACLE<span
+                        class="text-primary-green">.</span></h2>
+
+
+
+                <div x-data="{
+                            activeImage: 0,
+                            images: [
+                                '../sources/img/detail_voiture/habitacle/habitacle_1.jpeg',
+                                '../sources/img/homepage.jpg',
+                                '../sources/img/detail_voiture/habitacle/habitacle_2.png'
+                            ],
+                            setActiveImage(index) { this.activeImage = index; },
+                            next() { this.activeImage = (this.activeImage + 1) % this.images.length; },
+                            prev() { this.activeImage = (this.activeImage - 1 + this.images.length) % this.images.length; }
+                        }" class="relative h-[480px] md:h-[680px]">
+
+                    <div class="w-full h-full flex justify-center items-center overflow-hidden">
+                        <img :src="images[activeImage]" :alt="'image habitacle ' + (activeImage + 1)"
+                            class="  object-cover max-w-none min-h-full min-w-full">
+                    </div>
+
+                    <button @click="prev()" aria-label="Image précédente"
+                        class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 z-50 bg-transparent 
+                                h-[24px] w-[24px] md:w-[52px] md:h-[52px] bg-ico-button-arrow-white bg-center bg-no-repeat bg-contain cursor-pointer"></button>
+                    <button @click="next()" aria-label="Image suivante"
+                        class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 rotate-180 z-50 bg-transparent 
+                                h-[24px] w-[24px] md:w-[52px] md:h-[52px] bg-ico-button-arrow-white bg-center bg-no-repeat bg-contain cursor-pointer"></button>
+
+                    <div
+                        class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-50">
+                        <template x-for="(image, index) in images" :key="index">
+                            <button @click="setActiveImage(index)"
+                                :aria-selected="activeImage === index ? 'true' : 'false'"
+                                class="h-[7px] w-[7px] md:h-[13px] md:w-[13px] border border-white rounded-full focus:outline-none bg-transparent cursor-pointer aria-selected:bg-white aria-selected:w-[23px] aria-selected:md:w-[43px] aria-selected:cursor-default"></button>
+                        </template>
+                    </div>
+
+                </div>
+
+
+
 
 
             </div>
         </section>
+
+
 
 
 
