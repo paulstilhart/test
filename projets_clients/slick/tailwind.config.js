@@ -32,6 +32,7 @@ module.exports = {
       backgroundImage: {
         "ico-arrow-right-green-cta": "url('../sources/icons/arrow-right-green-cta.svg')",
         "ico-arrow-right-green": "url('../sources/icons/arrow-right-green.svg')",
+        "ico-arrow-right-white": "url('../sources/icons/arrow-right-white.svg')",
         "ico-burger-close": "url('../sources/icons/burger-close.svg')",
         "ico-burger-open": "url('../sources/icons/burger-open.svg')",
         "ico-instagram": "url('../sources/icons/instagram.svg')",
