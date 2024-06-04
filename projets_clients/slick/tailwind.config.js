@@ -39,6 +39,7 @@ module.exports = {
         "ico-accordion-close": "url('../sources/icons/accordion-close.svg')",
         "ico-accordion-open": "url('../sources/icons/accordion-open.svg')",
         "ico-button-arrow-white": "url('../sources/icons/button-arrow-white.svg')",
+        "ico-arrow-bottom-grey": "url('../sources/icons/arrow-bottom-grey.svg')",
 
         
 

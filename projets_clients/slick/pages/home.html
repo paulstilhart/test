@@ -52,8 +52,18 @@
 
         <section
             class="mask_home relative bg-black text-white min-h-screen !min-h-svh bg-background-homepage bg-center bg-no-repeat bg-cover">
+
+            <!-- lui mettre la classe hidden pour cacher la vidéo -->
+            <div class=" absolute top-0 right-0 left-0 bottom-0 h-full w-full overflow-hidden flex justify-center items-center">
+                <video autoplay loop muted class="object-cover max-w-none min-h-full min-w-full">
+                    <source
+                        src="../sources/videos/homepage.mp4"
+                        type="video/mp4" />
+                </video>
+            </div>
+
             <div
-                class="relative z-10 h-full min-h-screen !min-h-svh w-full pt-28 pb-6 px-7 max-w-[1184px] mx-auto flex flex-col justify-end items-start">
+                class="relative z-20 h-full min-h-screen !min-h-svh w-full pt-28 pb-6 px-7 max-w-[1184px] mx-auto flex flex-col justify-end items-start">
                 <h1 class="font-oswald font-semibold text-6xl md:text-9xl md:leading-[120px] uppercase ">
                     Bienvenue<br>chez Slick<span class="text-primary-green">.</span></h1>
                 <p class="pt-3 md:pt-6 pb-20  font-neue font-normal text-sm md:text-xl">Achat, vente et recherche
@@ -61,13 +71,14 @@
                 <a href="#anchor_homepage" class="inline-block self-center w-[34px] h-[34px] md:w-[42px] md:h-[42px] rounded-full 
                 border border-white rotate-90">
                     <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                transition-transform duration-300 translate-x-0 hover:translate-x-1"></span></a>
+                transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span></a>
             </div>
 
         </section>
 
         <section id="anchor_homepage" class=" bg-white text-black">
-            <div class="pt-[100px] md:pt-[120px] px-7 min-h-screen !min-h-svh max-w-[1184px] mx-auto flex flex-col justify-center">
+            <div
+                class="pt-[100px] md:pt-[120px] px-7 min-h-screen !min-h-svh max-w-[1184px] mx-auto flex flex-col justify-center">
                 <h2 class=" text-center font-neue font-medium text-2xl md:text-6xl leading-[65px] md:leading-[120px]">
                     Slick, <span class="text-secondary-grey">une équipe passionnée <br>et expérimentée pour</span>
                     concrétiser
@@ -89,24 +100,24 @@
                         md:static absolute bottom-[50px] left-1/2 -translate-x-1/2 md:translate-x-0">
                         <span>En savoir plus</span>
                         <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
-                            transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span>
+                            transition-transform duration-300 translate-x-0 md:group-hover:translate-x-2"></span>
                     </a>
 
                 </div>
 
 
-                
+
                 <div x-data="{ isDown: false, startX: 0, scrollLeft:150, slideWidth: 0, moved: false }"
-                x-init="slideWidth = $refs.slider.clientWidth; $refs.slider.scrollLeft = scrollLeft;"
-                @mousedown="isDown = true; startX = $event.pageX - $refs.slider.offsetLeft; scrollLeft = $refs.slider.scrollLeft; moved = false;"
+                    x-init="slideWidth = $refs.slider.clientWidth; $refs.slider.scrollLeft = scrollLeft;"
+                    @mousedown="isDown = true; startX = $event.pageX - $refs.slider.offsetLeft; scrollLeft = $refs.slider.scrollLeft; moved = false;"
                     @mouseup="isDown = false" @mouseleave="isDown = false" @mousemove.prevent="if (isDown) { 
                     $refs.slider.scrollLeft = scrollLeft + (startX - $event.pageX); 
                     if (Math.abs(startX - $event.pageX) > 5) { moved = true; } 
                 }" x-ref="slider"
                     class="px-7 h-[135px] md:h-[275px] gap-6 md:gap-12 grid grid-flow-col auto-cols-[222px] md:auto-cols-[441px] overflow-auto no_scrollbar">
-                    
 
-                    <a  x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+
+                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
                         href="/pages/nos-voitures.html"
                         class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
 
@@ -128,12 +139,12 @@
                         <button
                             class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
                             <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                        transition-transform duration-300 translate-x-0 hover:translate-x-1">
+                        transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
                             </span>
                         </button>
                     </a>
 
-                    <a  x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
                         href="/pages/nos-voitures.html"
                         class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
 
@@ -155,12 +166,12 @@
                         <button
                             class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
                             <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                    transition-transform duration-300 translate-x-0 hover:translate-x-1">
+                    transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
                             </span>
                         </button>
                     </a>
 
-                    <a  x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
                         href="/pages/nos-voitures.html"
                         class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
 
@@ -182,12 +193,12 @@
                         <button
                             class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
                             <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                transition-transform duration-300 translate-x-0 hover:translate-x-1">
+                transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
                             </span>
                         </button>
                     </a>
 
-                    <a  x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
                         href="/pages/nos-voitures.html"
                         class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
 
@@ -209,12 +220,12 @@
                         <button
                             class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
                             <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-            transition-transform duration-300 translate-x-0 hover:translate-x-1">
+            transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
                             </span>
                         </button>
                     </a>
 
-                    <a  x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
                         href="/pages/nos-voitures.html"
                         class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
 
@@ -236,7 +247,7 @@
                         <button
                             class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
                             <span
-                                class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 hover:translate-x-1">
+                                class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
                             </span>
                         </button>
                     </a>
@@ -270,8 +281,9 @@
 
                     <button class="rounded-full border border-white  inline-block absolute top-[20px] right-[20px] md:top-[22px] md:right-[22px] 
                         h-[33px] w-[33px] md:h-[42px] md:w-[42px] ">
-                        <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                                transition-transform duration-300 translate-x-0 hover:translate-x-1"></span></button>
+                        <span
+                            class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                                transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span></button>
             </div>
             </a>
             <div class="md:flex-1 flex flex-col gap-5 md:gap-9">
@@ -286,7 +298,7 @@
                             h-[33px] w-[33px] md:h-[42px] md:w-[42px] ">
                         <span
                             class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                                    transition-transform duration-300 translate-x-0 hover:translate-x-1"></span></button>
+                                    transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span></button>
             </div>
             </a>
             <a href="#"
@@ -299,7 +311,7 @@
                 <button class="rounded-full border border-white  inline-block absolute top-[20px] right-[20px] md:top-[22px] md:right-[22px] 
                     h-[33px] w-[33px] md:h-[42px] md:w-[42px] ">
                     <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                            transition-transform duration-300 translate-x-0 hover:translate-x-1"></span></button>
+                            transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span></button>
                 </div>
             </a>
             </div>
@@ -336,7 +348,7 @@
                     flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
                     <span>En savoir plus</span>
                     <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
-                        transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span>
+                        transition-transform duration-300 translate-x-0 md:group-hover:translate-x-2"></span>
                 </a>
             </div>
         </section>
@@ -361,7 +373,7 @@
                 flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
                         <span>S’abonner</span>
                         <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
-                    transition-transform duration-300 translate-x-0 group-hover:translate-x-2"></span>
+                    transition-transform duration-300 translate-x-0 md:group-hover:translate-x-2"></span>
                     </a>
                 </div>
             </div>
