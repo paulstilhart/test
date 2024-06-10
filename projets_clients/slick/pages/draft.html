@@ -23,14 +23,45 @@
 
     <div class="py-40">
 
-        <div x-data="{ isDown: false, startX: 0, scrollLeft: 0, addSnapClass: false,grabbing: false, }"
-            @mousedown="isDown = true; startX = $event.pageX - $el.offsetLeft; scrollLeft = $el.scrollLeft; addSnapClass = false;grabbing = true;"
-            @mouseup="isDown = false; addSnapClass = true;grabbing = false;" 
-            @mouseleave="isDown = false; addSnapClass = true;grabbing = false;"
-            @mousemove.prevent="if (isDown) { $el.scrollLeft = scrollLeft + (startX - $event.pageX); };"
-            :class="{ 'snap-x': addSnapClass, 'cursor-grabbing': grabbing }" 
-            class="cursor-grab h-[480px] md:h-[680px] flex overflow-scroll snap-mandatory max-[768px]:!snap-x max-[768px]:!scroll-smooth no_scrollbar">
-
+        <div x-data="{ 
+        isDown: false, 
+        startX: 0, 
+        scrollLeft: 0, 
+        addSnapClass: false,
+        grabbing: false,
+        transitionTimeout: null,
+    }" @mousedown="
+        isDown = true; 
+        startX = $event.pageX - $el.offsetLeft; 
+        scrollLeft = $el.scrollLeft; 
+        addSnapClass = false;
+        grabbing = true;
+    " @mouseup="
+        isDown = false; 
+        addSnapClass = true;
+        grabbing = false;
+        clearTimeout(transitionTimeout); // Clear previous timeout
+        $el.style.scrollBehavior = 'smooth'; // Apply smooth scroll behavior
+        transitionTimeout = setTimeout(() => { 
+            $el.style.scrollBehavior = 'auto'; // Reset scroll behavior after delay
+        }, 300); // Adjust delay as needed
+    " @mouseleave="
+        isDown = false; 
+        addSnapClass = true;
+        grabbing = false;
+        clearTimeout(transitionTimeout); // Clear previous timeout
+        $el.style.scrollBehavior = 'smooth'; // Apply smooth scroll behavior
+        transitionTimeout = setTimeout(() => { 
+            $el.style.scrollBehavior = 'auto'; // Reset scroll behavior after delay
+        }, 300); // Adjust delay as needed
+    " @mousemove.prevent="
+        if (isDown) { 
+            clearTimeout(transitionTimeout); // Clear previous timeout
+            $el.style.scrollBehavior = 'auto'; // Reset scroll behavior
+            $el.scrollLeft = scrollLeft + (startX - $event.pageX); 
+        }
+    " :class="{ 'snap-x': addSnapClass, 'cursor-grabbing': grabbing }"
+            class="carousel-container cursor-grab h-[480px] md:h-[680px] flex overflow-scroll snap-mandatory max-[768px]:!snap-x max-[768px]:!scroll-smooth no_scrollbar">
             <img src="../sources/img/detail_voiture/habitacle/habitacle_1.jpeg" alt="image carrousel detail voiture"
                 class="object-cover w-full shrink-0 snap-center">
             <img src="../sources/img/detail_voiture/habitacle/habitacle_2.png" alt="image carrousel detail voiture"
@@ -42,6 +73,8 @@
             <img src="../sources/img/cards/vente.jpeg" alt="image carrousel detail voiture"
                 class="object-cover w-full shrink-0 snap-center">
         </div>
+
+
 
     </div>
 
@@ -76,7 +109,7 @@
 
 
 
-<!--  
+    <!--  
 
 
 
