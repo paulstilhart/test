@@ -13,18 +13,156 @@
     <!-- alpine JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-
     <!-- script JS car bug carrousel sur certaines versions de firefox -->
     <script defer src="../js/script.js"></script>
+
+
 </head>
 
-<body>
+<body class="bg-black text-white">
+
+    <div class="py-40">
+
+        <div x-data="{ isDown: false, startX: 0, scrollLeft: 0, addSnapClass: false,grabbing: false, }"
+            @mousedown="isDown = true; startX = $event.pageX - $el.offsetLeft; scrollLeft = $el.scrollLeft; addSnapClass = false;grabbing = true;"
+            @mouseup="isDown = false; addSnapClass = true;grabbing = false;" 
+            @mouseleave="isDown = false; addSnapClass = true;grabbing = false;"
+            @mousemove.prevent="if (isDown) { $el.scrollLeft = scrollLeft + (startX - $event.pageX); };"
+            :class="{ 'snap-x': addSnapClass, 'cursor-grabbing': grabbing }" 
+            class="cursor-grab h-[480px] md:h-[680px] flex overflow-scroll snap-mandatory max-[768px]:!snap-x max-[768px]:!scroll-smooth no_scrollbar">
+
+            <img src="../sources/img/detail_voiture/habitacle/habitacle_1.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center">
+            <img src="../sources/img/detail_voiture/habitacle/habitacle_2.png" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center">
+            <img src="../sources/img/cards/achat.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center">
+            <img src="../sources/img/cards/recherche.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center">
+            <img src="../sources/img/cards/vente.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center">
+        </div>
+
+    </div>
+
+
+    <!--  
+
+    <div class="py-40">
+
+
+        <div id="carousel"
+            class="h-[480px] md:h-[680px] flex overflow-y-hidden overflow-x-scroll snap-x snap-mandatory cursor-grab scroll-smooth">
+            <img src="../sources/img/detail_voiture/habitacle/habitacle_1.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center">
+            <img src="../sources/img/detail_voiture/habitacle/habitacle_2.png" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center">
+            <img src="../sources/img/cards/achat.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center">
+            <img src="../sources/img/cards/recherche.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center">
+            <img src="../sources/img/cards/vente.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center">
+        </div>
+
+
+
+    </div>
+
+-->
 
 
 
 
 
 
+<!--  
+
+
+
+    <section class=" bg-black text-white">
+
+        <div class="pt-10 md:pt-24 pb-32 md:pb-24">
+
+
+
+            <div x-data="{ 
+                isDown: false, 
+                startX: 0, 
+                scrollLeft:0,
+                slideWidth: 0, 
+                moved: false }" x-init="slideWidth = $refs.slider.clientWidth; $refs.slider.scrollLeft = scrollLeft;"
+                @mousedown="isDown = true; startX = $event.pageX - $refs.slider.offsetLeft; scrollLeft = $refs.slider.scrollLeft; moved = false;"
+                @mouseup="isDown = false" @mouseleave="isDown = false" @mousemove.prevent="if (isDown) { 
+                $refs.slider.scrollLeft = scrollLeft + (startX - $event.pageX); 
+                if (Math.abs(startX - $event.pageX) > 5) { moved = true; } 
+            }" class="relative h-[480px] md:h-[680px] overflow-hidden">
+
+
+                <div x-ref="slider" class="w-full h-full flex overflow-scroll snap-x snap-mandatory">
+                    <img src="../sources/img/detail_voiture/habitacle/habitacle_1.jpeg"
+                        alt="image carrousel detail voiture" class="object-cover w-full shrink-0 snap-center">
+                    <img src="../sources/img/detail_voiture/habitacle/habitacle_2.png"
+                        alt="image carrousel detail voiture" class="object-cover w-full shrink-0 snap-center">
+                    <img src="../sources/img/cards/achat.jpeg" alt="image carrousel detail voiture"
+                        class="object-cover w-full shrink-0 snap-center">
+                    <img src="../sources/img/cards/recherche.jpeg" alt="image carrousel detail voiture"
+                        class="object-cover w-full shrink-0 snap-center">
+                    <img src="../sources/img/cards/vente.jpeg" alt="image carrousel detail voiture"
+                        class="object-cover w-full shrink-0 snap-center">
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    </section>
+    <script>
+        const carousel = document.getElementById('carousel');
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener('mousedown', (e) => {
+            isDown = true;
+            carousel.classList.add('active');
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+            carousel.style.cursor = 'grabbing';
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            isDown = false;
+            carousel.classList.remove('active');
+            carousel.style.cursor = 'grab';
+        });
+
+        carousel.addEventListener('mouseup', () => {
+            isDown = false;
+            carousel.classList.remove('active');
+            carousel.style.cursor = 'grab';
+        });
+
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX) * 2; // Le nombre 2 peut être ajusté pour accélérer le défilement
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+
+    </script>
+
+-->
 
 </body>
 
