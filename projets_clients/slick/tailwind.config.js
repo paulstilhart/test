@@ -45,6 +45,7 @@ module.exports = {
         
 
         "logo-header-slick.svg": "url('../sources/logos/header-slick.svg')",
+        "logo-la-factory.svg": "url('../sources/logos/la-factory.svg')",
 
         "background-text-cta": "url('../sources/icons/background-text-cta.svg')",
         "background-homepage": "url('../sources/img/homepage.jpg')",
