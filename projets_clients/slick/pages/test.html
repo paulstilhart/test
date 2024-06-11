@@ -24,7 +24,7 @@
         <div x-data="{ isGrabbing: false, startX: 0, scrollLeft: 0 }"
             @mousedown="isGrabbing = true; startX = $event.pageX - $refs.container.offsetLeft; scrollLeft = $refs.container.scrollLeft; $refs.container.style.cursor = 'grabbing';"
             @mouseup="isGrabbing = false; $refs.container.style.cursor = 'grab';"
-            @mousemove="if (isGrabbing) { $event.preventDefault(); $refs.container.scrollLeft = scrollLeft - (($event.pageX - $refs.container.offsetLeft - startX) * 2); }"
+            @mousemove="if (isGrabbing) { $event.preventDefault(); $refs.container.scrollLeft = scrollLeft - (($event.pageX - $refs.container.offsetLeft - startX) * 3); }"
             @mouseleave="isGrabbing = false; $refs.container.style.cursor = 'grab';" x-ref="container"
             class="h-[480px] md:h-[680px] flex overflow-scroll snap-mandatory snap-x scroll-smooth no_scrollbar cursor-grab">
 
