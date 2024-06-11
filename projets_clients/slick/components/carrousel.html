@@ -241,7 +241,36 @@
 
 
 
+    <section class=" bg-white text-black py-10">
 
+        <!-- carrousel avec grab et scroll horizontal à cran -->
+        <div x-data="{ isGrabbing: false, startX: 0, scrollLeft: 0 }"
+            @mousedown="isGrabbing = true; startX = $event.pageX - $refs.container.offsetLeft; scrollLeft = $refs.container.scrollLeft; $refs.container.style.cursor = 'grabbing';"
+            @mouseup="isGrabbing = false; $refs.container.style.cursor = 'grab';"
+            @mousemove="if (isGrabbing) { $event.preventDefault(); $refs.container.scrollLeft = scrollLeft - (($event.pageX - $refs.container.offsetLeft - startX) * 3); }"
+            @mouseleave="isGrabbing = false; $refs.container.style.cursor = 'grab';" x-init="$nextTick(() => {
+            document.addEventListener('dragstart', function (event) {
+              if (event.target.tagName.toLowerCase() === 'img') {
+                event.preventDefault(); // Empêche le glisser-déposer de l'image
+              }
+            });
+          })" x-ref="container"
+            class="no_scrollbar h-[480px] md:h-[680px] flex overflow-scroll scroll-smooth  cursor-grab snap-mandatory snap-x touch-manipulation">
+
+            <img src="../sources/img/detail_voiture/habitacle/habitacle_1.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none ">
+            <img src="../sources/img/detail_voiture/habitacle/habitacle_2.png" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+            <img src="../sources/img/cards/achat.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+            <img src="../sources/img/cards/recherche.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+            <img src="../sources/img/cards/vente.jpeg" alt="image carrousel detail voiture"
+                class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+
+        </div>
+
+    </section>
 
 
 

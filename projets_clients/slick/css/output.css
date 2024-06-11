@@ -1067,13 +1067,8 @@ html {
   cursor: pointer;
 }
 
-.touch-none{
-  touch-action: none;
-}
-
-.touch-pinch-zoom{
-  --tw-pinch-zoom: pinch-zoom;
-  touch-action: var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom);
+.cursor-all-scroll{
+  cursor: all-scroll;
 }
 
 .touch-manipulation{
@@ -1096,10 +1091,6 @@ html {
 
 .snap-mandatory{
   --tw-scroll-snap-strictness: mandatory;
-}
-
-.snap-start{
-  scroll-snap-align: start;
 }
 
 .snap-center{
@@ -1359,6 +1350,11 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gray-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\.\/sources\/img\/nos_voitures\/nos-voitures\.jpeg\'\)\]{
   background-image: url('../sources/img/nos_voitures/nos-voitures.jpeg');
 }
@@ -1515,6 +1511,11 @@ html {
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pb-10{
