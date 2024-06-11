@@ -612,6 +612,10 @@ html {
   }
 }
 
+.pointer-events-none{
+  pointer-events: none;
+}
+
 .fixed{
   position: fixed;
 }
@@ -1063,6 +1067,10 @@ html {
   cursor: pointer;
 }
 
+.touch-none{
+  touch-action: none;
+}
+
 .select-none{
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1087,6 +1095,10 @@ html {
 
 .snap-center{
   scroll-snap-align: center;
+}
+
+.snap-always{
+  scroll-snap-stop: always;
 }
 
 .appearance-none{
