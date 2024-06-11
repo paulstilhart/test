@@ -273,54 +273,66 @@
             <div class=" px-7 pt-20 pb-24 md:pb-52 max-w-[1184px] mx-auto">
                 <h2 class="pb-2 font-oswald text-xl md:text-2xl font-normal uppercase">L’HABITACLE<span
                         class="text-primary-green">.</span></h2>
-
-
-
+    
+    
+    
                 <div x-data="{
-                            activeImage: 0,
                             images: [
                                 '../sources/img/detail_voiture/habitacle/habitacle_1.jpeg',
-                                '../sources/img/homepage.jpg',
-                                '../sources/img/detail_voiture/habitacle/habitacle_2.png'
+                                '../sources/img/detail_voiture/habitacle/habitacle_2.png',
+                                '../sources/img/cards/achat.jpeg',
+                                '../sources/img/cards/recherche.jpeg',
+                                '../sources/img/cards/vente.jpeg'
                             ],
-                            setActiveImage(index) { this.activeImage = index; },
-                            next() { this.activeImage = (this.activeImage + 1) % this.images.length; },
-                            prev() { this.activeImage = (this.activeImage - 1 + this.images.length) % this.images.length; }
+                            activeImage: 0,
+                            changeImage(index) {
+                                this.activeImage = index;
+                                this.$refs.carousel.scrollLeft = index * this.$refs.carousel.clientWidth;
+                            },
+                            handleScroll() {
+                                const carousel = this.$refs.carousel;
+                                const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+                                console.log(index);
+                                this.activeImage = index;
+                            }
                         }" class="relative h-[480px] md:h-[680px]">
-
-                    <div class="w-full h-full flex justify-center items-center overflow-hidden">
-                        <img :src="images[activeImage]" :alt="'image habitacle ' + (activeImage + 1)"
-                            class="  object-cover max-w-none min-h-full min-w-full">
+                    <!-- Carrousel d'images -->
+                    <div x-ref="carousel" @scroll.debounce.250ms="handleScroll"
+                        class="h-full w-full no_scrollbar cursor-all-scroll flex overflow-scroll scroll-smooth snap-mandatory snap-x touch-manipulation">
+                        <template x-for="(image, index) in images" :key="index">
+                            <img :src="image" alt="image carrousel detail voiture"
+                                class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+                        </template>
                     </div>
-
-
-                    <button @click="prev()" aria-label="Image précédente"
-                        class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white ">
-                        <span class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] 
-                            transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
+    
+                    <!-- Boutons de navigation -->
+                    <button @click="changeImage((activeImage - 1 + images.length) % images.length)"
+                        aria-label="Image précédente"
+                        class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                        <span
+                            class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
                     </button>
-
-                    <button @click="next()" aria-label="Image suivante"
-                        class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white ">
-                        <span class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] 
-                        transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
+                    <button @click="changeImage((activeImage + 1) % images.length)" aria-label="Image suivante"
+                        class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                        <span
+                            class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
                     </button>
-
+    
+                    <!-- Indicateurs d'images -->
                     <div
                         class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-50">
                         <template x-for="(image, index) in images" :key="index">
-                            <button @click="setActiveImage(index)"
-                                :aria-selected="activeImage === index ? 'true' : 'false'"
+                            <button @click="changeImage(index)" :aria-selected="activeImage === index ? 'true' : 'false'"
                                 class="h-[10px] w-[10px] md:h-[13px] md:w-[13px] border border-white rounded-full focus:outline-none bg-transparent cursor-pointer aria-selected:bg-white aria-selected:w-[30px] aria-selected:md:w-[43px] aria-selected:cursor-default"></button>
                         </template>
                     </div>
-
                 </div>
-
-
-
-
-
+    
+    
+    
+    
+    
+    
             </div>
         </section>
 
