@@ -74,7 +74,7 @@
                     }
                 }" class="relative h-full w-full">
                     <!-- Carrousel d'images -->
-                    <div x-ref="carousel" @scroll.debounce.250ms="handleScroll"
+                    <div x-ref="carousel" @scroll.debounce.100sm="handleScroll"
                         class="h-full w-full no_scrollbar cursor-all-scroll flex overflow-scroll scroll-smooth snap-mandatory snap-x touch-manipulation">
                         <template x-for="(image, index) in images" :key="index">
                             <img :src="image" alt="image carrousel detail voiture"
@@ -309,7 +309,7 @@
                             }
                         }" class="relative h-[480px] md:h-[680px]">
                     <!-- Carrousel d'images -->
-                    <div x-ref="carousel" @scroll.debounce.250ms="handleScroll"
+                    <div x-ref="carousel" @scroll.debounce.100ms="handleScroll"
                         class="h-full w-full no_scrollbar cursor-all-scroll flex overflow-scroll scroll-smooth snap-mandatory snap-x touch-manipulation">
                         <template x-for="(image, index) in images" :key="index">
                             <img :src="image" alt="image carrousel detail voiture"
