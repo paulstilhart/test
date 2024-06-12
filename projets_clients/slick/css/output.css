@@ -857,6 +857,10 @@ html {
   height: 100svh;
 }
 
+.h-\[6px\]{
+  height: 6px;
+}
+
 .\!min-h-svh{
   min-height: 100svh !important;
 }
@@ -952,6 +956,10 @@ html {
 
 .w-full{
   width: 100%;
+}
+
+.w-\[46px\]{
+  width: 46px;
 }
 
 .min-w-full{
@@ -1069,6 +1077,10 @@ html {
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.cursor-default{
+  cursor: default;
 }
 
 .touch-manipulation{
