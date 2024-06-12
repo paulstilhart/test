@@ -85,19 +85,19 @@
                     <!-- Boutons de navigation -->
                     <button @click="changeImage((activeImage - 1 + images.length) % images.length)"
                         aria-label="Image précédente"
-                        class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                        class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-40 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
                         <span
                             class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
                     </button>
                     <button @click="changeImage((activeImage + 1) % images.length)" aria-label="Image suivante"
-                        class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                        class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-40 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
                         <span
                             class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
                     </button>
 
                     <!-- Indicateurs d'images -->
                     <div
-                        class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-50">
+                        class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-40">
                         <template x-for="(image, index) in images" :key="index">
                             <button @click="changeImage(index)"
                                 :aria-selected="activeImage === index ? 'true' : 'false'"
@@ -320,19 +320,19 @@
                     <!-- Boutons de navigation -->
                     <button @click="changeImage((activeImage - 1 + images.length) % images.length)"
                         aria-label="Image précédente"
-                        class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                        class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-40 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
                         <span
                             class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
                     </button>
                     <button @click="changeImage((activeImage + 1) % images.length)" aria-label="Image suivante"
-                        class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                        class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-40 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
                         <span
                             class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
                     </button>
 
                     <!-- Indicateurs d'images -->
                     <div
-                        class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-50">
+                        class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-40">
                         <template x-for="(image, index) in images" :key="index">
                             <button @click="changeImage(index)"
                                 :aria-selected="activeImage === index ? 'true' : 'false'"

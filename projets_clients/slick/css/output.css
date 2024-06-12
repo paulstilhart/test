@@ -692,6 +692,10 @@ html {
   z-index: 20;
 }
 
+.z-40{
+  z-index: 40;
+}
+
 .z-50{
   z-index: 50;
 }
@@ -837,8 +841,8 @@ html {
   height: 480px;
 }
 
-.h-\[5px\]{
-  height: 5px;
+.h-\[6px\]{
+  height: 6px;
 }
 
 .h-\[85px\]{
@@ -855,10 +859,6 @@ html {
 
 .h-svh{
   height: 100svh;
-}
-
-.h-\[6px\]{
-  height: 6px;
 }
 
 .\!min-h-svh{
@@ -929,8 +929,8 @@ html {
   width: 34px;
 }
 
-.w-\[38px\]{
-  width: 38px;
+.w-\[46px\]{
+  width: 46px;
 }
 
 .w-\[71px\]{
@@ -956,10 +956,6 @@ html {
 
 .w-full{
   width: 100%;
-}
-
-.w-\[46px\]{
-  width: 46px;
 }
 
 .min-w-full{
@@ -1067,6 +1063,10 @@ html {
   cursor: all-scroll;
 }
 
+.cursor-default{
+  cursor: default;
+}
+
 .cursor-grab{
   cursor: grab;
 }
@@ -1077,10 +1077,6 @@ html {
 
 .cursor-pointer{
   cursor: pointer;
-}
-
-.cursor-default{
-  cursor: default;
 }
 
 .touch-manipulation{
@@ -1958,9 +1954,9 @@ input:-webkit-autofill:active {
   pointer-events: none;
 }
 
-.aria-disabled\:before\:z-50[aria-disabled="true"]::before{
+.aria-disabled\:before\:z-40[aria-disabled="true"]::before{
   content: var(--tw-content);
-  z-index: 50;
+  z-index: 40;
 }
 
 .aria-disabled\:before\:bg-white[aria-disabled="true"]::before{
