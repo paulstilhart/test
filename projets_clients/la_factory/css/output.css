@@ -887,6 +887,16 @@ html {
   padding-bottom: 3px;
 }
 
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-64{
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
+
 .pb-12{
   padding-bottom: 3rem;
 }
