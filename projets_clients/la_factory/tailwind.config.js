@@ -36,7 +36,9 @@ module.exports = {
         "header_brand_violet": "url('../sources/logos/header/header_brand_violet.svg')",
         "footer_la_factory_violet": "url('../sources/logos/footer/footer_la_factory_violet.svg')",
         "footer_la_factory_white": "url('../sources/logos/footer/footer_la_factory_white.svg')",
-        "button_arrow": "url('../sources/icons/button_arrow.svg')",
+        "button_arrow_black": "url('../sources/icons/button_arrow_black.svg')",
+        "button_arrow_yellow": "url('../sources/icons/button_arrow_yellow.svg')",
+
       },
     },
   },

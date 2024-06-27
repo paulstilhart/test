@@ -59,3 +59,17 @@ input:-webkit-autofill:active {
   -webkit-transition: color 9999s ease-out 9999s, background-color 9999s ease-out 9999s;
 }
 
+
+
+
+.mask_black_50::before {
+  background: black;
+  opacity: 0.5;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
