@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+
+    <!-- lien avec la feuille de style compilée tailwind -->
+    <link rel="stylesheet" href="../css/output.css">
+
+
+    <!-- alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- script JS -->
+    <script defer src="../js/script.js"></script>
+</head>
+
+<body class="">
+
+    <header>
+        <div class="bg-white dark:bg-primary-violet fixed z-40 w-full  ">
+            <div
+                class="px-6 md:px-[70px] pb-[6px] md:pb-0 pt-7 md:pt-10 max-w-[1512px] mx-auto flex justify-between items-center">
+                <a href="#"
+                    class="js_header_logo_scroll w-9 h-12 md:w-60 md:h-12 transition-all 
+            bg-[length:auto_100%] md:bg-contain bg-left md:bg-center bg-no-repeat bg-header_brand_violet dark:bg-header_brand_white overflow-hidden"></a>
+                <button
+                    class="js_nav_open h-[62px] w-[62px] md:h-[84px] md:w-[84px]  rounded-full 
+                bg-primary-violet dark:bg-primary-jaune text-white dark:text-primary-noir-gris font-pfmellonbold font-bold text-xl md:text-3xl">MENU</button>
+            </div>
+        </div>
+
+        <div class="js_nav z-50 fixed w-full h-svh bg-primary-violet -translate-y-full transition-transform">
+            <div class="h-full w-full px-6 md:px-[70px] max-w-[1512px] mx-auto flex flex-col">
+
+                <div class="pb-[6px] md:pb-0 pt-7 md:pt-10  flex justify-between items-center">
+                    <a href="#"
+                        class=" w-9 h-12 md:w-60 md:h-12 bg-[length:auto_100%] md:bg-contain bg-left md:bg-center bg-no-repeat bg-header_brand_white overflow-hidden"></a>
+                    <button
+                        class="js_nav_close h-[62px] w-[62px] md:h-[84px] md:w-[84px]  rounded-full 
+                bg-primary-jaune text-primary-noir-gris  font-pfmellonbold font-bold text-xl md:text-3xl">FERMER</button>
+                </div>
+
+                <div class=" flex-auto relative flex flex-col justify-between">
+
+                    <div class="flex-auto flex flex-col justify-center gap-11">
+                        <a href=""
+                            class="inline-block text-white font-pfmellonbold font-bold md:text-[220px] md:leading-[165px] uppercase">expertises</a>
+                        <a href=""
+                            class="inline-block text-white font-pfmellonbold font-bold md:text-[220px] md:leading-[165px] uppercase">culture</a>
+                        <a href=""
+                            class="inline-block text-white font-pfmellonbold font-bold md:text-[220px] md:leading-[165px] uppercase">contact</a>
+                    </div>
+
+                    <div class="pb-9 md:pb-0 md:-rotate-90 md:absolute  right-[-110px] bottom-36">
+                        <a href="" class="font-pfmellonbold font-bold text-3xl uppercase text-white">linkedin</a>
+                        <span
+                            class="font-pfmellonbold font-bold text-3xl uppercase text-primary-jaune">&nbsp;*&nbsp;</span>
+                        <a href="" class="font-pfmellonbold font-bold text-3xl uppercase text-white">mentions
+                            légales</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+        <section class="h-[2000px] bg-primary-violet"></section>
+    </main>
+
+    <footer>
+        <div data-theme="white" class="min-h-[80vh] bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white
+        bg-bottom bg-no-repeat bg-contain bg-footer_la_factory_violet dark:bg-footer_la_factory_white">
+            <div class="pt-36 pb-24 md:py-64 px-6 md:px-[70px] max-w-[1512px] mx-auto  flex flex-col md:flex-row gap-9 justify-between">
+                <div class="flex flex-col gap-5  md:gap-10">
+                    <div>
+                        <h2 class="text-3xl md:text-7xl font-pfmellonbold font-bold uppercase ">Vous avez un projet ?</h2>
+                        <p class="text-xs md:text-lg font-poppins font-normal">Nous le réaliserons</p>
+                    </div>
+
+                    <a href="#" class="pl-[18px] md:pl-[22px] pr-[6px] md:pr-[7px] py-[5px] md:py-[7px] w-fit rounded-full whitespace-nowrap
+                    bg-primary-jaune text-primary-noir-gris  text-xs md:text-base font-poppins font-bold uppercase
+                        flex flex-nowrap justify-center items-center gap-4 group">
+                        <span>contact</span>
+                        <span class="h-[26px] w-[26px] md:h-[33px] md:w-[33px] rounded-full overflow-hidden flex-none
+                         bg-button_arrow bg-contain bg-center bg-no-repeat"></span>
+                    </a>
+
+                    
+
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <a href="" class="font-poppins font-normal text-base md:text-right">Linkedin</a>
+                    <a href="" class="font-poppins font-normal text-base md:text-right">Mentions légales</a>
+                    <a href="" class="font-poppins font-normal text-base md:text-right">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
