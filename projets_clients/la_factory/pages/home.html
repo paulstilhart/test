@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="scroll-smooth dark">
 
 <head>
     <meta charset="UTF-8">
@@ -20,21 +20,21 @@
 <body class="">
 
     <header>
-        <div class="bg-white dark:bg-primary-violet fixed z-40 w-full  ">
+        <div class="bg-white dark:bg-primary-violet transition-colors fixed z-40 w-full  ">
             <div
-                class="px-6 md:px-[70px] pb-[6px] md:pb-0 pt-7 md:pt-10 max-w-[1512px] mx-auto flex justify-between items-center">
+                class="px-6 lg:px-[70px] pb-[6px] md:pb-0 pt-7 md:pt-10 max-w-[1512px] mx-auto flex justify-between items-center">
                 <a href="#"
                     class="js_header_logo_scroll w-9 h-12 md:w-60 md:h-12 transition-all 
             bg-[length:auto_100%] md:bg-contain bg-left md:bg-center bg-no-repeat bg-header_brand_violet dark:bg-header_brand_white overflow-hidden"></a>
                 <button
                     class="js_nav_open h-[62px] w-[62px] md:h-[84px] md:w-[84px]  rounded-full 
-                bg-primary-violet dark:bg-primary-jaune text-white dark:text-primary-noir-gris font-pfmellonbold font-bold text-xl md:text-3xl">MENU</button>
+                bg-primary-violet dark:bg-primary-jaune text-white dark:text-primary-noir-gris transition-colors font-pfmellonbold font-bold text-xl md:text-3xl">MENU</button>
             </div>
         </div>
 
         <div
             class="js_nav z-50 fixed w-full h-svh bg-primary-violet -translate-y-full transition-transform overflow-y-auto">
-            <div class="h-full w-full px-6 md:px-[70px] max-w-[1512px] mx-auto flex flex-col">
+            <div class="h-full w-full px-6 lg:px-[70px] max-w-[1512px] mx-auto flex flex-col">
 
                 <div class="pb-[6px] md:pb-0 pt-7 md:pt-10  flex justify-between items-center">
                     <a href="#"
@@ -71,20 +71,99 @@
 
     <main>
         <section data-theme="violet"
-            class="px-6 md:px-[70px] max-w-[1512px] bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white">
-            <h2 class="font-pfmellonbold font-bold text-[106px]">REJOIGNEZ<span class="inline-block text-primary-jaune">*</span>
+        class=" bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors">
+        <div class="px-6 lg:px-[70px] max-w-[1512px] mx-auto pt-11 pb-8 md:pt-24 md:pb-16">
+            <h2 class="font-pfmellonbold font-bold text-[106px] leading-[90px] lg:text-[300px] lg:leading-[250px]">
+                REJOIGNEZ<span class="inline-block text-primary-jaune">*</span>
                 <br>
                 NOUS
             </h2>
-        </section>
+
+            <div class="pt-14 pb-12 md:pt-20 md:pb-12 flex flex-col gap-5 md:gap-9">
+                <a href="" target="_blank" class="pb-3 md:pb-5 border-b border-black dark:border-white transition-colors flex justify-between items-center group">
+
+                    <div class="flex flex-col gap-2 md:gap-3">
+                        <p class="font-pfmellonbold font-bold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">digital designer</p>
+                        <div class="flex gap-[3px] md:gap-2 justify-start items-center">
+                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
+                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
+                        </div>
+
+                    </div>
+
+                    <span
+                    class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	"></span>
+                </a>
+
+                <a href="" target="_blank" class="pb-3 md:pb-5 border-b border-black dark:border-white transition-colors flex justify-between items-center group">
+
+                    <div class="flex flex-col gap-2 md:gap-3">
+                        <p class="font-pfmellonbold font-bold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">developpeur web</p>
+                        <div class="flex gap-[3px] md:gap-2 justify-start items-center">
+                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
+                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
+                        </div>
+                    </div>
+
+                    <span
+                    class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	"></span>
+                </a>
+
+                <a href="" target="_blank" class="pb-3 md:pb-5 border-b border-black dark:border-white transition-colors flex justify-between items-center group">
+
+                    <div class="flex flex-col gap-2 md:gap-3">
+                        <p class="font-pfmellonbold font-bold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">candidature spontanée</p>
+                        <div class="flex gap-[3px] md:gap-2 justify-start items-center">
+                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">ibiza</span>
+                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">paris</span>
+                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">barcelone</span>
+                        </div>
+                    </div>
+
+                    <span
+                    class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	"></span>
+                </a>
+            </div>
+
+            <a href="#" class=" mx-auto pl-[18px] md:pl-[30px] pr-[6px] py-[5px] md:py-[6px] w-fit rounded-full whitespace-nowrap
+            bg-primary-jaune text-primary-noir-gris  text-xs md:text-lg font-poppins font-bold uppercase
+                flex flex-nowrap justify-center items-center gap-4 md:gap-7 group">
+                <span>toutes les offres</span>
+                <span
+                    class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_black bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	"></span>
+            </a>
+
+            <div class="mask_black_50 relative mt-14 md:mt-28 flex justify-between items-center rounded-[20px] md:rounded-[30px] h-[188px] md:h-[480px]
+            bg-[url('../sources/img/joins_us.jpeg')] bg-center bg-no-repeat bg-cover overflow-hidden">
+            <a href="#" class="z-10 mx-auto pl-[18px] md:pl-[30px] pr-[6px] py-[5px] md:py-[6px] w-fit rounded-full whitespace-nowrap
+            bg-white text-primary-noir-gris  text-xs md:text-lg font-poppins font-bold uppercase
+                flex flex-nowrap justify-center items-center gap-4 md:gap-7 group">
+                <span>explorer notre culture</span>
+                <span
+                    class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	"></span>
+            </a></div>
+        </div>
+    </section>
 
     </main>
 
     <footer>
-        <div data-theme="white" class="min-h-[500px] bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white
-        bg-bottom bg-no-repeat bg-contain bg-footer_la_factory_violet dark:bg-footer_la_factory_white">
+        <div data-theme="white" class="min-h-[500px] bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors">
             <div
-                class="pt-36 pb-24 md:py-64 px-6 md:px-[70px] max-w-[1512px] mx-auto  flex flex-col md:flex-row gap-9 justify-between">
+                class="pt-36 pb-24 md:py-64 px-6 lg:px-[70px] max-w-[1512px] mx-auto  flex flex-col md:flex-row gap-9 justify-between 
+                bg-footer_la_factory_violet dark:bg-footer_la_factory_white bg-bottom bg-no-repeat bg-contain  transition-all">
                 <div class="flex flex-col gap-5  md:gap-10">
                     <div>
                         <h2 class="text-3xl md:text-7xl font-pfmellonbold font-bold uppercase ">Vous avez un projet ?
@@ -92,7 +171,7 @@
                         <p class="text-xs md:text-lg font-poppins font-normal">Nous le réaliserons</p>
                     </div>
 
-                    <a href="#" class="inline-block pl-[18px] md:pl-[22px] pr-[6px] md:pr-[7px] py-[5px] md:py-[7px] w-fit rounded-full whitespace-nowrap
+                    <a href="#" class=" pl-[18px] md:pl-[22px] pr-[6px] md:pr-[7px] py-[5px] md:py-[7px] w-fit rounded-full whitespace-nowrap
                     bg-primary-jaune text-primary-noir-gris  text-xs md:text-base font-poppins font-bold uppercase
                         flex flex-nowrap justify-center items-center gap-4 group">
                         <span>contact</span>
