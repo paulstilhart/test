@@ -30,10 +30,14 @@ module.exports = {
       },
 
       backgroundImage: {
+        "header_monogramme_violet": "url('../sources/logos/header/header_monogramme_violet.svg')",
+        "header_monogramme_white": "url('../sources/logos/header/header_monogramme_white.svg')",
+
         "header_logo_white": "url('../sources/logos/header/header_logo_white.svg')",
         "header_brand_white": "url('../sources/logos/header/header_brand_white.svg')",
         "header_logo_violet": "url('../sources/logos/header/header_logo_violet.svg')",
         "header_brand_violet": "url('../sources/logos/header/header_brand_violet.svg')",
+
         "footer_la_factory_violet": "url('../sources/logos/footer/footer_la_factory_violet.svg')",
         "footer_la_factory_white": "url('../sources/logos/footer/footer_la_factory_white.svg')",
         "button_arrow_black": "url('../sources/icons/button_arrow_black.svg')",

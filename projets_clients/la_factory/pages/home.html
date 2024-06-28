@@ -19,47 +19,48 @@
 
 <body class="">
 
-    <header>
-        <div class="bg-white dark:bg-primary-violet transition-colors fixed z-40 w-full  ">
+    <header class="">
+        <div class="!bg-transparent bg-white dark:bg-primary-violet transition-colors duration-300 fixed z-50 w-full  ">
             <div
                 class="px-6 lg:px-[70px] pb-[6px] md:pb-0 pt-7 md:pt-10 max-w-[1512px] mx-auto flex justify-between items-center">
                 <a href="#"
-                    class="js_header_logo_scroll w-9 h-12 md:w-60 md:h-12 transition-all duration-1000	
-            bg-[length:auto_100%] md:bg-contain bg-left md:bg-center bg-no-repeat bg-header_brand_violet dark:bg-header_brand_white overflow-hidden"></a>
+                class="md:hidden w-9 h-12 transition-colors duration-300 bg-cover bg-center bg-no-repeat bg-header_monogramme_violet dark:bg-header_monogramme_white overflow-hidden"></a>
+
+                <a href="#"
+                    class="js_header_logo_scroll hidden md:inline-block w-9 h-12 md:w-60 md:h-12 transition-all duration-1000 
+                    bg-[length:auto_100%] md:bg-contain bg-left md:bg-center bg-no-repeat bg-header_brand_violet dark:bg-header_brand_white overflow-hidden"></a>
+
                 <button
-                    class="js_nav_open h-[62px] w-[62px] md:h-[84px] md:w-[84px]  rounded-full 
-                bg-primary-violet dark:bg-primary-jaune text-white dark:text-primary-noir-gris transition-colors font-pfmellonbold font-bold text-xl md:text-3xl">MENU</button>
+                    class="js_nav_toggle h-[62px] w-[62px] md:h-[84px] md:w-[84px]  rounded-full 
+                bg-primary-violet dark:bg-primary-jaune text-white dark:text-primary-noir-gris transition-all duration-300 hover:scale-[1.15]  flex items-center justify-center">
+                    <span
+                        class="inline-block font-pfmellonbold font-bold text-xl md:text-3xl h-7 md:h-9 uppercase overflow-hidden">
+                        <span class="js_nav_toggle_text inline-block transition-transform duration-300">MENU<br>FERMER</span>
+                    </span>
+                </button>
             </div>
         </div>
 
-        <div
-            class="js_nav z-50 fixed w-full h-svh bg-primary-violet -translate-y-full transition-transform overflow-y-auto">
+        <div aria-expanded="false"
+            class="js_nav invisible z-40 fixed w-full h-svh bg-white text-primary-noir-gris  dark:bg-primary-violet dark:text-white transition-all duration-300  overflow-y-auto">
             <div class="h-full w-full px-6 lg:px-[70px] max-w-[1512px] mx-auto flex flex-col">
-
-                <div class="pb-[6px] md:pb-0 pt-7 md:pt-10  flex justify-between items-center">
-                    <a href="#"
-                        class=" w-9 h-12 md:w-60 md:h-12 bg-[length:auto_100%] md:bg-contain bg-left md:bg-center bg-no-repeat bg-header_brand_white overflow-hidden"></a>
-                    <button
-                        class="js_nav_close h-[62px] w-[62px] md:h-[84px] md:w-[84px]  rounded-full 
-                bg-primary-jaune text-primary-noir-gris  font-pfmellonbold font-bold text-xl md:text-3xl">FERMER</button>
-                </div>
 
                 <div class=" flex-auto relative flex flex-col justify-between">
 
                     <div class="flex-auto flex flex-col justify-center gap-11">
                         <a href=""
-                            class="inline-block text-white font-pfmellonbold font-bold md:text-[220px] md:leading-[165px] uppercase">expertises</a>
+                            class="inline-block  font-pfmellonbold font-bold md:text-[220px] md:leading-[165px] uppercase">expertises</a>
                         <a href=""
-                            class="inline-block text-white font-pfmellonbold font-bold md:text-[220px] md:leading-[165px] uppercase">culture</a>
+                            class="inline-block  font-pfmellonbold font-bold md:text-[220px] md:leading-[165px] uppercase">culture</a>
                         <a href=""
-                            class="inline-block text-white font-pfmellonbold font-bold md:text-[220px] md:leading-[165px] uppercase">contact</a>
+                            class="inline-block  font-pfmellonbold font-bold md:text-[220px] md:leading-[165px] uppercase">contact</a>
                     </div>
 
                     <div class="pb-9 md:pb-0 md:-rotate-90 md:absolute  right-[-110px] bottom-36">
-                        <a href="" class="font-pfmellonbold font-bold text-3xl uppercase text-white">linkedin</a>
+                        <a href="" class="font-pfmellonbold font-bold text-3xl uppercase ">linkedin</a>
                         <span
-                            class="font-pfmellonbold font-bold text-3xl uppercase text-primary-jaune">&nbsp;*&nbsp;</span>
-                        <a href="" class="font-pfmellonbold font-bold text-3xl uppercase text-white">mentions
+                            class="font-pfmellonbold font-bold text-3xl uppercase  dark:text-primary-jaune">&nbsp;*&nbsp;</span>
+                        <a href="" class="font-pfmellonbold font-bold text-3xl uppercase ">mentions
                             légales</a>
                     </div>
                 </div>
@@ -73,99 +74,116 @@
         <section class="py-64"></section>
 
         <section data-theme="violet"
-        class=" bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors">
-        <div class="px-6 lg:px-[70px] max-w-[1512px] mx-auto pt-11 pb-8 md:pt-24 md:pb-16">
-            <h2 class="font-pfmellonbold font-bold text-[106px] leading-[90px] lg:text-[300px] lg:leading-[250px]">
-                REJOIGNEZ<span class="inline-block text-primary-jaune">*</span>
-                <br>
-                NOUS
-            </h2>
+            class=" bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors duration-300">
+            <div class="px-6 lg:px-[70px] max-w-[1512px] mx-auto pt-11 pb-8 md:pt-24 md:pb-16">
+                <h2
+                    class="text-primary-violet dark:text-white font-pfmellonbold font-bold text-[106px] leading-[90px] lg:text-[300px] lg:leading-[250px]">
+                    REJOIGNEZ<span class="inline-block text-primary-jaune">*</span>
+                    <br>
+                    NOUS
+                </h2>
 
-            <div class="pt-14 pb-12 md:pt-20 md:pb-12 flex flex-col gap-5 md:gap-9">
-                <a href="" target="_blank" class="pb-3 md:pb-5 border-b border-black dark:border-white transition-colors flex justify-between items-center group">
+                <div class="pt-14 pb-12 md:pt-20 md:pb-12 flex flex-col gap-5 md:gap-9">
+                    <a href="" target="_blank"
+                        class="pb-3 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
 
-                    <div class="flex flex-col gap-2 md:gap-3">
-                        <p class="font-pfmellonbold font-bold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">digital designer</p>
-                        <div class="flex gap-[3px] md:gap-2 justify-start items-center">
-                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                        <div class="flex flex-col gap-2 md:gap-3">
+                            <p
+                                class="font-pfmellonbold font-bold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">
+                                digital designer</p>
+                            <div class="flex gap-[3px] md:gap-2 justify-start items-center">
+                                <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
-                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                                <span
+                                    class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
+                            </div>
+
                         </div>
 
-                    </div>
+                        <span
+                            class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	duration-300"></span>
+                    </a>
 
-                    <span
-                    class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
-                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	duration-[350ms]"></span>
-                </a>
+                    <a href="" target="_blank"
+                        class="pb-3 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
 
-                <a href="" target="_blank" class="pb-3 md:pb-5 border-b border-black dark:border-white transition-colors flex justify-between items-center group">
-
-                    <div class="flex flex-col gap-2 md:gap-3">
-                        <p class="font-pfmellonbold font-bold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">developpeur web</p>
-                        <div class="flex gap-[3px] md:gap-2 justify-start items-center">
-                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                        <div class="flex flex-col gap-2 md:gap-3">
+                            <p
+                                class="font-pfmellonbold font-bold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">
+                                developpeur web</p>
+                            <div class="flex gap-[3px] md:gap-2 justify-start items-center">
+                                <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
-                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                                <span
+                                    class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <span
-                    class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
-                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	duration-[350ms]"></span>
-                </a>
+                        <span
+                            class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	duration-300"></span>
+                    </a>
 
-                <a href="" target="_blank" class="pb-3 md:pb-5 border-b border-black dark:border-white transition-colors flex justify-between items-center group">
+                    <a href="" target="_blank"
+                        class="pb-3 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
 
-                    <div class="flex flex-col gap-2 md:gap-3">
-                        <p class="font-pfmellonbold font-bold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">candidature spontanée</p>
-                        <div class="flex gap-[3px] md:gap-2 justify-start items-center">
-                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                        <div class="flex flex-col gap-2 md:gap-3">
+                            <p
+                                class="font-pfmellonbold font-bold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">
+                                candidature spontanée</p>
+                            <div class="flex gap-[3px] md:gap-2 justify-start items-center">
+                                <span
+                                    class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">ibiza</span>
-                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                                <span
+                                    class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">paris</span>
-                            <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                                <span
+                                    class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold font-bold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">barcelone</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <span
-                    class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
-                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	duration-[350ms]"></span>
-                </a>
-            </div>
+                        <span
+                            class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	duration-300"></span>
+                    </a>
+                </div>
 
-            <a href="#" class=" mx-auto pl-[18px] md:pl-[30px] pr-[6px] py-[5px] md:py-[6px] w-fit rounded-full whitespace-nowrap
+                <a href="#" class=" mx-auto pl-[18px] md:pl-[30px] pr-[6px] py-[5px] md:py-[6px] w-fit rounded-full whitespace-nowrap
             bg-primary-jaune text-primary-noir-gris  text-xs md:text-lg font-poppins font-bold uppercase
                 flex flex-nowrap justify-center items-center gap-4 md:gap-7 group">
-                <span>toutes les offres</span>
-                <span
-                    class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
-                 bg-button_arrow_black bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform duration-[350ms]"></span>
-            </a>
+                    <span>toutes les offres</span>
+                    <span
+                        class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_black bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform duration-300"></span>
+                </a>
 
-            <div class="mask_black_50 relative mt-14 md:mt-28 flex justify-between items-center rounded-[20px] md:rounded-[30px] h-[188px] md:h-[480px]
+                <div class="mask_black_50 relative mt-14 md:mt-28 flex justify-between items-center rounded-[20px] md:rounded-[30px] h-[188px] md:h-[480px]
             bg-[url('../sources/img/joins_us.jpeg')] bg-center bg-no-repeat bg-cover overflow-hidden">
-            <a href="#" class="z-10 mx-auto pl-[18px] md:pl-[30px] pr-[6px] py-[5px] md:py-[6px] w-fit rounded-full whitespace-nowrap
+                    <a href="#" class="z-10 mx-auto pl-[18px] md:pl-[30px] pr-[6px] py-[5px] md:py-[6px] w-fit rounded-full whitespace-nowrap
             bg-white text-primary-noir-gris  text-xs md:text-lg font-poppins font-bold uppercase
                 flex flex-nowrap justify-center items-center gap-4 md:gap-7 group">
-                <span>explorer notre culture</span>
-                <span
-                    class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
-                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform duration-[350ms]"></span>
-            </a></div>
-        </div>
-    </section>
+                        <span>explorer notre culture</span>
+                        <span
+                            class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform duration-300"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
     </main>
 
     <footer>
-        <div data-theme="white" class="min-h-[500px] bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors">
+        <div data-theme="white"
+            class="min-h-[500px] bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors duration-300">
             <div
                 class="pt-36 pb-24 md:py-64 px-6 lg:px-[70px] max-w-[1512px] mx-auto  flex flex-col md:flex-row gap-9 justify-between 
-                bg-footer_la_factory_violet dark:bg-footer_la_factory_white bg-bottom bg-no-repeat bg-contain  transition-all">
+                bg-footer_la_factory_violet dark:bg-footer_la_factory_white bg-bottom bg-no-repeat bg-contain  transition-all duration-300">
                 <div class="flex flex-col gap-5  md:gap-10">
                     <div>
                         <h2 class="text-3xl md:text-7xl font-pfmellonbold font-bold uppercase ">Vous avez un projet ?
@@ -179,7 +197,7 @@
                         <span>contact</span>
                         <span
                             class="h-[26px] w-[26px] md:h-[33px] md:w-[33px] rounded-full overflow-hidden flex-none
-                         bg-button_arrow_black bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform duration-[350ms]"></span>
+                         bg-button_arrow_black bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform duration-300"></span>
                     </a>
 
 

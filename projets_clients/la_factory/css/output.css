@@ -577,6 +577,14 @@ html {
   background-position: left !important;
 }
 
+.\!visible{
+  visibility: visible !important;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
 .fixed{
   position: fixed;
 }
@@ -593,8 +601,20 @@ html {
   right: -110px;
 }
 
+.top-0{
+  top: 0px;
+}
+
+.left-0{
+  left: 0px;
+}
+
 .z-10{
   z-index: 10;
+}
+
+.z-30{
+  z-index: 30;
 }
 
 .z-40{
@@ -622,8 +642,20 @@ html {
   display: flex;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-12{
   height: 3rem;
+}
+
+.h-24{
+  height: 6rem;
+}
+
+.h-7{
+  height: 1.75rem;
 }
 
 .h-\[188px\]{
@@ -688,8 +720,8 @@ html {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 
-.-translate-y-full{
-  --tw-translate-y: -100%;
+.-translate-y-2\/4{
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -806,6 +838,14 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-transparent{
+  background-color: transparent;
+}
+
+.\!bg-transparent{
+  background-color: transparent !important;
+}
+
 .bg-\[url\(\'\.\.\/sources\/img\/joins_us\.jpeg\'\)\]{
   background-image: url('../sources/img/joins_us.jpeg');
 }
@@ -826,8 +866,8 @@ html {
   background-image: url('../sources/logos/header/header_brand_violet.svg');
 }
 
-.bg-header_brand_white{
-  background-image: url('../sources/logos/header/header_brand_white.svg');
+.bg-header_monogramme_violet{
+  background-image: url('../sources/logos/header/header_monogramme_violet.svg');
 }
 
 .bg-\[length\:auto_100\%\]{
@@ -913,6 +953,10 @@ html {
 
 .pl-\[18px\]{
   padding-left: 18px;
+}
+
+.pr-6{
+  padding-right: 1.5rem;
 }
 
 .pr-\[6px\]{
@@ -1002,9 +1046,30 @@ html {
   color: rgb(48 47 46 / var(--tw-text-opacity));
 }
 
+.text-primary-violet{
+  --tw-text-opacity: 1;
+  color: rgb(99 58 222 / var(--tw-text-opacity));
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.\!opacity-0{
+  opacity: 0 !important;
+}
+
+.\!opacity-100{
+  opacity: 1 !important;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+.opacity-100{
+  opacity: 1;
 }
 
 .transition-all{
@@ -1025,16 +1090,12 @@ html {
   transition-duration: 150ms;
 }
 
-.duration-500{
-  transition-duration: 500ms;
-}
-
-.duration-\[350ms\]{
-  transition-duration: 350ms;
-}
-
 .duration-1000{
   transition-duration: 1000ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -1073,6 +1134,12 @@ input:-webkit-autofill:active {
   bottom: 0;
 }
 
+.hover\:scale-\[1\.15\]:hover{
+  --tw-scale-x: 1.15;
+  --tw-scale-y: 1.15;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group:hover .group-hover\:scale-\[1\.15\]{
   --tw-scale-x: 1.15;
   --tw-scale-y: 1.15;
@@ -1102,6 +1169,15 @@ input:-webkit-autofill:active {
   background-image: url('../sources/logos/header/header_brand_white.svg');
 }
 
+.dark\:bg-header_monogramme_white:is(.dark *){
+  background-image: url('../sources/logos/header/header_monogramme_white.svg');
+}
+
+.dark\:text-primary-jaune:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(228 242 75 / var(--tw-text-opacity));
+}
+
 .dark\:text-primary-noir-gris:is(.dark *){
   --tw-text-opacity: 1;
   color: rgb(48 47 46 / var(--tw-text-opacity));
@@ -1121,8 +1197,24 @@ input:-webkit-autofill:active {
     margin-top: 7rem;
   }
 
+  .md\:inline-block{
+    display: inline-block;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
+
   .md\:h-12{
     height: 3rem;
+  }
+
+  .md\:h-9{
+    height: 2.25rem;
+  }
+
+  .md\:h-\[123px\]{
+    height: 123px;
   }
 
   .md\:h-\[33px\]{
@@ -1245,6 +1337,10 @@ input:-webkit-autofill:active {
 
   .md\:pl-\[30px\]{
     padding-left: 30px;
+  }
+
+  .md\:pr-7{
+    padding-right: 1.75rem;
   }
 
   .md\:pr-\[7px\]{
