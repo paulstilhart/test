@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth dark">
+<html lang="fr" class="scroll-smooth ">
 
 <head>
     <meta charset="UTF-8">
@@ -17,53 +17,91 @@
     <script defer src="../js/script.js"></script>
 </head>
 
-<body class="bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors duration-300">
+<body class=" bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors duration-300">
 
-    <header aria-expanded="false" class="group z-50 fixed top-0 left-0 w-full bg-transparent px-6 lg:px-[70px]">
-        <div class="relative  max-w-[1372px] mx-auto  w-full h-24 md:h-32">
+    <header aria-expanded="false" class="group/menu z-40 fixed top-0 left-0 w-full bg-transparent px-6 lg:px-[70px]">
+        <div class="relative  max-w-[1372px] mx-auto  w-full h-24 lg:h-32">
 
-            <a href="#"
-                class="absolute left-0 top-9 md:hidden w-9 h-12 transition-colors duration-300 bg-cover bg-center bg-no-repeat bg-header_monogramme_violet dark:bg-header_monogramme_white group-aria-expanded:bg-header_monogramme_white overflow-hidden"></a>
+            <a href="/pages/sitemap.html"
+                class="z-50 absolute left-0 top-9 lg:hidden w-9 h-12 transition-colors duration-300 bg-cover bg-center bg-no-repeat bg-header_monogramme_violet dark:bg-header_monogramme_white group-aria-expanded/menu:bg-header_monogramme_white overflow-hidden"></a>
 
-            <a href="#" aria-expanded="true"
-                class="absolute left-0 top-14 js_header_logo_scroll hidden md:inline-block  w-[58px] h-[75px] transition-all duration-1000 
+            <a href="/pages/sitemap.html" aria-expanded="true"
+                class="absolute left-0 top-14 js_header_logo_scroll hidden lg:inline-block  w-[58px] h-[75px] transition-all duration-1000 
             bg-cover bg-no-repeat bg-header_brand_violet dark:bg-header_brand_white overflow-hidden 
             aria-expanded:!h-12 aria-expanded:!w-60
-            group-aria-expanded:invisible group-aria-expanded:pointer-events-none group-aria-expanded:transition-none"></a>
+            group-aria-expanded/menu:invisible group-aria-expanded/menu:pointer-events-none group-aria-expanded/menu:transition-none"></a>
 
             <button
-                class="js_nav_toggle  absolute right-0 top-7 md:top-10   h-[62px] w-[62px] md:h-[84px] md:w-[84px]  rounded-full 
+                class="z-50 js_nav_toggle  absolute right-0 top-7 lg:top-10   h-[62px] w-[62px] lg:h-[84px] lg:w-[84px]  rounded-full 
         bg-primary-violet text-white dark:bg-primary-jaune  dark:text-primary-noir-gris
-         group-aria-expanded:bg-primary-jaune group-aria-expanded:text-primary-noir-gris transition-all duration-300 hover:scale-[1.15]  flex items-center justify-center">
-                <span
-                    class="inline-block font-pfmellonbold text-xl md:text-3xl h-7 md:h-9 uppercase overflow-hidden">
+         group-aria-expanded/menu:bg-primary-jaune group-aria-expanded/menu:text-primary-noir-gris transition-all duration-300 hover:scale-[1.15]  flex items-center justify-center">
+                <span class="inline-block font-pfmellonbold text-xl lg:text-3xl h-7 lg:h-9 uppercase overflow-hidden">
                     <span
-                        class="inline-block transition-transform duration-300 group-aria-expanded:-translate-y-2/4">MENU<br>FERMER</span>
+                        class="inline-block transition-transform duration-300 group-aria-expanded/menu:-translate-y-2/4">MENU<br>FERMER</span>
                 </span>
             </button>
         </div>
 
 
         <div
-            class=" invisible opacity-0 fixed top-0 bottom-0 left-0 right-0   w-full h-svh bg-primary-violet text-white
-            group-aria-expanded:visible group-aria-expanded:opacity-100 transition-all duration-1000  overflow-y-auto">
+            class=" fixed top-0 bottom-0 left-0 right-0   w-full h-svh bg-primary-violet text-white 
+        invisible opacity-0 
+            group-aria-expanded/menu:visible group-aria-expanded/menu:opacity-100 transition-all ease-out duration-300  overflow-y-auto">
             <div class="h-full w-full px-6 lg:px-[70px] max-w-[1512px] mx-auto flex flex-col">
 
-                <div class=" flex-auto relative flex flex-col justify-between">
+                <div class="pt-36 pb-9 lg:py-10 flex-auto relative flex flex-col justify-between">
 
-                    <div class="flex-auto flex flex-col justify-center gap-11">
-                        <a href=""
-                            class="inline-block  font-pfmellonbold md:text-[220px] md:leading-[165px] uppercase">expertises</a>
-                        <a href=""
-                            class="inline-block  font-pfmellonbold md:text-[220px] md:leading-[165px] uppercase">culture</a>
-                        <a href=""
-                            class="inline-block  font-pfmellonbold md:text-[220px] md:leading-[165px] uppercase">contact</a>
+                    <div class="group/menuhover flex-auto flex flex-col justify-start gap-11 
+                    lg:[&:has(>_:hover)]:text-primary-lilas">
+
+                        <div class="hover:!text-white transition-colors duration-300 w-fit group/submenu">
+                            <span class=" inline-block overflow-hidden w-fit lg:cursor-pointer">
+                                <span
+                                    class="pr-8 inline-block  font-pfmellonbold text-[106px] leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-300 delay-300 lg:group-aria-expanded/menu:translate-y-0">expertises</span>
+                                <span class=" hidden lg:inline-block invisible opacity-0 h-[170px] w-[170px] 
+                                    group-hover/submenu:visible group-hover/submenu:opacity-100 transition-all duration-300 
+                                    bg-button_arrow_yellow bg-no-repeat bg-center bg-cover rotate-90"></span>
+                            </span>
+                            <ul class="lg:group-hover/submenu:max-h-[50px] transition-all duration-300 lg:max-h-0 overflow-hidden
+                                 text-primary-lilas pt-2  pb-2 lg:p-0 flex flex-col lg:flex-row gap-3 
+                                 font-pfmellonbold text-5xl leading-[36px]  lg:leading-[50px] uppercase ">
+                                <li><a href="" class=" hover:text-white transition-colors duration-300">développement
+                                        web</a></li>
+                                <li class="text-primary-jaune hidden lg:block">*</li>
+                                <li><a href="" class=" hover:text-white transition-colors duration-300">marketing
+                                        digital</a></li>
+                                <li class="text-primary-jaune hidden lg:block">*</li>
+
+                                <li><a href="" class=" hover:text-white transition-colors duration-300">support</a></li>
+                                <li class="text-primary-jaune hidden lg:block">*</li>
+
+                                <li><a href="" class=" hover:text-white transition-colors duration-300">conseil</a></li>
+                            </ul>
+                        </div>
+
+
+                        <a href="/pages/sitemap.html"
+                            class="hover:!text-white transition-colors duration-300 overflow-hidden w-fit  group/arrowhover">
+                            <span
+                                class="pr-9 inline-block  font-pfmellonbold text-[106px] leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-300 delay-300 lg:group-aria-expanded/menu:translate-y-0">culture</span>
+                            <span class="hidden lg:inline-block invisible opacity-0 h-[170px] w-[170px] 
+                                group-hover/arrowhover:visible group-hover/arrowhover:opacity-100 transition-all duration-300 
+                                bg-button_arrow_yellow bg-no-repeat bg-center bg-cover"></span>
+                        </a>
+
+                        <a href="/pages/sitemap.html"
+                            class="hover:!text-white transition-colors duration-300 overflow-hidden w-fit group/arrowhover">
+                            <span
+                                class="pr-9 inline-block  font-pfmellonbold text-[106px] leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-300 delay-300 lg:group-aria-expanded/menu:translate-y-0">contact</span>
+                            <span class="hidden lg:inline-block invisible opacity-0 h-[170px] w-[170px] 
+                                group-hover/arrowhover:visible group-hover/arrowhover:opacity-100 transition-all duration-300 
+                                bg-button_arrow_yellow bg-no-repeat bg-center bg-cover"></span>
+                        </a>
                     </div>
 
-                    <div class="pb-9 md:pb-0 md:-rotate-90 md:absolute  right-[-110px] bottom-36">
+                    <div class="lg:-rotate-90 lg:absolute  right-[-110px] bottom-36">
                         <a href="" class="font-pfmellonbold text-3xl uppercase ">linkedin</a>
-                        <span
-                            class="font-pfmellonbold text-3xl uppercase  dark:text-primary-jaune">&nbsp;*&nbsp;</span>
+                        <span class="font-pfmellonbold text-3xl uppercase  dark:text-primary-jaune">&nbsp;*&nbsp;</span>
                         <a href="" class="font-pfmellonbold text-3xl uppercase ">mentions
                             légales</a>
                     </div>
@@ -77,7 +115,117 @@
     <main>
         <div class="py-64"></div>
 
+
+
         <div class="px-6 lg:px-[70px] max-w-[1512px] mx-auto">
+            <section data-theme="white" class="">
+                <div class="pt-24 pb-32 md:pt-44 md:pb-40 text-center">
+                    <h3 class="font-pfmellonbold uppercase text-4xl md:text-7xl">VU QUE LE DERNIER MOT
+                        <br>
+                        EST SOUVENT UN CHIFFRE<span class="text-primary-jaune dark:text-primary-jaune">*</span>
+                    </h3>
+
+                    <div class="pt-16 md:pt-24 pb-44 md:pb-56 grid grid-cols-1 md:grid-cols-[30%_1fr]	 gap-4 md:gap-5">
+                        <div class="flex flex-col gap-4 md:gap-5">
+                            <div class="flex-auto bg-primary-violet dark:bg-primary-lilas rounded-[20px] md:rounded-[30px] p-6 md:p-8 
+                            bg-[url('../sources/img/homepage_numbers/8+.svg')] dark:bg-[url('../sources/img/homepage_numbers/8+_violet.svg')] bg-no-repeat bg-[left_15px_bottom] md:bg-[left_24px_bottom] 
+                            bg-[length:auto_80%] md:bg-[length:60%_auto]">
+                                <p
+                                    class="text-end font-pfmellonbold uppercase text-primary-jaune dark:text-primary-violet !leading-none text-2xl md:text-4xl ">
+                                    End customers
+                                    <br>
+                                    countries
+                                </p>
+                            </div>
+                            <div
+                                class="flex-none bg-primary-lilas pt-4 pr-4 pb-4 pl-6 md:p-6 rounded-[20px] md:rounded-[30px]">
+                                <p
+                                    class="pb-2 md:pb-3 text-primary-violet font-pfmellonbold uppercase text-left text-2xl leading-[24px] md:text-3xl flex items-center">
+                                    23 collaborateurs&nbsp;
+                                    <span
+                                        class="inline-block w-[2.5px] h-5 md:h-6 bg-primary-noir-gris flex-none"></span>
+                                    &nbsp;
+                                    <span class="inline-block bg-[url('../sources/icons/icon_women.svg')] bg-no-repeat bg-center bg-contain 
+                                        w-[12px] h-[18px] md:w-[14px] md:h-[22px]"></span>
+                                    &nbsp;44%
+                                </p>
+                                <div
+                                    class="rounded-[30px] bg-transparent border border-primary-violet w-full h-2 md:h-[10px] relative">
+                                    <span
+                                        class="inline-block rounded-[30px] bg-primary-violet w-[44%] h-full absolute top-0 left-0"></span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="flex-auto flex flex-col gap-4 md:gap-5">
+                            <div class=" grid grid-cols-1 md:grid-cols-[1fr_30%] gap-4 md:gap-5">
+                                <div class="flex-auto bg-primary-violet dark:bg-primary-lilas text-white dark:text-primary-violet 
+                                rounded-[20px] md:rounded-[30px] relative
+                                pt-4 pr-3 pb-14 pl-5 md:p-8 md:pb-12">
+                                    <p
+                                        class="italic font-poppins font-normal text-xs leading-snug md:text-lg text-left">
+                                        <span class="text-primary-jaune text-lg md:text-3xl">”</span>
+                                        Nous réunissons toutes les compétences clés pour monter un projet internet, et
+                                        souhaitons devenir un partenaire de référence pour les entrepreneurs digitaux, à
+                                        mi-chemin entre le start-up studio et le fonds early stage.
+                                        <span class="text-primary-jaune text-lg md:text-3xl">”</span>
+                                    </p>
+                                    <p class="flex items-center gap-2 absolute right-3 bottom-4 md:right-8 md:bottom-5">
+                                        <span
+                                            class="inline-block font-pfmellonbold text-xl md:text-3xl uppercase text-white dark:text-primary-violet">romain</span>
+                                        <span
+                                            class="inline-block font-pfmellonbold rounded-full text-base md:text-lg uppercase text-primary-noir-gris bg-primary-jaune px-2 md:px-3">fondateur</span>
+                                    </p>
+                                </div>
+                                <div class="min-h-[132px] flex-auto bg-primary-violet dark:bg-primary-lilas rounded-[20px] md:rounded-[30px] p-6 md:p-8 
+                                    bg-[url('../sources/img/homepage_numbers/8digits.svg')] dark:bg-[url('../sources/img/homepage_numbers/8digits_violet.svg')] bg-no-repeat bg-[left_15px_bottom] md:bg-[left_24px_bottom] 
+                                    bg-[length:auto_80%] md:bg-[length:80%_auto]">
+                                    <p
+                                        class="text-end font-pfmellonbold uppercase text-primary-jaune dark:text-primary-violet !leading-none text-2xl md:text-4xl ">
+                                        ARR
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:h-[205px] grid grid-cols-1 md:grid-cols-[40%_1fr] gap-4 md:gap-5">
+                                <div class="h-[154px] md:h-auto flex-auto bg-primary-violet dark:bg-primary-lilas rounded-[20px] md:rounded-[30px] p-6 md:p-8 
+                                bg-[url('../sources/img/homepage_numbers/15K+.svg')] dark:bg-[url('../sources/img/homepage_numbers/15K+_violet.svg')] bg-no-repeat bg-[left_15px_bottom] md:bg-[left_24px_bottom] 
+                                bg-[length:auto_80%] md:bg-[length:75%_auto]">
+                                    <p
+                                        class="text-end font-pfmellonbold uppercase text-primary-jaune dark:text-primary-violet !leading-none text-2xl md:text-4xl ">
+                                        Leads<br>monthly
+                                    </p>
+                                </div>
+                                <div class="h-[132px] md:h-auto flex-auto bg-primary-lilas rounded-[20px] md:rounded-[30px] p-6 md:p-8 
+                            bg-[url('../sources/img/homepage_numbers/500K+.svg')] bg-no-repeat bg-[left_15px_bottom] md:bg-[left_24px_bottom] 
+                            bg-[length:auto_80%] md:bg-[length:70%_auto]">
+                                    <p
+                                        class="text-end font-pfmellonbold uppercase text-primary-noir-gris dark:text-primary-violet !leading-none text-2xl md:text-4xl ">
+                                        UV<br>monthly
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h2 class="font-pfmellonbold uppercase text-8xl lg:text-[238px]">UN PROJET ?</h2>
+
+                    <p class="font-poppins font-normal text-sm md:text-xl">Discutons-en</p>
+
+                    <a href="#" class="mt-16 md:mt-28 mx-auto pl-[18px] md:pl-7 pr-[6px] md:pr-[9px] py-[5px] md:py-[6px] w-fit rounded-full whitespace-nowrap
+                    bg-primary-jaune text-primary-noir-gris  text-xs md:text-xl font-poppins font-bold uppercase
+                        flex flex-nowrap justify-center items-center gap-4 md:gap-7 group">
+                        <span>contactez-nous</span>
+                        <span
+                            class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                         bg-button_arrow_black bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform duration-300"></span>
+                    </a>
+
+                </div>
+
+            </section>
+
             <section data-theme="violet" class="">
                 <div class=" pt-11 pb-8 md:pt-24 md:pb-16">
                     <h2
@@ -98,8 +246,7 @@
                                 <div class="flex gap-[3px] md:gap-2 justify-start items-center">
                                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
-                                    <span
-                                        class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
                                 </div>
 
@@ -120,8 +267,7 @@
                                 <div class="flex gap-[3px] md:gap-2 justify-start items-center">
                                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
-                                    <span
-                                        class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
                                 </div>
                             </div>
@@ -139,14 +285,11 @@
                                     class="font-pfmellonbold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">
                                     candidature spontanée</p>
                                 <div class="flex gap-[3px] md:gap-2 justify-start items-center">
-                                    <span
-                                        class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">ibiza</span>
-                                    <span
-                                        class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">paris</span>
-                                    <span
-                                        class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
                             font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">barcelone</span>
                                 </div>
                             </div>
