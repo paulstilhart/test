@@ -5,8 +5,13 @@ function headerIconScroll() {
   const js_header_logo_scroll = document.querySelector(".js_header_logo_scroll");
   if (!js_header_logo_scroll) return;
 
-  const shouldAddClass = window.innerWidth > 768 && window.scrollY > 100;
-  js_header_logo_scroll.classList.toggle("header_icon_scroll", shouldAddClass);
+  const shouldAddAriaExpanded = window.innerWidth > 768 && window.scrollY > 100;
+
+  if (shouldAddAriaExpanded) {
+    js_header_logo_scroll.setAttribute("aria-expanded", "false");
+  } else {
+    js_header_logo_scroll.setAttribute("aria-expanded","true");
+  }
 }
 
 window.addEventListener("scroll", headerIconScroll);
@@ -16,30 +21,19 @@ headerIconScroll(); // Appel initial pour vérifier l'état au chargement de la 
 //==============================================================================================================================
 //AFFICHER OU NON LE MENU
 function toggleNav() {
-  const body = document.querySelector('body');
-  const header = document.querySelector('header');
-  const nav = document.querySelector(".js_nav");
+  const body = document.querySelector("body");
+  const header = document.querySelector("header");
   const navToggle = document.querySelector(".js_nav_toggle");
-  const navToggletext = document.querySelector(".js_nav_toggle_text");
 
   navToggle.addEventListener("click", () => {
-    const ariaExpanded = nav.getAttribute("aria-expanded");
+    const ariaExpanded = header.getAttribute("aria-expanded");
 
     if (ariaExpanded === "false") {
-      header.classList.add('dark');
-      nav.classList.add('!visible');
-      nav.classList.add('!opacity-100');
-      nav.setAttribute('aria-expanded', 'true');
-      navToggletext.classList.add('-translate-y-2/4');
-      body.classList.add('overflow-y-hidden');
-    }
-    else{
-      header.classList.remove('dark');
-      nav.classList.remove('!visible');
-      nav.classList.remove('!opacity-100');
-      nav.setAttribute('aria-expanded', 'false');
-      navToggletext.classList.remove('-translate-y-2/4');
-      body.classList.remove('overflow-y-hidden');  
+      header.setAttribute("aria-expanded","true")
+      body.classList.add("overflow-y-hidden");
+    } else {
+      header.setAttribute("aria-expanded","false")
+      body.classList.remove("overflow-y-hidden");
     }
   });
 }

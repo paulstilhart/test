@@ -26,9 +26,6 @@
 
 
 @layer components {
-  .header_icon_scroll {
-    @apply !h-[75px] !w-[58px] !bg-[length:auto_100%] !bg-left;
-  }
 }
 
 
