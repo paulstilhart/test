@@ -23,10 +23,10 @@
         <div class="relative  max-w-[1372px] mx-auto  w-full h-24 lg:h-32">
 
             <a href="/pages/sitemap.html"
-                class="z-50 absolute left-0 top-9 lg:hidden w-9 h-12 transition-colors duration-300 bg-cover bg-center bg-no-repeat bg-header_monogramme_violet dark:bg-header_monogramme_white group-aria-expanded/menu:bg-header_monogramme_white overflow-hidden"></a>
+                class="z-50 absolute left-0 top-9 lg:hidden w-9 h-12 transition-colors duration-700 bg-cover bg-center bg-no-repeat bg-header_monogramme_violet dark:bg-header_monogramme_white group-aria-expanded/menu:bg-header_monogramme_white overflow-hidden"></a>
 
             <a href="/pages/sitemap.html" aria-expanded="true"
-                class="absolute left-0 top-14 js_header_logo_scroll hidden lg:inline-block  w-[58px] h-[75px] transition-all duration-1000 
+                class="absolute left-0 top-14 js_header_logo_scroll hidden lg:inline-block  w-[58px] h-[75px] transition-all duration-700 
             bg-cover bg-no-repeat bg-header_brand_violet dark:bg-header_brand_white overflow-hidden 
             aria-expanded:!h-12 aria-expanded:!w-60
             group-aria-expanded/menu:invisible group-aria-expanded/menu:pointer-events-none group-aria-expanded/menu:transition-none"></a>
@@ -34,10 +34,10 @@
             <button
                 class="z-50 js_nav_toggle  absolute right-0 top-7 lg:top-10   h-[62px] w-[62px] lg:h-[84px] lg:w-[84px]  rounded-full 
         bg-primary-violet text-white dark:bg-primary-jaune  dark:text-primary-noir-gris
-         group-aria-expanded/menu:bg-primary-jaune group-aria-expanded/menu:text-primary-noir-gris transition-all duration-300 hover:scale-[1.15]  flex items-center justify-center">
+         group-aria-expanded/menu:bg-primary-jaune group-aria-expanded/menu:text-primary-noir-gris transition-all duration-700 hover:scale-[1.15]  flex items-center justify-center">
                 <span class="inline-block font-pfmellonbold text-xl lg:text-3xl h-7 lg:h-9 uppercase overflow-hidden">
                     <span
-                        class="inline-block transition-transform duration-300 group-aria-expanded/menu:-translate-y-2/4">MENU<br>FERMER</span>
+                        class="inline-block transition-transform duration-700 group-aria-expanded/menu:-translate-y-2/4">MENU<br>FERMER</span>
                 </span>
             </button>
         </div>
@@ -46,18 +46,21 @@
         <div
             class=" fixed top-0 bottom-0 left-0 right-0   w-full h-svh bg-primary-violet text-white 
         invisible opacity-0 
-            group-aria-expanded/menu:visible group-aria-expanded/menu:opacity-100 transition-all ease-out duration-300  overflow-y-auto">
-            <div class="h-full w-full px-6 lg:px-[70px] max-w-[1512px] mx-auto flex flex-col">
+            group-aria-expanded/menu:visible group-aria-expanded/menu:opacity-100 transition-all  duration-700  overflow-y-auto">
+            <div class="h-full w-full px-6 lg:px-[70px] max-w-[1512px] mx-auto">
 
-                <div class="pt-36 pb-9 lg:py-10 flex-auto relative flex flex-col justify-between">
+                <div class="h-full flex flex-col justify-between pt-32 lg:py-10 relative">
 
-                    <div class="group/menuhover flex-auto flex flex-col justify-start gap-11 
+
+                    <div class="group/menuhover flex-auto flex flex-col justify-start gap-4 lg:gap-11 
                     lg:[&:has(>_:hover)]:text-primary-lilas">
 
-                        <div class="hover:!text-white transition-colors duration-300 w-fit group/submenu">
-                            <span class=" inline-block overflow-hidden w-fit lg:cursor-pointer">
+                        <div class="hover:!text-white transition-colors duration-300 w-fit group/submenu 
+                        lg:invisible lg:group-aria-expanded/menu:visible">
+                            <span class=" inline-block overflow-hidden w-fit">
                                 <span
-                                    class="pr-8 inline-block  font-pfmellonbold text-[106px] leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-300 delay-300 lg:group-aria-expanded/menu:translate-y-0">expertises</span>
+                                    class="pr-8 inline-block  font-pfmellonbold text-[106px] leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-700 delay-300 lg:group-aria-expanded/menu:translate-y-0 
+                                    ">expertises</span>
                                 <span class=" hidden lg:inline-block invisible opacity-0 h-[170px] w-[170px] 
                                     group-hover/submenu:visible group-hover/submenu:opacity-100 transition-all duration-300 
                                     bg-button_arrow_yellow bg-no-repeat bg-center bg-cover rotate-90"></span>
@@ -81,30 +84,31 @@
 
 
                         <a href="/pages/sitemap.html"
-                            class="hover:!text-white transition-colors duration-300 overflow-hidden w-fit  group/arrowhover">
+                            class="hover:!text-white transition-colors duration-300 overflow-hidden w-fit  group/arrowhover lg:invisible lg:group-aria-expanded/menu:visible">
                             <span
-                                class="pr-9 inline-block  font-pfmellonbold text-[106px] leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-300 delay-300 lg:group-aria-expanded/menu:translate-y-0">culture</span>
+                                class="pr-9 inline-block  font-pfmellonbold text-[106px] leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-700 delay-300 lg:group-aria-expanded/menu:translate-y-0">culture</span>
                             <span class="hidden lg:inline-block invisible opacity-0 h-[170px] w-[170px] 
                                 group-hover/arrowhover:visible group-hover/arrowhover:opacity-100 transition-all duration-300 
                                 bg-button_arrow_yellow bg-no-repeat bg-center bg-cover"></span>
                         </a>
 
                         <a href="/pages/sitemap.html"
-                            class="hover:!text-white transition-colors duration-300 overflow-hidden w-fit group/arrowhover">
+                            class="hover:!text-white transition-colors duration-300 overflow-hidden w-fit group/arrowhover lg:invisible lg:group-aria-expanded/menu:visible">
                             <span
-                                class="pr-9 inline-block  font-pfmellonbold text-[106px] leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-300 delay-300 lg:group-aria-expanded/menu:translate-y-0">contact</span>
+                                class="pr-9 inline-block  font-pfmellonbold text-[106px] leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-700 delay-300 lg:group-aria-expanded/menu:translate-y-0">contact</span>
                             <span class="hidden lg:inline-block invisible opacity-0 h-[170px] w-[170px] 
                                 group-hover/arrowhover:visible group-hover/arrowhover:opacity-100 transition-all duration-300 
                                 bg-button_arrow_yellow bg-no-repeat bg-center bg-cover"></span>
                         </a>
                     </div>
 
-                    <div class="lg:-rotate-90 lg:absolute  right-[-110px] bottom-36">
+                    <div class="py-4 lg:py-0 lg:absolute lg:right-[-110px] lg:bottom-52 lg:-rotate-90">
                         <a href="" class="font-pfmellonbold text-3xl uppercase ">linkedin</a>
                         <span class="font-pfmellonbold text-3xl uppercase  dark:text-primary-jaune">&nbsp;*&nbsp;</span>
                         <a href="" class="font-pfmellonbold text-3xl uppercase ">mentions
                             légales</a>
                     </div>
+
                 </div>
             </div>
 
@@ -237,17 +241,17 @@
 
                     <div class="pt-14 pb-12 md:pt-20 md:pb-12 flex flex-col gap-5 md:gap-9">
                         <a href="" target="_blank"
-                            class="pb-3 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
+                            class="pb-4 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
 
-                            <div class="flex flex-col gap-2 md:gap-3">
+                            <div class="flex flex-col gap-3">
                                 <p
-                                    class="font-pfmellonbold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">
+                                    class="font-pfmellonbold text-3xl leading-none md:text-[54px] md:leading-[40px] uppercase">
                                     digital designer</p>
                                 <div class="flex gap-[3px] md:gap-2 justify-start items-center">
                                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
-                            font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
                                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
-                            font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
                                 </div>
 
                             </div>
@@ -258,17 +262,17 @@
                         </a>
 
                         <a href="" target="_blank"
-                            class="pb-3 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
+                            class="pb-4 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
 
-                            <div class="flex flex-col gap-2 md:gap-3">
+                            <div class="flex flex-col gap-3">
                                 <p
-                                    class="font-pfmellonbold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">
+                                    class="font-pfmellonbold text-3xl leading-none md:text-[54px] md:leading-[40px] uppercase">
                                     developpeur web</p>
                                 <div class="flex gap-[3px] md:gap-2 justify-start items-center">
                                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
-                            font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
                                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
-                            font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
                                 </div>
                             </div>
 
@@ -278,19 +282,19 @@
                         </a>
 
                         <a href="" target="_blank"
-                            class="pb-3 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
+                            class="pb-4 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
 
-                            <div class="flex flex-col gap-2 md:gap-3">
+                            <div class="flex flex-col gap-3">
                                 <p
-                                    class="font-pfmellonbold text-2xl leading-[18px] md:text-[54px] md:leading-[40px] uppercase">
+                                    class="font-pfmellonbold text-3xl leading-none md:text-[54px] md:leading-[40px] uppercase">
                                     candidature spontanée</p>
                                 <div class="flex gap-[3px] md:gap-2 justify-start items-center">
                                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
-                            font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">ibiza</span>
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">ibiza</span>
                                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
-                            font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">paris</span>
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">paris</span>
                                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
-                            font-pfmellonbold uppercase text-xs px-3 md:px-4 py-[3px] md:text-xl ">barcelone</span>
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">barcelone</span>
                                 </div>
                             </div>
 
@@ -354,9 +358,9 @@
             </div>
 
             <div class="flex flex-col gap-6">
-                <a href="" class="font-poppins font-normal text-base md:text-right">Linkedin</a>
-                <a href="" class="font-poppins font-normal text-base md:text-right">Mentions légales</a>
-                <a href="" class="font-poppins font-normal text-base md:text-right">Contact</a>
+                <a href="" class="font-poppins font-normal text-xs md:text-right">Linkedin</a>
+                <a href="" class="font-poppins font-normal text-xs md:text-right">Mentions légales</a>
+                <a href="" class="font-poppins font-normal text-xs md:text-right">Contact</a>
             </div>
         </div>
     </footer>
