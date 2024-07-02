@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth ">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST</title>
-
+    <title>Slider avec effet snap-x au clic de la souris</title>
     <!-- lien avec la feuille de style compilée tailwind -->
     <link rel="stylesheet" href="../css/output.css">
 
@@ -13,27 +12,143 @@
     <!-- alpine JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <!-- script JS -->
+    <!-- script JS car bug carrousel sur certaines versions de firefox -->
     <script defer src="../js/script.js"></script>
+
 </head>
 
-<body class="bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors duration-300">
+
+<body class="bg-black text-white">
+
+
+    <section class=" bg-white text-black">
+        <div class=" px-7 pt-20 pb-24 md:pb-52 max-w-[1184px] mx-auto">
+            <h2 class="pb-2 font-oswald text-xl md:text-2xl font-normal uppercase">L’HABITACLE<span
+                    class="text-primary-green">.</span></h2>
 
 
 
-    <div class="px-6 lg:px-[70px] max-w-[1512px] mx-auto">
+            <div x-data="{
+                        images: [
+                            '../sources/img/detail_voiture/habitacle/habitacle_1.jpeg',
+                            '../sources/img/detail_voiture/habitacle/habitacle_2.png',
+                            '../sources/img/cards/achat.jpeg',
+                            '../sources/img/cards/recherche.jpeg',
+                            '../sources/img/cards/vente.jpeg'
+                        ],
+                        activeImage: 0,
+                        changeImage(index) {
+                            this.activeImage = index;
+                            this.$refs.carousel.scrollLeft = index * this.$refs.carousel.clientWidth;
+                        },
+                        handleScroll() {
+                            const carousel = this.$refs.carousel;
+                            const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+                            console.log(index);
+                            this.activeImage = index;
+                        }
+                    }" class="relative h-[480px] md:h-[680px]">
+                <!-- Carrousel d'images -->
+                <div x-ref="carousel" @scroll.debounce.250ms="handleScroll"
+                    class="h-full w-full no_scrollbar cursor-all-scroll flex overflow-scroll scroll-smooth snap-mandatory snap-x touch-manipulation">
+                    <template x-for="(image, index) in images" :key="index">
+                        <img :src="image" alt="image carrousel detail voiture"
+                            class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+                    </template>
+                </div>
+
+                <!-- Boutons de navigation -->
+                <button @click="changeImage((activeImage - 1 + images.length) % images.length)"
+                    aria-label="Image précédente"
+                    class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                    <span
+                        class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
+                </button>
+                <button @click="changeImage((activeImage + 1) % images.length)" aria-label="Image suivante"
+                    class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                    <span
+                        class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
+                </button>
+
+                <!-- Indicateurs d'images -->
+                <div
+                    class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-50">
+                    <template x-for="(image, index) in images" :key="index">
+                        <button @click="changeImage(index)" :aria-selected="activeImage === index ? 'true' : 'false'"
+                            class="h-[10px] w-[10px] md:h-[13px] md:w-[13px] border border-white rounded-full focus:outline-none bg-transparent cursor-pointer aria-selected:bg-white aria-selected:w-[30px] aria-selected:md:w-[43px] aria-selected:cursor-default"></button>
+                    </template>
+                </div>
+            </div>
 
 
 
-    </div>
+
+
+
+        </div>
+    </section>
 
 
 
 
 
 
+    <section class=" bg-white text-black">
+        <div class=" px-7 pt-20 pb-24 md:pb-52 max-w-[1184px] mx-auto">
+            <h2 class="pb-2 font-oswald text-xl md:text-2xl font-normal uppercase">L’HABITACLE<span
+                    class="text-primary-green">.</span></h2>
 
 
+
+            <div class="relative h-[480px] md:h-[680px]">
+                <div x-data="{
+                    activeImage: 0,
+                    setActiveImage(index) { this.activeImage = index; },
+                    next() { this.activeImage = (this.activeImage + 1) % this.images.length; },
+                    prev() { this.activeImage = (this.activeImage - 1 + this.images.length) % this.images.length; }
+                }"
+                    class="h-full w-full no_scrollbar   cursor-all-scroll	 flex overflow-scroll scroll-smooth   snap-mandatory snap-x touch-manipulation">
+
+                    <img src="../sources/img/detail_voiture/habitacle/habitacle_1.jpeg"
+                        alt="image carrousel detail voiture"
+                        class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none ">
+                    <img src="../sources/img/detail_voiture/habitacle/habitacle_2.png"
+                        alt="image carrousel detail voiture"
+                        class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+                    <img src="../sources/img/cards/achat.jpeg" alt="image carrousel detail voiture"
+                        class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+                    <img src="../sources/img/cards/recherche.jpeg" alt="image carrousel detail voiture"
+                        class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+                    <img src="../sources/img/cards/vente.jpeg" alt="image carrousel detail voiture"
+                        class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+                </div>
+
+                <button @click="prev()" aria-label="Image précédente"
+                    class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white ">
+                    <span class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
+                </button>
+                <button @click="next()" aria-label="Image suivante"
+                    class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white ">
+                    <span class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] 
+                    transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
+                </button>
+
+                <div
+                    class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-50">
+                    <template x-for="(image, index) in images" :key="index">
+                        <button @click="setActiveImage(index)" :aria-selected="activeImage === index ? 'true' : 'false'"
+                            class="h-[10px] w-[10px] md:h-[13px] md:w-[13px] border border-white rounded-full focus:outline-none bg-transparent cursor-pointer aria-selected:bg-white aria-selected:w-[30px] aria-selected:md:w-[43px] aria-selected:cursor-default"></button>
+                    </template>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
 
 </body>
 

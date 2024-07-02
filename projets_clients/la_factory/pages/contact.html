@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+
+    <!-- lien avec la feuille de style compilée tailwind -->
+    <link rel="stylesheet" href="../css/output.css">
+
+
+    <!-- alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- script JS car bug carrousel sur certaines versions de firefox -->
+    <script defer src="../js/script.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <header x-data="{ open: false }" class="z-50 fixed w-full px-7 pt-10">
+        <div
+            class="pt-[14px] md:pt-0 px-7 md:px-16 background_header border-white-30% rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
+            <div class="flex items-center justify-between">
+                <a href="/"
+                    class="inline-block w-[89px] h-[19px] md:w-[130px] md:h-[27px] bg-logo-header-slick.svg bg-no-repeat bg-cover bg-center"></a>
+                <button x-on:click="open = ! open" :aria-expanded="open.toString()" aria-controls="main-menu"
+                    class="inline-block md:!hidden h-8 w-8 bg-ico-burger-open aria-expanded:bg-ico-burger-close bg-no-repeat bg-contain bg-center"></button>
+            </div>
+            <nav x-show="open" x-transition class="md:!block pb-10 md:pb-0">
+                <ul
+                    class="flex flex-col md:flex-row gap-x-14 gap-y-10 text-black text-lg md:text-sm font-neue font-medium">
+                    <li><a href="/" class="inline-block">Nos voitures<span class="text-primary-green">.</span></a></li>
+                    <li><a href="/" class="inline-block">Nos services<span class="text-primary-green">.</span></a></li>
+                    <li><a href="/" class="inline-block">Nous contacter<span class="text-primary-green">.</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+
+
+
+
+        <section class="text-black bg-white ">
+            <div
+                class="px-7 pt-44 md:pt-72 pb-12 md:pb-20 gap-3 md:gap-8 max-w-[856px] mx-auto flex flex-col flex-nowrap ">
+                <h1
+                    class="text-left md:text-center  font-oswald font-semibold  text-6xl md:text-9xl md:leading-[120px] uppercase">
+                    UNE DEMANDE<span class="text-primary-green">.</span>
+                </h1>
+                <p class="text-left md:text-center font-neue font-normal text-sm  md:text-lg">À votre écoute pour
+                    répondre rapidement à vos demandes</p>
+            </div>
+        </section>
+
+
+
+
+        <section class="text-black bg-white ">
+            <div class="px-7 max-w-[636px] mx-auto flex flex-col items-center">
+    
+                <form x-data="{ isChecked: false }" class="w-full flex flex-col gap-6 md:gap-9 items-stretch">
+                    <input type="email" id="email" name="email" placeholder="Email *"
+                        class="h-11 text-lg font-neue font-medium   text-black bg-transparent placeholder:text-primary-grey border-b border-primary-grey
+                        focus:outline-none focus:border-primary-green active:border-primary-green  hover:border-primary-green">
+    
+                    <input type="text" id="firstname" name="firstname" placeholder="Prénom *"
+                        class="h-11 text-lg font-neue font-medium   text-black bg-transparent  placeholder:text-primary-grey border-b border-primary-grey
+                        focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
+    
+                    <input type="text" id="lastname" name="lastname" placeholder="Nom *"
+                        class="h-11 text-lg font-neue font-medium   text-black bg-transparent  placeholder:text-primary-grey border-b border-primary-grey
+                        focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
+    
+    
+                    <div class="pt-3 flex flex-col gap-2">
+                        <p class=" text-black font-neue font-medium text-lg">Motif *</p>
+                        <div class="flex gap-3 flex-wrap">
+                            <label for="buy" class="cursor-pointer">
+                                <input type="radio" name="category" id="buy" value="buy"  class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Achat</span>
+                            </label>
+                            <label for="sell" class="cursor-pointer">
+                                <input type="radio" name="category" id="sell" value="sell" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black  hover:border-black hover:text-black">Vente</span>
+                            </label>
+                            <label for="search" class="cursor-pointer">
+                                <input type="radio" name="category" id="search" value="search" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black  hover:border-black hover:text-black">Recherche</span>
+                            </label>
+                            <label for="others" class=" cursor-pointer">
+                                <input type="radio" name="category" id="others" value="others"  class="peer hidden">
+                                <span
+                                    class=" inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black  hover:border-black hover:text-black">Autres</span>
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="pt-3  flex flex-col gap-2">
+                        <p class=" text-black font-neue font-medium text-lg">Modèle de voiture</p>
+                        <div class="flex gap-3 flex-wrap">
+                            <label for="model_1" class="cursor-pointer">
+                                <input type="radio" name="model" id="model_1" value="model_1"   class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Porche Cayenn 212</span>
+                            </label>
+                            <label for="model_2" class="cursor-pointer">
+                                <input type="radio" name="model" id="model_2" value="model_2"  class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Mini Cooper</span>
+                            </label>
+                            <label for="model_3" class="cursor-pointer">
+                                <input type="radio" name="model" id="model_3" value="model_3"  class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Porsche carrera</span>
+                            </label>
+                            <label for="model_4" class="cursor-pointer">
+                                <input type="radio" name="model" id="model_4" value="model_4"  class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Porche RS</span>
+                            </label>
+                            <label for="model_5" class="cursor-pointer">
+                                <input type="radio" name="model" id="model_5" value="model_5" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Audi GT8</span>
+                            </label>
+                            <label for="model_6" class="cursor-pointer">
+                                <input type="radio" name="model" id="model_6" value="model_6" class="peer hidden">
+                                <span
+                                    class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                 peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Jeep Canyon</span>
+                            </label>
+                        </div>
+                    </div>
+    
+    
+    
+    
+                    <textarea id="message" name="message" placeholder="Message *" class="h-[85px] mt-3 resize-none text-lg  font-neue font-medium bg-transparent      text-black  placeholder:text-primary-grey border-b  border-primary-grey
+                    focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green 
+                    "></textarea>
+    
+                    <div class="flex items-center h-6 select-none">
+                        <input x-model="isChecked" type="checkbox" id="funding" name="funding" class="flex-none h-4 w-4 rounded-sm border-[3px] border-white outline outline-primary-grey  appearance-none cursor-pointer
+                             checked:bg-primary-green">
+                        <label for="funding"
+                            class="pl-3 w-full text-lg font-neue font-medium text-primary-grey cursor-pointer">Je souhaite
+                            financer mon achat</label>
+                    </div>
+
+
+                    <div x-show="isChecked" x-transition class="pt-3 w-full flex flex-col gap-6 md:gap-9 items-stretch">
+
+                        <div x-data="{ open: false }" class="border-b border-primary-grey text-primary-grey bg-transparent ">
+                            <div @click="open = !open" :aria-expanded="open.toString()" aria-controls="accordion-collapse"
+                                class="h-11 pr-5 flex justify-between items-center cursor-pointer group">
+                                <span class="text-lg font-neue font-medium">Sélectionnez votre statut *</span>
+                                <span class="w-3 h-3 bg-ico-arrow-bottom-grey bg-no-repeat bg-contain bg-center 
+                                group-aria-expanded:rotate-180 duration-300"></span>
+                            </div>
+                            <div x-show="open" x-transition class="pt-3 pb-5 flex gap-3 flex-wrap">
+                                <label for="particular" class="cursor-pointer">
+                                    <input type="radio" name="state" id="particular" value="particular" class="peer hidden">
+                                    <span
+                                        class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                     peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Particulier</span>
+                                </label>
+                                <label for="professional" class="cursor-pointer">
+                                    <input type="radio" name="state" id="professional" value="professional"  class="peer hidden">
+                                    <span
+                                        class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                     peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">Professionnel</span>
+                                </label>
+                            </div>
+                        </div>
+            
+            
+                        <input type="text" id="bring" name="bring" placeholder="Apport *" class="h-11 text-lg font-neue font-medium bg-transparent   text-black  placeholder:text-primary-grey border-b border-primary-grey
+                        focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
+            
+            
+                        <div x-data="{ open: false }" class="border-b border-primary-grey text-primary-grey bg-transparent ">
+            
+                            <div @click="open = !open" :aria-expanded="open.toString()" aria-controls="accordion-collapse"
+                                class="h-11 pr-5 flex justify-between items-center cursor-pointer group">
+                                <span class="text-lg font-neue font-medium">Durée</span>
+                                <span class="w-3 h-3 bg-ico-arrow-bottom-grey bg-no-repeat bg-contain bg-center 
+                                group-aria-expanded:rotate-180 duration-300"></span>
+                            </div>
+            
+                            <div x-show="open" x-transition class="pt-3 pb-5 flex gap-3 flex-wrap">
+                                <label for="duration_12" class="cursor-pointer">
+                                    <input type="radio" name="duration"  id="duration_12" value="duration_12"  class="peer hidden">
+                                    <span
+                                        class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                     peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">12 mois</span>
+                                </label>
+                                <label for="duration_24" class="cursor-pointer">
+                                    <input  type="radio" name="duration"  id="duration_24" value="duration_24" class="peer hidden">
+                                    <span
+                                        class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                     peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">24 mois</span>
+                                </label>
+                                <label for="duration_36" class="cursor-pointer">
+                                    <input  type="radio" name="duration"  id="duration_36" value="duration_36" class="peer hidden">
+                                    <span
+                                        class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                     peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">36 mois</span>
+                                </label>
+                                <label for="duration_48" class="cursor-pointer">
+                                    <input  type="radio" name="duration"  id="duration_48" value="duration_48" class="peer hidden">
+                                    <span
+                                        class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                     peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">48 mois</span>
+                                </label>
+                                <label for="duration_60" class="cursor-pointer">
+                                    <input  type="radio" name="duration"  id="duration_60" value="duration_60" class="peer hidden">
+                                    <span
+                                        class="inline-block py-2 px-6 font-neue text-lg font-medium bg-transparent text-primary-grey border border-primary-grey rounded-full
+                                     peer-checked:border-black peer-checked:text-black hover:border-black hover:text-black">60 mois</span>
+                                </label>
+                            </div>
+                        </div>
+            
+            
+            
+                        <input type="text" id="monthly" name="monthly" placeholder="Mensualité maximum souhaitée" class="h-11 text-lg font-neue font-medium bg-transparent   text-black  placeholder:text-primary-grey border-b border-primary-grey
+                        focus:outline-none focus:border-primary-green active:border-primary-green hover:border-primary-green">
+                    </div>
+    
+
+
+
+                    
+                </form>
+    
+    
+                <button href="#" target="_blank" class="mt-20 mb-28 md:mt-20 md:mb-28 px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap bg-transparent  border-black border text-xs md:text-lg font-neue font-medium 
+                flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
+                    <span>Envoyer</span>
+                    <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
+                transition-transform duration-300 translate-x-0 md:group-hover:translate-x-2"></span>
+                </button>
+    
+                <p class="font-oswald font-normal text-sm uppercase">SUPPORT<span class="text-primary-green">.</span>
+                </p>
+                <p class="text-primary-grey font-neue font-medium text-sm">
+                    <a href="tel:+33679334228">06 79 33 42 28</a>&ensp;•&ensp;<a
+                        href="mailto:contact@slick.club">contact@slick.club</a>
+                </p>
+            </div>
+        </section>
+
+
+
+    </main>
+
+
+    <footer class=" bg-white text-black">
+        <div class="max-w-[1251px] mx-auto px-7 pt-20 md:pt-24 pb-8 md:pb-11 ">
+            <div
+                class="px-2 md:px-9 pb-5 md:py-5 flex flex-col-reverse md:flex-row justify-between items-center gap-6 ">
+                <nav class="flex gap-6 md:gap-10">
+                    <ul class="flex gap-6 md:gap-10 text-black text-[11px] md:text-base font-neue font-medium">
+                        <li><a href="/" class="inline-block">Nos voitures</a></li>
+                        <li><a href="/" class="inline-block">Nos services</a></li>
+                        <li><a href="/" class="inline-block">Nous contacter</a></li>
+                    </ul>
+                </nav>
+                <a href="/"
+                    class="flex-none inline-block h-[21.6px] w-[21.6px] md:w-9 md:h-9 bg-ico-instagram bg-contain bg-center bg-no-repeat"></a>
+            </div>
+            <hr class="border-t-[1px] border-secondary-grey">
+            <div
+                class="px-2 md:px-9 pt-5 md:pt-7 pb-4 md:pb-2 flex flex-col md:flex-row justify-between items-center gap-x-6 gap-y-8 font-neue font-medium text-[8px] md:text-xs">
+                <div class="flex gap-6">
+                    <a href="/" class="inline-block">@ Copyright 2024</a>
+                    <a href="/" class="inline-block">Mentions légales</a>
+                    <a href="https://www.rweb.fr/" target="_blank" class="flex items-center gap-1">
+                        Propulsé par<span
+                            class="h-[6px] w-[46px] md:h-[8px] md:w-[61px] bg-logo-la-factory.svg bg-center bg-no-repeat bg-cover"></span>
+                    </a>
+                </div>
+                <a href="/" class="inline-block">Beaugrenelle - 75015 Paris</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

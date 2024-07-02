@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETAIL VOITURE</title>
+
+    <!-- lien avec la feuille de style compilée tailwind -->
+    <link rel="stylesheet" href="../css/output.css">
+
+
+    <!-- alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- script JS car bug carrousel sur certaines versions de firefox -->
+    <script defer src="../js/script.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <header x-data="{ open: false }" class="z-50 fixed w-full px-7 pt-10">
+        <div
+            class="pt-[14px] md:pt-0 px-7 md:px-16 background_header border-white-30% rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
+            <div class="flex items-center justify-between">
+                <a href="/"
+                    class="inline-block w-[89px] h-[19px] md:w-[130px] md:h-[27px] bg-logo-header-slick.svg bg-no-repeat bg-cover bg-center"></a>
+                <button x-on:click="open = ! open" :aria-expanded="open.toString()" aria-controls="main-menu"
+                    class="inline-block md:!hidden h-8 w-8 bg-ico-burger-open aria-expanded:bg-ico-burger-close bg-no-repeat bg-contain bg-center"></button>
+            </div>
+            <nav x-show="open" x-transition class="md:!block pb-10 md:pb-0">
+                <ul
+                    class="flex flex-col md:flex-row gap-x-14 gap-y-10 text-black text-lg md:text-sm font-neue font-medium">
+                    <li><a href="/" class="inline-block">Nos voitures<span class="text-primary-green">.</span></a></li>
+                    <li><a href="/" class="inline-block">Nos services<span class="text-primary-green">.</span></a></li>
+                    <li><a href="/" class="inline-block">Nous contacter<span class="text-primary-green">.</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+
+        <section class="bg-white text black h-svh flex flex-col">
+
+            <div class="flex-auto overflow-hidden">
+                <div x-data="{
+                    images: [
+                        '../sources/img/detail_voiture/habitacle/habitacle_1.jpeg',
+                        '../sources/img/detail_voiture/habitacle/habitacle_2.png',
+                        '../sources/img/cards/achat.jpeg',
+                        '../sources/img/cards/recherche.jpeg',
+                        '../sources/img/cards/vente.jpeg'
+                    ],
+                    activeImage: 0,
+                    changeImage(index) {
+                        this.activeImage = index;
+                        this.$refs.carousel.scrollLeft = index * this.$refs.carousel.clientWidth;
+                    },
+                    handleScroll() {
+                        const carousel = this.$refs.carousel;
+                        const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+                        this.activeImage = index;
+                    }
+                }" class="relative h-full w-full">
+                    <!-- Carrousel d'images -->
+                    <div x-ref="carousel" @scroll.debounce.100sm="handleScroll"
+                        class="h-full w-full no_scrollbar cursor-default flex overflow-scroll scroll-smooth snap-mandatory snap-x touch-manipulation">
+                        <template x-for="(image, index) in images" :key="index">
+                            <img :src="image" alt="image carrousel detail voiture"
+                                class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+                        </template>
+                    </div>
+
+                    <!-- Boutons de navigation -->
+                    <button @click="changeImage((activeImage - 1 + images.length) % images.length)"
+                        aria-label="Image précédente"
+                        class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-40 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                        <span
+                            class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
+                    </button>
+                    <button @click="changeImage((activeImage + 1) % images.length)" aria-label="Image suivante"
+                        class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-40 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                        <span
+                            class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
+                    </button>
+
+                    <!-- Indicateurs d'images -->
+                    <div
+                        class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-40">
+                        <template x-for="(image, index) in images" :key="index">
+                            <button @click="changeImage(index)"
+                                :aria-selected="activeImage === index ? 'true' : 'false'"
+                                class="h-[10px] w-[10px] md:h-[13px] md:w-[13px] border border-white rounded-full focus:outline-none bg-transparent cursor-pointer aria-selected:bg-white aria-selected:w-[30px] aria-selected:md:w-[43px] aria-selected:cursor-default"></button>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+
+            <div
+                class="w-full px-7 py-3 md:py-8  max-w-[1184px] mx-auto flex flex-col md:flex-row flex-wrap justify-between gap-3">
+                <div class="md:max-w-[480px] flex flex-col md:gap-1">
+                    <h1 class="font-oswald text-2xl md:text-5xl font-normal uppercase">Porsche Cayenne Turbo<span
+                            class="text-primary-green">.</span></h1>
+                    <p class="font-neue text-xs md:text-2xl font-normal">9YA 4.0 V8 550CH - Carte grise
+                        française</p>
+                </div>
+                <h3 class="font-oswald text-4xl md:text-6xl font-medium uppercase">92 750 €</h3>
+            </div>
+        </section>
+
+
+
+
+
+        <section class=" bg-white text-black">
+            <div
+                class="px-7  pt-36 md:pt-56  pb-44 md:pb-64 max-w-[810px] mx-auto text-center flex flex-col items-center gap-2 md:gap-3  ">
+                <h2 class="font-oswald text-xl md:text-2xl font-normal uppercase">DESCRIPTION</h2>
+                <p class="font-neue font-medium text-sm md:text-xl leading-relaxed	md:leading-loose">Véritable
+                    monument automobile sorti en 2002, le Cayenne est un succès instantané. Souvent imité mais
+                    jamais égalé il restera la référence du SUV de Luxe et le sauveur de la marque Porsche.
+                    <br>
+                    <br>
+                    L’exemplaire ici proposé est assez rare, puisque de nombreux acheteurs se sont tournés vers le
+                    Turbo
+                    S e-hybride afin d’éviter le malus. Notre Cayenne dispose déjà de ses papiers français, est très
+                    bien optionné et n’affiche que 54 600 km au compteur.
+                </p>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section class=" bg-white text-white">
+            <div
+                class="px-7  max-w-[1184px] mx-auto 
+                grid items-stretch grid-cols-1 md:grid-cols-[minmax(320px,430px)_minmax(360px,2fr)] auto-rows-auto gap-5 lg:gap-9 ">
+                <div class=" md:row-span-2 bg-black px-9 lg:px-11 pt-8 md:pt-10 pb-11 md:pb-14">
+                    <h3 class="font-oswald text-2xl md:text-4xl font-normal uppercase">caractéristiques<span
+                            class="text-primary-green">.</span></h3>
+                    <div class="pt-8 md:pt-16 grid grid-cols-1 auto-rows-auto gap-6 md:gap-12">
+                        <div>
+                            <p class=" font-neue font-medium text-lg md:text-2xl leading-tight	">Puissance DIN</p>
+                            <p
+                                class="text-primary-green font-neue font-semibold text-xs md:text-lg leading-tight uppercase">
+                                550 ch</p>
+                        </div>
+                        <div>
+                            <p class=" font-neue font-medium text-lg md:text-2xl leading-tight	">Puissance fiscale</p>
+                            <p
+                                class="text-primary-green font-neue font-semibold text-xs md:text-lg leading-tight uppercase">
+                                46 CV</p>
+                        </div>
+                        <div>
+                            <p class=" font-neue font-medium text-lg md:text-2xl leading-tight	">Kilométrage</p>
+                            <p
+                                class="text-primary-green font-neue font-semibold text-xs md:text-lg leading-tight uppercase">
+                                54 500 KM</p>
+                        </div>
+                        <div>
+                            <p class=" font-neue font-medium text-lg md:text-2xl leading-tight	">Poids</p>
+                            <p
+                                class="text-primary-green font-neue font-semibold text-xs md:text-lg leading-tight uppercase">
+                                2 250 KG</p>
+                        </div>
+                        <div>
+                            <p class=" font-neue font-medium text-lg md:text-2xl leading-tight	">Émissions CO2</p>
+                            <p
+                                class="text-primary-green font-neue font-semibold text-xs md:text-lg leading-tight uppercase">
+                                267 G/KM</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class=" bg-black px-9 lg:px-11 pt-8 md:pt-10 pb-11 md:pb-14">
+                    <h3 class="font-oswald text-2xl md:text-4xl font-normal uppercase">Options PRINCIPALes<span
+                            class="text-primary-green">.</span></h3>
+                    <div
+                        class="pt-8 md:pt-16 grid grid-cols-1 md:grid-cols-2 auto-rows-auto gap-6 md:gap-y-12 md:gap-x-6">
+                        <div>
+                            <p class=" font-neue font-medium text-lg md:text-2xl leading-tight	">Système audio</p>
+                            <p
+                                class="text-primary-green font-neue font-semibold text-xs md:text-lg leading-tight uppercase">
+                                BOSE</p>
+                        </div>
+                        <div>
+                            <p class=" font-neue font-medium text-lg md:text-2xl leading-tight	">Toit ouvrant</p>
+                            <p
+                                class="text-primary-green font-neue font-semibold text-xs md:text-lg leading-tight uppercase">
+                                Panoramique</p>
+                        </div>
+                        <div>
+                            <p class=" font-neue font-medium text-lg md:text-2xl leading-tight	">Freins</p>
+                            <p
+                                class="text-primary-green font-neue font-semibold text-xs md:text-lg leading-tight uppercase">
+                                Céramiques</p>
+                        </div>
+                        <div>
+                            <p class=" font-neue font-medium text-lg md:text-2xl leading-tight	">Sièges chauffants</p>
+                            <p
+                                class="text-primary-green font-neue font-semibold text-xs md:text-lg leading-tight uppercase">
+                                Avant et arrière</p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" bg-black px-9 lg:px-11 pt-8 md:pt-10 pb-11 md:pb-14">
+                    <h3 class="font-oswald text-2xl md:text-4xl font-normal uppercase">Performances et
+                        consommations<span class="text-primary-green">.</span></h3>
+                    <div
+                        class="pt-8 md:pt-16 grid grid-cols-1 md:grid-cols-2 auto-rows-auto gap-6 md:gap-y-12 md:gap-x-6">
+                        <div>
+                            <p class=" font-neue font-medium text-lg md:text-2xl leading-tight	">0-100 KM/H</p>
+                            <p
+                                class="text-primary-green font-neue font-semibold text-xs md:text-lg leading-tight uppercase">
+                                4,1 SEC</p>
+                        </div>
+                        <div>
+                            <p class=" font-neue font-medium text-lg md:text-2xl leading-tight	">Consommation mixte</p>
+                            <p
+                                class="text-primary-green font-neue font-semibold text-xs md:text-lg leading-tight uppercase">
+                                11,4 L/100</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section x-data="{ open: false }" class=" bg-white text-black">
+            <div class=" px-7 pt-12 md:pt-20 pb-20 max-w-[1024px] mx-auto">
+
+                <div x-show="open" x-transition class="mb-12 md:mb-16 pl-4 md:pl-9 border-l-4 border-primary-green">
+                    <p class="font-neue font-medium text-sm leading-relaxed md:text-xl md:leading-loose">
+                        Véritable monument
+                        automobile sorti en 2002, le Cayenne est un succès instantané. Souvent imité mais jamais égalé
+                        il
+                        restera la référence du SUV de Luxe et le sauveur de la marque Porsche.
+                        <br>
+                        L’exemplaire ici proposé est assez rare, puisque de nombreux acheteurs se sont tournés vers le
+                        Turbo
+                        S e-hybride afin d’éviter le malus. Notre Cayenne dispose déjà de ses papiers français, est très
+                        bien optionné et n’affiche que 54 600 km au compteur.
+                        <br>
+                        <br>
+                        ACPL : Apple Car play
+                        <br>
+                        ADAS : ADAS Full Pack
+                        <br>
+                        CALY : Etrier de freins jaunes
+                        <br>
+                        ADAS : ADAS Full Pack
+                        <br>
+                        CALY : Etrier de freins jaunes
+                    </p>
+                </div>
+
+                <button x-on:click="open = ! open" :aria-expanded="open.toString()" aria-controls="accordion-item"
+                    class="mx-auto px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap
+            bg-transparent border-black border text-xs md:text-lg font-neue font-medium
+                flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
+                    <span class="group-aria-expanded:hidden">Afficher tous les équipements et options</span>
+                    <span class="hidden group-aria-expanded:block">Masquer tous les équipements et options</span>
+                    <span class="flex-non bg-ico-accordion-open w-[14px] md:w-[20.3px] h-[14px] md:h-[20.3px] bg-no-repeat bg-center bg-contain 
+                group-aria-expanded:bg-ico-accordion-close group-aria-expanded:bg-[length:105%_auto]"></span>
+                </button>
+            </div>
+        </section>
+
+
+        <section class=" bg-white text-black">
+            <div class=" px-7 pt-20 pb-24 md:pb-52 max-w-[1184px] mx-auto">
+                <h2 class="pb-2 font-oswald text-xl md:text-2xl font-normal uppercase">L’HABITACLE<span
+                        class="text-primary-green">.</span></h2>
+
+
+
+                <div x-data="{
+                            images: [
+                                '../sources/img/detail_voiture/habitacle/habitacle_1.jpeg',
+                                '../sources/img/detail_voiture/habitacle/habitacle_2.png',
+                                '../sources/img/cards/achat.jpeg',
+                                '../sources/img/cards/recherche.jpeg',
+                                '../sources/img/cards/vente.jpeg'
+                            ],
+                            activeImage: 0,
+                            changeImage(index) {
+                                this.activeImage = index;
+                                this.$refs.carousel.scrollLeft = index * this.$refs.carousel.clientWidth;
+                            },
+                            handleScroll() {
+                                const carousel = this.$refs.carousel;
+                                const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+                                this.activeImage = index;
+                            }
+                        }" class="relative h-[480px] md:h-[680px]">
+                    <!-- Carrousel d'images -->
+                    <div x-ref="carousel" @scroll.debounce.100ms="handleScroll"
+                        class="h-full w-full no_scrollbar cursor-default flex overflow-scroll scroll-smooth snap-mandatory snap-x touch-manipulation">
+                        <template x-for="(image, index) in images" :key="index">
+                            <img :src="image" alt="image carrousel detail voiture"
+                                class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
+                        </template>
+                    </div>
+
+                    <!-- Boutons de navigation -->
+                    <button @click="changeImage((activeImage - 1 + images.length) % images.length)"
+                        aria-label="Image précédente"
+                        class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-40 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                        <span
+                            class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
+                    </button>
+                    <button @click="changeImage((activeImage + 1) % images.length)" aria-label="Image suivante"
+                        class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-40 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
+                        <span
+                            class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
+                    </button>
+
+                    <!-- Indicateurs d'images -->
+                    <div
+                        class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-40">
+                        <template x-for="(image, index) in images" :key="index">
+                            <button @click="changeImage(index)"
+                                :aria-selected="activeImage === index ? 'true' : 'false'"
+                                class="h-[10px] w-[10px] md:h-[13px] md:w-[13px] border border-white rounded-full focus:outline-none bg-transparent cursor-pointer aria-selected:bg-white aria-selected:w-[30px] aria-selected:md:w-[43px] aria-selected:cursor-default"></button>
+                        </template>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </section>
+
+
+
+
+
+        <section class="text-white bg-black ">
+            <div
+                class="max-w-[1512px] mx-auto 
+            bg-background-text-cta bg-no-repeat bg-[left_-36px_bottom_0px]  md:bg-[left_12px_top_39px] bg-[length:201px_157px] md:bg-[length:341px_266px">
+                <div
+                    class="px-7  py-16 md:py-20 max-w-[1184px] mx-auto flex flex-col flex-nowrap md:flex-row items-center justify-between gap-12 md:gap-6 ">
+                    <div
+                        class="max-w-[775px] text-center md:text-left flex flex-col items-center md:items-start  gap-12 md:gap-6">
+                        <h2 class="font-neue text-lg md:text-3xl md:leading-[50px] font-normal">
+                            Êtes-vous intéressé par ce véhicule ?
+                            <br>
+                            Besoin de plus d’informations ?
+                        </h2>
+                    </div>
+
+                    <a href="#" target="_blank" class="px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap
+                bg-transparent text-white border-white border text-xs md:text-lg font-neue font-medium
+                flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
+                        <span>Contactez-nous</span>
+                        <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
+                    transition-transform duration-300 translate-x-0 md:group-hover:translate-x-2"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class=" bg-white text-black">
+            <div class=" px-7 pt-20 pb-24 md:pt-36 md:pb-40 max-w-[1184px] mx-auto">
+                <h2 class="pb-2 md:pb-4 text-xl md:text-2xl font-oswald uppercase font-normal">VUE DYNAMIQUE<span
+                        class="text-primary-green">.</span>
+                </h2>
+
+                <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/0LsCJU_7qXU?si=cfALHa3CLHabm49d"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+
+        <section class=" bg-black text-white">
+
+            <div class="pt-10 md:pt-24 pb-32 md:pb-24 relative">
+                <div
+                    class="gap-6 pb-10 md:pb-20 px-7 max-w-[1184px] mx-auto flex flex-wrap  justify-start md:justify-between items-center">
+                    <h2 class="font-neue font-medium text-2xl md:text-5xl">Nos dernières voitures.</h2>
+                    <a href="#" target="_blank" class="px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap
+                    bg-transparent text-white border-white border text-xs md:text-lg font-neue font-medium
+                        flex flex-nowrap justify-center items-center gap-4 md:gap-5 group 
+                        md:static absolute bottom-[50px] left-1/2 -translate-x-1/2 md:translate-x-0">
+                        <span>En savoir plus</span>
+                        <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
+                            transition-transform duration-300 translate-x-0 md:group-hover:translate-x-2"></span>
+                    </a>
+
+                </div>
+
+
+
+                <div x-data="{ isDown: false, startX: 0, scrollLeft:150, slideWidth: 0, moved: false }"
+                    x-init="slideWidth = $refs.slider.clientWidth; $refs.slider.scrollLeft = scrollLeft;"
+                    @mousedown="isDown = true; startX = $event.pageX - $refs.slider.offsetLeft; scrollLeft = $refs.slider.scrollLeft; moved = false;"
+                    @mouseup="isDown = false" @mouseleave="isDown = false" @mousemove.prevent="if (isDown) { 
+                    $refs.slider.scrollLeft = scrollLeft + (startX - $event.pageX); 
+                    if (Math.abs(startX - $event.pageX) > 5) { moved = true; } 
+                }" x-ref="slider"
+                    class="px-7 h-[135px] md:h-[275px] gap-6 md:gap-12 grid grid-flow-col auto-cols-[222px] md:auto-cols-[441px] overflow-auto no_scrollbar">
+
+
+                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                        href="/pages/nos-voitures.html"
+                        class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
+
+                        <div
+                            class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
+                            <div
+                                class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[36px] flex flex-col md:gap-2">
+                                <h3 class="truncate max-w-full font-oswald font-normal text-sm md:text-2xl uppercase">
+                                    Porsche
+                                    Cayenne turbo<span class="text-primary-green">.</span></h3>
+                                <h4
+                                    class="-mt-[2px] md:mt-0 truncate max-w-full font-neue font-medium  text-xs md:text-xl uppercase">
+                                    9YA 4.0
+                                    V8
+                                    550CH.</h4>
+                            </div>
+                        </div>
+
+                        <button
+                            class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
+                            <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                        transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
+                            </span>
+                        </button>
+                    </a>
+
+                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                        href="/pages/nos-voitures.html"
+                        class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
+
+                        <div
+                            class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
+                            <div
+                                class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[36px] flex flex-col md:gap-2">
+                                <h3 class="truncate max-w-full font-oswald font-normal text-sm md:text-2xl uppercase">
+                                    Porsche
+                                    Cayenne turbo<span class="text-primary-green">.</span></h3>
+                                <h4
+                                    class="-mt-[2px] md:mt-0 truncate max-w-full font-neue font-medium  text-xs md:text-xl uppercase">
+                                    9YA 4.0
+                                    V8
+                                    550CH.</h4>
+                            </div>
+                        </div>
+
+                        <button
+                            class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
+                            <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                    transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
+                            </span>
+                        </button>
+                    </a>
+
+                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                        href="/pages/nos-voitures.html"
+                        class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
+
+                        <div
+                            class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
+                            <div
+                                class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[36px] flex flex-col md:gap-2">
+                                <h3 class="truncate max-w-full font-oswald font-normal text-sm md:text-2xl uppercase">
+                                    Porsche
+                                    Cayenne turbo<span class="text-primary-green">.</span></h3>
+                                <h4
+                                    class="-mt-[2px] md:mt-0 truncate max-w-full font-neue font-medium  text-xs md:text-xl uppercase">
+                                    9YA 4.0
+                                    V8
+                                    550CH.</h4>
+                            </div>
+                        </div>
+
+                        <button
+                            class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
+                            <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+                transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
+                            </span>
+                        </button>
+                    </a>
+
+                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                        href="/pages/nos-voitures.html"
+                        class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
+
+                        <div
+                            class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
+                            <div
+                                class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[36px] flex flex-col md:gap-2">
+                                <h3 class="truncate max-w-full font-oswald font-normal text-sm md:text-2xl uppercase">
+                                    Porsche
+                                    Cayenne turbo<span class="text-primary-green">.</span></h3>
+                                <h4
+                                    class="-mt-[2px] md:mt-0 truncate max-w-full font-neue font-medium  text-xs md:text-xl uppercase">
+                                    9YA 4.0
+                                    V8
+                                    550CH.</h4>
+                            </div>
+                        </div>
+
+                        <button
+                            class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
+                            <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
+            transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
+                            </span>
+                        </button>
+                    </a>
+
+                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
+                        href="/pages/nos-voitures.html"
+                        class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
+
+                        <div
+                            class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
+                            <div
+                                class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[36px] flex flex-col md:gap-2">
+                                <h3 class="truncate max-w-full font-oswald font-normal text-sm md:text-2xl uppercase">
+                                    Porsche
+                                    Cayenne turbo<span class="text-primary-green">.</span></h3>
+                                <h4
+                                    class="-mt-[2px] md:mt-0 truncate max-w-full font-neue font-medium  text-xs md:text-xl uppercase">
+                                    9YA 4.0
+                                    V8
+                                    550CH.</h4>
+                            </div>
+                        </div>
+
+                        <button
+                            class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
+                            <span
+                                class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
+                            </span>
+                        </button>
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer class=" bg-white text-black">
+        <div class="max-w-[1251px] mx-auto px-7 pt-20 md:pt-24 pb-8 md:pb-11 ">
+            <div
+                class="px-2 md:px-9 pb-5 md:py-5 flex flex-col-reverse md:flex-row justify-between items-center gap-6 ">
+                <nav class="flex gap-6 md:gap-10">
+                    <ul class="flex gap-6 md:gap-10 text-black text-[11px] md:text-base font-neue font-medium">
+                        <li><a href="/" class="inline-block">Nos voitures</a></li>
+                        <li><a href="/" class="inline-block">Nos services</a></li>
+                        <li><a href="/" class="inline-block">Nous contacter</a></li>
+                    </ul>
+                </nav>
+                <a href="/"
+                    class="flex-none inline-block h-[21.6px] w-[21.6px] md:w-9 md:h-9 bg-ico-instagram bg-contain bg-center bg-no-repeat"></a>
+            </div>
+            <hr class="border-t-[1px] border-secondary-grey">
+            <div
+                class="px-2 md:px-9 pt-5 md:pt-7 pb-4 md:pb-2 flex flex-col md:flex-row justify-between items-center gap-x-6 gap-y-8 font-neue font-medium text-[8px] md:text-xs">
+                <div class="flex gap-6">
+                    <a href="/" class="inline-block">@ Copyright 2024</a>
+                    <a href="/" class="inline-block">Mentions légales</a>
+                    <a href="https://www.rweb.fr/" target="_blank" class="flex items-center gap-1">
+                        Propulsé par<span
+                            class="h-[6px] w-[46px] md:h-[8px] md:w-[61px] bg-logo-la-factory.svg bg-center bg-no-repeat bg-cover"></span>
+                    </a>
+                </div>
+                <a href="/" class="inline-block">Beaugrenelle - 75015 Paris</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
