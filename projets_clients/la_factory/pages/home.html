@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr" class="scroll-smooth dark ">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOMEPAGE</title>
+    <title>HOME</title>
 
     <!-- lien avec la feuille de style compilée tailwind -->
     <link rel="stylesheet" href="../css/output.css">
@@ -13,407 +13,357 @@
     <!-- alpine JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <!-- script JS car bug carrousel sur certaines versions de firefox -->
+    <!-- script JS -->
     <script defer src="../js/script.js"></script>
 </head>
 
-<body>
+<body class=" bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors duration-300">
+
+    <header aria-expanded="false" class="group/menu z-40 fixed top-0 left-0 w-full bg-transparent px-6 lg:px-[70px]">
+        <div class="relative  max-w-[1372px] mx-auto  w-full h-24 lg:h-32">
+
+            <a href="/pages/sitemap.html"
+                class="z-50 absolute left-0 top-9 lg:hidden w-9 h-12 transition-colors duration-700 bg-cover bg-center bg-no-repeat bg-header_monogramme_violet dark:bg-header_monogramme_white group-aria-expanded/menu:bg-header_monogramme_white overflow-hidden"></a>
+
+            <a href="/pages/sitemap.html" aria-expanded="true"
+                class="absolute left-0 top-14 js_header_logo_scroll hidden lg:inline-block  w-[58px] h-[75px] transition-all duration-700 
+            bg-cover bg-no-repeat bg-header_brand_violet dark:bg-header_brand_white overflow-hidden 
+            aria-expanded:!h-12 aria-expanded:!w-60
+            group-aria-expanded/menu:invisible group-aria-expanded/menu:pointer-events-none group-aria-expanded/menu:transition-none"></a>
+
+            <button
+                class="z-50 js_nav_toggle  absolute right-0 top-7 lg:top-10   h-[62px] w-[62px] lg:h-[84px] lg:w-[84px]  rounded-full 
+        bg-primary-violet text-white dark:bg-primary-jaune  dark:text-primary-noir-gris
+         group-aria-expanded/menu:bg-primary-jaune group-aria-expanded/menu:text-primary-noir-gris transition-all duration-700 hover:scale-[1.15]  flex items-center justify-center">
+                <span class="inline-block font-pfmellonbold text-xl lg:text-3xl h-7 lg:h-9 uppercase overflow-hidden">
+                    <span
+                        class="inline-block transition-transform duration-700 group-aria-expanded/menu:-translate-y-2/4">MENU<br>FERMER</span>
+                </span>
+            </button>
+        </div>
 
 
-
-
-
-
-
-    <header x-data="{ open: false }" class="z-50 fixed w-full px-7 pt-10">
         <div
-            class="pt-[14px] md:pt-0 px-7 md:px-16 background_header border-white-30% rounded-[30px] max-w-[1128px] mx-auto h-auto min-h-[60px] md:h-[80px] border flex flex-col md:flex-row items-stretch md:items-center justify-between gap-x-4 gap-y-14">
-            <div class="flex items-center justify-between">
-                <a href="/"
-                    class="inline-block w-[89px] h-[19px] md:w-[130px] md:h-[27px] bg-logo-header-slick.svg bg-no-repeat bg-cover bg-center"></a>
-                <button x-on:click="open = ! open" :aria-expanded="open.toString()" aria-controls="main-menu"
-                    class="inline-block md:!hidden h-8 w-8 bg-ico-burger-open aria-expanded:bg-ico-burger-close bg-no-repeat bg-contain bg-center"></button>
+            class=" fixed top-0 bottom-0 left-0 right-0   w-full h-svh bg-primary-violet text-white 
+        invisible opacity-0 
+            group-aria-expanded/menu:visible group-aria-expanded/menu:opacity-100 transition-all  duration-700  overflow-y-auto">
+            <div class="h-full w-full px-6 lg:px-[70px] max-w-[1512px] mx-auto">
+
+                <div class="h-full lg:h-auto flex flex-col justify-between pt-32 lg:py-10 relative">
+
+
+                    <div class="group/menuhover flex-auto lg:flex-initial flex flex-col justify-start gap-4 lg:gap-11 
+                    lg:[&:has(>_:hover)]:text-primary-lilas">
+
+                        <div class="hover:!text-white transition-colors duration-300 w-fit group/submenu 
+                        lg:opacity-0 lg:group-aria-expanded/menu:opacity-100 transition-opacity">
+                            <span class=" inline-block overflow-hidden w-fit">
+                                <span
+                                    class="pr-8 inline-block  font-pfmellonbold text-8xl leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-700 delay-300 lg:group-aria-expanded/menu:translate-y-0 
+                                    ">expertises</span>
+                                <span class=" hidden lg:inline-block invisible opacity-0 h-[170px] w-[170px] 
+                                    group-hover/submenu:visible group-hover/submenu:opacity-100 transition-all duration-300 
+                                    bg-button_arrow_yellow bg-no-repeat bg-center bg-cover rotate-90"></span>
+                            </span>
+                            <ul class="lg:group-hover/submenu:max-h-[50px] transition-all duration-300 lg:max-h-0 overflow-hidden
+                                 text-primary-lilas pt-2  pb-2 lg:p-0 flex flex-col lg:flex-row gap-3 
+                                 font-pfmellonbold text-5xl leading-[36px]  lg:leading-[50px] uppercase ">
+                                <li><a href="" class=" hover:text-white transition-colors duration-300">développement
+                                        web</a></li>
+                                <li class="text-primary-jaune hidden lg:block">*</li>
+                                <li><a href="" class=" hover:text-white transition-colors duration-300">marketing
+                                        digital</a></li>
+                                <li class="text-primary-jaune hidden lg:block">*</li>
+
+                                <li><a href="" class=" hover:text-white transition-colors duration-300">support</a></li>
+                                <li class="text-primary-jaune hidden lg:block">*</li>
+
+                                <li><a href="" class=" hover:text-white transition-colors duration-300">conseil</a></li>
+                            </ul>
+                        </div>
+
+
+                        <a href="/pages/sitemap.html"
+                            class="hover:!text-white transition-colors  duration-300 overflow-hidden w-fit  group/arrowhover lg:opacity-0 lg:group-aria-expanded/menu:opacity-100 transition-opacity">
+                            <span
+                                class="pr-9 inline-block  font-pfmellonbold text-8xl leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-700 delay-500 lg:group-aria-expanded/menu:translate-y-0">culture</span>
+                            <span class="hidden lg:inline-block invisible opacity-0 h-[170px] w-[170px] 
+                                group-hover/arrowhover:visible group-hover/arrowhover:opacity-100 transition-all duration-300 
+                                bg-button_arrow_yellow bg-no-repeat bg-center bg-cover"></span>
+                        </a>
+
+                        <a href="/pages/sitemap.html"
+                            class="hover:!text-white transition-colors duration-300 overflow-hidden w-fit group/arrowhover lg:opacity-0 lg:group-aria-expanded/menu:opacity-100 transition-opacity">
+                            <span
+                                class="pr-9 inline-block  font-pfmellonbold text-8xl leading-[85px] lg:text-[220px] lg:leading-[175px] uppercase lg:translate-y-[110%] transition-transform duration-700 delay-700 lg:group-aria-expanded/menu:translate-y-0">contact</span>
+                            <span class="hidden lg:inline-block invisible opacity-0 h-[170px] w-[170px] 
+                                group-hover/arrowhover:visible group-hover/arrowhover:opacity-100 transition-all duration-300 
+                                bg-button_arrow_yellow bg-no-repeat bg-center bg-cover"></span>
+                        </a>
+                    </div>
+
+                    <div class="py-4 lg:py-0 lg:absolute lg:right-[-110px] lg:bottom-[148px] lg:-rotate-90">
+                        <a href="" class="font-pfmellonbold text-3xl uppercase ">linkedin</a>
+                        <span class="font-pfmellonbold text-3xl uppercase  dark:text-primary-jaune">&nbsp;*&nbsp;</span>
+                        <a href="" class="font-pfmellonbold text-3xl uppercase ">mentions
+                            légales</a>
+                    </div>
+
+                </div>
             </div>
-            <nav x-show="open" x-transition class="md:!block pb-10 md:pb-0">
-                <ul
-                    class="flex flex-col md:flex-row gap-x-14 gap-y-10 text-black text-lg md:text-sm font-neue font-medium">
-                    <li><a href="/" class="inline-block">Nos voitures<span class="text-primary-green">.</span></a></li>
-                    <li><a href="/" class="inline-block">Nos services<span class="text-primary-green">.</span></a></li>
-                    <li><a href="/" class="inline-block">Nous contacter<span class="text-primary-green">.</span></a>
-                    </li>
-                </ul>
-            </nav>
+
         </div>
     </header>
 
 
-
     <main>
-
-        <section
-            class="mask_home relative bg-black text-white min-h-screen !min-h-svh bg-background-homepage bg-center bg-no-repeat bg-cover">
-
-            <!-- lui mettre la classe hidden pour cacher la vidéo -->
-            <div class=" absolute top-0 right-0 left-0 bottom-0 h-full w-full overflow-hidden flex justify-center items-center">
-                <video playsinline autoplay loop muted class="object-cover max-w-none min-h-full min-w-full">
-                    <source
-                        src="../sources/videos/homepage.mp4"
-                        type="video/mp4" />
-                </video>
-            </div>
-
-            <div
-                class="relative z-20 h-full min-h-screen !min-h-svh w-full pt-28 pb-6 px-7 max-w-[1184px] mx-auto flex flex-col justify-end items-start">
-                <h1 class="font-oswald font-semibold text-6xl md:text-9xl md:leading-[120px] uppercase ">
-                    Bienvenue<br>chez Slick<span class="text-primary-green">.</span></h1>
-                <p class="pt-3 md:pt-6 pb-20  font-neue font-normal text-sm md:text-xl">Achat, vente et recherche
-                    personnalisée de véhicules d’exception</p>
-                <a href="#anchor_homepage" class="inline-block self-center w-[34px] h-[34px] md:w-[42px] md:h-[42px] rounded-full 
-                border border-white rotate-90">
-                    <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span></a>
-            </div>
-
-        </section>
-
-        <section id="anchor_homepage" class=" bg-white text-black">
-            <div
-                class="pt-[100px] md:pt-[120px] px-7 min-h-screen !min-h-svh max-w-[1184px] mx-auto flex flex-col justify-center">
-                <h2 class=" text-center font-neue font-medium text-2xl md:text-6xl leading-[65px] md:leading-[120px]">
-                    Slick, <span class="text-secondary-grey">une équipe passionnée <br>et expérimentée pour</span>
-                    concrétiser
-                    <br>vos projets automobiles
-                </h2>
-            </div>
-        </section>
-
-
-        <section class=" bg-black text-white">
-
-            <div class="pt-10 md:pt-24 pb-32 md:pb-24 relative">
-                <div
-                    class="gap-6 pb-10 md:pb-20 px-7 max-w-[1184px] mx-auto flex flex-wrap  justify-start md:justify-between items-center">
-                    <h2 class="font-neue font-medium text-2xl md:text-5xl">Nos dernières voitures.</h2>
-                    <a href="#" target="_blank" class="px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap
-                    bg-transparent text-white border-white border text-xs md:text-lg font-neue font-medium
-                        flex flex-nowrap justify-center items-center gap-4 md:gap-5 group 
-                        md:static absolute bottom-[50px] left-1/2 -translate-x-1/2 md:translate-x-0">
-                        <span>En savoir plus</span>
-                        <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
-                            transition-transform duration-300 translate-x-0 md:group-hover:translate-x-2"></span>
-                    </a>
-
-                </div>
+        <div class="py-64 bg-[url('../sources/img/carte_desktop.svg')] bg-no-repeat bg-center bg-contain"></div>
 
 
 
-                <div x-data="{ isDown: false, startX: 0, scrollLeft:150, slideWidth: 0, moved: false }"
-                    x-init="slideWidth = $refs.slider.clientWidth; $refs.slider.scrollLeft = scrollLeft;"
-                    @mousedown="isDown = true; startX = $event.pageX - $refs.slider.offsetLeft; scrollLeft = $refs.slider.scrollLeft; moved = false;"
-                    @mouseup="isDown = false" @mouseleave="isDown = false" @mousemove.prevent="if (isDown) { 
-                    $refs.slider.scrollLeft = scrollLeft + (startX - $event.pageX); 
-                    if (Math.abs(startX - $event.pageX) > 5) { moved = true; } 
-                }" x-ref="slider"
-                    class="px-7 h-[135px] md:h-[275px] gap-6 md:gap-12 grid grid-flow-col auto-cols-[222px] md:auto-cols-[441px] overflow-auto no_scrollbar">
+        <div class="px-6 lg:px-[70px] max-w-[1512px] mx-auto overflow-hidden">
+            <section data-theme="white" class="">
+                <div class="pt-24 pb-32 md:pt-44 md:pb-40 text-center">
+                    <h3 class="font-pfmellonbold uppercase text-4xl md:text-7xl">VU QUE LE DERNIER MOT
+                        <br>
+                        EST SOUVENT UN CHIFFRE<span class="text-primary-jaune dark:text-primary-jaune">*</span>
+                    </h3>
 
-
-                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
-                        href="/pages/nos-voitures.html"
-                        class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
-
-                        <div
-                            class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
+                    <div class="pt-16 md:pt-24 pb-44 md:pb-56 grid grid-cols-1 md:grid-cols-[30%_1fr]	 gap-4 md:gap-5">
+                        <div class="flex flex-col gap-4 md:gap-5">
+                            <div class="flex-auto bg-primary-violet dark:bg-primary-lilas rounded-[20px] md:rounded-[30px] p-6 md:p-8 
+                            bg-[url('../sources/img/homepage_numbers/8+.svg')] dark:bg-[url('../sources/img/homepage_numbers/8+_violet.svg')] bg-no-repeat bg-[left_15px_bottom] md:bg-[left_24px_bottom] 
+                            bg-[length:auto_80%] md:bg-[length:60%_auto]">
+                                <p
+                                    class="text-end font-pfmellonbold uppercase text-primary-jaune dark:text-primary-violet !leading-none text-2xl md:text-4xl ">
+                                    End customers
+                                    <br>
+                                    countries
+                                </p>
+                            </div>
                             <div
-                                class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[36px] flex flex-col md:gap-2">
-                                <h3 class="truncate max-w-full font-oswald font-normal text-sm md:text-2xl uppercase">
-                                    Porsche
-                                    Cayenne turbo<span class="text-primary-green">.</span></h3>
-                                <h4
-                                    class="-mt-[2px] md:mt-0 truncate max-w-full font-neue font-medium  text-xs md:text-xl uppercase">
-                                    9YA 4.0
-                                    V8
-                                    550CH.</h4>
+                                class="flex-none bg-primary-lilas pt-4 pr-4 pb-4 pl-6 md:p-6 rounded-[20px] md:rounded-[30px]">
+                                <p
+                                    class="pb-2 md:pb-3 text-primary-violet font-pfmellonbold uppercase text-left text-2xl leading-[24px] md:text-3xl flex items-center">
+                                    23 collaborateurs&nbsp;
+                                    <span
+                                        class="inline-block w-[2.5px] h-5 md:h-6 bg-primary-noir-gris flex-none"></span>
+                                    &nbsp;
+                                    <span class="inline-block bg-[url('../sources/icons/icon_women.svg')] bg-no-repeat bg-center bg-contain 
+                                        w-[12px] h-[18px] md:w-[14px] md:h-[22px]"></span>
+                                    &nbsp;44%
+                                </p>
+                                <div
+                                    class="rounded-[30px] bg-transparent border border-primary-violet w-full h-2 md:h-[10px] relative">
+                                    <span
+                                        class="inline-block rounded-[30px] bg-primary-violet w-[44%] h-full absolute top-0 left-0"></span>
+                                </div>
+
                             </div>
                         </div>
 
-                        <button
-                            class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
-                            <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                        transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
-                            </span>
-                        </button>
-                    </a>
-
-                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
-                        href="/pages/nos-voitures.html"
-                        class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
-
-                        <div
-                            class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                            <div
-                                class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[36px] flex flex-col md:gap-2">
-                                <h3 class="truncate max-w-full font-oswald font-normal text-sm md:text-2xl uppercase">
-                                    Porsche
-                                    Cayenne turbo<span class="text-primary-green">.</span></h3>
-                                <h4
-                                    class="-mt-[2px] md:mt-0 truncate max-w-full font-neue font-medium  text-xs md:text-xl uppercase">
-                                    9YA 4.0
-                                    V8
-                                    550CH.</h4>
+                        <div class="flex-auto flex flex-col gap-4 md:gap-5">
+                            <div class=" grid grid-cols-1 md:grid-cols-[1fr_30%] gap-4 md:gap-5">
+                                <div class="flex-auto bg-primary-violet dark:bg-primary-lilas text-white dark:text-primary-violet 
+                                rounded-[20px] md:rounded-[30px] relative
+                                pt-4 pr-3 pb-14 pl-5 md:p-8 md:pb-12">
+                                    <p
+                                        class="italic font-poppins font-normal text-xs leading-snug md:text-lg text-left">
+                                        <span class="text-primary-jaune text-lg md:text-3xl">”</span>
+                                        Nous réunissons toutes les compétences clés pour monter un projet internet, et
+                                        souhaitons devenir un partenaire de référence pour les entrepreneurs digitaux, à
+                                        mi-chemin entre le start-up studio et le fonds early stage.
+                                        <span class="text-primary-jaune text-lg md:text-3xl">”</span>
+                                    </p>
+                                    <p class="flex items-center gap-2 absolute right-3 bottom-4 md:right-8 md:bottom-5">
+                                        <span
+                                            class="inline-block font-pfmellonbold text-xl md:text-3xl uppercase text-white dark:text-primary-violet">romain</span>
+                                        <span
+                                            class="inline-block font-pfmellonbold rounded-full text-base md:text-lg uppercase text-primary-noir-gris bg-primary-jaune px-2 md:px-3">fondateur</span>
+                                    </p>
+                                </div>
+                                <div class="min-h-[132px] flex-auto bg-primary-violet dark:bg-primary-lilas rounded-[20px] md:rounded-[30px] p-6 md:p-8 
+                                    bg-[url('../sources/img/homepage_numbers/8digits.svg')] dark:bg-[url('../sources/img/homepage_numbers/8digits_violet.svg')] bg-no-repeat bg-[left_15px_bottom] md:bg-[left_24px_bottom] 
+                                    bg-[length:auto_80%] md:bg-[length:80%_auto]">
+                                    <p
+                                        class="text-end font-pfmellonbold uppercase text-primary-jaune dark:text-primary-violet !leading-none text-2xl md:text-4xl ">
+                                        ARR
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="md:h-[205px] grid grid-cols-1 md:grid-cols-[40%_1fr] gap-4 md:gap-5">
+                                <div class="h-[154px] md:h-auto flex-auto bg-primary-violet dark:bg-primary-lilas rounded-[20px] md:rounded-[30px] p-6 md:p-8 
+                                bg-[url('../sources/img/homepage_numbers/15K+.svg')] dark:bg-[url('../sources/img/homepage_numbers/15K+_violet.svg')] bg-no-repeat bg-[left_15px_bottom] md:bg-[left_24px_bottom] 
+                                bg-[length:auto_80%] md:bg-[length:75%_auto]">
+                                    <p
+                                        class="text-end font-pfmellonbold uppercase text-primary-jaune dark:text-primary-violet !leading-none text-2xl md:text-4xl ">
+                                        Leads<br>monthly
+                                    </p>
+                                </div>
+                                <div class="h-[132px] md:h-auto flex-auto bg-primary-lilas rounded-[20px] md:rounded-[30px] p-6 md:p-8 
+                            bg-[url('../sources/img/homepage_numbers/500K+.svg')] bg-no-repeat bg-[left_15px_bottom] md:bg-[left_24px_bottom] 
+                            bg-[length:auto_80%] md:bg-[length:70%_auto]">
+                                    <p
+                                        class="text-end font-pfmellonbold uppercase text-primary-noir-gris dark:text-primary-violet !leading-none text-2xl md:text-4xl ">
+                                        UV<br>monthly
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
-                        <button
-                            class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
-                            <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                    transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
-                            </span>
-                        </button>
-                    </a>
-
-                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
-                        href="/pages/nos-voitures.html"
-                        class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
-
-                        <div
-                            class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                            <div
-                                class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[36px] flex flex-col md:gap-2">
-                                <h3 class="truncate max-w-full font-oswald font-normal text-sm md:text-2xl uppercase">
-                                    Porsche
-                                    Cayenne turbo<span class="text-primary-green">.</span></h3>
-                                <h4
-                                    class="-mt-[2px] md:mt-0 truncate max-w-full font-neue font-medium  text-xs md:text-xl uppercase">
-                                    9YA 4.0
-                                    V8
-                                    550CH.</h4>
-                            </div>
-                        </div>
-
-                        <button
-                            class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
-                            <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
-                            </span>
-                        </button>
-                    </a>
-
-                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
-                        href="/pages/nos-voitures.html"
-                        class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
-
-                        <div
-                            class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                            <div
-                                class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[36px] flex flex-col md:gap-2">
-                                <h3 class="truncate max-w-full font-oswald font-normal text-sm md:text-2xl uppercase">
-                                    Porsche
-                                    Cayenne turbo<span class="text-primary-green">.</span></h3>
-                                <h4
-                                    class="-mt-[2px] md:mt-0 truncate max-w-full font-neue font-medium  text-xs md:text-xl uppercase">
-                                    9YA 4.0
-                                    V8
-                                    550CH.</h4>
-                            </div>
-                        </div>
-
-                        <button
-                            class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
-                            <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-            transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
-                            </span>
-                        </button>
-                    </a>
-
-                    <a x-on:click="if (moved) { $event.preventDefault(); moved = false; }"
-                        href="/pages/nos-voitures.html"
-                        class="bg-[url('../sources/img/nos_voitures/nos-voitures.jpeg')] bg-no-repeat bg-center bg-cover relative mask_cars_carrousel group">
-
-                        <div
-                            class="absolute bottom-[8px] md:bottom-[20px] left-[10px] md:left-[18px] overflow-hidden md:max-h-[36px] w-[80%]">
-                            <div
-                                class="w-full md:transition-transform md:duration-300 md:group-hover:-translate-y-[36px] flex flex-col md:gap-2">
-                                <h3 class="truncate max-w-full font-oswald font-normal text-sm md:text-2xl uppercase">
-                                    Porsche
-                                    Cayenne turbo<span class="text-primary-green">.</span></h3>
-                                <h4
-                                    class="-mt-[2px] md:mt-0 truncate max-w-full font-neue font-medium  text-xs md:text-xl uppercase">
-                                    9YA 4.0
-                                    V8
-                                    550CH.</h4>
-                            </div>
-                        </div>
-
-                        <button
-                            class="inline-block rounded-full border border-white  absolute bottom-[12px] right-[12px] md:bottom-[18px] md:right-[18px] h-[26px] w-[26px] md:h-[40px] md:w-[40px] ">
-                            <span
-                                class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1">
-                            </span>
-                        </button>
-                    </a>
-
-
-                </div>
-
-            </div>
-
-
-
-
-
-
-
-
-        </section>
-
-
-
-
-        <section class="text-white bg-white ">
-            <div
-                class="px-7 pt-32 pb-36 md:py-48 max-w-[1184px] mx-auto flex flex-col md:flex-row flex-nowrap items-stretch gap-5 md:gap-9">
-                <a href="#"
-                    class="mask_cards relative h-[250px] md:h-auto md:flex-1 group  rounded-xl overflow-hidden bg-background-cards-vente bg-no-repeat bg-center bg-cover"">
-                    <div class=" px-6 py-5 h-full flex flex-col justify-end relative">
-                    <h2 class="font-oswald text-2xl md:text-4xl font-semibold uppercase">ventes<span
-                            class="text-primary-green">.</span></h2>
-                    <p class="font-neue font-normal text-sm md:text-lg">Nos véhicules disponibles</p>
-
-                    <button class="rounded-full border border-white  inline-block absolute top-[20px] right-[20px] md:top-[22px] md:right-[22px] 
-                        h-[33px] w-[33px] md:h-[42px] md:w-[42px] ">
-                        <span
-                            class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                                transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span></button>
-            </div>
-            </a>
-            <div class="md:flex-1 flex flex-col gap-5 md:gap-9">
-                <a href="#"
-                    class="mask_cards relative h-[150px] md:h-[230px] rounded-xl overflow-hidden bg-background-cards-achat bg-no-repeat bg-center bg-cover"">
-                        <div class=" px-6 py-5 h-full flex flex-col justify-end relative">
-                    <h2 class="font-oswald text-2xl md:text-4xl font-semibold uppercase">achats<span
-                            class="text-primary-green">.</span></h2>
-                    <p class="font-neue font-normal text-sm md:text-lg">Nos offres de rachat</p>
-
-                    <button class="rounded-full border border-white  inline-block absolute top-[20px] right-[20px] md:top-[22px] md:right-[22px] 
-                            h-[33px] w-[33px] md:h-[42px] md:w-[42px] ">
-                        <span
-                            class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                                    transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span></button>
-            </div>
-            </a>
-            <a href="#"
-                class="mask_cards relative h-[150px] md:h-[230px] rounded-xl overflow-hidden bg-background-cards-recherche bg-no-repeat bg-center bg-cover"">
-                        <div class=" px-6 py-5 h-full flex flex-col justify-end relative">
-                <h2 class="font-oswald text-2xl md:text-4xl font-semibold uppercase">recherche
-                    personnalisée<span class="text-primary-green">.</span></h2>
-                <p class="font-neue font-normal text-sm md:text-lg">Découvrons ensemble votre idéal</p>
-
-                <button class="rounded-full border border-white  inline-block absolute top-[20px] right-[20px] md:top-[22px] md:right-[22px] 
-                    h-[33px] w-[33px] md:h-[42px] md:w-[42px] ">
-                    <span class="inline-block w-full h-full bg-ico-arrow-right-green bg-no-repeat bg-center bg-[length:60%_auto] 
-                            transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span></button>
-                </div>
-            </a>
-            </div>
-            </div>
-        </section>
-
-        <section class=" bg-black text-white">
-            <div
-                class=" px-7 py-12 md:py-24 max-w-[1128px] mx-auto flex flex-wrap justify-around md:justify-between gap-10">
-                <img class="block h-auto w-[116px] md:w-[201px]" src="../sources/logos/partners/porsche.svg"
-                    alt="logos marques partenaires">
-                <img class="block h-auto w-[137px] md:w-[236px]" src="../sources/logos/partners/mercedes.svg"
-                    alt="logos marques partenaires">
-                <img class="block h-auto w-[71px] md:w-[123px]" src="../sources/logos/partners/audi.svg"
-                    alt="logos marques partenaires">
-                <img class="block h-auto w-[87px] md:w-[151px]" src="../sources/logos/partners/mini.svg"
-                    alt="logos marques partenaires">
-            </div>
-        </section>
-
-
-        <section class=" bg-white text-black">
-            <div class="text-center px-7 py-52 max-w-[1184px] mx-auto">
-                <p
-                    class="pb-16 md:pb-28 max-w-[750px] mx-auto font-neue font-normal text-base leading-[40px] md:text-3xl md:leading-[70px] ">
-                    Tous nos véhicules sont révisés et garantis.
-                    <br>
-                    Notre showroom est situé dans le 15e arrondissement de Paris et accessible uniquement sur rendez
-                    vous
-                    pour préserver la confidentialité du lieu.
-                </p>
-                <a href="#" target="_blank" class="mx-auto bg-transparent text-black border-black px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap
-                 border text-xs md:text-lg font-neue font-medium
-                    flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
-                    <span>En savoir plus</span>
-                    <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
-                        transition-transform duration-300 translate-x-0 md:group-hover:translate-x-2"></span>
-                </a>
-            </div>
-        </section>
-
-
-
-        <section class="text-white bg-black ">
-            <div class="max-w-[1512px] mx-auto bg-background-text-cta bg-no-repeat bg-[left_-36px_bottom_0px]  md:bg-[left_12px_top_39px] 
-        bg-[length:201px_157px] md:bg-[length:341px_266px]">
-                <div
-                    class="px-7  py-16 md:py-20 max-w-[1184px] mx-auto flex flex-col flex-nowrap md:flex-row items-center justify-between gap-9 md:gap-6 ">
-                    <div
-                        class="max-w-[775px] text-center md:text-left flex flex-col items-center md:items-start  gap-2 md:gap-5">
-                        <h2 class="font-neue text-2xl md:text-5xl font-medium">Notre instagram<span
-                                class="text-primary-green">.</span></h2>
-                        <p class="font-neue text-base md:text-xl font-normal">Suivez-nous pour ne rien manquer de notre
-                            actualité !</p>
                     </div>
 
-                    <a href="#" target="_blank" class="px-6 md:px-7 py-3 w-fit rounded-full whitespace-nowrap
-                bg-transparent text-white border-white border text-xs md:text-lg font-neue font-medium
-                flex flex-nowrap justify-center items-center gap-4 md:gap-5 group">
-                        <span>S’abonner</span>
-                        <span class="bg-ico-arrow-right-green-cta w-[16px] md:w-[23.4px] h-[10.7px] md:h-[15.6px] bg-no-repeat bg-center bg-cover 
-                    transition-transform duration-300 translate-x-0 md:group-hover:translate-x-2"></span>
-                    </a>
-                </div>
-            </div>
+                    <h2 class="font-pfmellonbold uppercase text-8xl lg:text-[238px]">UN PROJET ?</h2>
 
-        </section>
+                    <p class="font-poppins font-normal text-sm md:text-xl">Discutons-en</p>
+
+                    <a href="#" class="mt-16 md:mt-28 mx-auto pl-[18px] md:pl-7 pr-[6px] md:pr-[9px] py-[5px] md:py-[6px] w-fit rounded-full whitespace-nowrap
+                    bg-primary-jaune text-primary-noir-gris  text-xs md:text-xl font-poppins font-bold uppercase
+                        flex flex-nowrap justify-center items-center gap-4 md:gap-7 group">
+                        <span>contactez-nous</span>
+                        <span
+                            class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                         bg-button_arrow_black bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform duration-300"></span>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <section data-theme="violet" class="">
+                <div class=" pt-11 pb-8 md:pt-24 md:pb-16">
+                    <h2
+                        class="text-primary-violet dark:text-white font-pfmellonbold text-8xl leading-[90px] lg:text-[300px] lg:leading-[250px]">
+                        REJOIGNEZ<span class="inline-block text-primary-jaune">*</span>
+                        <br>
+                        NOUS
+                    </h2>
+
+                    <div class="pt-14 pb-12 md:pt-20 md:pb-12 flex flex-col gap-5 md:gap-9">
+                        <a href="" target="_blank"
+                            class="pb-4 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
+
+                            <div class="flex flex-col gap-1 md:gap-3">
+                                <p
+                                    class="font-pfmellonbold text-3xl leading-none md:text-[54px] md:leading-[40px] uppercase">
+                                    digital designer</p>
+                                <div class="flex gap-[3px] md:gap-2 justify-start items-center">
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
+                                </div>
+
+                            </div>
+
+                            <span
+                                class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	duration-300"></span>
+                        </a>
+
+                        <a href="" target="_blank"
+                            class="pb-4 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
+
+                            <div class="flex flex-col gap-1 md:gap-3">
+                                <p
+                                    class="font-pfmellonbold text-3xl leading-none md:text-[54px] md:leading-[40px] uppercase">
+                                    developpeur web</p>
+                                <div class="flex gap-[3px] md:gap-2 justify-start items-center">
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">CDI</span>
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">remote</span>
+                                </div>
+                            </div>
+
+                            <span
+                                class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	duration-300"></span>
+                        </a>
+
+                        <a href="" target="_blank"
+                            class="pb-4 md:pb-5 pr-6 md:pr-7 border-b border-black dark:border-white transition-colors duration-300 flex justify-between items-center group">
+
+                            <div class="flex flex-col gap-1 md:gap-3">
+                                <p
+                                    class="font-pfmellonbold text-3xl leading-none md:text-[54px] md:leading-[40px] uppercase">
+                                    candidature spontanée</p>
+                                <div class="flex gap-[3px] md:gap-2 justify-start items-center">
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">ibiza</span>
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">paris</span>
+                                    <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
+                            font-pfmellonbold uppercase text-sm px-3 md:px-4 py-[3px] md:text-xl ">barcelone</span>
+                                </div>
+                            </div>
+
+                            <span
+                                class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform	duration-300"></span>
+                        </a>
+                    </div>
+
+                    <a href="#" class=" mx-auto pl-[18px] md:pl-[30px] pr-[6px] py-[5px] md:py-[6px] w-fit rounded-full whitespace-nowrap
+            bg-primary-jaune text-primary-noir-gris  text-xs md:text-lg font-poppins font-bold uppercase
+                flex flex-nowrap justify-center items-center gap-4 md:gap-7 group">
+                        <span>toutes les offres</span>
+                        <span
+                            class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_black bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform duration-300"></span>
+                    </a>
+
+                    <div class="mask_black_50 relative mt-14 md:mt-28 flex justify-between items-center rounded-[20px] md:rounded-[30px] h-[188px] md:h-[480px]
+            bg-[url('../sources/img/joins_us.jpeg')] bg-center bg-no-repeat bg-cover overflow-hidden">
+                        <a href="#" class="z-10 mx-auto pl-[18px] md:pl-[30px] pr-[6px] py-[5px] md:py-[6px] w-fit rounded-full whitespace-nowrap
+            bg-white text-primary-noir-gris  text-xs md:text-lg font-poppins font-bold uppercase
+                flex flex-nowrap justify-center items-center gap-4 md:gap-7 group">
+                            <span>explorer notre culture</span>
+                            <span
+                                class="h-[26px] w-[26px] md:h-[41px] md:w-[41px] rounded-full overflow-hidden flex-none
+                 bg-button_arrow_yellow bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform duration-300"></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
 
 
     </main>
 
-
-    <footer class=" bg-white text-black">
-        <div class="max-w-[1251px] mx-auto px-7 pt-20 md:pt-24 pb-8 md:pb-11 ">
-            <div
-                class="px-2 md:px-9 pb-5 md:py-5 flex flex-col-reverse md:flex-row justify-between items-center gap-6 ">
-                <nav class="flex gap-6 md:gap-10">
-                    <ul class="flex gap-6 md:gap-10 text-black text-[11px] md:text-base font-neue font-medium">
-                        <li><a href="/" class="inline-block">Nos voitures</a></li>
-                        <li><a href="/" class="inline-block">Nos services</a></li>
-                        <li><a href="/" class="inline-block">Nous contacter</a></li>
-                    </ul>
-                </nav>
-                <a href="/"
-                    class="flex-none inline-block h-[21.6px] w-[21.6px] md:w-9 md:h-9 bg-ico-instagram bg-contain bg-center bg-no-repeat"></a>
-            </div>
-            <hr class="border-t-[1px] border-secondary-grey">
-            <div
-                class="px-2 md:px-9 pt-5 md:pt-7 pb-4 md:pb-2 flex flex-col md:flex-row justify-between items-center gap-x-6 gap-y-8 font-neue font-medium text-[8px] md:text-xs">
-                <div class="flex gap-6">
-                    <a href="/" class="inline-block">@ Copyright 2024</a>
-                    <a href="/" class="inline-block">Mentions légales</a>
-                    <a href="https://www.rweb.fr/" target="_blank" class="flex items-center gap-1">
-                        Propulsé par<span
-                            class="h-[6px] w-[46px] md:h-[8px] md:w-[61px] bg-logo-la-factory.svg bg-center bg-no-repeat bg-cover"></span>
-                    </a>
+    <footer>
+        <div data-theme="white"
+            class="min-h-[500px] pt-36 pb-24 md:py-64 px-6 lg:px-[70px] max-w-[1512px] mx-auto  flex flex-col md:flex-row gap-9 justify-between 
+                bg-footer_la_factory_violet dark:bg-footer_la_factory_white bg-bottom bg-no-repeat bg-contain  transition-all duration-300">
+            <div class="flex flex-col gap-5  md:gap-10">
+                <div>
+                    <h2 class="text-3xl md:text-7xl font-pfmellonbold uppercase ">Vous avez un projet ?
+                    </h2>
+                    <p class="text-xs md:text-lg font-poppins font-normal">Nous le réaliserons</p>
                 </div>
-                <a href="/" class="inline-block">Beaugrenelle - 75015 Paris</a>
+
+                <a href="#" class=" pl-[18px] md:pl-[22px] pr-[6px] md:pr-[7px] py-[5px] md:py-[7px] w-fit rounded-full whitespace-nowrap
+                    bg-primary-jaune text-primary-noir-gris  text-xs md:text-base font-poppins font-bold uppercase
+                        flex flex-nowrap justify-center items-center gap-4 group">
+                    <span>contact</span>
+                    <span
+                        class="h-[26px] w-[26px] md:h-[33px] md:w-[33px] rounded-full overflow-hidden flex-none
+                         bg-button_arrow_black bg-cover bg-center bg-no-repeat group-hover:scale-[1.15] transition-transform duration-300"></span>
+                </a>
+
+
+
+            </div>
+
+            <div class="flex flex-col gap-6">
+                <a href="" class="font-poppins font-normal text-xs md:text-right">Linkedin</a>
+                <a href="" class="font-poppins font-normal text-xs md:text-right">Mentions légales</a>
+                <a href="" class="font-poppins font-normal text-xs md:text-right">Contact</a>
             </div>
         </div>
     </footer>
-
 
 </body>
 

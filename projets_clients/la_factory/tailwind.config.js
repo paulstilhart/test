@@ -2,11 +2,10 @@
 module.exports = {
   content: {
     relative: true,
-    files: [
-      './pages/**/*.{html,js}',
-      './components/**/*.{html,js}',
-    ],
+    files: ["./pages/**/*.{html,js}", "./components/**/*.{html,js}"],
   },
+
+  darkMode: 'class',
 
   theme: {
     extend: {
@@ -14,45 +13,38 @@ module.exports = {
         //white:'#FFFFFF',//rgb(255, 255, 255)
         //black:'#000000',//rgb(0, 0, 0)
 
-        "white-50%": "#ffffff80",     //(255, 255, 255, 0.5)
-        "white-30%": "#ffffff3D",   
-
-        "primary-green": "#02EC8E", //rgb(2, 236, 142)
-        "primary-black": "#000000", //rgb(0, 0, 0)
-        "primary-grey": "#B5B5B5", //rgb(181, 181, 181)
-
-        "secondary-grey": "#D9D9D9", //rgb(217, 217, 217)
+        "primary-violet": "#633ADE", //rgb(99, 58, 222)
+        "primary-lilas": "#D9CCFF", //rgb(217, 204, 255)
+        "primary-jaune": "#E4F24B", //rgb(228, 242, 75)
+        "primary-noir-gris": "#302F2E", //rgb(48, 47, 46)
       },
 
-      fontFamily: {
-        'oswald': ['Oswald', 'sans-serif'],
-        'neue': ['neue-haas-grotesk-display', 'sans-serif'],
 
+      // PF Mellon bold 700
+      // Poppins bold 700
+      // Poppins regular 400
+
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        pfmellonbold: ["PFMellonBold", "sans-serif"],
       },
 
       backgroundImage: {
-        "ico-arrow-right-green-cta": "url('../sources/icons/arrow-right-green-cta.svg')",
-        "ico-arrow-right-green": "url('../sources/icons/arrow-right-green.svg')",
-        "ico-arrow-right-white": "url('../sources/icons/arrow-right-white.svg')",
-        "ico-burger-close": "url('../sources/icons/burger-close.svg')",
-        "ico-burger-open": "url('../sources/icons/burger-open.svg')",
-        "ico-instagram": "url('../sources/icons/instagram.svg')",
-        "ico-accordion-close": "url('../sources/icons/accordion-close.svg')",
-        "ico-accordion-open": "url('../sources/icons/accordion-open.svg')",
-        "ico-button-arrow-white": "url('../sources/icons/button-arrow-white.svg')",
-        "ico-arrow-bottom-grey": "url('../sources/icons/arrow-bottom-grey.svg')",
+        "header_monogramme_violet": "url('../sources/logos/header/header_monogramme_violet.svg')",
+        "header_monogramme_white": "url('../sources/logos/header/header_monogramme_white.svg')",
 
-        
+        "header_logo_white": "url('../sources/logos/header/header_logo_white.svg')",
+        "header_brand_white": "url('../sources/logos/header/header_brand_white.svg')",
+        "header_logo_violet": "url('../sources/logos/header/header_logo_violet.svg')",
+        "header_brand_violet": "url('../sources/logos/header/header_brand_violet.svg')",
 
-        "logo-header-slick.svg": "url('../sources/logos/header-slick.svg')",
-        "logo-la-factory.svg": "url('../sources/logos/la-factory.svg')",
+        "footer_la_factory_violet": "url('../sources/logos/footer/footer_la_factory_violet.svg')",
+        "footer_la_factory_white": "url('../sources/logos/footer/footer_la_factory_white.svg')",
+        "button_arrow_black": "url('../sources/icons/button_arrow_black.svg')",
+        "button_arrow_yellow": "url('../sources/icons/button_arrow_yellow.svg')",
+        "button_arrow_violet": "url('../sources/icons/button_arrow_violet.svg')",
 
-        "background-text-cta": "url('../sources/icons/background-text-cta.svg')",
-        "background-homepage": "url('../sources/img/homepage.jpg')",
-        "background-pages-services": "url('../sources/img/pages-services.jpeg')",
-        "background-cards-achat": "url('../sources/img/cards/achat.jpeg')",
-        "background-cards-vente": "url('../sources/img/cards/vente.jpeg')",
-        "background-cards-recherche": "url('../sources/img/cards/recherche.jpeg')",
+        "map_pin_shadow": "url('../sources/icons/map_pin_shadow.svg')",
       },
     },
   },

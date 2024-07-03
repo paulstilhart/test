@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider avec effet snap-x au clic de la souris</title>
+    <title>TEST</title>
+
     <!-- lien avec la feuille de style compilée tailwind -->
     <link rel="stylesheet" href="../css/output.css">
 
@@ -12,143 +13,125 @@
     <!-- alpine JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <!-- script JS car bug carrousel sur certaines versions de firefox -->
+    <!-- script JS -->
     <script defer src="../js/script.js"></script>
-
 </head>
 
-
-<body class="bg-black text-white">
-
-
-    <section class=" bg-white text-black">
-        <div class=" px-7 pt-20 pb-24 md:pb-52 max-w-[1184px] mx-auto">
-            <h2 class="pb-2 font-oswald text-xl md:text-2xl font-normal uppercase">L’HABITACLE<span
-                    class="text-primary-green">.</span></h2>
+<body class="bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors duration-300">
 
 
 
-            <div x-data="{
-                        images: [
-                            '../sources/img/detail_voiture/habitacle/habitacle_1.jpeg',
-                            '../sources/img/detail_voiture/habitacle/habitacle_2.png',
-                            '../sources/img/cards/achat.jpeg',
-                            '../sources/img/cards/recherche.jpeg',
-                            '../sources/img/cards/vente.jpeg'
-                        ],
-                        activeImage: 0,
-                        changeImage(index) {
-                            this.activeImage = index;
-                            this.$refs.carousel.scrollLeft = index * this.$refs.carousel.clientWidth;
-                        },
-                        handleScroll() {
-                            const carousel = this.$refs.carousel;
-                            const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
-                            console.log(index);
-                            this.activeImage = index;
-                        }
-                    }" class="relative h-[480px] md:h-[680px]">
-                <!-- Carrousel d'images -->
-                <div x-ref="carousel" @scroll.debounce.250ms="handleScroll"
-                    class="h-full w-full no_scrollbar cursor-all-scroll flex overflow-scroll scroll-smooth snap-mandatory snap-x touch-manipulation">
-                    <template x-for="(image, index) in images" :key="index">
-                        <img :src="image" alt="image carrousel detail voiture"
-                            class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
-                    </template>
+    <div class="px-6 lg:px-[70px] max-w-[1512px] mx-auto overflow-hidden">
+
+
+        <section data-theme="violet" class="">
+
+            <div class="pb-12 md:pb-64 relative">
+
+                <div class="h-96"></div>
+
+                <div class="flex flex-col xl:flex-row gap-0 justify-between items-center">
+                    <div class="js_mapcards_cards w-full xl:max-w-[625px] flex flex-col gap-2 md:gap-4 relative z-10">
+                        <a href="/pages/sitemap.html" aria-selected="true" data-mapcards="1"
+                            class="mask_map_cards rounded-[20px] md:rounded-[30px] p-5 md:p-7 border border-white relative 
+                        flex flex-col gap-[6px] md:gap-3 opacity-40 aria-selected:opacity-100 group/mapcards transition-opacity duration-700 ">
+                            <h4
+                                class="font-pfmellonbold uppercase text-primary-violet text-xl leading-[15px] md:text-3xl md:leading-[22px]">
+                                paris</h4>
+                            <h3
+                                class="font-pfmellonbold uppercase text-primary-noir-gris text-4xl leading-[27px] md:text-6xl md:leading-[45px]">
+                                DEVELOPPEMENT WEB<span class="text-primary-jaune dark:text-primary-jaune">*</span></h3>
+                            <span
+                                class=" h-6 w-6 md:w-10 md:h-10 absolute top-4 right-4 md:top-6 md:right-6 bg-button_arrow_violet bg-no-repeat bg-center bg-cover hidden group-aria-selected/mapcards:inline-block"></span>
+                        </a>
+                        <a href="/pages/sitemap.html" aria-selected="true" data-mapcards="1"
+                            class="mask_map_cards rounded-[20px] md:rounded-[30px] p-5 md:p-7 border border-white relative 
+                        flex flex-col gap-[6px] md:gap-3 opacity-40 aria-selected:opacity-100 group/mapcards transition-opacity duration-700">
+                            <h4
+                                class="font-pfmellonbold uppercase text-primary-violet text-xl leading-[15px] md:text-3xl md:leading-[22px]">
+                                paris</h4>
+                            <h3
+                                class="font-pfmellonbold uppercase text-primary-noir-gris text-4xl leading-[27px] md:text-6xl md:leading-[45px]">
+                                support<span class="text-primary-jaune dark:text-primary-jaune">*</span></h3>
+                            <span
+                                class=" h-6 w-6 md:w-10 md:h-10 absolute top-4 right-4 md:top-6 md:right-6 bg-button_arrow_violet bg-no-repeat bg-center bg-cover hidden group-aria-selected/mapcards:inline-block"></span>
+                        </a>
+                        <a href="/pages/sitemap.html" aria-selected="false" data-mapcards="2"
+                            class="mask_map_cards rounded-[20px] md:rounded-[30px] p-5 md:p-7 border border-white relative 
+                        flex flex-col gap-[6px] md:gap-3 opacity-40 aria-selected:opacity-100 group/mapcards transition-opacity duration-700">
+                            <h4
+                                class="font-pfmellonbold uppercase text-primary-violet text-xl leading-[15px] md:text-3xl md:leading-[22px]">
+                                barcelone</h4>
+                            <h3
+                                class="font-pfmellonbold uppercase text-primary-noir-gris text-4xl leading-[27px] md:text-6xl md:leading-[45px]">
+                                marketing digital<span class="text-primary-jaune dark:text-primary-jaune">*</span></h3>
+                            <span
+                                class=" h-6 w-6 md:w-10 md:h-10 absolute top-4 right-4 md:top-6 md:right-6 bg-button_arrow_violet bg-no-repeat bg-center bg-cover hidden group-aria-selected/mapcards:inline-block"></span>
+                        </a>
+                        <a href="/pages/sitemap.html" aria-selected="false" data-mapcards="3"
+                            class="mask_map_cards rounded-[20px] md:rounded-[30px] p-5 md:p-7 border border-white relative 
+                        flex flex-col gap-[6px] md:gap-3 opacity-40 aria-selected:opacity-100 group/mapcards transition-opacity duration-700">
+                            <h4
+                                class="font-pfmellonbold uppercase text-primary-violet text-xl leading-[15px] md:text-3xl md:leading-[22px]">
+                                ibiza</h4>
+                            <h3
+                                class="font-pfmellonbold uppercase text-primary-noir-gris text-4xl leading-[27px] md:text-6xl md:leading-[45px]">
+                                conseil<span class="text-primary-jaune dark:text-primary-jaune">*</span></h3>
+                            <span
+                                class="h-6 w-6 md:w-10 md:h-10 absolute top-4 right-4 md:top-6 md:right-6 bg-button_arrow_violet bg-no-repeat bg-center bg-cover hidden group-aria-selected/mapcards:inline-block"></span>
+                        </a>
+                    </div>
+
+                    <div
+                        class="js_mapcards_pins flex-none -mt-4 xl:mt-0 xl:mb-0 xl:-mr-[70px] h-[976px] w-[727px] bg-[url('../sources/img/homepage_carte/carte_desktop.svg')] bg-no-repeat bg-contain bg-center relative">
+
+                        <div aria-selected="true" data-mapcards="1" 
+                        class="absolute top-[379px] right-[143px] w-[135px] h-[135px]
+                        rounded-full  aria-selected:bg-map_pin_shadow bg-center bg-no-repeat bg-contain flex justify-center items-center ">
+                            <button class=" h-10 w-10 "></button>
+                        </div>
+
+                        <div aria-selected="false" data-mapcards="2" 
+                        class="absolute top-[664px] right-[224px] w-[135px] h-[135px]
+                        rounded-full  aria-selected:bg-map_pin_shadow bg-center bg-no-repeat bg-contain flex justify-center items-center ">
+                            <button class=" h-10 w-10 "></button>
+                        </div>
+
+
+                        <div aria-selected="false" data-mapcards="3" 
+                        class="absolute top-[768px] right-[250px] w-[135px] h-[135px]
+                        rounded-full  aria-selected:bg-map_pin_shadow bg-center bg-no-repeat bg-contain flex justify-center items-center ">
+                            <button class=" h-10 w-10 "></button>
+                        </div>
+
+
+                    </div>
                 </div>
 
-                <!-- Boutons de navigation -->
-                <button @click="changeImage((activeImage - 1 + images.length) % images.length)"
-                    aria-label="Image précédente"
-                    class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
-                    <span
-                        class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
-                </button>
-                <button @click="changeImage((activeImage + 1) % images.length)" aria-label="Image suivante"
-                    class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white">
-                    <span
-                        class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
-                </button>
 
-                <!-- Indicateurs d'images -->
-                <div
-                    class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-50">
-                    <template x-for="(image, index) in images" :key="index">
-                        <button @click="changeImage(index)" :aria-selected="activeImage === index ? 'true' : 'false'"
-                            class="h-[10px] w-[10px] md:h-[13px] md:w-[13px] border border-white rounded-full focus:outline-none bg-transparent cursor-pointer aria-selected:bg-white aria-selected:w-[30px] aria-selected:md:w-[43px] aria-selected:cursor-default"></button>
-                    </template>
-                </div>
+                <p
+                    class="absolute -bottom-4 -left-7 md:-bottom-9 lg:-left-[88px] font-pfmellonbold text-8xl md:text-[238px]">
+                    3 OFFICES<span class="text-primary-jaune dark:text-primary-jaune">*</span></p>
+
+
             </div>
 
 
 
 
-
-
-        </div>
-    </section>
+        </section>
 
 
 
-
-
-
-    <section class=" bg-white text-black">
-        <div class=" px-7 pt-20 pb-24 md:pb-52 max-w-[1184px] mx-auto">
-            <h2 class="pb-2 font-oswald text-xl md:text-2xl font-normal uppercase">L’HABITACLE<span
-                    class="text-primary-green">.</span></h2>
-
-
-
-            <div class="relative h-[480px] md:h-[680px]">
-                <div x-data="{
-                    activeImage: 0,
-                    setActiveImage(index) { this.activeImage = index; },
-                    next() { this.activeImage = (this.activeImage + 1) % this.images.length; },
-                    prev() { this.activeImage = (this.activeImage - 1 + this.images.length) % this.images.length; }
-                }"
-                    class="h-full w-full no_scrollbar   cursor-all-scroll	 flex overflow-scroll scroll-smooth   snap-mandatory snap-x touch-manipulation">
-
-                    <img src="../sources/img/detail_voiture/habitacle/habitacle_1.jpeg"
-                        alt="image carrousel detail voiture"
-                        class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none ">
-                    <img src="../sources/img/detail_voiture/habitacle/habitacle_2.png"
-                        alt="image carrousel detail voiture"
-                        class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
-                    <img src="../sources/img/cards/achat.jpeg" alt="image carrousel detail voiture"
-                        class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
-                    <img src="../sources/img/cards/recherche.jpeg" alt="image carrousel detail voiture"
-                        class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
-                    <img src="../sources/img/cards/vente.jpeg" alt="image carrousel detail voiture"
-                        class="object-cover w-full shrink-0 snap-center snap-always pointer-events-none">
-                </div>
-
-                <button @click="prev()" aria-label="Image précédente"
-                    class="absolute top-1/2 left-[10px] md:left-[32px] transform -translate-y-1/2 rotate-180 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white ">
-                    <span class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] 
-                        transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
-                </button>
-                <button @click="next()" aria-label="Image suivante"
-                    class="absolute top-1/2 right-[10px] md:right-[32px] transform -translate-y-1/2 z-50 bg-transparent h-[32px] w-[32px] md:w-[40px] md:h-[40px] cursor-pointer rounded-full border border-white ">
-                    <span class="inline-block w-full h-full bg-ico-arrow-right-white bg-no-repeat bg-center bg-[length:60%_auto] 
-                    transition-transform duration-300 translate-x-0 md:hover:translate-x-1"></span>
-                </button>
-
-                <div
-                    class="absolute bottom-5 md:bottom-6 left-0 right-0 flex justify-center gap-[5px] md:gap-[10px] z-50">
-                    <template x-for="(image, index) in images" :key="index">
-                        <button @click="setActiveImage(index)" :aria-selected="activeImage === index ? 'true' : 'false'"
-                            class="h-[10px] w-[10px] md:h-[13px] md:w-[13px] border border-white rounded-full focus:outline-none bg-transparent cursor-pointer aria-selected:bg-white aria-selected:w-[30px] aria-selected:md:w-[43px] aria-selected:cursor-default"></button>
-                    </template>
-                </div>
-            </div>
+    </div>
 
 
 
 
 
-        </div>
-    </section>
+
+
+
 
 </body>
 

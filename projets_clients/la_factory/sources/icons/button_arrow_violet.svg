@@ -1,0 +1,17 @@
+<svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 67">
+<circle id="Ellipse 2" cx="19.4924" cy="20.1164" r="19.3098" fill="#633ADE"/>
+<g id="Clip path group">
+<mask id="mask0_2015_829" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="8" y="12" width="23" height="16">
+<g id="clippath">
+<path id="Vector" d="M30.7776 12.8621H8.20801V27.3711H30.7776V12.8621Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_2015_829)">
+<g id="Group">
+<path id="Vector_2" d="M8.20801 20.9695H25.6277C23.9452 22.2025 22.6115 24.2165 22.6115 27.3608H24.3248C24.3248 21.2058 30.5109 20.9695 30.7776 20.9695V20.3529V19.2534C30.5109 19.2534 24.3248 19.0479 24.3248 12.8621H22.6115C22.6115 16.0064 23.9452 18.0204 25.6277 19.2534H8.20801V20.9695Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+</svg>
