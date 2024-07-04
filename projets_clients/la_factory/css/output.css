@@ -666,6 +666,70 @@ html {
   top: 768px;
 }
 
+.top-\[\]{
+  top: ;
+}
+
+.top-\[200px\]{
+  top: 200px;
+}
+
+.right-\[100px\]{
+  right: 100px;
+}
+
+.top-\[4\]{
+  top: 4;
+}
+
+.top-\[458px\]{
+  top: 458px;
+}
+
+.top-\[100px\]{
+  top: 100px;
+}
+
+.right-\[200px\]{
+  right: 200px;
+}
+
+.right-\[116px\]{
+  right: 116px;
+}
+
+.top-\[84px\]{
+  top: 84px;
+}
+
+.right-\[199px\]{
+  right: 199px;
+}
+
+.right-\[135px\]{
+  right: 135px;
+}
+
+.top-\[129px\]{
+  top: 129px;
+}
+
+.right-\[156px\]{
+  right: 156px;
+}
+
+.top-\[225px\]{
+  top: 225px;
+}
+
+.top-\[276px\]{
+  top: 276px;
+}
+
+.right-\[169px\]{
+  right: 169px;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -693,6 +757,14 @@ html {
 
 .mt-16{
   margin-top: 4rem;
+}
+
+.-mt-6{
+  margin-top: -1.5rem;
+}
+
+.-mt-8{
+  margin-top: -2rem;
 }
 
 .inline-block{
@@ -791,6 +863,30 @@ html {
   height: 100svh;
 }
 
+.h-\[\]{
+  height: ;
+}
+
+.h-\[537px\]{
+  height: 537px;
+}
+
+.h-\[671px\]{
+  height: 671px;
+}
+
+.h-\[375px\]{
+  height: 375px;
+}
+
+.h-\[50px\]{
+  height: 50px;
+}
+
+.h-\[60px\]{
+  height: 60px;
+}
+
 .min-h-\[132px\]{
   min-height: 132px;
 }
@@ -854,6 +950,26 @@ html {
 
 .w-full{
   width: 100%;
+}
+
+.w-\[400px\]{
+  width: 400px;
+}
+
+.w-\[500px\]{
+  width: 500px;
+}
+
+.w-\[420px\]{
+  width: 420px;
+}
+
+.w-\[50px\]{
+  width: 50px;
+}
+
+.w-\[60px\]{
+  width: 60px;
 }
 
 .max-w-\[1372px\]{
@@ -1104,6 +1220,14 @@ html {
   background-image: url('../sources/logos/header/header_monogramme_violet.svg');
 }
 
+.bg-\[url\(\'\.\.\/media\/paul\/DATA\/FREELANCE\/PROJETS_CLIENTS\/rweb\/la_factory\/sources\/img\/homepage_carte\/carte_mobile2\.svg\'\)\]{
+  background-image: url('../media/paul/DATA/FREELANCE/PROJETS_CLIENTS/rweb/la_factory/sources/img/homepage_carte/carte_mobile2.svg');
+}
+
+.bg-\[url\(\'\.\.\/sources\/img\/homepage_carte\/carte_mobile2\.svg\'\)\]{
+  background-image: url('../sources/img/homepage_carte/carte_mobile2.svg');
+}
+
 .bg-\[length\:auto_80\%\]{
   background-size: auto 80%;
 }
@@ -1273,6 +1397,10 @@ html {
 
 .pt-4{
   padding-top: 1rem;
+}
+
+.pb-28{
+  padding-bottom: 7rem;
 }
 
 .text-left{
@@ -1716,8 +1844,64 @@ input:-webkit-autofill:active {
     top: 1.5rem;
   }
 
+  .md\:right-\[100px\]{
+    right: 100px;
+  }
+
+  .md\:top-\[200px\]{
+    top: 200px;
+  }
+
+  .md\:top-\[262px\]{
+    top: 262px;
+  }
+
+  .md\:top-\[3PP\]{
+    top: 3PP;
+  }
+
+  .md\:top-\[300px\]{
+    top: 300px;
+  }
+
+  .md\:right-\[120px\]{
+    right: 120px;
+  }
+
+  .md\:right-\[156px\]{
+    right: 156px;
+  }
+
+  .md\:top-\[458px\]{
+    top: 458px;
+  }
+
+  .md\:top-\[500px\]{
+    top: 500px;
+  }
+
+  .md\:right-\[200px\]{
+    right: 200px;
+  }
+
+  .md\:top-\[529px\]{
+    top: 529px;
+  }
+
+  .md\:right-\[174px\]{
+    right: 174px;
+  }
+
   .md\:mt-28{
     margin-top: 7rem;
+  }
+
+  .md\:-mr-6{
+    margin-right: -1.5rem;
+  }
+
+  .md\:mt-0{
+    margin-top: 0px;
   }
 
   .md\:h-10{
@@ -1756,6 +1940,18 @@ input:-webkit-autofill:active {
     height: auto;
   }
 
+  .md\:h-\[135px\]{
+    height: 135px;
+  }
+
+  .md\:h-\[90px\]{
+    height: 90px;
+  }
+
+  .md\:h-\[671px\]{
+    height: 671px;
+  }
+
   .md\:w-10{
     width: 2.5rem;
   }
@@ -1770,6 +1966,18 @@ input:-webkit-autofill:active {
 
   .md\:w-\[41px\]{
     width: 41px;
+  }
+
+  .md\:w-\[135px\]{
+    width: 135px;
+  }
+
+  .md\:w-\[90px\]{
+    width: 90px;
+  }
+
+  .md\:w-\[500px\]{
+    width: 500px;
   }
 
   .md\:grid-cols-\[1fr_30\%\]{
@@ -1818,6 +2026,10 @@ input:-webkit-autofill:active {
 
   .md\:rounded-\[30px\]{
     border-radius: 30px;
+  }
+
+  .md\:bg-\[url\(\'\.\.\/sources\/img\/homepage_carte\/carte_desktop\.svg\'\)\]{
+    background-image: url('../sources/img/homepage_carte/carte_desktop.svg');
   }
 
   .md\:bg-\[length\:60\%_auto\]{
@@ -2004,6 +2216,10 @@ input:-webkit-autofill:active {
   .md\:leading-\[45px\]{
     line-height: 45px;
   }
+
+  .md\:leading-\[50px\]{
+    line-height: 50px;
+  }
 }
 
 @media (min-width: 1024px){
@@ -2025,6 +2241,10 @@ input:-webkit-autofill:active {
 
   .lg\:top-10{
     top: 2.5rem;
+  }
+
+  .lg\:-mr-\[70px\]{
+    margin-right: -70px;
   }
 
   .lg\:block{
@@ -2061,6 +2281,10 @@ input:-webkit-autofill:active {
 
   .lg\:w-\[84px\]{
     width: 84px;
+  }
+
+  .lg\:max-w-\[625px\]{
+    max-width: 625px;
   }
 
   .lg\:flex-initial{
@@ -2152,6 +2376,30 @@ input:-webkit-autofill:active {
 }
 
 @media (min-width: 1280px){
+  .xl\:right-\[143px\]{
+    right: 143px;
+  }
+
+  .xl\:top-\[379px\]{
+    top: 379px;
+  }
+
+  .xl\:top-\[664px\]{
+    top: 664px;
+  }
+
+  .xl\:right-\[224px\]{
+    right: 224px;
+  }
+
+  .xl\:top-\[768px\]{
+    top: 768px;
+  }
+
+  .xl\:right-\[250px\]{
+    right: 250px;
+  }
+
   .xl\:-mr-\[70px\]{
     margin-right: -70px;
   }
@@ -2162,6 +2410,22 @@ input:-webkit-autofill:active {
 
   .xl\:mt-0{
     margin-top: 0px;
+  }
+
+  .xl\:h-\[976px\]{
+    height: 976px;
+  }
+
+  .xl\:h-\[135px\]{
+    height: 135px;
+  }
+
+  .xl\:w-\[727px\]{
+    width: 727px;
+  }
+
+  .xl\:w-\[135px\]{
+    width: 135px;
   }
 
   .xl\:max-w-\[625px\]{

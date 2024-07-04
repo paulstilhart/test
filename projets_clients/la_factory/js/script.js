@@ -55,7 +55,7 @@ function mapcards() {
     cardsContainer.querySelectorAll("a").forEach((c) => {
       c.setAttribute("aria-selected", "false");
     });
-    pinsContainer.querySelectorAll("div").forEach((p) => {
+    pinsContainer.querySelectorAll("span").forEach((p) => {
       p.setAttribute("aria-selected", "false");
     });
 
@@ -63,18 +63,15 @@ function mapcards() {
     cardsContainer.querySelectorAll(`a[data-mapcards="${groupNumber}"]`).forEach((c) => {
       c.setAttribute("aria-selected", "true");
     });
-    pinsContainer.querySelectorAll(`div[data-mapcards="${groupNumber}"]`).forEach((p) => {
+    pinsContainer.querySelectorAll(`span[data-mapcards="${groupNumber}"]`).forEach((p) => {
       p.setAttribute("aria-selected", "true");
     });
   }
 
   cardsContainer.addEventListener("click", function (event) {
     const card = event.target.closest("a");
-    if (!card || !cardsContainer.contains(card)) return;
+    if (!card || !cardsContainer.contains(card) || card.getAttribute("aria-selected") === "true") return;
 
-    if (card.getAttribute("aria-selected") === "true") {
-      return;
-    }
     event.preventDefault();
 
     const groupNumber = card.getAttribute("data-mapcards");
@@ -82,12 +79,9 @@ function mapcards() {
   });
 
   pinsContainer.addEventListener("click", function (event) {
-    const pin = event.target.closest("div");
-    if (!pin || !pinsContainer.contains(pin)) return;
+    const pin = event.target.closest("span");
+    if (!pin || !pinsContainer.contains(pin) || pin.getAttribute("aria-selected") === "true") return;
 
-    if (pin.getAttribute("aria-selected") === "true") {
-      return;
-    }
     event.preventDefault();
 
     const groupNumber = pin.getAttribute("data-mapcards");
