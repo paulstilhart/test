@@ -7,7 +7,7 @@ function headerIconScroll() {
   );
   if (!js_header_logo_scroll) return;
 
-  const shouldAddAriaExpanded = window.innerWidth > 768 && window.scrollY > 100;
+  const shouldAddAriaExpanded = window.innerWidth > 768 && window.scrollY > 500;
 
   if (shouldAddAriaExpanded) {
     js_header_logo_scroll.setAttribute("aria-expanded", "false");
