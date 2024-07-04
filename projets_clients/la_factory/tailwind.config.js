@@ -5,7 +5,7 @@ module.exports = {
     files: ["./pages/**/*.{html,js}", "./components/**/*.{html,js}"],
   },
 
-  darkMode: 'class',
+  darkMode: "class",
 
   theme: {
     extend: {
@@ -19,7 +19,6 @@ module.exports = {
         "primary-noir-gris": "#302F2E", //rgb(48, 47, 46)
       },
 
-
       // PF Mellon bold 700
       // Poppins bold 700
       // Poppins regular 400
@@ -30,21 +29,64 @@ module.exports = {
       },
 
       backgroundImage: {
-        "header_monogramme_violet": "url('../sources/logos/header/header_monogramme_violet.svg')",
-        "header_monogramme_white": "url('../sources/logos/header/header_monogramme_white.svg')",
+        header_monogramme_violet:
+          "url('../sources/logos/header/header_monogramme_violet.svg')",
+        header_monogramme_white:
+          "url('../sources/logos/header/header_monogramme_white.svg')",
 
-        "header_logo_white": "url('../sources/logos/header/header_logo_white.svg')",
-        "header_brand_white": "url('../sources/logos/header/header_brand_white.svg')",
-        "header_logo_violet": "url('../sources/logos/header/header_logo_violet.svg')",
-        "header_brand_violet": "url('../sources/logos/header/header_brand_violet.svg')",
+        header_logo_white:
+          "url('../sources/logos/header/header_logo_white.svg')",
+        header_brand_white:
+          "url('../sources/logos/header/header_brand_white.svg')",
+        header_logo_violet:
+          "url('../sources/logos/header/header_logo_violet.svg')",
+        header_brand_violet:
+          "url('../sources/logos/header/header_brand_violet.svg')",
 
-        "footer_la_factory_violet": "url('../sources/logos/footer/footer_la_factory_violet.svg')",
-        "footer_la_factory_white": "url('../sources/logos/footer/footer_la_factory_white.svg')",
-        "button_arrow_black": "url('../sources/icons/button_arrow_black.svg')",
-        "button_arrow_yellow": "url('../sources/icons/button_arrow_yellow.svg')",
-        "button_arrow_violet": "url('../sources/icons/button_arrow_violet.svg')",
+        footer_la_factory_violet:
+          "url('../sources/logos/footer/footer_la_factory_violet.svg')",
+        footer_la_factory_white:
+          "url('../sources/logos/footer/footer_la_factory_white.svg')",
+        button_arrow_black: "url('../sources/icons/button_arrow_black.svg')",
+        button_arrow_yellow: "url('../sources/icons/button_arrow_yellow.svg')",
+        button_arrow_violet: "url('../sources/icons/button_arrow_violet.svg')",
 
-        "map_pin_shadow": "url('../sources/icons/map_pin_shadow.svg')",
+        map_pin_shadow: "url('../sources/icons/map_pin_shadow.svg')",
+      },
+
+      keyframes: {
+        title1: {
+          "0%": { transform: "translateX(-150px)" },
+          "100%": { transform: "translateX(0px)" },
+        },
+        title1_mobile: {
+          "0%": { transform: "translateX(-20%)" },
+          "100%": { transform: "translateX(0px)" },
+        },
+        title2: {
+          "0%": { transform: "translateX(85px)" },
+          "100%": { transform: "translateX(-70px)" },
+        },
+        title2_mobile: {
+          "0%": { transform: "translateX(20%)" },
+          "100%": { transform: "translateX(0px)" },
+        },
+        title3: {
+          "0%": { transform: "translateX(-163px)" },
+          "100%": { transform: "translateX(0px)" },
+        },
+        title3_mobile: {
+          "0%": { transform: "translateX(-20%)" },
+          "100%": { transform: "translateX(0px)" },
+        },
+      },
+      animation: {
+        title1: "title1 10s infinite",
+        title2: "title2 10s infinite",
+        title3: "title3 10s infinite",
+        title1_mobile: "title1_mobile 10s infinite",
+        title2_mobile: "title2_mobile 10s infinite",
+        title3_mobile: "title3_mobile 10s infinite",
       },
     },
   },
