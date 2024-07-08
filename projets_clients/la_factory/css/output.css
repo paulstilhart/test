@@ -787,6 +787,18 @@ html {
   height: 100svh;
 }
 
+.h-dvh{
+  height: 100dvh;
+}
+
+.\!h-dvh{
+  height: 100dvh !important;
+}
+
+.h-screen{
+  height: 100vh;
+}
+
 .min-h-\[132px\]{
   min-height: 132px;
 }
