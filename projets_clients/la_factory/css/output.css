@@ -594,12 +594,12 @@ html {
   bottom: -1rem;
 }
 
-.-left-7{
-  left: -1.75rem;
+.-left-1{
+  left: -0.25rem;
 }
 
-.bottom-0{
-  bottom: 0px;
+.-left-7{
+  left: -1.75rem;
 }
 
 .bottom-4{
@@ -711,6 +711,10 @@ html {
   display: none;
 }
 
+.\!h-dvh{
+  height: 100dvh !important;
+}
+
 .h-10{
   height: 2.5rem;
 }
@@ -783,20 +787,12 @@ html {
   height: 100%;
 }
 
-.h-svh{
-  height: 100svh;
-}
-
-.h-dvh{
-  height: 100dvh;
-}
-
-.\!h-dvh{
-  height: 100dvh !important;
-}
-
 .h-screen{
   height: 100vh;
+}
+
+.\!min-h-svh{
+  min-height: 100svh !important;
 }
 
 .min-h-\[132px\]{
@@ -1329,6 +1325,10 @@ html {
   padding-top: 1rem;
 }
 
+.pt-28{
+  padding-top: 7rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -1403,6 +1403,11 @@ html {
   line-height: 1rem;
 }
 
+.text-7xl{
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -1457,6 +1462,10 @@ html {
 
 .leading-snug{
   line-height: 1.375;
+}
+
+.leading-\[70px\]{
+  line-height: 70px;
 }
 
 .text-primary-jaune{
@@ -1762,6 +1771,10 @@ input:-webkit-autofill:active {
     bottom: -2.25rem;
   }
 
+  .md\:-left-4{
+    left: -1rem;
+  }
+
   .md\:bottom-5{
     bottom: 1.25rem;
   }
@@ -1887,27 +1900,35 @@ input:-webkit-autofill:active {
       transform: translateX(-150px);
     }
 
+    50%{
+      transform: translateX(55px);
+    }
+
     100%{
-      transform: translateX(0px);
+      transform: translateX(-150px);
     }
   }
 
   .md\:animate-title1{
-    animation: title1 10s infinite;
+    animation: title1 20s linear infinite;
   }
 
   @keyframes title2{
     0%{
-      transform: translateX(85px);
+      transform: translateX(140px);
+    }
+
+    50%{
+      transform: translateX(-70px);
     }
 
     100%{
-      transform: translateX(-70px);
+      transform: translateX(140px);
     }
   }
 
   .md\:animate-title2{
-    animation: title2 10s infinite;
+    animation: title2 20s linear infinite;
   }
 
   @keyframes title3{
@@ -1915,13 +1936,17 @@ input:-webkit-autofill:active {
       transform: translateX(-163px);
     }
 
+    50%{
+      transform: translateX(55px);
+    }
+
     100%{
-      transform: translateX(0px);
+      transform: translateX(-163px);
     }
   }
 
   .md\:animate-title3{
-    animation: title3 10s infinite;
+    animation: title3 20s linear infinite;
   }
 
   .md\:grid-cols-\[1fr_30\%\]{
@@ -2257,6 +2282,10 @@ input:-webkit-autofill:active {
     gap: 2.75rem;
   }
 
+  .lg\:gap-3{
+    gap: 0.75rem;
+  }
+
   .lg\:p-0{
     padding: 0px;
   }
@@ -2291,6 +2320,11 @@ input:-webkit-autofill:active {
 
   .lg\:text-\[300px\]{
     font-size: 300px;
+  }
+
+  .lg\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .lg\:leading-\[175px\]{

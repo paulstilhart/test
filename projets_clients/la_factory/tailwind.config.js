@@ -57,15 +57,17 @@ module.exports = {
       keyframes: {
         title1: {
           "0%": { transform: "translateX(-150px)" },
-          "100%": { transform: "translateX(0px)" },
+          "50%": { transform: "translateX(55px)" },
+          "100%": { transform: "translateX(-150px)" },
         },
         title1_mobile: {
           "0%": { transform: "translateX(-20%)" },
           "100%": { transform: "translateX(0px)" },
         },
         title2: {
-          "0%": { transform: "translateX(85px)" },
-          "100%": { transform: "translateX(-70px)" },
+          "0%": { transform: "translateX(140px)" },
+          "50%": { transform: "translateX(-70px)" },
+          "100%": { transform: "translateX(140px)" },
         },
         title2_mobile: {
           "0%": { transform: "translateX(20%)" },
@@ -73,7 +75,8 @@ module.exports = {
         },
         title3: {
           "0%": { transform: "translateX(-163px)" },
-          "100%": { transform: "translateX(0px)" },
+          "50%": { transform: "translateX(55px)" },
+          "100%": { transform: "translateX(-163px)" },
         },
         title3_mobile: {
           "0%": { transform: "translateX(-20%)" },
@@ -81,9 +84,9 @@ module.exports = {
         },
       },
       animation: {
-        title1: "title1 10s infinite",
-        title2: "title2 10s infinite",
-        title3: "title3 10s infinite",
+        title1: "title1 20s linear infinite",
+        title2: "title2 20s linear infinite",
+        title3: "title3 20s linear infinite",
         title1_mobile: "title1_mobile 10s infinite",
         title2_mobile: "title2_mobile 10s infinite",
         title3_mobile: "title3_mobile 10s infinite",
