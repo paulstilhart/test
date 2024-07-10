@@ -55,6 +55,10 @@ module.exports = {
       },
 
       keyframes: {
+        onload:{
+          "0%": { opacity: "0%" },
+          "100%": { opacity: "100%" },
+        },
         title1: {
           "0%": { transform: "translateX(-100px)" },
           "50%": { transform: "translateX(100px)" },
@@ -87,6 +91,7 @@ module.exports = {
         },
       },
       animation: {
+        onload : "onload 0.5s linear",
         title1: "title1 15s linear infinite",
         title2: "title2 15s linear infinite",
         title3: "title3 15s linear infinite",

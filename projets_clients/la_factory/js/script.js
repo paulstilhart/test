@@ -60,17 +60,26 @@ function mapcards() {
     });
 
     // Select all cards and pins in the same group
-    cardsContainer.querySelectorAll(`a[data-mapcards="${groupNumber}"]`).forEach((c) => {
-      c.setAttribute("aria-selected", "true");
-    });
-    pinsContainer.querySelectorAll(`span[data-mapcards="${groupNumber}"]`).forEach((p) => {
-      p.setAttribute("aria-selected", "true");
-    });
+    cardsContainer
+      .querySelectorAll(`a[data-mapcards="${groupNumber}"]`)
+      .forEach((c) => {
+        c.setAttribute("aria-selected", "true");
+      });
+    pinsContainer
+      .querySelectorAll(`span[data-mapcards="${groupNumber}"]`)
+      .forEach((p) => {
+        p.setAttribute("aria-selected", "true");
+      });
   }
 
   cardsContainer.addEventListener("click", function (event) {
     const card = event.target.closest("a");
-    if (!card || !cardsContainer.contains(card) || card.getAttribute("aria-selected") === "true") return;
+    if (
+      !card ||
+      !cardsContainer.contains(card) ||
+      card.getAttribute("aria-selected") === "true"
+    )
+      return;
 
     event.preventDefault();
 
@@ -80,7 +89,12 @@ function mapcards() {
 
   pinsContainer.addEventListener("click", function (event) {
     const pin = event.target.closest("span");
-    if (!pin || !pinsContainer.contains(pin) || pin.getAttribute("aria-selected") === "true") return;
+    if (
+      !pin ||
+      !pinsContainer.contains(pin) ||
+      pin.getAttribute("aria-selected") === "true"
+    )
+      return;
 
     event.preventDefault();
 
@@ -91,4 +105,33 @@ function mapcards() {
 
 mapcards();
 
+//==============================================================================================================================
+//EXPERTISES EFFET SLIDER HORIZONTAL AU SCROLL
+function expertisesScrollEffect() {
+  const js_expertises_1 = document.querySelector(".js_expertises_1");
+  const js_expertises_2 = document.querySelector(".js_expertises_2");
+  
+  if (!js_expertises_2 || !js_expertises_1) {
+    return;
+  }
+
+  const speedScroll = 40;
+  let lastScrollY = window.scrollY;
+
+  const updateScroll = () => {
+    const scrollPosition = window.scrollY;
+    const width1 = js_expertises_1.scrollWidth - js_expertises_1.clientWidth;
+    const width2 = js_expertises_2.scrollWidth - js_expertises_2.clientWidth;
+
+    js_expertises_1.scrollLeft = width1 - scrollPosition / speedScroll; // inverse
+    js_expertises_2.scrollLeft = scrollPosition / speedScroll; // direct
+
+    lastScrollY = scrollPosition;
+    requestAnimationFrame(updateScroll);
+  };
+
+  requestAnimationFrame(updateScroll);
+}
+
+expertisesScrollEffect();
 

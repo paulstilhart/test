@@ -691,6 +691,14 @@ html {
   margin-top: -2rem;
 }
 
+.ml-\[-200px\]{
+  margin-left: -200px;
+}
+
+.ml-\[-250px\]{
+  margin-left: -250px;
+}
+
 .mt-14{
   margin-top: 3.5rem;
 }
@@ -783,12 +791,20 @@ html {
   height: 20vh;
 }
 
+.h-\[228px\]{
+  height: 228px;
+}
+
 .h-\[26px\]{
   height: 26px;
 }
 
 .h-\[425px\]{
   height: 425px;
+}
+
+.h-\[600px\]{
+  height: 600px;
 }
 
 .h-\[62px\]{
@@ -813,14 +829,6 @@ html {
 
 .h-screen{
   height: 100vh;
-}
-
-.h-\[\]{
-  height: ;
-}
-
-.h-\[600px\]{
-  height: 600px;
 }
 
 .\!min-h-svh{
@@ -863,6 +871,10 @@ html {
   width: 26px;
 }
 
+.w-\[342px\]{
+  width: 342px;
+}
+
 .w-\[44\%\]{
   width: 44%;
 }
@@ -890,10 +902,6 @@ html {
 
 .w-full{
   width: 100%;
-}
-
-.w-1\/3{
-  width: 33.333333%;
 }
 
 .min-w-full{
@@ -1042,6 +1050,10 @@ html {
   gap: 0.25rem;
 }
 
+.gap-16{
+  gap: 4rem;
+}
+
 .gap-2{
   gap: 0.5rem;
 }
@@ -1074,20 +1086,6 @@ html {
   gap: 6px;
 }
 
-.gap-16{
-  gap: 4rem;
-}
-
-.gap-x-8{
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-}
-
-.gap-x-20{
-  -moz-column-gap: 5rem;
-       column-gap: 5rem;
-}
-
 .overflow-hidden{
   overflow: hidden;
 }
@@ -1102,6 +1100,10 @@ html {
 
 .overflow-y-hidden{
   overflow-y: hidden;
+}
+
+.overflow-x-scroll{
+  overflow-x: scroll;
 }
 
 .scroll-smooth{
@@ -1178,6 +1180,26 @@ html {
 
 .bg-\[url\(\'\.\.\/sources\/icons\/icon_women\.svg\'\)\]{
   background-image: url('../sources/icons/icon_women.svg');
+}
+
+.bg-\[url\(\'\.\.\/sources\/img\/expertises\/morning\/morning_1\.jpeg\'\)\]{
+  background-image: url('../sources/img/expertises/morning/morning_1.jpeg');
+}
+
+.bg-\[url\(\'\.\.\/sources\/img\/expertises\/morning\/morning_2\.png\'\)\]{
+  background-image: url('../sources/img/expertises/morning/morning_2.png');
+}
+
+.bg-\[url\(\'\.\.\/sources\/img\/expertises\/morning\/morning_3\.png\'\)\]{
+  background-image: url('../sources/img/expertises/morning/morning_3.png');
+}
+
+.bg-\[url\(\'\.\.\/sources\/img\/expertises\/morning\/morning_4\.jpeg\'\)\]{
+  background-image: url('../sources/img/expertises/morning/morning_4.jpeg');
+}
+
+.bg-\[url\(\'\.\.\/sources\/img\/expertises\/morning\/morning_5\.jpeg\'\)\]{
+  background-image: url('../sources/img/expertises/morning/morning_5.jpeg');
 }
 
 .bg-\[url\(\'\.\.\/sources\/img\/homepage_carte\/carte_mobile2\.svg\'\)\]{
@@ -1387,6 +1409,10 @@ html {
   padding-top: 2.75rem;
 }
 
+.pt-12{
+  padding-top: 3rem;
+}
+
 .pt-14{
   padding-top: 3.5rem;
 }
@@ -1413,10 +1439,6 @@ html {
 
 .pt-4{
   padding-top: 1rem;
-}
-
-.pt-12{
-  padding-top: 3rem;
 }
 
 .text-left{
@@ -1521,6 +1543,10 @@ html {
   line-height: 24px;
 }
 
+.leading-\[26px\]{
+  line-height: 26px;
+}
+
 .leading-\[27px\]{
   line-height: 27px;
 }
@@ -1539,10 +1565,6 @@ html {
 
 .leading-snug{
   line-height: 1.375;
-}
-
-.leading-\[26px\]{
-  line-height: 26px;
 }
 
 .text-primary-jaune{
@@ -1908,10 +1930,6 @@ input:-webkit-autofill:active {
     margin-top: 7rem;
   }
 
-  .md\:flex{
-    display: flex;
-  }
-
   .md\:h-10{
     height: 2.5rem;
   }
@@ -1960,6 +1978,10 @@ input:-webkit-autofill:active {
     width: 50%;
   }
 
+  .md\:w-1\/3{
+    width: 33.333333%;
+  }
+
   .md\:w-10{
     width: 2.5rem;
   }
@@ -1982,10 +2004,6 @@ input:-webkit-autofill:active {
 
   .md\:w-\[90px\]{
     width: 90px;
-  }
-
-  .md\:w-1\/3{
-    width: 33.333333%;
   }
 
   .md\:flex-none{
@@ -2161,6 +2179,11 @@ input:-webkit-autofill:active {
     padding-right: 70px;
   }
 
+  .md\:py-40{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
   .md\:py-64{
     padding-top: 16rem;
     padding-bottom: 16rem;
@@ -2174,11 +2197,6 @@ input:-webkit-autofill:active {
   .md\:py-\[7px\]{
     padding-top: 7px;
     padding-bottom: 7px;
-  }
-
-  .md\:py-40{
-    padding-top: 10rem;
-    padding-bottom: 10rem;
   }
 
   .md\:pb-12{
@@ -2267,6 +2285,11 @@ input:-webkit-autofill:active {
     line-height: 2.5rem;
   }
 
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .md\:text-6xl{
     font-size: 3.75rem;
     line-height: 1;
@@ -2308,11 +2331,6 @@ input:-webkit-autofill:active {
     line-height: 1.75rem;
   }
 
-  .md\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
-  }
-
   .md\:leading-\[22px\]{
     line-height: 22px;
   }
@@ -2321,8 +2339,16 @@ input:-webkit-autofill:active {
     line-height: 260px;
   }
 
+  .md\:leading-\[30px\]{
+    line-height: 30px;
+  }
+
   .md\:leading-\[40px\]{
     line-height: 40px;
+  }
+
+  .md\:leading-\[41px\]{
+    line-height: 41px;
   }
 
   .md\:leading-\[50px\]{
@@ -2331,14 +2357,6 @@ input:-webkit-autofill:active {
 
   .md\:leading-\[96px\]{
     line-height: 96px;
-  }
-
-  .md\:leading-\[41px\]{
-    line-height: 41px;
-  }
-
-  .md\:leading-\[30px\]{
-    line-height: 30px;
   }
 }
 
@@ -2383,6 +2401,10 @@ input:-webkit-autofill:active {
     height: 2.25rem;
   }
 
+  .lg\:h-\[470px\]{
+    height: 470px;
+  }
+
   .lg\:h-\[84px\]{
     height: 84px;
   }
@@ -2393,6 +2415,10 @@ input:-webkit-autofill:active {
 
   .lg\:max-h-0{
     max-height: 0px;
+  }
+
+  .lg\:w-\[707px\]{
+    width: 707px;
   }
 
   .lg\:w-\[84px\]{
@@ -2419,6 +2445,10 @@ input:-webkit-autofill:active {
 
   .lg\:flex-row{
     flex-direction: row;
+  }
+
+  .lg\:gap-10{
+    gap: 2.5rem;
   }
 
   .lg\:gap-11{
@@ -2554,3 +2584,5 @@ input:-webkit-autofill:active {
     color: rgb(217 204 255 / var(--tw-text-opacity));
   }
 }
+
+
