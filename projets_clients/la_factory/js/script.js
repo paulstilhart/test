@@ -107,11 +107,12 @@ mapcards();
 
 //==============================================================================================================================
 //EXPERTISES EFFET SLIDER HORIZONTAL AU SCROLL
+//EXPERTISES EFFET SLIDER HORIZONTAL AU SCROLL
 function expertisesScrollEffect() {
   const js_expertises_1 = document.querySelector(".js_expertises_1");
   const js_expertises_2 = document.querySelector(".js_expertises_2");
-  
-  if (!js_expertises_2 || !js_expertises_1) {
+
+  if (!js_expertises_1 || !js_expertises_2) {
     return;
   }
 
@@ -120,11 +121,9 @@ function expertisesScrollEffect() {
 
   const updateScroll = () => {
     const scrollPosition = window.scrollY;
-    const width1 = js_expertises_1.scrollWidth - js_expertises_1.clientWidth;
-    const width2 = js_expertises_2.scrollWidth - js_expertises_2.clientWidth;
 
-    js_expertises_1.scrollLeft = width1 - scrollPosition / speedScroll; // inverse
-    js_expertises_2.scrollLeft = scrollPosition / speedScroll; // direct
+    js_expertises_1.scrollLeft = (js_expertises_1.scrollWidth - js_expertises_1.clientWidth) - scrollPosition / speedScroll;
+    js_expertises_2.scrollLeft = scrollPosition / speedScroll;
 
     lastScrollY = scrollPosition;
     requestAnimationFrame(updateScroll);
@@ -134,4 +133,5 @@ function expertisesScrollEffect() {
 }
 
 expertisesScrollEffect();
+
 
