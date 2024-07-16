@@ -2568,6 +2568,10 @@ input:-webkit-autofill:active {
     line-height: 50px;
   }
 
+  .lg\:leading-\[280px\]{
+    line-height: 280px;
+  }
+
   .lg\:opacity-0{
     opacity: 0;
   }
@@ -2587,8 +2591,32 @@ input:-webkit-autofill:active {
 }
 
 @media (min-width: 1280px){
+  .xl\:bottom-\[152px\]{
+    bottom: 152px;
+  }
+
+  .xl\:bottom-\[455px\]{
+    bottom: 455px;
+  }
+
+  .xl\:left-\[1020px\]{
+    left: 1020px;
+  }
+
+  .xl\:left-\[700px\]{
+    left: 700px;
+  }
+
+  .xl\:left-\[764px\]{
+    left: 764px;
+  }
+
   .xl\:right-\[143px\]{
     right: 143px;
+  }
+
+  .xl\:right-\[200px\]{
+    right: 200px;
   }
 
   .xl\:right-\[224px\]{
@@ -2609,38 +2637,6 @@ input:-webkit-autofill:active {
 
   .xl\:top-\[768px\]{
     top: 768px;
-  }
-
-  .xl\:bottom-\[455px\]{
-    bottom: 455px;
-  }
-
-  .xl\:right-\[200px\]{
-    right: 200px;
-  }
-
-  .xl\:left-\[200px\]{
-    left: 200px;
-  }
-
-  .xl\:bottom-\[200px\]{
-    bottom: 200px;
-  }
-
-  .xl\:bottom-\[152px\]{
-    bottom: 152px;
-  }
-
-  .xl\:left-\[700px\]{
-    left: 700px;
-  }
-
-  .xl\:left-\[764px\]{
-    left: 764px;
-  }
-
-  .xl\:left-\[1020px\]{
-    left: 1020px;
   }
 
   .xl\:inline-block{
