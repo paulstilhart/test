@@ -598,6 +598,10 @@ html {
   left: -0.25rem;
 }
 
+.bottom-24{
+  bottom: 6rem;
+}
+
 .bottom-4{
   bottom: 1rem;
 }
@@ -660,14 +664,6 @@ html {
 
 .top-\[94px\]{
   top: 94px;
-}
-
-.bottom-0{
-  bottom: 0px;
-}
-
-.bottom-24{
-  bottom: 6rem;
 }
 
 .-z-10{
@@ -2304,10 +2300,6 @@ input:-webkit-autofill:active {
     padding-bottom: 4rem;
   }
 
-  .md\:pb-24{
-    padding-bottom: 6rem;
-  }
-
   .md\:pb-3{
     padding-bottom: 0.75rem;
   }
@@ -2362,14 +2354,6 @@ input:-webkit-autofill:active {
 
   .md\:pt-24{
     padding-top: 6rem;
-  }
-
-  .md\:pt-28{
-    padding-top: 7rem;
-  }
-
-  .md\:pt-32{
-    padding-top: 8rem;
   }
 
   .md\:pt-40{
@@ -2757,16 +2741,16 @@ input:-webkit-autofill:active {
     animation: expertises_title2 0.9s ease-in-out;
   }
 
-  .min-\[1550px\]\:pt-32{
-    padding-top: 8rem;
-  }
-
   .min-\[1550px\]\:pb-24{
     padding-bottom: 6rem;
   }
 
   .min-\[1550px\]\:pt-28{
     padding-top: 7rem;
+  }
+
+  .min-\[1550px\]\:pt-32{
+    padding-top: 8rem;
   }
 }
 
