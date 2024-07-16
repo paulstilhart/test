@@ -55,8 +55,23 @@ module.exports = {
       },
 
       keyframes: {
-        onload:{
+        expertises_title1: {
+          "0%": { transform: "translateY(110%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        expertises_title2: {
+          "0%": { transform: "translateY(110%)" },
+          "22%": { transform: "translateY(110%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        expertises_title3: {
+          "0%": { transform: "translateY(110%)" },
+          "36%": { transform: "translateY(110%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        expertises_fadein: {
           "0%": { opacity: "0%" },
+          "30%": { opacity: "0%" },
           "100%": { opacity: "100%" },
         },
         title1: {
@@ -91,7 +106,10 @@ module.exports = {
         },
       },
       animation: {
-        onload : "onload 0.5s linear",
+        expertises_title1: "expertises_title1 0.7s ease-in-out",
+        expertises_title2: "expertises_title2 0.9s ease-in-out",
+        expertises_title3: "expertises_title2 1.1s ease-in-out",
+        expertises_fadein: "expertises_fadein 1.1s linear",
         title1: "title1 15s linear infinite",
         title2: "title2 15s linear infinite",
         title3: "title3 15s linear infinite",

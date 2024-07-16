@@ -115,23 +115,31 @@ function expertisesScrollEffect() {
     return;
   }
 
-  // Récupérer les vitesses de défilement depuis les attributs data-speed
-  const speedScroll1 = parseFloat(js_expertises_1.getAttribute('data-speed')) || 40;
-  const speedScroll2 = parseFloat(js_expertises_2.getAttribute('data-speed')) || 40;
+  const speedScroll = 10;
+  let lastScrollPosition = window.scrollY;
+  let ticking = false;
 
   const updateScroll = () => {
     const scrollPosition = window.scrollY;
 
-    js_expertises_1.scrollLeft = (js_expertises_1.scrollWidth - js_expertises_1.clientWidth) - scrollPosition / speedScroll1;
-    js_expertises_2.scrollLeft = scrollPosition / speedScroll2;
-
-    requestAnimationFrame(updateScroll);
+    js_expertises_1.scrollLeft = (js_expertises_1.scrollWidth - js_expertises_1.clientWidth) - scrollPosition / speedScroll;
+    js_expertises_2.scrollLeft = scrollPosition / speedScroll;
+    lastScrollPosition = scrollPosition;
+    ticking = false;
   };
 
-  requestAnimationFrame(updateScroll);
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateScroll);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll);
+
+  // Initial call to position elements correctly on load
+  updateScroll();
 }
 
 expertisesScrollEffect();
-
-
 
