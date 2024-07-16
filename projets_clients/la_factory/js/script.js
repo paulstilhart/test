@@ -122,7 +122,10 @@ function expertisesScrollEffect() {
   const updateScroll = () => {
     const scrollPosition = window.scrollY;
 
-    js_expertises_1.scrollLeft = (js_expertises_1.scrollWidth - js_expertises_1.clientWidth) - scrollPosition / speedScroll;
+    js_expertises_1.scrollLeft =
+      js_expertises_1.scrollWidth -
+      js_expertises_1.clientWidth -
+      scrollPosition / speedScroll;
     js_expertises_2.scrollLeft = scrollPosition / speedScroll;
     lastScrollPosition = scrollPosition;
     ticking = false;
@@ -135,7 +138,7 @@ function expertisesScrollEffect() {
     }
   };
 
-  window.addEventListener('scroll', onScroll);
+  window.addEventListener("scroll", onScroll);
 
   // Initial call to position elements correctly on load
   updateScroll();
@@ -143,3 +146,42 @@ function expertisesScrollEffect() {
 
 expertisesScrollEffect();
 
+//==============================================================================================================================
+//CHANGEMENT DE THEME SUIVANT LE THÈME DE LA SECTION
+function darkOrLightTheme() {
+  const sections = document.querySelectorAll("section");
+  const rootElement = document.documentElement;
+
+  // Fonction pour mettre à jour le thème
+  function updateTheme(theme) {
+    if (theme === "dark") {
+      if (!rootElement.classList.contains("dark")) {
+        rootElement.classList.add("dark");
+      }
+    } else {
+      if (rootElement.classList.contains("dark")) {
+        rootElement.classList.remove("dark");
+      }
+    }
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
+          const theme = entry.target.getAttribute("data-theme");
+          updateTheme(theme);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+}
+
+darkOrLightTheme();
