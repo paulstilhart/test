@@ -1660,6 +1660,10 @@ html {
   line-height: 1.375;
 }
 
+.leading-\[110px\]{
+  line-height: 110px;
+}
+
 .text-primary-jaune{
   --tw-text-opacity: 1;
   color: rgb(228 242 75 / var(--tw-text-opacity));
@@ -2548,8 +2552,8 @@ input:-webkit-autofill:active {
     font-size: 300px;
   }
 
-  .lg\:text-\[345px\]{
-    font-size: 345px;
+  .lg\:text-\[325px\]{
+    font-size: 325px;
   }
 
   .lg\:leading-\[175px\]{
@@ -2560,16 +2564,16 @@ input:-webkit-autofill:active {
     line-height: 250px;
   }
 
-  .lg\:leading-\[310px\]{
-    line-height: 310px;
+  .lg\:leading-\[280px\]{
+    line-height: 280px;
   }
 
   .lg\:leading-\[50px\]{
     line-height: 50px;
   }
 
-  .lg\:leading-\[280px\]{
-    line-height: 280px;
+  .lg\:leading-\[270px\]{
+    line-height: 270px;
   }
 
   .lg\:opacity-0{
