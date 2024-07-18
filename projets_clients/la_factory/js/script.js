@@ -115,7 +115,7 @@ function expertisesScrollEffect() {
     return;
   }
 
-  const speedScroll = 10;
+  const speedScroll = 9;
   let lastScrollPosition = window.scrollY;
   let ticking = false;
 
