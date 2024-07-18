@@ -1688,6 +1688,11 @@ html {
   line-height: 1rem;
 }
 
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -2094,6 +2099,10 @@ input:-webkit-autofill:active {
     margin-top: 7rem;
   }
 
+  .md\:block{
+    display: block;
+  }
+
   .md\:h-10{
     height: 2.5rem;
   }
@@ -2481,6 +2490,10 @@ input:-webkit-autofill:active {
     padding-top: 11rem;
   }
 
+  .md\:pt-28{
+    padding-top: 7rem;
+  }
+
   .md\:text-right{
     text-align: right;
   }
@@ -2544,6 +2557,10 @@ input:-webkit-autofill:active {
   .md\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-\[134px\]{
+    font-size: 134px;
   }
 
   .md\:leading-\[22px\]{
@@ -2756,6 +2773,10 @@ input:-webkit-autofill:active {
 
   .lg\:text-\[325px\]{
     font-size: 325px;
+  }
+
+  .lg\:text-\[134px\]{
+    font-size: 134px;
   }
 
   .lg\:leading-\[175px\]{
