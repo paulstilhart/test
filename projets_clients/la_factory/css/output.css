@@ -859,6 +859,10 @@ html {
   height: 100vh;
 }
 
+.h-\[200px\]{
+  height: 200px;
+}
+
 .\!min-h-svh{
   min-height: 100svh !important;
 }
@@ -932,6 +936,10 @@ html {
   width: 100%;
 }
 
+.w-1\/2{
+  width: 50%;
+}
+
 .min-w-full{
   min-width: 100%;
 }
@@ -978,6 +986,34 @@ html {
 .rotate-90{
   --tw-rotate: 90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes cultureTranslateXLeft{
+  0%{
+    transform: translateX(0%);
+  }
+
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+.animate-cultureTranslateXLeft{
+  animation: cultureTranslateXLeft 60s linear infinite;
+}
+
+@keyframes cultureTranslateXRight{
+  0%{
+    transform: translateX(0%);
+  }
+
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+.animate-cultureTranslateXRight{
+  animation: cultureTranslateXRight 60s linear infinite;
 }
 
 @keyframes expertises_fadein{
@@ -1124,6 +1160,10 @@ html {
   grid-template-rows: 242px 380px 238px 200px;
 }
 
+.flex-row-reverse{
+  flex-direction: row-reverse;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -1200,6 +1240,10 @@ html {
   gap: 2.25rem;
 }
 
+.gap-\[10px\]{
+  gap: 10px;
+}
+
 .gap-\[3px\]{
   gap: 3px;
 }
@@ -1217,12 +1261,29 @@ html {
   row-gap: 10rem;
 }
 
+.gap-y-11{
+  row-gap: 2.75rem;
+}
+
+.gap-x-20{
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
 
+.overflow-visible{
+  overflow: visible;
+}
+
 .overflow-y-auto{
   overflow-y: auto;
+}
+
+.overflow-x-hidden{
+  overflow-x: hidden;
 }
 
 .\!overflow-y-hidden{
@@ -1262,6 +1323,10 @@ html {
   border-radius: 30px;
 }
 
+.rounded-\[55px\]{
+  border-radius: 55px;
+}
+
 .rounded-\[5px\]{
   border-radius: 5px;
 }
@@ -1285,6 +1350,11 @@ html {
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-primary-jaune{
+  --tw-border-opacity: 1;
+  border-color: rgb(228 242 75 / var(--tw-border-opacity));
 }
 
 .border-primary-lilas{
@@ -1329,6 +1399,14 @@ html {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\]{
+  background-color: ;
+}
+
+.bg-\[url\]{
+  background-color: url;
 }
 
 .bg-\[url\(\'\.\.\/sources\/icons\/icon_women\.svg\'\)\]{
@@ -1411,6 +1489,14 @@ html {
   background-image: url('../sources/logos/header/header_monogramme_white.svg');
 }
 
+.bg-\[url\(\'\/media\/paul\/DATA\/FREELANCE\/PROJETS_CLIENTS\/rweb\/la_factory\/sources\/img\/culture\/culture_valeurs\.jpeg\'\)\]{
+  background-image: url('/media/paul/DATA/FREELANCE/PROJETS_CLIENTS/rweb/la_factory/sources/img/culture/culture_valeurs.jpeg');
+}
+
+.bg-\[url\(\'\.\.\/sources\/img\/culture\/culture_valeurs\.jpeg\'\)\]{
+  background-image: url('../sources/img/culture/culture_valeurs.jpeg');
+}
+
 .bg-\[length\:auto_80\%\]{
   background-size: auto 80%;
 }
@@ -1480,9 +1566,19 @@ html {
   padding-right: 1.5rem;
 }
 
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-\[2px\]{
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .py-\[3px\]{
@@ -1617,6 +1713,18 @@ html {
 
 .pt-44{
   padding-top: 11rem;
+}
+
+.pt-9{
+  padding-top: 2.25rem;
+}
+
+.pb-11{
+  padding-bottom: 2.75rem;
+}
+
+.pb-6{
+  padding-bottom: 1.5rem;
 }
 
 .text-left{
@@ -1867,7 +1975,7 @@ html {
   /* Firefox */
 }
 
-/* Remove chrome autofill color from inputs */
+/* Enlever chrome autofill color pour les inputs => solution mettre une transition très longie */
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -2120,6 +2228,10 @@ input {
     display: block;
   }
 
+  .md\:hidden{
+    display: none;
+  }
+
   .md\:h-10{
     height: 2.5rem;
   }
@@ -2318,12 +2430,24 @@ input {
     gap: 1.25rem;
   }
 
+  .md\:gap-6{
+    gap: 1.5rem;
+  }
+
   .md\:gap-7{
     gap: 1.75rem;
   }
 
   .md\:gap-9{
     gap: 2.25rem;
+  }
+
+  .md\:gap-\[60px\]{
+    gap: 60px;
+  }
+
+  .md\:gap-16{
+    gap: 4rem;
   }
 
   .md\:gap-x-\[72px\]{
@@ -2337,6 +2461,10 @@ input {
 
   .md\:rounded-\[30px\]{
     border-radius: 30px;
+  }
+
+  .md\:border-2{
+    border-width: 2px;
   }
 
   .md\:bg-\[url\(\'\.\.\/sources\/img\/homepage_carte\/carte_desktop\.svg\'\)\]{
@@ -2379,6 +2507,11 @@ input {
     padding: 2rem;
   }
 
+  .md\:px-16{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .md\:px-3{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -2404,9 +2537,19 @@ input {
     padding-bottom: 10rem;
   }
 
+  .md\:py-48{
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
   .md\:py-64{
     padding-top: 16rem;
     padding-bottom: 16rem;
+  }
+
+  .md\:py-\[21px\]{
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
 
   .md\:py-\[6px\]{
@@ -2417,6 +2560,11 @@ input {
   .md\:py-\[7px\]{
     padding-top: 7px;
     padding-bottom: 7px;
+  }
+
+  .md\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .md\:pb-12{
@@ -2509,6 +2657,10 @@ input {
 
   .md\:pt-44{
     padding-top: 11rem;
+  }
+
+  .md\:pb-24{
+    padding-bottom: 6rem;
   }
 
   .md\:text-right{
@@ -2610,6 +2762,10 @@ input {
 
   .md\:leading-\[96px\]{
     line-height: 96px;
+  }
+
+  .md\:leading-\[95px\]{
+    line-height: 95px;
   }
 }
 
@@ -2946,6 +3102,10 @@ input {
 .dark\:bg-primary-violet:where(.dark, .dark *){
   --tw-bg-opacity: 1;
   background-color: rgb(99 58 222 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-transparent:where(.dark, .dark *){
+  background-color: transparent;
 }
 
 .dark\:bg-\[url\(\'\.\.\/sources\/img\/homepage_numbers\/15K\+_violet\.svg\'\)\]:where(.dark, .dark *){

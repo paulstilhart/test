@@ -46,7 +46,7 @@
 
 
 
-/* Remove chrome autofill color from inputs */
+/* Enlever chrome autofill color pour les inputs => solution mettre une transition très longie */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

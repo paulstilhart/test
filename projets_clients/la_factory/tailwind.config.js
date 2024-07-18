@@ -104,6 +104,14 @@ module.exports = {
           "50%": { transform: "translateX(10%)" },
           "100%": { transform: "translateX(-20%)" },
         },
+        cultureTranslateXLeft: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        cultureTranslateXRight: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
       },
       animation: {
         expertises_title1: "expertises_title1 0.7s ease-in-out",
@@ -116,6 +124,8 @@ module.exports = {
         title1_mobile: "title1_mobile 15s linear infinite",
         title2_mobile: "title2_mobile 15s linear infinite",
         title3_mobile: "title3_mobile 15s linear infinite",
+        cultureTranslateXLeft: "cultureTranslateXLeft 60s linear infinite",
+        cultureTranslateXRight: "cultureTranslateXRight 60s linear infinite",
       },
     },
   },
