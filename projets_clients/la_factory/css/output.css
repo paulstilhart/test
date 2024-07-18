@@ -2723,6 +2723,10 @@ input:-webkit-autofill:active {
     padding-bottom: 6rem;
   }
 
+  .lg\:pb-0{
+    padding-bottom: 0px;
+  }
+
   .lg\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
