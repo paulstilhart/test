@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth ">
+<html lang="fr" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -20,21 +20,21 @@
 <body class="">
 
     <header aria-expanded="false"
-        class="group/menu z-40 fixed top-0 left-0 w-full bg-transparent px-6 lg:px-[70px] text-white transition-colors duration-300">
+        class="group/menu z-40 fixed top-0 left-0 w-full bg-transparent px-6 lg:px-[70px] text-primary-noir-gris  dark:text-white transition-colors duration-300">
         <div class="relative  max-w-[1372px] mx-auto  w-full h-0">
 
             <a href="/pages/sitemap.html"
-                class="z-50 absolute left-0 top-9 lg:hidden w-9 h-12 transition-colors duration-700 bg-cover bg-center bg-no-repeat bg-header_monogramme_white group-aria-expanded/menu:bg-header_monogramme_white overflow-hidden"></a>
+                class="z-50 absolute left-0 top-9 lg:hidden w-9 h-12 transition-colors duration-700 bg-cover bg-center bg-no-repeat bg-header_monogramme_violet dark:bg-header_monogramme_white group-aria-expanded/menu:bg-header_monogramme_white overflow-hidden"></a>
 
             <a href="/pages/sitemap.html" aria-expanded="true"
                 class="absolute left-0 top-14 js_header_logo_scroll hidden lg:inline-block  w-[58px] h-[75px] transition-all duration-700 
-            bg-cover bg-no-repeat bg-header_brand_white overflow-hidden 
+            bg-cover bg-no-repeat bg-header_brand_violet dark:bg-header_brand_white overflow-hidden 
             aria-expanded:!h-12 aria-expanded:!w-60
             group-aria-expanded/menu:invisible group-aria-expanded/menu:pointer-events-none group-aria-expanded/menu:transition-none"></a>
 
             <button
                 class="z-50 js_nav_toggle  absolute right-0 top-7 lg:top-10   h-[62px] w-[62px] lg:h-[84px] lg:w-[84px]  rounded-full 
-        bg-primary-jaune  text-primary-noir-gris
+        bg-primary-violet text-white dark:bg-primary-jaune  dark:text-primary-noir-gris
          group-aria-expanded/menu:bg-primary-jaune group-aria-expanded/menu:text-primary-noir-gris transition-all duration-700 hover:scale-[1.15]  flex items-center justify-center">
                 <span class="inline-block font-pfmellonbold text-xl lg:text-3xl h-7 lg:h-9 uppercase overflow-hidden">
                     <span
@@ -118,13 +118,13 @@
 
     <main>
 
-        <section data-theme=""
+        <section data-theme="light"
         class="bg-primary-lilas text-primary-noir-gris">
         <div
-            class="px-6 lg:px-[70px] max-w-[1512px] mx-auto overflow-hidden pb-4 lg:pb-0">
+            class="px-6 lg:px-[70px] max-w-[1512px] mx-auto overflow-hidden pb-2 md:pb-4 lg:pb-0">
             <h1
                 class="font-pfmellonbold text-9xl leading-[110px] lg:text-[325px] lg:leading-[270px] xl:whitespace-nowrap">
-                <span class="pt-44 inline-block overflow-hidden ">
+                <span class="pt-44 lg:pt-24 inline-block overflow-hidden ">
                     <span class="animate-expertises_title1 inline-block hyphens-manual">CONTACT&shy;EZ-</span></span>
                 <br>
                 <span class="inline-block overflow-hidden">
@@ -135,10 +135,10 @@
         </div>
     </section>
 
-        <section data-theme=""
+        <section data-theme="dark"
             class="lg:mt-[-100px] bg-primary-violet text-white">
             <div class="px-6 lg:px-[70px] max-w-[1512px] mx-auto pt-16 pb-20 md:pt-36 md:pb-28
-        grid grid-cols-1 md:grid-cols-2 gap-y-40 gap-x-6 items-center">
+        grid grid-cols-1 md:grid-cols-2 gap-y-40 gap-x-[88px] items-center">
 
 
                 <div>
@@ -147,18 +147,18 @@
 
                     <form action="" class="md:max-w-[525px] flex flex-col gap-7 md:gap-12">
 
-                        <input type="text" id="firstname" name="firstname" placeholder="Prénom *" class="h-6 md:h-9 md:pb-4 font-poppins text-sm md:text-xl   text-white bg-transparent  placeholder:text-primary-lilas border-b border-primary-lilas
+                        <input type="text" id="firstname" name="firstname" placeholder="Prénom *" class="h-6 md:h-9 pb-2 md:pb-4 font-poppins text-sm md:text-xl   text-white bg-transparent  placeholder:text-primary-lilas border-b border-primary-lilas
                     focus:outline-none focus:border-white active:border-white hover:border-white">
 
 
-                        <input type="text" id="lastname" name="lastname" placeholder="Nom *" class="h-6 md:h-9 md:pb-4 font-poppins text-sm md:text-xl   text-white bg-transparent  placeholder:text-primary-lilas border-b border-primary-lilas
+                        <input type="text" id="lastname" name="lastname" placeholder="Nom *" class="h-6 md:h-9 pb-2 md:pb-4 font-poppins text-sm md:text-xl   text-white bg-transparent  placeholder:text-primary-lilas border-b border-primary-lilas
                     focus:outline-none focus:border-white active:border-white hover:border-white">
 
-                        <input type="email" id="email" name="email" placeholder="Adresse email *" class="h-6 md:h-9 md:pb-4 font-poppins text-sm md:text-xl   text-white bg-transparent  placeholder:text-primary-lilas border-b border-primary-lilas
+                        <input type="email" id="email" name="email" placeholder="Adresse email *" class="h-6 md:h-9 pb-2 md:pb-4 font-poppins text-sm md:text-xl   text-white bg-transparent  placeholder:text-primary-lilas border-b border-primary-lilas
                     focus:outline-none focus:border-white active:border-white hover:border-white">
 
 
-                        <input type="text" id="subject" name="subject" placeholder="Sujet" class="h-6 md:h-9 md:pb-4 font-poppins text-sm md:text-xl   text-white bg-transparent  placeholder:text-primary-lilas border-b border-primary-lilas
+                        <input type="text" id="subject" name="subject" placeholder="Sujet" class="h-6 md:h-9 pb-2 md:pb-4 font-poppins text-sm md:text-xl   text-white bg-transparent  placeholder:text-primary-lilas border-b border-primary-lilas
                     focus:outline-none focus:border-white active:border-white hover:border-white">
 
 
@@ -226,10 +226,10 @@
     </main>
 
     <footer>
-        <section data-theme=""
+        <section data-theme="dark"
             class="bg-white text-primary-noir-gris transition-colors duration-700">
             <div
-                class=" pt-36 pb-24 md:py-64 2xl:pb-80 max-w-[1920px] mx-auto bg-footer_la_factory_violet  bg-bottom bg-no-repeat bg-contain ">
+                class=" pt-36 pb-24 md:pb-64 md:pt-40 2xl:pb-80 max-w-[1920px] mx-auto bg-footer_la_factory_violet  bg-bottom bg-no-repeat bg-contain ">
                 <div class=" px-6 lg:px-[70px] max-w-[1512px] mx-auto  flex flex-col md:flex-row gap-9 justify-between 
                 ">
                     <div class="flex flex-col gap-5  md:gap-10">

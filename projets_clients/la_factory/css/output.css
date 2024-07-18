@@ -1211,6 +1211,11 @@ html {
   row-gap: 10rem;
 }
 
+.gap-x-\[88px\]{
+  -moz-column-gap: 88px;
+       column-gap: 88px;
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -2742,6 +2747,10 @@ input:-webkit-autofill:active {
 
   .lg\:pb-0{
     padding-bottom: 0px;
+  }
+
+  .lg\:pt-24{
+    padding-top: 6rem;
   }
 
   .lg\:text-3xl{
