@@ -1,4 +1,10 @@
 //==============================================================================================================================
+//VARIABLES GENERALES
+
+const body = document.querySelector("body");
+const header = document.querySelector("header");
+
+//==============================================================================================================================
 //POUR GÉRER LE CHANGEMENT ICONE DU HEADER AU SCROLL
 
 function headerIconScroll() {
@@ -23,8 +29,6 @@ headerIconScroll(); // Appel initial pour vérifier l'état au chargement de la 
 //==============================================================================================================================
 //AFFICHER OU NON LE MENU
 function toggleNav() {
-  const body = document.querySelector("body");
-  const header = document.querySelector("header");
   const navToggle = document.querySelector(".js_nav_toggle");
 
   if (!navToggle) return;
@@ -186,8 +190,68 @@ function darkOrLightTheme() {
 
 darkOrLightTheme();
 
-
-
 //==============================================================================================================================
 //PAGE CULTURE STOPSCROLL
 
+// Options pour l'IntersectionObserver
+const options = {
+  root: null,
+  rootMargin: "-50% 0px -50% 0px",
+};
+
+let lastScrollTop = 0;
+
+// Fonction pour mettre à jour le défilement horizontal et gérer le défilement vertical
+const handleScroll = (event) => {
+  const scrollContainer = document.querySelector('.js_culture_stopscroll_slider');
+  if (scrollContainer) {
+    const scrollLeft = scrollContainer.scrollLeft;
+    const scrollWidth = scrollContainer.scrollWidth;
+    const clientWidth = scrollContainer.clientWidth;
+
+    const scrollTop = window.scrollY || window.pageYOffset;
+    const deltaY = lastScrollTop - scrollTop;
+    let newScrollLeft = scrollLeft + deltaY;
+
+    // Conserver la nouvelle position de défilement dans les limites du conteneur
+    newScrollLeft = Math.max(0, Math.min(newScrollLeft, scrollWidth - clientWidth));
+    
+    // Appliquer la nouvelle position de défilement horizontal
+    scrollContainer.scrollLeft = newScrollLeft;
+
+    // Mettre à jour la dernière position du défilement vertical
+    lastScrollTop = scrollTop;
+
+    // Désactiver le défilement vertical uniquement si le conteneur n'est pas en butée
+    if (newScrollLeft > 0 && newScrollLeft < scrollWidth - clientWidth) {
+      document.body.style.overflow = "hidden"; // Désactiver le défilement vertical
+    } else {
+      document.body.style.overflow = ""; // Réactiver le défilement vertical
+    }
+
+    event.preventDefault(); // Empêcher le défilement vertical
+    event.stopPropagation(); // Empêcher les autres gestionnaires d'événements de s'exécuter
+  }
+};
+
+// Fonction de rappel pour l'IntersectionObserver
+const handleIntersection = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log("Element visible");
+      window.addEventListener("scroll", handleScroll, { passive: false });
+    } else {
+      console.log("Element not visible");
+      window.removeEventListener("scroll", handleScroll);
+    }
+  });
+};
+
+// Création de l'instance IntersectionObserver
+const observer = new IntersectionObserver(handleIntersection, options);
+
+// Sélection de l'élément à observer
+const targetElement = document.querySelector(".js_culture_stopscroll_mark");
+if (targetElement) {
+  observer.observe(targetElement);
+}
