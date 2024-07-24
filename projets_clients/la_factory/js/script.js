@@ -49,6 +49,8 @@ function toggleNav() {
 toggleNav(); // Assurez-vous d'appeler la fonction pour l'initialiser
 
 //==============================================================================================================================
+//Pour la carte de la home
+
 function mapcards() {
   const cardsContainer = document.querySelector(".js_mapcards_cards");
   const pinsContainer = document.querySelector(".js_mapcards_pins");
@@ -110,7 +112,8 @@ function mapcards() {
 mapcards();
 
 //==============================================================================================================================
-//EXPERTISES EFFET SLIDER HORIZONTAL AU SCROLL
+//EXPERTISES EFFET SLIDER HORIZONTAL AU SCROLL PAGE EXPERTISES
+
 function expertisesScrollEffect() {
   const js_expertises_1 = document.querySelector(".js_expertises_1");
   const js_expertises_2 = document.querySelector(".js_expertises_2");
@@ -191,6 +194,27 @@ function darkOrLightTheme() {
 darkOrLightTheme();
 
 //==============================================================================================================================
+//GESTION INPUT CV PAGES POSTES
+
+function inputCV() {
+  const fileInput = document.querySelector(".js_file_cv>input");
+  const fileText = document.querySelector(".js_file_cv>p");
+
+  if (fileInput && fileText) {
+    fileInput.addEventListener("change", function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        fileInput.setAttribute("aria-checked", "true");
+        fileText.textContent = file.name;
+      }
+    });
+  }
+}
+
+inputCV();
+
+
+//==============================================================================================================================
 //PAGE CULTURE STOPSCROLL
 
 // Options pour l'IntersectionObserver
@@ -203,7 +227,9 @@ let lastScrollTop = 0;
 
 // Fonction pour mettre à jour le défilement horizontal et gérer le défilement vertical
 const handleScroll = (event) => {
-  const scrollContainer = document.querySelector('.js_culture_stopscroll_slider');
+  const scrollContainer = document.querySelector(
+    ".js_culture_stopscroll_slider"
+  );
   if (scrollContainer) {
     const scrollLeft = scrollContainer.scrollLeft;
     const scrollWidth = scrollContainer.scrollWidth;
@@ -214,8 +240,11 @@ const handleScroll = (event) => {
     let newScrollLeft = scrollLeft + deltaY;
 
     // Conserver la nouvelle position de défilement dans les limites du conteneur
-    newScrollLeft = Math.max(0, Math.min(newScrollLeft, scrollWidth - clientWidth));
-    
+    newScrollLeft = Math.max(
+      0,
+      Math.min(newScrollLeft, scrollWidth - clientWidth)
+    );
+
     // Appliquer la nouvelle position de défilement horizontal
     scrollContainer.scrollLeft = newScrollLeft;
 
