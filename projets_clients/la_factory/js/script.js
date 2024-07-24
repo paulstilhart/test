@@ -213,6 +213,32 @@ function inputCV() {
 
 inputCV();
 
+//==============================================================================================================================
+//
+
+/*  
+function getElementTopPositionWithinContainer() {
+  const container = document.querySelector('.js_sticky_content');
+  const stickyElement = container.querySelector('div');
+
+  if (container && stickyElement) {
+    const containerRect = container.getBoundingClientRect();
+    const stickyElement = stickyElement.getBoundingClientRect();
+
+    const relativeTop = stickyElement.top - containerRect.top;
+    console.log(
+      "Position top de l'élément sticky dans son conteneur:",
+      relativeTop
+    );
+    return relativeTop;
+  } else {
+    console.log("Conteneur ou élément non trouvé.");
+    return null;
+  }
+}
+
+getElementTopPositionWithinContainer();
+*/
 
 //==============================================================================================================================
 //PAGE CULTURE STOPSCROLL
