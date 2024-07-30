@@ -958,6 +958,14 @@ html {
   height: 100vh;
 }
 
+.h-\[1\.5px\]{
+  height: 1.5px;
+}
+
+.h-\[2px\]{
+  height: 2px;
+}
+
 .\!min-h-svh{
   min-height: 100svh !important;
 }
@@ -1524,8 +1532,20 @@ html {
   border-width: 1px;
 }
 
+.border-\[1\.5px\]{
+  border-width: 1.5px;
+}
+
 .border-b{
   border-bottom-width: 1px;
+}
+
+.border-b-\[1\.5px\]{
+  border-bottom-width: 1.5px;
+}
+
+.border-b-\[2\.5px\]{
+  border-bottom-width: 2.5px;
 }
 
 .border-black{
@@ -2068,6 +2088,10 @@ html {
   line-height: 1rem;
 }
 
+.text-\[92px\]{
+  font-size: 92px;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -2142,6 +2166,10 @@ html {
 
 .leading-snug{
   line-height: 1.375;
+}
+
+.leading-\[82px\]{
+  line-height: 82px;
 }
 
 .text-primary-jaune{
