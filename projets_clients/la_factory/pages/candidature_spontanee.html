@@ -124,17 +124,24 @@
         <section data-theme="light"
             class="bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors duration-700">
             <div class="px-6 lg:px-[70px] max-w-[1512px] mx-auto overflow-hidden pb-16 lg:pb-24 relative">
-                <h1
-                    class="lg:whitespace-nowrap font-pfmellonbold text-9xl leading-[110px] lg:text-[325px] lg:leading-[270px] ">
 
-                    <span class="pt-44 inline-block overflow-hidden ">
-                        <span class="animate-expertises_title1 inline-block hyphens-manual">
-                            CANDIDAT&shy;<span class="inline-block animate-expertises_title2 sm:animate-none">URE</span>
+                <h1
+                    class="pt-44 whitespace-nowrap font-pfmellonbold text-9xl leading-[110px] lg:text-[325px] lg:leading-[270px] ">
+
+                    <span class="inline-block overflow-hidden">
+                        <span class="animate-expertises_title1 inline-block">CANDIDAT<span
+                                class="inline-block sm:hidden">-</span><span class="hidden sm:inline-block">URE</span>
                         </span>
                     </span>
-                    <span class="block overflow-hidden ">
-                        <span class="animate-expertises_title3 sm:animate-expertises_title2 inline-block">SPONTANEE<span
-                                class="text-primary-jaune dark:text-primary-jaune">*</span></span>
+
+                    <span class="block sm:hidden overflow-hidden">
+                        <span class="animate-expertises_title2 inline-block">URE</span>
+                    </span>
+
+                    <span class="block overflow-hidden">
+                        <span class="animate-expertises_title3 sm:animate-expertises_title2 inline-block">
+                            SPONTANEE<span class="text-primary-jaune dark:text-primary-jaune">*</span>
+                        </span>
                     </span>
                 </h1>
 
@@ -147,6 +154,9 @@
         </section>
 
 
+
+
+
         <section data-theme="dark"
             class="bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors duration-700">
 
@@ -154,26 +164,44 @@
 
                 <div class="lg:hidden flex flex-wrap gap-[10px] pb-6">
                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
-            font-pfmellonbold uppercase text-2xl p-[3px_24px]">cdi</span>
+    font-pfmellonbold uppercase text-2xl p-[3px_24px]">cdi</span>
                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
-            font-pfmellonbold uppercase text-2xl p-[3px_24px]">TEMPS PLEIN</span>
+    font-pfmellonbold uppercase text-2xl p-[3px_24px]">TEMPS PLEIN</span>
                     <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
-            font-pfmellonbold uppercase text-2xl p-[3px_24px]">barcelone</span>
+    font-pfmellonbold uppercase text-2xl p-[3px_24px]">barcelone</span>
                 </div>
 
+                <div class="flex">
 
-                <div class="flex flex-col gap-y-12 relative">
-
-                    <div class="  lg:flex">
-                        <div class="max-w-[488px] ml-auto flex-auto hidden lg:block relative">
-                            <div class=" sticky top-40">
-                                <span class=" flex-none whitespace-nowrap  inline-block bg-primary-jaune text-primary-noir-gris rounded-full 
-                            font-pfmellonbold uppercase text-[54px] leading-none 
-                            p-[19px_70px] ">cdi</span>
-                            </div>
+                    <div class="flex-auto hidden max-w-[488px] ml-auto lg:flex flex-col justify-between">
+                        <div class=" z-10 h-[100px] bg-transparent ">
                         </div>
 
-                        <div class="w-full lg:w-3/5">
+                        <div class=" sticky top-[150px] pb-[332px]">
+                            <span class=" flex-none whitespace-nowrap  inline-block bg-primary-jaune text-primary-noir-gris rounded-full 
+                    font-pfmellonbold uppercase text-[54px] leading-none 
+                    p-[19px_70px] ">cdi</span>
+                        </div>
+
+
+                        <div class=" sticky top-[316px] pb-[166px]">
+                            <span class="flex-none whitespace-nowrap inline-block bg-primary-jaune text-primary-noir-gris rounded-full 
+                    font-pfmellonbold uppercase text-[54px] leading-none p-[19px_70px]">temps plein</span>
+                        </div>
+
+
+                        <div class=" sticky top-[482px]">
+                            <span class="flex-none whitespace-nowrap  inline-block bg-primary-jaune text-primary-noir-gris rounded-full 
+                    font-pfmellonbold uppercase text-[54px] leading-none p-[19px_70px]">cdi</span>
+                        </div>
+
+                        <div class="relative bottom-[-5px] z-10 h-[105px] bg-transparent ">
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-3/5 flex flex-col gap-y-12 ">
+
+                        <div class="">
                             <h2
                                 class="pb-2 lg:pb-6 font-pfmellonbold text-4xl leading-[45px] lg:text-5xl lg:leading-[45px] uppercase">
                                 LA FACTORY</h2>
@@ -229,16 +257,8 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
 
-                    <div class="  lg:flex ">
-                        <div class="max-w-[488px] ml-auto flex-auto hidden lg:block">
-                            <div class=" sticky top-40">
-                                <span class="flex-none whitespace-nowrap inline-block bg-primary-jaune text-primary-noir-gris rounded-full 
-                            font-pfmellonbold uppercase text-[54px] leading-none p-[19px_70px]">temps plein</span>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-3/5">
+                        <div>
                             <h2
                                 class="pb-2 lg:pb-6 font-pfmellonbold text-4xl leading-[45px] lg:text-5xl lg:leading-[45px] uppercase">
                                 MISSIONS</h2>
@@ -278,17 +298,8 @@
                             </p>
                             </p>
                         </div>
-                    </div>
 
-                    <div class="  lg:flex ">
-                        <div class="max-w-[488px] ml-auto flex-auto hidden lg:block">
-                            <div class=" sticky top-40">
-                                <span class="flex-none whitespace-nowrap  inline-block bg-primary-jaune text-primary-noir-gris rounded-full 
-                            font-pfmellonbold uppercase text-[54px] leading-none p-[19px_70px]">cdi</span>
-
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-3/5">
+                        <div>
                             <h2
                                 class="pb-2 lg:pb-6 font-pfmellonbold text-4xl leading-[45px] lg:text-5xl lg:leading-[45px] uppercase">
                                 AVATANGES</h2>
@@ -317,13 +328,10 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
 
             </div>
         </section>
-
-
 
 
 

@@ -726,6 +726,14 @@ html {
   top: 94px;
 }
 
+.top-\[-5px\]{
+  top: -5px;
+}
+
+.top-\[5px\]{
+  top: 5px;
+}
+
 .-z-40{
   z-index: -40;
 }
@@ -1275,6 +1283,24 @@ html {
   animation: title3_mobile 15s linear infinite;
 }
 
+@keyframes title2{
+  0%{
+    transform: translateX(200px);
+  }
+
+  50%{
+    transform: translateX(0);
+  }
+
+  100%{
+    transform: translateX(200px);
+  }
+}
+
+.animate-title2{
+  animation: title2 15s linear infinite;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -1363,6 +1389,10 @@ html {
 
 .justify-between{
   justify-content: space-between;
+}
+
+.justify-around{
+  justify-content: space-around;
 }
 
 .gap-0{
@@ -2454,6 +2484,10 @@ input {
 @media (min-width: 640px){
   .sm\:inline-block{
     display: inline-block;
+  }
+
+  .sm\:hidden{
+    display: none;
   }
 
   @keyframes expertises_title1{
@@ -3639,6 +3673,18 @@ input {
 @media (min-width: 1900px){
   .\34xl\:gap-12{
     gap: 3rem;
+  }
+
+  .\34xl\:text-\[415px\]{
+    font-size: 415px;
+  }
+
+  .\34xl\:leading-\[330px\]{
+    line-height: 330px;
+  }
+
+  .\34xl\:text-\[\]{
+    color: ;
   }
 }
 
