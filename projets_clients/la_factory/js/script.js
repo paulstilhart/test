@@ -214,99 +214,91 @@ function inputCV() {
 inputCV();
 
 //==============================================================================================================================
-//
+//CURSOR CUSTOM
 
-/*  
-function getElementTopPositionWithinContainer() {
-  const container = document.querySelector('.js_sticky_content');
-  const stickyElement = container.querySelector('div');
+function cursor() {
+  // Ajouter le curseur personnalisé au début du body
+  document.body.insertAdjacentHTML(
+    "afterbegin",
+    '<div class="js_cursor"></div>'
+  );
+  const cursor = document.querySelector(".js_cursor");
 
-  if (container && stickyElement) {
-    const containerRect = container.getBoundingClientRect();
-    const stickyElement = stickyElement.getBoundingClientRect();
+  // Fonction pour mettre à jour la position du curseur personnalisé
+  function updateCursorPosition(e) {
+    cursor.style.left = `${e.pageX}px`;
+    cursor.style.top = `${e.pageY - window.scrollY}px`;
+  }
 
-    const relativeTop = stickyElement.top - containerRect.top;
-    console.log(
-      "Position top de l'élément sticky dans son conteneur:",
-      relativeTop
+  // Mettre à jour la position du curseur lors du mouvement de la souris
+  document.addEventListener("mousemove", updateCursorPosition);
+
+  // Sélectionner tous les éléments <a> et <button> et ajouter les gestionnaires d'événements
+  document.querySelectorAll("a, button").forEach((element) => {
+    element.addEventListener("mouseenter", (event) =>
+      cursor.classList.add("hover")
     );
-    return relativeTop;
-  } else {
-    console.log("Conteneur ou élément non trouvé.");
-    return null;
+    element.addEventListener("mouseleave", (event) =>
+      cursor.classList.remove("hover")
+    );
+  });
+
+  // Ajouter les gestionnaires d'événements pour les éléments avec la classe js_cursor_yellow
+  document.querySelectorAll(".js_cursor_yellow").forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      cursor.classList.add("black")
+    });
+    element.addEventListener("mouseleave", () => {
+      cursor.classList.remove("black")
+    });
+  });
+}
+
+cursor();
+
+
+//==============================================================================================================================
+//PAGE CULTURE > AGENCES > STOPSCROLL
+
+const js_culture_stopscroll_mark = document.querySelector(
+  ".js_culture_stopscroll_mark"
+);
+const js_culture_stopscroll_slider = document.querySelector(
+  ".js_culture_stopscroll_slider"
+);
+
+function scrollHorizontally(e) {
+  e.preventDefault();
+  const delta = e.deltaY || -e.detail || e.wheelDeltaY; // Détermine la direction du défilement
+  const scrollSpeed = 10; // Ajustez cette valeur comme nécessaire
+
+  if (js_culture_stopscroll_slider) {
+    js_culture_stopscroll_slider.scrollLeft -= delta * scrollSpeed;
   }
 }
 
-getElementTopPositionWithinContainer();
-*/
-
-//==============================================================================================================================
-//PAGE CULTURE STOPSCROLL
-
-// Options pour l'IntersectionObserver
-const options = {
-  root: null,
-  rootMargin: "-50% 0px -50% 0px",
-};
-
-let lastScrollTop = 0;
-
-// Fonction pour mettre à jour le défilement horizontal et gérer le défilement vertical
-const handleScroll = (event) => {
-  const scrollContainer = document.querySelector(
-    ".js_culture_stopscroll_slider"
-  );
-  if (scrollContainer) {
-    const scrollLeft = scrollContainer.scrollLeft;
-    const scrollWidth = scrollContainer.scrollWidth;
-    const clientWidth = scrollContainer.clientWidth;
-
-    const scrollTop = window.scrollY || window.pageYOffset;
-    const deltaY = lastScrollTop - scrollTop;
-    let newScrollLeft = scrollLeft + deltaY;
-
-    // Conserver la nouvelle position de défilement dans les limites du conteneur
-    newScrollLeft = Math.max(
-      0,
-      Math.min(newScrollLeft, scrollWidth - clientWidth)
-    );
-
-    // Appliquer la nouvelle position de défilement horizontal
-    scrollContainer.scrollLeft = newScrollLeft;
-
-    // Mettre à jour la dernière position du défilement vertical
-    lastScrollTop = scrollTop;
-
-    // Désactiver le défilement vertical uniquement si le conteneur n'est pas en butée
-    if (newScrollLeft > 0 && newScrollLeft < scrollWidth - clientWidth) {
-      document.body.style.overflow = "hidden"; // Désactiver le défilement vertical
-    } else {
-      document.body.style.overflow = ""; // Réactiver le défilement vertical
-    }
-
-    event.preventDefault(); // Empêcher le défilement vertical
-    event.stopPropagation(); // Empêcher les autres gestionnaires d'événements de s'exécuter
-  }
-};
-
-// Fonction de rappel pour l'IntersectionObserver
-const handleIntersection = (entries) => {
+function callback(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log("Element visible");
-      window.addEventListener("scroll", handleScroll, { passive: false });
+      body.style.overflow = "hidden";
+
+      window.addEventListener("wheel", scrollHorizontally, { passive: false });
+      console.log("L'élément est visible dans le viewport.");
     } else {
-      console.log("Element not visible");
-      window.removeEventListener("scroll", handleScroll);
+      console.log("je suis sorti");
+      body.style.overflow = "";
     }
   });
+}
+
+const options = {
+  root: null, // Utilise le viewport du navigateur comme root
+  rootMargin: "0px",
+  threshold: 1.0,
 };
 
-// Création de l'instance IntersectionObserver
-const observer = new IntersectionObserver(handleIntersection, options);
+const observer = new IntersectionObserver(callback, options);
 
-// Sélection de l'élément à observer
-const targetElement = document.querySelector(".js_culture_stopscroll_mark");
-if (targetElement) {
-  observer.observe(targetElement);
+if (js_culture_stopscroll_mark && js_culture_stopscroll_slider) {
+  observer.observe(js_culture_stopscroll_mark);
 }

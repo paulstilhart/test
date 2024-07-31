@@ -9,6 +9,10 @@ module.exports = {
 
   theme: {
     extend: {
+      cursor: {
+        'circle_yellow': 'url("../sources/icons/cursor_circle.svg"), pointer',
+        'circle_yellow_hover': 'url("../sources/icons/cursor_circle_hover.svg"), pointer',
+      },
       screens: {
         '3xl': '1700px',
         '4xl': '1900px',
