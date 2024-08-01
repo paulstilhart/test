@@ -220,6 +220,8 @@ function cursor() {
   const js_cursor = document.querySelector(".js_cursor");
 
   if (js_cursor && window.innerWidth > 767) {
+    body.classList.add('cursor_none');
+
     let initCursor = false;
 
     // Fonction de mise à jour du curseur
@@ -269,6 +271,9 @@ function cursor() {
 
     document.addEventListener("mouseover", handleMouseOver);
     document.addEventListener("mouseout", handleMouseOut);
+  }
+  else{
+    body.classList.remove('cursor_none');
   }
 }
 

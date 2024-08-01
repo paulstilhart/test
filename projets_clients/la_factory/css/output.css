@@ -2308,7 +2308,7 @@ input {
 }
 
 @media (min-width: 767px) {
-  * {
+  .cursor_none * {
     cursor: none !important;
   }
 
