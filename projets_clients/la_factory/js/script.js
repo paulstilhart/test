@@ -255,22 +255,15 @@ function cursor() {
     window.addEventListener("mouseout", hideCursor);
 
     // Gestionnaire pour les événements de survol des liens et des boutons
-    const handleMouseOver = (e) => {
+    const handleHover = (e) => {
       const linkOrButton = e.target.closest("a, button");
       if (linkOrButton) {
-        js_cursor.classList.add("hover");
+        js_cursor.classList.toggle("hover");
       }
     };
 
-    const handleMouseOut = (e) => {
-      const linkOrButton = e.target.closest("a, button");
-      if (linkOrButton) {
-        js_cursor.classList.remove("hover");
-      }
-    };
-
-    document.addEventListener("mouseover", handleMouseOver);
-    document.addEventListener("mouseout", handleMouseOut);
+    document.addEventListener("mouseover", handleHover);
+    document.addEventListener("mouseout", handleHover);
   }
   else{
     body.classList.remove('cursor_none');
