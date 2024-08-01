@@ -966,6 +966,14 @@ a,
   height: 95vh;
 }
 
+.h-\[9\]{
+  height: 9;
+}
+
+.h-\[95\]{
+  height: 95;
+}
+
 .\!min-h-svh{
   min-height: 100svh !important;
 }
@@ -2735,6 +2743,18 @@ input {
 
   .md\:h-auto{
     height: auto;
+  }
+
+  .md\:\!h-dvh{
+    height: 100dvh !important;
+  }
+
+  .md\:h-screen{
+    height: 100vh;
+  }
+
+  .md\:\!min-h-svh{
+    min-height: 100svh !important;
   }
 
   .md\:w-1\/2{
