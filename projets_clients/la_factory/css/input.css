@@ -20,7 +20,7 @@
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    cursor: none !important;
+    /*     cursor: none !important; */
     /*  cursor: url("../sources/icons/cursor_circle.svg"), pointer;*/
   }
 
@@ -100,65 +100,26 @@ input {
 
 
 
-* {
-  cursor: none !important;
-}
+@media (min-width: 767px) {
+  * {
+    cursor: none !important;
+  }
 
-.js_cursor {
-  position: fixed;
-  top: 0;
-  left: -100px;
-  overflow: visible;
-  z-index: 1000;
-  pointer-events: none;
-}
+  .js_cursor {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    mix-blend-mode:exclusion;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #E4F24B;
+    transition: transform 350ms ease;
+    transform: translate(-50%, -50%) scale(0.7);
+    z-index: 1000;
+  }
 
-.js_cursor:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background: #E4F24B;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transition: opacity 0s ease;
-  -moz-transition: opacity 0s ease;
-  -ms-transition: opacity 0s ease;
-  -o-transition: opacity 0s ease;
-  transition: opacity 0s ease;
-}
-
-
-.js_cursor:before {
-  content: '';
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  background: #E4F24B;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transition: opacity 0s ease;
-  -moz-transition: opacity 0s ease;
-  -ms-transition: opacity 0s ease;
-  -o-transition: opacity 0s ease;
-  transition: opacity 0s ease;
-
-}
-
-.js_cursor.hover:after {
-  opacity: 0;
-}
-
-.js_cursor.hover:before {
-  opacity: 1;
-}
-
-.js_cursor.black:after,
-.js_cursor.black:before{
-  background-color: #302F2E;
+  .js_cursor.hover {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
