@@ -335,7 +335,7 @@ function cultureStopscroll() {
     ".js_culture_stopscroll_slider"
   );
 
-  if (js_culture_stopscroll_slider && window.innerWidth < 1900) {
+  if ((js_culture_stopscroll_slider) && (767 < window.innerWidth) && (window.innerWidth < 1900)) {
     const scrollAmount = getScrollAmount(js_culture_stopscroll_slider);
 
     

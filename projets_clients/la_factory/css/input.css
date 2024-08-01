@@ -109,7 +109,7 @@ input {
     position: fixed;
     opacity: 0;
     pointer-events: none;
-    mix-blend-mode:exclusion;
+    mix-blend-mode:normal;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -121,5 +121,6 @@ input {
 
   .js_cursor.hover {
     transform: translate(-50%, -50%) scale(1);
+    background-color: black;
   }
 }
