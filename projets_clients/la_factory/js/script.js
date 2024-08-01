@@ -338,18 +338,21 @@ function cultureStopscroll() {
   );
 
   if (js_culture_stopscroll_slider && window.innerWidth < 1900) {
+    const scrollAmount = getScrollAmount(js_culture_stopscroll_slider);
+
+    
     // Crée une animation GSAP qui fait défiler le conteneur horizontalement
     const tween = gsap.to(js_culture_stopscroll_slider, {
-      x: getScrollAmount(js_culture_stopscroll_slider), // Déplacement horizontal basé sur la largeur du contenu
+      x: scrollAmount, // Déplacement horizontal basé sur la largeur du contenu
       //duration: 3, // Durée de l'animation en secondes
-      ease: "none", // Pas d'effet d'accélération/décélération
+      ease: "slow", // Pas d'effet d'accélération/décélération
     });
 
     // Crée un ScrollTrigger pour synchroniser le défilement avec l'animation
     ScrollTrigger.create({
       trigger: ".js_culture_stopscroll_slider", // Élément déclencheur
       start: "50% 60%", // Début de l'animation
-      end: () => `+=${getScrollAmount(js_culture_stopscroll_slider) * -1}`, // Fin de l'animation
+      end: () => `+=${scrollAmount * -1}`, // Fin de l'animation
       pin: true, // Fixe l'élément en place pendant l'animation
       animation: tween, // Animation à jouer
       scrub: 1, // Synchronisation avec le défilement
@@ -359,5 +362,5 @@ function cultureStopscroll() {
   }
 }
 
-cultureStopscroll();
 
+cultureStopscroll();
