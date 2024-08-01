@@ -958,6 +958,14 @@ a,
   height: 100vh;
 }
 
+.h-\[90vh\]{
+  height: 90vh;
+}
+
+.h-\[95vh\]{
+  height: 95vh;
+}
+
 .\!min-h-svh{
   min-height: 100svh !important;
 }
@@ -3686,12 +3694,20 @@ input {
     font-size: 350px;
   }
 
+  .\33xl\:text-\[415px\]{
+    font-size: 415px;
+  }
+
   .\33xl\:leading-\[215px\]{
     line-height: 215px;
   }
 
   .\33xl\:leading-\[300px\]{
     line-height: 300px;
+  }
+
+  .\33xl\:leading-\[330px\]{
+    line-height: 330px;
   }
 }
 
