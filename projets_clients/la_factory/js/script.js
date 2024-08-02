@@ -220,7 +220,7 @@ function cursor() {
   const js_cursor = document.querySelector(".js_cursor");
 
   if (js_cursor && window.innerWidth > 767) {
-    body.classList.add('cursor_none');
+    body.classList.add("cursor_none");
 
     let initCursor = false;
 
@@ -264,17 +264,13 @@ function cursor() {
 
     document.addEventListener("mouseover", handleHover);
     document.addEventListener("mouseout", handleHover);
-  }
-  else{
-    body.classList.remove('cursor_none');
+  } else {
+    body.classList.remove("cursor_none");
   }
 }
 
 cursor();
-window.addEventListener("resize", () => {
-  cursor();
-});
-
+window.addEventListener("resize", cursor);
 
 /*  
 
@@ -335,30 +331,36 @@ function cultureStopscroll() {
     ".js_culture_stopscroll_slider"
   );
 
-  if ((js_culture_stopscroll_slider) && (767 < window.innerWidth) && (window.innerWidth < 1900)) {
-    const scrollAmount = getScrollAmount(js_culture_stopscroll_slider);
+  if (!js_culture_stopscroll_slider) {
+    //console.log("je ne trouve pas le slider");
+    return;
+  } else {
+    if (window.innerWidth < 767 || window.innerWidth > 1870) {
+      //console.log("Je suis trop en mobile ou grand écran");
+      return;
+    } else {
 
-    
-    // Crée une animation GSAP qui fait défiler le conteneur horizontalement
-    const tween = gsap.to(js_culture_stopscroll_slider, {
-      x: scrollAmount, // Déplacement horizontal basé sur la largeur du contenu
-      //duration: 3, // Durée de l'animation en secondes
-      ease: "slow", // Pas d'effet d'accélération/décélération
-    });
+      const scrollAmount = getScrollAmount(js_culture_stopscroll_slider);
+      // Crée une animation GSAP qui fait défiler le conteneur horizontalement
+      const tween = gsap.to(js_culture_stopscroll_slider, {
+        x: scrollAmount, // Déplacement horizontal basé sur la largeur du contenu
+        //duration: 3, // Durée de l'animation en secondes
+        ease: "slow", // Pas d'effet d'accélération/décélération
+      });
 
-    // Crée un ScrollTrigger pour synchroniser le défilement avec l'animation
-    ScrollTrigger.create({
-      trigger: ".js_culture_stopscroll_slider", // Élément déclencheur
-      start: "50% 60%", // Début de l'animation
-      end: () => `+=${scrollAmount * -1}`, // Fin de l'animation
-      pin: true, // Fixe l'élément en place pendant l'animation
-      animation: tween, // Animation à jouer
-      scrub: 1, // Synchronisation avec le défilement
-      invalidateOnRefresh: true, // Recalcule la valeur si la fenêtre est redimensionnée
-      markers: false, // Affiche des marqueurs pour le développement
-    });
+      // Crée un ScrollTrigger pour synchroniser le défilement avec l'animation
+      ScrollTrigger.create({
+        trigger: ".js_culture_stopscroll_slider", // Élément déclencheur
+        start: "50% 60%", // Début de l'animation
+        end: () => `+=${scrollAmount * -1}`, // Fin de l'animation
+        pin: true, // Fixe l'élément en place pendant l'animation
+        animation: tween, // Animation à jouer
+        scrub: 1, // Synchronisation avec le défilement
+        invalidateOnRefresh: true, // Recalcule la valeur si la fenêtre est redimensionnée
+        markers: false, // Affiche des marqueurs pour le développement
+      });
+    }
   }
 }
-
 
 cultureStopscroll();

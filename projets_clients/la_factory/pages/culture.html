@@ -270,9 +270,9 @@
             class="overflow-x-hidden bg-white text-primary-noir-gris dark:bg-primary-violet dark:text-white transition-colors duration-700 overflow-hidden">
 
 
-            <div class="max-w-[1920px] mx-auto px-6 md:px-0 pt-24 pb-20 md:pt-44 md:pb-40 overflow-hidden relative">
+            <div class=" max-w-[1920px] mx-auto px-6 md:px-0 pt-24 pb-20 md:pt-44 md:pb-40 overflow-hidden relative">
 
-                <div class="js_culture_stopscroll_slider flex flex-col md:flex-row flex-nowrap gap-4 md:gap-14">
+                <div class=" js_culture_stopscroll_slider flex flex-col md:flex-row flex-nowrap gap-4 md:gap-14">
                     <div
                         class="flex-none relative aspect-[325/202] md:aspect-auto md:w-[588px] md:h-[406px] bg-[url('../sources/img/culture/culture_offices/culture_offices_barcelone.jpeg')] bg-cover bg-no-repeat bg-center">
                         <span class="bg-primary-jaune text-primary-noir-gris rounded-full 
@@ -544,6 +544,18 @@
 
         </section>
     </footer>
+
+
+    <script defer>
+        let windowWidth = window.innerWidth;// Variable pour stocker la largeur de la fenêtre
+        window.addEventListener('resize', function () {
+            // Si la largeur de la fenêtre a changé, cela peut être dû à un zoom ou dézoom
+            if (window.innerWidth !== windowWidth) {
+                windowWidth = window.innerWidth;// Mettre à jour la variable avec la nouvelle largeur de la fenêtre
+                location.reload();// Rafraîchir la page
+            }
+        });
+    </script>
 
 </body>
 

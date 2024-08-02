@@ -1315,6 +1315,10 @@ a,
   resize: none;
 }
 
+.resize{
+  resize: both;
+}
+
 .list-outside{
   list-style-position: outside;
 }
