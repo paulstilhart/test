@@ -826,30 +826,6 @@ a,
   display: none;
 }
 
-.aspect-\[4\/3\]{
-  aspect-ratio: 4/3;
-}
-
-.aspect-square{
-  aspect-ratio: 1 / 1;
-}
-
-.aspect-\[\]{
-  aspect-ratio: ;
-}
-
-.aspect-\[588\/\]{
-  aspect-ratio: 588/;
-}
-
-.aspect-\[588\/406\]{
-  aspect-ratio: 588/406;
-}
-
-.aspect-\[325\/406\]{
-  aspect-ratio: 325/406;
-}
-
 .aspect-\[325\/202\]{
   aspect-ratio: 325/202;
 }
@@ -982,10 +958,6 @@ a,
   height: 100vh;
 }
 
-.h-\[202px\]{
-  height: 202px;
-}
-
 .\!min-h-svh{
   min-height: 100svh !important;
 }
@@ -1069,10 +1041,6 @@ a,
 
 .w-full{
   width: 100%;
-}
-
-.w-\[325px\]{
-  width: 325px;
 }
 
 .min-w-full{
@@ -2357,12 +2325,12 @@ input {
     opacity: 0;
     pointer-events: none;
     mix-blend-mode:normal;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #E4F24B;
     transition: transform 350ms ease;
-    transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -50%) scale(0.5);
     z-index: 1000;
   }
 
@@ -2660,10 +2628,6 @@ input {
     display: block;
   }
 
-  .md\:flex{
-    display: flex;
-  }
-
   .md\:grid{
     display: grid;
   }
@@ -2716,6 +2680,10 @@ input {
     height: 378px;
   }
 
+  .md\:h-\[406px\]{
+    height: 406px;
+  }
+
   .md\:h-\[41px\]{
     height: 41px;
   }
@@ -2742,10 +2710,6 @@ input {
 
   .md\:h-screen{
     height: 100vh;
-  }
-
-  .md\:h-\[406px\]{
-    height: 406px;
   }
 
   .md\:\!min-h-svh{
@@ -2780,6 +2744,10 @@ input {
     width: 500px;
   }
 
+  .md\:w-\[588px\]{
+    width: 588px;
+  }
+
   .md\:w-\[623px\]{
     width: 623px;
   }
@@ -2790,10 +2758,6 @@ input {
 
   .md\:w-\[90px\]{
     width: 90px;
-  }
-
-  .md\:w-\[588px\]{
-    width: 588px;
   }
 
   .md\:max-w-\[525px\]{
@@ -3021,6 +2985,11 @@ input {
     padding: 9px 38px;
   }
 
+  .md\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:px-16{
     padding-left: 4rem;
     padding-right: 4rem;
@@ -3074,11 +3043,6 @@ input {
   .md\:py-\[7px\]{
     padding-top: 7px;
     padding-bottom: 7px;
-  }
-
-  .md\:px-0{
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .md\:pb-12{

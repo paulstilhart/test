@@ -218,8 +218,10 @@ inputCV();
 
 function cursor() {
   const js_cursor = document.querySelector(".js_cursor");
-
-  if (js_cursor && window.innerWidth > 767) {
+  if (window.innerWidth < 767 || !js_cursor) {
+    body.classList.remove("cursor_none");
+    return;
+  } else {
     body.classList.add("cursor_none");
 
     let initCursor = false;
@@ -255,17 +257,21 @@ function cursor() {
     window.addEventListener("mouseout", hideCursor);
 
     // Gestionnaire pour les événements de survol des liens et des boutons
-    const handleHover = (e) => {
+    const handleHoverAdd = (e) => {
       const linkOrButton = e.target.closest("a, button,input,label,textarea");
       if (linkOrButton) {
-        js_cursor.classList.toggle("hover");
+        js_cursor.classList.add("hover");
+      }
+    };
+    const handleHoverRemove = (e) => {
+      const linkOrButton = e.target.closest("a, button,input,label,textarea");
+      if (linkOrButton) {
+        js_cursor.classList.remove("hover");
       }
     };
 
-    document.addEventListener("mouseover", handleHover);
-    document.addEventListener("mouseout", handleHover);
-  } else {
-    body.classList.remove("cursor_none");
+    document.addEventListener("mouseover", handleHoverAdd);
+    document.addEventListener("mouseout", handleHoverRemove);
   }
 }
 
@@ -339,7 +345,6 @@ function cultureStopscroll() {
       //console.log("Je suis trop en mobile ou grand écran");
       return;
     } else {
-
       const scrollAmount = getScrollAmount(js_culture_stopscroll_slider);
       // Crée une animation GSAP qui fait défiler le conteneur horizontalement
       const tween = gsap.to(js_culture_stopscroll_slider, {
