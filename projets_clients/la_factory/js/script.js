@@ -256,7 +256,7 @@ function cursor() {
 
     // Gestionnaire pour les événements de survol des liens et des boutons
     const handleHover = (e) => {
-      const linkOrButton = e.target.closest("a, button");
+      const linkOrButton = e.target.closest("a, button,input,label,textarea");
       if (linkOrButton) {
         js_cursor.classList.toggle("hover");
       }
