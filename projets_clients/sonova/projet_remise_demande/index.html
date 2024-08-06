@@ -38,8 +38,36 @@
 
                 <form id="request_form">
                     <div>
-                        <textarea required name="" id="" 
-                        minlength="30" placeholder="Justification de la demande (obligatoire)"></textarea>
+                        <label for="range">Gamme</label>
+                        <select required name="range_select" id="range">
+                            <option value="" disabled selected>Sélectionner une gamme</option>
+                            <option value="range_1">Gamme 1</option>
+                            <option value="range_2">Gamme 2</option>
+                            <option value="range_3">Gamme 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="discount">Niveau de remise</label>
+                        <select aria-disabled="true" required name="discount_select" id="discount">
+                            <option value="" disabled selected>Sélectionner une remise</option>
+                            <option value="discount_1">Gamme 2</option>
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <label for="receiver">Adressé à</label>
+                        <select required name="receiver_select" id="receiver">
+                            <option value="receiver_1">directeur-de-region@mail.com</option>
+                            <option value="receiver_2">directeur-de-pays@mail.com</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="comment">Commentaire</label>
+                        <textarea required name="comment" id="comment" minlength="2"
+                            placeholder="Justification de la demande (obligatoire)"></textarea>
                     </div>
 
                     <button disabled="true" type="submit">Envoyer la demande</button>
@@ -142,7 +170,10 @@
                                 <div>
                                     <h3>Raison du refus</h3>
                                     <h4>auditionsante@mail.com</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
                                 </div>
                             </td>
                         </tr>
@@ -157,9 +188,13 @@
                                 <div>
                                     <h3>Raison du refus</h3>
                                     <h4>auditionsante@mail.com</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
                                     <h4>auditionsante-bis@mail.com</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.</p>
                                 </div>
                             </td>
                         </tr>

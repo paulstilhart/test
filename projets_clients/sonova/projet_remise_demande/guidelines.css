@@ -15,6 +15,9 @@ form (ou vide, ou nimportequoi) => affiche le formulaire
 valid => affiche l'encart "Demande effectuée"
 invalid => affiche l'encart "Un problème est survenu." 
 
+le formulaire est paramétré comme demandé normalement
+les différents discounts associé aux gammes sont stockés dans un objet discountOptions
+
 
 
 

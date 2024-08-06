@@ -310,10 +310,14 @@ button {
 /* VALIDES (ont passé la validation des contraintes)
 + NOT FOCUS (pas activement sélectionnés par l'utilisateur)
 + PLACEHOLDER texte non affiché */
+
+/*  
 input:not(:focus):not(:placeholder-shown):valid,
 select:not(:focus):not(:placeholder-shown):valid {
     border: solid 1px var(--black);
 }
+
+*/
 
 
 
@@ -438,6 +442,96 @@ section>div {
     gap: 32px;
 }
 
+#request>form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--grey);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+label{
+    pointer-events: none;
+}
+
+select {
+    height: 40px;
+    padding: 0px 16px;
+    border-radius: 5px;
+    outline: solid 1px var(--grey);
+    outline-offset: -1px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-right: 16px solid transparent;
+}
+
+select:invalid{
+    color: var(--grey);
+}
+
+select[aria-disabled="true"]{
+    background-color: #F5F5F5;
+    color: var(--grey);
+    pointer-events: none;
+}
+
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 175px;
+    resize: none;
+    padding: 8px 16px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+
+textarea,
+select{
+    outline: solid 1px var(--grey);
+    outline-offset: -1px;
+    border-radius: 5px;
+}
+
+textarea:focus-visible,
+select:active{
+    color: var(--black);
+    outline-color: var(--black);
+    outline-width: 2px;
+    outline-offset: -2px;
+}
+
+
+
+textarea:not(:focus-visible):not(:placeholder-shown),
+select:valid {
+    outline-color: var(--black);
+}
+
+
+
+/*  
+
+
+textarea:not(:focus-visible):not(:placeholder-shown):invalid {
+    outline-color: red;
+    outline-width: 2px;
+    outline-offset: -2px;
+}
+
+*/
+
 
 #request>form>button {
     align-self: flex-end;
@@ -460,56 +554,8 @@ section>div {
 }
 
 
-input::placeholder,
-textarea::placeholder {
-    color: var(--grey);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-}
-
-textarea {
-    display: block;
-    width: 100%;
-    height: 175px;
-    resize: none;
-    padding: 8px 16px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    outline: solid 1px var(--grey);
-    outline-offset: -1px;
-    border-radius: 5px;
-}
-
-textarea:focus-visible {
-    outline-color: red;
-}
 
 
-
-
-/* Inputs */
-input,
-select {
-    height: 40px;
-    padding-left: 16px;
-    border-radius: 5px;
-    border: solid 1px var(--grey);
-}
-
-input:focus,
-input:focus-visible,
-input:focus-within,
-input:active,
-input:target,
-select:focus,
-select:focus-visible,
-select:focus-within,
-select:active,
-select:target {
-    border: solid 2px var(--black);
-}
 
 
 
