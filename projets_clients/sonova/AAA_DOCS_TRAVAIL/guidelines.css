@@ -1,181 +1,19 @@
 /*
 
-//======================================= CONSTRUCTION =========================================//
-
-CONSTRUCTION
-- 1 fichier guidelines.css (celui-ci ou tout est indiqué)
-- 1 fichier html
-- 1 fichier CSS
-- 3 fichiers JS pour plus de clarté
-module_datas.js avec 3 jeux de données datas_selection_parrain datas_parrains datas_filleuls
-module_functions.js ou toutes les fonctions sont définies
-script.js ou ou les 2 précédents sont appelés
-seul script.js est appelé dans le head du html <script type="module" src="./script.js" defer></script>
-
-Le code html et css sont minimisés
-
-J'ai simplifié et optimisé au maximum pour que les fonctions js soient sans bug et utilisent le moins de ressources possibles,
-de façon à voir une app web légère
-
-
-//======================================= CSS =========================================//
-
-CSS
-Fonts définies comme suit, dans l'ordre
-font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
-
-Différences de design avec le figma:
-HEADER flèche imbriquée
-Pas intégrée car très compliqué en css étant donné que la hauteur peut varier (si plus de 2 parrains)
-si on a 3 parrains sur la droite par exemple
-Possible en Js mais rajoute de la complexité juste pour du design
-A rediscuter si vraiment contrainte forte : au besoin il faudra plutot fixer une hauteur max, à voir en version 2
-
-
---> DATEPICKER standard non stylisé car chaque navigateur impose le sien (chrome / firefox / edge...)
-c'est un element standard html5 et il faut laisser chaque navigateur prendre le sien
-ne pas le faire justement car problème de compatibilité
-chaque navigateur impose le sien
-
-Normalement tout le reste est conforme au figma
-
-
-//======================================= I - PARTIE DU HAUT - HEADER =========================================//
-
-Première connexion, il faut bien envoyer vers le font un objet vide pour que cela fonctionne
-export const datas_selection_parrain = [];
-
-On peut alors rentrer un code de parrainage sur la partie de gauche, c'est un formulaire classique
-Avec bouton submit et code qui passe en url, page rechargée automatiquement
-id="codeParrainage"
-
-le champ est required, et les éléments suivants sont à venir modifier dans le html si besoin: 
-pattern="[0-9]+" minlength="5" maxlength="30"
-
-
-SI CEST INVALIDE
-Au rechargement, pour générer les 3 cas qui ne marche pas, il faut venir appliquer sur le header (en php si je me souviens bien de ton côte)
-une des 3 classes suivantes:
-
-header_filleul_non_eligible
-header_code_expire
-header_code_invalide
-
-il y a un garde fou meme si le tableau datas_selection_parrain est plein ou nul, en ajoutant ces classes on a pas de soucis d'affichage
-
-
-SI LE CODE EST VALIDE
-Tu retournes un tableau plein ou vide, cela va bien afficher les données.
-Tu as ensuite les parrains sur la droite.
-En cliquant dessus, cela t'emmene vers la dernière page, Code valable / Parrainage validé
-
-La fonction createTableSelectionParrain te retourne un objet 
-const parrainChoisi = { rowIndex: index, name: name, }; exemple { "rowIndex": 0,"name": "Madelyn Torff" }
-
---> il y a un console.log associé à cela, à modifier dans createTableSelectionParrain dans module_functions.js
-On est au bout du tunnel en terme d'UX ici pour la partie du haut
-
-
-
-//======================================= II - PARTIE DU BAS - TABLES =========================================//
-
-On travaille ici avec les 2 elements
-const datas_parrains = [];
-const datas_filleuls = [];
-
-Il a 5 fonctionnalitées:
-1. NO DATAS : pas de tables si tableau vide
-2. GENERATION DU CONTENU DES TABLES
-3. PAGINATION
-4. SUIVI PARRAINAGE PAR DATE
-5. RECHERCHER UN PARRAIN PAR CHAINE DE CARACTERES
-6. RECHERCHER PAR STATUT CHECKBOX SIMPLES OU MULTIPLES
-7. TRIER SUR LES TH EN TETE DE COLONNE
-
-PARTICULARITE
-On le verra plus bas, mais on ne peut pas utiliser les 4 dernières fonctions de façon "imbriquées"
-c'est à dire que après avoir chercher par date, on ne peut pas filtrer par statut, chaine de caractères etc...
-Cela faisait beaucoup d'imbrication et on arrive sur une application web avec beaucoup de fonctionnalités et donc
-beaucoup de temps de développement, car 4 fonctionnalités interconnectées
---> On pourra voir ça en version 2 si c'est un souhait fort
-
-
-
-1. NO DATAS
-Fonction pour ne pas afficher les tableaux si les datas sont vides à l'origine
-Gérer automatiquement en front avec function noDatas(datas, tableId)
---> toujours envoyer un tableau vide vers le front [] pour que cela fonctionne
-C'est indépendant, une table peut être vide mais pas l'autre
-
-
-2. GENERATION DU CONTENU DES TABLES
-C'est automatique, avec les pastilles sur la droite également.
-Rien de spécifique ici
-Les thead>th sont fixés dans le html (avec des attributs data), on vient seulement travailler dans la balise tbody
-la pagination est recrée après chaque élément, on voit ça juste après
-
-
-3. PAGINATION
-pagination générique faite
-tout est fonctionnel + garde fou qui supprime le bloc de pagination si tous les éléments sont affichés dans la page directement
-pleinement fonctionnelle, après avoir recherché, filtré, trier....
-On commence toujours en page 1.
-On gère le nombre d'elements par page avec
-const table_parrains_itemsPerPage = 8;
-const table_filleuls_itemsPerPage = 3;
-
---> La pagination fonctionne meme apres avoir utiliser une des 4 fonctionnalités suivantes
-
-
-4. SUIVI PARRAINAGE PAR DATE
-2 DATES PICKERS standards html5 qui vienent filtrer sur la colonne 3 / 9 des 2 tableaux en mm temps
-On rentre 2 dates et on clique sur valider
-Si on était en pagination, recherche chaine de caractère, statuts, tri sur les Theads, on est réinitalisé
-car la recherche se fait sur l'intégralité des tables, table_parrains et table_filleuls
-
-Il manquait un bout d'UX ici:
-- on avait pas moyen de réinitailiser le tableau car pas de bouton apres avoir rentré des dates
-- j'ai donc rajouté la fonctionnalité suivante : si on revient cliquer sur le datepicker, le form est reset()
-- possibilité d'ajouter un bouton reset en front directement aussi en Version 2
-
-
-5. RECHERCHER UN PARRAIN PAR CHAINE DE CARACTERES
-chaine de caractère quelconque
-marche au clic sur la loupe ou entrée avec le clavier
-
-Il manquait un bout d'UX ici:
-si on enleve tous les caractères, on réinitialise,meme sans cliquer / entrée / pour une meilleure UX
-
-
-6. RECHERCHER PAR STATUT CHECKBOX SIMPLES OU MULTIPLES
-en venant cliquer sur la select box, on ouvre la pop-up
-On a les checkbox à l'intérieur.
-On selectionne ce qu'on veut.
-Si on clique à nouveau sur l'entete ou dehors, cela se ferme
-par défaut, ils sont tous selected, et multiples est affiché
-
-
-
-7. TRIER SUR LES TH EN TETE DE COLONNE
-TRI sur les thead
-instantanné au clic sur chaque colonne
-pour plus de performance et de simplicité, si on trie et qu'on est déjà paginé on est renvoyé en page 1, et on peut repaginer ensuite
 
 
 
 
 
+
+https://paulstilhart.github.io/test/projets_clients/sonova/
 
 https://www.figma.com/file/fmgbUT95fWyVJ8xhBaRfvs/Sonova?node-id=502%3A694&mode=dev
 
 
 
-
-
 1376px de large
 + 2 *32px de padding = 1440px
-
-
 
 
 
@@ -203,6 +41,7 @@ L’entité HTML &nbsp; (« non breaking space ») va nous permettre d’ajouter
 L’entité HTML &ensp; (« en space ») va nous permettre de créer une espace double ;
 L’entité HTML &emsp; (« em space ») va nous permettre de créer une espace quadruple ;
 L’entité HTML &thinsp; (« thin space ») va nous permettre de créer un espace très fin (demi-espace).
+
 
 
 

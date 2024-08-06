@@ -1,0 +1,751 @@
+/*==============================================================================================================================*/
+/* RESET_CSS */
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+
+input,
+select,
+textarea {
+    cursor: text;
+}
+
+
+
+a:focus,
+a:active,
+button:focus,
+button:active,
+input:active,
+input:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+    outline: none;
+    outline-color: transparent;
+}
+
+
+ul {
+    list-style-position: inside;
+}
+
+img {
+    display: block;
+}
+
+table {
+    border-spacing: unset;
+    border-collapse: collapse;
+    width: 100%;
+    border: none;
+}
+
+table,
+tr,
+th,
+td {
+    vertical-align: middle;
+}
+
+/*==============================================================================================================================*/
+/* VARIABLES */
+
+:root {
+    --white_classic: #ffffff;
+    --black_classic: #000000;
+
+    --green: #92B838;
+    --green_hover: #ABD34B;
+    --green_hover_table: #F3F7E6;
+
+    --warning: #E03727;
+
+    --black: #2B2E2A;
+    --black_soft: #2b2e2aad;
+    /* #2B2E2A à 68% */
+
+    --grey: #949494;
+    --grey_soft: #F4F4F4;
+    --grey_border: #E6E6E6;
+    --grey_button: #2b2e2a61;
+
+
+    --code_invalide: #F2ACA6;
+    --code_valable: #E7F1D0;
+}
+
+/*==============================================================================================================================*/
+/* COLORS */
+
+.background_white_classic {
+    background-color: var(--white_classic);
+}
+
+.color_white {
+    color: var(--white_classic);
+}
+
+.background_black_classic {
+    background-color: var(--black_classic);
+}
+
+.color_black_classic {
+    color: var(--black_classic);
+}
+
+.background_green {
+    background-color: var(--green);
+}
+
+.color_green {
+    color: var(--green);
+}
+
+.background_green_hover {
+    background-color: var(--green_hover);
+}
+
+.color_green_hover {
+    color: var(--green_hover);
+}
+
+.background_green_hover_table {
+    background-color: var(--green_hover_table);
+}
+
+
+.color_green_hover_table {
+    color: var(--green_hover_table);
+}
+
+.background_warning {
+    background-color: var(--warning);
+}
+
+.color_warning {
+    color: var(--warning);
+}
+
+.background_black {
+    background-color: var(--black);
+}
+
+.color_black {
+    color: var(--black);
+}
+
+.background_black_soft {
+    background-color: var(--black_soft);
+}
+
+.color_black_soft {
+    color: var(--black_soft);
+}
+
+.background_grey {
+    background-color: var(--grey);
+}
+
+.color_grey {
+    color: var(--grey);
+}
+
+.background_grey_soft {
+    background-color: var(--grey_soft);
+}
+
+.color_grey_soft {
+    color: var(--grey_soft);
+}
+
+.background_grey_border {
+    background-color: var(--grey_border);
+}
+
+.color_grey_border {
+    color: var(--grey_border);
+}
+
+.background_code_valable {
+    background-color: var(--code_valable);
+}
+
+.color_code_valable {
+    color: var(--code_valable);
+}
+
+.background_code_invalide {
+    background-color: var(--code_invalide);
+}
+
+.color_code_invalide {
+    color: var(--code_invalide);
+}
+
+.grey_filter {
+    filter: grayscale(100%);
+    /* Appliquer un filtre gris à 100% */
+    opacity: 0.2;
+    /* Définir l'opacité de l'élément à 50% (0.5) */
+}
+
+/*==============================================================================================================================*/
+/* FONTS */
+
+html {
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    scroll-behavior: smooth;
+    color: var(--black);
+    background-color: var(--white_classic);
+}
+
+strong {
+    font-weight: 600;
+    /* Semi Bold (Demi Bold) */
+}
+
+i,
+mark {
+    font-style: italic;
+}
+
+em {
+    text-decoration: underline;
+}
+
+
+/* Titre section */
+h1,
+h2 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26.4px;
+}
+
+/* Titre formulaire */
+h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.6px;
+}
+
+h4 {
+    /* Label */
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+/* Pour les inputs */
+input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* Pour les labels du formulaire */
+label,
+button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Messages d'erreur */
+.warning {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.8px;
+}
+
+.p_14_24_600 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+
+
+/*==============================================================================================================================*/
+/* CLASSES_UTILITAIRES */
+
+
+
+/* Buttons */
+.button_classic {
+    height: 40px;
+    padding: 8px 24px;
+    border-radius: 5px;
+}
+
+.button_green {
+    background-color: var(--green);
+    color: var(--white_classic);
+}
+
+.button_green:hover {
+    background-color: var(--green_hover);
+}
+
+.button_green_border,
+.pagination_container>button {
+    cursor: pointer;
+    background-color: var(--white_classic);
+    color: var(--green);
+    outline: solid 2px var(--green);
+}
+
+.button_green_border:hover,
+.pagination_container>button:hover {
+    background-color: var(--green);
+    color: var(--white_classic);
+}
+
+
+
+.button_grey_soft,
+.pagination_container>button[disabled] {
+    cursor: default;
+    background-color: var(--grey_soft);
+    color: var(--grey_button);
+    outline: none;
+}
+
+.button_grey_soft:hover,
+.pagination_container>button[disabled] {
+    background-color: var(--grey_soft);
+}
+
+
+/* Spans des tables, type pastilles En cours / Terminé / Expiré */
+.span_encours,
+.span_termine,
+.span_expire {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 47px;
+    font-weight: 600;
+}
+
+.span_encours {
+    color: var(--white_classic);
+    background-color: var(--green);
+}
+
+.span_termine {
+    outline: 2px solid var(--green);
+    background-color: var(--white_classic);
+}
+
+.span_expire {
+    background-color: var(--grey_border);
+}
+
+
+/* Check YES / NO du premier encart */
+.check_yes_before::before {
+    content: url("./sources/icons/check_yes.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 16px;
+}
+
+.check_no_before::before {
+    content: url("./sources/icons/check_no.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 16px;
+}
+
+
+
+/* Inputs */
+input,
+textarea,
+select {
+    height: 40px;
+    padding-left: 16px;
+    border-radius: 5px;
+    border: solid 1px var(--grey);
+}
+
+input:focus,
+input:focus-visible,
+input:focus-within,
+input:active,
+input:target,
+select:focus,
+select:focus-visible,
+select:focus-within,
+select:active,
+select:target {
+    border: solid 2px var(--black);
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--grey);
+}
+
+
+/* VALIDES (ont passé la validation des contraintes)
++ NOT FOCUS (pas activement sélectionnés par l'utilisateur)
++ PLACEHOLDER texte non affiché */
+input:not(:focus):not(:placeholder-shown):valid,
+select:not(:focus):not(:placeholder-shown):valid {
+    border: solid 1px var(--black);
+}
+
+
+
+
+
+/*==============================================================================================================================*/
+/* CONTENU */
+
+body {
+    background-image: url('./sources/backgrounds/background_1440_787.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20vh 32px 32px 32px;
+    display: flex;
+    gap: 24px;
+}
+
+section {
+    border-radius: 10px;
+    background-color: var(--white_classic);
+}
+
+main>section:first-of-type {
+    width: 40%;
+}
+
+main>section:last-of-type {
+    flex: auto;
+    height: fit-content;
+}
+
+section>h2:first-of-type {
+    padding: 32px 32px 24px 32px;
+    box-shadow: 0px 2px 4px 0px rgba(156, 156, 156, 0.25);
+}
+
+section>div {
+    padding: 32px;
+}
+
+
+/*==============================================================================================================================*/
+/* FORMULAIRE DEMANDE  */
+
+#request {
+    height: 675px;
+}
+
+#request>h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+#request>div {
+    display: none;
+}
+
+
+#request[data-form="valid"]>form,
+#request[data-form="invalid"]>form {
+    display: none;
+}
+
+#request[data-form="valid"]>div:first-of-type {
+    display: block;
+}
+
+#request[data-form="invalid"]>div:last-of-type {
+    display: block;
+}
+
+#request>div {
+    padding: 48px 0px;
+    text-align: center;
+}
+
+#request>div>h2 {
+    margin: 16px 0px 8px 0px;
+}
+
+#request>div>span {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    background-image: url('./sources/icons/valid.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#request>div:last-of-type>span {
+    background-image: url('./sources/icons/invalid.svg');
+}
+
+
+#request>form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 32px;
+}
+
+
+#request>form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 32px;
+}
+
+
+#request>form>button{
+    align-self: flex-end;
+    padding: 8px 24px;
+    border-radius: 5px;
+    background-color: var(--green);
+    color: var(--white_classic);
+    cursor: pointer;
+}
+
+#request>form>button:hover{
+    background-color: var(--green_hover);
+}
+
+#request>form>button:disabled{
+    background-color: #F5F5F5;
+    color: var(--grey_button);
+    cursor: default;
+    pointer-events: none;
+}
+
+
+
+/*==============================================================================================================================*/
+/* TABLE SUIVI  */
+
+table {
+    outline: 1px solid var(--grey_border);
+    outline-offset: -1px;
+    border-radius: 10px 10px 0px 0px;
+    table-layout: auto;
+}
+
+table th,
+table td {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 16px;
+    text-align: left;
+}
+
+table th,
+table td {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    padding-left: 16px;
+
+}
+
+table tr>th:last-of-type,
+table tr>td:last-of-type {
+    padding-right: 16px;
+    width: 72px;
+}
+
+
+table>thead {
+    height: 72px;
+    background-color: #FAFAFA;
+}
+
+table>tbody>tr {
+    height: 64px;
+    border-top: solid 1px var(--grey_border);
+}
+
+table>tbody>tr:hover {
+    background-color: var(--green_hover_table);
+
+}
+
+
+td.cell_state::after {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 47px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+tr[data-state="processdouble"]>td.cell_state::after {
+    content: 'En cours de double validation';
+    background-color: var(--green);
+    color: var(--white_classic);
+}
+
+tr[data-state="process"]>td.cell_state::after {
+    content: 'En cours de validation';
+    background-color: var(--green);
+    color: var(--white_classic);
+}
+
+tr[data-state="valid"]>td.cell_state::after {
+    content: 'Validé';
+    background-color: var(--white_classic);
+    color: var(--black);
+    outline: 2px solid var(--green);
+    outline-offset: -2px;
+}
+
+tr[data-state="denied"]>td.cell_state::after {
+    content: 'Refusé';
+    background-color: var(--warning);
+    color: var(--white_classic);
+}
+
+
+
+tr[data-state="valid"]>td.cell_action>* {
+    display: none;
+    pointer-events: none;
+}
+
+tr[data-state="processdouble"]>td.cell_action>span,
+tr[data-state="processdouble"]>td.cell_action>div,
+tr[data-state="process"]>td.cell_action>span,
+tr[data-state="process"]>td.cell_action>div {
+    display: none;
+    pointer-events: none;
+}
+
+tr[data-state="denied"]>td.cell_action>button {
+    display: none;
+    pointer-events: none;
+}
+
+
+
+
+tr[data-state="processdouble"]>td.cell_action>button,
+tr[data-state="process"]>td.cell_action>button {
+    display: block;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-image: url('./sources/icons/repeat.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 85% auto;
+}
+
+tr[data-state="denied"]>td.cell_action {
+    position: relative;
+}
+
+
+tr[data-state="denied"]>td.cell_action>span {
+    display: inline-block;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-image: url('./sources/icons/tooltip.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+td.cell_action>div {
+    display: none;
+    position: absolute;
+    right: 72px;
+    top: 0;
+    width: 550px;
+    height: auto;
+    transform: translateY(-40%);
+    z-index: 99;
+    padding: 24px 32px;
+    border-radius: 10px;
+    background: var(--white_classic);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+td.cell_action>div>h3 {
+    color: var(--Neutral-800, #170F49);
+    margin-bottom: 12px;
+}
+
+td.cell_action>div>h4 {
+    margin: 12px 0px 4px 0px;
+}
+
+
+tr[data-state="denied"]>td.cell_action:hover>div {
+    display: block;
+}

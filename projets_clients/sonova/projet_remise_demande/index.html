@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de remise exceptionnelle</title>
+
+    <!-- FEUILLE DE STYLE CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+
+    <!-- script JS -->
+    <script defer src="../js/script.js"></script>
+
+</head>
+
+
+<body>
+    <main>
+
+        <section>
+            <h2>Demande de remise exceptionnelle</h2>
+            <div id="request" data-form="">
+                <h3>Pour M. DURANT Patrick</h3>
+
+                <div>
+                    <span></span>
+                    <h2>Demande effectuée</h2>
+                    <p>Retrouvez son suivi dans le tableau ci-contre.</p>
+                </div>
+                <div>
+                    <span></span>
+                    <h2>Un problème est survenu.</h2>
+                    <p>Veuillez renouveler la demande.</p>
+                </div>
+
+                <form id="request_form">
+                    <div>
+                        <textarea required name="" id=""></textarea>
+                    </div>
+
+                    <button disabled type="submit">Envoyer la demande</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>Suivi des demandes</h2>
+            <div>
+
+                <table id="table_requests">
+                    <thead>
+                        <tr>
+                            <th>Client</th>
+                            <th>Date</th>
+                            <th>Remise</th>
+                            <th>Statut</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-state="processdouble">
+                            <td>LE CORVEC Florent 30 caractère</td>
+                            <td>09/10/2026</td>
+                            <td>400€</td>
+                            <td class="cell_state"></td>
+                            <td class="cell_action">
+                                <button></button>
+                                <span></span>
+                                <div>
+                                    <h3></h3>
+                                    <h4></h4>
+                                    <p></p>
+                                    <h4></h4>
+                                    <p></p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-state="process">
+                            <td>LE CORVEC Florent</td>
+                            <td>09/10/2026</td>
+                            <td>400€</td>
+                            <td class="cell_state"></td>
+                            <td class="cell_action">
+                                <button></button>
+                                <span></span>
+                                <div>
+                                    <h3></h3>
+                                    <h4></h4>
+                                    <p></p>
+                                    <h4></h4>
+                                    <p></p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-state="valid">
+                            <td>LE CORVEC Florent</td>
+                            <td>09/10/2026</td>
+                            <td>400€</td>
+                            <td class="cell_state"></td>
+                            <td class="cell_action">
+                                <button></button>
+                                <span></span>
+                                <div>
+                                    <h3></h3>
+                                    <h4></h4>
+                                    <p></p>
+                                    <h4></h4>
+                                    <p></p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-state="valid">
+                            <td>LE CORVEC Florent</td>
+                            <td>09/10/2026</td>
+                            <td>400€</td>
+                            <td class="cell_state"></td>
+                            <td class="cell_action">
+                                <button></button>
+                                <span></span>
+                                <div>
+                                    <h3></h3>
+                                    <h4></h4>
+                                    <p></p>
+                                    <h4></h4>
+                                    <p></p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-state="denied">
+                            <td>LE CORVEC Florent</td>
+                            <td>09/10/2026</td>
+                            <td>400€</td>
+                            <td class="cell_state"></td>
+                            <td class="cell_action">
+                                <button></button>
+                                <span></span>
+                                <div>
+                                    <h3>Raison du refus</h3>
+                                    <h4>auditionsante@mail.com</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-state="denied">
+                            <td>LE CORVEC Florent</td>
+                            <td>09/10/2026</td>
+                            <td>400€</td>
+                            <td class="cell_state"></td>
+                            <td class="cell_action">
+                                <button></button>
+                                <span></span>
+                                <div>
+                                    <h3>Raison du refus</h3>
+                                    <h4>auditionsante@mail.com</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <h4>auditionsante-bis@mail.com</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

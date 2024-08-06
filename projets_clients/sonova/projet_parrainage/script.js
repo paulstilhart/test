@@ -21,7 +21,7 @@ noDatas(datas_parrains, "js_table_parrains");
 noDatas(datas_filleuls, "js_table_filleuls");
 
 
-//constantes de départ
+//constantes de départ 8 pour les parrains, 3 pour les filleuls
 const table_parrains_itemsPerPage = 8;
 const table_filleuls_itemsPerPage = 3;
 
@@ -29,8 +29,8 @@ const table_filleuls_itemsPerPage = 3;
 //Les thead sont fixes et créees dans le html + Le tbody est vide mais les balises sont déjà crée dans le html
 createTableSelectionParrain(datas_selection_parrain, "js_table_selection_parrain");
 
-generateAndPaginateTable(datas_parrains, "js_table_parrains", table_parrains_itemsPerPage, 1, "alphabetic", 1);
-generateAndPaginateTable(datas_filleuls, "js_table_filleuls", table_filleuls_itemsPerPage, 1, "alphabetic", 1);
+generateAndPaginateTable(datas_parrains, "js_table_parrains", table_parrains_itemsPerPage, 1, "alphabetic", 1,"asc");
+generateAndPaginateTable(datas_filleuls, "js_table_filleuls", table_filleuls_itemsPerPage, 1, "alphabetic", 1,"asc");
 
 orderByThead(datas_parrains, "js_table_parrains", table_parrains_itemsPerPage, 1);
 orderByThead(datas_filleuls, "js_table_filleuls", table_filleuls_itemsPerPage, 1);

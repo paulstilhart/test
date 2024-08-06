@@ -60,7 +60,6 @@ export function createTableSelectionParrain(datas, tableId) {
             document.querySelector(`#${tableId}_code_valable`).classList.remove('dnone');
 
             const parrainChoisi = { rowIndex: parseInt(rowIndex), name: name, };
-            console.log(parrainChoisi);
             return parrainChoisi;
         });
     });
@@ -113,14 +112,16 @@ function generateTbody(datas, tableId) {
 //================ FONCTION QUI TRIE LES DONNEES ET RETOURNE UN TABLEAU TRIE
 //================ ENTREE = tableau de tableaux non triés / type de tri / index de la colonne
 //================ RETURN sortedData = tableau de tableaux non triés
-function triData(datas, type, index, startDate, endDate) {
+function triData(datas, type, index, startDate, endDate, order = 'asc') {
     const copiedDatas = datas.slice();//copie du tableau avec slice() pour travailler sur une copie lors du tri
+
+    const sortOrder = order === 'desc' ? -1 : 1; // Détermine l'ordre de tri (ascendant: 1, descendant: -1)
 
     const sortedData = copiedDatas.sort((a, b) => {// méthode sort() pour trier
         switch (type) {
-            case "numeric": return parseInt(a[index]) - parseInt(b[index]); //tri numérique des entiers avec parseInt()
-            case "alphabetic": return (a[index] && b[index]) ? a[index].localeCompare(b[index]) : 0;
-            case "date": return new Date(a[index]) - new Date(b[index]);
+            case "numeric": return sortOrder * (parseInt(a[index]) - parseInt(b[index])); //tri numérique des entiers avec parseInt()
+            case "alphabetic": return sortOrder * ((a[index] && b[index]) ? a[index].localeCompare(b[index]) : 0);
+            case "date": return sortOrder * (new Date(a[index]) - new Date(b[index]));
             default: return 0;//pour éviter un bug
         }
     });
@@ -128,6 +129,9 @@ function triData(datas, type, index, startDate, endDate) {
     if (startDate && endDate) {// Filtrer les données par date si les dates de début et de fin sont fournies
         const startDateObj = new Date(startDate);
         const endDateObj = new Date(endDate);
+
+        console.log(startDateObj);
+        console.log(endDateObj);
 
         function convertDate(dateString) {
             const [day, month, year] = dateString.split('/');
@@ -144,10 +148,10 @@ function triData(datas, type, index, startDate, endDate) {
 }
 
 //================ FONCTION générer et paginer la table
-export function generateAndPaginateTable(datas, tableId, itemsPerPage, currentPage, sorttype, sortindex) {
+export function generateAndPaginateTable(datas, tableId, itemsPerPage, currentPage, sorttype, sortindex, order) {
     //================ TRI DES DONNEES = ON MET À JOUR DATA
     if (sorttype && sortindex) {
-        datas = triData(datas, sorttype, sortindex);
+        datas = triData(datas, sorttype, sortindex, null, null, order);
     }
 
     //================ DEFINITION DE pageData = DONNEES À AFFICHER DE LA PAGE
@@ -183,7 +187,7 @@ export function generateAndPaginateTable(datas, tableId, itemsPerPage, currentPa
             pageNumberButton.innerText = i;
             pageNumberButton.classList.toggle('button_green', i === currentPage);
             pageNumberButton.addEventListener("click", () => {
-                generateAndPaginateTable(datas, tableId, itemsPerPage, i, sorttype, sortindex);
+                generateAndPaginateTable(datas, tableId, itemsPerPage, i, sorttype, sortindex, order);
             });
             pageButtons.appendChild(pageNumberButton);
         }
@@ -192,14 +196,14 @@ export function generateAndPaginateTable(datas, tableId, itemsPerPage, currentPa
         // Gestion des clics sur le bouton "Précédent"
         btnPrev.addEventListener("click", () => {
             if (currentPage > 1) {
-                generateAndPaginateTable(datas, tableId, itemsPerPage, currentPage - 1, sorttype, sortindex);
+                generateAndPaginateTable(datas, tableId, itemsPerPage, currentPage - 1, sorttype, sortindex, order);
             }
         });
 
         // Gestion des clics sur le bouton "Suivant"
         btnNext.addEventListener("click", () => {
             if (currentPage < totalPages) {
-                generateAndPaginateTable(datas, tableId, itemsPerPage, currentPage + 1, sorttype, sortindex);
+                generateAndPaginateTable(datas, tableId, itemsPerPage, currentPage + 1, sorttype, sortindex, order);
             }
         });
 
@@ -211,14 +215,24 @@ export function generateAndPaginateTable(datas, tableId, itemsPerPage, currentPa
 //================ FONCTION pour trier au clic sur les th
 export function orderByThead(datas, tableId, itemsPerPage, currentPage) {
     const tableThead = document.querySelector(`#${tableId} thead`);
+    let lastClickedTh = null; // Stocker le th précédemment cliqué
+    let currentOrder = "asc";
 
     // Ajouter un seul écouteur d'événement sur le thead pour les clics sur les en-têtes de colonnes
     tableThead.addEventListener('click', (event) => {
         if (event.target.tagName === 'TH') {
+
+            // Le th qui vient d'être cliqué
+            const currentTh = event.target;
+            // Inverser l'ordre de tri si le même en-tête est cliqué, sinon réinitialiser à asc.
+            currentOrder = (currentTh === lastClickedTh && currentOrder === "asc") ? "desc" : "asc";
+            // Mettre à jour l'en-tête précédemment cliqué
+            lastClickedTh = currentTh;
+
             resetStatesSelection(tableId);
             const sortType = event.target.getAttribute('data-sorttype');
             const sortIndex = event.target.getAttribute('data-sortindex');
-            generateAndPaginateTable(datas, tableId, itemsPerPage, currentPage, sortType, sortIndex);
+            generateAndPaginateTable(datas, tableId, itemsPerPage, currentPage, sortType, sortIndex, currentOrder);
         }
     });
 }
@@ -229,20 +243,24 @@ export function orderbyStates(datas, tableId, itemsPerPage, currentPage) {
     const checkboxes = statutsContainer.querySelectorAll('input[type="checkbox"]');
     const statutSpan = statutsContainer.querySelector('.statut_span');
 
+    function normalizeStatus(status) {
+        const normalizedStatus = status.toLowerCase().trim();
+        if (normalizedStatus === 'encours') return 'en cours';
+        if (normalizedStatus === 'termine') return 'terminé';
+        return normalizedStatus;
+    }
+
+
     const updateTable = () => {
         const selectedStates = new Set(Array.from(checkboxes)
             .filter(checkbox => checkbox.checked)
-            .map(checkbox => checkbox.parentNode.getAttribute('data-state').toLowerCase()));
+            .map(checkbox => normalizeStatus(checkbox.parentNode.getAttribute('data-state'))));
 
-        if (selectedStates.size === 1) {
-            statutSpan.textContent = selectedStates.values().next().value;
-        } else if (selectedStates.size > 1) {
-            statutSpan.textContent = 'Multiples';
-        } else {
-            statutSpan.textContent = 'Aucun';
-        }
+        if (selectedStates.size === 1) { statutSpan.textContent = selectedStates.values().next().value; }
+        else if (selectedStates.size > 1) { statutSpan.textContent = 'Multiples'; }
+        else { statutSpan.textContent = 'Aucun'; }
 
-        const filteredData = datas.filter(data => selectedStates.has(data[8].toLowerCase()));
+        const filteredData = datas.filter(data => selectedStates.has(normalizeStatus(data[8])));
         generateAndPaginateTable(filteredData, tableId, itemsPerPage, currentPage);
     };
 
@@ -253,7 +271,7 @@ export function orderbyStates(datas, tableId, itemsPerPage, currentPage) {
         }
     });
 
-    // Gérer le clic sur les div pour cocher/décocher automatiquement la case correspondante
+    // Gérer le clic sur les div pour cocher/décocher automatiquement le checkbox concerné
     const statutsDivs = statutsContainer.querySelectorAll('.statuts_checkbox_container > div');
     statutsDivs.forEach(div => {
         const checkbox = div.querySelector('input[type="checkbox"]');
@@ -277,6 +295,9 @@ export function orderbyStates(datas, tableId, itemsPerPage, currentPage) {
             statutsContainer.classList.remove('active');
         }
     });
+
+    //Pour initialiser au début sur ce qui est fixé dans le html
+    updateTable();
 }
 
 
