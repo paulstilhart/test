@@ -39,7 +39,7 @@ textarea {
 }
 
 
-
+/* 
 a:focus,
 a:active,
 button:focus,
@@ -53,7 +53,7 @@ textarea:focus {
     outline: none;
     outline-color: transparent;
 }
-
+ */
 
 ul {
     list-style-position: inside;
@@ -305,128 +305,6 @@ button {
 
 
 
-/* Buttons */
-.button_classic {
-    height: 40px;
-    padding: 8px 24px;
-    border-radius: 5px;
-}
-
-.button_green {
-    background-color: var(--green);
-    color: var(--white_classic);
-}
-
-.button_green:hover {
-    background-color: var(--green_hover);
-}
-
-.button_green_border,
-.pagination_container>button {
-    cursor: pointer;
-    background-color: var(--white_classic);
-    color: var(--green);
-    outline: solid 2px var(--green);
-}
-
-.button_green_border:hover,
-.pagination_container>button:hover {
-    background-color: var(--green);
-    color: var(--white_classic);
-}
-
-
-
-.button_grey_soft,
-.pagination_container>button[disabled] {
-    cursor: default;
-    background-color: var(--grey_soft);
-    color: var(--grey_button);
-    outline: none;
-}
-
-.button_grey_soft:hover,
-.pagination_container>button[disabled] {
-    background-color: var(--grey_soft);
-}
-
-
-/* Spans des tables, type pastilles En cours / Terminé / Expiré */
-.span_encours,
-.span_termine,
-.span_expire {
-    display: inline-block;
-    padding: 4px 16px;
-    border-radius: 47px;
-    font-weight: 600;
-}
-
-.span_encours {
-    color: var(--white_classic);
-    background-color: var(--green);
-}
-
-.span_termine {
-    outline: 2px solid var(--green);
-    background-color: var(--white_classic);
-}
-
-.span_expire {
-    background-color: var(--grey_border);
-}
-
-
-/* Check YES / NO du premier encart */
-.check_yes_before::before {
-    content: url("./sources/icons/check_yes.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    margin-right: 16px;
-}
-
-.check_no_before::before {
-    content: url("./sources/icons/check_no.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    margin-right: 16px;
-}
-
-
-
-/* Inputs */
-input,
-textarea,
-select {
-    height: 40px;
-    padding-left: 16px;
-    border-radius: 5px;
-    border: solid 1px var(--grey);
-}
-
-input:focus,
-input:focus-visible,
-input:focus-within,
-input:active,
-input:target,
-select:focus,
-select:focus-visible,
-select:focus-within,
-select:active,
-select:target {
-    border: solid 2px var(--black);
-}
-
-
-input::placeholder,
-textarea::placeholder {
-    color: var(--grey);
-}
 
 
 /* VALIDES (ont passé la validation des contraintes)
@@ -436,6 +314,7 @@ input:not(:focus):not(:placeholder-shown):valid,
 select:not(:focus):not(:placeholder-shown):valid {
     border: solid 1px var(--black);
 }
+
 
 
 
@@ -542,7 +421,7 @@ section>div {
 }
 
 
-#request>form{
+#request>form {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -551,7 +430,7 @@ section>div {
 }
 
 
-#request>form{
+#request>form {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -560,7 +439,7 @@ section>div {
 }
 
 
-#request>form>button{
+#request>form>button {
     align-self: flex-end;
     padding: 8px 24px;
     border-radius: 5px;
@@ -569,16 +448,70 @@ section>div {
     cursor: pointer;
 }
 
-#request>form>button:hover{
+#request>form>button:hover {
     background-color: var(--green_hover);
 }
 
-#request>form>button:disabled{
+#request>form>button[disabled="true"] {
     background-color: #F5F5F5;
     color: var(--grey_button);
     cursor: default;
     pointer-events: none;
 }
+
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--grey);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 175px;
+    resize: none;
+    padding: 8px 16px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: solid 1px var(--grey);
+    outline-offset: -1px;
+    border-radius: 5px;
+}
+
+textarea:focus-visible {
+    outline-color: red;
+}
+
+
+
+
+/* Inputs */
+input,
+select {
+    height: 40px;
+    padding-left: 16px;
+    border-radius: 5px;
+    border: solid 1px var(--grey);
+}
+
+input:focus,
+input:focus-visible,
+input:focus-within,
+input:active,
+input:target,
+select:focus,
+select:focus-visible,
+select:focus-within,
+select:active,
+select:target {
+    border: solid 2px var(--black);
+}
+
+
 
 
 
