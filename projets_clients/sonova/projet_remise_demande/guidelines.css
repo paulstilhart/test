@@ -4,19 +4,22 @@
 
 FONCTIONNEMENT DEMANDE DE REMISE EXCEPTIONNELLE
 
-la partie de gauche est identifiée par une div avec l'ID request comme ci dessous
-<div id="request" data-form="form">
+la partie de gauche est identifiée par une div avec l'ID demande comme ci dessous
+<div id="demande" data-form="form">
 
 le titre h3 juste en dessous contient le nom du docteur
 il y a ensuite 2 div et un formulaire
 
 le data-form peut prendre 3 valeurs
 form (ou vide, ou nimportequoi) => affiche le formulaire
-valid => affiche l'encart "Demande effectuée"
-invalid => affiche l'encart "Un problème est survenu." 
+valide => affiche l'encart "Demande effectuée"
+probleme => affiche l'encart "Un problème est survenu." 
 
 le formulaire est paramétré comme demandé normalement
-les différents discounts associé aux gammes sont stockés dans un objet discountOptions
+les différents discounts associé aux gammes sont stockés dans un objet remisetableau dans le script.js
+
+les select du formulaire sont tous en requis
+il faut bien les avoir sélectionné tous pour pouvoir soumettre le formulaire
 
 
 
@@ -24,15 +27,15 @@ les différents discounts associé aux gammes sont stockés dans un objet discou
 
 FONCTIONNEMENT TABLE SUIVI DES DEMANDES
 
-Je lui ai mis un ID table_requests pour que tu puisse la cibler, mais il suffit de le changer ou le passer pour autre chose si besoin
+Je lui ai mis un ID tablesuividemandes pour que tu puisse la cibler, mais il suffit de le changer ou le passer pour autre chose si besoin
 Il faudra l'alimenter avec le template suivant
 
-<tr data-state="processdouble">
+<tr data-etat="validationdouble">
     <td>LE CORVEC Florent 30 caractère</td>
     <td>09/10/2026</td>
     <td>400%</td>
-    <td class="cell_state"></td>
-    <td class="cell_action">
+    <td class="cellule_etat"></td>
+    <td class="cellule_action">
         <button></button>
         <span></span>
         <div>
@@ -47,22 +50,22 @@ Il faudra l'alimenter avec le template suivant
 
 
 Donc toujours 5 cellules
-le data-state peut prendre 3 valeurs => processdouble / process / valid / denied
+le data-etat peut prendre 3 valeurs => validationdouble / validation / valide / refuse
 
-le contenu de la cellule cell_state est géré automatique en CSS (si un jour tu veux changer le contenu, c'est dans le css)
-en fonction du data-state. il n'y a rien a envoyer vers le front en terme de balise
+le contenu de la cellule cellule_etat est géré automatique en CSS (si un jour tu veux changer le contenu, c'est dans le css)
+en fonction du data-etat. il n'y a rien a envoyer vers le front en terme de balise
 
 
-pour la celulle cell_action, je t'ai mis une structure complète, mais tu peux envoyer seulement le minimum en fonction du data-state
+pour la celulle cellule_action, je t'ai mis une structure complète, mais tu peux envoyer seulement le minimum en fonction du data-etat
 de toute façon il y a un garde fou, les autres éléments sont cachés en css
-par exemple pour valid, la structure suivante suffit, mais tu peux aussi envoyer l'intégralité
+par exemple pour valide, la structure suivante suffit, mais tu peux aussi envoyer l'intégralité
 
-<tr data-state="valid">
+<tr data-etat="valide">
     <td>LE CORVEC Florent 30 caractère</td>
     <td>09/10/2026</td>
     <td>400%</td>
-    <td class="cell_state"></td>
-    <td class="cell_action"></td>
+    <td class="cellule_etat"></td>
+    <td class="cellule_action"></td>
 </tr>
 
 
@@ -71,13 +74,13 @@ button => action reload
 span => afficher le tooltip au survol
 div => contenu du tooltip
 
-=> pour processdouble et process
-le <span> et la <div> enfants direct de <td class="cell_action"> sont en cachés
+=> pour validationdouble et validation
+le <span> et la <div> enfants direct de <td class="cellule_action"> sont en cachés
 
-=> pour valid
+=> pour valide
 tout est caché
 
-=> pour denied
+=> pour refuse
 le button est caché, on voit le span et la div du tooltip
 
 

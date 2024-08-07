@@ -1,58 +1,60 @@
-const discountOptions = {
-    range_1: [
-        { value: "discount_1", text: "Remise 1" },
-        { value: "discount_2", text: "Remise 2" }
+const remisetableau = {
+    gamme1: [
+        { value: "remise1", text: "Remise 1" },
+        { value: "remise2", text: "Remise 2" }
     ],
-    range_2: [
-        { value: "discount_3", text: "Remise 3" },
-        { value: "discount_4", text: "Remise 4" }
+    gamme2: [
+        { value: "remise3", text: "Remise 3" },
+        { value: "remise4", text: "Remise 4" }
     ],
-    range_3: [
-        { value: "discount_5", text: "Remise 5" },
-        { value: "discount_6", text: "Remise 6" }
+    gamme3: [
+        { value: "remise5", text: "Remise 5" },
+        { value: "remise6", text: "Remise 6" }
     ]
 };
 
-const request_form = document.getElementById('request_form');
-const discountSelect = document.getElementById('discount');
-const button_submit = document.querySelector('#request_form>button');
+const demandeformulaire = document.getElementById('demandeformulaire');
+const remiseSelect = document.getElementById('remise');
+const boutonSoumission = document.querySelector('#demandeformulaire>button');
 
-
-
-function checkFormValidity() {
-    request_form.addEventListener('input', (event) => {
-        if (request_form.checkValidity()) {
-            button_submit.setAttribute("disabled", "false");
-        } else {
-            button_submit.setAttribute("disabled", "true");
-        }
-    });
-}
 
 
 function discountOption(){
-    document.getElementById('range').addEventListener('change', function() {
-        const selectedRange = this.value;
-        console.log(selectedRange);
+    document.getElementById('gamme').addEventListener('change', function() {
+        const gammeChoisie = this.value;
     
         // Clear previous options
-        discountSelect.innerHTML = '<option value="" disabled selected>Sélectionner une remise</option>';
+        remiseSelect.innerHTML = '<option value="" disabled selected>Sélectionner une remise</option>';
     
-        if (selectedRange && discountOptions[selectedRange]) {
-            discountOptions[selectedRange].forEach(option => {
+        if (gammeChoisie && remisetableau[gammeChoisie]) {
+            remisetableau[gammeChoisie].forEach(option => {
                 const newOption = document.createElement('option');
                 newOption.value = option.value;
                 newOption.textContent = option.text;
-                discountSelect.appendChild(newOption);
+                remiseSelect.appendChild(newOption);
             });
     
-            discountSelect.setAttribute('aria-disabled', 'false');
+            remiseSelect.setAttribute('aria-disabled', 'false');
         } else {
-            discountSelect.setAttribute('aria-disabled', 'true');
+            remiseSelect.setAttribute('aria-disabled', 'true');
         }
     });
 }
 
+
+function checkFormValidity() {
+    const updateButtonState = () => {
+        if (demandeformulaire.checkValidity()) {
+            boutonSoumission.disabled = false;//boutonSoumission.setAttribute("disabled", "");
+        } else {
+            boutonSoumission.disabled = true;//boutonSoumission.removeAttribute("disabled");
+        }
+    };
+
+    demandeformulaire.addEventListener('input', updateButtonState);
+    // Vérifie l'état initial au chargement de la page
+    updateButtonState();
+}
 
 
 

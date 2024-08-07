@@ -22,7 +22,8 @@
 
         <section>
             <h2>Demande de remise exceptionnelle</h2>
-            <div id="request" data-form="">
+
+            <div id="demande" data-form="formu">
                 <h3>Pour M. DURANT Patrick</h3>
 
                 <div>
@@ -36,37 +37,37 @@
                     <p>Veuillez renouveler la demande.</p>
                 </div>
 
-                <form id="request_form">
+                <form id="demandeformulaire">
                     <div>
-                        <label for="range">Gamme</label>
-                        <select required name="range_select" id="range">
+                        <label for="gamme">Gamme</label>
+                        <select required id="gamme" name="gammeselect"   >
                             <option value="" disabled selected>Sélectionner une gamme</option>
-                            <option value="range_1">Gamme 1</option>
-                            <option value="range_2">Gamme 2</option>
-                            <option value="range_3">Gamme 3</option>
+                            <option value="gamme1">Gamme 1</option>
+                            <option value="gamme2">Gamme 2</option>
+                            <option value="gamme3">Gamme 3</option>
                         </select>
                     </div>
 
                     <div>
-                        <label for="discount">Niveau de remise</label>
-                        <select aria-disabled="true" required name="discount_select" id="discount">
+                        <label for="remise">Niveau de remise</label>
+                        <select required id="remise" name="remiseselect" aria-disabled="true"   >
                             <option value="" disabled selected>Sélectionner une remise</option>
-                            <option value="discount_1">Gamme 2</option>
+                            <option value="remise1">Remise 1</option>
                         </select>
                     </div>
 
 
                     <div>
-                        <label for="receiver">Adressé à</label>
-                        <select required name="receiver_select" id="receiver">
-                            <option value="receiver_1">directeur-de-region@mail.com</option>
-                            <option value="receiver_2">directeur-de-pays@mail.com</option>
+                        <label for="destinataire">Adressé à</label>
+                        <select required id="destinataire" name="destinataireselect" >
+                            <option value="destinataire1">directeur-de-region@mail.com</option>
+                            <option value="destinataire2">directeur-de-pays@mail.com</option>
                         </select>
                     </div>
 
                     <div>
-                        <label for="comment">Commentaire</label>
-                        <textarea required name="comment" id="comment" minlength="2"
+                        <label for="commentaire">Commentaire</label>
+                        <textarea required id="commentaire" name="commentairetextarea"    minlength="2"
                             placeholder="Justification de la demande (obligatoire)"></textarea>
                     </div>
 
@@ -80,7 +81,8 @@
             <h2>Suivi des demandes</h2>
             <div>
 
-                <table id="table_requests">
+                <!-- table suivi des demandes START -->
+                <table id="tablesuividemandes">
                     <thead>
                         <tr>
                             <th>Client</th>
@@ -91,12 +93,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr data-state="processdouble">
+                        <tr data-etat="validationdouble">
                             <td>LE CORVEC Florent 30 caractère</td>
                             <td>09/10/2026</td>
                             <td>400€</td>
-                            <td class="cell_state"></td>
-                            <td class="cell_action">
+                            <td class="cellule_etat"></td>
+                            <td class="cellule_action">
                                 <button></button>
                                 <span></span>
                                 <div>
@@ -108,12 +110,12 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-state="process">
+                        <tr data-etat="validation">
                             <td>LE CORVEC Florent</td>
                             <td>09/10/2026</td>
                             <td>400€</td>
-                            <td class="cell_state"></td>
-                            <td class="cell_action">
+                            <td class="cellule_etat"></td>
+                            <td class="cellule_action">
                                 <button></button>
                                 <span></span>
                                 <div>
@@ -125,12 +127,12 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-state="valid">
+                        <tr data-etat="valide">
                             <td>LE CORVEC Florent</td>
                             <td>09/10/2026</td>
                             <td>400€</td>
-                            <td class="cell_state"></td>
-                            <td class="cell_action">
+                            <td class="cellule_etat"></td>
+                            <td class="cellule_action">
                                 <button></button>
                                 <span></span>
                                 <div>
@@ -142,12 +144,12 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-state="valid">
+                        <tr data-etat="valide">
                             <td>LE CORVEC Florent</td>
                             <td>09/10/2026</td>
                             <td>400€</td>
-                            <td class="cell_state"></td>
-                            <td class="cell_action">
+                            <td class="cellule_etat"></td>
+                            <td class="cellule_action">
                                 <button></button>
                                 <span></span>
                                 <div>
@@ -159,12 +161,12 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-state="denied">
+                        <tr data-etat="refuse">
                             <td>LE CORVEC Florent</td>
                             <td>09/10/2026</td>
                             <td>400€</td>
-                            <td class="cell_state"></td>
-                            <td class="cell_action">
+                            <td class="cellule_etat"></td>
+                            <td class="cellule_action">
                                 <button></button>
                                 <span></span>
                                 <div>
@@ -177,12 +179,12 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-state="denied">
+                        <tr data-etat="refuse">
                             <td>LE CORVEC Florent</td>
                             <td>09/10/2026</td>
                             <td>400€</td>
-                            <td class="cell_state"></td>
-                            <td class="cell_action">
+                            <td class="cellule_etat"></td>
+                            <td class="cellule_action">
                                 <button></button>
                                 <span></span>
                                 <div>
@@ -200,6 +202,9 @@
                         </tr>
                     </tbody>
                 </table>
+                <!-- table suivi des demandes START -->
+
+
             </div>
         </section>
     </main>

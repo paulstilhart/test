@@ -371,45 +371,45 @@ section>div {
 /*==============================================================================================================================*/
 /* FORMULAIRE DEMANDE  */
 
-#request {
+#demande {
     height: 675px;
 }
 
-#request>h3 {
+#demande>h3 {
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
     margin-bottom: 16px;
 }
 
-#request>div {
+#demande>div {
     display: none;
 }
 
 
-#request[data-form="valid"]>form,
-#request[data-form="invalid"]>form {
+#demande[data-form="valide"]>form,
+#demande[data-form="probleme"]>form {
     display: none;
 }
 
-#request[data-form="valid"]>div:first-of-type {
+#demande[data-form="valide"]>div:first-of-type {
     display: block;
 }
 
-#request[data-form="invalid"]>div:last-of-type {
+#demande[data-form="probleme"]>div:last-of-type {
     display: block;
 }
 
-#request>div {
+#demande>div {
     padding: 48px 0px;
     text-align: center;
 }
 
-#request>div>h2 {
+#demande>div>h2 {
     margin: 16px 0px 8px 0px;
 }
 
-#request>div>span {
+#demande>div>span {
     display: block;
     margin: 0 auto;
     width: 60px;
@@ -420,12 +420,12 @@ section>div {
     background-size: cover;
 }
 
-#request>div:last-of-type>span {
+#demande>div:last-of-type>span {
     background-image: url('./sources/icons/invalid.svg');
 }
 
 
-#request>form {
+#demande>form {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -434,7 +434,7 @@ section>div {
 }
 
 
-#request>form {
+#demande>form {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -442,7 +442,7 @@ section>div {
     gap: 32px;
 }
 
-#request>form>div {
+#demande>form>div {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -533,7 +533,7 @@ textarea:not(:focus-visible):not(:placeholder-shown):invalid {
 */
 
 
-#request>form>button {
+#demande>form>button {
     align-self: flex-end;
     padding: 8px 24px;
     border-radius: 5px;
@@ -542,11 +542,11 @@ textarea:not(:focus-visible):not(:placeholder-shown):invalid {
     cursor: pointer;
 }
 
-#request>form>button:hover {
+#demande>form>button:hover {
     background-color: var(--green_hover);
 }
 
-#request>form>button[disabled="true"] {
+#demande>form>button:disabled {
     background-color: #F5F5F5;
     color: var(--grey_button);
     cursor: default;
@@ -613,7 +613,7 @@ table>tbody>tr:hover {
 }
 
 
-td.cell_state::after {
+td.cellule_etat::after {
     display: inline-block;
     padding: 4px 16px;
     border-radius: 47px;
@@ -622,19 +622,19 @@ td.cell_state::after {
     line-height: 24px;
 }
 
-tr[data-state="processdouble"]>td.cell_state::after {
+tr[data-etat="validationdouble"]>td.cellule_etat::after {
     content: 'En cours de double validation';
     background-color: var(--green);
     color: var(--white_classic);
 }
 
-tr[data-state="process"]>td.cell_state::after {
+tr[data-etat="validation"]>td.cellule_etat::after {
     content: 'En cours de validation';
     background-color: var(--green);
     color: var(--white_classic);
 }
 
-tr[data-state="valid"]>td.cell_state::after {
+tr[data-etat="valide"]>td.cellule_etat::after {
     content: 'Validé';
     background-color: var(--white_classic);
     color: var(--black);
@@ -642,7 +642,7 @@ tr[data-state="valid"]>td.cell_state::after {
     outline-offset: -2px;
 }
 
-tr[data-state="denied"]>td.cell_state::after {
+tr[data-etat="refuse"]>td.cellule_etat::after {
     content: 'Refusé';
     background-color: var(--warning);
     color: var(--white_classic);
@@ -650,20 +650,20 @@ tr[data-state="denied"]>td.cell_state::after {
 
 
 
-tr[data-state="valid"]>td.cell_action>* {
+tr[data-etat="valide"]>td.cellule_action>* {
     display: none;
     pointer-events: none;
 }
 
-tr[data-state="processdouble"]>td.cell_action>span,
-tr[data-state="processdouble"]>td.cell_action>div,
-tr[data-state="process"]>td.cell_action>span,
-tr[data-state="process"]>td.cell_action>div {
+tr[data-etat="validationdouble"]>td.cellule_action>span,
+tr[data-etat="validationdouble"]>td.cellule_action>div,
+tr[data-etat="validation"]>td.cellule_action>span,
+tr[data-etat="validation"]>td.cellule_action>div {
     display: none;
     pointer-events: none;
 }
 
-tr[data-state="denied"]>td.cell_action>button {
+tr[data-etat="refuse"]>td.cellule_action>button {
     display: none;
     pointer-events: none;
 }
@@ -671,8 +671,8 @@ tr[data-state="denied"]>td.cell_action>button {
 
 
 
-tr[data-state="processdouble"]>td.cell_action>button,
-tr[data-state="process"]>td.cell_action>button {
+tr[data-etat="validationdouble"]>td.cellule_action>button,
+tr[data-etat="validation"]>td.cellule_action>button {
     display: block;
     cursor: pointer;
     width: 24px;
@@ -683,12 +683,12 @@ tr[data-state="process"]>td.cell_action>button {
     background-size: 85% auto;
 }
 
-tr[data-state="denied"]>td.cell_action {
+tr[data-etat="refuse"]>td.cellule_action {
     position: relative;
 }
 
 
-tr[data-state="denied"]>td.cell_action>span {
+tr[data-etat="refuse"]>td.cellule_action>span {
     display: inline-block;
     cursor: pointer;
     width: 24px;
@@ -700,7 +700,7 @@ tr[data-state="denied"]>td.cell_action>span {
 }
 
 
-td.cell_action>div {
+td.cellule_action>div {
     display: none;
     position: absolute;
     right: 72px;
@@ -715,16 +715,16 @@ td.cell_action>div {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
 }
 
-td.cell_action>div>h3 {
+td.cellule_action>div>h3 {
     color: var(--Neutral-800, #170F49);
     margin-bottom: 12px;
 }
 
-td.cell_action>div>h4 {
+td.cellule_action>div>h4 {
     margin: 12px 0px 4px 0px;
 }
 
 
-tr[data-state="denied"]>td.cell_action:hover>div {
+tr[data-etat="refuse"]>td.cellule_action:hover>div {
     display: block;
 }
