@@ -112,23 +112,23 @@
   }
 
   .body_regular_xl {
-    @apply font-manrope font-regular text-body_xl;
+    @apply font-manrope font-normal text-body_xl;
   }
 
   .body_regular_lg {
-    @apply font-manrope font-regular text-body_lg;
+    @apply font-manrope font-normal text-body_lg;
   }
 
   .body_regular_base {
-    @apply font-manrope font-regular text-body_base;
+    @apply font-manrope font-normal text-body_base;
   }
 
   .body_regular_sm {
-    @apply font-manrope font-regular text-body_sm;
+    @apply font-manrope font-normal text-body_sm;
   }
 
   .body_regular_xs {
-    @apply font-manrope font-regular text-body_xs;
+    @apply font-manrope font-normal text-body_xs;
   }
 
 }

@@ -29,6 +29,7 @@ module.exports = {
         900: '#1A2B26',
       },
       camel : '#FFF2E1',
+      camellight : '#FFFBF8',
     },
     fontSize: {
       title_h1: ['3.75rem', '1'],//60px 60px
@@ -67,6 +68,7 @@ module.exports = {
 
       spacing: {
         '18': '4.5rem',
+        '31': '7.75rem',
       },
 
       fontFamily: {
@@ -80,7 +82,7 @@ module.exports = {
       },
 
       backgroundImage: {
-        //map_pin_shadow: "url('../sources/icons/map_pin_shadow.svg')",
+        arrow_right: "url('../sources/icons/arrow_right.svg')",
       },
 
       keyframes: {

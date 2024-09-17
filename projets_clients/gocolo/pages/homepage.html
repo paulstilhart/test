@@ -20,7 +20,7 @@
 
     <main>
         <section
-            class="  bg-[url('../sources/img/homepage/homepage_banner.jpeg')] bg-center bg-cover relative mask_homepage_banner">
+            class="  bg-[url('../sources/img/homepage/homepage_banner.jpeg')] bg-center bg-cover bg-no-repeat relative mask_homepage_banner">
             <div
                 class="relative z-10 max-w-1200 mx-auto px-4 md:px-16 py-8 min-h-0 md:min-h-[480px]  text-neutrals-white flex flex-col gap-4 justify-center items-start">
                 <p class="title_h1 max-w-[616px]">
@@ -33,16 +33,59 @@
 
         <section class="bg-camel relative">
             <div
-                class="absolute  w-full top-[-5px] md:top-[-17px] h-[6px] md:h-[18px] bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section2_top.svg')] bg-center bg-cover">
+                class="absolute  w-full top-[-5px] md:top-[-17px] h-[6px] md:h-[18px] bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section2_top.svg')] bg-center bg-cover bg-no-repeat">
             </div>
             <div
-                class="absolute  w-full bottom-[-9px] md:bottom-[-33px] h-[10px] md:h-[34px] bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section2_bottom.svg')] bg-center bg-cover">
+                class="absolute  w-full bottom-[-9px] md:bottom-[-33px] h-[10px] md:h-[34px] bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section2_bottom.svg')] bg-center bg-cover bg-no-repeat">
             </div>
 
             <div class="max-w-1200 mx-auto px-4 md:px-16 py-10 md:pt-18 md:pb-20">
-                <p class="title_h2 text-green pb-18 text-left md:text-center">Explorez nos <span class="inline-block relative after:content-[''] after:absolute after:bottom-[-5px] after:left-[-2.5%] after:h-[11px] after:w-[105%] after:bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section2_underline.svg')] after:bg-center after:bg-contain after:bg-no-repeat">thématiques</span> de colonies</p>
+                <p class="title_h2 text-green pb-18 text-left md:text-center">Explorez nos <span class="inline-block relative after:content-[''] after:inline-block after:absolute after:bottom-[-5px] after:left-[-2.5%] after:h-[11px] after:w-[105%] after:bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section2_underline.svg')] after:bg-center after:bg-contain after:bg-no-repeat">thématiques</span> de colonies</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                <div class="relative grid  grid-cols-1 lg:grid-cols-2 auto-rows-[120px] lg:auto-rows-[106px] gap-x-12 gap-y-4 
+                after:content-[''] after:hidden lg:after:inline-block after:absolute after:-bottom-10 after:-left-10 after:h-10 after:w-10 after:bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section2_highlight.svg')] after:bg-center after:bg-contain after:bg-no-repeat">
+                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_1.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                        <div>
+                            <p class="title_h6 text-green pb-1">Les colos sportives</p>
+                            <p class="body_regular_sm line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                        </div>
+                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                    </a>
+                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_2.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                        <div>
+                            <p class="title_h6 text-green pb-1">Les colos multi-activités</p>
+                            <p class="body_regular_sm line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                        </div>
+                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                    </a>
+                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_3.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                        <div>
+                            <p class="title_h6 text-green pb-1">Les colos culturelles</p>
+                            <p class="body_regular_sm line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                        </div>
+                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                    </a>
+                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_4.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                        <div>
+                            <p class="title_h6 text-green pb-1">Les colos artistiques</p>
+                            <p class="body_regular_sm line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                        </div>
+                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                    </a>
+                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_5.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                        <div>
+                            <p class="title_h6 text-green pb-1">Les colos scientifiques</p>
+                            <p class="body_regular_sm line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                        </div>
+                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                    </a>
+                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_6.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                        <div>
+                            <p class="title_h6 text-green pb-1">Toutes les colonies 2024</p>
+                            <p class="body_regular_sm line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                        </div>
+                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                    </a>
 
                 </div>
             </div>
