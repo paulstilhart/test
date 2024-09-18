@@ -131,6 +131,11 @@
     @apply font-manrope font-normal text-body_xs;
   }
 
+  /*wrapper_1200 => 1328px car on intégre directement 2*64px = 128px en version bureau*/
+  .wrapper_1200 {
+    @apply max-w-1200 mx-auto px-4 md:px-16;
+  }
+
 }
 
 
@@ -166,21 +171,4 @@ input:-webkit-autofill:active {
 input {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
-}
-
-
-
-
-
-.mask_homepage_banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.32;
 }

@@ -8,7 +8,8 @@
 
     <!-- lien avec la feuille de style compilée tailwind -->
     <link rel="stylesheet" href="../css/output.css">
-
+    <!-- alpineJS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- script JS -->
     <script defer src="../js/script.js"></script>
@@ -19,10 +20,10 @@
     <header></header>
 
     <main>
-        <section
-            class="  bg-[url('../sources/img/homepage/homepage_banner.jpeg')] bg-center bg-cover bg-no-repeat relative mask_homepage_banner">
+        <section class="  bg-[url('../sources/img/homepage/homepage_banner.jpeg')] bg-center bg-cover bg-no-repeat relative 
+            before:content-[''] before:absolute before:w-full before:h-full before:bg-black before:opacity-[0.32]">
             <div
-                class="relative z-10 max-w-1200 mx-auto px-4 md:px-16 py-8 min-h-0 md:min-h-[480px]  text-neutrals-white flex flex-col gap-4 justify-center items-start">
+                class="wrapper_1200 py-8 min-h-0 md:min-h-[480px]   text-neutrals-white flex flex-col gap-4 justify-center items-start relative z-10 ">
                 <p class="title_h1 max-w-[616px]">
                     Colonies de vacances thématiques</p>
                 <p class="body_semibold_lg max-w-[567px]">Gocolo propose des colonies de vacances
@@ -39,57 +40,325 @@
                 class="absolute  w-full bottom-[-9px] md:bottom-[-33px] h-[10px] md:h-[34px] bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section2_bottom.svg')] bg-center bg-cover bg-no-repeat">
             </div>
 
-            <div class="max-w-1200 mx-auto px-4 md:px-16 py-10 md:pt-18 md:pb-20">
-                <p class="title_h2 text-green pb-18 text-left md:text-center">Explorez nos <span class="inline-block relative after:content-[''] after:inline-block after:absolute after:bottom-[-5px] after:left-[-2.5%] after:h-[11px] after:w-[105%] after:bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section2_underline.svg')] after:bg-center after:bg-contain after:bg-no-repeat">thématiques</span> de colonies</p>
+            <div class="wrapper_1200 py-10 md:pt-18 md:pb-20">
+                <p class="title_h2 text-green pb-18 text-left md:text-center">Explorez nos <span
+                        class="inline-block relative after:content-[''] after:inline-block after:absolute after:bottom-[-5px] after:left-[-2.5%] after:h-[11px] after:w-[105%] after:bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section2_underline.svg')] after:bg-center after:bg-contain after:bg-no-repeat">thématiques</span>
+                    de colonies</p>
 
-                <div class="relative grid  grid-cols-1 lg:grid-cols-2 auto-rows-[120px] lg:auto-rows-[106px] gap-x-12 gap-y-4 
+                <div
+                    class="relative grid  grid-cols-1 lg:grid-cols-2 auto-rows-[120px] lg:auto-rows-[106px] gap-x-12 gap-y-4 
                 after:content-[''] after:hidden lg:after:inline-block after:absolute after:-bottom-10 after:-left-10 after:h-10 after:w-10 after:bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section2_highlight.svg')] after:bg-center after:bg-contain after:bg-no-repeat">
-                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_1.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                    <a href=""
+                        class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_1.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
                         <div>
                             <p class="title_h6 text-green pb-1">Les colos sportives</p>
-                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est
+                                debitis rerum ut autem voluptatum minus.</p>
                         </div>
-                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                        <span
+                            class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
                     </a>
-                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_2.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                    <a href=""
+                        class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_2.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
                         <div>
                             <p class="title_h6 text-green pb-1">Les colos multi-activités</p>
-                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est
+                                debitis rerum ut autem voluptatum minus.</p>
                         </div>
-                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                        <span
+                            class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
                     </a>
-                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_3.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                    <a href=""
+                        class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_3.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
                         <div>
                             <p class="title_h6 text-green pb-1">Les colos culturelles</p>
-                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est
+                                debitis rerum ut autem voluptatum minus.</p>
                         </div>
-                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                        <span
+                            class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
                     </a>
-                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_4.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                    <a href=""
+                        class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_4.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
                         <div>
                             <p class="title_h6 text-green pb-1">Les colos artistiques</p>
-                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est
+                                debitis rerum ut autem voluptatum minus.</p>
                         </div>
-                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                        <span
+                            class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
                     </a>
-                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_5.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                    <a href=""
+                        class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_5.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
                         <div>
                             <p class="title_h6 text-green pb-1">Les colos scientifiques</p>
-                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est
+                                debitis rerum ut autem voluptatum minus.</p>
                         </div>
-                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                        <span
+                            class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
                     </a>
-                    <a href="" class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_6.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
+                    <a href=""
+                        class="pr-6 pl-24 py-4 lg:pl-31 flex justify-between items-center gap-6 rounded-lg overflow-hidden bg-camellight bg-[url('../sources/img/homepage/homepage_thematiques/homepage_thematiques_6.png')] bg-[left_-25px_center] lg:bg-[left_center] bg-contain bg-no-repeat hover:scale-105 transition-transform">
                         <div>
                             <p class="title_h6 text-green pb-1">Toutes les colonies 2024</p>
-                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                            <p class="body_regular_sm text-dark-600 line-clamp-3">Est eos sunt ipsa vel dicta vel. Est
+                                debitis rerum ut autem voluptatum minus.</p>
                         </div>
-                        <span class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
+                        <span
+                            class="flex-none inline-block w-6 h-6 bg-arrow_right bg-contain bg-center bg-no-repeat"></span>
                     </a>
 
                 </div>
             </div>
         </section>
+
+
+        <section class="bg-neutrals-white text-neutrals-dark">
+            <div class="wrapper_1200 pt-8 pb-12 md:pt-18 md:pb-34 flex flex-col lg:flex-row gap-x-18 gap-y-6">
+
+                <div class="flex-auto">
+                    <p
+                        class="title_h2 max-w-[343px] md:max-w-[480px] text-green relative 
+                    after:content[''] after:absolute after:-top-4 after:right-0 after:inline-block after:w-8 after:h-8 after:bg-[url('../sources/img/homepage/homepage_vector/homepage_star.svg')] after:bg-no-repeat after:bg-contain after:bg-center after:animate-zoomdezoom">
+                        comment choisir sa <span class="text-neonorange inline-block">colonie de <span
+                                class="inline-block relative after:content[''] after:absolute after:-bottom-5 after:left-0 after:inline-block after:w-40 after:h-6 md:after:w-48 md:after:h-7  after:bg-[url('../sources/img/homepage/homepage_vector/homepage_vector_section3_underline.svg')] after:bg-no-repeat after:bg-cover after:bg-center">vacances</span>
+                            ?</span></p>
+                    <p class="body_medium_base text-neutrals-dark py-6 md:pt-8 md:pb-10 max-w-[588px]">
+                        C’est la question que se posent tous les parents lorsqu’ils doivent décider dans quelle colonie
+                        de vacances ils enverront leurs enfants.
+                        <br>
+                        <br>
+                        Les organismes de colonies de vacances sont de plus en plus nombreux ! Comment s’y retrouver
+                        parmi toutes ces offres ? Comment être sûr de choisir une colonie de vacances qui offrira une
+                        expérience enrichissante et stimulante à vos enfants ?
+                        <br>
+                        <br>
+                        Laissez nous vous guider en choissisant l’une des catégories pour découvrir les expériences
+                        adaptées à votre enfant et le programme de chaque colonie.
+                    </p>
+                    <div class="flex flex-wrap gap-x-6 gap-y-2">
+                        <div class="flex flex-nowrap justify-start items-center gap-2 px-2 py-3 ">
+                            <span
+                                class="bg-kidgreen-100 flex-none w-8 h-8 rounded-full 
+                            bg-[url('../sources/icons/tabler-icon-home-shield.svg')] bg-center bg-no-repeat bg-[length:75%_auto]"></span>
+                            <p class="body_semibold_xs text-neutrals-dark">Séjours agréés<br>DDCSPP</p>
+                        </div>
+                        <div class="flex flex-nowrap justify-start items-center gap-2 px-2 py-3 ">
+                            <span
+                                class="bg-kidgreen-100 flex-none w-8 h-8 rounded-full 
+                            bg-[url('../sources/icons/tabler-icon-user-shield.svg')] bg-center bg-no-repeat bg-[length:75%_auto]"></span>
+                            <p class="body_semibold_xs text-neutrals-dark">Encadrement<br>diplômé et contrôlé</p>
+                        </div>
+                        <div class="flex flex-nowrap justify-start items-center gap-2 px-2 py-3 ">
+                            <span
+                                class="bg-kidgreen-100 flex-none w-8 h-8 rounded-full 
+                            bg-[url('../sources/icons/tabler-icon-thumb-up.svg')] bg-center bg-no-repeat bg-[length:75%_auto]"></span>
+                            <p class="body_semibold_xs text-neutrals-dark">Charte qualité<br>depuis 10 ans</p>
+                        </div>
+                        <div class="flex flex-nowrap justify-start items-center gap-2 px-2 py-3 ">
+                            <span
+                                class="bg-kidgreen-100 flex-none w-8 h-8 rounded-full 
+                            bg-[url('../sources/icons/tabler-icon-credit-card.svg')] bg-center bg-no-repeat bg-[length:75%_auto]"></span>
+                            <p class="body_semibold_xs text-neutrals-dark">Paiement sécurisé<br>en ligne</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class=" w-full lg:w-1/3 h-[300px] lg:h-auto">
+                    <div
+                        class=" w-full lg:w-[110%] h-full bg-[url('../sources/img/homepage/homepage_section3_blob.png')] bg-center bg-no-repeat bg-contain lg:hover:scale-125 transition-transform">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="bg-neutrals-white text-neutrals-dark">
+
+            <div class="wrapper_1200 pt-10 pb-14 md:pt-18 md:pb-36 
+            bg-none md:bg-[url('../sources/img/homepage/homepage_vector/homepage_faq.svg')] bg-[left_0px_top_500px] bg-no-repeat bg-[length:275px_194px]">
+                <div class="pb-12 md:pb-25 text-left md:text-center">
+                    <p class="title_h2 text-green pb-4">Foire aux questions</p>
+                    <p class=" body_medium_base text-dark-700 max-w-[560px] md:mx-auto">Nous avons répertorié les questions
+                        fréquente des parents eos sunt ipsa vel dicta vel. Est debitis rerum ut autem voluptatum minus.</p>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-start gap-8 lg:gap-x-25 ">
+    
+                    <div class="flex-auto flex flex-col gap-4">
+    
+                        <div x-data="{ open: false }" x-bind:aria-expanded="open" aria-controls="accordion-item" class="group px-6 py-4 rounded-2xl bg-neutrals-white outline outline-1 outline-dark-300 
+                        aria-expanded:outline-neonorange aria-expanded:outline-2">
+    
+                            <div x-on:click="open = ! open"
+                                class="flex flex-nowrap justify-between items-center gap-4 cursor-pointer">
+                                <p class="body_bold_lg text-dark-700 group-aria-expanded:text-neonorange">Aux enfants de
+                                    quel âge s’adressent vos colonies ?</p>
+                                <span
+                                    class="flex-none inline-block bg-add  w-4.5 h-4.5 bg-center bg-no-repeat bg-cover group-aria-expanded:bg-close"></span>
+                            </div>
+    
+                            <div x-show="open" x-transition class="pt-6 flex flex-col gap-2 text-dark-700">
+                                <p class="body_bold_base">Les intérêts personnels de l’enfant</p>
+                                <p class="body_regular_base">Il est essentiel de tenir compte des intérêts et des passions
+                                    de l'enfant. Certaines de nos colonies de vacances se spécialisent dans des activités
+                                    artistiques, tandis que d'autres se concentrent sur le sport ou les sciences. Consultez
+                                    votre enfant sur ses préférences permet de lui garantir une expérience enrichissante et
+                                    plaisante</p>
+                                <p class="body_bold_base">La durée du séjour</p>
+                                <p class="body_regular_base">La durée du séjour joue un rôle important. Certains enfants
+                                    s'épanouissent dans des séjours plus courts, tandis que d'autres préfèrent des
+                                    expériences plus longues pour établir des liens plus profonds. Votre enfant a-t-il
+                                    l’habitude de partir sans vous ? Est-il indépendant ou a-t-il constamment besoin de vous
+                                    ? Les réponses à ces questions vous aideront à décider de la meilleure durée de séjour
+                                    pour les colonies de vacances de votre enfant : 1 semaine, 2 semaines ou 3 semaines.</p>
+    
+                            </div>
+                        </div>
+    
+                        <div x-data="{ open: false }" x-bind:aria-expanded="open" aria-controls="accordion-item" class="group px-6 py-4 rounded-2xl bg-neutrals-white outline outline-1 outline-dark-300 
+                        aria-expanded:outline-neonorange aria-expanded:outline-2">
+    
+                            <div x-on:click="open = ! open"
+                                class="flex flex-nowrap justify-between items-center gap-4 cursor-pointer">
+                                <p class="body_bold_lg text-dark-700 group-aria-expanded:text-neonorange">Quelles sont les
+                                    prestations de vos colonies de vacances ?</p>
+                                <span
+                                    class="flex-none inline-block bg-add  w-4.5 h-4.5 bg-center bg-no-repeat bg-cover group-aria-expanded:bg-close"></span>
+                            </div>
+    
+                            <div x-show="open" x-transition class="pt-6 flex flex-col gap-2 text-dark-700">
+                                <p class="body_bold_base">Les intérêts personnels de l’enfant</p>
+                                <p class="body_regular_base">Il est essentiel de tenir compte des intérêts et des passions
+                                    de l'enfant. Certaines de nos colonies de vacances se spécialisent dans des activités
+                                    artistiques, tandis que d'autres se concentrent sur le sport ou les sciences. Consultez
+                                    votre enfant sur ses préférences permet de lui garantir une expérience enrichissante et
+                                    plaisante</p>
+                                <p class="body_bold_base">La durée du séjour</p>
+                                <p class="body_regular_base">La durée du séjour joue un rôle important. Certains enfants
+                                    s'épanouissent dans des séjours plus courts, tandis que d'autres préfèrent des
+                                    expériences plus longues pour établir des liens plus profonds. Votre enfant a-t-il
+                                    l’habitude de partir sans vous ? Est-il indépendant ou a-t-il constamment besoin de vous
+                                    ? Les réponses à ces questions vous aideront à décider de la meilleure durée de séjour
+                                    pour les colonies de vacances de votre enfant : 1 semaine, 2 semaines ou 3 semaines.</p>
+    
+                            </div>
+                        </div>
+    
+                        <div x-data="{ open: false }" x-bind:aria-expanded="open" aria-controls="accordion-item" class="group px-6 py-4 rounded-2xl bg-neutrals-white outline outline-1 outline-dark-300 
+                        aria-expanded:outline-neonorange aria-expanded:outline-2">
+    
+                            <div x-on:click="open = ! open"
+                                class="flex flex-nowrap justify-between items-center gap-4 cursor-pointer">
+                                <p class="body_bold_lg text-dark-700 group-aria-expanded:text-neonorange">Pourquoi partir en
+                                    colonie de vacances ?</p>
+                                <span
+                                    class="flex-none inline-block bg-add  w-4.5 h-4.5 bg-center bg-no-repeat bg-cover group-aria-expanded:bg-close"></span>
+                            </div>
+    
+                            <div x-show="open" x-transition class="pt-6 flex flex-col gap-2 text-dark-700">
+                                <p class="body_bold_base">Les intérêts personnels de l’enfant</p>
+                                <p class="body_regular_base">Il est essentiel de tenir compte des intérêts et des passions
+                                    de l'enfant. Certaines de nos colonies de vacances se spécialisent dans des activités
+                                    artistiques, tandis que d'autres se concentrent sur le sport ou les sciences. Consultez
+                                    votre enfant sur ses préférences permet de lui garantir une expérience enrichissante et
+                                    plaisante</p>
+                                <p class="body_bold_base">La durée du séjour</p>
+                                <p class="body_regular_base">La durée du séjour joue un rôle important. Certains enfants
+                                    s'épanouissent dans des séjours plus courts, tandis que d'autres préfèrent des
+                                    expériences plus longues pour établir des liens plus profonds. Votre enfant a-t-il
+                                    l’habitude de partir sans vous ? Est-il indépendant ou a-t-il constamment besoin de vous
+                                    ? Les réponses à ces questions vous aideront à décider de la meilleure durée de séjour
+                                    pour les colonies de vacances de votre enfant : 1 semaine, 2 semaines ou 3 semaines.</p>
+    
+                            </div>
+                        </div>
+    
+                        <div x-data="{ open: false }" x-bind:aria-expanded="open" aria-controls="accordion-item" class="group px-6 py-4 rounded-2xl bg-neutrals-white outline outline-1 outline-dark-300 
+                        aria-expanded:outline-neonorange aria-expanded:outline-2">
+    
+                            <div x-on:click="open = ! open"
+                                class="flex flex-nowrap justify-between items-center gap-4 cursor-pointer">
+                                <p class="body_bold_lg text-dark-700 group-aria-expanded:text-neonorange">Comment choisir la
+                                    meilleure colonie de vacances ?</p>
+                                <span
+                                    class="flex-none inline-block bg-add  w-4.5 h-4.5 bg-center bg-no-repeat bg-cover group-aria-expanded:bg-close"></span>
+                            </div>
+    
+                            <div x-show="open" x-transition class="pt-6 flex flex-col gap-2 text-dark-700">
+                                <p class="body_bold_base">Les intérêts personnels de l’enfant</p>
+                                <p class="body_regular_base">Il est essentiel de tenir compte des intérêts et des passions
+                                    de l'enfant. Certaines de nos colonies de vacances se spécialisent dans des activités
+                                    artistiques, tandis que d'autres se concentrent sur le sport ou les sciences. Consultez
+                                    votre enfant sur ses préférences permet de lui garantir une expérience enrichissante et
+                                    plaisante</p>
+                                <p class="body_bold_base">La durée du séjour</p>
+                                <p class="body_regular_base">La durée du séjour joue un rôle important. Certains enfants
+                                    s'épanouissent dans des séjours plus courts, tandis que d'autres préfèrent des
+                                    expériences plus longues pour établir des liens plus profonds. Votre enfant a-t-il
+                                    l’habitude de partir sans vous ? Est-il indépendant ou a-t-il constamment besoin de vous
+                                    ? Les réponses à ces questions vous aideront à décider de la meilleure durée de séjour
+                                    pour les colonies de vacances de votre enfant : 1 semaine, 2 semaines ou 3 semaines.</p>
+    
+                            </div>
+                        </div>
+    
+                        <div x-data="{ open: false }" x-bind:aria-expanded="open" aria-controls="accordion-item" class="group px-6 py-4 rounded-2xl bg-neutrals-white outline outline-1 outline-dark-300 
+                        aria-expanded:outline-neonorange aria-expanded:outline-2">
+    
+                            <div x-on:click="open = ! open"
+                                class="flex flex-nowrap justify-between items-center gap-4 cursor-pointer">
+                                <p class="body_bold_lg text-dark-700 group-aria-expanded:text-neonorange">Pourquoi faire
+                                    confiance à Gocolo ?</p>
+                                <span
+                                    class="flex-none inline-block bg-add  w-4.5 h-4.5 bg-center bg-no-repeat bg-cover group-aria-expanded:bg-close"></span>
+                            </div>
+    
+                            <div x-show="open" x-transition class="pt-6 flex flex-col gap-2 text-dark-700">
+                                <p class="body_bold_base">Les intérêts personnels de l’enfant</p>
+                                <p class="body_regular_base">Il est essentiel de tenir compte des intérêts et des passions
+                                    de l'enfant. Certaines de nos colonies de vacances se spécialisent dans des activités
+                                    artistiques, tandis que d'autres se concentrent sur le sport ou les sciences. Consultez
+                                    votre enfant sur ses préférences permet de lui garantir une expérience enrichissante et
+                                    plaisante</p>
+                                <p class="body_bold_base">La durée du séjour</p>
+                                <p class="body_regular_base">La durée du séjour joue un rôle important. Certains enfants
+                                    s'épanouissent dans des séjours plus courts, tandis que d'autres préfèrent des
+                                    expériences plus longues pour établir des liens plus profonds. Votre enfant a-t-il
+                                    l’habitude de partir sans vous ? Est-il indépendant ou a-t-il constamment besoin de vous
+                                    ? Les réponses à ces questions vous aideront à décider de la meilleure durée de séjour
+                                    pour les colonies de vacances de votre enfant : 1 semaine, 2 semaines ou 3 semaines.</p>
+    
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+                    <div class="flex-none md:w-[320px] px-6 py-8 bg-camel rounded-3xl text-center md:sticky md:top-8">
+                        <p class="title_h6 text-green pb-2">Vous ne trouvez pas les réponses à vos questions ?</p>
+                        <p class="body_medium_sm text-dark-700">Prenez-contact avec nos équipes, nous nous ferons un plaisir
+                            de vous renseigner.</p>
+                        <div class="flex flex-col gap-3 items-center py-6">
+                            <a href="tel:0033471782243" class="body_semibold_sm text-green flex items-center gap-2">
+                                <span class="w-4.5 h-4.5 bg-phone bg-center bg-no-repeat bg-cover"></span>
+                                <span class="inline-block">04 71 78 22 43</span>
+                            </a>
+                            <a href="mailto:contact@gocolo.fr" class="body_semibold_sm text-green flex items-center gap-2">
+                                <span class="w-4.5 h-4.5 bg-mail bg-center bg-no-repeat bg-cover"></span>
+                                <span class="inline-block">contact@gocolo.fr</span>
+                            </a>
+                        </div>
+                        <a href=""
+                            class="inline-block px-4 py-2 body_bold_base text-neutrals-dark bg-kidyellow rounded-full">Contacter
+                            Gocolo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
     </main>
 
