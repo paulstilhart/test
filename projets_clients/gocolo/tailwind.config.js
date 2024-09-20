@@ -110,11 +110,12 @@ module.exports = {
       body_base: ["1rem", "1.5"], // 16px 24px
       body_sm: ["0.875rem", "1.25"], // 14px 17.5px
       body_xs: ["0.75rem", "1.25"], // 12px 15px
+
     },
 
     extend: {
       maxWidth: {
-        1200: "1328px", //permet de rajouter des classes du type max-w-screen-xl	=> max-width: 1280px;
+        1440: "1440px",
       },
       screens: {
         //media queries supplémentaires
@@ -126,16 +127,22 @@ module.exports = {
       },
 
       spacing: {
+        3.5: "0.875rem",//14px
         4.5: "1.125rem",//18px
         18: "4.5rem",//72px
+        22: "5.5rem",//88px
         25: "6.25rem",//100px
-        31: "7.75rem",//124px
+        26: "6.5rem",//104px
+        30: "7.75rem",//120px
+        31: "7.5rem",//124px
         34: "8.5rem",//136px
       },
 
       fontFamily: {
         francoisone: ['"Francois One"', "sans-serif"], //Francois One 400 regular
         manrope: ['"Manrope"', "sans-serif"], //Manrope
+        mogra: ['"Mogra"', '"system-ui"'], //Mogra 400 regular
+        gochihand: ['"Gochi Hand"', '"cursive"'], //Gochi Hand 400 regular
       },
 
       lineHeight: {
@@ -144,11 +151,21 @@ module.exports = {
       },
 
       backgroundImage: {
-        arrow_right: "url('../sources/icons/arrow_right.svg')",
-        phone: "url('../sources/icons/phone.svg')",
-        mail: "url('../sources/icons/mail.svg')",
+        arrow_narrow: "url('../sources/icons/Arrow_narrow.svg')",
+        arrow_narrow_green: "url('../sources/icons/Arrow_narrow_green.svg')",
+        phone: "url('../sources/icons/Phone.svg')",
+        phone_green: "url('../sources/icons/Phone_green.svg')",
+        phone_white: "url('../sources/icons/Phone_white.svg')",
+        mail: "url('../sources/icons/Mail.svg')",
+        mail_green: "url('../sources/icons/Mail_green.svg')",
+        mail_white: "url('../sources/icons/Mail_white.svg')",
+        home: "url('../sources/icons/Home.svg')",
+        home_green: "url('../sources/icons/Home_green.svg')",
+        home_white: "url('../sources/icons/Home_white.svg')",
         add: "url('../sources/icons/add.svg')",
         close: "url('../sources/icons/close.svg')",
+        close_red: "url('../sources/icons/close_red.svg')",
+        gocolo_yellow: "url('../sources/logos/gocolo_yellow.svg')",
       },
 
       keyframes: {
@@ -162,10 +179,37 @@ module.exports = {
           '50%': { transform: 'scale(1.2)' },
           '100%': { transform: 'scale(1)' },
         },
+        homepage_cards_2: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-200%)' }, // 200% correspond à 2 slides
+        },
+        homepage_cards_3: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-300%)' },
+        },
+        homepage_cards_4: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-400%)' },
+        },
+        homepage_cards_5: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-500%)' },
+        },
+        slideCran: {
+          '0%': { transform: 'translateX(0%)' },
+          '33%': { transform: 'translateX(-100%)' },  // Se déplace d'une carte (100%)
+          '66%': { transform: 'translateX(-200%)' },  // Se déplace de deux cartes
+          '100%': { transform: 'translateX(0%)' },    // Retour à la première carte
+        },
       },
       animation: {
         fadein: "fadein 1.1s linear",
         zoomdezoom: 'zoomdezoom 1s ease-in-out infinite',
+        homepage_cards_2: 'homepage_cards_2 5s steps(2) infinite', // 2 étapes pour 2 slides
+        homepage_cards_3: 'homepage_cards_3 7.5s steps(3) infinite',
+        homepage_cards_4: 'homepage_cards_4 10s steps(4) infinite',
+        homepage_cards_5: 'homepage_cards_5 12.5s steps(5) infinite',
+        slidecran: 'slideCran 6s ease-in-out infinite', // Animation fluide de 6s
       },
     },
   },

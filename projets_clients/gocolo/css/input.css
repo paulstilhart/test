@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
 
 
 
@@ -131,9 +134,13 @@
     @apply font-manrope font-normal text-body_xs;
   }
 
-  /*wrapper_1200 => 1328px car on intégre directement 2*64px = 128px en version bureau*/
-  .wrapper_1200 {
-    @apply max-w-1200 mx-auto px-4 md:px-16;
+  .body_regular_xs {
+    @apply font-manrope font-normal text-body_xs;
+  }
+
+  /* evolution du padding en fonction de largeur d'écran  0 (16px) 768 (32px) 1024 (64px) 1280 (120px)  */
+  .wrapper_1440 {
+    @apply max-w-1440 mx-auto px-4 md:px-8 lg:px-16 xl:px-31;
   }
 
 }
