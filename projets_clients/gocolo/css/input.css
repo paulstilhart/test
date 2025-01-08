@@ -53,6 +53,9 @@
   .title_h6 {
     @apply font-francoisone font-normal uppercase text-title_h6_mobile md:text-title_h6;
   }
+  .title_mini {
+    @apply font-francoisone font-normal uppercase text-title_h6_mobile md:text-title_mini;
+  }
 
   .body_bold_xl {
     @apply font-manrope font-bold text-body_xl;
@@ -127,7 +130,7 @@
   }
 
   .body_regular_sm {
-    @apply font-manrope font-normal text-body_sm;
+    @apply font-manrope font-normal text-body_regular_sm;
   }
 
   .body_regular_xs {

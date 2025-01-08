@@ -1,5 +1,5 @@
 const title = document.querySelector('.js_title_animation');
-const texts = ["Commerce & Luxe", "Légal & RH", "Immobilier"];
+const texts = ["Commerce & Luxe", "Immobilier", "Légal & RH","Finance"];
 let currentTextIndex = 0;
 
 const typingSpeed = 150;
@@ -99,6 +99,25 @@ function toggleNavIfOpen() {
         headerWrapper.classList.toggle("active");
     }
 };
+
+
+/*================================ NAVLINKS MENU =======================================*/
+function toggleAriaExpanded(selector) {
+    const navLinksMenu = document.querySelector(selector);
+
+    if (navLinksMenu) {
+        navLinksMenu.addEventListener('click', function() {
+            const isExpanded = navLinksMenu.getAttribute('aria-expanded') === 'true';
+            navLinksMenu.setAttribute('aria-expanded', !isExpanded);
+        });
+    } else {
+        console.error(`Aucun élément trouvé avec le sélecteur: ${selector}`);
+    }
+}
+
+// Appel de la fonction directement
+toggleAriaExpanded('.js_nav_links_menu_toggler');
+
 
 
 /*================================ GESTION DU MENU SUIVANT LA HAUTEUR =======================================*/
@@ -283,4 +302,6 @@ previous.addEventListener("click", event => {
         return;//on sort de la boucle
     };
 });
+
+
 

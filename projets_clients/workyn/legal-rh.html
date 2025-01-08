@@ -2,11 +2,20 @@
 <html lang="fr">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6C6WZS4LH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B6C6WZS4LH');
+    </script>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Workyn Recrutement est un cabinet de recrutement spécialisé par secteur : le Commerce & Luxe et l’Immobilier. Nous recrutons les équipes corporate et opérationnelles partout en France.">
+    <meta name="description" content="Le cabinet de recrutement exclusivement dédié au secteur du légal & RH">
     <title>Cabinet de recrutement – Légal & RH</title>
 
     <!-- FEUILLE DE STYLE CSS -->
@@ -30,7 +39,7 @@
 <body>
     <!-- ==================== HEADER ==================== -->
     <header class="  w_100 background_white">
-        <div class="background_red_light box_shadow">
+        <div class="background_white box_shadow">
             <div class="mw_1440_auto flex_between_center wrapper ">
                 <a class="header_link_home" href="./index.html">
                     <img class="header_link_home_logo dblock w_100"
@@ -39,10 +48,34 @@
                         src="./sources/icons/workyn/blue/recrutement_1357_1334.png" alt="logo workyn">
                 </a>
                 <nav class="flex_center_center gap_24">
-                    <a class="nav_links fw_700 color_pink " href="./commerce-et-luxe.html">Workyn! Commerce & Luxe</a>
-                    <a class="nav_links fw_700 color_blue" href="./immobilier.html">Workyn! Immobilier</a>
-                    <a class="nav_links fw_700 color_red" href="./legal-rh.html">Workyn! Légal & RH</a>
-                    <a class="nav_links legal" href="#section_recruitment_anchor">Qui sommes-nous ?</a>
+
+                    <div class="nav_links_menu_toggler js_nav_links_menu_toggler" aria-expanded="false">
+                        <button  class="nav_links legal">
+                            <span>Nos domaines d’intervention</span>
+                            <span class="nav_links_arrow"></span>
+                        </button>
+                        <div class="nav_links_menu_content">
+                            <a href="./commerce-et-luxe.html" class="color_pink">
+                                <span></span>
+                                <span>Commerce & Luxe</span>
+                            </a>
+                            <a href="./immobilier.html" class="color_blue">
+                                <span></span>
+                                <span>Immobilier</span>
+                            </a>
+                            <a href="./legal-rh.html" class="color_red">
+                                <span></span>
+                                <span>Légal & RH</span>
+                            </a>
+                            <a href="./commerce-et-luxe.html" class="color_purple">
+                                <span></span>
+                                <span>Finance</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <a class="nav_links legal" href="#section_goals_anchor">Qui sommes-nous ?</a>
                     <a target="_blank" class="nav_links legal" href="https://workyn.teamtailor.com/#jobs">Nos offres
                         d’emploi</a>
                     <a class="nav_links legal" href="#section_contact_anchor">Contacts</a>
@@ -87,7 +120,7 @@
         <section class="section_goals legal">
             <div class="wrapper mw_1312_auto">
                 <div class="section_goals_ribbon_container background_red"></div>
-                <div class="section_goals_content flex_between">
+                <div class="section_goals_content legal flex_between">
                     <div class="section_goals_content_img flex_column">
                         <img class="dblock" src="./sources/logos/pages/section_goals/legal.svg" alt="photo antoine">
                     </div>
@@ -291,8 +324,7 @@
                 <div class="footer_container_right">
                     <div
                         class="flex flex_column_center_center_under_1200 gap_32 gap_8_under_1200 mb_16 mb_32_under_1200">
-                        <p class="text_center_under_1200">Tél. : <strong class="dblock_under_1200">07 57 90 77
-                                73</strong>
+                        <p class="text_center_under_1200">Tél. : <strong class="dblock_under_1200">07 83 16 51 53</strong>
                         </p>
                         <p class="text_center_under_1200">E-mail : <strong
                                 class="dblock_under_1200">contact@workyn-recrutement.com</strong></p>
