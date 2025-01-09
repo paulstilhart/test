@@ -8,6 +8,11 @@ const initialDelay = 1000;
 const eraseDelay = 1500;
 
 function animateText(element, word, speed, index, direction) {
+    // Vérification si l'élément existe
+    if (!element) {
+        return; // Sortir de la fonction si l'élément n'existe pas
+    }
+
     if (direction === 'type') {
         if (index <= word.length) {
             element.textContent = word.substring(0, index);
@@ -26,15 +31,8 @@ function animateText(element, word, speed, index, direction) {
     }
 }
 
-
 // Démarrage de la frappe
 setTimeout(() => animateText(title, texts[currentTextIndex], typingSpeed, 0, 'type'), initialDelay);
-
-
-
-
-
-
 
 
 
@@ -102,6 +100,16 @@ function toggleNavIfOpen() {
 
 
 /*================================ NAVLINKS MENU =======================================*/
+function setAriaExpanded(selector, value) {
+    const element = document.querySelector(selector);
+
+    if (element) {
+        element.setAttribute('aria-expanded', value);
+    }
+}
+//setAriaExpanded('.js_nav_links_menu_toggler', true); // Met aria-expanded à true
+
+
 function toggleAriaExpanded(selector) {
     const navLinksMenu = document.querySelector(selector);
 
@@ -149,6 +157,9 @@ window.addEventListener('scroll', () => {
     console.log(scrollTop, scrollHeight, clientHeight);
     dans le cas ou on aurait besoin de toutes ces propriétées, ici en l'occurence juste celle vers le haut
     */
+
+    setAriaExpanded('.js_nav_links_menu_toggler', false); // Met aria-expanded à true
+
     text.forEach(item => {
         observer.observe(item);
     })
